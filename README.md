@@ -43,7 +43,7 @@ In 2022, Mumtaz joined Millions Smiles, contributing to both social media campai
 
 In October 2022, Mumtaz Alam Bazai became actively involved with the *Global Shapers Community Quetta Hub*, an initiative of the World Economic Forum. He initially served as Social Media Head and contributed significantly to environmental projects, including the Blue and Green Quetta Project, which promoted large-scale tree planting and environmental awareness.
 
-In 2025, he was elected as the 4th Curator of the Quetta Hub, representing his community on the global stage. As Curator, he led cross-hub collaborations with hubs in Peshawar, Karachi, and Kuala Lumpur, initiated the first youth policy project in Balochistan, and drafted the hub’s first Governance Charter. He also facilitated training programs for youth in technology, innovation, and artificial intelligence, demonstrating his commitment to sustainable development and youth empowerment.
+In 2025, he was elected as the 4th Curator of the Global Shapers Quetta Hub, representing his community on the global stage. As Curator, he led cross-hub collaborations with hubs in Peshawar, Karachi, and Kuala Lumpur, initiated the first youth policy project in Balochistan, and drafted the hub’s first Governance Charter. He also facilitated training programs for youth in technology, innovation, and artificial intelligence, demonstrating his commitment to sustainable development and youth empowerment.
 
 ---
 
