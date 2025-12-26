@@ -1,113 +1,98 @@
 # Mumtaz Alam Bazai
 
-*Advocate | Human Rights Lawyer | Youth Leader*  
+*Advocate | Human Rights Lawyer | Youth Leader | Social Activist*  
 *Curator, Global Shapers Community – Quetta Hub (World Economic Forum)*
 
 ---
 
-##  About
+## About
 
-*Mumtaz Alam Bazai* is a Pakistani lawyer, human rights advocate, youth leader, and social activist from *Balochistan, Pakistan*. He practices civil, criminal, and human rights law and is committed to justice, rule of law, youth empowerment, and policy advocacy in one of Pakistan’s most challenging regions.
+Mumtaz Alam Bazai, commonly known as Mumtaz Alam, is a distinguished Pakistani lawyer, human rights advocate, youth leader, and social activist originating from Balochistan, Pakistan. Born on August 11, 2000, he has dedicated his professional and personal life to promoting justice, human rights, and youth empowerment in one of the most challenging and high-risk regions of the country.
 
-He currently serves as the *4th Curator of the Global Shapers Community, Quetta Hub, an initiative of the **World Economic Forum*, where he leads youth-driven projects on governance, climate action, technology, and civic engagement.
-
----
-
-##  Legal Career
-
-Registered Advocate, Balochistan Bar Council
-Practicing in *Civil, Criminal & Human Rights Law*
-Trained at *Iqra Law Associates*, Quetta
-Worked under *Advocate Abdul Zahir Kakar*, Senior Associate Advocate, Supreme Court of Pakistan
-Actively represents marginalized communities and undertakes *pro bono human rights cases*
+He is recognized for his exceptional legal expertise, leadership skills, and commitment to civic engagement. Mumtaz Alam Bazai combines his professional practice with a deep sense of social responsibility, consistently striving to bring positive change to his community and beyond.
 
 ---
 
-##  Education
+## Education
 
-*LLB (Hons.)* – University Law College (2024)
-*MA Political Science* – University of Balochistan (2024)
-*BA* – University of Balochistan (2022)
-*Intermediate* – Pak-Turk Maarif International Schools & Colleges (2019)
+Mumtaz Alam Bazai received his early education in a modest local school in his native village and subsequently moved to Quetta, where he completed his intermediate studies at Pak-Turk Maarif International Schools and Colleges under a fully funded scholarship. He demonstrated strong academic performance throughout his schooling and actively participated in extracurricular activities, including sports, languages, and leadership programs.
 
----
-
-##  Leadership & Volunteering
-
-### Global Shapers Community (WEF)
-Social Media Head (2022–2024)
-*Curator (2025–2026)*
-Represented Quetta Hub at *Global Shapers Annual Summit 2025, Geneva*
-Led cross-hub collaborations (Peshawar, Karachi, Kuala Lumpur)
-Initiated *Balochistan’s First Youth Policy Project*
-Drafted the Hub’s *first Governance Charter*
-
-### Human Rights Council of Balochistan
-Best Speaker – General Assembly 2024
-Executive Member & Legal Team Head
-Legal Advisor and advocate for victims of human rights violations
-Honourable Delegate – Youth Model National Assembly 2025
-
-### Other Organizations
-*Blood Heroes* – District Co-Head (2022–2024)
-*Millions Smiles Pakistan* – Best Performing Volunteer (2022)
-*Bargad Organization* – Climate & Youth Leadership Volunteer
-*General Assembly Balochistan* – Cabinet Member (2025)
+He pursued higher education in law and social sciences, enrolling in the five-year LLB program at University Law College in 2020. Simultaneously, he completed a Bachelor of Arts degree from the University of Balochistan in 2022 with first division. He further enhanced his academic credentials by earning a Master’s degree in Political Science from the University of Balochistan in 2024, also with first division honors. His formal legal education and training laid the foundation for his career as a practicing advocate committed to justice and human rights.
 
 ---
 
-##  Key Initiatives
+## Legal Career
 
-Blue & Green Quetta Project (UGRAD-funded)
-Quetta Green Horizon Initiative
-Digital Baithak (AI, Media Literacy & Tech Training)
-Youth Policy Drafting & Legislative Advocacy
-Climate action, peace walks, and civic education programs
+After completing his LLB in December 2024, Mumtaz Alam Bazai began his professional legal career by enrolling with the Balochistan Bar Council. He initially trained under Advocate Abdul Zahir Kakar at Iqra Law Associates, gaining practical experience in civil, criminal, and human rights law. He successfully completed the Law-GAT examination and fulfilled all mandatory intimation and interview requirements, securing his license to practice before the trial courts of Pakistan in December 2025. 
+
+Currently, he serves as a registered advocate with the Bar Council (registration number 14/2025) and actively represents individuals and communities in civil, criminal, and human rights matters. In addition to his legal practice, he undertakes pro bono work for marginalized groups and victims of human rights violations, demonstrating his unwavering commitment to justice.
 
 ---
 
-##  Writing & Research
+## Leadership and Social Activism
 
-Human Rights and Responsibilities – Daily Intekhab (2021)
-Research Paper:
-  *“The Role of the Election Commission of Pakistan in Ensuring Free and Fair Elections (2024)”*
+Parallel to his legal career, Mumtaz Alam Bazai has been deeply involved in volunteering, youth leadership, and social activism. His civic engagement began in 2021 with organizations such as Blood Heroes, where he played a key role in organizing blood donation campaigns and providing emergency medical support. His effective leadership in the organization earned him the position of District Co-Head, overseeing volunteer coordination and community outreach.
 
----
+He co-founded the Law Students Alliance in 2021, creating a platform to unite law students across Balochistan, address academic and social grievances, and promote constructive engagement with institutions. Through this initiative, he organized seminars, sports events, and awareness programs that cultivated student leadership and community involvement.
 
-##  Skills & Expertise
-
-Legal Research & Drafting
-Human Rights Advocacy
-Policy Development
-Public Speaking & Leadership
-Social Media Strategy & Digital Campaigns
-Graphic Design & Digital Editing
+In 2022, Mumtaz joined Millions Smiles, contributing to both social media campaigns and ground-level community support. His efforts during the 2022 floods in Balochistan included distributing essential supplies, organizing awareness sessions, and facilitating educational support for vulnerable communities. His exceptional contributions earned him recognition as the Best Performing Volunteer and Social Media Activist of the Year.
 
 ---
 
-##  Thematic Areas (Global Forums)
+## Global Shapers Community
 
-Human Rights & Equality
-Governance & Rule of Law
-Youth Policy & Leadership
-Climate, Energy & Nature
-Education & Civic Engagement
-Indigenous & Gender Rights
+In October 2022, Mumtaz Alam Bazai became actively involved with the *Global Shapers Community Quetta Hub*, an initiative of the World Economic Forum. He initially served as Social Media Head and contributed significantly to environmental projects, including the Blue and Green Quetta Project, which promoted large-scale tree planting and environmental awareness.
+
+In 2025, he was elected as the 4th Curator of the Quetta Hub, representing his community on the global stage. As Curator, he led cross-hub collaborations with hubs in Peshawar, Karachi, and Kuala Lumpur, initiated the first youth policy project in Balochistan, and drafted the hub’s first Governance Charter. He also facilitated training programs for youth in technology, innovation, and artificial intelligence, demonstrating his commitment to sustainable development and youth empowerment.
 
 ---
 
-##  Mission
+## Human Rights Council of Balochistan
 
-To advance justice, human rights, and youth empowerment through legal advocacy, civic leadership, and policy work—strengthening institutions and creating sustainable change in Balochistan and beyond.
-
----
-
-##  Official Website
-
- https://mumtazalambazai.github.io  
-(Replace with your live website link)
+Mumtaz Alam Bazai has played a significant role in the Human Rights Council of Balochistan, serving as an executive member and later as Legal Team Head and General Body Member. He actively represents victims of human rights violations, drafts policy recommendations, and advocates for justice within challenging environments. His participation in the Youth Model National Assembly and other forums highlights his dedication to creating systemic change and empowering youth voices in governance.
 
 ---
 
-© 2025 *Mumtaz Alam Bazai*  
-All rights reserved.
+## Publications and Research
+
+Mumtaz Alam Bazai is an accomplished writer and researcher. His notable works include the article “Human Rights and Responsibilities” published in Daily Intekhab (2021) and a research paper titled “The Role of the Election Commission of Pakistan in Ensuring Free and Fair Elections: Challenges, Mechanisms, and Impact on the Democratic Process” (2024). These publications demonstrate his expertise in law, human rights, and governance.
+
+---
+
+## Skills and Expertise
+
+Mumtaz Alam Bazai possesses a diverse set of professional skills, including legal research and drafting, policy development, leadership, public speaking, social media strategy, and digital communication. He has also undergone formal training in graphic design, the McKinsey Forward Program, and Bar Vocational Courses, further enhancing his professional capabilities.
+
+---
+
+## Personal Interests
+
+Outside of his professional and volunteer commitments, Mumtaz Alam Bazai is passionate about fitness, bodybuilding, sports, travel, music, and social engagement. He has trained as a fitness instructor and maintains a disciplined and healthy lifestyle while encouraging others to do the same.
+
+---
+
+## Mission
+
+Mumtaz Alam Bazai’s mission is to advocate for justice, uphold human rights, and empower youth through legal practice, civic engagement, and policy leadership. He strives to create systemic change and build resilient communities in Balochistan, Pakistan, and globally.
+
+---
+
+## Contact and Social Media
+
+*Official Website:* [https://mumtazalambazai.github.io](https://mumtazalambazai.github.io)
+*Linktree:* [https://linktr.ee/mumtazalam](https://linktr.ee/mumtazalam)
+*WhatsApp:* [https://wa.me/923332568792](https://wa.me/923332568792)
+*LinkedIn:* [https://www.linkedin.com/in/adv-mumtaz-alam-bazai-163a9a324](https://www.linkedin.com/in/adv-mumtaz-alam-bazai-163a9a324)
+*Instagram:* [https://www.instagram.com/mumtaz_alam](https://www.instagram.com/mumtaz_alam)
+*Facebook:* [https://www.facebook.com/mumtaz.alam.18488](https://www.facebook.com/mumtaz.alam.18488)
+*Email:* [advmumtaz222@gmail.com](mailto:advmumtaz222@gmail.com)
+*TikTok:* [https://www.tiktok.com/@mumtaz_alam](https://www.tiktok.com/@mumtaz_alam)
+*Snapchat:* [https://www.snapchat.com/add/mumtazalam222](https://www.snapchat.com/add/mumtazalam222)
+*X (formerly Twitter):* [https://x.com/mumtazalam333](https://x.com/mumtazalam333)
+*World Economic Forum Profile:* [https://my.weforum.org/network/people/001TG000009vSDhYAM/adv-mumtaz-alam](https://my.weforum.org/network/people/001TG000009vSDhYAM/adv-mumtaz-alam)
+*Threads:* [https://www.threads.com/@mumtaz_alam](https://www.threads.com/@mumtaz_alam)
+*Odnoklassniki:* [https://ok.ru/profile/910193583170](https://ok.ru/profile/910193583170)
+
+---
+
+© 2025 *Mumtaz Alam Bazai*. All rights reserved.
