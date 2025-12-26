@@ -17,7 +17,7 @@ He is widely recognized for his work in *civil, criminal, and human rights law*,
 
 Mumtaz Alam Bazai was born on *11 August 2000* in the small village of Zdoon, Tehsil Nana Sahib, District Pishin, Balochistan, Pakistan. He belongs to the *Pashtoon tribe, of the **Kakar caste*, with Bazai as his sub-caste. He is the eldest child in his family, with four brothers and four sisters.  
 
-His father, *Dr. Ameer Muhammad, is a neurosurgeon based in Quetta, and his mother, **Bibi Noor Nama*, is a homemaker. From an early age, Mumtaz displayed remarkable intellectual curiosity, discipline, and a passion for learning.
+His father, *Dr. Ameer Muhammad, is a neurosurgeon based in Quetta, and his mother, is a homemaker. From an early age, Mumtaz displayed remarkable intellectual curiosity, discipline, and a passion for learning.
 
 ---
 
