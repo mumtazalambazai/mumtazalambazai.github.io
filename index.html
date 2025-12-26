@@ -10,17 +10,25 @@
 
 <style>
 :root{
-  --primary:#0f2027;
-  --secondary:#203a43;
+  --bg:#f5f7fa;
+  --text:#222;
+  --card:#ffffff;
   --accent:#2c5364;
-  --glass:rgba(255,255,255,0.15);
+  --primary:#0f2027;
+}
+
+body.dark{
+  --bg:#0b141a;
+  --text:#eaeaea;
+  --card:rgba(255,255,255,0.08);
 }
 
 *{margin:0;padding:0;box-sizing:border-box;}
 body{
   font-family:'Inter',sans-serif;
-  background:#f4f6f8;
-  color:#222;
+  background:var(--bg);
+  color:var(--text);
+  transition:0.4s;
   scroll-behavior:smooth;
 }
 
@@ -28,175 +36,184 @@ body{
 .hero{
   height:100vh;
   background:
-    linear-gradient(rgba(15,32,39,0.8),rgba(15,32,39,0.8)),
-    url('hero.jpg') center/cover no-repeat;
+  linear-gradient(rgba(15,32,39,0.85),rgba(15,32,39,0.85)),
+  url('hero.jpg') center/cover no-repeat;
   display:flex;
   align-items:center;
   justify-content:center;
   text-align:center;
+}
+
+.hero-box{
+  background:rgba(255,255,255,0.15);
+  backdrop-filter:blur(15px);
+  padding:55px;
+  border-radius:30px;
+  max-width:950px;
   color:#fff;
 }
 
-.hero-content{
-  backdrop-filter:blur(10px);
-  background:var(--glass);
-  padding:50px;
-  border-radius:24px;
-  max-width:900px;
-}
-
 .hero img{
-  width:170px;
-  height:170px;
+  width:180px;
+  height:180px;
   border-radius:50%;
-  object-fit:cover;
   border:5px solid #fff;
+  object-fit:cover;
   margin-bottom:25px;
 }
 
 .hero h1{
   font-family:'Playfair Display',serif;
-  font-size:50px;
+  font-size:52px;
 }
 
 .hero p{
-  margin-top:15px;
   font-size:18px;
+  margin-top:15px;
   line-height:1.6;
 }
 
 .social-icons a{
   color:#fff;
   font-size:24px;
-  margin:15px 10px 0;
-  transition:0.3s;
+  margin:15px 10px;
 }
-.social-icons a:hover{opacity:0.7}
+
+/* TOGGLE */
+.toggle{
+  position:fixed;
+  top:20px;
+  right:20px;
+  background:#fff;
+  border-radius:50%;
+  width:45px;
+  height:45px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+  z-index:2000;
+  box-shadow:0 5px 20px rgba(0,0,0,0.3);
+}
+body.dark .toggle{background:#222;color:#fff}
 
 /* NAV */
 nav{
   position:sticky;
   top:0;
-  background:#fff;
-  z-index:1000;
+  background:var(--card);
+  backdrop-filter:blur(10px);
   padding:15px;
   text-align:center;
-  box-shadow:0 5px 20px rgba(0,0,0,0.05);
+  z-index:1000;
 }
 nav a{
-  margin:0 12px;
-  color:var(--secondary);
+  color:var(--text);
   text-decoration:none;
+  margin:0 14px;
   font-weight:600;
 }
-nav a:hover{color:var(--primary)}
+nav a:hover{color:var(--accent)}
 
-/* SECTIONS */
+/* SECTION */
 section{
   max-width:1200px;
   margin:auto;
-  padding:80px 20px;
+  padding:90px 20px;
 }
 
 h2{
   font-family:'Playfair Display',serif;
+  font-size:38px;
   text-align:center;
-  font-size:36px;
-  color:var(--secondary);
   margin-bottom:40px;
 }
 
 .card{
-  background:#fff;
-  padding:35px;
-  border-radius:20px;
-  box-shadow:0 15px 40px rgba(0,0,0,0.08);
+  background:var(--card);
+  padding:40px;
+  border-radius:25px;
+  box-shadow:0 20px 50px rgba(0,0,0,0.15);
+  line-height:1.75;
   margin-bottom:30px;
-  line-height:1.7;
 }
 
 /* LIST */
-ul{
-  margin-left:20px;
-}
-ul li{
-  margin-bottom:10px;
-}
+ul{margin-left:25px;}
+ul li{margin-bottom:10px;}
 
 /* GALLERY */
 .gallery{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:20px;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:25px;
 }
 .gallery img{
   width:100%;
-  height:300px;
+  height:320px;
   object-fit:cover;
-  border-radius:20px;
+  border-radius:25px;
   transition:0.4s;
 }
-.gallery img:hover{
-  transform:scale(1.05);
-}
+.gallery img:hover{transform:scale(1.06)}
 
 /* CONTACT */
 .contact a{
   display:inline-block;
   margin:10px 15px;
-  text-decoration:none;
+  color:var(--text);
   font-size:18px;
-  color:var(--secondary);
+  text-decoration:none;
 }
-.contact a:hover{opacity:0.7}
 
 /* FOOTER */
 footer{
-  background:var(--secondary);
+  background:var(--primary);
   color:#fff;
   text-align:center;
   padding:40px;
 }
-footer p{opacity:0.85}
 </style>
 </head>
 
 <body>
 
+<div class="toggle" onclick="document.body.classList.toggle('dark')">
+<i class="fas fa-moon"></i>
+</div>
+
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-content">
-    <img src="profile.jpg" alt="Mumtaz Alam Bazai">
-    <h1>Mumtaz Alam Bazai</h1>
-    <p>
-      Advocate · Human Rights Lawyer · Youth Leader · Social Activist<br>
-      Curator, Global Shapers Community – Quetta Hub (World Economic Forum)
-    </p>
-    <div class="social-icons">
-      <a href="https://linktr.ee/mumtazalam" target="_blank"><i class="fas fa-link"></i></a>
-      <a href="https://wa.me/923332568792" target="_blank"><i class="fab fa-whatsapp"></i></a>
-      <a href="https://www.linkedin.com/in/adv-mumtaz-alam-bazai-163a9a324" target="_blank"><i class="fab fa-linkedin"></i></a>
-      <a href="https://www.instagram.com/mumtaz_alam" target="_blank"><i class="fab fa-instagram"></i></a>
-      <a href="https://x.com/mumtazalam333" target="_blank"><i class="fab fa-x-twitter"></i></a>
-    </div>
-  </div>
+<div class="hero-box">
+<img src="profile.jpg">
+<h1>Mumtaz Alam Bazai</h1>
+<p>
+Advocate · Human Rights Lawyer · Youth Leader · Social Activist<br>
+Curator, Global Shapers Community – Quetta Hub (World Economic Forum)
+</p>
+<div class="social-icons">
+<a href="https://linktr.ee/mumtazalam"><i class="fas fa-link"></i></a>
+<a href="https://wa.me/923332568792"><i class="fab fa-whatsapp"></i></a>
+<a href="https://www.linkedin.com/in/adv-mumtaz-alam-bazai-163a9a324"><i class="fab fa-linkedin"></i></a>
+<a href="https://www.instagram.com/mumtaz_alam"><i class="fab fa-instagram"></i></a>
+<a href="https://x.com/mumtazalam333"><i class="fab fa-x-twitter"></i></a>
+</div>
+</div>
 </section>
 
-<!-- NAV -->
 <nav>
-  <a href="#about">About</a>
-  <a href="#education">Education</a>
-  <a href="#career">Legal Career</a>
-  <a href="#leadership">Leadership</a>
-  <a href="#publications">Publications</a>
-  <a href="#skills">Skills</a>
-  <a href="#areas">Thematic Areas</a>
-  <a href="#gallery">Gallery</a>
-  <a href="#mission">Mission</a>
-  <a href="#contact">Contact</a>
+<a href="#about">About</a>
+<a href="#education">Education</a>
+<a href="#career">Legal Career</a>
+<a href="#leadership">Leadership</a>
+<a href="#publications">Publications</a>
+<a href="#skills">Skills</a>
+<a href="#thematic">Thematic Areas</a>
+<a href="#gallery">Gallery</a>
+<a href="#mission">Mission</a>
+<a href="#contact">Contact</a>
 </nav>
 
-<!-- ABOUT -->
 <section id="about">
 <h2>About Mumtaz Alam Bazai</h2>
 <div class="card">
@@ -206,7 +223,6 @@ footer p{opacity:0.85}
 </div>
 </section>
 
-<!-- EDUCATION -->
 <section id="education">
 <h2>Education</h2>
 <div class="card">
@@ -219,39 +235,36 @@ footer p{opacity:0.85}
 </div>
 </section>
 
-<!-- CAREER -->
 <section id="career">
 <h2>Legal Career</h2>
 <div class="card">
-<p>Mumtaz formally entered the legal profession in 2025. He trained under Advocate Abdul Zahir Kakar at Iqra Law Associates, Quetta. On 2 December 2025, he received his license to practice before the trial courts of Pakistan (Bar Council Reg. No. 14/2025).</p>
-<p>He actively takes pro bono cases representing marginalized communities.</p>
+<p>Mumtaz formally entered the legal profession in 2025. He trained under Advocate Abdul Zahir Kakar at Iqra Law Associates, Quetta, gaining experience in civil, criminal, and human rights law.</p>
+<p>On 2 December 2025, he received his license to practice before the trial courts of Pakistan (Bar Council Reg. No. 14/2025). He actively takes pro bono cases, representing marginalized communities in high-risk regions.</p>
 </div>
 </section>
 
-<!-- LEADERSHIP -->
 <section id="leadership">
 <h2>Leadership & Social Impact</h2>
 <div class="card">
 <ul>
-<li>Curator – Global Shapers Community Quetta (WEF)</li>
+<li>Curator – Global Shapers Community Quetta Hub (WEF)</li>
 <li>Social Media Head – Global Shapers Community Quetta (2022–2024)</li>
 <li>Cabinet Member – General Assembly Balochistan (2025)</li>
-<li>Legal Advisor – Human Rights Council of Balochistan</li>
+<li>Executive Member & Legal Advisor – Human Rights Council of Balochistan</li>
 <li>District Co-Head – Blood Heroes (2022–2024)</li>
+<li>Volunteer – Millions Smiles, Bargad Organization, Alkhidmat Foundation</li>
 </ul>
-<p>He represented Quetta Hub at Global Shapers Annual Summit 2025 in Geneva, Switzerland and led flagship initiatives including Blue & Green Quetta Project and Youth Policy Project of Balochistan.</p>
+<p>He represented Quetta Hub at the Global Shapers Annual Summit 2025 in Geneva, Switzerland, initiated Balochistan’s first Youth Policy Project, authored the Hub Governance Charter, spearheaded cross-hub collaborations, earned Best Speaker recognition at General Assembly 2024, and served as an Honourable Delegate at Youth Model National Assembly 2025.</p>
 </div>
 </section>
 
-<!-- PUBLICATIONS -->
 <section id="publications">
 <h2>Publications & Research</h2>
 <div class="card">
-<p>Author of “Human Rights and Responsibilities” (Daily Intekhab, 2021) and research paper “The Role of the Election Commission of Pakistan in Ensuring Free and Fair Elections” (2024).</p>
+<p>Author of “Human Rights and Responsibilities” (Daily Intekhab, 2021) and the research paper “The Role of the Election Commission of Pakistan in Ensuring Free and Fair Elections” (2024).</p>
 </div>
 </section>
 
-<!-- SKILLS -->
 <section id="skills">
 <h2>Skills & Expertise</h2>
 <div class="card">
@@ -259,21 +272,20 @@ footer p{opacity:0.85}
 </div>
 </section>
 
-<!-- THEMATIC -->
-<section id="areas">
+<section id="thematic">
 <h2>Thematic Areas</h2>
 <div class="card">
 <ul>
 <li>Human Rights & Equality</li>
 <li>Governance & Rule of Law</li>
-<li>Youth Leadership & Policy</li>
+<li>Youth Policy & Leadership</li>
 <li>Climate, Energy & Nature</li>
+<li>Education & Civic Engagement</li>
 <li>Indigenous & Gender Rights</li>
 </ul>
 </div>
 </section>
 
-<!-- GALLERY -->
 <section id="gallery">
 <h2>Photo Gallery</h2>
 <div class="gallery">
@@ -284,15 +296,13 @@ footer p{opacity:0.85}
 </div>
 </section>
 
-<!-- MISSION -->
 <section id="mission">
 <h2>Mission</h2>
 <div class="card">
-<p>Committed to advancing justice, protecting human rights, and empowering youth through law, leadership, and civic engagement.</p>
+<p>Mumtaz Alam Bazai is committed to advancing justice, protecting human rights, and empowering youth in Pakistan through law, leadership, and civic responsibility.</p>
 </div>
 </section>
 
-<!-- CONTACT -->
 <section id="contact">
 <h2>Contact</h2>
 <div class="card contact">
