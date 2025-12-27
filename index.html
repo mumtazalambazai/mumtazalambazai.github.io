@@ -5,206 +5,222 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mumtaz Alam Bazai | Advocate & Human Rights Lawyer</title>
 
-<!-- FONTS -->
+<!-- GOOGLE FONTS -->
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<!-- ICONS -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
+<!-- AOS ANIMATION -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
 <style>
+
 /* ================= ROOT ================= */
 :root{
---bg:#060b16;
---glass:rgba(255,255,255,.12);
---blur:blur(25px);
---text:#f2f4ff;
-
---g1:linear-gradient(135deg,#6a11cb,#2575fc);
---g2:linear-gradient(135deg,#ff512f,#dd2476);
---g3:linear-gradient(135deg,#00c6ff,#0072ff);
---g4:linear-gradient(135deg,#11998e,#38ef7d);
---g5:linear-gradient(135deg,#f7971e,#ffd200);
+  --glass: rgba(255,255,255,0.18);
+  --blur: blur(25px);
+  --text-light:#ffffff;
+  --text-dark:#111;
 }
 
+/* ================= GLOBAL ================= */
 *{margin:0;padding:0;box-sizing:border-box}
+
 body{
-font-family:'Inter',sans-serif;
-background:radial-gradient(circle at top,#101935,#05080f);
-color:var(--text);
-overflow-x:hidden;
+  font-family:'Inter',sans-serif;
+  background:#05080f;
+  color:var(--text-light);
+  overflow-x:hidden;
 }
 
 /* ================= FLOATING BUBBLES ================= */
-.bubbles span{
-position:fixed;
-bottom:-150px;
-width:80px;height:80px;
-border-radius:50%;
-background:radial-gradient(circle,rgba(255,255,255,.6),transparent);
-animation:float 25s linear infinite;
-opacity:.35;
-filter:blur(1px);
-z-index:-1;
+.bubbles{
+  position:fixed;
+  inset:0;
+  z-index:-1;
+  overflow:hidden;
 }
+
+.bubbles span{
+  position:absolute;
+  width:80px;
+  height:80px;
+  background:radial-gradient(circle, rgba(255,255,255,0.5), rgba(255,255,255,0.05));
+  border-radius:50%;
+  animation:float 20s linear infinite;
+}
+
 @keyframes float{
-0%{transform:translateY(0) scale(.8)}
-100%{transform:translateY(-120vh) scale(1.3)}
+  from{transform:translateY(110vh) scale(0.5);}
+  to{transform:translateY(-20vh) scale(1.2);}
 }
 
 /* ================= HERO ================= */
 .hero{
-height:100vh;
-display:flex;
-align-items:center;
-justify-content:center;
-background:
-linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.4)),
-url('hero-bg.jpg.jpeg') center/cover fixed;
-position:relative;
+  height:100vh;
+  background:
+    linear-gradient(120deg,rgba(0,0,0,.8),rgba(0,0,0,.4)),
+    url('hero-bg.jpg.jpeg') center/cover fixed;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:30px;
 }
 
-.hero-card{
-max-width:1100px;
-padding:80px;
-border-radius:45px;
-background:var(--glass);
-backdrop-filter:var(--);
-box-shadow:0 50px 120px rgba(0,0,0,.7);
-display:grid;
-grid-template-columns:1fr 280px;
-gap:40px;
-animation:fadeUp 1.4s ease forwards;
+.hero-box{
+  max-width:1100px;
+  padding:80px;
+  border-radius:50px;
+  background:var(--glass);
+  backdrop-filter:var(--blur);
+  box-shadow:0 50px 120px rgba(0,0,0,.6);
+  position:relative;
 }
 
-.hero-card img{
-width:100%;
-border-radius:50%;
-border:6px solid rgba(255,255,255,.9);
-box-shadow:0 40px 90px rgba(0,0,0,.8);
-animation:floatPic 6s ease-in-out infinite;
-}
-
-@keyframes floatPic{
-0%,100%{transform:translateY(0)}
-50%{transform:translateY(-20px)}
+.hero-box img{
+  position:absolute;
+  top:-80px;
+  right:60px;
+  width:220px;
+  height:220px;
+  border-radius:50%;
+  object-fit:cover;
+  border:6px solid rgba(255,255,255,0.9);
+  box-shadow:0 30px 90px rgba(0,0,0,.8);
+  transform:translateZ(60px);
 }
 
 .hero h1{
-font-family:'Playfair Display',serif;
-font-size:60px;
-background:linear-gradient(135deg,#fff,#9fd3ff);
--webkit-background-clip:text;
--webkit-text-fill-color:transparent;
+  font-family:'Playfair Display',serif;
+  font-size:64px;
 }
 
 .hero p{
-margin-top:20px;
-font-size:20px;
-line-height:1.7;
+  margin-top:20px;
+  font-size:20px;
+  line-height:1.8;
 }
 
 /* ================= SOCIAL ICONS ================= */
 .social-bar{
-margin-top:30px;
-display:flex;
-flex-wrap:wrap;
-gap:16px;
+  display:flex;
+  flex-wrap:wrap;
+  gap:18px;
+  margin-top:30px;
 }
+
 .social-bar a{
-width:50px;height:50px;
-display:flex;
-align-items:center;
-justify-content:center;
-border-radius:50%;
-background:var(--g3);
-color:#fff;
-font-size:22px;
-box-shadow:0 20px 50px rgba(0,198,255,.8);
-transition:.4s;
+  width:52px;
+  height:52px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:50%;
+  background:linear-gradient(135deg,#6a11cb,#00c6ff);
+  color:#fff;
+  font-size:22px;
+  box-shadow:0 15px 40px rgba(0,198,255,.6);
+  transition:.5s;
 }
+
 .social-bar a:hover{
-transform:translateY(-10px) scale(1.15) rotate(8deg);
-box-shadow:0 35px 80px rgba(0,198,255,1);
+  transform:translateY(-10px) rotate(12deg) scale(1.15);
 }
 
 /* ================= SECTIONS ================= */
 section{
-padding:120px 30px;
-max-width:1250px;
-margin:auto;
+  max-width:1250px;
+  margin:auto;
+  padding:120px 30px;
+}
+
+.section-card{
+  background:var(--glass);
+  backdrop-filter:var(--blur);
+  border-radius:45px;
+  padding:60px;
+  box-shadow:0 40px 100px rgba(0,0,0,.5);
 }
 
 h2{
-font-family:'Playfair Display',serif;
-font-size:44px;
-text-align:center;
-margin-bottom:60px;
-background:var(--g1);
--webkit-background-clip:text;
--webkit-text-fill-color:transparent;
+  font-family:'Playfair Display',serif;
+  font-size:46px;
+  margin-bottom:40px;
+  background:linear-gradient(135deg,#6a11cb,#00c6ff,#00ffcc);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
 }
 
-.card{
-background:var(--glass);
-backdrop-filter:var(--blur);
-padding:60px;
-border-radius:40px;
-box-shadow:0 40px 100px rgba(0,0,0,.6);
-line-height:1.9;
-transform:translateY(40px);
-opacity:0;
-transition:1s;
+/* ================= STORY SECTIONS ================= */
+.story{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:40px;
 }
 
-/* reveal */
-.card.show{
-transform:none;
-opacity:1;
+.story div{
+  padding:40px;
+  border-radius:35px;
+  background:linear-gradient(135deg,rgba(255,255,255,0.25),rgba(255,255,255,0.05));
+  backdrop-filter:blur(20px);
 }
-
-/* ================= GRADIENT THEMES ================= */
-#education{background:var(--g4)}
-#career{background:var(--g2)}
-#leadership{background:var(--g3)}
-#publications{background:var(--g5)}
 
 /* ================= GALLERY ================= */
 .gallery{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:30px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:30px;
 }
+
 .gallery img{
-width:100%;
-height:350px;
-object-fit:cover;
-border-radius:35px;
-box-shadow:0 35px 90px rgba(0,0,0,.7);
-transition:.6s;
+  width:100%;
+  height:360px;
+  object-fit:cover;
+  border-radius:35px;
+  box-shadow:0 30px 80px rgba(0,0,0,.7);
+  transition:.6s;
 }
+
 .gallery img:hover{
-transform:scale(1.1) rotate(.8deg);
+  transform:scale(1.1) rotate(1deg);
+}
+
+/* ================= CONTACT ================= */
+.contact-grid{
+  display:flex;
+  flex-wrap:wrap;
+  gap:25px;
+  justify-content:center;
+}
+
+.contact-grid a{
+  padding:16px 26px;
+  border-radius:35px;
+  background:linear-gradient(135deg,#00c6ff,#00ffcc);
+  color:#000;
+  font-weight:700;
+  text-decoration:none;
+  box-shadow:0 20px 50px rgba(0,255,200,.6);
+  transition:.4s;
+}
+
+.contact-grid a:hover{
+  transform:translateY(-8px) scale(1.1);
 }
 
 /* ================= FOOTER ================= */
 footer{
-padding:60px;
-text-align:center;
-background:#000;
+  padding:60px;
+  text-align:center;
+  background:#000;
 }
 
-/* ================= ANIMATIONS ================= */
-@keyframes fadeUp{
-from{opacity:0;transform:translateY(40px)}
-to{opacity:1;transform:none}
+@media(max-width:768px){
+  .hero-box img{position:static;margin:auto 0 30px;}
+  .hero h1{font-size:44px;}
 }
 
-/* ================= MOBILE ================= */
-@media(max-width:900px){
-.hero-card{
-grid-template-columns:1fr;
-text-align:center;
-}
-.hero h1{font-size:44px}
-}
 </style>
 </head>
 
@@ -212,100 +228,87 @@ text-align:center;
 
 <!-- FLOATING BUBBLES -->
 <div class="bubbles">
-<span style="left:10%;animation-duration:22s"></span>
-<span style="left:30%;animation-duration:26s"></span>
-<span style="left:55%;animation-duration:24s"></span>
-<span style="left:80%;animation-duration:28s"></span>
+  <span style="left:10%;animation-delay:0s"></span>
+  <span style="left:30%;animation-delay:5s"></span>
+  <span style="left:50%;animation-delay:2s"></span>
+  <span style="left:70%;animation-delay:7s"></span>
+  <span style="left:90%;animation-delay:3s"></span>
 </div>
 
 <!-- HERO -->
 <section class="hero">
-<div class="hero-card">
-<div>
-<h1>Mumtaz Alam Bazai</h1>
-<p>
-Advocate · Human Rights Lawyer · Youth Leader · Social Activist<br>
-Curator, Global Shapers Community – Quetta Hub (World Economic Forum)
-</p>
+  <div class="hero-box" data-aos="zoom-in">
+    <img src="portrait.jpg.jpeg">
+    <h1>Mumtaz Alam Bazai</h1>
+    <p>
+      Advocate · Human Rights Lawyer · Youth Leader · Social Activist<br>
+      Curator, Global Shapers Community – Quetta Hub (World Economic Forum)
+    </p>
 
-<div class="social-bar">
-<a href="https://linktr.ee/mumtazalam"><i class="fas fa-link"></i></a>
-<a href="https://wa.me/923332568792"><i class="fab fa-whatsapp"></i></a>
-<a href="https://www.linkedin.com/in/adv-mumtaz-alam-bazai-163a9a324"><i class="fab fa-linkedin"></i></a>
-<a href="https://www.instagram.com/mumtaz_alam"><i class="fab fa-instagram"></i></a>
-<a href="https://www.facebook.com/mumtaz.alam.18488"><i class="fab fa-facebook"></i></a>
-<a href="mailto:advmumtaz222@gmail.com"><i class="fas fa-envelope"></i></a>
-<a href="https://www.tiktok.com/@mumtaz_alam"><i class="fab fa-tiktok"></i></a>
-<a href="https://x.com/mumtazalam333"><i class="fab fa-x-twitter"></i></a>
-</div>
-</div>
-
-<img src="portrait.jpg.jpeg">
-</div>
+    <div class="social-bar">
+      <a href="https://linktr.ee/mumtazalam"><i class="fas fa-link"></i></a>
+      <a href="https://wa.me/923332568792"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://www.linkedin.com/in/adv-mumtaz-alam-bazai-163a9a324"><i class="fab fa-linkedin"></i></a>
+      <a href="https://www.instagram.com/mumtaz_alam"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.facebook.com/mumtaz.alam.18488"><i class="fab fa-facebook"></i></a>
+      <a href="mailto:advmumtaz222@gmail.com"><i class="fas fa-envelope"></i></a>
+      <a href="https://www.tiktok.com/@mumtaz_alam"><i class="fab fa-tiktok"></i></a>
+      <a href="https://x.com/mumtazalam333"><i class="fab fa-x-twitter"></i></a>
+      <a href="https://my.weforum.org/network/people/001TG000009vSDhYAM/adv-mumtaz-alam"><i class="fas fa-globe"></i></a>
+    </div>
+  </div>
 </section>
 
-<!-- ABOUT -->
+<!-- STORY -->
 <section>
-<h2>Journey & Early Life</h2>
-<div class="card">
-<p><strong>Mumtaz Alam Bazai</strong> is a Pakistani advocate and human rights lawyer from Balochistan, committed to justice, constitutionalism, and youth empowerment. Born on <strong>11 August 2000</strong> in <strong>Kili Zdoon, District Pishin</strong>, his journey reflects resilience, scholarship, and leadership.</p>
-</div>
-</section>
-
-<!-- EDUCATION -->
-<section id="education">
-<h2>Education</h2>
-<div class="card">
-<ul>
-<li>LLB (Hons.) – University Law College (2024)</li>
-<li>MA Political Science – University of Balochistan (2024)</li>
-<li>BA – University of Balochistan (2022)</li>
-<li>Pak-Turk Maarif International Schools (2019)</li>
-</ul>
-</div>
-</section>
-
-<!-- CAREER -->
-<section id="career">
-<h2>Legal Career</h2>
-<div class="card">
-<p>Licensed advocate (Bar Reg. No. 14/2025), trained at Iqra Law Associates, Quetta. Actively practicing civil, criminal, and human rights litigation with strong pro-bono engagement.</p>
-</div>
-</section>
-
-<!-- LEADERSHIP -->
-<section id="leadership">
-<h2>Leadership & Impact</h2>
-<div class="card">
-<p>Curator, Global Shapers Quetta Hub (WEF). Represented Pakistan at Global Shapers Annual Summit 2025, Geneva. Architect of Balochistan’s first Youth Policy initiative.</p>
-</div>
+  <h2 data-aos="fade-up">Journey · Impact · Vision</h2>
+  <div class="story">
+    <div data-aos="fade-right">
+      <h3>Early Life & Journey</h3>
+      <p>Born in Balochistan, raised with discipline, education and service — Mumtaz’s journey reflects resilience and leadership.</p>
+    </div>
+    <div data-aos="fade-up">
+      <h3>Impact</h3>
+      <p>From courts to communities, he bridges law, human rights and youth leadership.</p>
+    </div>
+    <div data-aos="fade-left">
+      <h3>Vision</h3>
+      <p>Justice, democracy and empowered youth shaping Pakistan’s future.</p>
+    </div>
+  </div>
 </section>
 
 <!-- GALLERY -->
 <section>
-<h2>Visual Journey</h2>
-<div class="gallery">
-<img src="life1.jpg.jpeg">
-<img src="life2.jpg.jpeg">
-<img src="life3.jpg.jpeg">
-<img src="life4.jpg.jpeg">
-<img src="life5.jpg.jpeg">
-<img src="life6.jpg.jpeg">
-</div>
+  <h2 data-aos="fade-up">Visual Journey</h2>
+  <div class="gallery">
+    <img src="life1.jpg.jpeg">
+    <img src="life2.jpg.jpeg">
+    <img src="life3.jpg.jpeg">
+    <img src="life4.jpg.jpeg">
+    <img src="life5.jpg.jpeg">
+    <img src="life6.jpg.jpeg">
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section>
+  <h2 data-aos="fade-up">Connect</h2>
+  <div class="contact-grid">
+    <a href="mailto:advmumtaz222@gmail.com">Email</a>
+    <a href="https://wa.me/923332568792">WhatsApp</a>
+    <a href="https://linktr.ee/mumtazalam">Linktree</a>
+    <a href="https://my.weforum.org/network/people/001TG000009vSDhYAM/adv-mumtaz-alam">WEF Profile</a>
+  </div>
 </section>
 
 <footer>
-<p>© 2025 Mumtaz Alam Bazai — Advocate & Human Rights Lawyer</p>
+  © 2025 Mumtaz Alam Bazai | Advocate & Human Rights Lawyer
 </footer>
 
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
-const cards=document.querySelectorAll('.card');
-const obs=new IntersectionObserver(e=>{
-e.forEach(x=>{
-if(x.isIntersecting)x.target.classList.add('show');
-});
-},{threshold:.2});
-cards.forEach(c=>obs.observe(c));
+AOS.init({duration:1200, once:true});
 </script>
 
 </body>
