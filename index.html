@@ -3,105 +3,90 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mumtaz Alam Bazai | Advocate & Human Rights Lawyer</title>
 
+<title>Mumtaz Alam Bazai | Advocate & Human Rights Lawyer</title>
+<meta name="description" content="Official website of Mumtaz Alam Bazai, Advocate, Human Rights Lawyer, Youth Leader, Curator Global Shapers Quetta (WEF).">
+
+<!-- Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+<!-- Icons -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 <style>
+/* ================= ROOT VARIABLES ================= */
 :root{
-  --bg:#f6f7fb;
-  --text:#111;
-  --card:rgba(255,255,255,0.75);
   --accent1:#6a11cb;
-  --accent2:#2575fc;
-  --accent3:#00c6ff;
+  --accent2:#00c6ff;
+  --bg:#f5f7fb;
+  --text:#203a43;
+  --card:rgba(255,255,255,0.85);
 }
 
 body.dark{
-  --bg:#05080f;
-  --text:#eaeaea;
+  --bg:#0f1115;
+  --text:#ffffff;
   --card:rgba(255,255,255,0.08);
 }
 
+/* ================= BASE ================= */
 *{margin:0;padding:0;box-sizing:border-box}
-
 body{
-  font-family:'Inter',sans-serif;
   background:var(--bg);
   color:var(--text);
-  transition:.5s;
+  font-family:'Inter',sans-serif;
+  transition:.4s;
+}
+a{text-decoration:none;color:inherit}
+section{max-width:1250px;margin:auto;padding:100px 25px}
+h2{
+  font-family:'Playfair Display',serif;
+  font-size:36px;
+  text-align:center;
+  margin-bottom:30px;
 }
 
-/* TOGGLE */
+/* ================= THEME TOGGLE ================= */
 .theme-toggle{
   position:fixed;
-  right:25px;
-  top:25px;
-  z-index:3000;
-  width:48px;
-  height:48px;
-  border-radius:50%;
-  background:linear-gradient(135deg,var(--accent1),var(--accent2));
-  color:#fff;
-  display:flex;
-  align-items:center;
-  justify-content:center;
+  top:20px;
+  left:20px;
+  font-size:26px;
   cursor:pointer;
-  box-shadow:0 0 25px rgba(0,0,0,.4);
+  z-index:3000;
 }
 
-/* HERO */
+/* ================= HERO ================= */
 .hero{
-  height:100vh;
-  background:
-    linear-gradient(120deg,rgba(0,0,0,.75),rgba(0,0,0,.55)),
-    url('hero-bg.jpg.jpeg') center/cover no-repeat;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-}
-
-.hero-box{
-  position: relative;
-  max-width:1000px;
-padding:70px 100px 70px 70px;
-  border-radius:40px;
-  background:linear-gradient(135deg,
-    rgba(255,255,255,.18),
-    rgba(255,255,255,.05));
-  backdrop-filter:blur(0px);
-  box-shadow:0 0px 0px rgba(0,0,0,.5);
+  background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
   color:#fff;
+  text-align:center;
+  padding:140px 25px 70px;
+  position:relative;
 }
-
 .hero img{
   position:absolute;
   top:30px;
-  right:30px;
-  width:160px;
-  height:160px;
+  right:40px;
+  width:190px;
+  height:190px;
   border-radius:50%;
-  border:4px solid rgba(255,255,255,.9);
+  border:4px solid #fff;
   object-fit:cover;
-  box-shadow:0 15px 40px rgba(0,0,0,.6);
+  box-shadow:0 20px 50px rgba(0,0,0,.4);
 }
-
 .hero h1{
   font-family:'Playfair Display',serif;
-  font-size:56px;
+  font-size:50px;
 }
-
 .hero p{
   margin-top:18px;
   font-size:19px;
   line-height:1.7;
   opacity:.95;
 }
-  
 
-/* SOCIAL BAR */
+/* ================= SOCIAL BAR ================= */
 .social-bar{
   margin-top:30px;
   display:flex;
@@ -122,22 +107,42 @@ padding:70px 100px 70px 70px;
   box-shadow:0 0 20px rgba(0,198,255,.6);
 }
 
-</section>
-<section class="quick-access">
-  <a href="#about" class="bubble"><i class="fas fa-user"></i><span>About</span></a>
-  <a href="#education" class="bubble"><i class="fas fa-graduation-cap"></i><span>Education</span></a>
-  <a href="#career" class="bubble"><i class="fas fa-gavel"></i><span>Legal Career</span></a>
-  <a href="#leadership" class="bubble"><i class="fas fa-globe"></i><span>Leadership</span></a>
-  <a href="#publications" class="bubble"><i class="fas fa-book"></i><span>Publications</span></a>
-  <a href="#skills" class="bubble"><i class="fas fa-lightbulb"></i><span>Skills</span></a>
-  <a href="#thematic" class="bubble"><i class="fas fa-leaf"></i><span>Thematic</span></a>
-  <a href="#gallery" class="bubble"><i class="fas fa-images"></i><span>Gallery</span></a>
-  <a href="#mission" class="bubble"><i class="fas fa-bullseye"></i><span>Mission</span></a>
-  <a href="#contact" class="bubble"><i class="fas fa-envelope"></i><span>Contact</span></a>
-</section>
+/* ================= QUICK ACCESS BUBBLES ================= */
+.quick-access{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:22px;
+  margin-top:-60px;
+  padding-bottom:40px;
+}
+.bubble{
+  width:130px;
+  height:130px;
+  border-radius:50%;
+  background:var(--card);
+  backdrop-filter:blur(18px);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  box-shadow:0 20px 50px rgba(0,0,0,.35);
+  font-weight:600;
+  transition:.4s;
+}
+.bubble i{
+  font-size:30px;
+  margin-bottom:8px;
+  background:linear-gradient(135deg,var(--accent1),var(--accent2));
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+.bubble:hover{
+  transform:translateY(-12px) scale(1.08);
+  box-shadow:0 35px 90px rgba(0,198,255,.7);
+}
 
-
-/* NAV */
+/* ================= NAV ================= */
 nav{
   position:sticky;
   top:0;
@@ -149,43 +154,21 @@ nav{
 }
 nav a{
   margin:0 14px;
-  color:var(--text);
   font-weight:600;
-  text-decoration:none;
 }
 nav a:hover{color:var(--accent2)}
 
-/* SECTIONS */
-section{
-  max-width:1250px;
-  margin:auto;
-  padding:110px 25px;
-}
-
-h2{
-  font-family:'Playfair Display',serif;
-  font-size:42px;
-  text-align:center;
-  margin-bottom:55px;
-  background:linear-gradient(135deg,var(--accent1),var(--accent3));
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
-}
-
+/* ================= CARD ================= */
 .card{
   background:var(--card);
-  padding:55px;
-  border-radius:35px;
-  box-shadow:0 40px 90px rgba(0,0,0,.2);
-  line-height:1.9;
-  margin-bottom:35px;
+  border-radius:25px;
+  padding:35px;
+  box-shadow:0 15px 40px rgba(0,0,0,.15);
 }
-
-/* LIST */
 ul{margin-left:30px}
-ul li{margin-bottom:12px}
+ul li{margin-bottom:10px}
 
-/* GALLERY */
+/* ================= GALLERY ================= */
 .gallery{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
@@ -195,122 +178,47 @@ ul li{margin-bottom:12px}
   width:100%;
   height:360px;
   object-fit:cover;
-  border-radius:35px;
+  border-radius:30px;
   box-shadow:0 30px 80px rgba(0,0,0,.4);
   transition:.6s;
 }
 .gallery img:hover{
-  transform:scale(1.08) rotate(.5deg);
+  transform:scale(1.07);
 }
 
-/* CONTACT */
+/* ================= MISSION ================= */
+#mission{
+  background:linear-gradient(135deg,var(--accent1),var(--accent2));
+  color:#fff;
+  border-radius:35px;
+  text-align:center;
+  padding:80px 40px;
+  box-shadow:0 40px 100px rgba(0,0,0,.5);
+}
+
+/* ================= CONTACT ================= */
 .contact-grid{
   display:flex;
   flex-wrap:wrap;
-  gap:25px;
+  gap:22px;
   justify-content:center;
 }
 .contact-grid a{
-  padding:14px 22px;
+  padding:14px 24px;
   border-radius:30px;
-  background:linear-gradient(135deg,var(--accent2),var(--accent3));
+  background:linear-gradient(135deg,var(--accent1),var(--accent2));
   color:#fff;
   font-weight:600;
-  text-decoration:none;
   box-shadow:0 15px 40px rgba(0,198,255,.6);
 }
 
-/* FOOTER */
+/* ================= FOOTER ================= */
 footer{
-  padding:50px;
+  padding:45px;
   text-align:center;
-  background:linear-gradient(135deg,#000,#111);
+  background:#000;
   color:#fff;
 }
-  /* QUICK ACCESS BUBBLES */
-.quick-access{
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:center;
-  gap:26px;
-  padding:70px 20px 40px;
-  margin-top:-60px; /* pulls it closer to hero */
-  position:relative;
-  z-index:100;
-}
-
-.bubble{
-  width:150px;
-  height:150px;
-  border-radius:50%;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:center;
-  text-decoration:none;
-  color:#fff;
-  font-weight:600;
-  font-size:16px;
-
-  background:
-    linear-gradient(135deg,
-      rgba(255,255,255,0.35),
-      rgba(255,255,255,0.05));
-
-  backdrop-filter:blur(20px);
-  box-shadow:
-    0 20px 50px rgba(0,0,0,0.35),
-    inset 0 0 25px rgba(255,255,255,0.25);
-
-  transition:all 0.5s cubic-bezier(.4,.2,.2,1);
-  position:relative;
-  overflow:hidden;
-}
-
-/* ICON */
-.bubble i{
-  font-size:32px;
-  margin-bottom:10px;
-  background:linear-gradient(135deg,#6a11cb,#00c6ff);
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
-}
-
-/* TEXT */
-.bubble span{
-  letter-spacing:0.5px;
-}
-
-/* GLOW EFFECT */
-.bubble::before{
-  content:"";
-  position:absolute;
-  inset:-40%;
-  background:radial-gradient(circle,rgba(255,255,255,0.45),transparent 70%);
-  opacity:0;
-  transition:0.5s;
-}
-
-/* HOVER EFFECTS */
-.bubble:hover{
-  transform:translateY(-18px) scale(1.08);
-  box-shadow:
-    0 35px 90px rgba(0,198,255,0.6),
-    inset 0 0 30px rgba(255,255,255,0.4);
-}
-
-.bubble:hover::before{
-  opacity:1;
-}
-
-/* DARK MODE ADJUSTMENT */
-body.dark .bubble{
-  background:
-    linear-gradient(135deg,
-      rgba(255,255,255,0.18),
-      rgba(255,255,255,0.03));
-}
-
 </style>
 </head>
 
@@ -322,8 +230,7 @@ body.dark .bubble{
 
 <!-- HERO -->
 <section class="hero">
-<div class="hero-box">
-<img src="portrait.jpg.jpeg">
+<img src="portrait.jpg.jpeg" alt="Mumtaz Alam Bazai">
 <h1>Mumtaz Alam Bazai</h1>
 <p>
 Advocate · Human Rights Lawyer · Youth Leader · Social Activist<br>
@@ -344,7 +251,20 @@ Curator, Global Shapers Community – Quetta Hub (World Economic Forum)
 <a href="https://www.threads.com/@mumtaz_alam"><i class="fab fa-threads"></i></a>
 <a href="https://ok.ru/profile/910193583170"><i class="fab fa-odnoklassniki"></i></a>
 </div>
-</div>
+</section>
+
+<!-- QUICK ACCESS -->
+<section class="quick-access">
+<a href="#about" class="bubble"><i class="fas fa-user"></i>About</a>
+<a href="#education" class="bubble"><i class="fas fa-graduation-cap"></i>Education</a>
+<a href="#career" class="bubble"><i class="fas fa-gavel"></i>Career</a>
+<a href="#leadership" class="bubble"><i class="fas fa-globe"></i>Leadership</a>
+<a href="#publications" class="bubble"><i class="fas fa-book"></i>Publications</a>
+<a href="#skills" class="bubble"><i class="fas fa-lightbulb"></i>Skills</a>
+<a href="#thematic" class="bubble"><i class="fas fa-leaf"></i>Thematic</a>
+<a href="#gallery" class="bubble"><i class="fas fa-images"></i>Gallery</a>
+<a href="#mission" class="bubble"><i class="fas fa-bullseye"></i>Mission</a>
+<a href="#contact" class="bubble"><i class="fas fa-envelope"></i>Contact</a>
 </section>
 
 <nav>
@@ -354,7 +274,7 @@ Curator, Global Shapers Community – Quetta Hub (World Economic Forum)
 <a href="#leadership">Leadership</a>
 <a href="#publications">Publications</a>
 <a href="#skills">Skills</a>
-<a href="#thematic">Thematic Areas</a>
+<a href="#thematic">Thematic</a>
 <a href="#gallery">Gallery</a>
 <a href="#mission">Mission</a>
 <a href="#contact">Contact</a>
@@ -362,13 +282,11 @@ Curator, Global Shapers Community – Quetta Hub (World Economic Forum)
 
 <!-- ABOUT -->
 <section id="about">
-<h2>About Mumtaz Alam Bazai</h2>
+<h2>About</h2>
 <div class="card">
-<p><strong>Mumtaz Alam Bazai</strong> is a Pakistani advocate, human rights lawyer, youth leader, and social activist from Balochistan. He is committed to justice, rule of law, and youth empowerment, and is widely recognized for his work in civil, criminal, and human rights law alongside strong civic leadership.</p>
-
-<p>Born on <strong>11 August 2000</strong> in <strong>Kili Zdoon, Tehsil Nana Sahib, District Pishin, Balochistan, Pakistan</strong>, he belongs to the Pashtoon tribe (Kakar caste, Bazai sub-caste). He is the eldest of nine siblings. His father, <strong>Dr. Ameer Muhammad</strong>, is a neurosurgeon, and his mother is a homemaker.</p>
-
-<p>From early education in his village to scholarship-based schooling at <strong>Pak-Turk Maarif International Schools</strong>, Mumtaz consistently demonstrated academic excellence, leadership, discipline, and multilingual fluency in <strong>Pashto, Urdu, English, and Turkish</strong>.</p>
+<p><strong>Mumtaz Alam Bazai</strong> is a Pakistani advocate, human rights lawyer, youth leader, and social activist from Balochistan.</p>
+<p>Born on <strong>11 August 2000</strong> in Kili Zdoon, Tehsil Nana Sahib, District Pishin, Balochistan. He belongs to the Pashtoon tribe (Kakar caste, Bazai sub-caste). Eldest of nine siblings. Son of Dr. Ameer Muhammad (Neurosurgeon).</p>
+<p>Fluent in Pashto, Urdu, English, and Turkish.</p>
 </div>
 </section>
 
@@ -379,8 +297,8 @@ Curator, Global Shapers Community – Quetta Hub (World Economic Forum)
 <ul>
 <li>LLB (Hons.) – University Law College (2024)</li>
 <li>MA Political Science – University of Balochistan (2024)</li>
-<li>BA (Arts) – University of Balochistan (2022)</li>
-<li>Intermediate – Pak-Turk Maarif International Schools & Colleges (2019)</li>
+<li>BA – University of Balochistan (2022)</li>
+<li>Intermediate – Pak-Turk Maarif International Schools (2019)</li>
 </ul>
 </div>
 </section>
@@ -389,9 +307,8 @@ Curator, Global Shapers Community – Quetta Hub (World Economic Forum)
 <section id="career">
 <h2>Legal Career</h2>
 <div class="card">
-<p>Mumtaz formally entered the legal profession in <strong>2025</strong>. He trained under <strong>Advocate Abdul Zahir Kakar</strong> at <strong>Iqra Law Associates, Quetta</strong>, gaining extensive experience in civil, criminal, and human rights litigation.</p>
-
-<p>On <strong>2 December 2025</strong>, he received his license to practice before the trial courts of Pakistan (<strong>Bar Council Reg. No. 14/2025</strong>). He actively undertakes pro bono litigation for marginalized and vulnerable communities.</p>
+<p>Licensed advocate (Trial Courts Pakistan) – 2 December 2025. Bar Council Reg. No. 14/2025.</p>
+<p>Trained under Advocate Abdul Zahir Kakar at Iqra Law Associates, Quetta.</p>
 </div>
 </section>
 
@@ -400,31 +317,29 @@ Curator, Global Shapers Community – Quetta Hub (World Economic Forum)
 <h2>Leadership & Social Impact</h2>
 <div class="card">
 <ul>
-<li>Curator – Global Shapers Community Quetta Hub (World Economic Forum)</li>
-<li>Social Media Head – Global Shapers Community Quetta (2022–2024)</li>
-<li>Cabinet Member – General Assembly Balochistan (2025)</li>
-<li>Executive Member & Head of Legal Team – Human Rights Council of Balochistan</li>
-<li>District Co-Head – Blood Heroes (2022–2024)</li>
-<li>Volunteer – Millions Smiles, Bargad Organization, Alkhidmat Foundation</li>
+<li>Curator – Global Shapers Community Quetta (WEF)</li>
+<li>Social Media Head – GSC Quetta (2022–2024)</li>
+<li>Cabinet Member – General Assembly Balochistan</li>
+<li>Legal Advisor – Human Rights Council of Balochistan</li>
+<li>District Co-Head – Blood Heroes</li>
 </ul>
-
-<p>He represented Quetta Hub at the <strong>Global Shapers Annual Summit 2025 in Geneva</strong>, initiated <strong>Balochistan’s first Youth Policy Project</strong>, authored the Hub’s <strong>Governance Charter</strong>, spearheaded inter-hub collaborations, earned <strong>Best Speaker Award (2024)</strong>, and served as an <strong>Honourable Delegate at Youth Model National Assembly 2025</strong>.</p>
 </div>
 </section>
 
 <!-- PUBLICATIONS -->
 <section id="publications">
-<h2>Publications & Research</h2>
+<h2>Publications</h2>
 <div class="card">
-<p>Author of <strong>“Human Rights and Responsibilities”</strong> (Daily Intekhab, 2021) and the research paper <strong>“The Role of the Election Commission of Pakistan in Ensuring Free and Fair Elections”</strong> (2024).</p>
+<p>“Human Rights and Responsibilities” – Daily Intekhab (2021)</p>
+<p>Research Paper: Role of ECP in Free & Fair Elections (2024)</p>
 </div>
 </section>
 
 <!-- SKILLS -->
 <section id="skills">
-<h2>Skills & Expertise</h2>
+<h2>Skills</h2>
 <div class="card">
-<p>Legal Research, Litigation Strategy, Policy Development, Youth Leadership, Governance Frameworks, Social Media Strategy, Project Coordination, Graphic Design, Advocacy Writing, and Public Speaking.</p>
+<p>Legal research, advocacy, leadership, policy drafting, public speaking, media management.</p>
 </div>
 </section>
 
@@ -433,50 +348,45 @@ Curator, Global Shapers Community – Quetta Hub (World Economic Forum)
 <h2>Thematic Areas</h2>
 <div class="card">
 <ul>
-<li>Human Rights & Equality</li>
+<li>Human Rights</li>
 <li>Governance & Rule of Law</li>
-<li>Youth Policy & Leadership</li>
-<li>Climate, Energy & Nature</li>
-<li>Education & Civic Engagement</li>
-<li>Indigenous & Gender Rights</li>
+<li>Youth Leadership</li>
+<li>Climate & Environment</li>
+<li>Education</li>
+<li>Gender & Indigenous Rights</li>
 </ul>
 </div>
 </section>
 
 <!-- GALLERY -->
 <section id="gallery">
-<h2>Visual Journey</h2>
+<h2>Gallery</h2>
 <div class="gallery">
-<img src="life1.jpg.jpeg">
-<img src="life2.jpg.jpeg">
-<img src="life3.jpg.jpeg">
-<img src="life4.jpg.jpeg">
-<img src="life5.jpg.jpeg">
-<img src="life6.jpg.jpeg"> 
+<img src="image1.jpg">
+<img src="image2.jpg">
+<img src="image3.jpg">
+<img src="image4.jpg">
 </div>
 </section>
 
 <!-- MISSION -->
 <section id="mission">
 <h2>Mission</h2>
-<div class="card">
-<p>Mumtaz Alam Bazai is committed to advancing justice, safeguarding human dignity, strengthening democratic institutions, and empowering youth to lead Pakistan toward a just, inclusive, and sustainable future.</p>
-</div>
+<p>Committed to justice, human rights, youth empowerment, and sustainable governance in Pakistan.</p>
 </section>
 
 <!-- CONTACT -->
 <section id="contact">
-<h2>Connect</h2>
+<h2>Contact</h2>
 <div class="contact-grid">
 <a href="mailto:advmumtaz222@gmail.com">Email</a>
 <a href="https://wa.me/923332568792">WhatsApp</a>
 <a href="https://linktr.ee/mumtazalam">Linktree</a>
-<a href="https://my.weforum.org/network/people/001TG000009vSDhYAM/adv-mumtaz-alam">WEF Profile</a>
 </div>
 </section>
 
 <footer>
-<p>© 2025 Mumtaz Alam Bazai | Advocate & Human Rights Lawyer</p>
+© 2025 Mumtaz Alam Bazai | Advocate & Human Rights Lawyer
 </footer>
 
 </body>
