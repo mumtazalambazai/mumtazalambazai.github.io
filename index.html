@@ -99,6 +99,7 @@ padding:70px 100px 70px 70px;
   line-height:1.7;
   opacity:.95;
 }
+  
 
 /* SOCIAL BAR */
 .social-bar{
@@ -120,6 +121,19 @@ padding:70px 100px 70px 70px;
   font-size:20px;
   box-shadow:0 0 20px rgba(0,198,255,.6);
 }
+ <section class="quick-access">
+  <a href="#about" class="bubble"><i class="fas fa-user"></i><span>About</span></a>
+  <a href="#education" class="bubble"><i class="fas fa-graduation-cap"></i><span>Education</span></a>
+  <a href="#career" class="bubble"><i class="fas fa-gavel"></i><span>Legal Career</span></a>
+  <a href="#leadership" class="bubble"><i class="fas fa-globe"></i><span>Leadership</span></a>
+  <a href="#publications" class="bubble"><i class="fas fa-book"></i><span>Publications</span></a>
+  <a href="#skills" class="bubble"><i class="fas fa-lightbulb"></i><span>Skills</span></a>
+  <a href="#thematic" class="bubble"><i class="fas fa-leaf"></i><span>Thematic</span></a>
+  <a href="#gallery" class="bubble"><i class="fas fa-images"></i><span>Gallery</span></a>
+  <a href="#mission" class="bubble"><i class="fas fa-bullseye"></i><span>Mission</span></a>
+  <a href="#contact" class="bubble"><i class="fas fa-envelope"></i><span>Contact</span></a>
+</section>
+
 
 /* NAV */
 nav{
@@ -211,6 +225,90 @@ footer{
   background:linear-gradient(135deg,#000,#111);
   color:#fff;
 }
+  /* QUICK ACCESS BUBBLES */
+.quick-access{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:26px;
+  padding:70px 20px 40px;
+  margin-top:-60px; /* pulls it closer to hero */
+  position:relative;
+  z-index:100;
+}
+
+.bubble{
+  width:150px;
+  height:150px;
+  border-radius:50%;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-decoration:none;
+  color:#fff;
+  font-weight:600;
+  font-size:16px;
+
+  background:
+    linear-gradient(135deg,
+      rgba(255,255,255,0.35),
+      rgba(255,255,255,0.05));
+
+  backdrop-filter:blur(20px);
+  box-shadow:
+    0 20px 50px rgba(0,0,0,0.35),
+    inset 0 0 25px rgba(255,255,255,0.25);
+
+  transition:all 0.5s cubic-bezier(.4,.2,.2,1);
+  position:relative;
+  overflow:hidden;
+}
+
+/* ICON */
+.bubble i{
+  font-size:32px;
+  margin-bottom:10px;
+  background:linear-gradient(135deg,#6a11cb,#00c6ff);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+/* TEXT */
+.bubble span{
+  letter-spacing:0.5px;
+}
+
+/* GLOW EFFECT */
+.bubble::before{
+  content:"";
+  position:absolute;
+  inset:-40%;
+  background:radial-gradient(circle,rgba(255,255,255,0.45),transparent 70%);
+  opacity:0;
+  transition:0.5s;
+}
+
+/* HOVER EFFECTS */
+.bubble:hover{
+  transform:translateY(-18px) scale(1.08);
+  box-shadow:
+    0 35px 90px rgba(0,198,255,0.6),
+    inset 0 0 30px rgba(255,255,255,0.4);
+}
+
+.bubble:hover::before{
+  opacity:1;
+}
+
+/* DARK MODE ADJUSTMENT */
+body.dark .bubble{
+  background:
+    linear-gradient(135deg,
+      rgba(255,255,255,0.18),
+      rgba(255,255,255,0.03));
+}
+
 </style>
 </head>
 
