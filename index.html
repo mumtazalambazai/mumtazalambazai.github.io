@@ -257,14 +257,22 @@ nav a:hover::after { transform: translateX(-50%) scale(1); opacity: 1; }
 
 .hero-img-main {
     position: absolute;
-    inset: 20px;
-    background: url('portrait.jpg.jpeg') center/cover;
+    width: 280px;
+    height: 380px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) translateZ(50px) rotateY(0deg) rotateX(0deg);
+    background: url('portrait.jpg.jpeg') center/cover no-repeat;
     border-radius: 30px;
-    box-shadow: 0 50px 100px rgba(0,0,0,0.5);
+    box-shadow: 0 30px 80px rgba(0,0,0,0.6);
     border: 1px solid rgba(255,255,255,0.3);
-    transform: translateZ(20px);
-    transition: transform 0.1s; /* JS hooks into this */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    z-index: 5;
+
+    /* Add animation here */
+    animation: floatPortrait 6s ease-in-out infinite;
 }
+
 
 /* Floating Elements */
 .float-card {
@@ -606,6 +614,21 @@ section {
 @media (max-width: 768px) {
     /* existing mobile CSS */
 }
+/* =========================
+   PORTRAIT FLOATING 3D EFFECT
+========================= */
+
+@keyframes floatPortrait {
+    0%   { transform: translate(-50%, -50%) translateZ(50px) rotateY(0deg) rotateX(0deg); }
+    25%  { transform: translate(-50%, -52%) translateZ(60px) rotateY(2deg) rotateX(1deg); }
+    50%  { transform: translate(-50%, -50%) translateZ(50px) rotateY(0deg) rotateX(0deg); }
+    75%  { transform: translate(-50%, -48%) translateZ(60px) rotateY(-2deg) rotateX(-1deg); }
+    100% { transform: translate(-50%, -50%) translateZ(50px) rotateY(0deg) rotateX(0deg); }
+}
+    .hero-img-main {
+    animation: floatPortrait 6s ease-in-out infinite;
+}
+
 
 @media (max-width: 768px) {
     .hero-content { grid-template-columns: 1fr; text-align: center; }
