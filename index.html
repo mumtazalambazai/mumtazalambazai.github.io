@@ -1,5 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+<style>
+
+/* YOUR CUSTOM CSS GOES HERE */
+<style>
+
+    /* =========================
+       HERO SOCIAL ICONS (3D)
+    ========================= */
+
+    .hero-socials {
+        position: absolute;
+        bottom: -30px;
+        left: 50%;
+        transform: translateX(-50%) translateZ(80px);
+        display: flex;
+        gap: 18px;
+        z-index: 5;
+    }
+
+    .hero-socials .hs {
+        width: 55px;
+        height: 55px;
+        border-radius: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 22px;
+        color: #fff;
+        text-decoration: none;
+        backdrop-filter: blur(10px);
+        box-shadow:
+            0 12px 25px rgba(0,0,0,0.35),
+            inset 0 0 15px rgba(255,255,255,0.15);
+        transform-style: preserve-3d;
+        transition: all 0.35s ease;
+    }
+
+    .hero-socials .hs:hover {
+        transform: translateY(-12px) rotateX(20deg) rotateY(-20deg) scale(1.15);
+        box-shadow:
+            0 25px 45px rgba(0,0,0,0.6),
+            0 0 25px currentColor;
+    }
+
+    .hs.mail { background: linear-gradient(135deg,#D44638,#B23121); }
+    .hs.whatsapp { background: linear-gradient(135deg,#25D366,#128C7E); }
+    .hs.linkedin { background: linear-gradient(135deg,#0077B5,#004182); }
+    .hs.instagram { background: linear-gradient(135deg,#833AB4,#FD1D1D,#F77737); }
+    .hs.facebook { background: linear-gradient(135deg,#1877F2,#0F4AA1); }
+    .hs.twitter { background: linear-gradient(135deg,#000,#444); }
+    .hs.wef { background: linear-gradient(135deg,#00A3E0,#005F86); }
+    .hs.linktree { background: linear-gradient(135deg,#43E660,#1FA337); }
+
+</style>
+
+</style>
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -495,6 +552,60 @@ section {
     position: relative;
     z-index: 2;
 }
+/* =========================
+   HERO SOCIAL ICONS (3D)
+========================= */
+
+.hero-socials {
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%) translateZ(80px);
+    display: flex;
+    gap: 18px;
+    z-index: 5;
+}
+
+.hero-socials .hs {
+    width: 55px;
+    height: 55px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    color: #fff;
+    text-decoration: none;
+    backdrop-filter: blur(10px);
+    box-shadow:
+        0 12px 25px rgba(0,0,0,0.35),
+        inset 0 0 15px rgba(255,255,255,0.15);
+    transform-style: preserve-3d;
+    transition: all 0.35s ease;
+}
+
+.hero-socials .hs:hover {
+    transform: translateY(-12px) rotateX(20deg) rotateY(-20deg) scale(1.15);
+    box-shadow:
+        0 25px 45px rgba(0,0,0,0.6),
+        0 0 25px currentColor;
+}
+
+/* colors */
+.hs.mail { background: linear-gradient(135deg,#D44638,#B23121); }
+.hs.whatsapp { background: linear-gradient(135deg,#25D366,#128C7E); }
+.hs.linkedin { background: linear-gradient(135deg,#0077B5,#004182); }
+.hs.instagram { background: linear-gradient(135deg,#833AB4,#FD1D1D,#F77737); }
+.hs.facebook { background: linear-gradient(135deg,#1877F2,#0F4AA1); }
+.hs.twitter { background: linear-gradient(135deg,#000,#444); }
+.hs.wef { background: linear-gradient(135deg,#00A3E0,#005F86); }
+.hs.linktree { background: linear-gradient(135deg,#43E660,#1FA337); }
+
+
+/* ⬇️ DO NOT TOUCH BELOW THIS LINE */
+@media (max-width: 768px) {
+    /* existing mobile CSS */
+}
 
 @media (max-width: 768px) {
     .hero-content { grid-template-columns: 1fr; text-align: center; }
@@ -560,6 +671,34 @@ section {
                 <i class="fas fa-users" style="color:#ff007a"></i>
                 <span>Youth Leader</span>
             </div>
+            <!-- HERO SOCIAL LINKS -->
+<div class="hero-socials">
+    <a href="mailto:advmumtaz222@gmail.com" target="_blank" class="hs mail">
+        <i class="fas fa-envelope"></i>
+    </a>
+    <a href="https://wa.me/923332568792" target="_blank" class="hs whatsapp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    <a href="https://www.linkedin.com/in/adv-mumtaz-alam-bazai-163a9a324" target="_blank" class="hs linkedin">
+        <i class="fab fa-linkedin-in"></i>
+    </a>
+    <a href="https://www.instagram.com/mumtaz_alam" target="_blank" class="hs instagram">
+        <i class="fab fa-instagram"></i>
+    </a>
+    <a href="https://www.facebook.com/mumtaz.alam.18488" target="_blank" class="hs facebook">
+        <i class="fab fa-facebook-f"></i>
+    </a>
+    <a href="https://x.com/mumtazalam333" target="_blank" class="hs twitter">
+        <i class="fab fa-x-twitter"></i>
+    </a>
+    <a href="https://my.weforum.org/network/people/001TG000009vSDhYAM/adv-mumtaz-alam" target="_blank" class="hs wef">
+        <i class="fas fa-globe"></i>
+    </a>
+    <a href="https://linktr.ee/mumtazalam" target="_blank" class="hs linktree">
+        <i class="fas fa-link"></i>
+    </a>
+</div>
+
         </div>
     </div>
 </section>
