@@ -8,217 +8,205 @@
 <!-- GOOGLE FONTS -->
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-<!-- ICONS -->
+<!-- FONT AWESOME -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 <!-- AOS ANIMATION -->
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
 <style>
 
 /* ================= ROOT ================= */
 :root{
-  --glass: rgba(255,255,255,0.18);
-  --blur: blur(25px);
-  --text-light:#ffffff;
-  --text-dark:#111;
+--glass:rgba(255,255,255,0.18);
+--blur:blur(25px);
+--shadow:0 40px 100px rgba(0,0,0,.45);
+--text:#fff;
 }
 
-/* ================= GLOBAL ================= */
 *{margin:0;padding:0;box-sizing:border-box}
 
 body{
-  font-family:'Inter',sans-serif;
-  background:#05080f;
-  color:var(--text-light);
-  overflow-x:hidden;
+font-family:'Inter',sans-serif;
+background:#04070f;
+color:#fff;
+overflow-x:hidden;
 }
 
 /* ================= FLOATING BUBBLES ================= */
 .bubbles{
-  position:fixed;
-  inset:0;
-  z-index:-1;
-  overflow:hidden;
+position:fixed;
+inset:0;
+z-index:-1;
+overflow:hidden;
 }
 
 .bubbles span{
-  position:absolute;
-  width:80px;
-  height:80px;
-  background:radial-gradient(circle, rgba(255,255,255,0.5), rgba(255,255,255,0.05));
-  border-radius:50%;
-  animation:float 20s linear infinite;
+position:absolute;
+bottom:-200px;
+width:60px;
+height:60px;
+border-radius:50%;
+background:radial-gradient(circle,rgba(255,255,255,.6),rgba(255,255,255,.05));
+animation:float linear infinite;
 }
 
 @keyframes float{
-  from{transform:translateY(110vh) scale(0.5);}
-  to{transform:translateY(-20vh) scale(1.2);}
+to{
+transform:translateY(-120vh) rotate(360deg);
+}
 }
 
 /* ================= HERO ================= */
 .hero{
-  height:100vh;
-  background:
-    linear-gradient(120deg,rgba(0,0,0,.8),rgba(0,0,0,.4)),
-    url('hero-bg.jpg.jpeg') center/cover fixed;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  padding:30px;
+height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+background:
+linear-gradient(135deg,rgba(0,0,0,.6),rgba(0,0,0,.9)),
+url('hero-bg.jpg.jpeg') center/cover fixed;
 }
 
 .hero-box{
-  max-width:1100px;
-  padding:80px;
-  border-radius:50px;
-  background:var(--glass);
-  backdrop-filter:var(--blur);
-  box-shadow:0 50px 120px rgba(0,0,0,.6);
-  position:relative;
+position:relative;
+max-width:1100px;
+padding:90px;
+border-radius:50px;
+background:var(--glass);
+backdrop-filter:var(--blur);
+box-shadow:var(--shadow);
+text-align:left;
 }
 
-.hero-box img{
-  position:absolute;
-  top:-80px;
-  right:60px;
-  width:220px;
-  height:220px;
-  border-radius:50%;
-  object-fit:cover;
-  border:6px solid rgba(255,255,255,0.9);
-  box-shadow:0 30px 90px rgba(0,0,0,.8);
-  transform:translateZ(60px);
+.hero img{
+position:absolute;
+top:-90px;
+right:-90px;
+width:260px;
+height:260px;
+border-radius:50%;
+object-fit:cover;
+border:8px solid rgba(255,255,255,.8);
+transform:perspective(900px) rotateY(-18deg);
+box-shadow:0 40px 100px rgba(0,0,0,.8);
 }
 
 .hero h1{
-  font-family:'Playfair Display',serif;
-  font-size:64px;
+font-family:'Playfair Display',serif;
+font-size:64px;
+background:linear-gradient(135deg,#ffb347,#00f2fe,#9b5cff);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
 }
 
 .hero p{
-  margin-top:20px;
-  font-size:20px;
-  line-height:1.8;
+margin-top:25px;
+font-size:20px;
+line-height:1.8;
 }
 
 /* ================= SOCIAL ICONS ================= */
-.social-bar{
-  display:flex;
-  flex-wrap:wrap;
-  gap:18px;
-  margin-top:30px;
+.social{
+margin-top:40px;
+display:flex;
+flex-wrap:wrap;
+gap:20px;
 }
 
-.social-bar a{
-  width:52px;
-  height:52px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  border-radius:50%;
-  background:linear-gradient(135deg,#6a11cb,#00c6ff);
-  color:#fff;
-  font-size:22px;
-  box-shadow:0 15px 40px rgba(0,198,255,.6);
-  transition:.5s;
+.social a{
+width:60px;
+height:60px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:26px;
+color:#fff;
+background:linear-gradient(135deg,#ff512f,#00c6ff);
+transform-style:preserve-3d;
+transition:.6s;
+box-shadow:0 20px 60px rgba(0,198,255,.7);
 }
 
-.social-bar a:hover{
-  transform:translateY(-10px) rotate(12deg) scale(1.15);
+.social a:hover{
+transform:translateY(-10px) rotateX(25deg) rotateY(25deg);
 }
 
 /* ================= SECTIONS ================= */
 section{
-  max-width:1250px;
-  margin:auto;
-  padding:120px 30px;
+padding:130px 25px;
+max-width:1300px;
+margin:auto;
 }
 
-.section-card{
-  background:var(--glass);
-  backdrop-filter:var(--blur);
-  border-radius:45px;
-  padding:60px;
-  box-shadow:0 40px 100px rgba(0,0,0,.5);
+.section-box{
+background:var(--glass);
+backdrop-filter:var(--blur);
+border-radius:45px;
+padding:70px;
+box-shadow:var(--shadow);
 }
 
 h2{
-  font-family:'Playfair Display',serif;
-  font-size:46px;
-  margin-bottom:40px;
-  background:linear-gradient(135deg,#6a11cb,#00c6ff,#00ffcc);
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
+font-family:'Playfair Display',serif;
+font-size:48px;
+margin-bottom:35px;
+background:linear-gradient(135deg,#ff00cc,#00fff0);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
 }
 
 /* ================= STORY SECTIONS ================= */
 .story{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-  gap:40px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:50px;
 }
 
-.story div{
-  padding:40px;
-  border-radius:35px;
-  background:linear-gradient(135deg,rgba(255,255,255,0.25),rgba(255,255,255,0.05));
-  backdrop-filter:blur(20px);
+.story-card{
+padding:45px;
+border-radius:40px;
+background:linear-gradient(135deg,rgba(255,255,255,.3),rgba(255,255,255,.05));
+backdrop-filter:blur(18px);
+box-shadow:0 25px 70px rgba(0,0,0,.4);
 }
 
 /* ================= GALLERY ================= */
 .gallery{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:30px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:35px;
 }
 
 .gallery img{
-  width:100%;
-  height:360px;
-  object-fit:cover;
-  border-radius:35px;
-  box-shadow:0 30px 80px rgba(0,0,0,.7);
-  transition:.6s;
+width:100%;
+height:380px;
+object-fit:cover;
+border-radius:40px;
+transform:perspective(800px) rotateX(8deg);
+transition:.7s;
+box-shadow:0 40px 90px rgba(0,0,0,.8);
 }
 
 .gallery img:hover{
-  transform:scale(1.1) rotate(1deg);
-}
-
-/* ================= CONTACT ================= */
-.contact-grid{
-  display:flex;
-  flex-wrap:wrap;
-  gap:25px;
-  justify-content:center;
-}
-
-.contact-grid a{
-  padding:16px 26px;
-  border-radius:35px;
-  background:linear-gradient(135deg,#00c6ff,#00ffcc);
-  color:#000;
-  font-weight:700;
-  text-decoration:none;
-  box-shadow:0 20px 50px rgba(0,255,200,.6);
-  transition:.4s;
-}
-
-.contact-grid a:hover{
-  transform:translateY(-8px) scale(1.1);
+transform:scale(1.1) rotateZ(2deg);
 }
 
 /* ================= FOOTER ================= */
 footer{
-  padding:60px;
-  text-align:center;
-  background:#000;
+padding:60px;
+text-align:center;
+background:linear-gradient(135deg,#000,#020617);
 }
 
 @media(max-width:768px){
-  .hero-box img{position:static;margin:auto 0 30px;}
-  .hero h1{font-size:44px;}
+.hero img{
+position:static;
+margin-bottom:40px;
+transform:none;
+}
+.hero-box{text-align:center;padding:60px}
 }
 
 </style>
@@ -228,88 +216,85 @@ footer{
 
 <!-- FLOATING BUBBLES -->
 <div class="bubbles">
-  <span style="left:10%;animation-delay:0s"></span>
-  <span style="left:30%;animation-delay:5s"></span>
-  <span style="left:50%;animation-delay:2s"></span>
-  <span style="left:70%;animation-delay:7s"></span>
-  <span style="left:90%;animation-delay:3s"></span>
+<script>
+for(let i=0;i<45;i++){
+document.write(`<span style="left:${Math.random()*100}%;
+width:${20+Math.random()*80}px;
+height:${20+Math.random()*80}px;
+animation-duration:${15+Math.random()*30}s;"></span>`);
+}
+</script>
 </div>
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-box" data-aos="zoom-in">
-    <img src="portrait.jpg.jpeg">
-    <h1>Mumtaz Alam Bazai</h1>
-    <p>
-      Advocate · Human Rights Lawyer · Youth Leader · Social Activist<br>
-      Curator, Global Shapers Community – Quetta Hub (World Economic Forum)
-    </p>
+<div class="hero-box" data-aos="zoom-in">
+<img src="portrait.jpg.jpeg">
+<h1>Mumtaz Alam Bazai</h1>
+<p>
+Advocate · Human Rights Lawyer · Youth Leader · Social Activist<br>
+Curator, Global Shapers Community – Quetta Hub (World Economic Forum)
+</p>
 
-    <div class="social-bar">
-      <a href="https://linktr.ee/mumtazalam"><i class="fas fa-link"></i></a>
-      <a href="https://wa.me/923332568792"><i class="fab fa-whatsapp"></i></a>
-      <a href="https://www.linkedin.com/in/adv-mumtaz-alam-bazai-163a9a324"><i class="fab fa-linkedin"></i></a>
-      <a href="https://www.instagram.com/mumtaz_alam"><i class="fab fa-instagram"></i></a>
-      <a href="https://www.facebook.com/mumtaz.alam.18488"><i class="fab fa-facebook"></i></a>
-      <a href="mailto:advmumtaz222@gmail.com"><i class="fas fa-envelope"></i></a>
-      <a href="https://www.tiktok.com/@mumtaz_alam"><i class="fab fa-tiktok"></i></a>
-      <a href="https://x.com/mumtazalam333"><i class="fab fa-x-twitter"></i></a>
-      <a href="https://my.weforum.org/network/people/001TG000009vSDhYAM/adv-mumtaz-alam"><i class="fas fa-globe"></i></a>
-    </div>
-  </div>
+<div class="social">
+<a href="https://linktr.ee/mumtazalam"><i class="fas fa-link"></i></a>
+<a href="https://wa.me/923332568792"><i class="fab fa-whatsapp"></i></a>
+<a href="https://www.linkedin.com/in/adv-mumtaz-alam-bazai-163a9a324"><i class="fab fa-linkedin"></i></a>
+<a href="https://www.instagram.com/mumtaz_alam"><i class="fab fa-instagram"></i></a>
+<a href="https://www.facebook.com/mumtaz.alam.18488"><i class="fab fa-facebook"></i></a>
+<a href="mailto:advmumtaz222@gmail.com"><i class="fas fa-envelope"></i></a>
+<a href="https://www.tiktok.com/@mumtaz_alam"><i class="fab fa-tiktok"></i></a>
+<a href="https://x.com/mumtazalam333"><i class="fab fa-x-twitter"></i></a>
+</div>
+</div>
 </section>
 
-<!-- STORY -->
+<!-- JOURNEY -->
 <section>
-  <h2 data-aos="fade-up">Journey · Impact · Vision</h2>
-  <div class="story">
-    <div data-aos="fade-right">
-      <h3>Early Life & Journey</h3>
-      <p>Born in Balochistan, raised with discipline, education and service — Mumtaz’s journey reflects resilience and leadership.</p>
-    </div>
-    <div data-aos="fade-up">
-      <h3>Impact</h3>
-      <p>From courts to communities, he bridges law, human rights and youth leadership.</p>
-    </div>
-    <div data-aos="fade-left">
-      <h3>Vision</h3>
-      <p>Justice, democracy and empowered youth shaping Pakistan’s future.</p>
-    </div>
-  </div>
+<div class="section-box" data-aos="fade-up">
+<h2>Journey & Early Life</h2>
+<p>
+Born on 11 August 2000 in Kili Zdoon, District Pishin, Balochistan,
+Mumtaz Alam Bazai rose from rural roots to elite global leadership.
+Scholarship education, discipline, multilingual fluency and a deep
+sense of justice shaped his legal and civic identity.
+</p>
+</div>
+</section>
+
+<!-- IMPACT -->
+<section>
+<div class="section-box" data-aos="fade-right">
+<h2>Leadership & Social Impact</h2>
+<div class="story">
+<div class="story-card">Curator – Global Shapers Community Quetta Hub</div>
+<div class="story-card">Executive Member – Human Rights Council of Balochistan</div>
+<div class="story-card">Cabinet Member – General Assembly Balochistan</div>
+</div>
+</div>
 </section>
 
 <!-- GALLERY -->
 <section>
-  <h2 data-aos="fade-up">Visual Journey</h2>
-  <div class="gallery">
-    <img src="life1.jpg.jpeg">
-    <img src="life2.jpg.jpeg">
-    <img src="life3.jpg.jpeg">
-    <img src="life4.jpg.jpeg">
-    <img src="life5.jpg.jpeg">
-    <img src="life6.jpg.jpeg">
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section>
-  <h2 data-aos="fade-up">Connect</h2>
-  <div class="contact-grid">
-    <a href="mailto:advmumtaz222@gmail.com">Email</a>
-    <a href="https://wa.me/923332568792">WhatsApp</a>
-    <a href="https://linktr.ee/mumtazalam">Linktree</a>
-    <a href="https://my.weforum.org/network/people/001TG000009vSDhYAM/adv-mumtaz-alam">WEF Profile</a>
-  </div>
+<div class="section-box" data-aos="zoom-in">
+<h2>Visual Journey</h2>
+<div class="gallery">
+<img src="life1.jpg.jpeg">
+<img src="life2.jpg.jpeg">
+<img src="life3.jpg.jpeg">
+<img src="life4.jpg.jpeg">
+<img src="life5.jpg.jpeg">
+<img src="life6.jpg.jpeg">
+</div>
+</div>
 </section>
 
 <footer>
-  © 2025 Mumtaz Alam Bazai | Advocate & Human Rights Lawyer
+<p>© 2025 Mumtaz Alam Bazai | Advocate & Human Rights Lawyer</p>
 </footer>
 
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-AOS.init({duration:1200, once:true});
-</script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>AOS.init({duration:1400,once:true});</script>
 
 </body>
 </html>
