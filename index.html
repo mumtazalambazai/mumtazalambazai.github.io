@@ -468,23 +468,27 @@ section {
 
 .hero-3d-layer {
     position: absolute;
-    inset: -5%;
+    inset: 0;
     background:
         linear-gradient(
-            rgba(5,5,16,0.35),
-            rgba(5,5,16,0.55)
+            rgba(0,0,0,0.22),
+            rgba(0,0,0,0.38)
         ),
         url('hero-bg.jpg.jpeg') center/cover no-repeat;
 
-    transform: translateZ(-120px) scale(1.12);
+    /* STRONGER 3D DEPTH */
+    transform: translateZ(-160px) scale(1.18);
 
+    /* VERY SOFT BLUR */
     filter:
-        brightness(1.05)
-        contrast(1.15)
-        saturate(1.2);
+        blur(1.5px)
+        brightness(1.1)
+        contrast(1.2)
+        saturate(1.25);
 
-    transition: transform 0.2s ease-out;
+    transition: transform 0.15s ease-out;
 }
+
 
 
 .hero-content {
@@ -710,24 +714,26 @@ section {
 const heroBg = document.querySelector('.hero-3d-layer');
 
 heroSection.addEventListener('mousemove', (e) => {
-    const x = (e.clientX / window.innerWidth - 0.5) * 20;
-    const y = (e.clientY / window.innerHeight - 0.5) * 20;
+    const x = (e.clientX / window.innerWidth - 0.5) * 35;
+    const y = (e.clientY / window.innerHeight - 0.5) * 35;
 
-    heroBg.style.transform = `
-        translateZ(-200px)
-        rotateY(${x}deg)
-        rotateX(${-y}deg)
-        scale(1.25)
-    `;
+   heroBg.style.transform = `
+    translateZ(-180px)
+    rotateY(${x}deg)
+    rotateX(${-y}deg)
+    scale(1.22)
+`;
+    
 });
 
 heroSection.addEventListener('mouseleave', () => {
     heroBg.style.transform = `
-        translateZ(-200px)
-        rotateY(0deg)
-        rotateX(0deg)
-        scale(1.25)
-    `;
+    translateZ(-160px)
+    rotateY(0deg)
+    rotateX(0deg)
+    scale(1.18)
+`;
+    
 });
 
     const heroSection = document.getElementById('hero');
