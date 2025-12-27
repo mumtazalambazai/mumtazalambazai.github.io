@@ -4,314 +4,363 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mumtaz Alam Bazai | The Legal Visionary</title>
+<meta name="description" content="Advocate High Court, Global Shaper, and Human Rights Activist.">
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@200;400;600;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400&family=Inter:wght@300;400;500;600;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 <style>
-/* --- 1. CORE VARIABLES & RESET --- */
+/* --- 1. CORE VARIABLES & THEME --- */
 :root {
-    --glass-surface: rgba(255, 255, 255, 0.05);
+    --primary-hue: 260; /* Purple base */
+    --secondary-hue: 190; /* Cyan base */
+    --glass-bg: rgba(255, 255, 255, 0.05);
     --glass-border: rgba(255, 255, 255, 0.2);
-    --glass-highlight: rgba(255, 255, 255, 0.5);
+    --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
     --text-main: #ffffff;
-    --text-muted: rgba(255, 255, 255, 0.7);
-    --primary-glow: #6a11cb;
-    --secondary-glow: #2575fc;
-    --accent-glow: #00c6ff;
-    --font-heading: 'Playfair Display', serif;
-    --font-body: 'Inter', sans-serif;
-    --easing: cubic-bezier(0.23, 1, 0.32, 1);
+    --text-muted: rgba(255, 255, 255, 0.8);
+    --neon-glow: 0 0 20px rgba(138, 43, 226, 0.6);
+    --card-radius: 24px;
+    --transition: cubic-bezier(0.23, 1, 0.32, 1);
 }
 
-{ margin: 0; padding: 0; box-sizing: border-box; outline: none; }
-html { scroll-behavior: smooth; overflow-x: hidden; }
+* { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
 
 body {
-    background: #000;
+    font-family: 'Inter', sans-serif;
+    background-color: #050510;
     color: var(--text-main);
-    font-family: var(--font-body);
     overflow-x: hidden;
-    perspective: 2000px; /* Deep 3D Space */
+    perspective: 1000px; /* Enable 3D space */
 }
 
-/* --- 2. DYNAMIC BACKGROUND ENGINE --- */
-#universe-bg {
+/* --- 2. DYNAMIC ANIMATED BACKGROUND --- */
+.fluid-bg {
     position: fixed;
     top: 0; left: 0; width: 100%; height: 100%;
     z-index: -2;
-    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
-    transition: background 1s ease;
-}
-
-/* The "Impossible" Aurora Overlay */
-#aurora {
-    position: fixed;
-    top: -50%; left: -50%; width: 200%; height: 200%;
-    background: radial-gradient(circle at 50% 50%, 
-        rgba(106, 17, 203, 0.4), 
-        rgba(37, 117, 252, 0.2), 
-        transparent 60%);
-    filter: blur(80px);
-    z-index: -1;
-    animation: rotateAurora 20s linear infinite;
-    pointer-events: none;
-}
-
-@keyframes rotateAurora {
-    0% { transform: rotate(0deg) scale(1); }
-    50% { transform: rotate(180deg) scale(1.2); }
-    100% { transform: rotate(360deg) scale(1); }
-}
-
-/* --- 3. FLOATING BUBBLES --- */
-.bubble-container {
-    position: fixed;
-    top: 0; left: 0; width: 100%; height: 100%;
-    pointer-events: none;
-    z-index: 0;
+    background: radial-gradient(circle at 50% 50%, #1a1a2e, #000);
     overflow: hidden;
 }
-.glass-bubble {
+
+.orb {
     position: absolute;
     border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.6;
+    animation: floatOrb 20s infinite alternate;
+}
+
+.orb-1 { width: 60vw; height: 60vw; background: #4e00c2; top: -10%; left: -10%; animation-duration: 25s; }
+.orb-2 { width: 50vw; height: 50vw; background: #00c6ff; bottom: -10%; right: -10%; animation-duration: 30s; animation-direction: reverse; }
+.orb-3 { width: 30vw; height: 30vw; background: #ff007a; top: 40%; left: 40%; animation-duration: 20s; }
+
+@keyframes floatOrb {
+    0% { transform: translate(0, 0) scale(1); }
+    100% { transform: translate(50px, -50px) scale(1.1); }
+}
+
+/* --- 3. FLOATING BUBBLES LAYER --- */
+.bubbles-container {
+    position: fixed;
+    width: 100%; height: 100%;
+    z-index: -1;
+    pointer-events: none;
+}
+.bubble {
+    position: absolute;
+    bottom: -100px;
     background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.1), rgba(255,255,255,0.01));
-    box-shadow: inset 0 0 20px rgba(255,255,255,0.1), 0 0 15px rgba(255,255,255,0.05);
-    backdrop-filter: blur(3px);
-    border: 1px solid rgba(255,255,255,0.15);
-    animation: floatUp linear infinite;
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 50%;
+    box-shadow: inset 0 0 20px rgba(255,255,255,0.1);
+    animation: rise 15s infinite linear;
+}
+@keyframes rise {
+    0% { transform: translateY(0) rotate(0deg); opacity: 0; }
+    10% { opacity: 1; }
+    100% { transform: translateY(-120vh) rotate(360deg); opacity: 0; }
 }
 
-@keyframes floatUp {
-    0% { transform: translateY(120vh) rotate(0deg); opacity: 0; }
-    20% { opacity: 1; }
-    80% { opacity: 1; }
-    100% { transform: translateY(-20vh) rotate(360deg); opacity: 0; }
-}
+/* --- 4. TYPOGRAPHY & SCROLLBAR --- */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #000; }
+::-webkit-scrollbar-thumb { background: linear-gradient(to bottom, #6a11cb, #2575fc); border-radius: 10px; }
 
-/* --- 4. NAVIGATION (Glass Dock) --- */
-.nav-dock {
+h1, h2, h3 { font-family: 'Playfair Display', serif; }
+
+/* --- 5. NAVIGATION (GLASS DOCK) --- */
+nav {
     position: fixed;
     bottom: 30px;
     left: 50%;
-    transform: translateX(-50%) translateZ(50px);
-    display: flex;
-    gap: 15px;
-    padding: 15px 30px;
-    background: rgba(0, 0, 0, 0.4);
-    backdrop-filter: blur(25px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 50px;
+    transform: translateX(-50%);
     z-index: 1000;
+    background: rgba(20, 20, 30, 0.6);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255,255,255,0.1);
+    padding: 15px 30px;
+    border-radius: 50px;
+    display: flex;
+    gap: 20px;
     box-shadow: 0 20px 50px rgba(0,0,0,0.5);
-    transition: all 0.4s var(--easing);
 }
 
-.nav-dock a {
+nav a {
     color: #fff;
     text-decoration: none;
     font-size: 20px;
-    width: 45px;
-    height: 45px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
     transition: 0.3s;
     position: relative;
 }
-
-.nav-dock a:hover {
-    background: var(--accent-glow);
-    transform: translateY(-10px) scale(1.2);
-    box-shadow: 0 0 20px var(--accent-glow);
-}
-
-.nav-dock a .tooltip {
+nav a:hover { color: #00c6ff; transform: translateY(-5px); }
+nav a::after {
+    content: attr(data-tooltip);
     position: absolute;
-    bottom: 60px;
-    background: rgba(0,0,0,0.8);
-    padding: 5px 10px;
-    border-radius: 8px;
-    font-size: 12px;
-    opacity: 0;
-    pointer-events: none;
-    transition: 0.3s;
-    white-space: nowrap;
+    bottom: 40px; left: 50%; transform: translateX(-50%) scale(0);
+    background: #fff; color: #000;
+    padding: 5px 10px; border-radius: 8px; font-size: 12px; font-weight: bold;
+    opacity: 0; transition: 0.3s; pointer-events: none;
 }
-.nav-dock a:hover .tooltip { opacity: 1; bottom: 70px; }
+nav a:hover::after { transform: translateX(-50%) scale(1); opacity: 1; }
 
-/* --- 5. 3D CARD SYSTEM (Tilt.js Logic) --- */
-.card-3d {
-    background: var(--glass-surface);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    border: 1px solid var(--glass-border);
-    border-radius: 30px;
-    padding: 40px;
-    transform-style: preserve-3d;
-    transform: perspective(1000px);
-    transition: transform 0.1s ease-out; /* Smooth JS tilt */
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
-    position: relative;
-    overflow: hidden;
-    margin-bottom: 40px;
-}
-
-/* Internal light sheen */
-.card-3d::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background: linear-gradient(125deg, rgba(255,255,255,0.15) 0%, transparent 40%);
-    z-index: 1;
-    pointer-events: none;
-}
-
-.card-content {
-    transform: translateZ(30px); /* Pops text out */
-    position: relative;
-    z-index: 2;
-}
-
-h2 {
-    font-family: var(--font-heading);
-    font-size: 3rem;
-    margin-bottom: 30px;
-    background: linear-gradient(to right, #fff, #a1c4fd);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-shadow: 0 10px 30px rgba(0, 198, 255, 0.3);
-}
-
-h3 {
-    font-family: var(--font-heading);
-    font-size: 1.5rem;
-    color: var(--accent-glow);
-    margin-bottom: 10px;
-}
-
-p, li {
-    font-size: 1.1rem;
-    line-height: 1.8;
-    color: var(--text-muted);
-    margin-bottom: 15px;
-}
-
-/* --- 6. SECTIONS SPECIFIC --- */
-
-/* Hero */
-.hero-section {
+/* --- 6. HERO SECTION (3D PARALLAX) --- */
+.hero {
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0 20px;
-    position: relative;
+    padding: 100px 20px;
+    perspective: 1000px;
+    overflow: hidden;
 }
 
 .hero-content {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    max-width: 1300px;
     align-items: center;
-    text-align: center;
-    max-width: 1200px;
 }
 
-.hero-avatar-wrapper {
-    width: 250px;
-    height: 250px;
-    margin-bottom: 30px;
-    position: relative;
+.hero-text {
     transform-style: preserve-3d;
-    animation: floatingAvatar 6s ease-in-out infinite;
+    z-index: 2;
 }
 
-.hero-avatar-wrapper img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 4px solid rgba(255,255,255,0.8);
-    box-shadow: 0 0 50px var(--primary-glow);
-}
-
-.hero-h1 {
-    font-family: var(--font-heading);
-    font-size: 5rem;
+.hero-badge {
+    display: inline-block;
+    padding: 8px 20px;
+    background: linear-gradient(90deg, #ff007a, #6a11cb);
+    border-radius: 30px;
     font-weight: 700;
-    line-height: 1;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
     margin-bottom: 20px;
-    background: linear-gradient(135deg, #ffffff 0%, #b3e5fc 100%);
+    box-shadow: 0 0 20px rgba(255, 0, 122, 0.4);
+}
+
+.hero h1 {
+    font-size: clamp(3rem, 6vw, 5rem);
+    line-height: 1.1;
+    background: linear-gradient(135deg, #fff 0%, #a5f3fc 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    filter: drop-shadow(0 0 15px rgba(255,255,255,0.3));
-    transform: translateZ(50px);
+    margin-bottom: 20px;
+    filter: drop-shadow(0 0 10px rgba(255,255,255,0.3));
 }
 
-.hero-role {
-    font-size: 1.5rem;
-    color: var(--accent-glow);
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    margin-bottom: 40px;
-    transform: translateZ(40px);
-}
-
-/* Socials in Hero */
-.hero-socials {
-    display: flex;
-    gap: 15px;
-    flex-wrap: wrap;
-    justify-content: center;
-    transform: translateZ(60px);
-}
-.social-orb {
-    width: 50px; height: 50px;
-    border-radius: 50%;
-    background: rgba(255,255,255,0.05);
-    display: flex; align-items: center; justify-content: center;
-    border: 1px solid rgba(255,255,255,0.2);
-    color: #fff;
+.hero p {
     font-size: 1.2rem;
-    text-decoration: none;
-    transition: 0.4s var(--easing);
-    backdrop-filter: blur(10px);
-}
-.social-orb:hover {
-    background: #fff;
-    color: #000;
-    transform: rotateY(360deg) scale(1.1);
-    box-shadow: 0 0 30px var(--accent-glow);
+    line-height: 1.8;
+    color: var(--text-muted);
+    margin-bottom: 30px;
+    border-left: 4px solid #2575fc;
+    padding-left: 20px;
 }
 
-@keyframes floatingAvatar {
-    0%, 100% { transform: translateY(0) rotateX(0); }
-    50% { transform: translateY(-20px) rotateX(5deg); }
+/* 3D Image Container */
+.hero-img-container {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    transform-style: preserve-3d;
 }
 
-/* Content Container */
-.container {
+.hero-img-bg {
+    position: absolute;
+    inset: 0;
+    background: url('hero-bg.jpg.jpeg') center/cover;
+    border-radius: 40px;
+    opacity: 0.5;
+    transform: translateZ(-50px) scale(0.9);
+    filter: blur(10px);
+}
+
+.hero-img-main {
+    position: absolute;
+    inset: 20px;
+    background: url('portrait.jpg.jpeg') center/cover;
+    border-radius: 30px;
+    box-shadow: 0 50px 100px rgba(0,0,0,0.5);
+    border: 1px solid rgba(255,255,255,0.3);
+    transform: translateZ(20px);
+    transition: transform 0.1s; /* JS hooks into this */
+}
+
+/* Floating Elements */
+.float-card {
+    position: absolute;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(15px);
+    padding: 15px 25px;
+    border-radius: 15px;
+    border: 1px solid rgba(255,255,255,0.2);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+    transform: translateZ(50px);
+    animation: floatCard 6s ease-in-out infinite;
+}
+.fc-1 { top: 10%; left: -20px; animation-delay: 0s; }
+.fc-2 { bottom: 15%; right: -20px; animation-delay: 2s; }
+@keyframes floatCard {
+    0%, 100% { transform: translateZ(50px) translateY(0); }
+    50% { transform: translateZ(50px) translateY(-20px); }
+}
+
+/* --- 7. GENERAL SECTIONS (GLASS CARDS) --- */
+section {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 100px 20px;
+    padding: 120px 20px;
+    position: relative;
 }
 
-/* Timeline / Lists */
-ul.tech-list {
-    list-style: none;
+.section-title {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 80px;
+    position: relative;
+    z-index: 1;
 }
-ul.tech-list li {
-    padding-left: 20px;
-    border-left: 3px solid var(--accent-glow);
-    margin-bottom: 15px;
+.section-title::after {
+    content: '';
+    display: block;
+    width: 100px; height: 4px;
+    background: linear-gradient(90deg, #6a11cb, #2575fc);
+    margin: 20px auto 0;
+    border-radius: 2px;
 }
 
-/* Gallery Grid 3D */
-.gallery-grid {
+/* 3D Glass Card */
+.glass-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--card-radius);
+    padding: 40px;
+    box-shadow: var(--glass-shadow);
+    transition: all 0.5s var(--transition);
+    position: relative;
+    overflow: hidden;
+    transform-style: preserve-3d;
+}
+
+/* Hover Effect for Cards */
+.glass-card:hover {
+    transform: translateY(-10px) rotateX(2deg) rotateY(2deg);
+    border-color: rgba(255,255,255,0.5);
+    box-shadow: 0 30px 60px rgba(106, 17, 203, 0.3), inset 0 0 20px rgba(255,255,255,0.1);
+}
+.glass-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: -100%;
+    width: 100%; height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: 0.5s;
+}
+.glass-card:hover::before { left: 100%; }
+
+/* --- 8. TIMELINE (Education/Life) --- */
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%; width: 2px; height: 100%;
+    background: linear-gradient(to bottom, #6a11cb, #2575fc, transparent);
+    transform: translateX(-50%);
+}
+.timeline-item {
+    margin-bottom: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    opacity: 0; /* JS Fade in */
+    transform: translateY(50px);
+    transition: 0.8s;
+}
+.timeline-item.visible { opacity: 1; transform: translateY(0); }
+
+.timeline-content {
+    width: 45%;
+    background: rgba(255,255,255,0.07);
+    padding: 25px;
+    border-radius: 20px;
+    border: 1px solid rgba(255,255,255,0.1);
+    position: relative;
+    backdrop-filter: blur(10px);
+}
+.timeline-item:nth-child(odd) { justify-content: flex-start; }
+.timeline-item:nth-child(even) { justify-content: flex-end; }
+.timeline-content h4 { color: #00c6ff; margin-bottom: 10px; }
+.timeline-dot {
+    position: absolute;
+    width: 20px; height: 20px;
+    background: #fff;
+    border-radius: 50%;
+    left: 50%; top: 20px;
+    transform: translateX(-50%);
+    box-shadow: 0 0 15px #00c6ff;
+    z-index: 5;
+}
+
+/* --- 9. GRID LAYOUTS (Skills, Thematic) --- */
+.grid-3 {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
+}
+
+.skill-tag {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+.skill-tag i {
+    font-size: 24px;
+    background: -webkit-linear-gradient(#eee, #333);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; /* Fallback if gradient fails */
+    color: #00c6ff; 
+}
+
+/* --- 10. 3D GALLERY --- */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
 }
 .gallery-item {
     height: 300px;
@@ -324,301 +373,356 @@ ul.tech-list li {
 }
 .gallery-item img {
     width: 100%; height: 100%; object-fit: cover;
-    transition: 0.7s;
+    transition: 0.5s;
 }
-.gallery-item:hover { transform: scale(1.05) translateY(-10px); z-index: 10; }
+.gallery-item:hover { transform: scale(1.05) rotateZ(1deg); z-index: 10; box-shadow: 0 20px 50px rgba(0,198,255,0.4); }
 .gallery-item:hover img { transform: scale(1.1); }
-
-/* --- 7. HUD SETTINGS --- */
-.hud-panel {
-    position: fixed;
-    top: 20px; right: 20px;
-    z-index: 2000;
-    display: flex;
-    gap: 10px;
-}
-.hud-btn {
-    background: rgba(0,0,0,0.6);
-    color: var(--accent-glow);
-    border: 1px solid var(--accent-glow);
-    padding: 10px 20px;
-    border-radius: 30px;
-    cursor: pointer;
-    font-family: var(--font-body);
-    font-size: 0.8rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    backdrop-filter: blur(10px);
+.gallery-overlay {
+    position: absolute;
+    bottom: 0; left: 0; width: 100%;
+    background: linear-gradient(transparent, #000);
+    padding: 20px;
+    opacity: 0;
     transition: 0.3s;
 }
-.hud-btn:hover {
-    background: var(--accent-glow);
-    color: #000;
-    box-shadow: 0 0 20px var(--accent-glow);
-}
+.gallery-item:hover .gallery-overlay { opacity: 1; }
 
-/* Mobile Responsiveness */
-@media (max-width: 768px) {
-    .hero-h1 { font-size: 3rem; }
-    .nav-dock { padding: 10px 20px; gap: 10px; bottom: 20px; width: 90%; }
-    .nav-dock a { width: 35px; height: 35px; font-size: 16px; }
-}
-
-/* Footer */
-footer {
+/* --- 11. CONNECT / SOCIALS (3D ICONS) --- */
+.connect-box {
     text-align: center;
-    padding: 50px;
-    margin-top: 100px;
-    background: linear-gradient(to top, #000, transparent);
-    color: rgba(255,255,255,0.5);
+}
+.social-3d-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 40px;
+    perspective: 500px;
+}
+.social-btn {
+    width: 70px; height: 70px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 20px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 28px;
+    color: #fff;
+    text-decoration: none;
+    transition: 0.4s;
+    border: 1px solid rgba(255,255,255,0.2);
+    box-shadow: 
+        0 10px 15px rgba(0,0,0,0.3),
+        inset 0 0 10px rgba(255,255,255,0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+/* 3D Layer effect on Hover */
+.social-btn::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(135deg, var(--c1), var(--c2));
+    opacity: 0;
+    transition: 0.4s;
+    z-index: -1;
+}
+.social-btn:hover {
+    transform: rotateX(20deg) translateY(-10px);
+    box-shadow: 
+        0 20px 40px rgba(0,0,0,0.4),
+        0 0 20px var(--c1);
+    border-color: transparent;
+}
+.social-btn:hover::before { opacity: 1; }
+.social-btn i { transition: 0.4s; z-index: 2; }
+.social-btn:hover i { transform: scale(1.2) translateZ(20px); }
+
+/* --- 12. UTILS & BUTTONS --- */
+.theme-btn {
+    position: fixed;
+    top: 30px; right: 30px;
+    background: linear-gradient(135deg, #ff007a, #6a11cb);
+    border: none;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 2000;
+    box-shadow: 0 0 20px rgba(255,0,122,0.5);
+    transition: 0.3s;
+}
+.theme-btn:hover { transform: scale(1.1); }
+
+@media (max-width: 768px) {
+    .hero-content { grid-template-columns: 1fr; text-align: center; }
+    .hero-img-container { height: 400px; margin-top: 40px; }
+    .timeline::before { left: 0; }
+    .timeline-item { justify-content: flex-start !important; padding-left: 30px; }
+    .timeline-content { width: 100%; }
+    .timeline-dot { left: 0; }
+    nav { padding: 10px 20px; width: 90%; gap: 15px; }
+    nav a { font-size: 16px; }
 }
 </style>
 </head>
-
 <body>
 
-    <div id="universe-bg"></div>
-    <div id="aurora"></div>
-    <div class="bubble-container" id="bubbles"></div>
+<div class="fluid-bg">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+</div>
+<div class="bubbles-container" id="bubbles"></div>
 
-    <div class="hud-panel">
-        <button class="hud-btn" onclick="toggleImpossibleMode()"> Impossible Mode</button>
-        <button class="hud-btn" onclick="randomizeTheme()"> Remix Colors</button>
-    </div>
+<button class="theme-btn" onclick="randomizeTheme()">
+    <i class="fas fa-magic"></i> Magic Theme
+</button>
 
-    <nav class="nav-dock">
-        <a href="#about"><i class="fas fa-user"></i><span class="tooltip">About</span></a>
-        <a href="#education"><i class="fas fa-graduation-cap"></i><span class="tooltip">Education</span></a>
-        <a href="#career"><i class="fas fa-gavel"></i><span class="tooltip">Legal Career</span></a>
-        <a href="#leadership"><i class="fas fa-globe"></i><span class="tooltip">Global Leadership</span></a>
-        <a href="#skills"><i class="fas fa-brain"></i><span class="tooltip">Skills</span></a>
-        <a href="#gallery"><i class="fas fa-images"></i><span class="tooltip">Gallery</span></a>
-        <a href="#contact"><i class="fas fa-envelope"></i><span class="tooltip">Contact</span></a>
-    </nav>
+<nav>
+    <a href="#hero" data-tooltip="Home"><i class="fas fa-home"></i></a>
+    <a href="#about" data-tooltip="About"><i class="fas fa-user"></i></a>
+    <a href="#career" data-tooltip="Legal"><i class="fas fa-gavel"></i></a>
+    <a href="#leadership" data-tooltip="Leadership"><i class="fas fa-globe"></i></a>
+    <a href="#gallery" data-tooltip="Gallery"><i class="fas fa-images"></i></a>
+    <a href="#contact" data-tooltip="Connect"><i class="fas fa-paper-plane"></i></a>
+</nav>
 
-    <section class="hero-section">
-        <div class="hero-content">
-            <div class="hero-avatar-wrapper js-tilt" data-tilt>
-                <img src="portrait.jpg.jpeg" alt="Mumtaz Alam Bazai">
-            </div>
-            <h1 class="hero-h1">Mumtaz Alam Bazai</h1>
-            <p class="hero-role">Advocate | Human Rights Lawyer | WEF Global Shaper</p>
+<section id="hero" class="hero">
+    <div class="hero-content">
+        <div class="hero-text">
+            <span class="hero-badge">Advocate & Changemaker</span>
+            <h1>Mumtaz Alam <br> Bazai</h1>
+            <p>Advocate High Court · Human Rights Lawyer · Global Shaper (WEF).<br>
+            Empowering the youth of Balochistan through law, leadership, and unwavering justice.</p>
             
-            <div class="hero-socials">
-                <a href="https://wa.me/923332568792" class="social-orb"><i class="fab fa-whatsapp"></i></a>
-                <a href="https://www.linkedin.com/in/adv-mumtaz-alam-bazai-163a9a324" class="social-orb"><i class="fab fa-linkedin-in"></i></a>
-                <a href="https://www.instagram.com/mumtaz_alam" class="social-orb"><i class="fab fa-instagram"></i></a>
-                <a href="mailto:advmumtaz222@gmail.com" class="social-orb"><i class="fas fa-envelope"></i></a>
-                <a href="https://x.com/mumtazalam333" class="social-orb"><i class="fab fa-x-twitter"></i></a>
-                <a href="https://my.weforum.org/network/people/001TG000009vSDhYAM/adv-mumtaz-alam" class="social-orb"><i class="fas fa-globe"></i></a>
-                <a href="https://linktr.ee/mumtazalam" class="social-orb"><i class="fas fa-link"></i></a>
+            <div style="margin-top: 30px;">
+                <a href="#contact" style="padding: 15px 35px; background: #fff; color: #000; border-radius: 30px; text-decoration: none; font-weight: 700; margin-right: 15px; box-shadow: 0 0 20px rgba(255,255,255,0.4);">Get in Touch</a>
+                <a href="https://linktr.ee/mumtazalam" target="_blank" style="padding: 15px 35px; background: transparent; border: 2px solid #fff; color: #fff; border-radius: 30px; text-decoration: none; font-weight: 700;">Portfolio</a>
             </div>
         </div>
-    </section>
 
-    <div class="container">
-
-        <section id="about" class="card-3d js-tilt" data-tilt data-tilt-glare data-tilt-max-glare="0.3">
-            <div class="card-content">
-                <h2>The Visionary</h2>
-                <p><strong>Mumtaz Alam Bazai</strong> is a beacon of justice in Balochistan. A High Court Advocate, Human Rights Defender, and Youth Leader committed to the Rule of Law.</p>
-                <div style="margin-top: 20px; padding: 20px; background: rgba(0,0,0,0.2); border-radius: 15px;">
-                    <h3><i class="fas fa-seedling"></i> Early Life & Roots</h3>
-                    <p>Born on <strong>11 August 2000</strong> in Kili Zdoon, Pishin. Son of Dr. Ameer Muhammad (Neurosurgeon). The eldest of nine, Mumtaz embodies the resilience of the Pashtun Kakar heritage. Fluent in Pashto, Urdu, English, and Turkish, his journey from village schooling to <strong>Pak-Turk Maarif International</strong> set the stage for global impact.</p>
-                </div>
+        <div class="hero-img-container" id="heroTilt">
+            <div class="hero-img-bg"></div>
+            <div class="hero-img-main"></div>
+            <div class="float-card fc-1">
+                <i class="fas fa-scale-balanced" style="color:#00c6ff"></i>
+                <span>Justice First</span>
             </div>
-        </section>
-
-        <section id="education" class="card-3d js-tilt" data-tilt>
-            <div class="card-content">
-                <h2>Academic Excellence</h2>
-                <ul class="tech-list">
-                    <li><strong>LLB (Hons.)</strong> — University Law College Quetta (2024)</li>
-                    <li><strong>MA Political Science</strong> — University of Balochistan (2024)</li>
-                    <li><strong>BA (Arts)</strong> — University of Balochistan (2022)</li>
-                    <li><strong>Intermediate</strong> — Pak-Turk Maarif International (2019)</li>
-                </ul>
+            <div class="float-card fc-2">
+                <i class="fas fa-users" style="color:#ff007a"></i>
+                <span>Youth Leader</span>
             </div>
-        </section>
-
-        <section id="career" class="card-3d js-tilt" data-tilt>
-            <div class="card-content">
-                <h2>Legal Dominion</h2>
-                <p>Formally entering the legal arena in 2025 (Bar Council Reg. No. 14/2025), Mumtaz trained under the legendary <strong>Advocate Abdul Zahir Kakar</strong> at Iqra Law Associates.</p>
-                <p>He actively undertakes <strong>Pro Bono Litigation</strong> for the marginalized, fighting in Civil, Criminal, and Constitutional courts to uphold human dignity.</p>
-            </div>
-        </section>
-
-        <section id="leadership" class="card-3d js-tilt" data-tilt>
-            <div class="card-content">
-                <h2>Global Leadership & Impact</h2>
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
-                    <div>
-                        <h3><i class="fas fa-globe-europe"></i> World Economic Forum</h3>
-                        <p>Curator of the Global Shapers Quetta Hub. Represented Pakistan at the <strong>Annual Summit 2025 in Geneva</strong>.</p>
-                    </div>
-                    <div>
-                        <h3><i class="fas fa-file-signature"></i> Policy Maker</h3>
-                        <p>Initiated Balochistan’s first <strong>Youth Policy Project</strong> and authored the Hub's Governance Charter.</p>
-                    </div>
-                    <div>
-                        <h3><i class="fas fa-hand-holding-heart"></i> Activist</h3>
-                        <p>Executive Member of Human Rights Council of Balochistan. District Co-Head of Blood Heroes.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="thematic" class="card-3d js-tilt" data-tilt>
-            <div class="card-content">
-                <h2>Thematic Universes</h2>
-                <div style="display: flex; flex-wrap: wrap; gap: 10px;">
-                    <span class="hud-btn" style="cursor: default;"> Human Rights</span>
-                    <span class="hud-btn" style="cursor: default;"> Rule of Law</span>
-                    <span class="hud-btn" style="cursor: default;"> Climate & Energy</span>
-                    <span class="hud-btn" style="cursor: default;"> Youth Education</span>
-                    <span class="hud-btn" style="cursor: default;"> Gender Rights</span>
-                    <span class="hud-btn" style="cursor: default;"> Electoral Fairness</span>
-                </div>
-            </div>
-        </section>
-
-        <section id="publications" class="card-3d js-tilt" data-tilt>
-            <div class="card-content">
-                <h2>Intellectual Contributions</h2>
-                <p><i class="fas fa-pen-nib"></i> <strong>"Human Rights and Responsibilities"</strong> (Daily Intekhab, 2021)</p>
-                <p><i class="fas fa-scroll"></i> <strong>"Role of Election Commission of Pakistan in Free & Fair Elections"</strong> (Research Paper, 2024)</p>
-            </div>
-        </section>
-
-        <section id="gallery">
-            <h2 style="text-align: center;">Visual Journey</h2>
-            <div class="gallery-grid">
-                <div class="gallery-item"><img src="life1.jpg.jpeg" alt="Journey 1"></div>
-                <div class="gallery-item"><img src="life2.jpg.jpeg" alt="Journey 2"></div>
-                <div class="gallery-item"><img src="life3.jpg.jpeg" alt="Journey 3"></div>
-                <div class="gallery-item"><img src="life4.jpg.jpeg" alt="Journey 4"></div>
-                <div class="gallery-item"><img src="life5.jpg.jpeg" alt="Journey 5"></div>
-                <div class="gallery-item"><img src="life6.jpg.jpeg" alt="Journey 6"></div>
-            </div>
-        </section>
-
-        <section id="mission" class="card-3d js-tilt" data-tilt style="margin-top: 50px; text-align: center; border-color: var(--accent-glow);">
-            <div class="card-content">
-                <h2>The Mission</h2>
-                <p style="font-size: 1.3rem; color: #fff;">To advance justice, safeguard human dignity, strengthen democratic institutions, and empower youth to lead Pakistan toward a just, inclusive, and sustainable future.</p>
-            </div>
-        </section>
-
-        <section id="contact" style="text-align: center; margin-top: 80px;">
-            <h2>Connect with the Advocate</h2>
-            <div class="hero-socials" style="margin-top: 30px;">
-                <a href="mailto:advmumtaz222@gmail.com" class="social-orb"><i class="fas fa-envelope"></i></a>
-                <a href="https://wa.me/923332568792" class="social-orb"><i class="fab fa-whatsapp"></i></a>
-                <a href="https://linktr.ee/mumtazalam" class="social-orb"><i class="fas fa-link"></i></a>
-                <a href="https://www.tiktok.com/@mumtaz_alam" class="social-orb"><i class="fab fa-tiktok"></i></a>
-                <a href="https://www.snapchat.com/add/mumtazalam222" class="social-orb"><i class="fab fa-snapchat"></i></a>
-            </div>
-        </section>
-
+        </div>
     </div>
+</section>
 
-    <footer>
-        <p>© 2025 Mumtaz Alam Bazai | Advocate High Court</p>
-    </footer>
+<section id="about">
+    <h2 class="section-title">The Journey</h2>
+    <div class="glass-card">
+        <div style="text-align: center; margin-bottom: 40px; max-width: 800px; margin: 0 auto 40px;">
+            <p style="font-size: 1.1rem; line-height: 1.8;">
+                Born on <strong>11 August 2000</strong> in Kili Zdoon, District Pishin, Balochistan. Mumtaz is the eldest of nine siblings, son of Dr. Ameer Muhammad (Neurosurgeon). From village schooling to scholarship-based excellence at Pak-Turk Maarif, his journey is defined by discipline and brilliance.
+            </p>
+        </div>
 
-    <script>
-        // 1. BUBBLE GENERATOR
-        const bubbleContainer = document.getElementById('bubbles');
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h4>2019 - Intermediate</h4>
+                    <p>Pak-Turk Maarif International Schools & Colleges. Demonstrated leadership and multilingual fluency (Pashto, Urdu, English, Turkish).</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h4>2022 - BA (Arts)</h4>
+                    <p>University of Balochistan. Building the foundation for social sciences and political thought.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h4>2024 - LLB (Hons) & MA Pol. Sci.</h4>
+                    <p>University Law College & University of Balochistan. Graduated with honors, mastering the intricacies of law and governance.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h4>2025 - Legal License</h4>
+                    <p>Received Bar Council License (Reg No. 14/2025). Formally joined Iqra Law Associates under Advocate Abdul Zahir Kakar.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="career">
+    <h2 class="section-title">Legal & Social Impact</h2>
+    <div class="grid-3">
+        <div class="glass-card">
+            <i class="fas fa-gavel" style="font-size: 40px; color: #ff007a; margin-bottom: 20px;"></i>
+            <h3>Legal Career</h3>
+            <p style="margin-top: 15px; opacity: 0.9;">
+                Active practitioner in Civil, Criminal, and Human Rights litigation. Known for pro bono work for marginalized communities in Balochistan. Trained at Iqra Law Associates, Quetta.
+            </p>
+        </div>
+
+        <div class="glass-card">
+            <i class="fas fa-globe-asia" style="font-size: 40px; color: #00c6ff; margin-bottom: 20px;"></i>
+            <h3>Global Shaper (WEF)</h3>
+            <p style="margin-top: 15px; opacity: 0.9;">
+                Curator of Quetta Hub. Represented at <strong>Global Shapers Annual Summit 2025 (Geneva)</strong>. Authored the Governance Charter and spearheaded the first Youth Policy Project.
+            </p>
+        </div>
+
+        <div class="glass-card">
+            <i class="fas fa-book-open" style="font-size: 40px; color: #6a11cb; margin-bottom: 20px;"></i>
+            <h3>Publications</h3>
+            <p style="margin-top: 15px; opacity: 0.9;">
+                Author of <em>"Human Rights and Responsibilities"</em> (2021) and research on <em>"The Role of ECP in Free and Fair Elections"</em> (2024).
+            </p>
+        </div>
+    </div>
+</section>
+
+<section id="leadership">
+    <h2 class="section-title">Thematic Areas</h2>
+    <div class="glass-card">
+        <div style="display: flex; flex-wrap: wrap; gap: 15px; justify-content: center;">
+            <span style="padding: 10px 20px; background: rgba(255,255,255,0.1); border-radius: 20px; border: 1px solid #00c6ff;">Human Rights & Equality</span>
+            <span style="padding: 10px 20px; background: rgba(255,255,255,0.1); border-radius: 20px; border: 1px solid #ff007a;">Governance & Rule of Law</span>
+            <span style="padding: 10px 20px; background: rgba(255,255,255,0.1); border-radius: 20px; border: 1px solid #6a11cb;">Youth Policy</span>
+            <span style="padding: 10px 20px; background: rgba(255,255,255,0.1); border-radius: 20px; border: 1px solid #ffe600;">Climate & Energy</span>
+            <span style="padding: 10px 20px; background: rgba(255,255,255,0.1); border-radius: 20px; border: 1px solid #00ff88;">Indigenous Rights</span>
+        </div>
+    </div>
+</section>
+
+<section id="gallery">
+    <h2 class="section-title">Visual Journey</h2>
+    <div class="gallery-grid">
+        <div class="gallery-item"><img src="life1.jpg.jpeg" alt="Life 1"><div class="gallery-overlay"><h4>Leadership</h4></div></div>
+        <div class="gallery-item"><img src="life2.jpg.jpeg" alt="Life 2"><div class="gallery-overlay"><h4>Advocacy</h4></div></div>
+        <div class="gallery-item"><img src="life3.jpg.jpeg" alt="Life 3"><div class="gallery-overlay"><h4>Global Shapers</h4></div></div>
+        <div class="gallery-item"><img src="life4.jpg.jpeg" alt="Life 4"><div class="gallery-overlay"><h4>Court Life</h4></div></div>
+        <div class="gallery-item"><img src="life5.jpg.jpeg" alt="Life 5"><div class="gallery-overlay"><h4>Community</h4></div></div>
+        <div class="gallery-item"><img src="life6.jpg.jpeg" alt="Life 6"><div class="gallery-overlay"><h4>Travel</h4></div></div>
+    </div>
+</section>
+
+<section id="mission">
+    <div class="glass-card" style="text-align: center; background: linear-gradient(135deg, rgba(106, 17, 203, 0.4), rgba(37, 117, 252, 0.4));">
+        <i class="fas fa-bullseye" style="font-size: 50px; color: #fff; margin-bottom: 20px;"></i>
+        <h2>Mission Statement</h2>
+        <p style="font-size: 1.5rem; margin-top: 20px; font-family: 'Playfair Display';">
+            "To advance justice, safeguard human dignity, strengthen democratic institutions, and empower youth to lead Pakistan toward a just, inclusive, and sustainable future."
+        </p>
+    </div>
+</section>
+
+<section id="contact" style="padding-bottom: 150px;">
+    <h2 class="section-title">Connect</h2>
+    <div class="connect-box">
+        <p style="font-size: 1.2rem; color: #ccc;">Reach out for legal consultation or collaboration.</p>
         
-        function createBubble() {
-            const bubble = document.createElement('div');
-            bubble.classList.add('glass-bubble');
-            
-            const size = Math.random() * 100 + 20 + 'px';
-            bubble.style.width = size;
-            bubble.style.height = size;
-            
-            bubble.style.left = Math.random() * 100 + '%';
-            
-            const duration = Math.random() * 10 + 5 + 's';
-            bubble.style.animationDuration = duration;
-            
-            bubbleContainer.appendChild(bubble);
-            
-            setTimeout(() => {
-                bubble.remove();
-            }, 15000);
-        }
+        <div class="social-3d-container">
+            <a href="mailto:advmumtaz222@gmail.com" class="social-btn" style="--c1: #D44638; --c2: #B23121;"><i class="fas fa-envelope"></i></a>
+            <a href="https://wa.me/923332568792" class="social-btn" style="--c1: #25D366; --c2: #128C7E;"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://www.linkedin.com/in/adv-mumtaz-alam-bazai-163a9a324" class="social-btn" style="--c1: #0077b5; --c2: #004182;"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.instagram.com/mumtaz_alam" class="social-btn" style="--c1: #833AB4; --c2: #FD1D1D;"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/mumtaz.alam.18488" class="social-btn" style="--c1: #1877F2; --c2: #1052a8;"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://x.com/mumtazalam333" class="social-btn" style="--c1: #000; --c2: #333;"><i class="fab fa-x-twitter"></i></a>
+            <a href="https://my.weforum.org/network/people/001TG000009vSDhYAM/adv-mumtaz-alam" class="social-btn" style="--c1: #00A3E0; --c2: #005F86;" title="WEF"><i class="fas fa-globe"></i></a>
+            <a href="https://linktr.ee/mumtazalam" class="social-btn" style="--c1: #43E660; --c2: #1fa337;"><i class="fas fa-link"></i></a>
+        </div>
+    </div>
+</section>
 
-        setInterval(createBubble, 500);
+<footer style="text-align: center; padding: 20px; border-top: 1px solid rgba(255,255,255,0.1); color: #888; font-size: 14px;">
+    © 2025 Mumtaz Alam Bazai. Advocate & Human Rights Lawyer.
+</footer>
 
-        // 2. 3D TILT EFFECT (Vanilla JS Implementation of Tilt)
-        const cards = document.querySelectorAll('.js-tilt');
+<script>
+    // 1. GENERATE FLOATING BUBBLES
+    const bubbleContainer = document.getElementById('bubbles');
+    function createBubble() {
+        const bubble = document.createElement('div');
+        bubble.classList.add('bubble');
+        const size = Math.random() * 60 + 20 + 'px';
+        bubble.style.width = size;
+        bubble.style.height = size;
+        bubble.style.left = Math.random() * 100 + '%';
+        bubble.style.animationDuration = Math.random() * 10 + 10 + 's';
+        bubbleContainer.appendChild(bubble);
         
-        cards.forEach(card => {
-            card.addEventListener('mousemove', (e) => {
-                const rect = card.getBoundingClientRect();
-                const x = e.clientX - rect.left;
-                const y = e.clientY - rect.top;
-                
-                const centerX = rect.width / 2;
-                const centerY = rect.height / 2;
-                
-                const rotateX = ((y - centerY) / centerY) * -10; // Max rotation deg
-                const rotateY = ((x - centerX) / centerX) * 10;
-                
-                card.style.transform = perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02);
-            });
-            
-            card.addEventListener('mouseleave', () => {
-                card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) scale3d(1, 1, 1)';
-            });
-        });
+        setTimeout(() => { bubble.remove(); }, 20000);
+    }
+    setInterval(createBubble, 1000);
 
-        // 3. SCROLL COLOR CHANGER
-        window.addEventListener('scroll', () => {
-            const scrollPercent = window.scrollY / (document.body.offsetHeight - window.innerHeight);
-            const bg = document.getElementById('universe-bg');
-            
-            // Calculate hues based on scroll
-            if(scrollPercent < 0.2) {
-                bg.style.background = 'linear-gradient(135deg, #0f0c29, #302b63, #24243e)';
-            } else if (scrollPercent < 0.5) {
-                bg.style.background = 'linear-gradient(135deg, #200122, #6f0000)'; // Red/Dark for Legal/Power
-            } else if (scrollPercent < 0.8) {
-                bg.style.background = 'linear-gradient(135deg, #004e92, #000428)'; // Blue for WEF
-            } else {
-                bg.style.background = 'linear-gradient(135deg, #134E5E, #71B280)'; // Green for Growth/Nature
+    // 2. 3D TILT EFFECT FOR HERO IMAGE
+    const heroSection = document.getElementById('hero');
+    const heroImg = document.getElementById('heroTilt').querySelector('.hero-img-main');
+    
+    heroSection.addEventListener('mousemove', (e) => {
+        const xAxis = (window.innerWidth / 2 - e.pageX) / 25;
+        const yAxis = (window.innerHeight / 2 - e.pageY) / 25;
+        heroImg.style.transform = rotateY(${xAxis}deg) rotateX(${yAxis}deg) translateZ(50px);
+    });
+
+    heroSection.addEventListener('mouseleave', () => {
+        heroImg.style.transform = rotateY(0deg) rotateX(0deg) translateZ(20px);
+    });
+
+    // 3. SCROLL REVEAL ANIMATIONS
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if(entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                // Optional: add slight 3d pop
+                entry.target.style.transform = 'translateY(0) scale(1)';
             }
         });
+    }, { threshold: 0.1 });
 
-        // 4. IMPOSSIBLE MODE TOGGLE
-        let isImpossible = false;
-        function toggleImpossibleMode() {
-            isImpossible = !isImpossible;
-            const aurora = document.getElementById('aurora');
-            if(isImpossible) {
-                aurora.style.filter = 'blur(20px) contrast(200%)';
-                aurora.style.background = 'radial-gradient(circle at 50% 50%, red, orange, yellow, green, blue, indigo, violet)';
-                aurora.style.animationDuration = '2s';
-                document.body.style.transform = "scale(0.98)";
-                alert(" IMPOSSIBLE MODE ACTIVATED: MAXIMUM GPU USAGE");
-            } else {
-                aurora.style.filter = 'blur(80px)';
-                aurora.style.background = 'radial-gradient(circle at 50% 50%, rgba(106, 17, 203, 0.4), rgba(37, 117, 252, 0.2), transparent 60%)';
-                aurora.style.animationDuration = '20s';
-                document.body.style.transform = "scale(1)";
+    document.querySelectorAll('.timeline-item, .glass-card, .gallery-item').forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(50px)';
+        el.style.transition = 'all 0.8s ease-out';
+        observer.observe(el);
+    });
+
+    // Custom logic to handle the class add
+    const activeObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if(entry.isIntersecting) {
+                entry.target.style.opacity = 1;
+                entry.target.style.transform = 'translateY(0)';
             }
-        }
+        });
+    });
+    
+    document.querySelectorAll('.glass-card').forEach(card => activeObserver.observe(card));
 
-        function randomizeTheme() {
-             const r = Math.floor(Math.random() * 255);
-             const g = Math.floor(Math.random() * 255);
-             const b = Math.floor(Math.random() * 255);
-             document.documentElement.style.setProperty('--accent-glow', rgb(${r},${g},${b}));
-             document.documentElement.style.setProperty('--primary-glow', rgb(${255-r},${255-g},${255-b}));
-        }
-    </script>
+    // 4. COLOR MAGIC (THEME GENERATOR)
+    function randomizeTheme() {
+        const hue1 = Math.floor(Math.random() * 360);
+        const hue2 = Math.floor(Math.random() * 360);
+        const root = document.documentElement;
+        
+        // Update Orb colors
+        document.querySelector('.orb-1').style.background = hsl(${hue1}, 70%, 50%);
+        document.querySelector('.orb-2').style.background = hsl(${hue2}, 70%, 50%);
+        
+        // Update Text Gradients
+        document.querySelector('.hero h1').style.backgroundImage = linear-gradient(135deg, #fff 0%, hsl(${hue2}, 100%, 70%) 100%);
+        
+        // Update Button Gradients
+        document.querySelector('.hero-badge').style.background = linear-gradient(90deg, hsl(${hue1}, 100%, 50%), hsl(${hue2}, 100%, 50%));
+    }
+</script>
+
 </body>
 </html>
