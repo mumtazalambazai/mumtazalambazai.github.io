@@ -453,6 +453,34 @@ section {
     transition: 0.3s;
 }
 .theme-btn:hover { transform: scale(1.1); }
+/* ===== HERO 3D BACKGROUND ===== */
+.hero {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-3d-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    perspective: 1200px;
+}
+
+.hero-3d-layer {
+    position: absolute;
+    inset: -10%;
+    background:
+        linear-gradient(rgba(5,5,16,0.7), rgba(5,5,16,0.9)),
+        url('hero-bg.jpg.jpeg') center/cover no-repeat;
+    transform: translateZ(-200px) scale(1.25);
+    filter: brightness(0.9) contrast(1.1);
+    transition: transform 0.2s ease-out;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
 
 @media (max-width: 768px) {
     .hero-content { grid-template-columns: 1fr; text-align: center; }
@@ -489,6 +517,11 @@ section {
 </nav>
 
 <section id="hero" class="hero">
+    <!-- HERO 3D BACKGROUND IMAGE -->
+<div class="hero-3d-bg">
+    <div class="hero-3d-layer"></div>
+</div>
+
     <div class="hero-content">
         <div class="hero-text">
             <span class="hero-badge">Advocate & Changemaker</span>
@@ -663,6 +696,30 @@ section {
     setInterval(createBubble, 1000);
 
     // 2. 3D TILT EFFECT FOR HERO IMAGE
+    // HERO BACKGROUND PARALLAX
+const heroBg = document.querySelector('.hero-3d-layer');
+
+heroSection.addEventListener('mousemove', (e) => {
+    const x = (e.clientX / window.innerWidth - 0.5) * 20;
+    const y = (e.clientY / window.innerHeight - 0.5) * 20;
+
+    heroBg.style.transform = `
+        translateZ(-200px)
+        rotateY(${x}deg)
+        rotateX(${-y}deg)
+        scale(1.25)
+    `;
+});
+
+heroSection.addEventListener('mouseleave', () => {
+    heroBg.style.transform = `
+        translateZ(-200px)
+        rotateY(0deg)
+        rotateX(0deg)
+        scale(1.25)
+    `;
+});
+
     const heroSection = document.getElementById('hero');
     const heroImg = document.getElementById('heroTilt').querySelector('.hero-img-main');
     
