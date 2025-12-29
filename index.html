@@ -4,15 +4,41 @@
 /* YOUR CUSTOM CSS GOES HERE */
 <style>
     /* HERO PORTRAIT IMAGE */
-.hero-img-container {
-    position: relative;
-    width: 100%;
-    height: 600px;
-    transform-style: preserve-3d;
-    display: flex;
-    justify-content: flex-end; /* Moves portrait slightly to right */
-    align-items: center;
-    padding-right: 50px; /* Adjust horizontal position */
+.hero-img-main {
+    position: absolute;
+    width: 280px;   /* desktop size */
+    height: 380px;
+    top: 50%;
+    left: 55%;      /* shifted slightly right */
+    transform: translate(-50%, -50%) translateZ(50px);
+    background: url('portrait.jpg.jpeg') center/cover no-repeat;
+    border-radius: 20px;  /* slight rounding */
+    box-shadow: 
+    0 30px 80px rgba(0,0,0,0.6),   /* Outer shadow for 3D depth */
+    inset 0 0 30px rgba(0,0,0,0.25); /* Darker edges inside */
+    border: 1px solid rgba(255,255,255,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    z-index: 5;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .hero-img-main {
+        width: 200px;
+        height: 280px;
+        left: 50%;  /* centered on mobile */
+        top: 55%;
+    }
+    @media (max-width: 768px) {
+    .hero-img-main {
+        width: 200px;
+        height: 270px;
+        box-shadow:
+            0 20px 60px rgba(0,0,0,0.5),
+            inset 0 0 20px rgba(0,0,0,0.2);
+    }
+}
+
 }
 
 .hero-img-bg {
@@ -302,16 +328,6 @@ nav a:hover::after { transform: translateX(-50%) scale(1); opacity: 1; }
     width: 100%;
     height: 600px;
     transform-style: preserve-3d;
-}
-
-.hero-img-bg {
-    position: absolute;
-    inset: 0;
-    background: url('hero-bg.jpg.jpeg') center/cover;
-    border-radius: 40px;
-    opacity: 0.5;
-    transform: translateZ(-50px) scale(0.9);
-    filter: blur(10px);
 }
 
 .hero-img-main {
@@ -1011,11 +1027,11 @@ heroSection.addEventListener('mouseleave', () => {
 heroSection.addEventListener('mousemove', (e) => {
     const xAxis = (window.innerWidth / 2 - e.pageX) / 25;
     const yAxis = (window.innerHeight / 2 - e.pageY) / 25;
-    heroImg.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg) translateZ(50px)`;
+    heroImg.style.transform = `translate(-50%, -50%) translateZ(50px) rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
 });
 
 heroSection.addEventListener('mouseleave', () => {
-    heroImg.style.transform = `rotateY(0deg) rotateX(0deg) translateZ(50px)`;
+    heroImg.style.transform = `translate(-50%, -50%) translateZ(50px) rotateY(0deg) rotateX(0deg)`;
 });
 
     
