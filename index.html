@@ -10,582 +10,599 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 <style>
-    /* --- 1. CORE VARIABLES & THEME --- */
-    :root {
-        --primary-hue: 260; /* Purple base */
-        --secondary-hue: 190; /* Cyan base */
-        --glass-bg: rgba(255, 255, 255, 0.05);
-        --glass-border: rgba(255, 255, 255, 0.2);
-        --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-        --text-main: #ffffff;
-        --text-muted: rgba(255, 255, 255, 0.8);
-        --neon-glow: 0 0 20px rgba(138, 43, 226, 0.6);
-        --card-radius: 24px;
-        --transition: cubic-bezier(0.23, 1, 0.32, 1);
-    }
+/* --- 1. CORE VARIABLES & THEME --- */
+:root {
+    --primary-hue: 260; /* Purple base */
+    --secondary-hue: 190; /* Cyan base */
+    --glass-bg: rgba(255, 255, 255, 0.05);
+    --glass-border: rgba(255, 255, 255, 0.2);
+    --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    --text-main: #ffffff;
+    --text-muted: rgba(255, 255, 255, 0.8);
+    --neon-glow: 0 0 20px rgba(138, 43, 226, 0.6);
+    --card-radius: 24px;
+    --transition: cubic-bezier(0.23, 1, 0.32, 1);
+}
 
-    * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+* { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
 
-    body {
-        font-family: 'Inter', sans-serif;
-        background-color: #050510;
-        color: var(--text-main);
-        overflow-x: hidden;
-        perspective: 1000px; /* Enable 3D space */
-    }
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #050510;
+    color: var(--text-main);
+    overflow-x: hidden;
+    perspective: 1000px;
+}
 
-    /* --- 2. DYNAMIC ANIMATED BACKGROUND --- */
-    .fluid-bg {
-        position: fixed;
-        top: 0; left: 0; width: 100%; height: 100%;
-        z-index: -2;
-        background: radial-gradient(circle at 50% 50%, #1a1a2e, #000);
-        overflow: hidden;
-    }
+/* --- 2. DYNAMIC ANIMATED BACKGROUND --- */
+.fluid-bg {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    z-index: -2;
+    background: radial-gradient(circle at 50% 50%, #1a1a2e, #000);
+    overflow: hidden;
+}
 
-    .orb {
-        position: absolute;
-        border-radius: 50%;
-        filter: blur(80px);
-        opacity: 0.6;
-        animation: floatOrb 20s infinite alternate;
-    }
+.orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.6;
+    animation: floatOrb 20s infinite alternate;
+}
 
-    .orb-1 { width: 60vw; height: 60vw; background: #4e00c2; top: -10%; left: -10%; animation-duration: 25s; }
-    .orb-2 { width: 50vw; height: 50vw; background: #00c6ff; bottom: -10%; right: -10%; animation-duration: 30s; animation-direction: reverse; }
-    .orb-3 { width: 30vw; height: 30vw; background: #ff007a; top: 40%; left: 40%; animation-duration: 20s; }
+.orb-1 { width: 60vw; height: 60vw; background: #4e00c2; top: -10%; left: -10%; animation-duration: 25s; }
+.orb-2 { width: 50vw; height: 50vw; background: #00c6ff; bottom: -10%; right: -10%; animation-duration: 30s; animation-direction: reverse; }
+.orb-3 { width: 30vw; height: 30vw; background: #ff007a; top: 40%; left: 40%; animation-duration: 20s; }
 
-    @keyframes floatOrb {
-        0% { transform: translate(0, 0) scale(1); }
-        100% { transform: translate(50px, -50px) scale(1.1); }
-    }
+@keyframes floatOrb {
+    0% { transform: translate(0, 0) scale(1); }
+    100% { transform: translate(50px, -50px) scale(1.1); }
+}
 
-    /* --- 3. FLOATING BUBBLES LAYER --- */
-    .bubbles-container {
-        position: fixed;
-        width: 100%; height: 100%;
-        z-index: -1;
-        pointer-events: none;
-    }
-    .bubble {
-        position: absolute;
-        bottom: -100px;
-        background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.1), rgba(255,255,255,0.01));
-        border: 1px solid rgba(255,255,255,0.3);
-        border-radius: 50%;
-        box-shadow: inset 0 0 20px rgba(255,255,255,0.1);
-        animation: rise 15s infinite linear;
-    }
-    @keyframes rise {
-        0% { transform: translateY(0) rotate(0deg); opacity: 0; }
-        10% { opacity: 1; }
-        100% { transform: translateY(-120vh) rotate(360deg); opacity: 0; }
-    }
+/* --- 3. FLOATING BUBBLES LAYER --- */
+.bubbles-container {
+    position: fixed;
+    width: 100%; height: 100%;
+    z-index: -1;
+    pointer-events: none;
+}
+.bubble {
+    position: absolute;
+    bottom: -100px;
+    background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.1), rgba(255,255,255,0.01));
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 50%;
+    box-shadow: inset 0 0 20px rgba(255,255,255,0.1);
+    animation: rise 15s infinite linear;
+}
+@keyframes rise {
+    0% { transform: translateY(0) rotate(0deg); opacity: 0; }
+    10% { opacity: 1; }
+    100% { transform: translateY(-120vh) rotate(360deg); opacity: 0; }
+}
 
-    /* --- 4. TYPOGRAPHY & SCROLLBAR --- */
-    ::-webkit-scrollbar { width: 8px; }
-    ::-webkit-scrollbar-track { background: #000; }
-    ::-webkit-scrollbar-thumb { background: linear-gradient(to bottom, #6a11cb, #2575fc); border-radius: 10px; }
+/* --- 4. TYPOGRAPHY & SCROLLBAR --- */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #000; }
+::-webkit-scrollbar-thumb { background: linear-gradient(to bottom, #6a11cb, #2575fc); border-radius: 10px; }
 
-    h1, h2, h3 { font-family: 'Playfair Display', serif; }
+h1, h2, h3 { font-family: 'Playfair Display', serif; }
 
-    /* --- 5. NAVIGATION (GLASS DOCK) --- */
-    nav {
-        position: fixed;
-        bottom: 30px;
-        left: 50%;
-        transform: translateX(-50%);
-        z-index: 1000;
-        background: rgba(20, 20, 30, 0.6);
-        backdrop-filter: blur(20px);
-        border: 1px solid rgba(255,255,255,0.1);
-        padding: 15px 30px;
-        border-radius: 50px;
-        display: flex;
-        gap: 20px;
-        box-shadow: 0 20px 50px rgba(0,0,0,0.5);
-    }
+/* --- 5. NAVIGATION (GLASS DOCK) --- */
+nav {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    background: rgba(20, 20, 30, 0.6);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255,255,255,0.1);
+    padding: 15px 30px;
+    border-radius: 50px;
+    display: flex;
+    gap: 20px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+}
 
-    nav a {
-        color: #fff;
-        text-decoration: none;
-        font-size: 20px;
-        transition: 0.3s;
-        position: relative;
-    }
-    nav a:hover { color: #00c6ff; transform: translateY(-5px); }
-    nav a::after {
-        content: attr(data-tooltip);
-        position: absolute;
-        bottom: 40px; left: 50%; transform: translateX(-50%) scale(0);
-        background: #fff; color: #000;
-        padding: 5px 10px; border-radius: 8px; font-size: 12px; font-weight: bold;
-        opacity: 0; transition: 0.3s; pointer-events: none;
-    }
-    nav a:hover::after { transform: translateX(-50%) scale(1); opacity: 1; }
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    transition: 0.3s;
+    position: relative;
+}
+nav a:hover { color: #00c6ff; transform: translateY(-5px); }
+nav a::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 40px; left: 50%; transform: translateX(-50%) scale(0);
+    background: #fff; color: #000;
+    padding: 5px 10px; border-radius: 8px; font-size: 12px; font-weight: bold;
+    opacity: 0; transition: 0.3s; pointer-events: none;
+}
+nav a:hover::after { transform: translateX(-50%) scale(1); opacity: 1; }
 
-    /* --- 6. HERO SECTION (3D PARALLAX) --- */
-    .hero {
-        min-height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 100px 20px;
-        perspective: 1000px;
-        overflow: hidden;
-        position: relative;
-    }
+/* --- 6. HERO SECTION (3D PARALLAX) --- */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 20px;
+    perspective: 1000px;
+    overflow: hidden;
+    position: relative;
+}
 
+.hero-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    max-width: 1300px;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-text {
+    transform-style: preserve-3d;
+    z-index: 2;
+}
+
+.hero-badge {
+    display: inline-block;
+    padding: 8px 20px;
+    background: linear-gradient(90deg, #ff007a, #6a11cb);
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 20px rgba(255, 0, 122, 0.4);
+}
+
+.hero h1 {
+    font-size: clamp(3rem, 6vw, 5rem);
+    line-height: 1.1;
+    background: linear-gradient(135deg, #fff 0%, #a5f3fc 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 20px;
+    filter: drop-shadow(0 0 10px rgba(255,255,255,0.3));
+}
+
+.hero p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: var(--text-muted);
+    margin-bottom: 30px;
+    border-left: 4px solid #2575fc;
+    padding-left: 20px;
+}
+
+/* ===== HERO 3D BACKGROUND ===== */
+.hero-3d-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    perspective: 1200px;
+}
+
+.hero-3d-layer {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(rgba(0,0,0,0.22), rgba(0,0,0,0.38)), url('hero-bg.jpg.jpeg') center/cover no-repeat;
+    transform: translateZ(-160px) scale(1.18);
+    filter: blur(1.5px) brightness(1.1) contrast(1.2) saturate(1.25);
+    transition: transform 0.15s ease-out;
+}
+
+/* 3D Image Container */
+.hero-img-container {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    transform-style: preserve-3d;
+}
+
+.hero-img-bg {
+    position: absolute;
+    inset: 0;
+    background: url('hero-bg.jpg.jpeg') center/cover no-repeat;
+    border-radius: 40px;
+    opacity: 0.4;
+    transform: translateZ(-50px) scale(0.9);
+    filter: blur(10px);
+}
+
+/* Main Portrait Image */
+.hero-img-main {
+    position: absolute;
+    width: 280px;
+    height: 380px;
+    top: 50%;
+    left: 55%;
+    transform: translate(-50%, -50%) translateZ(50px);
+    background: url('portrait.jpg.jpeg') center/cover no-repeat;
+    border-radius: 20px;
+    border: 1px solid rgba(255,255,255,0.1);
+    box-shadow: 0 30px 80px rgba(0,0,0,0.6), inset 0 0 25px rgba(0,0,0,0.25);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    z-index: 5;
+    animation: floatPortrait 6s ease-in-out infinite;
+    transform-style: preserve-3d;
+}
+
+/* Floating animation */
+@keyframes floatPortrait {
+    0% { transform: translate(-50%, -50%) translateZ(50px) rotateY(0deg) rotateX(0deg); }
+    25% { transform: translate(-50%, -52%) translateZ(60px) rotateY(2deg) rotateX(1deg); }
+    50% { transform: translate(-50%, -50%) translateZ(50px) rotateY(0deg) rotateX(0deg); }
+    75% { transform: translate(-50%, -48%) translateZ(60px) rotateY(-2deg) rotateX(-1deg); }
+    100% { transform: translate(-50%, -50%) translateZ(50px) rotateY(0deg) rotateX(0deg); }
+}
+
+/* Floating Elements */
+.float-card {
+    position: absolute;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(15px);
+    padding: 15px 25px;
+    border-radius: 15px;
+    border: 1px solid rgba(255,255,255,0.2);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+    transform: translateZ(50px);
+    animation: floatCard 6s ease-in-out infinite;
+}
+.fc-1 { top: 10%; left: -20px; animation-delay: 0s; }
+.fc-2 { bottom: 15%; right: -20px; animation-delay: 2s; }
+@keyframes floatCard {
+    0%, 100% { transform: translateZ(50px) translateY(0); }
+    50% { transform: translateZ(50px) translateY(-20px); }
+}
+
+/* =========================
+   HERO SOCIAL ICONS (3D)
+========================= */
+.hero-socials {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 18px;
+    justify-items: center;
+    align-items: center;
+    margin: 35px auto 0;
+    max-width: 520px;
+    position: relative;
+    z-index: 5;
+}
+
+.hs {
+    width: 56px;
+    height: 56px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: #fff;
+    text-decoration: none;
+    transition: 0.4s;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+.hs:hover {
+    transform: translateY(-12px) rotateX(20deg) rotateY(-20deg) scale(1.15);
+    box-shadow: 0 25px 45px rgba(0,0,0,0.6), 0 0 25px currentColor;
+}
+
+/* Social Icon Colors */
+.hs.mail { background: linear-gradient(135deg,#D44638,#B23121); }
+.hs.whatsapp { background: linear-gradient(135deg,#25D366,#128C7E); }
+.hs.linkedin { background: linear-gradient(135deg,#0077B5,#004182); }
+.hs.instagram { background: linear-gradient(135deg,#833AB4,#FD1D1D,#F77737); }
+.hs.facebook { background: linear-gradient(135deg,#1877F2,#0F4AA1); }
+.hs.twitter { background: linear-gradient(135deg,#000,#444); }
+.hs.wef { background: linear-gradient(135deg,#00A3E0,#005F86); }
+.hs.linktree { background: linear-gradient(135deg,#43E660,#1FA337); }
+.hs.tiktok { background: linear-gradient(135deg, #010101, #FF0050, #00F2EA); }
+.hs.snapchat { background: linear-gradient(135deg, #FFFC00, #FFD000); }
+.hs.threads { background: linear-gradient(135deg, #000000, #444444); }
+.hs.ok { background: linear-gradient(135deg, #F47300, #FF9E2C); }
+
+/* --- 7. GENERAL SECTIONS (GLASS CARDS) --- */
+section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 120px 20px;
+    position: relative;
+}
+
+.section-title {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 80px;
+    position: relative;
+    z-index: 1;
+}
+.section-title::after {
+    content: '';
+    display: block;
+    width: 100px; height: 4px;
+    background: linear-gradient(90deg, #6a11cb, #2575fc);
+    margin: 20px auto 0;
+    border-radius: 2px;
+}
+
+/* 3D Glass Card */
+.glass-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--card-radius);
+    padding: 40px;
+    box-shadow: var(--glass-shadow);
+    transition: all 0.5s var(--transition);
+    position: relative;
+    overflow: hidden;
+    transform-style: preserve-3d;
+}
+
+/* Hover Effect for Cards */
+.glass-card:hover {
+    transform: translateY(-10px) rotateX(2deg) rotateY(2deg);
+    border-color: rgba(255,255,255,0.5);
+    box-shadow: 0 30px 60px rgba(106, 17, 203, 0.3), inset 0 0 20px rgba(255,255,255,0.1);
+}
+.glass-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: -100%;
+    width: 100%; height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: 0.5s;
+}
+.glass-card:hover::before { left: 100%; }
+
+/* --- 8. TIMELINE (Education/Life) --- */
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%; width: 2px; height: 100%;
+    background: linear-gradient(to bottom, #6a11cb, #2575fc, transparent);
+    transform: translateX(-50%);
+}
+.timeline-item {
+    margin-bottom: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: 0.8s;
+}
+.timeline-item.visible { opacity: 1; transform: translateY(0); }
+
+.timeline-content {
+    width: 45%;
+    background: rgba(255,255,255,0.07);
+    padding: 25px;
+    border-radius: 20px;
+    border: 1px solid rgba(255,255,255,0.1);
+    position: relative;
+    backdrop-filter: blur(10px);
+}
+.timeline-item:nth-child(odd) { justify-content: flex-start; }
+.timeline-item:nth-child(even) { justify-content: flex-end; }
+.timeline-content h4 { color: #00c6ff; margin-bottom: 10px; }
+.timeline-dot {
+    position: absolute;
+    width: 20px; height: 20px;
+    background: #fff;
+    border-radius: 50%;
+    left: 50%; top: 20px;
+    transform: translateX(-50%);
+    box-shadow: 0 0 15px #00c6ff;
+    z-index: 5;
+}
+
+/* --- 9. GRID LAYOUTS (Skills, Thematic) --- */
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.skill-tag {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+} 
+.skill-tag i {
+    font-size: 24px;
+    background: -webkit-linear-gradient(#eee, #333);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #00c6ff;
+}
+
+/* --- 10. 3D GALLERY --- */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+.gallery-item {
+    height: 300px;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    transition: 0.5s;
+}
+.gallery-item img {
+    width: 100%; height: 100%; object-fit: cover;
+    transition: 0.5s;
+}
+.gallery-item:hover { transform: scale(1.05) rotateZ(1deg); z-index: 10; box-shadow: 0 20px 50px rgba(0,198,255,0.4); }
+.gallery-item:hover img { transform: scale(1.1); }
+.gallery-overlay {
+    position: absolute;
+    bottom: 0; left: 0; width: 100%;
+    background: linear-gradient(transparent, #000);
+    padding: 20px;
+    opacity: 0;
+    transition: 0.3s;
+}
+.gallery-item:hover .gallery-overlay { opacity: 1; }
+
+/* --- 11. CONNECT / SOCIALS (3D ICONS) --- */
+.connect-box {
+    text-align: center;
+}
+.social-3d-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 40px;
+    perspective: 500px;
+}
+.social-btn {
+    width: 70px; height: 70px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 20px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 28px;
+    color: #fff;
+    text-decoration: none;
+    transition: 0.4s;
+    border: 1px solid rgba(255,255,255,0.2);
+    box-shadow: 0 10px 15px rgba(0,0,0,0.3), inset 0 0 10px rgba(255,255,255,0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+/* 3D Layer effect on Hover */
+.social-btn::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(135deg, var(--c1), var(--c2));
+    opacity: 0;
+    transition: 0.4s;
+    z-index: -1;
+}
+.social-btn:hover {
+    transform: rotateX(20deg) translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4), 0 0 20px var(--c1);
+    border-color: transparent;
+}
+.social-btn:hover::before { opacity: 1; }
+.social-btn i { transition: 0.4s; z-index: 2; }
+.social-btn:hover i { transform: scale(1.2) translateZ(20px); }
+
+/* --- 12. UTILS & BUTTONS --- */
+.theme-btn {
+    position: fixed;
+    top: 30px; right: 30px;
+    background: linear-gradient(135deg, #ff007a, #6a11cb);
+    border: none;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 2000;
+    box-shadow: 0 0 20px rgba(255,0,122,0.5);
+    transition: 0.3s;
+}
+.theme-btn:hover { transform: scale(1.1); }
+
+/* --- 13. RESPONSIVE DESIGN --- */
+@media (max-width: 768px) {
     .hero-content {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 50px;
-        max-width: 1300px;
-        align-items: center;
-        position: relative;
-        z-index: 2;
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 30px;
     }
-
-    .hero-text {
-        transform-style: preserve-3d;
-        z-index: 2;
-    }
-
-    .hero-badge {
-        display: inline-block;
-        padding: 8px 20px;
-        background: linear-gradient(90deg, #ff007a, #6a11cb);
-        border-radius: 30px;
-        font-weight: 700;
-        font-size: 14px;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        margin-bottom: 20px;
-        box-shadow: 0 0 20px rgba(255, 0, 122, 0.4);
-    }
-
-    .hero h1 {
-        font-size: clamp(3rem, 6vw, 5rem);
-        line-height: 1.1;
-        background: linear-gradient(135deg, #fff 0%, #a5f3fc 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        margin-bottom: 20px;
-        filter: drop-shadow(0 0 10px rgba(255,255,255,0.3));
-    }
-
-    .hero p {
-        font-size: 1.2rem;
-        line-height: 1.8;
-        color: var(--text-muted);
-        margin-bottom: 30px;
-        border-left: 4px solid #2575fc;
-        padding-left: 20px;
-    }
-
-    /* 3D Image Container */
+    
     .hero-img-container {
-        position: relative;
-        width: 100%;
-        height: 600px;
-        transform-style: preserve-3d;
+        height: 400px;
+        justify-content: center;
+        padding-right: 0;
+        margin-top: 30px;
     }
-
+    
     .hero-img-main {
-        position: absolute;
-        width: 280px;   /* desktop size */
-        height: 380px;
-        top: 50%;
-        left: 55%;      /* shifted slightly right */
-        transform: translate(-50%, -50%) translateZ(50px);
-        background: url('portrait.jpg.jpeg') center/cover no-repeat;
-        border-radius: 20px;
-        box-shadow: 
-            0 30px 80px rgba(0,0,0,0.6),    /* Outer depth shadow */
-            inset 0 0 25px rgba(0,0,0,0.25); /* Dark edges inside */
-        border: 1px solid rgba(255,255,255,0.1);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        z-index: 5;
-        transform-style: preserve-3d;
-        animation: floatPortrait 6s ease-in-out infinite;
+        width: 200px;
+        height: 270px;
+        left: 50%;
+        top: 55%;
     }
-
-    .hero-img-bg {
-        position: absolute;
-        inset: 0;
-        background: url('hero-bg.jpg.jpeg') center/cover no-repeat;
-        border-radius: 40px;
-        opacity: 0.4;
-        transform: translateZ(-50px) scale(0.9);
-        filter: blur(10px);
-    }
-
-    /* Floating animation */
-    @keyframes floatPortrait {
-        0%   { transform: translate(-50%, -50%) translateZ(50px) rotateY(0deg) rotateX(0deg); }
-        25%  { transform: translate(-50%, -52%) translateZ(60px) rotateY(2deg) rotateX(1deg); }
-        50%  { transform: translate(-50%, -50%) translateZ(50px) rotateY(0deg) rotateX(0deg); }
-        75%  { transform: translate(-50%, -48%) translateZ(60px) rotateY(-2deg) rotateX(-1deg); }
-        100% { transform: translate(-50%, -50%) translateZ(50px) rotateY(0deg) rotateX(0deg); }
-    }
-
-    /* Floating Elements */
-    .float-card {
-        position: absolute;
-        background: rgba(255,255,255,0.1);
-        backdrop-filter: blur(15px);
-        padding: 15px 25px;
-        border-radius: 15px;
-        border: 1px solid rgba(255,255,255,0.2);
-        box-shadow: 0 15px 35px rgba(0,0,0,0.2);
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        font-weight: bold;
-        transform: translateZ(50px);
-        animation: floatCard 6s ease-in-out infinite;
-    }
-    .fc-1 { top: 10%; left: -20px; animation-delay: 0s; }
-    .fc-2 { bottom: 15%; right: -20px; animation-delay: 2s; }
-    @keyframes floatCard {
-        0%, 100% { transform: translateZ(50px) translateY(0); }
-        50% { transform: translateZ(50px) translateY(-20px); }
-    }
-
-    /* --- HERO 3D BACKGROUND --- */
-    .hero-3d-bg {
-        position: absolute;
-        inset: 0;
-        z-index: 0;
-        perspective: 1200px;
-    }
-
-    .hero-3d-layer {
-        position: absolute;
-        inset: 0;
-        background:
-            linear-gradient(
-                rgba(0,0,0,0.22),
-                rgba(0,0,0,0.38)
-            ),
-            url('hero-bg.jpg.jpeg') center/cover no-repeat;
-        /* STRONGER 3D DEPTH */
-        transform: translateZ(-160px) scale(1.18);
-        /* VERY SOFT BLUR */
-        filter:
-            blur(1.5px)
-            brightness(1.1)
-            contrast(1.2)
-            saturate(1.25);
-        transition: transform 0.15s ease-out;
-    }
-
-    /* --- SOCIAL ICONS (3D) --- */
+    
     .hero-socials {
-        display: grid;
-        grid-template-columns: repeat(6, 1fr);
-        gap: 18px;
-        justify-items: center;
-        align-items: center;
-        margin: 35px auto 0;
-        max-width: 520px;
-        position: relative;
-        z-index: 5;
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 260px;
+        gap: 16px;
     }
-
-    .hero-socials .hs {
+    
+    .hs {
         width: 55px;
         height: 55px;
-        border-radius: 16px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
         font-size: 22px;
-        color: #fff;
-        text-decoration: none;
-        backdrop-filter: blur(10px);
-        box-shadow:
-            0 12px 25px rgba(0,0,0,0.35),
-            inset 0 0 15px rgba(255,255,255,0.15);
-        transform-style: preserve-3d;
-        transition: all 0.35s ease;
     }
-
-    .hero-socials .hs:hover {
-        transform: translateY(-12px) rotateX(20deg) rotateY(-20deg) scale(1.15);
-        box-shadow:
-            0 25px 45px rgba(0,0,0,0.6),
-            0 0 25px currentColor;
-    }
-
-    .hs.mail { background: linear-gradient(135deg,#D44638,#B23121); }
-    .hs.whatsapp { background: linear-gradient(135deg,#25D366,#128C7E); }
-    .hs.linkedin { background: linear-gradient(135deg,#0077B5,#004182); }
-    .hs.instagram { background: linear-gradient(135deg,#833AB4,#FD1D1D,#F77737); }
-    .hs.facebook { background: linear-gradient(135deg,#1877F2,#0F4AA1); }
-    .hs.twitter { background: linear-gradient(135deg,#000,#444); }
-    .hs.wef { background: linear-gradient(135deg,#00A3E0,#005F86); }
-    .hs.linktree { background: linear-gradient(135deg,#43E660,#1FA337); }
-    .hs.tiktok { background: linear-gradient(135deg, #010101, #FF0050, #00F2EA); }
-    .hs.snapchat { background: linear-gradient(135deg, #FFFC00, #FFD000); }
-    .hs.threads { background: linear-gradient(135deg, #000000, #444444); }
-    .hs.ok { background: linear-gradient(135deg, #F47300, #FF9E2C); }
-
-    /* --- 7. GENERAL SECTIONS (GLASS CARDS) --- */
-    section {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 120px 20px;
-        position: relative;
-    }
-
-    .section-title {
-        font-size: 3rem;
-        text-align: center;
-        margin-bottom: 80px;
-        position: relative;
-        z-index: 1;
-    }
-    .section-title::after {
-        content: '';
-        display: block;
-        width: 100px; height: 4px;
-        background: linear-gradient(90deg, #6a11cb, #2575fc);
-        margin: 20px auto 0;
-        border-radius: 2px;
-    }
-
-    /* 3D Glass Card */
-    .glass-card {
-        background: var(--glass-bg);
-        backdrop-filter: blur(16px) saturate(180%);
-        -webkit-backdrop-filter: blur(16px) saturate(180%);
-        border: 1px solid var(--glass-border);
-        border-radius: var(--card-radius);
-        padding: 40px;
-        box-shadow: var(--glass-shadow);
-        transition: all 0.5s var(--transition);
-        position: relative;
-        overflow: hidden;
-        transform-style: preserve-3d;
-    }
-
-    .glass-card:hover {
-        transform: translateY(-10px) rotateX(2deg) rotateY(2deg);
-        border-color: rgba(255,255,255,0.5);
-        box-shadow: 0 30px 60px rgba(106, 17, 203, 0.3), inset 0 0 20px rgba(255,255,255,0.1);
-    }
-    .glass-card::before {
-        content: '';
-        position: absolute;
-        top: 0; left: -100%;
-        width: 100%; height: 100%;
-        background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-        transition: 0.5s;
-    }
-    .glass-card:hover::before { left: 100%; }
-
-    /* --- 8. TIMELINE (Education/Life) --- */
-    .timeline {
-        position: relative;
-        max-width: 800px;
-        margin: 0 auto;
-    }
+    
     .timeline::before {
-        content: '';
-        position: absolute;
-        left: 50%; width: 2px; height: 100%;
-        background: linear-gradient(to bottom, #6a11cb, #2575fc, transparent);
-        transform: translateX(-50%);
+        left: 0;
     }
+    
     .timeline-item {
-        margin-bottom: 50px;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        opacity: 0; /* JS Fade in */
-        transform: translateY(50px);
-        transition: 0.8s;
+        justify-content: flex-start !important;
+        padding-left: 30px;
     }
-    .timeline-item.visible { opacity: 1; transform: translateY(0); }
-
+    
     .timeline-content {
-        width: 45%;
-        background: rgba(255,255,255,0.07);
-        padding: 25px;
-        border-radius: 20px;
-        border: 1px solid rgba(255,255,255,0.1);
-        position: relative;
-        backdrop-filter: blur(10px);
+        width: 100%;
     }
-    .timeline-item:nth-child(odd) { justify-content: flex-start; }
-    .timeline-item:nth-child(even) { justify-content: flex-end; }
-    .timeline-content h4 { color: #00c6ff; margin-bottom: 10px; }
+    
     .timeline-dot {
-        position: absolute;
-        width: 20px; height: 20px;
-        background: #fff;
-        border-radius: 50%;
-        left: 50%; top: 20px;
-        transform: translateX(-50%);
-        box-shadow: 0 0 15px #00c6ff;
-        z-index: 5;
+        left: 0;
     }
-
-    /* --- 9. GRID LAYOUTS (Skills, Thematic) --- */
-    .grid-3 {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 30px;
-    }
-
-    .skill-tag {
-        display: flex;
-        align-items: center;
+    
+    nav {
+        padding: 10px 20px;
+        width: 90%;
         gap: 15px;
-        margin-bottom: 15px;
-    } 
-    .skill-tag i {
-        font-size: 24px;
-        background: -webkit-linear-gradient(#eee, #333);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        color: #00c6ff; 
     }
-
-    /* --- 10. 3D GALLERY --- */
-    .gallery-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-        gap: 20px;
-        padding: 20px;
+    
+    nav a {
+        font-size: 16px;
     }
-    .gallery-item {
-        height: 300px;
-        border-radius: 20px;
-        overflow: hidden;
-        position: relative;
-        cursor: pointer;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-        transition: 0.5s;
+    
+    .section-title {
+        font-size: 2.5rem;
     }
-    .gallery-item img {
-        width: 100%; height: 100%; object-fit: cover;
-        transition: 0.5s;
-    }
-    .gallery-item:hover { transform: scale(1.05) rotateZ(1deg); z-index: 10; box-shadow: 0 20px 50px rgba(0,198,255,0.4); }
-    .gallery-item:hover img { transform: scale(1.1); }
-    .gallery-overlay {
-        position: absolute;
-        bottom: 0; left: 0; width: 100%;
-        background: linear-gradient(transparent, #000);
-        padding: 20px;
-        opacity: 0;
-        transition: 0.3s;
-    }
-    .gallery-item:hover .gallery-overlay { opacity: 1; }
-
-    /* --- 11. CONNECT / SOCIALS (3D ICONS) --- */
-    .connect-box {
-        text-align: center;
-    }
-    .social-3d-container {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 30px;
-        margin-top: 40px;
-        perspective: 500px;
-    }
-    .social-btn {
-        width: 70px; height: 70px;
-        background: rgba(255,255,255,0.1);
-        border-radius: 20px;
-        display: flex; align-items: center; justify-content: center;
-        font-size: 28px;
-        color: #fff;
-        text-decoration: none;
-        transition: 0.4s;
-        border: 1px solid rgba(255,255,255,0.2);
-        box-shadow: 
-            0 10px 15px rgba(0,0,0,0.3),
-            inset 0 0 10px rgba(255,255,255,0.1);
-        position: relative;
-        overflow: hidden;
-    }
-
-    /* 3D Layer effect on Hover */
-    .social-btn::before {
-        content: '';
-        position: absolute;
-        top: 0; left: 0; width: 100%; height: 100%;
-        background: linear-gradient(135deg, var(--c1), var(--c2));
-        opacity: 0;
-        transition: 0.4s;
-        z-index: -1;
-    }
-    .social-btn:hover {
-        transform: rotateX(20deg) translateY(-10px);
-        box-shadow: 
-            0 20px 40px rgba(0,0,0,0.4),
-            0 0 20px var(--c1);
-        border-color: transparent;
-    }
-    .social-btn:hover::before { opacity: 1; }
-    .social-btn i { transition: 0.4s; z-index: 2; }
-    .social-btn:hover i { transform: scale(1.2) translateZ(20px); }
-
-    /* --- 12. UTILS & BUTTONS --- */
-    .theme-btn {
-        position: fixed;
-        top: 30px; right: 30px;
-        background: linear-gradient(135deg, #ff007a, #6a11cb);
-        border: none;
-        color: white;
-        padding: 15px 25px;
-        border-radius: 30px;
-        font-weight: bold;
-        cursor: pointer;
-        z-index: 2000;
-        box-shadow: 0 0 20px rgba(255,0,122,0.5);
-        transition: 0.3s;
-    }
-    .theme-btn:hover { transform: scale(1.1); }
-
-    /* RESPONSIVE MOBILE VIEW */
-    @media (max-width: 768px) {
-        .hero-img-container {
-            height: 400px;
-            justify-content: center;
-            padding-right: 0;
-            margin-top: 30px;
-        }
-
-        .hero-img-main {
-            width: 200px;
-            height: 270px;
-            left: 50%;
-            top: 55%;
-        }
-
-        .hero-socials {
-            grid-template-columns: repeat(3, 1fr);
-            max-width: 260px;
-            gap: 16px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
-        .hero-content { grid-template-columns: 1fr; text-align: center; }
-        .timeline::before { left: 0; }
-        .timeline-item { justify-content: flex-start !important; padding-left: 30px; }
-        .timeline-content { width: 100%; }
-        .timeline-dot { left: 0; }
-        nav { padding: 10px 20px; width: 90%; gap: 15px; }
-        nav a { font-size: 16px; }
-    }
+}
 </style>
 </head>
+
 <body>
 
 <div class="fluid-bg">
@@ -612,7 +629,7 @@
     <div class="hero-3d-bg">
         <div class="hero-3d-layer"></div>
     </div>
-
+    
     <div class="hero-content">
         <div class="hero-text">
             <span class="hero-badge">Advocate & Changemaker</span>
@@ -630,21 +647,46 @@
             <div class="hero-img-bg"></div>
             <div class="hero-img-main"></div>
         </div>
-
-        <div class="hero-socials">
-            <a href="mailto:advmumtaz222@gmail.com" target="_blank" class="hs mail"><i class="fas fa-envelope"></i></a>
-            <a href="https://wa.me/923332568792" target="_blank" class="hs whatsapp"><i class="fab fa-whatsapp"></i></a>
-            <a href="https://www.linkedin.com/in/adv-mumtaz-alam-bazai-163a9a324" target="_blank" class="hs linkedin"><i class="fab fa-linkedin-in"></i></a>
-            <a href="https://www.instagram.com/mumtaz_alam" target="_blank" class="hs instagram"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.facebook.com/mumtaz.alam.18488" target="_blank" class="hs facebook"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://x.com/mumtazalam333" target="_blank" class="hs twitter"><i class="fab fa-x-twitter"></i></a>
-            <a href="https://my.weforum.org/network/people/001TG000009vSDhYAM/adv-mumtaz-alam" target="_blank" class="hs wef"><i class="fas fa-globe"></i></a>
-            <a href="https://linktr.ee/mumtazalam" target="_blank" class="hs linktree"><i class="fas fa-link"></i></a>
-            <a href="https://www.tiktok.com/@mumtaz_alam" target="_blank" class="hs tiktok"><i class="fab fa-tiktok"></i></a>
-            <a href="https://www.snapchat.com/add/mumtazalam222" target="_blank" class="hs snapchat"><i class="fab fa-snapchat-ghost"></i></a>
-            <a href="https://www.threads.com/@mumtaz_alam" target="_blank" class="hs threads"><i class="fas fa-comment-dots"></i></a>
-            <a href="https://ok.ru/profile/910193583170" target="_blank" class="hs ok"><i class="fab fa-odnoklassniki"></i></a>
-        </div>
+    </div>
+    
+    <!-- HERO SOCIAL LINKS -->
+    <div class="hero-socials">
+        <a href="mailto:advmumtaz222@gmail.com" target="_blank" class="hs mail">
+            <i class="fas fa-envelope"></i>
+        </a>
+        <a href="https://wa.me/923332568792" target="_blank" class="hs whatsapp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/adv-mumtaz-alam-bazai-163a9a324" target="_blank" class="hs linkedin">
+            <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="https://www.instagram.com/mumtaz_alam" target="_blank" class="hs instagram">
+            <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.facebook.com/mumtaz.alam.18488" target="_blank" class="hs facebook">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://x.com/mumtazalam333" target="_blank" class="hs twitter">
+            <i class="fab fa-x-twitter"></i>
+        </a>
+        <a href="https://my.weforum.org/network/people/001TG000009vSDhYAM/adv-mumtaz-alam" target="_blank" class="hs wef">
+            <i class="fas fa-globe"></i>
+        </a>
+        <a href="https://linktr.ee/mumtazalam" target="_blank" class="hs linktree">
+            <i class="fas fa-link"></i>
+        </a>
+        <a href="https://www.tiktok.com/@mumtaz_alam" target="_blank" class="hs tiktok">
+            <i class="fab fa-tiktok"></i>
+        </a>
+        <a href="https://www.snapchat.com/add/mumtazalam222" target="_blank" class="hs snapchat">
+            <i class="fab fa-snapchat-ghost"></i>
+        </a>
+        <a href="https://www.threads.com/@mumtaz_alam" target="_blank" class="hs threads">
+            <i class="fas fa-comment-dots"></i>
+        </a>
+        <a href="https://ok.ru/profile/910193583170" target="_blank" class="hs ok">
+            <i class="fab fa-odnoklassniki"></i>
+        </a>
     </div>
 </section>
 
@@ -777,7 +819,7 @@
 </section>
 
 <footer style="text-align: center; padding: 20px; border-top: 1px solid rgba(255,255,255,0.1); color: #888; font-size: 14px;">
-    ©️ 2025 Mumtaz Alam Bazai. Advocate & Human Rights Lawyer.
+    © 2025 Mumtaz Alam Bazai. Advocate & Human Rights Lawyer.
 </footer>
 
 <script>
@@ -797,40 +839,28 @@
     }
     setInterval(createBubble, 1000);
 
-    // 2. 3D TILT EFFECT FOR HERO IMAGE
+    // 2. 3D TILT EFFECT FOR HERO IMAGE AND BACKGROUND
     const heroSection = document.getElementById('hero');
+    const heroImg = document.querySelector('.hero-img-main');
     const heroBg = document.querySelector('.hero-3d-layer');
-    const heroImg = document.getElementById('heroTilt').querySelector('.hero-img-main');
 
-    // Consolidated Mouse Move Event for Performance
+    // Hero background parallax
     heroSection.addEventListener('mousemove', (e) => {
         const x = (e.clientX / window.innerWidth - 0.5) * 35;
         const y = (e.clientY / window.innerHeight - 0.5) * 35;
         
-        // Background Effect
-        heroBg.style.transform = `
-            translateZ(-180px)
-            rotateY(${x}deg)
-            rotateX(${-y}deg)
-            scale(1.22)
-        `;
-
-        // Image Tilt Effect
+        // Portrait tilt
         const xAxis = (window.innerWidth / 2 - e.pageX) / 25;
         const yAxis = (window.innerHeight / 2 - e.pageY) / 25;
-        heroImg.style.transform = translate(-50%, -50%) translateZ(50px) rotateY(${xAxis}deg) rotateX(${yAxis}deg);
+        heroImg.style.transform = `translate(-50%, -50%) translateZ(50px) rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
+        
+        // Background parallax
+        heroBg.style.transform = `translateZ(-180px) rotateY(${x}deg) rotateX(${-y}deg) scale(1.22)`;
     });
 
     heroSection.addEventListener('mouseleave', () => {
-        // Reset Background
-        heroBg.style.transform = `
-            translateZ(-160px)
-            rotateY(0deg)
-            rotateX(0deg)
-            scale(1.18)
-        `;
-        // Reset Image
-        heroImg.style.transform = translate(-50%, -50%) translateZ(50px) rotateY(0deg) rotateX(0deg);
+        heroImg.style.transform = `translate(-50%, -50%) translateZ(50px) rotateY(0deg) rotateX(0deg)`;
+        heroBg.style.transform = `translateZ(-160px) rotateY(0deg) rotateX(0deg) scale(1.18)`;
     });
 
     // 3. SCROLL REVEAL ANIMATIONS
@@ -855,16 +885,17 @@
     function randomizeTheme() {
         const hue1 = Math.floor(Math.random() * 360);
         const hue2 = Math.floor(Math.random() * 360);
+        const root = document.documentElement;
         
         // Update Orb colors
-        document.querySelector('.orb-1').style.background = hsl(${hue1}, 70%, 50%);
-        document.querySelector('.orb-2').style.background = hsl(${hue2}, 70%, 50%);
+        document.querySelector('.orb-1').style.background = `hsl(${hue1}, 70%, 50%)`;
+        document.querySelector('.orb-2').style.background = `hsl(${hue2}, 70%, 50%)`;
         
         // Update Text Gradients
-        document.querySelector('.hero h1').style.backgroundImage = linear-gradient(135deg, #fff 0%, hsl(${hue2}, 100%, 70%) 100%);
+        document.querySelector('.hero h1').style.backgroundImage = `linear-gradient(135deg, #fff 0%, hsl(${hue2}, 100%, 70%) 100%)`;
         
         // Update Button Gradients
-        document.querySelector('.hero-badge').style.background = linear-gradient(90deg, hsl(${hue1}, 100%, 50%), hsl(${hue2}, 100%, 50%));
+        document.querySelector('.hero-badge').style.background = `linear-gradient(90deg, hsl(${hue1}, 100%, 50%), hsl(${hue2}, 100%, 50%))`;
     }
 </script>
 
