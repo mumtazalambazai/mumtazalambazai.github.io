@@ -566,14 +566,17 @@ section {
 ========================= */
 
 .hero-socials {
-    position: absolute;
-    bottom: -30px;
-    left: 50%;
-    transform: translateX(-50%) translateZ(80px);
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
     gap: 18px;
+    justify-items: center;
+    align-items: center;
+    margin: 35px auto 0;
+    max-width: 520px;
+    position: relative; /* NOT absolute */
     z-index: 5;
 }
+
 
 .hero-socials .hs {
     width: 55px;
@@ -624,6 +627,12 @@ section {
     max-width: 260px;
     gap: 16px;
 }
+    .hero-socials {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 260px;
+    gap: 16px;
+}
+
 
 /* =========================
    PORTRAIT FLOATING 3D EFFECT
