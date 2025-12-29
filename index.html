@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<style>
 
 /* YOUR CUSTOM CSS GOES HERE */
 <style>
@@ -948,11 +947,11 @@ heroSection.addEventListener('mouseleave', () => {
     heroSection.addEventListener('mousemove', (e) => {
         const xAxis = (window.innerWidth / 2 - e.pageX) / 25;
         const yAxis = (window.innerHeight / 2 - e.pageY) / 25;
-        heroImg.style.transform = rotateY(${xAxis}deg) rotateX(${yAxis}deg) translateZ(50px);
+        heroImg.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg) translateZ(50px)`;
     });
 
     heroSection.addEventListener('mouseleave', () => {
-        heroImg.style.transform = rotateY(0deg) rotateX(0deg) translateZ(20px);
+    heroImg.style.transform = `rotateY(0deg) rotateX(0deg) translateZ(20px)`;
     });
 
     // 3. SCROLL REVEAL ANIMATIONS
