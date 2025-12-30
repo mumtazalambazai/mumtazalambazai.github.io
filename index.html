@@ -455,25 +455,32 @@
                 0 0 0px rgba(0);
         }
 
-        .hero-img-main {
-            position: absolute;
-            width: 236px;
-            height: 316px;
-            top: 20%;
-            left: 95%;
-            transform: translate(-10%, -90%) translateZ(100px);
-            background: url('portrait.jpg.jpeg') center/cover no-repeat;
-            border-radius: 25px;
-            box-shadow: 
-                0 0px 00px rgba(0, 0, 0, 0.8),
-                inset 0 0 0px rgba(0, 0, 0, 0.4),
-                0 0 00px rgba(106, 17, 203, 0.5);
-            border: 2px solid rgba(255, 255, 255, 0.15);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            z-index: 5;
-            animation: floatPortrait 8s ease-in-out infinite;
-            overflow: hidden;
-        }
+.hero-img-main {
+    position: absolute;
+    width: 220px;   
+    height: 300px;
+    top: 20%;       
+    left: 90%;      
+    right: auto;
+    transform: translateZ(100px) translateX(-5%); 
+    background: url('portrait.jpg.jpeg') center/cover no-repeat;
+    border-radius: 25px;
+    border: 2px solid rgba(255, 255, 255, 0.15);
+    transition: transform 0.3s ease;
+    z-index: 5;
+    animation: floatPortrait 8s ease-in-out infinite;
+    overflow: hidden;
+    /* ... other properties ... */
+    box-shadow: 
+        0 15px 35px rgba(0, 0, 0, 0.4),
+        0 0 25px rgba(106, 17, 203, 0.3);
+}
+        .hero-img-main:hover {
+    transform: translateZ(120px) translateX(-5%) scale(1.05);
+    box-shadow: 
+        0 25px 45px rgba(0, 0, 0, 0.5),
+        0 0 35px rgba(106, 17, 203, 0.4);
+}
 
         .hero-img-main::before {
             content: '';
@@ -498,18 +505,18 @@
         }
 
         @keyframes floatPortrait {
-            0%, 100% { 
-                transform: translate(-50%, -80%) translateZ(100px) rotateY(0deg) rotateX(0deg); 
-            }
-            25% { 
-                transform: translate(-50%, -82%) translateZ(120px) rotateY(3deg) rotateX(2deg); 
-            }
-            50% { 
-                transform: translate(-50%, -80%) translateZ(100px) rotateY(0deg) rotateX(0deg); 
-            }
-            75% { 
-                transform: translate(-50%, -78%) translateZ(120px) rotateY(-3deg) rotateX(-2deg); 
-            }
+    0%, 100% { 
+        transform: translateZ(100px) translateX(-5%) rotateY(0deg) rotateX(0deg) translateY(0); 
+    }
+    25% { 
+        transform: translateZ(120px) translateX(-5%) rotateY(3deg) rotateX(2deg) translateY(-10px); 
+    }
+    50% { 
+        transform: translateZ(100px) translateX(-5%) rotateY(0deg) rotateX(0deg) translateY(0); 
+    }
+    75% { 
+        transform: translateZ(120px) translateX(-5%) rotateY(-3deg) rotateX(-2deg) translateY(10px); 
+    }
         }
 
         .float-card {
@@ -532,17 +539,18 @@
             z-index: 6;
         }
 
-        .fc-1 {
-            top: 15%;
-            left: -30px;
-            animation-delay: 0s;
-        }
+.fc-1 {
+    top: 15%;       /* Slightly above portrait (20% - 5%) */
+    left: 85%;      /* Left of portrait (90% - 5%) */
+    animation-delay: 0s;
+}
 
-        .fc-2 {
-            bottom: 20%;
-            right: -30px;
-            animation-delay: 2s;
-        }
+.fc-2 {
+    top: 40%;       /* Below portrait (20% + portrait height) */
+    left: 95%;      /* Right of portrait (90% + 5%) */
+    right: auto;
+    animation-delay: 2s;
+}
 
         @keyframes floatCard {
             0%, 100% { 
