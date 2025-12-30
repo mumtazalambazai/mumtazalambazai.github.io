@@ -457,19 +457,20 @@
 
 .hero-img-main {
     position: absolute;
-    width: 200px;   
+    width: 200px;
     height: 280px;
-    top: 15%;       
-    left: 98%;      
-    right: auto;
-    transform: translateZ(200px) translateX(-50%); 
+    top: 15%;     /* 15% from top (upside) */
+    right: 5%;    /* 3% from right (right side) */
+    left: auto;
+    transform: translateZ(100px);
     background: url('portrait.jpg.jpeg') center/cover no-repeat;
     border-radius: 25px;
     border: 2px solid rgba(255, 255, 255, 0.15);
     transition: transform 0.3s ease;
-    z-index: 5;
+    z-index: 50;  /* Higher z-index to be on top */
     animation: floatPortrait 8s ease-in-out infinite;
-    overflow: hidden;
+    overflow: visible;  /* Change from hidden to visible */
+}
     /* ... other properties ... */
     box-shadow: 
         0 15px 35px rgba(0, 0, 0, 0.4),
@@ -504,18 +505,18 @@
             30% { transform: translateX(100%); }
         }
 
-        @keyframes floatPortrait {
+       @keyframes floatPortrait {
     0%, 100% { 
-        transform: translateZ(100px) translateX(-5%) rotateY(0deg) rotateX(0deg) translateY(0); 
+        transform: translateZ(100px) rotateY(0deg) rotateX(0deg) translateY(0); 
     }
     25% { 
-        transform: translateZ(120px) translateX(-5%) rotateY(3deg) rotateX(2deg) translateY(-10px); 
+        transform: translateZ(120px) rotateY(3deg) rotateX(2deg) translateY(-10px); 
     }
     50% { 
-        transform: translateZ(100px) translateX(-5%) rotateY(0deg) rotateX(0deg) translateY(0); 
+        transform: translateZ(100px) rotateY(0deg) rotateX(0deg) translateY(0); 
     }
     75% { 
-        transform: translateZ(120px) translateX(-5%) rotateY(-3deg) rotateX(-2deg) translateY(10px); 
+        transform: translateZ(120px) rotateY(-3deg) rotateX(-2deg) translateY(10px); 
     }
         }
 
@@ -540,17 +541,19 @@
         }
 
 .fc-1 {
-    top: 15%;       /* Slightly above portrait (20% - 5%) */
-    left: 85%;      /* Left of portrait (90% - 5%) */
+    top: 10%;      
+    right: 8%;    
+    left: auto;    
     animation-delay: 0s;
 }
 
 .fc-2 {
-    top: 40%;       /* Below portrait (20% + portrait height) */
-    left: 95%;      /* Right of portrait (90% + 5%) */
-    right: auto;
+    top: 30%;     
+    right: -2%;     
+    left: auto;    
     animation-delay: 2s;
 }
+
 
         @keyframes floatCard {
             0%, 100% { 
