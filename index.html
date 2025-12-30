@@ -7,29 +7,28 @@
     <title>Mumtaz Alam Bazai | The Legal Visionary</title>
     <meta name="description" content="Advocate High Court, Global Shaper, and Human Rights Activist.">
     
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400&family=Inter:wght@300;400;500;600;800&display=swap" rel="stylesheet">
-    
-    <!-- Font Awesome -->
+    <!-- FONTS & ICONS -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
     <style>
-        /* ============================================
-           CORE VARIABLES & RESET
-        ============================================ */
+        /* =========================
+           CORE RESET & VARIABLES
+        ========================= */
         :root {
             --primary-hue: 260;
             --secondary-hue: 190;
+            --accent-hue: 330;
             --glass-bg: rgba(255, 255, 255, 0.08);
             --glass-border: rgba(255, 255, 255, 0.25);
-            --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
+            --glass-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
             --text-main: #ffffff;
             --text-muted: rgba(255, 255, 255, 0.85);
-            --neon-glow: 0 0 25px rgba(138, 43, 226, 0.7);
-            --card-radius: 28px;
-            --transition: cubic-bezier(0.4, 0, 0.2, 1);
+            --neon-glow: 0 0 40px rgba(138, 43, 226, 0.7);
+            --card-radius: 30px;
+            --transition: cubic-bezier(0.23, 1, 0.32, 1);
             --gradient-1: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
-            --gradient-2: linear-gradient(135deg, #ff007a 0%, #ff8800 100%);
+            --gradient-2: linear-gradient(135deg, #ff007a 0%, #ff6b9d 100%);
             --gradient-3: linear-gradient(135deg, #00c6ff 0%, #0072ff 100%);
         }
 
@@ -46,17 +45,18 @@
 
         body {
             font-family: 'Inter', sans-serif;
-            background: #050510;
+            background-color: #050510;
             color: var(--text-main);
             overflow-x: hidden;
             perspective: 1000px;
             min-height: 100vh;
+            position: relative;
         }
 
-        /* ============================================
-           DYNAMIC COSMIC BACKGROUND
-        ============================================ */
-        .cosmic-bg {
+        /* =========================
+           DYNAMIC NEON BACKGROUND
+        ========================= */
+        .neon-bg {
             position: fixed;
             top: 0;
             left: 0;
@@ -64,62 +64,33 @@
             height: 100%;
             z-index: -3;
             background: 
-                radial-gradient(circle at 20% 50%, rgba(106, 17, 203, 0.15) 0%, transparent 50%),
-                radial-gradient(circle at 80% 20%, rgba(37, 117, 252, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 20% 30%, rgba(106, 17, 203, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(37, 117, 252, 0.1) 0%, transparent 50%),
                 radial-gradient(circle at 40% 80%, rgba(255, 0, 122, 0.1) 0%, transparent 50%),
-                linear-gradient(135deg, #0a0a1a 0%, #050510 100%);
+                #050510;
         }
 
-        /* Animated Nebula Orbs */
-        .nebula-orb {
+        .neon-grid {
             position: fixed;
-            border-radius: 50%;
-            filter: blur(60px);
-            opacity: 0.6;
-            animation: nebulaFloat 30s infinite alternate ease-in-out;
+            top: 0;
+            left: 0;
+            width: 200%;
+            height: 200%;
             z-index: -2;
+            background-image: 
+                linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+            background-size: 60px 60px;
+            animation: gridMove 40s linear infinite;
+            opacity: 0.3;
         }
 
-        .nebula-1 {
-            width: 70vw;
-            height: 70vw;
-            background: radial-gradient(circle at 30% 30%, #6a11cb, transparent 70%);
-            top: -20%;
-            left: -20%;
-            animation-duration: 40s;
-            animation-delay: 0s;
+        @keyframes gridMove {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(-50px, -50px); }
         }
 
-        .nebula-2 {
-            width: 60vw;
-            height: 60vw;
-            background: radial-gradient(circle at 70% 70%, #2575fc, transparent 70%);
-            bottom: -15%;
-            right: -15%;
-            animation-duration: 35s;
-            animation-delay: 5s;
-        }
-
-        .nebula-3 {
-            width: 40vw;
-            height: 40vw;
-            background: radial-gradient(circle at 50% 50%, #ff007a, transparent 70%);
-            top: 60%;
-            left: 20%;
-            animation-duration: 25s;
-            animation-delay: 10s;
-        }
-
-        @keyframes nebulaFloat {
-            0% { transform: translate(0, 0) scale(1) rotate(0deg); }
-            25% { transform: translate(30px, -30px) scale(1.05) rotate(90deg); }
-            50% { transform: translate(-20px, 20px) scale(1.1) rotate(180deg); }
-            75% { transform: translate(20px, 30px) scale(1.05) rotate(270deg); }
-            100% { transform: translate(-30px, -20px) scale(1) rotate(360deg); }
-        }
-
-        /* Stardust Particles */
-        .stardust-container {
+        .floating-particles {
             position: fixed;
             width: 100%;
             height: 100%;
@@ -129,44 +100,33 @@
 
         .particle {
             position: absolute;
-            background: rgba(255, 255, 255, 0.8);
+            background: var(--gradient-1);
             border-radius: 50%;
-            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
-            animation: particleFloat 15s infinite linear;
+            filter: blur(10px);
+            opacity: 0.6;
+            animation: particleFloat 20s infinite linear;
         }
 
         @keyframes particleFloat {
-            0% {
-                transform: translateY(100vh) translateX(0) rotate(0deg);
-                opacity: 0;
-            }
-            10% {
-                opacity: 1;
-            }
-            90% {
-                opacity: 1;
-            }
-            100% {
-                transform: translateY(-100px) translateX(100px) rotate(360deg);
-                opacity: 0;
-            }
+            0% { transform: translateY(100vh) rotate(0deg); }
+            100% { transform: translateY(-100vh) rotate(360deg); }
         }
 
-        /* ============================================
+        /* =========================
            CUSTOM SCROLLBAR
-        ============================================ */
+        ========================= */
         ::-webkit-scrollbar {
             width: 12px;
         }
 
         ::-webkit-scrollbar-track {
-            background: rgba(10, 10, 20, 0.5);
-            border-radius: 10px;
+            background: rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(10px);
         }
 
         ::-webkit-scrollbar-thumb {
             background: var(--gradient-1);
-            border-radius: 10px;
+            border-radius: 6px;
             border: 2px solid rgba(255, 255, 255, 0.1);
         }
 
@@ -174,95 +134,45 @@
             background: var(--gradient-2);
         }
 
-        /* ============================================
+        /* =========================
            TYPOGRAPHY
-        ============================================ */
-        h1, h2, h3, h4 {
+        ========================= */
+        h1, h2, h3 {
             font-family: 'Playfair Display', serif;
-            font-weight: 700;
-            background: linear-gradient(135deg, #ffffff 0%, #a5f3fc 50%, #6a11cb 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            font-weight: 800;
+            letter-spacing: -0.5px;
         }
 
-        /* ============================================
-           MAGIC THEME BUTTON
-        ============================================ */
-        .theme-magic-btn {
+        /* =========================
+           NAVIGATION (FLOATING GLASS DOCK)
+        ========================= */
+        .floating-nav {
             position: fixed;
-            top: 30px;
-            right: 30px;
-            background: var(--gradient-1);
-            border: none;
-            color: white;
-            padding: 14px 28px;
-            border-radius: 30px;
-            font-weight: 600;
-            cursor: pointer;
-            z-index: 2000;
-            box-shadow: 
-                0 0 30px rgba(106, 17, 203, 0.6),
-                0 8px 25px rgba(0, 0, 0, 0.4),
-                inset 0 0 20px rgba(255, 255, 255, 0.2);
-            transition: all 0.4s var(--transition);
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            backdrop-filter: blur(15px);
-            transform-style: preserve-3d;
-            animation: buttonGlow 3s ease-in-out infinite;
-        }
-
-        @keyframes buttonGlow {
-            0%, 100% { 
-                box-shadow: 0 0 30px rgba(106, 17, 203, 0.6); 
-            }
-            50% { 
-                box-shadow: 0 0 45px rgba(106, 17, 203, 0.8); 
-            }
-        }
-
-        .theme-magic-btn:hover {
-            transform: translateY(-5px) scale(1.1) rotate(5deg);
-            box-shadow: 
-                0 0 40px rgba(106, 17, 203, 0.8),
-                0 12px 35px rgba(0, 0, 0, 0.5),
-                inset 0 0 30px rgba(255, 255, 255, 0.3);
-            background: var(--gradient-2);
-        }
-
-        /* ============================================
-           NAVIGATION (3D FLOATING DOCK)
-        ============================================ */
-        .nav-3d-dock {
-            position: fixed;
-            bottom: 40px;
+            bottom: 30px;
             left: 50%;
             transform: translateX(-50%);
             z-index: 1000;
-            background: rgba(15, 15, 25, 0.85);
+            background: rgba(10, 10, 20, 0.7);
             backdrop-filter: blur(25px) saturate(200%);
-            -webkit-backdrop-filter: blur(25px) saturate(200%);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            padding: 18px 35px;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            padding: 15px 35px;
             border-radius: 50px;
             display: flex;
-            gap: 28px;
+            gap: 30px;
             box-shadow: 
-                0 25px 60px rgba(0, 0, 0, 0.6),
+                0 25px 60px rgba(0, 0, 0, 0.8),
                 0 0 30px rgba(106, 17, 203, 0.4),
-                inset 0 0 25px rgba(255, 255, 255, 0.1);
+                inset 0 0 20px rgba(255, 255, 255, 0.05);
             transition: all 0.5s var(--transition);
-            transform-style: preserve-3d;
         }
 
-        .nav-3d-dock:hover {
-            transform: translateX(-50%) translateY(-10px) rotateX(5deg);
+        .floating-nav:hover {
+            transform: translateX(-50%) translateY(-10px);
+            background: rgba(15, 15, 25, 0.85);
             box-shadow: 
-                0 35px 80px rgba(0, 0, 0, 0.8),
+                0 35px 80px rgba(0, 0, 0, 0.9),
                 0 0 40px rgba(106, 17, 203, 0.6),
-                inset 0 0 35px rgba(255, 255, 255, 0.15);
+                inset 0 0 25px rgba(255, 255, 255, 0.1);
         }
 
         .nav-item {
@@ -278,12 +188,11 @@
             justify-content: center;
             border-radius: 50%;
             background: rgba(255, 255, 255, 0.07);
-            transform-style: preserve-3d;
         }
 
         .nav-item:hover {
             color: #00c6ff;
-            transform: translateY(-8px) scale(1.15) rotateY(15deg);
+            transform: translateY(-8px) scale(1.15);
             background: rgba(0, 198, 255, 0.15);
             box-shadow: 
                 0 10px 25px rgba(0, 198, 255, 0.4),
@@ -296,18 +205,17 @@
             bottom: 55px;
             left: 50%;
             transform: translateX(-50%) scale(0);
-            background: #fff;
+            background: rgba(255, 255, 255, 0.95);
             color: #000;
             padding: 8px 16px;
             border-radius: 12px;
             font-size: 13px;
             font-weight: 700;
             opacity: 0;
-            transition: all 0.3s ease;
+            transition: all 0.3s var(--transition);
             pointer-events: none;
             white-space: nowrap;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-            z-index: 1001;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
         }
 
         .nav-item:hover::after {
@@ -315,77 +223,72 @@
             opacity: 1;
         }
 
-        /* ============================================
-           HERO SECTION (3D MASTERPIECE)
-        ============================================ */
+        /* =========================
+           THEME MAGIC BUTTON
+        ========================= */
+        .magic-btn {
+            position: fixed;
+            top: 30px;
+            right: 30px;
+            background: var(--gradient-1);
+            border: none;
+            color: white;
+            padding: 14px 28px;
+            border-radius: 30px;
+            font-weight: 700;
+            cursor: pointer;
+            z-index: 2000;
+            box-shadow: 
+                0 10px 30px rgba(106, 17, 203, 0.5),
+                0 0 25px rgba(106, 17, 203, 0.4);
+            transition: all 0.4s var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            backdrop-filter: blur(10px);
+            font-size: 15px;
+        }
+
+        .magic-btn:hover {
+            transform: scale(1.15) rotate(5deg);
+            box-shadow: 
+                0 15px 40px rgba(106, 17, 203, 0.7),
+                0 0 35px rgba(106, 17, 203, 0.6);
+        }
+
+        /* =========================
+           HERO SECTION (MASTERPIECE)
+        ========================= */
         .hero-section {
             min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 140px 20px;
+            padding: 140px 30px 100px;
             perspective: 2000px;
             overflow: hidden;
             position: relative;
         }
 
-        /* Hero Background Layers */
-        .hero-bg-layers {
-            position: absolute;
-            inset: 0;
-            z-index: 0;
-            perspective: 2500px;
-            overflow: hidden;
-        }
-
-        .hero-bg-layer-1 {
+        .hero-bg {
             position: absolute;
             inset: 0;
             background: 
                 linear-gradient(
-                    rgba(0, 0, 0, 0.7),
-                    rgba(0, 0, 0, 0.9)
+                    rgba(0, 0, 0, 0.4),
+                    rgba(0, 0, 0, 0.7)
                 ),
                 url('hero-bg.jpg.jpeg') center/cover no-repeat;
-            transform: translateZ(-300px) scale(1.4);
-            filter: 
-                blur(0.5px)
-                brightness(0.9)
-                contrast(1.1)
-                saturate(1.2);
-            transition: transform 0.2s ease-out;
+            filter: blur(1px) contrast(1.1) saturate(1.2);
+            transform: translateZ(-150px) scale(1.2);
+            transition: transform 0.3s ease;
             border-radius: 50px;
         }
 
-        .hero-bg-layer-2 {
-            position: absolute;
-            inset: 0;
-            background: 
-                radial-gradient(
-                    circle at 70% 30%,
-                    rgba(106, 17, 203, 0.4) 0%,
-                    transparent 50%
-                ),
-                radial-gradient(
-                    circle at 30% 70%,
-                    rgba(37, 117, 252, 0.3) 0%,
-                    transparent 50%
-                );
-            transform: translateZ(-200px) scale(1.3);
-            mix-blend-mode: overlay;
-            animation: bgPulse 8s ease-in-out infinite;
-        }
-
-        @keyframes bgPulse {
-            0%, 100% { opacity: 0.6; }
-            50% { opacity: 1; }
-        }
-
-        /* Hero Content */
-        .hero-content-wrapper {
+        .hero-content {
             display: grid;
-            grid-template-columns: 1.2fr 1fr;
-            gap: 70px;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 80px;
             max-width: 1400px;
             align-items: center;
             position: relative;
@@ -393,33 +296,298 @@
             transform-style: preserve-3d;
         }
 
-        /* Hero Text */
-        .hero-text-content {
+        .hero-text {
             transform-style: preserve-3d;
             z-index: 2;
         }
 
-        .hero-badge {
+        .hero-tag {
             display: inline-block;
-            padding: 12px 28px;
-            background: var(--gradient-1);
-            border-radius: 35px;
-            font-weight: 700;
+            padding: 12px 30px;
+            background: var(--gradient-2);
+            border-radius: 40px;
+            font-weight: 800;
             font-size: 15px;
             text-transform: uppercase;
-            letter-spacing: 2.5px;
+            letter-spacing: 3px;
             margin-bottom: 30px;
             box-shadow: 
-                0 0 30px rgba(106, 17, 203, 0.5),
-                inset 0 1px 0 rgba(255, 255, 255, 0.3),
-                0 8px 20px rgba(0, 0, 0, 0.3);
+                0 10px 30px rgba(255, 0, 122, 0.5),
+                inset 0 1px 0 rgba(255, 255, 255, 0.3);
             transform: translateZ(40px);
-            animation: badgeFloat 4s ease-in-out infinite;
+            animation: tagGlow 4s ease-in-out infinite;
             position: relative;
             overflow: hidden;
         }
 
-        .hero-badge::before {
+        .hero-tag::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+            transition: 0.6s;
+        }
+
+        .hero-tag:hover::before {
+            left: 100%;
+        }
+
+        @keyframes tagGlow {
+            0%, 100% { 
+                box-shadow: 0 10px 30px rgba(255, 0, 122, 0.5); 
+            }
+            50% { 
+                box-shadow: 0 15px 40px rgba(255, 0, 122, 0.7); 
+            }
+        }
+
+        .hero-title {
+            font-size: clamp(3.5rem, 7vw, 6rem);
+            line-height: 1.05;
+            background: linear-gradient(135deg, #fff 0%, #a5f3fc 40%, #9d7aff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 30px;
+            text-shadow: 0 0 50px rgba(157, 122, 255, 0.3);
+            transform: translateZ(50px);
+        }
+
+        .hero-subtitle {
+            font-size: 1.3rem;
+            line-height: 1.9;
+            color: var(--text-muted);
+            margin-bottom: 40px;
+            border-left: 5px solid #2575fc;
+            padding-left: 25px;
+            transform: translateZ(30px);
+            max-width: 90%;
+        }
+
+        .hero-cta {
+            margin-top: 50px;
+            transform: translateZ(40px);
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .cta-btn {
+            padding: 18px 40px;
+            border-radius: 40px;
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 16px;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            transition: all 0.4s var(--transition);
+            transform-style: preserve-3d;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-primary {
+            background: #ffffff;
+            color: #000000;
+            box-shadow: 
+                0 15px 40px rgba(255, 255, 255, 0.3),
+                0 0 30px rgba(255, 255, 255, 0.2);
+        }
+
+        .cta-secondary {
+            background: transparent;
+            border: 3px solid #ffffff;
+            color: #ffffff;
+            box-shadow: 
+                0 10px 30px rgba(255, 255, 255, 0.15),
+                inset 0 0 25px rgba(255, 255, 255, 0.1);
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-8px) scale(1.08);
+        }
+
+        .cta-primary:hover {
+            background: #f0f0f0;
+            box-shadow: 
+                0 25px 50px rgba(255, 255, 255, 0.5),
+                0 0 40px rgba(255, 255, 255, 0.4);
+        }
+
+        .cta-secondary:hover {
+            background: rgba(255, 255, 255, 0.15);
+            border-color: #00c6ff;
+            box-shadow: 
+                0 20px 40px rgba(0, 198, 255, 0.3),
+                inset 0 0 35px rgba(255, 255, 255, 0.2);
+        }
+
+        /* =========================
+           PORTRAIT SECTION (TOP-RIGHT CORNER)
+        ========================= */
+        .portrait-container {
+            position: relative;
+            width: 100%;
+            height: 500px;
+            transform-style: preserve-3d;
+            perspective: 1800px;
+        }
+
+        .portrait-wrapper {
+            position: absolute;
+            width: 240px;
+            height: 320px;
+            top: 10%;
+            right: 5%;
+            transform-style: preserve-3d;
+            animation: portraitFloat 8s ease-in-out infinite;
+            z-index: 10;
+        }
+
+        .portrait-frame {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: var(--gradient-1);
+            border-radius: 25px;
+            transform: translateZ(-30px);
+            box-shadow: 
+                0 30px 70px rgba(0, 0, 0, 0.7),
+                inset 0 0 40px rgba(255, 255, 255, 0.1);
+            filter: blur(2px);
+            opacity: 0.6;
+        }
+
+        .portrait-image {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: url('portrait.jpg.jpeg') center/cover no-repeat;
+            border-radius: 22px;
+            transform: translateZ(20px);
+            box-shadow: 
+                0 25px 60px rgba(0, 0, 0, 0.8),
+                0 0 40px rgba(106, 17, 203, 0.5);
+            border: 3px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.4s var(--transition);
+            overflow: hidden;
+        }
+
+        .portrait-image:hover {
+            transform: translateZ(40px) scale(1.05);
+            box-shadow: 
+                0 35px 80px rgba(0, 0, 0, 0.9),
+                0 0 60px rgba(106, 17, 203, 0.7);
+        }
+
+        .portrait-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                90deg,
+                transparent,
+                rgba(255, 255, 255, 0.1),
+                transparent
+            );
+            animation: portraitShine 3s ease-in-out infinite;
+            z-index: 1;
+        }
+
+        @keyframes portraitShine {
+            0%, 100% { left: -100%; }
+            50% { left: 100%; }
+        }
+
+        @keyframes portraitFloat {
+            0%, 100% { 
+                transform: translateY(0) rotateY(0deg) rotateX(0deg); 
+            }
+            33% { 
+                transform: translateY(-20px) rotateY(5deg) rotateX(3deg); 
+            }
+            66% { 
+                transform: translateY(10px) rotateY(-5deg) rotateX(-3deg); 
+            }
+        }
+
+        .portrait-badge {
+            position: absolute;
+            top: -25px;
+            left: -25px;
+            background: var(--gradient-2);
+            padding: 12px 24px;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 14px;
+            box-shadow: 0 15px 35px rgba(255, 0, 122, 0.5);
+            transform: translateZ(50px);
+            animation: badgeFloat 4s ease-in-out infinite;
+            z-index: 11;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .portrait-badge:nth-child(2) {
+            top: auto;
+            bottom: -25px;
+            left: auto;
+            right: -25px;
+            background: var(--gradient-3);
+            animation-delay: 2s;
+        }
+
+        @keyframes badgeFloat {
+            0%, 100% { transform: translateZ(50px) translateY(0); }
+            50% { transform: translateZ(50px) translateY(-15px); }
+        }
+
+        /* =========================
+           HERO SOCIAL GRID
+        ========================= */
+        .social-grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 25px;
+            justify-items: center;
+            align-items: center;
+            margin: 50px auto 0;
+            max-width: 600px;
+            position: relative;
+            z-index: 5;
+            transform: translateZ(60px);
+        }
+
+        .social-icon {
+            width: 65px;
+            height: 65px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 26px;
+            color: #fff;
+            text-decoration: none;
+            backdrop-filter: blur(15px);
+            box-shadow: 
+                0 20px 40px rgba(0, 0, 0, 0.5),
+                inset 0 0 25px rgba(255, 255, 255, 0.2),
+                0 0 25px currentColor;
+            transform-style: preserve-3d;
+            transition: all 0.5s var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .social-icon::before {
             content: '';
             position: absolute;
             top: 0;
@@ -432,480 +600,109 @@
                 rgba(255, 255, 255, 0.3),
                 transparent
             );
-            animation: badgeShine 3s ease-in-out infinite;
-        }
-
-        @keyframes badgeFloat {
-            0%, 100% { transform: translateZ(40px) translateY(0); }
-            50% { transform: translateZ(40px) translateY(-10px); }
-        }
-
-        @keyframes badgeShine {
-            0%, 100% { left: -100%; }
-            50% { left: 100%; }
-        }
-
-        .hero-title {
-            font-size: clamp(3.5rem, 7vw, 6rem);
-            line-height: 1.05;
-            margin-bottom: 30px;
-            text-shadow: 0 0 30px rgba(106, 17, 203, 0.4);
-            transform: translateZ(50px);
-            animation: titleGlow 6s ease-in-out infinite;
-        }
-
-        @keyframes titleGlow {
-            0%, 100% { 
-                text-shadow: 0 0 30px rgba(106, 17, 203, 0.4); 
-            }
-            50% { 
-                text-shadow: 0 0 45px rgba(106, 17, 203, 0.6); 
-            }
-        }
-
-        .hero-description {
-            font-size: 1.3rem;
-            line-height: 1.9;
-            color: var(--text-muted);
-            margin-bottom: 40px;
-            border-left: 5px solid #2575fc;
-            padding-left: 25px;
-            transform: translateZ(30px);
-            position: relative;
-        }
-
-        .hero-description::before {
-            content: '';
-            position: absolute;
-            left: -5px;
-            top: 0;
-            height: 100%;
-            width: 2px;
-            background: var(--gradient-1);
-            animation: lineGlow 2s ease-in-out infinite;
-        }
-
-        @keyframes lineGlow {
-            0%, 100% { opacity: 0.5; }
-            50% { opacity: 1; }
-        }
-
-        /* Hero Buttons */
-        .hero-action-buttons {
-            margin-top: 50px;
-            transform: translateZ(40px);
-            display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-
-        .hero-action-btn {
-            padding: 18px 40px;
-            border-radius: 35px;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 1.1rem;
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
-            transition: all 0.4s var(--transition);
-            transform-style: preserve-3d;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .btn-primary {
-            background: #fff;
-            color: #000;
-            box-shadow: 
-                0 0 30px rgba(255, 255, 255, 0.5),
-                0 10px 30px rgba(0, 0, 0, 0.3),
-                inset 0 0 20px rgba(255, 255, 255, 0.3);
-        }
-
-        .btn-secondary {
-            background: transparent;
-            border: 2px solid rgba(255, 255, 255, 0.3);
-            color: #fff;
-            box-shadow: 
-                0 0 20px rgba(255, 255, 255, 0.2),
-                inset 0 0 20px rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-        }
-
-        .hero-action-btn:hover {
-            transform: translateY(-8px) scale(1.05);
-        }
-
-        .btn-primary:hover {
-            background: linear-gradient(135deg, #fff 0%, #e6e6e6 100%);
-            box-shadow: 
-                0 0 45px rgba(255, 255, 255, 0.7),
-                0 15px 35px rgba(0, 0, 0, 0.4),
-                inset 0 0 30px rgba(255, 255, 255, 0.4);
-        }
-
-        .btn-secondary:hover {
-            background: rgba(255, 255, 255, 0.15);
-            border-color: rgba(255, 255, 255, 0.5);
-            box-shadow: 
-                0 0 30px rgba(255, 255, 255, 0.4),
-                inset 0 0 30px rgba(255, 255, 255, 0.2);
-        }
-
-        /* ============================================
-           PORTRAIT 3D CONTAINER (CORRECT POSITION)
-        ============================================ */
-        .portrait-3d-container {
-            position: relative;
-            width: 100%;
-            height: 650px;
-            transform-style: preserve-3d;
-            perspective: 2000px;
-        }
-
-        .portrait-bg {
-            position: absolute;
-            inset: 0;
-            background: url('hero-bg.jpg.jpeg') center/cover no-repeat;
-            border-radius: 40px;
-            opacity: 0.3;
-            transform: translateZ(-100px) scale(0.9);
-            filter: blur(8px) brightness(0.6);
-            box-shadow: 
-                inset 0 0 60px rgba(0, 0, 0, 0.8),
-                0 0 120px rgba(106, 17, 203, 0.4);
-        }
-
-        .hero-portrait {
-            position: absolute;
-            width: 320px;
-            height: 420px;
-            /* TOP-RIGHT CORNER POSITION */
-            top: 15%;
-            right: 5%;
-            left: auto;
-            transform: translateZ(150px);
-            background: url('portrait.jpg.jpeg') center/cover no-repeat;
-            border-radius: 30px;
-            border: 3px solid rgba(255, 255, 255, 0.2);
-            box-shadow: 
-                0 40px 100px rgba(0, 0, 0, 0.8),
-                0 0 50px rgba(106, 17, 203, 0.5),
-                inset 0 0 40px rgba(255, 255, 255, 0.1);
-            transition: all 0.4s var(--transition);
-            z-index: 10;
-            animation: portraitFloat 8s ease-in-out infinite;
-            overflow: visible;
-            cursor: pointer;
-        }
-
-        /* Portrait Floating Animation */
-        @keyframes portraitFloat {
-            0%, 100% { 
-                transform: translateZ(150px) rotateY(0deg) rotateX(0deg) translateY(0); 
-            }
-            25% { 
-                transform: translateZ(180px) rotateY(5deg) rotateX(3deg) translateY(-15px); 
-            }
-            50% { 
-                transform: translateZ(150px) rotateY(0deg) rotateX(0deg) translateY(0); 
-            }
-            75% { 
-                transform: translateZ(180px) rotateY(-5deg) rotateX(-3deg) translateY(15px); 
-            }
-        }
-
-        .hero-portrait:hover {
-            transform: translateZ(200px) scale(1.05);
-            box-shadow: 
-                0 50px 120px rgba(0, 0, 0, 0.9),
-                0 0 70px rgba(106, 17, 203, 0.7),
-                inset 0 0 50px rgba(255, 255, 255, 0.2);
-        }
-
-        .hero-portrait::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(
-                45deg,
-                transparent 20%,
-                rgba(255, 255, 255, 0.05) 40%,
-                transparent 80%
-            );
-            z-index: 1;
-            animation: portraitShine 4s ease-in-out infinite;
-        }
-
-        @keyframes portraitShine {
-            0%, 100% { transform: translateX(-100%) rotate(45deg); }
-            50% { transform: translateX(100%) rotate(45deg); }
-        }
-
-        /* Floating Info Cards */
-        .float-info-card {
-            position: absolute;
-            background: rgba(255, 255, 255, 0.12);
-            backdrop-filter: blur(25px) saturate(180%);
-            -webkit-backdrop-filter: blur(25px) saturate(180%);
-            padding: 18px 30px;
-            border-radius: 20px;
-            border: 1px solid rgba(255, 255, 255, 0.25);
-            box-shadow: 
-                0 20px 40px rgba(0, 0, 0, 0.4),
-                0 0 25px rgba(106, 17, 203, 0.3),
-                inset 0 0 20px rgba(255, 255, 255, 0.1);
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            font-weight: 600;
-            font-size: 1.1rem;
-            transform: translateZ(100px);
-            animation: infoCardFloat 6s ease-in-out infinite;
-            z-index: 9;
-            cursor: pointer;
-            transition: all 0.4s ease;
-        }
-
-        .float-info-card:hover {
-            transform: translateZ(120px) scale(1.1);
-            background: rgba(255, 255, 255, 0.18);
-            box-shadow: 
-                0 30px 60px rgba(0, 0, 0, 0.6),
-                0 0 35px rgba(106, 17, 203, 0.5),
-                inset 0 0 30px rgba(255, 255, 255, 0.15);
-        }
-
-        .info-card-1 {
-            top: 8%;
-            right: 15%;
-            animation-delay: 0s;
-        }
-
-        .info-card-2 {
-            top: 40%;
-            right: -5%;
-            animation-delay: 2s;
-        }
-
-        .info-card-3 {
-            top: 65%;
-            right: 15%;
-            animation-delay: 4s;
-        }
-
-        @keyframes infoCardFloat {
-            0%, 100% { 
-                transform: translateZ(100px) translateY(0) rotate(0deg); 
-            }
-            50% { 
-                transform: translateZ(100px) translateY(-20px) rotate(3deg); 
-            }
-        }
-
-        /* ============================================
-           HERO SOCIAL ICONS (3D CUBE GRID)
-        ============================================ */
-        .social-cube-grid {
-            display: grid;
-            grid-template-columns: repeat(6, 1fr);
-            gap: 22px;
-            justify-items: center;
-            align-items: center;
-            margin: 45px auto 0;
-            max-width: 580px;
-            position: relative;
-            z-index: 10;
-            transform: translateZ(60px);
-        }
-
-        .social-cube {
-            width: 65px;
-            height: 65px;
-            border-radius: 18px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 26px;
-            color: #fff;
-            text-decoration: none;
-            backdrop-filter: blur(12px);
-            box-shadow: 
-                0 18px 35px rgba(0, 0, 0, 0.5),
-                inset 0 0 25px rgba(255, 255, 255, 0.2),
-                0 0 25px currentColor;
-            transform-style: preserve-3d;
-            transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
-            position: relative;
-            overflow: hidden;
-            animation: cubeRotate 20s linear infinite;
-        }
-
-        @keyframes cubeRotate {
-            0% { transform: rotateY(0deg) rotateX(0deg); }
-            100% { transform: rotateY(360deg) rotateX(360deg); }
-        }
-
-        .social-cube::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(
-                90deg,
-                transparent,
-                rgba(255, 255, 255, 0.4),
-                transparent
-            );
             transition: 0.6s;
         }
 
-        .social-cube:hover {
-            animation-play-state: paused;
-            transform: translateY(-20px) rotateX(20deg) rotateY(20deg) scale(1.25);
+        .social-icon:hover::before {
+            left: 100%;
+        }
+
+        .social-icon:hover {
+            transform: translateY(-20px) rotateX(15deg) rotateY(-15deg) scale(1.2);
             box-shadow: 
                 0 35px 60px rgba(0, 0, 0, 0.7),
                 0 0 40px currentColor,
                 inset 0 0 40px rgba(255, 255, 255, 0.3);
         }
 
-        .social-cube:hover::before {
-            left: 100%;
-        }
+        /* Social Colors */
+        .social-email { background: linear-gradient(135deg, #D44638, #B23121); }
+        .social-whatsapp { background: linear-gradient(135deg, #25D366, #128C7E); }
+        .social-linkedin { background: linear-gradient(135deg, #0077B5, #004182); }
+        .social-instagram { background: linear-gradient(135deg, #833AB4, #FD1D1D, #F77737); }
+        .social-facebook { background: linear-gradient(135deg, #1877F2, #0F4AA1); }
+        .social-twitter { background: linear-gradient(135deg, #000000, #444444); }
+        .social-wef { background: linear-gradient(135deg, #00A3E0, #005F86); }
+        .social-linktree { background: linear-gradient(135deg, #43E660, #1FA337); }
+        .social-tiktok { background: linear-gradient(135deg, #010101, #FF0050, #00F2EA); }
+        .social-snapchat { background: linear-gradient(135deg, #FFFC00, #FFD000); color: #000; }
+        .social-threads { background: linear-gradient(135deg, #000000, #444444); }
+        .social-ok { background: linear-gradient(135deg, #F47300, #FF9E2C); }
 
-        /* Social Icons Colors with 3D Effect */
-        .sc-mail { 
-            background: linear-gradient(135deg, #D44638, #B23121); 
-            box-shadow: 0 18px 35px rgba(212, 70, 56, 0.4), 0 0 25px #D44638;
-        }
-        .sc-whatsapp { 
-            background: linear-gradient(135deg, #25D366, #128C7E); 
-            box-shadow: 0 18px 35px rgba(37, 211, 102, 0.4), 0 0 25px #25D366;
-        }
-        .sc-linkedin { 
-            background: linear-gradient(135deg, #0077B5, #004182); 
-            box-shadow: 0 18px 35px rgba(0, 119, 181, 0.4), 0 0 25px #0077B5;
-        }
-        .sc-instagram { 
-            background: linear-gradient(135deg, #833AB4, #FD1D1D, #F77737); 
-            box-shadow: 0 18px 35px rgba(131, 58, 180, 0.4), 0 0 25px #833AB4;
-        }
-        .sc-facebook { 
-            background: linear-gradient(135deg, #1877F2, #0F4AA1); 
-            box-shadow: 0 18px 35px rgba(24, 119, 242, 0.4), 0 0 25px #1877F2;
-        }
-        .sc-twitter { 
-            background: linear-gradient(135deg, #000000, #444444); 
-            box-shadow: 0 18px 35px rgba(0, 0, 0, 0.4), 0 0 25px #000000;
-        }
-        .sc-wef { 
-            background: linear-gradient(135deg, #00A3E0, #005F86); 
-            box-shadow: 0 18px 35px rgba(0, 163, 224, 0.4), 0 0 25px #00A3E0;
-        }
-        .sc-linktree { 
-            background: linear-gradient(135deg, #43E660, #1FA337); 
-            box-shadow: 0 18px 35px rgba(67, 230, 96, 0.4), 0 0 25px #43E660;
-        }
-        .sc-tiktok { 
-            background: linear-gradient(135deg, #010101, #FF0050, #00F2EA); 
-            box-shadow: 0 18px 35px rgba(255, 0, 80, 0.4), 0 0 25px #FF0050;
-        }
-        .sc-snapchat { 
-            background: linear-gradient(135deg, #FFFC00, #FFD000); 
-            color: #000;
-            box-shadow: 0 18px 35px rgba(255, 252, 0, 0.4), 0 0 25px #FFFC00;
-        }
-        .sc-threads { 
-            background: linear-gradient(135deg, #000000, #444444); 
-            box-shadow: 0 18px 35px rgba(0, 0, 0, 0.4), 0 0 25px #000000;
-        }
-        .sc-ok { 
-            background: linear-gradient(135deg, #F47300, #FF9E2C); 
-            box-shadow: 0 18px 35px rgba(244, 115, 0, 0.4), 0 0 25px #F47300;
-        }
-
-        /* ============================================
-           CONTENT SECTIONS
-        ============================================ */
-        .content-section {
-            max-width: 1200px;
+        /* =========================
+           SECTIONS STYLING
+        ========================= */
+        .page-section {
+            max-width: 1300px;
             margin: 0 auto;
-            padding: 140px 20px;
+            padding: 150px 30px;
             position: relative;
             transform-style: preserve-3d;
         }
 
-        .section-heading {
+        .section-header {
             font-size: 4rem;
             text-align: center;
-            margin-bottom: 90px;
+            margin-bottom: 100px;
             position: relative;
             z-index: 1;
             transform: translateZ(40px);
-            animation: headingFloat 5s ease-in-out infinite;
+            background: linear-gradient(135deg, #fff 0%, #a5f3fc 50%, #9d7aff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
-        @keyframes headingFloat {
-            0%, 100% { transform: translateZ(40px) translateY(0); }
-            50% { transform: translateZ(40px) translateY(-15px); }
-        }
-
-        .section-heading::after {
+        .section-header::after {
             content: '';
             display: block;
             width: 150px;
-            height: 5px;
+            height: 6px;
             background: var(--gradient-1);
             margin: 25px auto 0;
-            border-radius: 5px;
-            animation: linePulse 3s ease-in-out infinite;
+            border-radius: 3px;
+            animation: lineGlow 4s ease-in-out infinite;
         }
 
-        @keyframes linePulse {
+        @keyframes lineGlow {
             0%, 100% { 
-                width: 150px; 
-                box-shadow: 0 0 20px rgba(106, 17, 203, 0.5); 
+                width: 150px;
+                box-shadow: 0 0 20px rgba(106, 17, 203, 0.5);
             }
             50% { 
-                width: 180px; 
-                box-shadow: 0 0 30px rgba(106, 17, 203, 0.7); 
+                width: 180px;
+                box-shadow: 0 0 30px rgba(106, 17, 203, 0.8);
             }
         }
 
-        /* ============================================
-           3D GLASS CARDS
-        ============================================ */
-        .glass-card-3d {
-            background: var(--glass-bg);
+        /* =========================
+           GLASS CARDS
+        ========================= */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
             backdrop-filter: blur(25px) saturate(180%);
-            -webkit-backdrop-filter: blur(25px) saturate(180%);
-            border: 1px solid var(--glass-border);
+            border: 1px solid rgba(255, 255, 255, 0.15);
             border-radius: var(--card-radius);
-            padding: 55px;
-            box-shadow: var(--glass-shadow);
-            transition: all 0.6s var(--transition);
+            padding: 60px;
+            box-shadow: 
+                0 30px 80px rgba(0, 0, 0, 0.4),
+                inset 0 0 40px rgba(255, 255, 255, 0.05);
+            transition: all 0.7s var(--transition);
             position: relative;
             overflow: hidden;
             transform-style: preserve-3d;
             transform: translateZ(0);
         }
 
-        .glass-card-3d:hover {
+        .glass-card:hover {
             transform: translateY(-20px) rotateX(5deg) rotateY(5deg) translateZ(40px);
-            border-color: rgba(255, 255, 255, 0.4);
+            border-color: rgba(255, 255, 255, 0.3);
             box-shadow: 
                 0 50px 100px rgba(106, 17, 203, 0.5),
-                inset 0 0 40px rgba(255, 255, 255, 0.2),
-                0 0 50px rgba(106, 17, 203, 0.3);
+                inset 0 0 50px rgba(255, 255, 255, 0.1);
         }
 
-        .glass-card-3d::before {
+        .glass-card::before {
             content: '';
             position: absolute;
             top: 0;
@@ -915,29 +712,28 @@
             background: linear-gradient(
                 90deg,
                 transparent,
-                rgba(255, 255, 255, 0.15),
+                rgba(255, 255, 255, 0.1),
                 transparent
             );
             transition: 0.8s;
             z-index: 1;
         }
 
-        .glass-card-3d:hover::before {
+        .glass-card:hover::before {
             left: 100%;
         }
 
-        /* ============================================
-           TIMELINE (3D ENHANCED)
-        ============================================ */
+        /* =========================
+           3D TIMELINE
+        ========================= */
         .timeline-3d {
             position: relative;
-            max-width: 850px;
+            max-width: 900px;
             margin: 0 auto;
             transform-style: preserve-3d;
         }
 
-        .timeline-3d::before {
-            content: '';
+        .timeline-line {
             position: absolute;
             left: 50%;
             width: 4px;
@@ -951,67 +747,67 @@
                 transparent
             );
             transform: translateX(-50%);
-            box-shadow: 0 0 40px rgba(106, 17, 203, 0.6);
-            animation: timelineGlow 4s ease-in-out infinite;
+            box-shadow: 
+                0 0 40px rgba(106, 17, 203, 0.6),
+                0 0 20px rgba(37, 117, 252, 0.4);
         }
 
-        @keyframes timelineGlow {
-            0%, 100% { box-shadow: 0 0 40px rgba(106, 17, 203, 0.6); }
-            50% { box-shadow: 0 0 60px rgba(106, 17, 203, 0.8); }
-        }
-
-        .timeline-item-3d {
-            margin-bottom: 70px;
+        .timeline-item {
+            margin-bottom: 80px;
             width: 100%;
             display: flex;
             justify-content: center;
             opacity: 0;
-            transform: translateY(60px) rotateX(20deg);
-            transition: all 0.9s var(--transition);
+            transform: translateY(60px) rotateX(15deg);
+            transition: all 0.8s var(--transition);
             transform-style: preserve-3d;
         }
 
-        .timeline-item-3d.visible {
+        .timeline-item.visible {
             opacity: 1;
             transform: translateY(0) rotateX(0);
         }
 
-        .timeline-content-3d {
+        .timeline-content {
             width: 48%;
-            background: rgba(255, 255, 255, 0.09);
+            background: rgba(255, 255, 255, 0.08);
             backdrop-filter: blur(20px);
             padding: 35px;
             border-radius: 25px;
             border: 1px solid rgba(255, 255, 255, 0.2);
             position: relative;
             transform-style: preserve-3d;
-            transition: all 0.5s ease;
+            transition: all 0.5s var(--transition);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
         }
 
-        .timeline-content-3d:hover {
-            transform: translateZ(25px);
-            border-color: rgba(0, 198, 255, 0.5);
+        .timeline-content:hover {
+            transform: translateZ(30px);
+            border-color: rgba(0, 198, 255, 0.4);
             box-shadow: 
-                0 25px 50px rgba(0, 198, 255, 0.3),
-                inset 0 0 30px rgba(255, 255, 255, 0.1);
+                0 30px 70px rgba(0, 198, 255, 0.3),
+                0 0 40px rgba(0, 198, 255, 0.2);
         }
 
-        .timeline-item-3d:nth-child(odd) {
+        .timeline-item:nth-child(odd) {
             justify-content: flex-start;
         }
 
-        .timeline-item-3d:nth-child(even) {
+        .timeline-item:nth-child(even) {
             justify-content: flex-end;
         }
 
-        .timeline-content-3d h4 {
+        .timeline-year {
             color: #00c6ff;
-            margin-bottom: 20px;
-            font-size: 1.5rem;
-            text-shadow: 0 0 20px rgba(0, 198, 255, 0.5);
+            font-size: 1.8rem;
+            font-weight: 800;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
 
-        .timeline-dot-3d {
+        .timeline-dot {
             position: absolute;
             width: 28px;
             height: 28px;
@@ -1019,87 +815,159 @@
             border-radius: 50%;
             left: 50%;
             top: 30px;
-            transform: translateX(-50%) translateZ(15px);
+            transform: translateX(-50%) translateZ(20px);
             box-shadow: 
                 0 0 30px #00c6ff,
                 0 0 20px #00c6ff,
                 inset 0 0 15px rgba(255, 255, 255, 0.6);
             z-index: 5;
-            animation: dotPulse 2.5s ease-in-out infinite;
+            animation: dotPulse 2s ease-in-out infinite;
         }
 
         @keyframes dotPulse {
             0%, 100% { 
                 box-shadow: 0 0 30px #00c6ff, 0 0 20px #00c6ff; 
-                transform: translateX(-50%) translateZ(15px) scale(1);
             }
             50% { 
                 box-shadow: 0 0 45px #00c6ff, 0 0 30px #00c6ff; 
-                transform: translateX(-50%) translateZ(15px) scale(1.1);
             }
         }
 
-        /* ============================================
+        /* =========================
            3D GRID LAYOUTS
-        ============================================ */
-        .grid-3d-3 {
+        ========================= */
+        .grid-3d {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 45px;
+            gap: 50px;
             transform-style: preserve-3d;
         }
 
-        /* ============================================
+        .skill-item {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            margin-bottom: 25px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.06);
+            border-radius: 20px;
+            transition: all 0.4s var(--transition);
+            transform-style: preserve-3d;
+        }
+
+        .skill-item:hover {
+            background: rgba(255, 255, 255, 0.12);
+            transform: translateX(15px) translateZ(15px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        .skill-icon {
+            font-size: 32px;
+            background: linear-gradient(45deg, #00c6ff, #6a11cb);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* =========================
+           THEMATIC TAGS
+        ========================= */
+        .tags-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 40px;
+        }
+
+        .theme-tag {
+            padding: 15px 30px;
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 30px;
+            border: 2px solid;
+            font-weight: 700;
+            font-size: 16px;
+            transition: all 0.4s var(--transition);
+            position: relative;
+            overflow: hidden;
+            backdrop-filter: blur(10px);
+        }
+
+        .theme-tag::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                90deg,
+                transparent,
+                rgba(255, 255, 255, 0.3),
+                transparent
+            );
+            transition: 0.6s;
+        }
+
+        .theme-tag:hover::before {
+            left: 100%;
+        }
+
+        .theme-tag:hover {
+            transform: translateY(-8px) scale(1.08);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+        }
+
+        /* =========================
            3D GALLERY
-        ============================================ */
-        .gallery-3d-grid {
+        ========================= */
+        .gallery-3d {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             gap: 30px;
-            padding: 25px;
+            padding: 30px;
             transform-style: preserve-3d;
         }
 
-        .gallery-item-3d {
+        .gallery-item {
             height: 350px;
             border-radius: 25px;
             overflow: hidden;
             position: relative;
             cursor: pointer;
             box-shadow: 
-                0 20px 40px rgba(0, 0, 0, 0.6),
-                inset 0 0 25px rgba(255, 255, 255, 0.08);
-            transition: all 0.7s cubic-bezier(0.23, 1, 0.32, 1);
+                0 20px 50px rgba(0, 0, 0, 0.6),
+                inset 0 0 30px rgba(255, 255, 255, 0.08);
+            transition: all 0.7s var(--transition);
             transform-style: preserve-3d;
-            transform: rotateX(8deg) rotateY(8deg);
+            transform: rotateX(5deg) rotateY(5deg) translateZ(0);
         }
 
-        .gallery-item-3d:nth-child(even) {
-            transform: rotateX(-8deg) rotateY(-8deg);
+        .gallery-item:nth-child(even) {
+            transform: rotateX(-5deg) rotateY(-5deg) translateZ(0);
         }
 
-        .gallery-item-3d img {
+        .gallery-image {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: all 0.7s ease;
-            filter: brightness(0.9) contrast(1.1);
+            transition: all 0.7s var(--transition);
+            filter: brightness(0.9);
         }
 
-        .gallery-item-3d:hover {
+        .gallery-item:hover {
             transform: scale(1.1) rotateX(0) rotateY(0) translateZ(60px);
             box-shadow: 
                 0 40px 80px rgba(0, 198, 255, 0.6),
                 0 0 60px rgba(106, 17, 203, 0.6);
-            z-index: 15;
+            z-index: 10;
         }
 
-        .gallery-item-3d:hover img {
-            transform: scale(1.2);
-            filter: brightness(1.1) contrast(1.2);
+        .gallery-item:hover .gallery-image {
+            transform: scale(1.15);
+            filter: brightness(1.1);
         }
 
-        .gallery-overlay-3d {
+        .gallery-overlay {
             position: absolute;
             bottom: 0;
             left: 0;
@@ -1111,73 +979,83 @@
             padding: 30px;
             opacity: 0;
             transform: translateY(30px);
-            transition: all 0.5s ease;
+            transition: all 0.5s var(--transition);
         }
 
-        .gallery-item-3d:hover .gallery-overlay-3d {
+        .gallery-item:hover .gallery-overlay {
             opacity: 1;
             transform: translateY(0);
         }
 
-        /* ============================================
-           THEMATIC AREAS 3D TAGS
-        ============================================ */
-        .thematic-3d-grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 18px;
-            justify-content: center;
-            margin-top: 35px;
-        }
-
-        .theme-tag-3d {
-            padding: 14px 28px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 30px;
-            border: 2px solid transparent;
-            font-weight: 600;
-            transition: all 0.4s ease;
+        /* =========================
+           MISSION STATEMENT
+        ========================= */
+        .mission-card {
+            background: linear-gradient(
+                135deg,
+                rgba(106, 17, 203, 0.4),
+                rgba(37, 117, 252, 0.4),
+                rgba(255, 0, 122, 0.4)
+            );
+            backdrop-filter: blur(30px);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            border-radius: var(--card-radius);
+            padding: 80px;
+            text-align: center;
             position: relative;
             overflow: hidden;
             transform-style: preserve-3d;
-            cursor: pointer;
+            animation: missionPulse 5s ease-in-out infinite;
         }
 
-        .theme-tag-3d::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(
-                90deg,
-                transparent,
-                rgba(255, 255, 255, 0.25),
-                transparent
-            );
-            transition: 0.6s;
+        @keyframes missionPulse {
+            0%, 100% { 
+                box-shadow: 0 30px 80px rgba(106, 17, 203, 0.5); 
+            }
+            50% { 
+                box-shadow: 0 50px 120px rgba(106, 17, 203, 0.7); 
+            }
         }
 
-        .theme-tag-3d:hover::before {
-            left: 100%;
+        .mission-icon {
+            font-size: 70px;
+            color: #fff;
+            margin-bottom: 40px;
+            text-shadow: 0 0 40px rgba(255, 255, 255, 0.6);
+            animation: iconFloat 6s ease-in-out infinite;
         }
 
-        .theme-tag-3d:hover {
-            transform: translateY(-8px) scale(1.08) translateZ(20px);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
-            border-color: currentColor;
+        @keyframes iconFloat {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
         }
 
-        /* ============================================
-           CONNECT SECTION (3D SOCIAL SPHERE)
-        ============================================ */
-        .connect-3d-sphere {
+        .mission-title {
+            font-size: 3rem;
+            margin-bottom: 35px;
+            background: linear-gradient(45deg, #fff, #a5f3fc, #9d7aff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .mission-text {
+            font-size: 1.8rem;
+            font-family: 'Playfair Display', serif;
+            line-height: 1.9;
+            max-width: 900px;
+            margin: 0 auto;
+            color: rgba(255, 255, 255, 0.95);
+        }
+
+        /* =========================
+           CONNECT SECTION
+        ========================= */
+        .connect-wrapper {
             text-align: center;
             transform-style: preserve-3d;
         }
 
-        .social-sphere-container {
+        .social-3d {
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
@@ -1187,34 +1065,28 @@
             transform-style: preserve-3d;
         }
 
-        .social-sphere {
+        .social-3d-btn {
             width: 90px;
             height: 90px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.09);
+            border-radius: 25px;
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 36px;
             color: #fff;
             text-decoration: none;
-            transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
-            border: 2px solid rgba(255, 255, 255, 0.25);
+            transition: all 0.6s var(--transition);
+            border: 2px solid rgba(255, 255, 255, 0.2);
             box-shadow: 
-                0 20px 45px rgba(0, 0, 0, 0.5),
-                inset 0 0 25px rgba(255, 255, 255, 0.15);
+                0 20px 50px rgba(0, 0, 0, 0.5),
+                inset 0 0 30px rgba(255, 255, 255, 0.1);
             position: relative;
             overflow: hidden;
             transform-style: preserve-3d;
-            animation: sphereRotate 20s linear infinite;
         }
 
-        @keyframes sphereRotate {
-            0% { transform: rotateY(0deg) rotateX(0deg); }
-            100% { transform: rotateY(360deg) rotateX(360deg); }
-        }
-
-        .social-sphere::before {
+        .social-3d-btn::before {
             content: '';
             position: absolute;
             top: 0;
@@ -1225,11 +1097,9 @@
             opacity: 0;
             transition: all 0.6s ease;
             z-index: 1;
-            border-radius: 50%;
         }
 
-        .social-sphere:hover {
-            animation-play-state: paused;
+        .social-3d-btn:hover {
             transform: rotateX(25deg) rotateY(25deg) translateY(-20px) scale(1.2);
             box-shadow: 
                 0 35px 70px rgba(0, 0, 0, 0.7),
@@ -1238,194 +1108,125 @@
             border-color: transparent;
         }
 
-        .social-sphere:hover::before {
+        .social-3d-btn:hover::before {
             opacity: 1;
         }
 
-        .social-sphere i {
+        .social-3d-btn i {
             transition: all 0.6s ease;
             z-index: 2;
             position: relative;
         }
 
-        .social-sphere:hover i {
+        .social-3d-btn:hover i {
             transform: scale(1.4) translateZ(40px);
         }
 
-        /* ============================================
-           MISSION STATEMENT 3D
-        ============================================ */
-        .mission-3d-card {
-            background: linear-gradient(
-                135deg,
-                rgba(106, 17, 203, 0.5),
-                rgba(37, 117, 252, 0.5),
-                rgba(255, 0, 122, 0.5)
-            );
-            backdrop-filter: blur(25px);
-            border: 1px solid rgba(255, 255, 255, 0.25);
-            border-radius: var(--card-radius);
-            padding: 70px;
+        /* =========================
+           FOOTER
+        ========================= */
+        .site-footer {
             text-align: center;
-            position: relative;
-            overflow: hidden;
-            transform-style: preserve-3d;
-            animation: missionGlow 5s ease-in-out infinite;
-        }
-
-        @keyframes missionGlow {
-            0%, 100% { 
-                box-shadow: 0 30px 80px rgba(106, 17, 203, 0.5); 
-            }
-            50% { 
-                box-shadow: 0 40px 100px rgba(106, 17, 203, 0.7); 
-            }
-        }
-
-        .mission-3d-card i {
-            font-size: 70px;
-            color: #fff;
-            margin-bottom: 35px;
-            text-shadow: 0 0 40px rgba(255, 255, 255, 0.6);
-            animation: missionIconFloat 4s ease-in-out infinite;
-        }
-
-        @keyframes missionIconFloat {
-            0%, 100% { transform: translateY(0) rotate(0deg); }
-            50% { transform: translateY(-15px) rotate(10deg); }
-        }
-
-        .mission-3d-card h2 {
-            font-size: 3rem;
-            margin-bottom: 30px;
-        }
-
-        .mission-3d-card p {
-            font-size: 1.7rem;
-            font-family: 'Playfair Display', serif;
-            line-height: 1.9;
-            max-width: 900px;
-            margin: 0 auto;
-            text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
-        }
-
-        /* ============================================
-           FOOTER 3D
-        ============================================ */
-        .footer-3d {
-            text-align: center;
-            padding: 35px 20px;
+            padding: 40px 30px;
             border-top: 1px solid rgba(255, 255, 255, 0.2);
-            color: #aaa;
+            color: rgba(255, 255, 255, 0.7);
             font-size: 15px;
-            background: rgba(0, 0, 0, 0.4);
-            backdrop-filter: blur(15px);
+            background: rgba(5, 5, 15, 0.8);
+            backdrop-filter: blur(20px);
             position: relative;
             z-index: 1;
         }
 
-        .footer-3d::before {
-            content: '';
+        .footer-gradient {
             position: absolute;
             top: 0;
             left: 0;
             right: 0;
             height: 2px;
             background: linear-gradient(90deg, transparent, #6a11cb, #2575fc, #ff007a, transparent);
-            animation: footerGlow 4s ease-in-out infinite;
         }
 
-        @keyframes footerGlow {
-            0%, 100% { opacity: 0.7; }
-            50% { opacity: 1; }
-        }
-
-        /* ============================================
+        /* =========================
            RESPONSIVE DESIGN
-        ============================================ */
+        ========================= */
         @media (max-width: 1400px) {
-            .hero-content-wrapper {
+            .hero-content {
                 max-width: 1200px;
                 gap: 60px;
             }
             
-            .hero-portrait {
-                width: 280px;
-                height: 380px;
-                right: 4%;
+            .portrait-wrapper {
+                width: 220px;
+                height: 300px;
+                right: 3%;
             }
         }
 
         @media (max-width: 1200px) {
-            .hero-content-wrapper {
-                grid-template-columns: 1.1fr 1fr;
-                gap: 50px;
-            }
-            
-            .hero-portrait {
-                width: 260px;
-                height: 350px;
-                right: 3%;
-            }
-            
-            .social-cube-grid {
-                grid-template-columns: repeat(4, 1fr);
-                max-width: 450px;
-            }
-        }
-
-        @media (max-width: 992px) {
-            .hero-content-wrapper {
+            .hero-content {
                 grid-template-columns: 1fr;
                 text-align: center;
-                gap: 60px;
+                gap: 70px;
             }
             
-            .portrait-3d-container {
-                height: 500px;
+            .portrait-container {
+                height: 450px;
                 order: -1;
                 margin-top: 0;
             }
             
-            .hero-portrait {
-                position: absolute;
-                width: 240px;
-                height: 320px;
+            .portrait-wrapper {
+                position: relative;
                 top: 50%;
                 left: 50%;
                 right: auto;
-                transform: translate(-50%, -50%) translateZ(150px);
+                transform: translate(-50%, -50%);
+                margin: 0 auto;
             }
             
-            .float-info-card {
-                display: none; /* Hide on tablet */
-            }
-            
-            .social-cube-grid {
-                grid-template-columns: repeat(3, 1fr);
-                max-width: 350px;
+            .social-grid {
+                grid-template-columns: repeat(4, 1fr);
+                max-width: 500px;
                 gap: 20px;
             }
             
-            .nav-3d-dock {
-                padding: 15px 25px;
-                gap: 20px;
-            }
-            
-            .grid-3d-3 {
+            .grid-3d {
                 grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-                gap: 35px;
+                gap: 40px;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .page-section {
+                padding: 120px 25px;
+            }
+            
+            .section-header {
+                font-size: 3.5rem;
+                margin-bottom: 80px;
+            }
+            
+            .glass-card {
+                padding: 50px 40px;
+            }
+            
+            .mission-card {
+                padding: 60px 40px;
+            }
+            
+            .mission-text {
+                font-size: 1.6rem;
             }
         }
 
         @media (max-width: 768px) {
             /* Navigation */
-            .nav-3d-dock {
-                bottom: 25px;
-                padding: 12px 20px;
-                gap: 18px;
-                width: 90%;
-                max-width: 380px;
+            .floating-nav {
+                bottom: 20px;
+                padding: 12px 25px;
+                gap: 25px;
+                width: 95%;
+                max-width: 450px;
             }
             
             .nav-item {
@@ -1439,121 +1240,83 @@
                 padding: 120px 20px 80px;
             }
             
-            .hero-badge {
-                padding: 10px 22px;
-                font-size: 13px;
-            }
-            
             .hero-title {
-                font-size: 3rem;
+                font-size: 2.8rem;
             }
             
-            .hero-description {
-                font-size: 1.15rem;
-                padding-left: 20px;
+            .hero-subtitle {
+                font-size: 1.2rem;
+                max-width: 100%;
             }
             
-            .hero-action-buttons {
-                justify-content: center;
-            }
-            
-            .hero-action-btn {
-                padding: 16px 32px;
-                font-size: 1rem;
-            }
-            
-            .portrait-3d-container {
+            .portrait-container {
                 height: 400px;
             }
             
-            .hero-portrait {
-                width: 200px;
-                height: 280px;
+            .portrait-wrapper {
+                width: 180px;
+                height: 250px;
+            }
+            
+            .portrait-badge {
+                padding: 10px 20px;
+                font-size: 12px;
             }
             
             /* Hero Social Icons */
-            .social-cube-grid {
-                grid-template-columns: repeat(2, 1fr);
-                max-width: 240px;
+            .social-grid {
+                grid-template-columns: repeat(3, 1fr);
+                max-width: 350px;
                 gap: 18px;
             }
             
-            .social-cube {
+            .social-icon {
                 width: 55px;
                 height: 55px;
                 font-size: 22px;
             }
             
-            /* Sections */
-            .content-section {
-                padding: 100px 20px;
-            }
-            
-            .section-heading {
-                font-size: 3rem;
-                margin-bottom: 70px;
-            }
-            
-            .glass-card-3d {
-                padding: 35px;
-            }
-            
             /* Timeline */
-            .timeline-3d::before {
-                left: 0;
+            .timeline-line {
+                left: 20px;
             }
             
-            .timeline-item-3d {
+            .timeline-item {
                 justify-content: flex-start !important;
-                padding-left: 45px;
+                padding-left: 50px;
             }
             
-            .timeline-content-3d {
+            .timeline-content {
                 width: 100%;
-                padding: 25px;
             }
             
-            .timeline-dot-3d {
-                left: 0;
-                transform: translateX(-50%);
+            .timeline-dot {
+                left: 20px;
             }
             
             /* Gallery */
-            .gallery-3d-grid {
-                grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            .gallery-3d {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
                 gap: 25px;
             }
             
-            .gallery-item-3d {
+            .gallery-item {
                 height: 300px;
             }
             
             /* Connect Section */
-            .social-sphere-container {
+            .social-3d {
                 gap: 30px;
             }
             
-            .social-sphere {
-                width: 75px;
-                height: 75px;
-                font-size: 30px;
-            }
-            
-            /* Mission Card */
-            .mission-3d-card {
-                padding: 45px 30px;
-            }
-            
-            .mission-3d-card h2 {
-                font-size: 2.5rem;
-            }
-            
-            .mission-3d-card p {
-                font-size: 1.4rem;
+            .social-3d-btn {
+                width: 70px;
+                height: 70px;
+                font-size: 28px;
             }
             
             /* Theme Button */
-            .theme-magic-btn {
+            .magic-btn {
                 top: 20px;
                 right: 20px;
                 padding: 12px 24px;
@@ -1562,35 +1325,36 @@
         }
 
         @media (max-width: 480px) {
-            .social-cube-grid {
-                grid-template-columns: repeat(2, 1fr);
-                max-width: 200px;
+            .hero-title {
+                font-size: 2.4rem;
             }
             
-            .hero-action-buttons {
+            .hero-cta {
                 flex-direction: column;
-                gap: 18px;
                 align-items: center;
             }
             
-            .hero-action-btn {
+            .cta-btn {
                 width: 100%;
-                max-width: 280px;
-                text-align: center;
                 justify-content: center;
             }
             
-            .grid-3d-3 {
+            .social-grid {
+                grid-template-columns: repeat(2, 1fr);
+                max-width: 240px;
+            }
+            
+            .grid-3d {
                 grid-template-columns: 1fr;
             }
             
-            .gallery-3d-grid {
+            .gallery-3d {
                 grid-template-columns: 1fr;
             }
             
-            .nav-3d-dock {
-                gap: 15px;
-                padding: 10px 18px;
+            .floating-nav {
+                gap: 20px;
+                padding: 10px 20px;
             }
             
             .nav-item {
@@ -1599,69 +1363,69 @@
                 font-size: 18px;
             }
             
-            .thematic-3d-grid {
-                gap: 12px;
-            }
-            
-            .theme-tag-3d {
-                padding: 12px 20px;
-                font-size: 14px;
+            .section-header {
+                font-size: 2.8rem;
             }
         }
 
-        /* ============================================
+        /* =========================
            ANIMATION UTILITIES
-        ============================================ */
-        @keyframes fadeInUp3D {
-            from {
-                opacity: 0;
-                transform: translateY(60px) translateZ(-60px) rotateX(15deg);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0) translateZ(0) rotateX(0);
-            }
-        }
-
-        @keyframes fadeIn3D {
-            from {
-                opacity: 0;
-                transform: translateZ(-100px);
-            }
-            to {
-                opacity: 1;
-                transform: translateZ(0);
-            }
-        }
-
-        .animate-on-scroll-3d {
+        ========================= */
+        .animate-on-scroll {
             opacity: 0;
-            transform: translateY(60px) rotateX(15deg);
-            transition: all 0.9s cubic-bezier(0.23, 1, 0.32, 1);
+            transform: translateY(60px) rotateX(10deg);
+            transition: all 0.9s var(--transition);
+            transform-style: preserve-3d;
         }
 
-        .animate-on-scroll-3d.visible {
+        .animate-on-scroll.visible {
             opacity: 1;
             transform: translateY(0) rotateX(0);
+        }
+
+        .stagger-delay-1 { transition-delay: 0.1s; }
+        .stagger-delay-2 { transition-delay: 0.2s; }
+        .stagger-delay-3 { transition-delay: 0.3s; }
+        .stagger-delay-4 { transition-delay: 0.4s; }
+
+        /* =========================
+           LOADING ANIMATIONS
+        ========================= */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(60px) translateZ(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) translateZ(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
         }
     </style>
 </head>
 
 <body>
-    <!-- COSMIC BACKGROUND -->
-    <div class="cosmic-bg"></div>
-    <div class="nebula-orb nebula-1"></div>
-    <div class="nebula-orb nebula-2"></div>
-    <div class="nebula-orb nebula-3"></div>
-    <div class="stardust-container" id="stardust"></div>
+    <!-- DYNAMIC BACKGROUND -->
+    <div class="neon-bg"></div>
+    <div class="neon-grid"></div>
+    <div class="floating-particles" id="particles"></div>
 
-    <!-- MAGIC THEME BUTTON -->
-    <button class="theme-magic-btn" onclick="randomizeCosmicTheme()">
-        <i class="fas fa-wand-magic-sparkles"></i> Cosmic Theme
+    <!-- THEME BUTTON -->
+    <button class="magic-btn" onclick="magicTheme()">
+        <i class="fas fa-wand-magic-sparkles"></i> Magic Theme
     </button>
 
-    <!-- 3D NAVIGATION DOCK -->
-    <nav class="nav-3d-dock">
+    <!-- NAVIGATION -->
+    <nav class="floating-nav">
         <a href="#hero" class="nav-item" data-tooltip="Home"><i class="fas fa-home"></i></a>
         <a href="#about" class="nav-item" data-tooltip="About"><i class="fas fa-user"></i></a>
         <a href="#career" class="nav-item" data-tooltip="Legal"><i class="fas fa-gavel"></i></a>
@@ -1672,126 +1436,123 @@
 
     <!-- HERO SECTION -->
     <section id="hero" class="hero-section">
-        <div class="hero-bg-layers">
-            <div class="hero-bg-layer-1" id="heroBgLayer"></div>
-            <div class="hero-bg-layer-2"></div>
-        </div>
+        <div class="hero-bg" id="heroBackground"></div>
 
-        <div class="hero-content-wrapper">
-            <div class="hero-text-content">
-                <span class="hero-badge">Advocate & Changemaker</span>
+        <div class="hero-content">
+            <div class="hero-text">
+                <span class="hero-tag">Advocate & Changemaker</span>
                 <h1 class="hero-title">Mumtaz Alam <br> Bazai</h1>
-                <p class="hero-description">
+                <p class="hero-subtitle">
                     Advocate High Court · Human Rights Lawyer · Global Shaper (WEF).<br>
                     Empowering the youth of Balochistan through law, leadership, and unwavering justice.
                 </p>
                 
-                <div class="hero-action-buttons">
-                    <a href="#contact" class="hero-action-btn btn-primary">
-                        <i class="fas fa-paper-plane"></i> Get in Touch
+                <div class="hero-cta">
+                    <a href="#contact" class="cta-btn cta-primary">
+                        <i class="fas fa-envelope"></i> Get in Touch
                     </a>
-                    <a href="https://linktr.ee/mumtazalam" target="_blank" class="hero-action-btn btn-secondary">
-                        <i class="fas fa-link"></i> Portfolio
+                    <a href="https://linktr.ee/mumtazalam" target="_blank" class="cta-btn cta-secondary">
+                        <i class="fas fa-external-link-alt"></i> Portfolio
                     </a>
                 </div>
             </div>
 
-            <div class="portrait-3d-container" id="portraitContainer">
-                <div class="portrait-bg"></div>
-                <div class="hero-portrait" id="heroPortrait"></div>
-                
-                <div class="float-info-card info-card-1">
-                    <i class="fas fa-award"></i>
-                    <span>Global Shaper</span>
-                </div>
-                <div class="float-info-card info-card-2">
-                    <i class="fas fa-scale-balanced"></i>
-                    <span>Advocate High Court</span>
-                </div>
-                <div class="float-info-card info-card-3">
-                    <i class="fas fa-graduation-cap"></i>
-                    <span>LLB (Hons)</span>
+            <div class="portrait-container">
+                <div class="portrait-wrapper">
+                    <div class="portrait-frame"></div>
+                    <div class="portrait-image" id="portraitImage"></div>
+                    <div class="portrait-badge">
+                        <i class="fas fa-award"></i> Global Shaper
+                    </div>
+                    <div class="portrait-badge">
+                        <i class="fas fa-scale-balanced"></i> Advocate
+                    </div>
                 </div>
             </div>
         </div>
 
         <!-- HERO SOCIAL LINKS -->
-        <div class="social-cube-grid">
-            <a href="mailto:advmumtaz222@gmail.com" target="_blank" class="social-cube sc-mail" title="Email">
+        <div class="social-grid">
+            <a href="mailto:advmumtaz222@gmail.com" target="_blank" class="social-icon social-email" title="Email">
                 <i class="fas fa-envelope"></i>
             </a>
-            <a href="https://wa.me/923332568792" target="_blank" class="social-cube sc-whatsapp" title="WhatsApp">
+            <a href="https://wa.me/923332568792" target="_blank" class="social-icon social-whatsapp" title="WhatsApp">
                 <i class="fab fa-whatsapp"></i>
             </a>
-            <a href="https://www.linkedin.com/in/adv-mumtaz-alam-bazai-163a9a324" target="_blank" class="social-cube sc-linkedin" title="LinkedIn">
+            <a href="https://www.linkedin.com/in/adv-mumtaz-alam-bazai-163a9a324" target="_blank" class="social-icon social-linkedin" title="LinkedIn">
                 <i class="fab fa-linkedin-in"></i>
             </a>
-            <a href="https://www.instagram.com/mumtaz_alam" target="_blank" class="social-cube sc-instagram" title="Instagram">
+            <a href="https://www.instagram.com/mumtaz_alam" target="_blank" class="social-icon social-instagram" title="Instagram">
                 <i class="fab fa-instagram"></i>
             </a>
-            <a href="https://www.facebook.com/mumtaz.alam.18488" target="_blank" class="social-cube sc-facebook" title="Facebook">
+            <a href="https://www.facebook.com/mumtaz.alam.18488" target="_blank" class="social-icon social-facebook" title="Facebook">
                 <i class="fab fa-facebook-f"></i>
             </a>
-            <a href="https://x.com/mumtazalam333" target="_blank" class="social-cube sc-twitter" title="Twitter/X">
+            <a href="https://x.com/mumtazalam333" target="_blank" class="social-icon social-twitter" title="Twitter/X">
                 <i class="fab fa-x-twitter"></i>
             </a>
-            <a href="https://my.weforum.org/network/people/001TG000009vSDhYAM/adv-mumtaz-alam" target="_blank" class="social-cube sc-wef" title="World Economic Forum">
+            <a href="https://my.weforum.org/network/people/001TG000009vSDhYAM/adv-mumtaz-alam" target="_blank" class="social-icon social-wef" title="WEF">
                 <i class="fas fa-globe"></i>
             </a>
-            <a href="https://linktr.ee/mumtazalam" target="_blank" class="social-cube sc-linktree" title="Linktree">
+            <a href="https://linktr.ee/mumtazalam" target="_blank" class="social-icon social-linktree" title="Linktree">
                 <i class="fas fa-link"></i>
             </a>
-            <a href="https://www.tiktok.com/@mumtaz_alam" target="_blank" class="social-cube sc-tiktok" title="TikTok">
+            <a href="https://www.tiktok.com/@mumtaz_alam" target="_blank" class="social-icon social-tiktok" title="TikTok">
                 <i class="fab fa-tiktok"></i>
             </a>
-            <a href="https://www.snapchat.com/add/mumtazalam222" target="_blank" class="social-cube sc-snapchat" title="Snapchat">
+            <a href="https://www.snapchat.com/add/mumtazalam222" target="_blank" class="social-icon social-snapchat" title="Snapchat">
                 <i class="fab fa-snapchat-ghost"></i>
             </a>
-            <a href="https://www.threads.com/@mumtaz_alam" target="_blank" class="social-cube sc-threads" title="Threads">
+            <a href="https://www.threads.com/@mumtaz_alam" target="_blank" class="social-icon social-threads" title="Threads">
                 <i class="fas fa-comment-dots"></i>
             </a>
-            <a href="https://ok.ru/profile/910193583170" target="_blank" class="social-cube sc-ok" title="Odnoklassniki">
+            <a href="https://ok.ru/profile/910193583170" target="_blank" class="social-icon social-ok" title="Odnoklassniki">
                 <i class="fab fa-odnoklassniki"></i>
             </a>
         </div>
     </section>
 
     <!-- ABOUT SECTION -->
-    <section id="about" class="content-section">
-        <h2 class="section-heading">The Journey</h2>
-        <div class="glass-card-3d">
-            <div style="text-align: center; margin-bottom: 45px; max-width: 850px; margin: 0 auto 45px;">
-                <p style="font-size: 1.25rem; line-height: 1.9;">
-                    Born on <strong>11 August 2000</strong> in Kili Zdoon, District Pishin, Balochistan. Mumtaz is the eldest of nine siblings, son of Dr. Ameer Muhammad (Neurosurgeon). From village schooling to scholarship-based excellence at Pak-Turk Maarif, his journey is defined by discipline and brilliance.
+    <section id="about" class="page-section">
+        <h2 class="section-header">The Journey</h2>
+        <div class="glass-card">
+            <div style="text-align: center; margin-bottom: 50px; max-width: 900px; margin: 0 auto 50px;">
+                <p style="font-size: 1.2rem; line-height: 1.9; color: rgba(255, 255, 255, 0.9);">
+                    Born on <strong style="color: #00c6ff;">11 August 2000</strong> in Kili Zdoon, District Pishin, Balochistan. Mumtaz is the eldest of nine siblings, son of Dr. Ameer Muhammad (Neurosurgeon). From village schooling to scholarship-based excellence at Pak-Turk Maarif, his journey is defined by discipline and brilliance.
                 </p>
             </div>
 
             <div class="timeline-3d">
-                <div class="timeline-item-3d animate-on-scroll-3d">
-                    <div class="timeline-dot-3d"></div>
-                    <div class="timeline-content-3d">
-                        <h4>2019 - Intermediate</h4>
+                <div class="timeline-line"></div>
+                
+                <div class="timeline-item animate-on-scroll stagger-delay-1">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-year"><i class="fas fa-calendar"></i> 2019 - Intermediate</h3>
                         <p>Pak-Turk Maarif International Schools & Colleges. Demonstrated leadership and multilingual fluency (Pashto, Urdu, English, Turkish).</p>
                     </div>
                 </div>
-                <div class="timeline-item-3d animate-on-scroll-3d">
-                    <div class="timeline-dot-3d"></div>
-                    <div class="timeline-content-3d">
-                        <h4>2022 - BA (Arts)</h4>
+                
+                <div class="timeline-item animate-on-scroll stagger-delay-2">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-year"><i class="fas fa-calendar"></i> 2022 - BA (Arts)</h3>
                         <p>University of Balochistan. Building the foundation for social sciences and political thought.</p>
                     </div>
                 </div>
-                <div class="timeline-item-3d animate-on-scroll-3d">
-                    <div class="timeline-dot-3d"></div>
-                    <div class="timeline-content-3d">
-                        <h4>2024 - LLB (Hons) & MA Pol. Sci.</h4>
+                
+                <div class="timeline-item animate-on-scroll stagger-delay-3">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-year"><i class="fas fa-calendar"></i> 2024 - LLB (Hons) & MA Pol. Sci.</h3>
                         <p>University Law College & University of Balochistan. Graduated with honors, mastering the intricacies of law and governance.</p>
                     </div>
                 </div>
-                <div class="timeline-item-3d animate-on-scroll-3d">
-                    <div class="timeline-dot-3d"></div>
-                    <div class="timeline-content-3d">
-                        <h4>2025 - Legal License</h4>
+                
+                <div class="timeline-item animate-on-scroll stagger-delay-4">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-year"><i class="fas fa-calendar"></i> 2025 - Legal License</h3>
                         <p>Received Bar Council License (Reg No. 14/2025). Formally joined Iqra Law Associates under Advocate Abdul Zahir Kakar.</p>
                     </div>
                 </div>
@@ -1800,135 +1561,137 @@
     </section>
 
     <!-- CAREER SECTION -->
-    <section id="career" class="content-section">
-        <h2 class="section-heading">Legal & Social Impact</h2>
-        <div class="grid-3d-3">
-            <div class="glass-card-3d animate-on-scroll-3d">
-                <i class="fas fa-gavel" style="font-size: 45px; color: #ff007a; margin-bottom: 25px;"></i>
-                <h3>Legal Career</h3>
-                <p style="margin-top: 20px; opacity: 0.9;">
+    <section id="career" class="page-section">
+        <h2 class="section-header">Legal & Social Impact</h2>
+        <div class="grid-3d">
+            <div class="glass-card animate-on-scroll stagger-delay-1">
+                <i class="fas fa-gavel" style="font-size: 50px; background: linear-gradient(45deg, #ff007a, #ff6b9d); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 25px;"></i>
+                <h3 style="font-size: 2rem; margin-bottom: 20px;">Legal Career</h3>
+                <p style="margin-top: 15px; color: rgba(255, 255, 255, 0.9); line-height: 1.8;">
                     Active practitioner in Civil, Criminal, and Human Rights litigation. Known for pro bono work for marginalized communities in Balochistan. Trained at Iqra Law Associates, Quetta.
                 </p>
             </div>
 
-            <div class="glass-card-3d animate-on-scroll-3d">
-                <i class="fas fa-globe-asia" style="font-size: 45px; color: #00c6ff; margin-bottom: 25px;"></i>
-                <h3>Global Shaper (WEF)</h3>
-                <p style="margin-top: 20px; opacity: 0.9;">
-                    Curator of Quetta Hub. Represented at <strong>Global Shapers Annual Summit 2025 (Geneva)</strong>. Authored the Governance Charter and spearheaded the first Youth Policy Project.
+            <div class="glass-card animate-on-scroll stagger-delay-2">
+                <i class="fas fa-globe-asia" style="font-size: 50px; background: linear-gradient(45deg, #00c6ff, #0072ff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 25px;"></i>
+                <h3 style="font-size: 2rem; margin-bottom: 20px;">Global Shaper (WEF)</h3>
+                <p style="margin-top: 15px; color: rgba(255, 255, 255, 0.9); line-height: 1.8;">
+                    Curator of Quetta Hub. Represented at <strong style="color: #00c6ff;">Global Shapers Annual Summit 2025 (Geneva)</strong>. Authored the Governance Charter and spearheaded the first Youth Policy Project.
                 </p>
             </div>
 
-            <div class="glass-card-3d animate-on-scroll-3d">
-                <i class="fas fa-book-open" style="font-size: 45px; color: #6a11cb; margin-bottom: 25px;"></i>
-                <h3>Publications</h3>
-                <p style="margin-top: 20px; opacity: 0.9;">
-                    Author of <em>"Human Rights and Responsibilities"</em> (2021) and research on <em>"The Role of ECP in Free and Fair Elections"</em> (2024).
+            <div class="glass-card animate-on-scroll stagger-delay-3">
+                <i class="fas fa-book-open" style="font-size: 50px; background: linear-gradient(45deg, #6a11cb, #9d7aff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 25px;"></i>
+                <h3 style="font-size: 2rem; margin-bottom: 20px;">Publications</h3>
+                <p style="margin-top: 15px; color: rgba(255, 255, 255, 0.9); line-height: 1.8;">
+                    Author of <em style="color: #a5f3fc;">"Human Rights and Responsibilities"</em> (2021) and research on <em style="color: #a5f3fc;">"The Role of ECP in Free and Fair Elections"</em> (2024).
                 </p>
             </div>
         </div>
     </section>
 
     <!-- LEADERSHIP SECTION -->
-    <section id="leadership" class="content-section">
-        <h2 class="section-heading">Thematic Areas</h2>
-        <div class="glass-card-3d">
-            <div class="thematic-3d-grid">
-                <span class="theme-tag-3d" style="border-color: #00c6ff; color: #00c6ff;">Human Rights & Equality</span>
-                <span class="theme-tag-3d" style="border-color: #ff007a; color: #ff007a;">Governance & Rule of Law</span>
-                <span class="theme-tag-3d" style="border-color: #6a11cb; color: #6a11cb;">Youth Policy</span>
-                <span class="theme-tag-3d" style="border-color: #ffe600; color: #ffe600;">Climate & Energy</span>
-                <span class="theme-tag-3d" style="border-color: #00ff88; color: #00ff88;">Indigenous Rights</span>
-                <span class="theme-tag-3d" style="border-color: #ff00ff; color: #ff00ff;">Legal Education</span>
-                <span class="theme-tag-3d" style="border-color: #00ffff; color: #00ffff;">Digital Rights</span>
-                <span class="theme-tag-3d" style="border-color: #ff8800; color: #ff8800;">Social Justice</span>
+    <section id="leadership" class="page-section">
+        <h2 class="section-header">Thematic Areas</h2>
+        <div class="glass-card">
+            <div class="tags-container">
+                <span class="theme-tag" style="border-color: #00c6ff; color: #00c6ff;">Human Rights & Equality</span>
+                <span class="theme-tag" style="border-color: #ff007a; color: #ff007a;">Governance & Rule of Law</span>
+                <span class="theme-tag" style="border-color: #6a11cb; color: #6a11cb;">Youth Policy</span>
+                <span class="theme-tag" style="border-color: #ffe600; color: #ffe600;">Climate & Energy</span>
+                <span class="theme-tag" style="border-color: #00ff88; color: #00ff88;">Indigenous Rights</span>
+                <span class="theme-tag" style="border-color: #ff00ff; color: #ff00ff;">Legal Education</span>
+                <span class="theme-tag" style="border-color: #00ffff; color: #00ffff;">Digital Rights</span>
+                <span class="theme-tag" style="border-color: #ff8800; color: #ff8800;">Social Justice</span>
             </div>
         </div>
     </section>
 
     <!-- GALLERY SECTION -->
-    <section id="gallery" class="content-section">
-        <h2 class="section-heading">Visual Journey</h2>
-        <div class="gallery-3d-grid">
-            <div class="gallery-item-3d animate-on-scroll-3d">
-                <img src="life1.jpg.jpeg" alt="Leadership" loading="lazy">
-                <div class="gallery-overlay-3d"><h4>Leadership</h4></div>
+    <section id="gallery" class="page-section">
+        <h2 class="section-header">Visual Journey</h2>
+        <div class="gallery-3d">
+            <div class="gallery-item animate-on-scroll stagger-delay-1">
+                <img src="life1.jpg.jpeg" alt="Leadership" class="gallery-image" loading="lazy">
+                <div class="gallery-overlay"><h4 style="font-size: 1.5rem;">Leadership</h4></div>
             </div>
-            <div class="gallery-item-3d animate-on-scroll-3d">
-                <img src="life2.jpg.jpeg" alt="Advocacy" loading="lazy">
-                <div class="gallery-overlay-3d"><h4>Advocacy</h4></div>
+            <div class="gallery-item animate-on-scroll stagger-delay-2">
+                <img src="life2.jpg.jpeg" alt="Advocacy" class="gallery-image" loading="lazy">
+                <div class="gallery-overlay"><h4 style="font-size: 1.5rem;">Advocacy</h4></div>
             </div>
-            <div class="gallery-item-3d animate-on-scroll-3d">
-                <img src="life3.jpg.jpeg" alt="Global Shapers" loading="lazy">
-                <div class="gallery-overlay-3d"><h4>Global Shapers</h4></div>
+            <div class="gallery-item animate-on-scroll stagger-delay-3">
+                <img src="life3.jpg.jpeg" alt="Global Shapers" class="gallery-image" loading="lazy">
+                <div class="gallery-overlay"><h4 style="font-size: 1.5rem;">Global Shapers</h4></div>
             </div>
-            <div class="gallery-item-3d animate-on-scroll-3d">
-                <img src="life4.jpg.jpeg" alt="Court Life" loading="lazy">
-                <div class="gallery-overlay-3d"><h4>Court Life</h4></div>
+            <div class="gallery-item animate-on-scroll stagger-delay-4">
+                <img src="life4.jpg.jpeg" alt="Court Life" class="gallery-image" loading="lazy">
+                <div class="gallery-overlay"><h4 style="font-size: 1.5rem;">Court Life</h4></div>
             </div>
-            <div class="gallery-item-3d animate-on-scroll-3d">
-                <img src="life5.jpg.jpeg" alt="Community" loading="lazy">
-                <div class="gallery-overlay-3d"><h4>Community</h4></div>
+            <div class="gallery-item animate-on-scroll stagger-delay-1">
+                <img src="life5.jpg.jpeg" alt="Community" class="gallery-image" loading="lazy">
+                <div class="gallery-overlay"><h4 style="font-size: 1.5rem;">Community</h4></div>
             </div>
-            <div class="gallery-item-3d animate-on-scroll-3d">
-                <img src="life6.jpg.jpeg" alt="Travel" loading="lazy">
-                <div class="gallery-overlay-3d"><h4>Travel</h4></div>
+            <div class="gallery-item animate-on-scroll stagger-delay-2">
+                <img src="life6.jpg.jpeg" alt="Travel" class="gallery-image" loading="lazy">
+                <div class="gallery-overlay"><h4 style="font-size: 1.5rem;">Travel</h4></div>
             </div>
         </div>
     </section>
 
     <!-- MISSION SECTION -->
-    <section id="mission" class="content-section">
-        <div class="mission-3d-card animate-on-scroll-3d">
-            <i class="fas fa-bullseye"></i>
-            <h2>Mission Statement</h2>
-            <p>
+    <section id="mission" class="page-section">
+        <div class="mission-card animate-on-scroll">
+            <i class="fas fa-bullseye mission-icon"></i>
+            <h2 class="mission-title">Mission Statement</h2>
+            <p class="mission-text">
                 "To advance justice, safeguard human dignity, strengthen democratic institutions, and empower youth to lead Pakistan toward a just, inclusive, and sustainable future."
             </p>
         </div>
     </section>
 
     <!-- CONTACT SECTION -->
-    <section id="contact" class="content-section" style="padding-bottom: 180px;">
-        <h2 class="section-heading">Connect</h2>
-        <div class="connect-3d-sphere">
-            <p style="font-size: 1.3rem; color: #ccc; margin-bottom: 50px;">Reach out for legal consultation or collaboration.</p>
+    <section id="contact" class="page-section" style="padding-bottom: 180px;">
+        <h2 class="section-header">Connect</h2>
+        <div class="connect-wrapper">
+            <p style="font-size: 1.4rem; color: rgba(255, 255, 255, 0.9); margin-bottom: 50px; max-width: 600px; margin-left: auto; margin-right: auto;">
+                Reach out for legal consultation or collaboration.
+            </p>
             
-            <div class="social-sphere-container">
-                <a href="mailto:advmumtaz222@gmail.com" class="social-sphere" style="--c1: #D44638; --c2: #B23121;" title="Email">
+            <div class="social-3d">
+                <a href="mailto:advmumtaz222@gmail.com" class="social-3d-btn" style="--c1: #D44638; --c2: #B23121;" title="Email">
                     <i class="fas fa-envelope"></i>
                 </a>
-                <a href="https://wa.me/923332568792" class="social-sphere" style="--c1: #25D366; --c2: #128C7E;" title="WhatsApp">
+                <a href="https://wa.me/923332568792" class="social-3d-btn" style="--c1: #25D366; --c2: #128C7E;" title="WhatsApp">
                     <i class="fab fa-whatsapp"></i>
                 </a>
-                <a href="https://www.linkedin.com/in/adv-mumtaz-alam-bazai-163a9a324" class="social-sphere" style="--c1: #0077b5; --c2: #004182;" title="LinkedIn">
+                <a href="https://www.linkedin.com/in/adv-mumtaz-alam-bazai-163a9a324" class="social-3d-btn" style="--c1: #0077b5; --c2: #004182;" title="LinkedIn">
                     <i class="fab fa-linkedin-in"></i>
                 </a>
-                <a href="https://www.instagram.com/mumtaz_alam" class="social-sphere" style="--c1: #833AB4; --c2: #FD1D1D;" title="Instagram">
+                <a href="https://www.instagram.com/mumtaz_alam" class="social-3d-btn" style="--c1: #833AB4; --c2: #FD1D1D;" title="Instagram">
                     <i class="fab fa-instagram"></i>
                 </a>
-                <a href="https://www.facebook.com/mumtaz.alam.18488" class="social-sphere" style="--c1: #1877F2; --c2: #1052a8;" title="Facebook">
+                <a href="https://www.facebook.com/mumtaz.alam.18488" class="social-3d-btn" style="--c1: #1877F2; --c2: #1052a8;" title="Facebook">
                     <i class="fab fa-facebook-f"></i>
                 </a>
-                <a href="https://x.com/mumtazalam333" class="social-sphere" style="--c1: #000; --c2: #333;" title="Twitter/X">
+                <a href="https://x.com/mumtazalam333" class="social-3d-btn" style="--c1: #000; --c2: #333;" title="Twitter/X">
                     <i class="fab fa-x-twitter"></i>
                 </a>
-                <a href="https://my.weforum.org/network/people/001TG000009vSDhYAM/adv-mumtaz-alam" class="social-sphere" style="--c1: #00A3E0; --c2: #005F86;" title="World Economic Forum">
+                <a href="https://my.weforum.org/network/people/001TG000009vSDhYAM/adv-mumtaz-alam" class="social-3d-btn" style="--c1: #00A3E0; --c2: #005F86;" title="WEF">
                     <i class="fas fa-globe"></i>
                 </a>
-                <a href="https://linktr.ee/mumtazalam" class="social-sphere" style="--c1: #43E660; --c2: #1fa337;" title="Linktree">
+                <a href="https://linktr.ee/mumtazalam" class="social-3d-btn" style="--c1: #43E660; --c2: #1fa337;" title="Linktree">
                     <i class="fas fa-link"></i>
                 </a>
-                <a href="https://www.tiktok.com/@mumtaz_alam" class="social-sphere" style="--c1: #000000; --c2: #ff0050;" title="TikTok">
+                <a href="https://www.tiktok.com/@mumtaz_alam" class="social-3d-btn" style="--c1: #000000; --c2: #ff0050;" title="TikTok">
                     <i class="fab fa-tiktok"></i>
                 </a>
-                <a href="https://www.snapchat.com/add/mumtazalam222" class="social-sphere" style="--c1: #FFFC00; --c2: #FFCA00;" title="Snapchat">
+                <a href="https://www.snapchat.com/add/mumtazalam222" class="social-3d-btn" style="--c1: #FFFC00; --c2: #FFCA00;" title="Snapchat">
                     <i class="fab fa-snapchat-ghost"></i>
                 </a>
-                <a href="https://www.threads.com/@mumtaz_alam" class="social-sphere" style="--c1: #00fffc; --c2: #ff00fc;" title="Threads">
+                <a href="https://www.threads.com/@mumtaz_alam" class="social-3d-btn" style="--c1: #00fffc; --c2: #ff00fc;" title="Threads">
                     <i class="fas fa-comment-dots"></i>
                 </a>
-                <a href="https://ok.ru/profile/910193583170" class="social-sphere" style="--c1: #F47300; --c2: #FF9E2C;" title="Odnoklassniki">
+                <a href="https://ok.ru/profile/910193583170" class="social-3d-btn" style="--c1: #F47300; --c2: #FF9E2C;" title="Odnoklassniki">
                     <i class="fab fa-odnoklassniki"></i>
                 </a>
             </div>
@@ -1936,60 +1699,62 @@
     </section>
 
     <!-- FOOTER -->
-    <footer class="footer-3d">
-        © 2025 Mumtaz Alam Bazai. Advocate & Human Rights Lawyer.
+    <footer class="site-footer">
+        <div class="footer-gradient"></div>
+        <p style="margin-top: 30px; font-size: 16px;">
+            © 2025 Mumtaz Alam Bazai. Advocate & Human Rights Lawyer.
+        </p>
+        <p style="margin-top: 15px; color: rgba(255, 255, 255, 0.6); font-size: 14px;">
+            Championing Justice · Empowering Youth · Shaping Futures
+        </p>
     </footer>
 
     <script>
         // ============================================
-        // 1. COSMIC PARTICLE SYSTEM
+        // PARTICLE SYSTEM
         // ============================================
-        const stardustContainer = document.getElementById('stardust');
+        const particleContainer = document.getElementById('particles');
+        
         function createParticle() {
             const particle = document.createElement('div');
             particle.classList.add('particle');
             
-            const size = Math.random() * 8 + 2 + 'px';
+            const size = Math.random() * 100 + 20 + 'px';
             const left = Math.random() * 100 + '%';
-            const duration = Math.random() * 10 + 20 + 's';
+            const duration = Math.random() * 15 + 20 + 's';
             const delay = Math.random() * 5 + 's';
+            const hue = Math.floor(Math.random() * 360);
             
             particle.style.width = size;
             particle.style.height = size;
             particle.style.left = left;
             particle.style.animationDuration = duration;
             particle.style.animationDelay = delay;
-            particle.style.opacity = Math.random() * 0.6 + 0.1;
-            particle.style.background = Math.random() > 0.5 
-                ? 'rgba(255, 255, 255, 0.9)' 
-                : Math.random() > 0.5 
-                    ? 'rgba(106, 17, 203, 0.8)' 
-                    : 'rgba(0, 198, 255, 0.8)';
+            particle.style.background = `linear-gradient(135deg, hsl(${hue}, 70%, 50%), hsl(${hue + 30}, 70%, 50%))`;
+            particle.style.opacity = Math.random() * 0.4 + 0.1;
             
-            stardustContainer.appendChild(particle);
+            particleContainer.appendChild(particle);
             
             setTimeout(() => {
                 particle.remove();
             }, parseFloat(duration) * 1000);
         }
         
-        // Create initial particles
-        for (let i = 0; i < 50; i++) {
+        // Initial particles
+        for (let i = 0; i < 15; i++) {
             setTimeout(() => createParticle(), Math.random() * 3000);
         }
         
         // Continuous generation
-        setInterval(createParticle, 500);
+        setInterval(createParticle, 1000);
 
         // ============================================
-        // 2. 3D PARALLAX & MOUSE EFFECTS
+        // 3D PARALLAX EFFECTS
         // ============================================
-        const heroSection = document.getElementById('hero');
-        const heroPortrait = document.getElementById('heroPortrait');
-        const heroBgLayer = document.querySelector('.hero-bg-layer-1');
-        const portraitContainer = document.getElementById('portraitContainer');
+        const heroSection = document.querySelector('.hero-section');
+        const portraitImage = document.getElementById('portraitImage');
+        const heroBackground = document.getElementById('heroBackground');
         
-        // Enhanced 3D mouse movement effect
         heroSection.addEventListener('mousemove', (e) => {
             const { clientX, clientY } = e;
             const { innerWidth, innerHeight } = window;
@@ -1998,101 +1763,82 @@
             const xPercent = (clientX / innerWidth - 0.5) * 2;
             const yPercent = (clientY / innerHeight - 0.5) * 2;
             
-            // 3D transform for hero portrait
-            if (window.innerWidth > 992) { // Desktop only
-                heroPortrait.style.transform = `
-                    translateZ(${150 + xPercent * 30}px)
-                    rotateY(${xPercent * 15}deg)
-                    rotateX(${-yPercent * 15}deg)
-                    translateY(${yPercent * 20}px)
-                `;
-            }
-            
-            // Parallax effect for background layer
-            heroBgLayer.style.transform = `
-                translateZ(-300px)
-                rotateY(${xPercent * 10}deg)
-                rotateX(${-yPercent * 10}deg)
-                scale(${1.4 - Math.abs(xPercent) * 0.1})
+            // 3D transform for portrait
+            const portraitWrapper = document.querySelector('.portrait-wrapper');
+            portraitWrapper.style.transform = `
+                translateY(-20px)
+                rotateY(${xPercent * 8}deg)
+                rotateX(${-yPercent * 8}deg)
+                translateZ(${Math.abs(xPercent) * 30 + Math.abs(yPercent) * 30}px)
             `;
             
-            // Float cards effect
-            const infoCards = document.querySelectorAll('.float-info-card');
-            infoCards.forEach((card, index) => {
-                const delay = index * 0.2;
-                card.style.transform = `
-                    translateZ(100px)
-                    translateX(${xPercent * 40}px)
-                    translateY(${yPercent * 40}px)
-                    rotate(${xPercent * 10}deg)
+            // Parallax for background
+            heroBackground.style.transform = `
+                translateZ(-150px) 
+                rotateY(${xPercent * 3}deg)
+                rotateX(${-yPercent * 3}deg)
+                scale(${1.2 - Math.abs(xPercent) * 0.04})
+            `;
+            
+            // Social icons effect
+            const socialIcons = document.querySelectorAll('.social-icon');
+            socialIcons.forEach((icon, index) => {
+                const delay = index * 0.02;
+                icon.style.transform = `
+                    translateX(${xPercent * 15}px)
+                    translateY(${yPercent * 15}px)
                 `;
             });
             
-            // Social cubes effect
-            const socialCubes = document.querySelectorAll('.social-cube');
-            socialCubes.forEach((cube, index) => {
-                const delay = index * 0.02;
-                cube.style.transform = `
-                    rotateY(${xPercent * 20}deg)
-                    rotateX(${-yPercent * 20}deg)
-                    translateY(${yPercent * 10}px)
+            // Timeline dots effect
+            const timelineDots = document.querySelectorAll('.timeline-dot');
+            timelineDots.forEach((dot, index) => {
+                dot.style.transform = `
+                    translateX(-50%) 
+                    translateZ(${Math.abs(xPercent) * 20 + Math.abs(yPercent) * 20}px)
                 `;
             });
         });
         
-        // Reset on mouse leave
         heroSection.addEventListener('mouseleave', () => {
-            if (window.innerWidth > 992) {
-                heroPortrait.style.transform = 'translateZ(150px) rotateY(0deg) rotateX(0deg) translateY(0)';
-            }
+            const portraitWrapper = document.querySelector('.portrait-wrapper');
+            portraitWrapper.style.transform = 'translateY(-20px)';
+            heroBackground.style.transform = 'translateZ(-150px) scale(1.2)';
             
-            heroBgLayer.style.transform = 'translateZ(-300px) rotateY(0deg) rotateX(0deg) scale(1.4)';
-            
-            document.querySelectorAll('.float-info-card').forEach(card => {
-                card.style.transform = 'translateZ(100px)';
+            document.querySelectorAll('.social-icon').forEach(icon => {
+                icon.style.transform = 'translate(0, 0)';
             });
             
-            document.querySelectorAll('.social-cube').forEach(cube => {
-                cube.style.transform = 'rotateY(0deg) rotateX(0deg) translateY(0)';
+            document.querySelectorAll('.timeline-dot').forEach(dot => {
+                dot.style.transform = 'translateX(-50%) translateZ(20px)';
             });
         });
 
         // ============================================
-        // 3. SCROLL REVEAL ANIMATIONS
+        // SCROLL REVEAL ANIMATIONS
         // ============================================
-        const observerOptions3D = {
+        const observerOptions = {
             threshold: 0.1,
-            rootMargin: '0px 0px -60px 0px'
+            rootMargin: '0px 0px -100px 0px'
         };
         
-        const observer3D = new IntersectionObserver((entries) => {
+        const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('visible');
-                    // Add staggered animation delay
-                    if (entry.target.classList.contains('gallery-item-3d')) {
-                        entry.target.style.animationDelay = `${entry.target.dataset.delay || '0'}s`;
-                    }
                 }
             });
-        }, observerOptions3D);
+        }, observerOptions);
         
-        // Observe all 3D animated elements
-        document.querySelectorAll('.animate-on-scroll-3d').forEach((el, index) => {
-            el.dataset.delay = (index * 0.15).toFixed(1);
-            observer3D.observe(el);
-        });
-        
-        // Gallery items stagger effect
-        document.querySelectorAll('.gallery-item-3d').forEach((item, index) => {
-            item.dataset.delay = (index * 0.1).toFixed(1);
-            observer3D.observe(item);
+        // Observe all animated elements
+        document.querySelectorAll('.animate-on-scroll').forEach(el => {
+            observer.observe(el);
         });
 
         // ============================================
-        // 4. COSMIC THEME GENERATOR
+        // MAGIC THEME GENERATOR
         // ============================================
-        function randomizeCosmicTheme() {
+        function magicTheme() {
             const hue1 = Math.floor(Math.random() * 360);
             const hue2 = (hue1 + 120) % 360;
             const hue3 = (hue1 + 240) % 360;
@@ -2102,45 +1848,42 @@
             // Update CSS variables
             root.style.setProperty('--primary-hue', hue1);
             root.style.setProperty('--secondary-hue', hue2);
-            
-            // Update nebula colors
-            const nebulas = document.querySelectorAll('.nebula-orb');
-            nebulas[0].style.background = `radial-gradient(circle at 30% 30%, hsl(${hue1}, 70%, 50%), transparent 70%)`;
-            nebulas[1].style.background = `radial-gradient(circle at 70% 70%, hsl(${hue2}, 70%, 50%), transparent 70%)`;
-            nebulas[2].style.background = `radial-gradient(circle at 50% 50%, hsl(${hue3}, 70%, 50%), transparent 70%)`;
+            root.style.setProperty('--accent-hue', hue3);
             
             // Update gradients
-            const gradients = [
-                `linear-gradient(135deg, hsl(${hue1}, 70%, 50%) 0%, hsl(${hue2}, 70%, 50%) 100%)`,
-                `linear-gradient(135deg, hsl(${hue3}, 70%, 50%) 0%, hsl(${hue1}, 70%, 50%) 100%)`,
-                `linear-gradient(135deg, hsl(${hue2}, 70%, 50%) 0%, hsl(${hue3}, 70%, 50%) 100%)`
-            ];
+            root.style.setProperty('--gradient-1', `linear-gradient(135deg, hsl(${hue1}, 70%, 50%) 0%, hsl(${hue2}, 70%, 50%) 100%)`);
+            root.style.setProperty('--gradient-2', `linear-gradient(135deg, hsl(${hue3}, 70%, 50%) 0%, hsl(${hue3}, 70%, 70%) 100%)`);
+            root.style.setProperty('--gradient-3', `linear-gradient(135deg, hsl(${hue2}, 70%, 50%) 0%, hsl(${hue1}, 70%, 50%) 100%)`);
             
-            // Randomly assign gradients
-            document.querySelector('.theme-magic-btn').style.background = gradients[0];
-            document.querySelector('.hero-badge').style.background = gradients[1];
-            document.querySelector('.section-heading::after').style.background = gradients[2];
+            // Update hero title gradient
+            const heroTitle = document.querySelector('.hero-title');
+            heroTitle.style.background = `linear-gradient(135deg, #fff 0%, hsl(${hue2}, 100%, 70%) 40%, hsl(${hue1}, 100%, 60%) 100%)`;
             
-            // Update scrollbar
-            document.querySelector('::-webkit-scrollbar-thumb').style.background = gradients[0];
+            // Update section header gradient
+            const sectionHeaders = document.querySelectorAll('.section-header');
+            sectionHeaders.forEach(header => {
+                header.style.background = `linear-gradient(135deg, #fff 0%, hsl(${hue2}, 100%, 70%) 50%, hsl(${hue1}, 100%, 60%) 100%)`;
+            });
             
-            // Animation feedback
-            const themeBtn = document.querySelector('.theme-magic-btn');
-            themeBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Cosmic Shift...';
+            // Update mission title gradient
+            const missionTitle = document.querySelector('.mission-title');
+            missionTitle.style.background = `linear-gradient(45deg, #fff, hsl(${hue2}, 100%, 70%), hsl(${hue1}, 100%, 60%))`;
             
-            // Add particle burst effect
-            for (let i = 0; i < 30; i++) {
-                setTimeout(() => createParticle(), i * 50);
-            }
+            // Add animation feedback
+            const magicBtn = document.querySelector('.magic-btn');
+            const originalHTML = magicBtn.innerHTML;
+            magicBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Transforming...';
+            magicBtn.disabled = true;
             
             setTimeout(() => {
-                themeBtn.innerHTML = '<i class="fas fa-wand-magic-sparkles"></i> Cosmic Theme';
-                themeBtn.style.background = gradients[0];
+                magicBtn.innerHTML = originalHTML;
+                magicBtn.disabled = false;
+                magicBtn.style.background = `linear-gradient(135deg, hsl(${hue1}, 70%, 50%), hsl(${hue2}, 70%, 50%))`;
             }, 1500);
         }
 
         // ============================================
-        // 5. SMOOTH SCROLL FOR NAVIGATION
+        // SMOOTH SCROLL FOR NAVIGATION
         // ============================================
         document.querySelectorAll('.nav-item').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
@@ -2159,10 +1902,10 @@
         });
 
         // ============================================
-        // 6. NAVIGATION ACTIVE STATE
+        // ACTIVE NAVIGATION
         // ============================================
-        const sections = document.querySelectorAll('.content-section, .hero-section');
-        const navLinks = document.querySelectorAll('.nav-item');
+        const sections = document.querySelectorAll('.page-section, .hero-section');
+        const navItems = document.querySelectorAll('.nav-item');
         
         function updateActiveNav() {
             let current = '';
@@ -2171,21 +1914,20 @@
                 const sectionTop = section.offsetTop;
                 const sectionHeight = section.clientHeight;
                 
-                if (window.scrollY >= (sectionTop - 200)) {
+                if (scrollY >= (sectionTop - 150)) {
                     current = section.getAttribute('id');
                 }
             });
             
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href') === `#${current}`) {
-                    link.classList.add('active');
-                    link.style.background = 'rgba(0, 198, 255, 0.25)';
-                    link.style.boxShadow = 
-                        '0 10px 25px rgba(0, 198, 255, 0.4), inset 0 0 25px rgba(255, 255, 255, 0.2)';
+            navItems.forEach(item => {
+                item.classList.remove('active');
+                if (item.getAttribute('href') === `#${current}`) {
+                    item.classList.add('active');
+                    item.style.background = 'rgba(0, 198, 255, 0.2)';
+                    item.style.boxShadow = '0 10px 25px rgba(0, 198, 255, 0.4)';
                 } else {
-                    link.style.background = '';
-                    link.style.boxShadow = '';
+                    item.style.background = '';
+                    item.style.boxShadow = '';
                 }
             });
         }
@@ -2193,115 +1935,77 @@
         window.addEventListener('scroll', updateActiveNav);
 
         // ============================================
-        // 7. IMAGE LOADING EFFECT
+        // IMAGE LOADING EFFECTS
         // ============================================
         const images = document.querySelectorAll('img');
         images.forEach(img => {
             img.addEventListener('load', function() {
                 this.style.opacity = '1';
                 this.style.transform = 'scale(1)';
-                this.style.filter = 'brightness(1)';
             });
             
             // Initial state
             img.style.opacity = '0';
             img.style.transform = 'scale(0.9)';
-            img.style.filter = 'brightness(0.5)';
-            img.style.transition = 'opacity 0.6s ease, transform 0.6s ease, filter 0.6s ease';
+            img.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
         });
 
         // ============================================
-        // 8. MOBILE TOUCH OPTIMIZATION
+        // MOBILE TOUCH ENHANCEMENTS
         // ============================================
-        function optimizeForMobile() {
+        function handleMobileView() {
             if (window.innerWidth <= 768) {
-                // Optimize 3D effects for mobile
-                document.documentElement.style.setProperty('--transition', 'cubic-bezier(0.4, 0, 0.2, 1)');
-                
-                // Reduce animations on mobile
-                document.querySelectorAll('.social-cube, .social-sphere').forEach(el => {
-                    el.style.animationDuration = '40s';
+                // Add touch effects
+                document.querySelectorAll('.glass-card, .gallery-item, .social-icon').forEach(element => {
+                    element.addEventListener('touchstart', function() {
+                        this.style.transform = 'scale(0.98)';
+                    });
+                    
+                    element.addEventListener('touchend', function() {
+                        this.style.transform = '';
+                    });
                 });
             }
         }
         
-        // Initial optimization
-        optimizeForMobile();
-        window.addEventListener('resize', optimizeForMobile);
+        handleMobileView();
+        window.addEventListener('resize', handleMobileView);
 
         // ============================================
-        // 9. PERFORMANCE OPTIMIZATION
-        // ============================================
-        let animationFrameId = null;
-        window.addEventListener('scroll', () => {
-            if (!animationFrameId) {
-                animationFrameId = window.requestAnimationFrame(() => {
-                    updateActiveNav();
-                    animationFrameId = null;
-                });
-            }
-        });
-
-        // ============================================
-        // 10. INITIAL LOAD ANIMATIONS
+        // INITIAL LOAD ANIMATIONS
         // ============================================
         window.addEventListener('load', () => {
             document.body.style.opacity = '1';
             document.body.style.transform = 'translateY(0)';
             
             // Animate hero elements sequentially
-            const heroElements = document.querySelectorAll('.hero-text-content > *');
+            const heroElements = document.querySelectorAll('.hero-text > *');
             heroElements.forEach((el, index) => {
-                el.style.animationDelay = `${index * 0.25}s`;
-                el.classList.add('animate-on-scroll-3d');
+                el.style.animationDelay = `${index * 0.2}s`;
+                el.classList.add('animate-on-scroll');
             });
             
-            // Force portrait to load
-            const portrait = document.querySelector('.hero-portrait');
-            portrait.style.backgroundImage = `url('portrait.jpg.jpeg')`;
-            
-            // Add loading completion effect
-            setTimeout(() => {
-                document.body.classList.add('loaded');
-            }, 1000);
+            // Initial body styles
+            document.body.style.transition = 'opacity 1s ease, transform 1s ease';
         });
         
-        // Initial body styles for fade-in effect
+        // Initial body state
         document.body.style.opacity = '0';
         document.body.style.transform = 'translateY(30px)';
-        document.body.style.transition = 'opacity 1s ease, transform 1s ease';
 
         // ============================================
-        // 11. PORTRAIT CLICK EFFECT
+        // PERFORMANCE OPTIMIZATION
         // ============================================
-        document.querySelector('.hero-portrait').addEventListener('click', function() {
-            this.classList.toggle('portrait-zoomed');
-            
-            if (this.classList.contains('portrait-zoomed')) {
-                this.style.transform = 'translateZ(300px) scale(1.5)';
-                this.style.zIndex = '1000';
-                this.style.cursor = 'zoom-out';
-            } else {
-                this.style.transform = 'translateZ(150px)';
-                this.style.zIndex = '10';
-                this.style.cursor = 'zoom-in';
+        let scrollTicking = false;
+        window.addEventListener('scroll', () => {
+            if (!scrollTicking) {
+                window.requestAnimationFrame(() => {
+                    updateActiveNav();
+                    scrollTicking = false;
+                });
+                scrollTicking = true;
             }
         });
-
-        // ============================================
-        // 12. AUTO-THEME ROTATION (Optional)
-        // ============================================
-        let autoThemeInterval;
-        function startAutoThemeRotation() {
-            autoThemeInterval = setInterval(randomizeCosmicTheme, 30000); // Every 30 seconds
-        }
-        
-        function stopAutoThemeRotation() {
-            clearInterval(autoThemeInterval);
-        }
-        
-        // Uncomment to enable auto theme rotation
-        // startAutoThemeRotation();
     </script>
 </body>
 </html>
