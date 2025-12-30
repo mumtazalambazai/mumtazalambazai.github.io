@@ -10,10 +10,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400&family=Inter:wght@300;400;500;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
-    <!-- 3D Library -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.min.js"></script>
-    
     <style>
         /* =========================
            CORE RESET & VARIABLES
@@ -33,8 +29,6 @@
             --gradient-primary: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
             --gradient-secondary: linear-gradient(135deg, #ff007a 0%, #ff8c00 100%);
             --gradient-accent: linear-gradient(135deg, #00c6ff 0%, #0072ff 100%);
-            --gradient-rainbow: linear-gradient(90deg, #ff0080, #ff8c00, #40e0d0, #20b2aa, #9370db, #ff0080);
-            --gradient-gold: linear-gradient(135deg, #ffd700, #ffed4e, #ffd700);
         }
 
         * {
@@ -180,18 +174,17 @@
            CUSTOM SCROLLBAR
         ========================= */
         ::-webkit-scrollbar {
-            width: 14px;
+            width: 12px;
         }
 
         ::-webkit-scrollbar-track {
             background: rgba(0, 0, 0, 0.3);
             backdrop-filter: blur(10px);
-            border-radius: 10px;
         }
 
         ::-webkit-scrollbar-thumb {
             background: var(--gradient-primary);
-            border-radius: 10px;
+            border-radius: 6px;
             border: 2px solid rgba(255, 255, 255, 0.1);
             transition: all 0.3s ease;
         }
@@ -199,7 +192,6 @@
         ::-webkit-scrollbar-thumb:hover {
             background: var(--gradient-secondary);
             transform: scale(1.1);
-            box-shadow: 0 0 20px rgba(255, 0, 122, 0.5);
         }
 
         /* =========================
@@ -218,21 +210,6 @@
             background-clip: text;
             -webkit-text-fill-color: transparent;
             text-fill-color: transparent;
-        }
-
-        .rainbow-text {
-            background: var(--gradient-rainbow);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            text-fill-color: transparent;
-            background-size: 400% 400%;
-            animation: rainbowShift 8s ease infinite;
-        }
-
-        @keyframes rainbowShift {
-            0%, 100% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
         }
 
         /* =========================
@@ -462,7 +439,7 @@
                     rgba(0, 0, 0, 0.4),
                     rgba(0, 0, 0, 0.6)
                 ),
-                url('https://images.unsplash.com/photo-1553877522-43269d4ea984?ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80') center/cover no-repeat;
+                url('hero-bg.jpg.jpeg') center/cover no-repeat;
             transform: translateZ(-300px) scale(1.4);
             filter: 
                 blur(2px)
@@ -686,7 +663,7 @@
         }
 
         /* =========================
-           PORTRAIT 3D CONTAINER
+           PORTRAIT 3D CONTAINER (SMALLER & RIGHT CORNER)
         ========================= */
         .hero-img-container {
             position: relative;
@@ -715,7 +692,7 @@
         .hero-img-bg {
             position: absolute;
             inset: 0;
-            background: url('https://images.unsplash.com/photo-1553877522-43269d4ea984?ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80') center/cover no-repeat;
+            background: url('hero-bg.jpg.jpeg') center/cover no-repeat;
             border-radius: 40px;
             opacity: 0.3;
             transform: translateZ(-150px) scale(0.9);
@@ -726,54 +703,48 @@
             animation: bgPulse 10s infinite alternate;
         }
 
-        @keyframes bgPulse {
-            0% { opacity: 0.3; }
-            100% { opacity: 0.5; }
-        }
-
+        /* PORTRAIT IMAGE - SMALLER AND IN RIGHT CORNER */
         .hero-img-main {
             position: absolute;
-            width: 280px;
-            height: 380px;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%) translateZ(150px);
-            background: 
-                linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)),
-                url('https://images.unsplash.com/photo-1564564321837-a57b7070ac4f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80') center/cover no-repeat;
-            border-radius: 25px;
-            border: 3px solid rgba(255, 255, 255, 0.2);
+            width: 180px;  /* Smaller size */
+            height: 240px; /* Smaller size */
+            top: 5%;       /* Higher up */
+            right: 2%;     /* More to the right corner */
+            transform: translateZ(150px);
+            background: url('portrait.jpg.jpeg') center/cover no-repeat;
+            border-radius: 20px; /* Slightly smaller radius */
+            border: 2px solid rgba(255, 255, 255, 0.2);
             transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             z-index: 50;
             animation: floatPortrait 9s ease-in-out infinite;
             overflow: visible;
             box-shadow: 
-                0 25px 50px rgba(0, 0, 0, 0.6),
-                0 0 40px rgba(106, 17, 203, 0.5),
-                inset 0 0 40px rgba(255, 255, 255, 0.1);
+                0 20px 40px rgba(0, 0, 0, 0.6),
+                0 0 30px rgba(106, 17, 203, 0.5),
+                inset 0 0 30px rgba(255, 255, 255, 0.1);
         }
 
         @keyframes floatPortrait {
             0%, 100% { 
-                transform: translate(-50%, -50%) translateZ(150px) rotateY(0deg) rotateX(0deg) translateY(0); 
+                transform: translateZ(150px) rotateY(0deg) rotateX(0deg) translateY(0); 
             }
             25% { 
-                transform: translate(-50%, -50%) translateZ(180px) rotateY(6deg) rotateX(4deg) translateY(-12px);
+                transform: translateZ(180px) rotateY(5deg) rotateX(3deg) translateY(-10px);
             }
             50% { 
-                transform: translate(-50%, -50%) translateZ(150px) rotateY(0deg) rotateX(0deg) translateY(0); 
+                transform: translateZ(150px) rotateY(0deg) rotateX(0deg) translateY(0); 
             }
             75% { 
-                transform: translate(-50%, -50%) translateZ(180px) rotateY(-6deg) rotateX(-4deg) translateY(12px); 
+                transform: translateZ(180px) rotateY(-5deg) rotateX(-3deg) translateY(10px); 
             }
         }
 
         .hero-img-main:hover {
-            transform: translate(-50%, -50%) translateZ(200px) rotateY(8deg) rotateX(4deg) scale(1.08);
+            transform: translateZ(200px) rotateY(6deg) rotateX(3deg) scale(1.08);
             box-shadow: 
-                0 35px 70px rgba(0, 0, 0, 0.8),
-                0 0 60px rgba(106, 17, 203, 0.7),
-                inset 0 0 60px rgba(255, 255, 255, 0.2);
+                0 30px 60px rgba(0, 0, 0, 0.8),
+                0 0 50px rgba(106, 17, 203, 0.7),
+                inset 0 0 50px rgba(255, 255, 255, 0.2);
         }
 
         .hero-img-main::before {
@@ -791,17 +762,17 @@
             );
             z-index: 1;
             animation: portraitShine 6s ease-in-out infinite;
-            border-radius: 25px;
+            border-radius: 20px;
         }
 
         .hero-img-frame {
             position: absolute;
-            top: -8px;
-            left: -8px;
-            right: -8px;
-            bottom: -8px;
+            top: -6px;
+            left: -6px;
+            right: -6px;
+            bottom: -6px;
             border: 2px solid transparent;
-            border-radius: 30px;
+            border-radius: 25px;
             background: linear-gradient(45deg, #6a11cb, #2575fc, #ff007a, #ff8c00) border-box;
             -webkit-mask: 
                 linear-gradient(#fff 0 0) padding-box, 
@@ -812,31 +783,27 @@
             animation: frameRotate 20s linear infinite;
         }
 
-        @keyframes frameRotate {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-
         .float-card {
             position: absolute;
             background: rgba(255, 255, 255, 0.12);
             backdrop-filter: blur(25px) saturate(200%);
             -webkit-backdrop-filter: blur(25px) saturate(200%);
-            padding: 18px 28px;
-            border-radius: 20px;
+            padding: 15px 25px;
+            border-radius: 18px;
             border: 1px solid rgba(255, 255, 255, 0.25);
             box-shadow: 
-                0 20px 40px rgba(0, 0, 0, 0.4),
-                0 0 25px rgba(106, 17, 203, 0.3);
+                0 15px 35px rgba(0, 0, 0, 0.4),
+                0 0 20px rgba(106, 17, 203, 0.3);
             display: flex;
             align-items: center;
-            gap: 15px;
+            gap: 12px;
             font-weight: 700;
+            font-size: 14px;
             transform: translateZ(100px);
             animation: floatCard 7s ease-in-out infinite;
             z-index: 6;
             overflow: hidden;
-            min-width: 220px;
+            min-width: 180px;
         }
 
         .float-card::before {
@@ -854,23 +821,24 @@
             left: 100%;
         }
 
+        /* Adjusted floating card positions for smaller portrait */
         .fc-1 {
-            top: 15%;
-            right: 5%;
+            top: 2%;       /* Adjusted up */
+            right: 8%;     /* Adjusted position */
             animation-delay: 0s;
             background: rgba(106, 17, 203, 0.15);
         }
 
         .fc-2 {
-            top: 40%;
-            right: -5%;
+            top: 22%;      /* Adjusted down */
+            right: -4%;    /* Adjusted position */
             animation-delay: 2s;
             background: rgba(37, 117, 252, 0.15);
         }
 
         .fc-3 {
-            bottom: 20%;
-            right: 12%;
+            bottom: 25%;   /* Adjusted up */
+            right: 10%;    /* Adjusted position */
             animation-delay: 4s;
             background: rgba(255, 0, 122, 0.15);
         }
@@ -880,14 +848,14 @@
                 transform: translateZ(100px) translateY(0) rotate(0deg); 
             }
             50% { 
-                transform: translateZ(100px) translateY(-30px) rotate(3deg); 
+                transform: translateZ(100px) translateY(-25px) rotate(3deg); 
             }
         }
 
         .float-card i {
-            font-size: 24px;
+            font-size: 20px;
             color: #00c6ff;
-            filter: drop-shadow(0 0 10px rgba(0, 198, 255, 0.5));
+            filter: drop-shadow(0 0 8px rgba(0, 198, 255, 0.5));
         }
 
         /* =========================
@@ -1684,16 +1652,354 @@
         }
 
         /* =========================
-           CANVAS 3D BACKGROUND
+           RESPONSIVE DESIGN
         ========================= */
-        #threeCanvas {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -2;
-            pointer-events: none;
+        @media (max-width: 1400px) {
+            .hero-content {
+                gap: 60px;
+                max-width: 1200px;
+            }
+
+            .hero-img-main {
+                width: 160px;
+                height: 210px;
+                top: 6%;
+                right: 2%;
+            }
+        }
+
+        @media (max-width: 1200px) {
+            .hero-content {
+                gap: 60px;
+                max-width: 1200px;
+            }
+
+            .hero-img-main {
+                width: 150px;
+                height: 200px;
+                top: 8%;
+                right: 2%;
+            }
+
+            .float-card {
+                min-width: 160px;
+                padding: 12px 20px;
+                font-size: 13px;
+            }
+
+            .hero-socials .hs {
+                width: 65px;
+                height: 65px;
+                font-size: 26px;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 60px;
+            }
+
+            .hero-img-container {
+                height: 550px;
+                order: -1;
+                margin-top: 0;
+            }
+
+            .hero-img-main {
+                width: 140px;
+                height: 190px;
+                top: 50%;
+                right: 50%;
+                transform: translate(50%, -50%) translateZ(150px);
+            }
+
+            .float-card {
+                min-width: 140px;
+                font-size: 12px;
+            }
+
+            .fc-1 {
+                top: 10%;
+                right: 5%;
+            }
+
+            .fc-2 {
+                top: 30%;
+                right: -5%;
+            }
+
+            .fc-3 {
+                bottom: 15%;
+                right: 10%;
+            }
+
+            .hero-socials {
+                grid-template-columns: repeat(4, 1fr);
+                max-width: 450px;
+                gap: 20px;
+            }
+
+            .grid-3 {
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: 40px;
+            }
+
+            .section-title {
+                font-size: 3.2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            /* Navigation */
+            nav {
+                bottom: 25px;
+                padding: 15px 25px;
+                gap: 25px;
+                width: 90%;
+                max-width: 450px;
+            }
+
+            nav a {
+                width: 42px;
+                height: 42px;
+                font-size: 20px;
+            }
+
+            /* Hero Section */
+            .hero {
+                padding: 120px 20px 80px;
+            }
+
+            .hero-badge {
+                padding: 10px 24px;
+                font-size: 13px;
+            }
+
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+
+            .hero-img-container {
+                height: 450px;
+            }
+
+            .hero-img-main {
+                width: 130px;
+                height: 180px;
+                top: 10%;
+                right: 50%;
+                transform: translate(50%, -50%) translateZ(150px);
+            }
+
+            .float-card {
+                padding: 10px 18px;
+                font-size: 12px;
+                min-width: 140px;
+            }
+
+            /* Hero Social Icons */
+            .hero-socials {
+                grid-template-columns: repeat(3, 1fr);
+                max-width: 350px;
+                gap: 18px;
+            }
+
+            .hero-socials .hs {
+                width: 60px;
+                height: 60px;
+                font-size: 24px;
+            }
+
+            /* Sections */
+            section {
+                padding: 100px 20px;
+            }
+
+            .section-title {
+                font-size: 2.8rem;
+                margin-bottom: 80px;
+            }
+
+            .glass-card {
+                padding: 40px;
+            }
+
+            /* Timeline */
+            .timeline::before {
+                left: 0;
+            }
+
+            .timeline-item {
+                justify-content: flex-start !important;
+                padding-left: 50px;
+            }
+
+            .timeline-content {
+                width: 100%;
+            }
+
+            .timeline-dot {
+                left: 0;
+                transform: translateX(-50%);
+            }
+
+            /* Gallery */
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+                gap: 25px;
+            }
+
+            .gallery-item {
+                height: 300px;
+            }
+
+            /* Connect Section */
+            .social-3d-container {
+                gap: 30px;
+            }
+
+            .social-btn {
+                width: 75px;
+                height: 75px;
+                font-size: 30px;
+            }
+
+            /* Mission Card */
+            .mission-card {
+                padding: 50px 35px;
+            }
+
+            .mission-card h2 {
+                font-size: 2.4rem;
+            }
+
+            .mission-card p {
+                font-size: 1.5rem;
+            }
+
+            /* Theme Button */
+            .theme-btn {
+                top: 25px;
+                right: 25px;
+                padding: 12px 24px;
+                font-size: 15px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero-socials {
+                grid-template-columns: repeat(2, 1fr);
+                max-width: 250px;
+                gap: 15px;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .hero-btn {
+                width: 100%;
+                min-width: auto;
+            }
+
+            .grid-3 {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-item {
+                height: 280px;
+            }
+
+            nav {
+                gap: 20px;
+                padding: 12px 20px;
+            }
+
+            nav a {
+                width: 38px;
+                height: 38px;
+                font-size: 18px;
+            }
+
+            .section-title {
+                font-size: 2.4rem;
+            }
+
+            .hero h1 {
+                font-size: 2.3rem;
+            }
+
+            .hero-img-main {
+                width: 120px;
+                height: 160px;
+                top: 12%;
+                right: 50%;
+            }
+
+            .float-card {
+                min-width: 120px;
+                padding: 8px 15px;
+                font-size: 11px;
+            }
+
+            .social-btn {
+                width: 65px;
+                height: 65px;
+                font-size: 26px;
+            }
+
+            .theme-btn {
+                padding: 10px 20px;
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .hero-socials {
+                grid-template-columns: repeat(2, 1fr);
+                max-width: 220px;
+                gap: 12px;
+            }
+
+            .hero-socials .hs {
+                width: 55px;
+                height: 55px;
+                font-size: 22px;
+            }
+
+            nav {
+                gap: 15px;
+                padding: 10px 15px;
+                width: 95%;
+            }
+
+            nav a {
+                width: 35px;
+                height: 35px;
+                font-size: 16px;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero-img-main {
+                width: 100px;
+                height: 140px;
+                top: 15%;
+                right: 50%;
+            }
         }
 
         /* =========================
@@ -1790,314 +2096,6 @@
             0%, 100% { opacity: 0.5; }
             50% { opacity: 1; }
         }
-
-        /* =========================
-           RESPONSIVE DESIGN
-        ========================= */
-        @media (max-width: 1400px) {
-            .hero-content {
-                gap: 60px;
-                max-width: 1200px;
-            }
-
-            .hero-img-main {
-                width: 250px;
-                height: 340px;
-            }
-        }
-
-        @media (max-width: 1200px) {
-            .hero-content {
-                grid-template-columns: 1fr;
-                gap: 100px;
-                text-align: center;
-            }
-
-            .hero-img-main {
-                width: 280px;
-                height: 380px;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%) translateZ(150px);
-            }
-
-            .float-card {
-                min-width: 200px;
-                padding: 15px 25px;
-            }
-
-            .hero-socials .hs {
-                width: 65px;
-                height: 65px;
-                font-size: 26px;
-            }
-        }
-
-        @media (max-width: 992px) {
-            .hero-img-container {
-                height: 550px;
-                order: -1;
-                margin-top: 0;
-            }
-
-            .hero-img-main {
-                width: 220px;
-                height: 310px;
-            }
-
-            .float-card {
-                min-width: 180px;
-                font-size: 14px;
-            }
-
-            .fc-1 {
-                top: 10%;
-                right: 5%;
-            }
-
-            .fc-2 {
-                top: 30%;
-                right: -5%;
-            }
-
-            .fc-3 {
-                bottom: 15%;
-                right: 10%;
-            }
-
-            .hero-socials {
-                grid-template-columns: repeat(4, 1fr);
-                max-width: 450px;
-                gap: 20px;
-            }
-
-            .grid-3 {
-                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-                gap: 40px;
-            }
-
-            .section-title {
-                font-size: 3.2rem;
-            }
-        }
-
-        @media (max-width: 768px) {
-            nav a {
-                width: 42px;
-                height: 42px;
-                font-size: 20px;
-            }
-
-            /* Hero Section */
-            .hero {
-                padding: 120px 20px 80px;
-            }
-
-            .hero-badge {
-                padding: 10px 24px;
-                font-size: 13px;
-            }
-
-            .hero h1 {
-                font-size: 2.8rem;
-            }
-
-            .hero-img-container {
-                height: 450px;
-            }
-
-            .hero-img-main {
-                width: 200px;
-                height: 280px;
-            }
-
-            .float-card {
-                padding: 14px 22px;
-                font-size: 13px;
-                min-width: 160px;
-            }
-
-            /* Hero Social Icons */
-            .hero-socials {
-                grid-template-columns: repeat(3, 1fr);
-                max-width: 350px;
-                gap: 18px;
-            }
-
-            .hero-socials .hs {
-                width: 60px;
-                height: 60px;
-                font-size: 24px;
-            }
-
-            /* Sections */
-            section {
-                padding: 100px 20px;
-            }
-
-            .section-title {
-                font-size: 2.8rem;
-                margin-bottom: 80px;
-            }
-
-            .glass-card {
-                padding: 40px;
-            }
-
-            /* Timeline */
-            .timeline::before {
-                left: 0;
-            }
-
-            .timeline-item {
-                justify-content: flex-start !important;
-                padding-left: 50px;
-            }
-
-            .timeline-content {
-                width: 100%;
-            }
-
-            .timeline-dot {
-                left: 0;
-                transform: translateX(-50%);
-            }
-
-            /* Gallery */
-            .gallery-grid {
-                grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
-                gap: 25px;
-            }
-
-            .gallery-item {
-                height: 300px;
-            }
-
-            /* Connect Section */
-            .social-3d-container {
-                gap: 30px;
-            }
-
-            .social-btn {
-                width: 75px;
-                height: 75px;
-                font-size: 30px;
-            }
-
-            /* Mission Card */
-            .mission-card {
-                padding: 50px 35px;
-            }
-
-            .mission-card h2 {
-                font-size: 2.4rem;
-            }
-
-            .mission-card p {
-                font-size: 1.5rem;
-            }
-
-            /* Theme Button */
-            .theme-btn {
-                top: 25px;
-                right: 25px;
-                padding: 12px 24px;
-                font-size: 15px;
-            }
-        }
-
-        @media (max-width: 576px) {
-            .hero-buttons {
-                flex-direction: column;
-                gap: 20px;
-            }
-
-            .hero-btn {
-                width: 100%;
-                min-width: auto;
-            }
-
-            .grid-3 {
-                grid-template-columns: 1fr;
-            }
-
-            .gallery-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .gallery-item {
-                height: 280px;
-            }
-
-            nav {
-                gap: 20px;
-                padding: 12px 20px;
-            }
-
-            nav a {
-                width: 38px;
-                height: 38px;
-                font-size: 18px;
-            }
-
-            .section-title {
-                font-size: 2.4rem;
-            }
-
-            .hero h1 {
-                font-size: 2.3rem;
-            }
-
-            .hero-img-main {
-                width: 180px;
-                height: 250px;
-            }
-
-            .float-card {
-                min-width: 140px;
-                padding: 12px 18px;
-                font-size: 12px;
-            }
-
-            .social-btn {
-                width: 65px;
-                height: 65px;
-                font-size: 26px;
-            }
-
-            .theme-btn {
-                padding: 10px 20px;
-                font-size: 14px;
-            }
-        }
-
-        @media (max-width: 400px) {
-            .hero-socials .hs {
-                width: 55px;
-                height: 55px;
-                font-size: 22px;
-            }
-
-            nav {
-                gap: 15px;
-                padding: 10px 15px;
-                width: 95%;
-            }
-
-            nav a {
-                width: 35px;
-                height: 35px;
-                font-size: 16px;
-            }
-
-            .section-title {
-                font-size: 2rem;
-            }
-
-            .hero h1 {
-                font-size: 2rem;
-            }
-        }
     </style>
 </head>
 
@@ -2109,9 +2107,6 @@
             <div class="loader-text">Loading Portfolio</div>
         </div>
     </div>
-
-    <!-- THREE.JS CANVAS FOR 3D BACKGROUND -->
-    <canvas id="threeCanvas"></canvas>
 
     <!-- DYNAMIC BACKGROUND -->
     <div class="fluid-bg">
@@ -2189,879 +2184,4 @@
                 <i class="fab fa-whatsapp"></i>
             </a>
             <a href="https://www.linkedin.com/in/adv-mumtaz-alam-bazai-163a9a324" target="_blank" class="hs linkedin" title="LinkedIn">
-                <i class="fab fa-linkedin-in"></i>
-            </a>
-            <a href="https://www.instagram.com/mumtaz_alam" target="_blank" class="hs instagram" title="Instagram">
-                <i class="fab fa-instagram"></i>
-            </a>
-            <a href="https://www.facebook.com/mumtaz.alam.18488" target="_blank" class="hs facebook" title="Facebook">
-                <i class="fab fa-facebook-f"></i>
-            </a>
-            <a href="https://x.com/mumtazalam333" target="_blank" class="hs twitter" title="Twitter/X">
-                <i class="fab fa-x-twitter"></i>
-            </a>
-            <a href="https://my.weforum.org/network/people/001TG000009vSDhYAM/adv-mumtaz-alam" target="_blank" class="hs wef" title="World Economic Forum">
-                <i class="fas fa-globe"></i>
-            </a>
-            <a href="https://linktr.ee/mumtazalam" target="_blank" class="hs linktree" title="Linktree">
-                <i class="fas fa-link"></i>
-            </a>
-            <a href="https://www.tiktok.com/@mumtaz_alam" target="_blank" class="hs tiktok" title="TikTok">
-                <i class="fab fa-tiktok"></i>
-            </a>
-            <a href="https://www.snapchat.com/add/mumtazalam222" target="_blank" class="hs snapchat" title="Snapchat">
-                <i class="fab fa-snapchat-ghost"></i>
-            </a>
-            <a href="https://www.threads.com/@mumtaz_alam" target="_blank" class="hs threads" title="Threads">
-                <i class="fas fa-comment-dots"></i>
-            </a>
-            <a href="https://ok.ru/profile/910193583170" target="_blank" class="hs ok" title="Odnoklassniki">
-                <i class="fab fa-odnoklassniki"></i>
-            </a>
-        </div>
-    </section>
-
-    <!-- ABOUT SECTION -->
-    <section id="about" class="section">
-        <h2 class="section-title">The Journey</h2>
-        <div class="glass-card">
-            <div style="text-align: center; margin-bottom: 50px; max-width: 850px; margin: 0 auto 50px;">
-                <p style="font-size: 1.2rem; line-height: 1.9; color: rgba(255, 255, 255, 0.9);">
-                    Born on <strong style="color: #00c6ff;">11 August 2000</strong> in Kili Zdoon, District Pishin, Balochistan. Mumtaz is the eldest of nine siblings, son of Dr. Ameer Muhammad (Neurosurgeon). From village schooling to scholarship-based excellence at Pak-Turk Maarif, his journey is defined by discipline and brilliance.
-                </p>
-            </div>
-
-            <div class="timeline">
-                <div class="timeline-item animate-on-scroll">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h4>2019 - Intermediate</h4>
-                        <p>Pak-Turk Maarif International Schools & Colleges. Demonstrated leadership and multilingual fluency (Pashto, Urdu, English, Turkish).</p>
-                    </div>
-                </div>
-                <div class="timeline-item animate-on-scroll">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h4>2022 - BA (Arts)</h4>
-                        <p>University of Balochistan. Building the foundation for social sciences and political thought.</p>
-                    </div>
-                </div>
-                <div class="timeline-item animate-on-scroll">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h4>2024 - LLB (Hons) & MA Pol. Sci.</h4>
-                        <p>University Law College & University of Balochistan. Graduated with honors, mastering the intricacies of law and governance.</p>
-                    </div>
-                </div>
-                <div class="timeline-item animate-on-scroll">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h4>2025 - Legal License</h4>
-                        <p>Received Bar Council License (Reg No. 14/2025). Formally joined Iqra Law Associates under Advocate Abdul Zahir Kakar.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CAREER SECTION -->
-    <section id="career" class="section">
-        <h2 class="section-title">Legal & Social Impact</h2>
-        <div class="grid-3">
-            <div class="glass-card animate-on-scroll">
-                <i class="fas fa-gavel" style="font-size: 45px; margin-bottom: 25px; color: #ff007a;"></i>
-                <h3>Legal Career</h3>
-                <p style="margin-top: 20px; opacity: 0.9; font-size: 1.1rem;">
-                    Active practitioner in Civil, Criminal, and Human Rights litigation. Known for pro bono work for marginalized communities in Balochistan. Trained at Iqra Law Associates, Quetta.
-                </p>
-                <div class="skill-tag">
-                    <i class="fas fa-balance-scale"></i>
-                    <span>Civil & Criminal Law</span>
-                </div>
-                <div class="skill-tag">
-                    <i class="fas fa-hands-helping"></i>
-                    <span>Pro Bono Services</span>
-                </div>
-            </div>
-
-            <div class="glass-card animate-on-scroll">
-                <i class="fas fa-globe-asia" style="font-size: 45px; margin-bottom: 25px; color: #00c6ff;"></i>
-                <h3>Global Shaper (WEF)</h3>
-                <p style="margin-top: 20px; opacity: 0.9; font-size: 1.1rem;">
-                    Curator of Quetta Hub. Represented at <strong>Global Shapers Annual Summit 2025 (Geneva)</strong>. Authored the Governance Charter and spearheaded the first Youth Policy Project.
-                </p>
-                <div class="skill-tag">
-                    <i class="fas fa-chart-line"></i>
-                    <span>Youth Policy Development</span>
-                </div>
-                <div class="skill-tag">
-                    <i class="fas fa-users"></i>
-                    <span>Community Leadership</span>
-                </div>
-            </div>
-
-            <div class="glass-card animate-on-scroll">
-                <i class="fas fa-book-open" style="font-size: 45px; margin-bottom: 25px; color: #6a11cb;"></i>
-                <h3>Publications</h3>
-                <p style="margin-top: 20px; opacity: 0.9; font-size: 1.1rem;">
-                    Author of <em>"Human Rights and Responsibilities"</em> (2021) and research on <em>"The Role of ECP in Free and Fair Elections"</em> (2024).
-                </p>
-                <div class="skill-tag">
-                    <i class="fas fa-pen-fancy"></i>
-                    <span>Academic Writing</span>
-                </div>
-                <div class="skill-tag">
-                    <i class="fas fa-search"></i>
-                    <span>Policy Research</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- LEADERSHIP SECTION -->
-    <section id="leadership" class="section">
-        <h2 class="section-title">Thematic Areas</h2>
-        <div class="glass-card">
-            <div class="thematic-grid">
-                <span class="theme-tag" style="border-color: #00c6ff; color: #00c6ff;">Human Rights & Equality</span>
-                <span class="theme-tag" style="border-color: #ff007a; color: #ff007a;">Governance & Rule of Law</span>
-                <span class="theme-tag" style="border-color: #6a11cb; color: #6a11cb;">Youth Policy</span>
-                <span class="theme-tag" style="border-color: #ffe600; color: #ffe600;">Climate & Energy</span>
-                <span class="theme-tag" style="border-color: #00ff88; color: #00ff88;">Indigenous Rights</span>
-                <span class="theme-tag" style="border-color: #ff00ff; color: #ff00ff;">Legal Education</span>
-                <span class="theme-tag" style="border-color: #00ffff; color: #00ffff;">Digital Rights</span>
-                <span class="theme-tag" style="border-color: #ff8800; color: #ff8800;">Social Justice</span>
-                <span class="theme-tag" style="border-color: #9d00ff; color: #9d00ff;">Gender Equality</span>
-                <span class="theme-tag" style="border-color: #00ffd5; color: #00ffd5;">Sustainable Development</span>
-                <span class="theme-tag" style="border-color: #ff4d4d; color: #ff4d4d;">Conflict Resolution</span>
-                <span class="theme-tag" style="border-color: #aaff00; color: #aaff00;">Economic Empowerment</span>
-            </div>
-        </div>
-    </section>
-
-    <!-- GALLERY SECTION -->
-    <section id="gallery" class="section">
-        <h2 class="section-title">Visual Journey</h2>
-        <div class="gallery-grid">
-            <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Leadership" loading="lazy">
-                <div class="gallery-overlay">
-                    <h4>Leadership & Advocacy</h4>
-                    <p>Speaking at youth forums and legal conferences</p>
-                </div>
-            </div>
-            <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1589391886085-8b6b0ac72a1a?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Advocacy" loading="lazy">
-                <div class="gallery-overlay">
-                    <h4>Courtroom Excellence</h4>
-                    <p>Practicing law with dedication and precision</p>
-                </div>
-            </div>
-            <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1551836026-d5c2e3147d2c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Global Shapers" loading="lazy">
-                <div class="gallery-overlay">
-                    <h4>Global Shapers Network</h4>
-                    <p>Representing Quetta Hub at international forums</p>
-                </div>
-            </div>
-            <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Court Life" loading="lazy">
-                <div class="gallery-overlay">
-                    <h4>Legal Practice</h4>
-                    <p>Daily commitment to justice and rule of law</p>
-                </div>
-            </div>
-            <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Community" loading="lazy">
-                <div class="gallery-overlay">
-                    <h4>Community Engagement</h4>
-                    <p>Working directly with local communities</p>
-                </div>
-            </div>
-            <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Travel" loading="lazy">
-                <div class="gallery-overlay">
-                    <h4>International Exposure</h4>
-                    <p>Learning from global best practices</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- MISSION SECTION -->
-    <section id="mission" class="section">
-        <div class="mission-card animate-on-scroll">
-            <i class="fas fa-bullseye"></i>
-            <h2>Mission Statement</h2>
-            <p>
-                "To advance justice, safeguard human dignity, strengthen democratic institutions, and empower youth to lead Pakistan toward a just, inclusive, and sustainable future."
-            </p>
-        </div>
-    </section>
-
-    <!-- CONTACT SECTION -->
-    <section id="contact" class="section">
-        <h2 class="section-title">Connect</h2>
-        <div class="connect-box">
-            <p style="font-size: 1.3rem; color: #ccc; margin-bottom: 50px; max-width: 700px; margin-left: auto; margin-right: auto;">
-                Reach out for legal consultation, collaboration opportunities, or to discuss youth empowerment initiatives in Balochistan.
-            </p>
-
-            <div class="social-3d-container">
-                <a href="mailto:advmumtaz222@gmail.com" class="social-btn" style="--c1: #D44638; --c2: #B23121;" title="Email">
-                    <i class="fas fa-envelope"></i>
-                </a>
-                <a href="https://wa.me/923332568792" class="social-btn" style="--c1: #25D366; --c2: #128C7E;" title="WhatsApp">
-                    <i class="fab fa-whatsapp"></i>
-                </a>
-                <a href="https://www.linkedin.com/in/adv-mumtaz-alam-bazai-163a9a324" class="social-btn" style="--c1: #0077b5; --c2: #004182;" title="LinkedIn">
-                    <i class="fab fa-linkedin-in"></i>
-                </a>
-                <a href="https://www.instagram.com/mumtaz_alam" class="social-btn" style="--c1: #833AB4; --c2: #FD1D1D;" title="Instagram">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="https://www.facebook.com/mumtaz.alam.18488" class="social-btn" style="--c1: #1877F2; --c2: #1052a8;" title="Facebook">
-                    <i class="fab fa-facebook-f"></i>
-                </a>
-                <a href="https://x.com/mumtazalam333" class="social-btn" style="--c1: #000; --c2: #333;" title="Twitter/X">
-                    <i class="fab fa-x-twitter"></i>
-                </a>
-                <a href="https://my.weforum.org/network/people/001TG000009vSDhYAM/adv-mumtaz-alam" class="social-btn" style="--c1: #00A3E0; --c2: #005F86;" title="World Economic Forum">
-                    <i class="fas fa-globe"></i>
-                </a>
-                <a href="https://linktr.ee/mumtazalam" class="social-btn" style="--c1: #43E660; --c2: #1fa337;" title="Linktree">
-                    <i class="fas fa-link"></i>
-                </a>
-                <a href="https://www.tiktok.com/@mumtaz_alam" class="social-btn" style="--c1: #000000; --c2: #ff0050;" title="TikTok">
-                    <i class="fab fa-tiktok"></i>
-                </a>
-                <a href="https://www.snapchat.com/add/mumtazalam222" class="social-btn" style="--c1: #FFFC00; --c2: #FFCA00;" title="Snapchat">
-                    <i class="fab fa-snapchat-ghost"></i>
-                </a>
-                <a href="https://www.threads.com/@mumtaz_alam" class="social-btn" style="--c1: #00fffc; --c2: #ff00fc;" title="Threads">
-                    <i class="fas fa-comment-dots"></i>
-                </a>
-                <a href="https://ok.ru/profile/910193583170" class="social-btn" style="--c1: #F47300; --c2: #FF9E2C;" title="Odnoklassniki">
-                    <i class="fab fa-odnoklassniki"></i>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer>
-        © 2025 Mumtaz Alam Bazai. Advocate & Human Rights Lawyer. All Rights Reserved.
-        <p style="margin-top: 15px; font-size: 13px; color: #888;">
-            Designed with passion for justice and commitment to change.
-        </p>
-    </footer>
-
-    <script>
-        // =========================
-        // LOADING SCREEN
-        // =========================
-        window.addEventListener('load', function() {
-            const loader = document.getElementById('loader');
-            setTimeout(() => {
-                loader.classList.add('hidden');
-                document.body.style.opacity = '1';
-                
-                // Initialize all animations after load
-                setTimeout(initAnimations, 300);
-            }, 1500);
-        });
-
-        // =========================
-        // THREE.JS 3D BACKGROUND
-        // =========================
-        let scene, camera, renderer, particles;
-        
-        function initThreeJS() {
-            // Scene setup
-            scene = new THREE.Scene();
-            camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-            renderer = new THREE.WebGLRenderer({ 
-                canvas: document.getElementById('threeCanvas'),
-                alpha: true,
-                antialias: true 
-            });
-            
-            renderer.setSize(window.innerWidth, window.innerHeight);
-            renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-            
-            // Camera position
-            camera.position.z = 15;
-            
-            // Create particles
-            const particleCount = 500;
-            const particleGeometry = new THREE.BufferGeometry();
-            const positions = new Float32Array(particleCount * 3);
-            const colors = new Float32Array(particleCount * 3);
-            
-            for (let i = 0; i < particleCount * 3; i += 3) {
-                positions[i] = (Math.random() - 0.5) * 50;
-                positions[i + 1] = (Math.random() - 0.5) * 50;
-                positions[i + 2] = (Math.random() - 0.5) * 50;
-                
-                colors[i] = Math.random() * 0.5 + 0.5; // R
-                colors[i + 1] = Math.random() * 0.3 + 0.7; // G
-                colors[i + 2] = Math.random() * 0.5 + 0.5; // B
-            }
-            
-            particleGeometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
-            particleGeometry.setAttribute('color', new THREE.BufferAttribute(colors, 3));
-            
-            const particleMaterial = new THREE.PointsMaterial({
-                size: 0.2,
-                vertexColors: true,
-                transparent: true,
-                opacity: 0.6,
-                blending: THREE.AdditiveBlending
-            });
-            
-            particles = new THREE.Points(particleGeometry, particleMaterial);
-            scene.add(particles);
-            
-            // Add some floating geometric shapes
-            const geometry = new THREE.IcosahedronGeometry(2, 0);
-            const material = new THREE.MeshPhongMaterial({
-                color: 0x6a11cb,
-                shininess: 100,
-                transparent: true,
-                opacity: 0.2
-            });
-            
-            const icosahedron = new THREE.Mesh(geometry, material);
-            icosahedron.position.set(5, 3, -5);
-            scene.add(icosahedron);
-            
-            // Add lights
-            const ambientLight = new THREE.AmbientLight(0x404040, 0.5);
-            scene.add(ambientLight);
-            
-            const directionalLight = new THREE.DirectionalLight(0xffffff, 0.8);
-            directionalLight.position.set(10, 10, 5);
-            scene.add(directionalLight);
-            
-            // Add point lights for glow effect
-            const pointLight1 = new THREE.PointLight(0x6a11cb, 1, 50);
-            pointLight1.position.set(10, 5, 5);
-            scene.add(pointLight1);
-            
-            const pointLight2 = new THREE.PointLight(0x2575fc, 1, 50);
-            pointLight2.position.set(-10, -5, 5);
-            scene.add(pointLight2);
-            
-            // Animation
-            function animate() {
-                requestAnimationFrame(animate);
-                
-                particles.rotation.x += 0.0005;
-                particles.rotation.y += 0.001;
-                
-                icosahedron.rotation.x += 0.005;
-                icosahedron.rotation.y += 0.003;
-                
-                // Move particles in a gentle wave
-                const positions = particles.geometry.attributes.position.array;
-                for (let i = 0; i < positions.length; i += 3) {
-                    positions[i + 1] += Math.sin(Date.now() * 0.001 + positions[i]) * 0.005;
-                }
-                particles.geometry.attributes.position.needsUpdate = true;
-                
-                renderer.render(scene, camera);
-            }
-            
-            animate();
-            
-            // Handle window resize
-            window.addEventListener('resize', () => {
-                camera.aspect = window.innerWidth / window.innerHeight;
-                camera.updateProjectionMatrix();
-                renderer.setSize(window.innerWidth, window.innerHeight);
-            });
-        }
-
-        // =========================
-        // PARTICLE SYSTEM
-        // =========================
-        const particleContainer = document.getElementById('particles');
-        function createParticle() {
-            const particle = document.createElement('div');
-            particle.classList.add('particle');
-            
-            const size = Math.random() * 8 + 2 + 'px';
-            const left = Math.random() * 100 + '%';
-            const duration = Math.random() * 15 + 20 + 's';
-            const delay = Math.random() * 10 + 's';
-            
-            particle.style.width = size;
-            particle.style.height = size;
-            particle.style.left = left;
-            particle.style.animationDuration = duration;
-            particle.style.animationDelay = delay;
-            particle.style.opacity = Math.random() * 0.6 + 0.1;
-            
-            particleContainer.appendChild(particle);
-            
-            setTimeout(() => {
-                particle.remove();
-            }, parseFloat(duration) * 1000);
-        }
-
-        // Initial particles
-        for (let i = 0; i < 50; i++) {
-            setTimeout(() => createParticle(), Math.random() * 3000);
-        }
-
-        // Continuous generation
-        setInterval(createParticle, 500);
-
-        // =========================
-        // NAVIGATION SCROLL EFFECT
-        // =========================
-        const nav = document.getElementById('mainNav');
-        let lastScrollTop = 0;
-
-        window.addEventListener('scroll', function() {
-            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-            
-            // Add/remove scrolled class based on scroll position
-            if (scrollTop > 100) {
-                nav.classList.add('scrolled');
-            } else {
-                nav.classList.remove('scrolled');
-            }
-            
-            // Update active navigation link
-            updateActiveNav();
-            
-            lastScrollTop = scrollTop;
-        });
-
-        // =========================
-        // 3D PARALLAX EFFECTS
-        // =========================
-        const heroSection = document.getElementById('hero');
-        const heroImage = document.getElementById('heroImage');
-        const heroBgLayer = document.getElementById('heroBgLayer');
-        const heroImgContainer = document.getElementById('heroImgContainer');
-
-        // Enhanced 3D mouse movement effect
-        heroSection.addEventListener('mousemove', (e) => {
-            const { clientX, clientY } = e;
-            const { innerWidth, innerHeight } = window;
-
-            // Calculate mouse position percentages
-            const xPercent = (clientX / innerWidth - 0.5) * 2;
-            const yPercent = (clientY / innerHeight - 0.5) * 2;
-
-            // 3D transform for hero image
-            heroImage.style.transform = `
-                translate(-50%, -50%) translateZ(${150 + xPercent * 30}px)
-                rotateY(${xPercent * 15}deg)
-                rotateX(${-yPercent * 15}deg)
-                translateY(${yPercent * 20}px)
-            `;
-
-            // Parallax effect for background layer
-            heroBgLayer.style.transform = `
-                translateZ(-300px)
-                rotateY(${xPercent * 8}deg)
-                rotateX(${-yPercent * 8}deg)
-                scale(${1.4 - Math.abs(xPercent) * 0.08})
-            `;
-
-            // Float cards effect
-            const floatCards = document.querySelectorAll('.float-card');
-            floatCards.forEach((card, index) => {
-                const delay = index * 0.1;
-                card.style.transform = `
-                    translateZ(100px)
-                    translateX(${xPercent * 40}px)
-                    translateY(${yPercent * 40}px)
-                    rotate(${xPercent * 8}deg)
-                `;
-            });
-
-            // Social icons effect
-            const socialIcons = document.querySelectorAll('.hs');
-            socialIcons.forEach((icon, index) => {
-                const delay = index * 0.02;
-                icon.style.transform = `
-                    translateX(${xPercent * 15}px)
-                    translateY(${yPercent * 15}px)
-                    rotateY(${xPercent * 10}deg)
-                `;
-            });
-
-            // Title and text effects
-            const heroTitle = document.querySelector('.hero h1');
-            heroTitle.style.transform = `
-                translateZ(50px)
-                translateX(${xPercent * 10}px)
-                translateY(${yPercent * 10}px)
-            `;
-        });
-
-        // Reset on mouse leave
-        heroSection.addEventListener('mouseleave', () => {
-            heroImage.style.transform = 'translate(-50%, -50%) translateZ(150px) rotateY(0deg) rotateX(0deg)';
-            heroBgLayer.style.transform = 'translateZ(-300px) rotateY(0deg) rotateX(0deg) scale(1.4)';
-
-            document.querySelectorAll('.float-card').forEach(card => {
-                card.style.transform = 'translateZ(100px)';
-            });
-
-            document.querySelectorAll('.hs').forEach(icon => {
-                icon.style.transform = 'translate(0, 0) rotateY(0deg)';
-            });
-
-            document.querySelector('.hero h1').style.transform = 'translateZ(50px)';
-        });
-
-        // =========================
-        // SCROLL REVEAL ANIMATIONS
-        // =========================
-        function initAnimations() {
-            const observerOptions = {
-                threshold: 0.1,
-                rootMargin: '0px 0px -50px 0px'
-            };
-
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                        
-                        // Section entrance
-                        if (entry.target.classList.contains('section')) {
-                            entry.target.classList.add('visible');
-                        }
-                        
-                        // Staggered animations
-                        if (entry.target.classList.contains('animate-on-scroll')) {
-                            const delay = entry.target.dataset.delay || '0';
-                            entry.target.style.transitionDelay = `${delay}s`;
-                        }
-                    }
-                });
-            }, observerOptions);
-
-            // Observe all animated elements
-            document.querySelectorAll('.animate-on-scroll').forEach((el, index) => {
-                el.dataset.delay = (index * 0.1).toFixed(1);
-                observer.observe(el);
-            });
-
-            // Observe sections
-            document.querySelectorAll('section').forEach((section) => {
-                observer.observe(section);
-            });
-
-            // Gallery items stagger effect
-            document.querySelectorAll('.gallery-item').forEach((item, index) => {
-                item.style.animationDelay = (index * 0.15) + 's';
-            });
-        }
-
-        // =========================
-        // DYNAMIC THEME GENERATOR
-        // =========================
-        function randomizeTheme() {
-            const hue1 = Math.floor(Math.random() * 360);
-            const hue2 = (hue1 + 120) % 360;
-            const hue3 = (hue1 + 240) % 360;
-            const hue4 = (hue1 + 60) % 360;
-
-            const root = document.documentElement;
-
-            // Update CSS variables
-            root.style.setProperty('--primary-hue', hue1);
-            root.style.setProperty('--secondary-hue', hue2);
-            root.style.setProperty('--accent-hue', hue3);
-
-            // Update gradients
-            root.style.setProperty('--gradient-primary', `linear-gradient(135deg, hsl(${hue1}, 100%, 50%) 0%, hsl(${hue2}, 100%, 50%) 100%)`);
-            root.style.setProperty('--gradient-secondary', `linear-gradient(135deg, hsl(${hue3}, 100%, 50%) 0%, hsl(${hue4}, 100%, 50%) 100%)`);
-            root.style.setProperty('--gradient-accent', `linear-gradient(135deg, hsl(${hue2}, 100%, 50%) 0%, hsl(${hue1}, 100%, 50%) 100%)`);
-
-            // Update orb colors
-            const orbs = document.querySelectorAll('.orb');
-            orbs[0].style.background = `hsl(${hue1}, 100%, 50%)`;
-            orbs[1].style.background = `hsl(${hue2}, 100%, 50%)`;
-            orbs[2].style.background = `hsl(${hue3}, 100%, 50%)`;
-            orbs[3].style.background = `hsl(${hue4}, 100%, 50%)`;
-
-            // Update hero gradient
-            const heroBadge = document.querySelector('.hero-badge');
-            const heroTitle = document.querySelector('.hero h1');
-
-            heroBadge.style.background = `linear-gradient(90deg, hsl(${hue1}, 100%, 50%), hsl(${hue2}, 100%, 50%))`;
-            heroTitle.style.background = `linear-gradient(135deg, #fff 0%, hsl(${hue2}, 100%, 70%) 30%, hsl(${hue1}, 100%, 60%) 70%, hsl(${hue3}, 100%, 50%) 100%)`;
-
-            // Update timeline dots
-            const timelineDots = document.querySelectorAll('.timeline-dot');
-            timelineDots.forEach(dot => {
-                dot.style.boxShadow = `
-                    0 0 40px hsl(${hue2}, 100%, 60%),
-                    0 0 25px hsl(${hue2}, 100%, 60%),
-                    inset 0 0 15px rgba(255, 255, 255, 0.7)
-                `;
-            });
-
-            // Add animation feedback
-            const themeBtn = document.querySelector('.theme-btn');
-            themeBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Transforming...';
-            themeBtn.style.background = `linear-gradient(135deg, hsl(${hue1}, 100%, 50%), hsl(${hue2}, 100%, 50%))`;
-
-            setTimeout(() => {
-                themeBtn.innerHTML = '<i class="fas fa-magic"></i> Magic Theme';
-                themeBtn.style.background = `linear-gradient(135deg, hsl(${hue3}, 100%, 50%), hsl(${hue1}, 100%, 50%))`;
-                
-                // Trigger confetti effect
-                createConfetti();
-            }, 1200);
-        }
-
-        // =========================
-        // CONFETTI EFFECT
-        // =========================
-        function createConfetti() {
-            const colors = ['#6a11cb', '#2575fc', '#ff007a', '#ff8c00', '#00c6ff'];
-            const confettiContainer = document.createElement('div');
-            confettiContainer.style.position = 'fixed';
-            confettiContainer.style.top = '0';
-            confettiContainer.style.left = '0';
-            confettiContainer.style.width = '100%';
-            confettiContainer.style.height = '100%';
-            confettiContainer.style.pointerEvents = 'none';
-            confettiContainer.style.zIndex = '9999';
-            document.body.appendChild(confettiContainer);
-
-            for (let i = 0; i < 150; i++) {
-                const confetti = document.createElement('div');
-                confetti.style.position = 'absolute';
-                confetti.style.width = Math.random() * 10 + 5 + 'px';
-                confetti.style.height = Math.random() * 10 + 5 + 'px';
-                confetti.style.background = colors[Math.floor(Math.random() * colors.length)];
-                confetti.style.borderRadius = Math.random() > 0.5 ? '50%' : '0';
-                confetti.style.left = Math.random() * 100 + '%';
-                confetti.style.top = '-20px';
-                confetti.style.opacity = Math.random() * 0.7 + 0.3;
-                confetti.style.transform = `rotate(${Math.random() * 360}deg)`;
-                confettiContainer.appendChild(confetti);
-
-                // Animation
-                const animation = confetti.animate([
-                    { transform: `translate(0, 0) rotate(0deg)`, opacity: 1 },
-                    { transform: `translate(${Math.random() * 100 - 50}px, ${window.innerHeight}px) rotate(${Math.random() * 720}deg)`, opacity: 0 }
-                ], {
-                    duration: Math.random() * 3000 + 2000,
-                    easing: 'cubic-bezier(0.215, 0.61, 0.355, 1)'
-                });
-
-                animation.onfinish = () => confetti.remove();
-            }
-
-            // Remove container after animation
-            setTimeout(() => {
-                confettiContainer.remove();
-            }, 5000);
-        }
-
-        // =========================
-        // SMOOTH SCROLL FOR NAVIGATION
-        // =========================
-        document.querySelectorAll('nav a').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-
-                const targetId = this.getAttribute('href');
-                const targetElement = document.querySelector(targetId);
-
-                if (targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 100,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-
-        // =========================
-        // NAVIGATION ACTIVE STATE
-        // =========================
-        const sections = document.querySelectorAll('section');
-        const navLinks = document.querySelectorAll('nav a');
-
-        function updateActiveNav() {
-            let current = '';
-
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                const sectionHeight = section.clientHeight;
-
-                if (window.scrollY >= (sectionTop - 200)) {
-                    current = section.getAttribute('id');
-                }
-            });
-
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href') === `#${current}`) {
-                    link.classList.add('active');
-                }
-            });
-        }
-
-        // =========================
-        // IMAGE LOADING EFFECT
-        // =========================
-        const images = document.querySelectorAll('img');
-        images.forEach(img => {
-            img.addEventListener('load', function() {
-                this.style.opacity = '1';
-                this.style.transform = 'scale(1)';
-            });
-
-            // Initial state
-            img.style.opacity = '0';
-            img.style.transform = 'scale(0.9)';
-            img.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
-        });
-
-        // =========================
-        // MOBILE TOUCH EFFECTS
-        // =========================
-        function handleMobileView() {
-            if (window.innerWidth <= 768) {
-                // Add touch effects for mobile
-                document.querySelectorAll('.glass-card, .gallery-item').forEach(element => {
-                    element.addEventListener('touchstart', function() {
-                        this.style.transform = 'scale(0.98)';
-                    });
-
-                    element.addEventListener('touchend', function() {
-                        this.style.transform = 'scale(1)';
-                    });
-                });
-
-                // Optimize animations for mobile
-                document.documentElement.style.setProperty('--transition', 'cubic-bezier(0.4, 0, 0.2, 1)');
-            }
-        }
-
-        // Initial check
-        handleMobileView();
-
-        // On resize
-        window.addEventListener('resize', handleMobileView);
-
-        // =========================
-        // PERFORMANCE OPTIMIZATION
-        // =========================
-        let ticking = false;
-        window.addEventListener('scroll', () => {
-            if (!ticking) {
-                window.requestAnimationFrame(() => {
-                    updateActiveNav();
-                    ticking = false;
-                });
-                ticking = true;
-            }
-        });
-
-        // =========================
-        // INITIAL LOAD ANIMATIONS
-        // =========================
-        window.addEventListener('load', () => {
-            // Animate hero elements sequentially
-            const heroElements = document.querySelectorAll('.hero-text > *');
-            heroElements.forEach((el, index) => {
-                el.style.animationDelay = `${index * 0.2}s`;
-                el.classList.add('animate-on-scroll');
-            });
-            
-            // Initialize Three.js background
-            initThreeJS();
-        });
-
-        // =========================
-        // CURSOR EFFECT
-        // =========================
-        const cursor = document.createElement('div');
-        cursor.style.position = 'fixed';
-        cursor.style.width = '20px';
-        cursor.style.height = '20px';
-        cursor.style.background = 'radial-gradient(circle, rgba(106,17,203,0.8) 0%, rgba(37,117,252,0.4) 70%, transparent 100%)';
-        cursor.style.borderRadius = '50%';
-        cursor.style.pointerEvents = 'none';
-        cursor.style.zIndex = '9999';
-        cursor.style.transform = 'translate(-50%, -50%)';
-        cursor.style.transition = 'transform 0.1s ease';
-        document.body.appendChild(cursor);
-
-        document.addEventListener('mousemove', (e) => {
-            cursor.style.left = e.clientX + 'px';
-            cursor.style.top = e.clientY + 'px';
-        });
-
-        // Hide cursor on mobile
-        if (window.innerWidth <= 768) {
-            cursor.style.display = 'none';
-        }
-
-        // =========================
-        // SOUND EFFECTS (Optional)
-        // =========================
-        function playClickSound() {
-            // Create a subtle click sound using Web Audio API
-            const audioContext = new (window.AudioContext || window.webkitAudioContext)();
-            const oscillator = audioContext.createOscillator();
-            const gainNode = audioContext.createGain();
-            
-            oscillator.connect(gainNode);
-            gainNode.connect(audioContext.destination);
-            
-            oscillator.frequency.value = 800;
-            oscillator.type = 'sine';
-            
-            gainNode.gain.setValueAtTime(0.3, audioContext.currentTime);
-            gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.1);
-            
-            oscillator.start(audioContext.currentTime);
-            oscillator.stop(audioContext.currentTime + 0.1);
-        }
-
-        // Add click sounds to interactive elements
-        document.querySelectorAll('.hero-btn, .theme-btn, nav a').forEach(element => {
-            element.addEventListener('click', playClickSound);
-        });
-
-        // =========================
-        // TYPEWRITER EFFECT FOR HERO TEXT
-        // =========================
-        function typeWriterEffect() {
-            const heroTitle = document.querySelector('.hero h1');
-            const originalText = heroTitle.textContent;
-            heroTitle.textContent = '';
-            
-            let i = 0;
-            function typeWriter() {
-                if (i < originalText.length) {
-                    heroTitle.textContent += originalText.charAt(i);
-                    i++;
-                    setTimeout(typeWriter, 50);
-                }
-            }
-            
-            // Start typing after a delay
-            setTimeout(typeWriter, 1000);
-        }
-
-        // Initialize typewriter effect
-        setTimeout(typeWriterEffect, 500);
-    </script>
-</body>
-</html>
+                <i class="fab fa-linkedin
