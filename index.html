@@ -2010,7 +2010,11 @@
             // This is where you can add theme switching functionality
             alert('Theme switching feature coming soon!');
         });
-        
+        <!-- Test if images load -->
+<div style="display:none;">
+    <img src="portrait.jpg.jpeg" onload="console.log('Portrait loaded')" onerror="console.log('Portrait failed to load')">
+    <img src="hero-bg.jpg.jpeg" onload="console.log('Background loaded')" onerror="console.log('Background failed to load')">
+</div>
         document.body.appendChild(themeToggle);
     </script>
 </body>
