@@ -3,290 +3,426 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adv. Mumtaz Alam Bazai | Legal Visionary & Human Rights Advocate</title>
-    <meta name="description" content="Advocate High Court, Global Shaper at World Economic Forum, Human Rights Activist, and Youth Policy Leader from Balochistan, Pakistan">
-    <meta name="keywords" content="Human Rights Lawyer, Advocate High Court, Global Shaper, WEF, Legal Consultant, Balochistan, Youth Policy, Rule of Law">
-    
-    <!-- Fonts & Icons -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400&family=Inter:wght@300;400;500;600;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>Mumtaz Alam Bazai | Advocate High Court | Global Shaper | Human Rights Lawyer</title>
+    <meta name="description" content="Advocate Mumtaz Alam Bazai - Human Rights Lawyer, Global Shaper, Legal Visionary from Balochistan. Championing justice, youth empowerment, and social change.">
+    <meta name="keywords" content="Advocate High Court, Human Rights Lawyer, Global Shaper, Balochistan, Legal, Youth Empowerment, Social Justice, Quetta, Pakistan">
+    <meta name="author" content="Mumtaz Alam Bazai">
     
     <!-- Open Graph / Social Media Meta Tags -->
-    <meta property="og:title" content="Adv. Mumtaz Alam Bazai | Legal Visionary & Human Rights Advocate">
-    <meta property="og:description" content="Advocate High Court, Global Shaper at World Economic Forum, Human Rights Activist, and Youth Policy Leader">
+    <meta property="og:title" content="Mumtaz Alam Bazai | Legal Visionary & Human Rights Advocate">
+    <meta property="og:description" content="Advocate High Court · Human Rights Lawyer · Global Shaper (WEF). Empowering youth through law, leadership, and justice.">
     <meta property="og:type" content="website">
+    <meta property="og:image" content="https://mumtazalambazai.com/og-image.jpg">
     
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚖️</text></svg>">
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400;1,700&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     
     <style>
-        /* =========================
-           CORE RESET & VARIABLES
-        ========================= */
+        /* ===========================================
+           CORE CSS VARIABLES & RESET
+        =========================================== */
         :root {
-            --primary-hue: 260;
-            --secondary-hue: 190;
-            --accent-hue: 330;
+            --primary-color: #8A2BE2;
+            --secondary-color: #00C6FF;
+            --accent-color: #FF007A;
+            --success-color: #00FF88;
+            --warning-color: #FF8C00;
+            --dark-bg: #050510;
+            --darker-bg: #03030A;
+            --light-bg: #0F0F1A;
+            --card-bg: rgba(15, 15, 26, 0.7);
+            --text-primary: #FFFFFF;
+            --text-secondary: rgba(255, 255, 255, 0.85);
+            --text-muted: rgba(255, 255, 255, 0.6);
+            --border-color: rgba(255, 255, 255, 0.1);
             --glass-bg: rgba(255, 255, 255, 0.05);
-            --glass-border: rgba(255, 255, 255, 0.2);
-            --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-            --text-main: #ffffff;
-            --text-muted: rgba(255, 255, 255, 0.8);
-            --neon-glow: 0 0 20px rgba(138, 43, 226, 0.6);
+            --glass-border: rgba(255, 255, 255, 0.15);
+            --glass-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
             --card-radius: 24px;
-            --transition: cubic-bezier(0.23, 1, 0.32, 1);
-            --gradient-primary: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
-            --gradient-secondary: linear-gradient(135deg, #ff007a 0%, #ff8c00 100%);
-            --gradient-accent: linear-gradient(135deg, #00c6ff 0%, #0072ff 100%);
-            --gradient-gold: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
-            --gradient-silver: linear-gradient(135deg, #C0C0C0 0%, #808080 100%);
-            --gradient-legal: linear-gradient(135deg, #1a2a6c 0%, #2a4b8c 100%);
+            --transition-smooth: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+            --gradient-primary: linear-gradient(135deg, #8A2BE2 0%, #00C6FF 100%);
+            --gradient-secondary: linear-gradient(135deg, #FF007A 0%, #FF8C00 100%);
+            --gradient-accent: linear-gradient(135deg, #00C6FF 0%, #00FF88 100%);
+            --gradient-dark: linear-gradient(135deg, rgba(10, 10, 20, 0.9) 0%, rgba(5, 5, 15, 0.9) 100%);
         }
-
+        
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-
+        
         html {
             scroll-behavior: smooth;
             overflow-x: hidden;
         }
-
+        
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #050510;
-            color: var(--text-main);
+            background-color: var(--dark-bg);
+            color: var(--text-primary);
             overflow-x: hidden;
-            perspective: 1000px;
-            min-height: 100vh;
-            opacity: 0;
-            animation: fadeInBody 1.5s ease forwards;
+            line-height: 1.7;
+            font-weight: 400;
         }
-
-        @keyframes fadeInBody {
-            to { opacity: 1; }
+        
+        /* Selection Color */
+        ::selection {
+            background-color: var(--primary-color);
+            color: white;
         }
-
-        /* =========================
-           DYNAMIC ANIMATED BACKGROUND
-        ========================= */
-        .fluid-bg {
+        
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 12px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.2);
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: var(--gradient-primary);
+            border-radius: 6px;
+            border: 2px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--gradient-secondary);
+        }
+        
+        /* Typography */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+        
+        h1 {
+            font-size: clamp(3rem, 7vw, 5.5rem);
+            font-weight: 800;
+        }
+        
+        h2 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            margin-bottom: 3rem;
+        }
+        
+        p {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-secondary);
+        }
+        
+        .gradient-text {
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            color: transparent;
+        }
+        
+        /* Container */
+        .container {
+            width: 100%;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 16px 32px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1rem;
+            text-decoration: none;
+            transition: var(--transition-smooth);
+            border: none;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+        
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: 0.5s;
+            z-index: -1;
+        }
+        
+        .btn:hover::before {
+            left: 100%;
+        }
+        
+        .btn-primary {
+            background: var(--gradient-primary);
+            color: white;
+            box-shadow: 0 10px 30px rgba(138, 43, 226, 0.3);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(138, 43, 226, 0.5);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: var(--text-primary);
+            border: 2px solid var(--border-color);
+            backdrop-filter: blur(10px);
+        }
+        
+        .btn-secondary:hover {
+            border-color: var(--primary-color);
+            transform: translateY(-5px);
+        }
+        
+        /* Cards */
+        .card {
+            background: var(--card-bg);
+            backdrop-filter: blur(20px);
+            border-radius: var(--card-radius);
+            border: 1px solid var(--border-color);
+            padding: 2.5rem;
+            transition: var(--transition-smooth);
+            height: 100%;
+        }
+        
+        .card:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary-color);
+            box-shadow: var(--glass-shadow), 0 0 30px rgba(138, 43, 226, 0.2);
+        }
+        
+        /* Section Styling */
+        section {
+            padding: 120px 5%;
+            position: relative;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 5rem;
+        }
+        
+        .section-header h2 {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-header h2::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--gradient-primary);
+            border-radius: 2px;
+        }
+        
+        /* ===========================================
+           DYNAMIC BACKGROUND
+        =========================================== */
+        .dynamic-bg {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
             z-index: -3;
-            background: 
-                radial-gradient(circle at 20% 20%, rgba(26, 26, 46, 0.8) 0%, transparent 50%),
-                radial-gradient(circle at 80% 80%, rgba(0, 198, 255, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 40% 60%, rgba(255, 0, 122, 0.1) 0%, transparent 50%),
-                #050510;
             overflow: hidden;
         }
-
-        .orb {
+        
+        .bg-orb {
             position: absolute;
             border-radius: 50%;
             filter: blur(80px);
-            opacity: 0.6;
-            animation: floatOrb 25s infinite alternate ease-in-out;
-            z-index: -2;
+            opacity: 0.15;
+            animation: floatOrb 30s infinite alternate ease-in-out;
         }
-
+        
         .orb-1 {
             width: 70vw;
             height: 70vw;
-            background: #6a11cb;
+            background: var(--primary-color);
             top: -20%;
             left: -20%;
-            animation-duration: 30s;
-            animation-delay: 0s;
+            animation-duration: 40s;
         }
-
+        
         .orb-2 {
             width: 60vw;
             height: 60vw;
-            background: #00c6ff;
+            background: var(--secondary-color);
             bottom: -20%;
             right: -10%;
             animation-duration: 35s;
             animation-delay: 5s;
-            animation-direction: reverse;
         }
-
+        
         .orb-3 {
-            width: 40vw;
-            height: 40vw;
-            background: #ff007a;
-            top: 50%;
-            left: 30%;
-            animation-duration: 25s;
-            animation-delay: 10s;
-        }
-
-        .orb-4 {
             width: 50vw;
             height: 50vw;
-            background: #ff8c00;
-            bottom: 30%;
-            left: 10%;
-            animation-duration: 40s;
-            animation-delay: 15s;
+            background: var(--accent-color);
+            top: 40%;
+            left: 30%;
+            animation-duration: 45s;
+            animation-delay: 10s;
         }
-
+        
         @keyframes floatOrb {
-            0% { transform: translate(0, 0) scale(1) rotate(0deg); }
-            25% { transform: translate(30px, -50px) scale(1.05) rotate(90deg); }
-            50% { transform: translate(-20px, 40px) scale(1.1) rotate(180deg); }
-            75% { transform: translate(50px, 30px) scale(1.05) rotate(270deg); }
-            100% { transform: translate(0, 0) scale(1) rotate(360deg); }
+            0% { transform: translate(0, 0) scale(1); }
+            25% { transform: translate(30px, -50px) scale(1.05); }
+            50% { transform: translate(-20px, 40px) scale(1.1); }
+            75% { transform: translate(50px, 30px) scale(1.05); }
+            100% { transform: translate(0, 0) scale(1); }
         }
-
-        /* =========================
-           FLOATING PARTICLES
-        ========================= */
+        
+        /* Particles */
         .particles-container {
             position: fixed;
             width: 100%;
             height: 100%;
-            z-index: -1;
+            z-index: -2;
             pointer-events: none;
-            overflow: hidden;
         }
-
-        .particle {
-            position: absolute;
-            border-radius: 50%;
-            background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.1));
-            animation: floatParticle 20s infinite linear;
-            box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
-        }
-
-        @keyframes floatParticle {
-            0% {
-                transform: translateY(100vh) translateX(0) rotate(0deg);
-                opacity: 0;
-            }
-            10% {
-                opacity: 0.8;
-            }
-            90% {
-                opacity: 0.8;
-            }
-            100% {
-                transform: translateY(-100px) translateX(100px) rotate(360deg);
-                opacity: 0;
-            }
-        }
-
-        /* =========================
-           CUSTOM SCROLLBAR
-        ========================= */
-        ::-webkit-scrollbar {
-            width: 12px;
-        }
-
-        ::-webkit-scrollbar-track {
-            background: rgba(0, 0, 0, 0.3);
-            backdrop-filter: blur(10px);
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background: var(--gradient-primary);
-            border-radius: 6px;
-            border: 2px solid rgba(255, 255, 255, 0.1);
-            transition: all 0.3s ease;
-        }
-
-        ::-webkit-scrollbar-thumb:hover {
-            background: var(--gradient-secondary);
-            transform: scale(1.1);
-        }
-
-        /* =========================
-           TYPOGRAPHY
-        ========================= */
-        h1, h2, h3, h4 {
-            font-family: 'Playfair Display', serif;
-            font-weight: 700;
-            background-clip: text;
-            -webkit-background-clip: text;
-        }
-
-        .gradient-text {
-            background: var(--gradient-primary);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            text-fill-color: transparent;
-        }
-
-        /* =========================
-           DYNAMIC NAVIGATION (GLASS DOCK - FIXED TOP)
-        ========================= */
-        nav {
+        
+        /* ===========================================
+           TOP HEADER WITH SOCIAL MEDIA
+        =========================================== */
+        .top-header {
             position: fixed;
-            top: 30px;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(5, 5, 16, 0.9);
+            backdrop-filter: blur(20px);
+            padding: 15px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .top-header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            text-decoration: none;
+            color: var(--text-primary);
+        }
+        
+        .logo span {
+            color: var(--primary-color);
+        }
+        
+        .top-social {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+        
+        .top-social a {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-primary);
+            background: rgba(255, 255, 255, 0.05);
+            text-decoration: none;
+            transition: var(--transition-smooth);
+            position: relative;
+        }
+        
+        .top-social a:hover {
+            background: var(--primary-color);
+            transform: translateY(-3px);
+        }
+        
+        .top-social a .tooltip {
+            position: absolute;
+            bottom: -40px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 12px;
+            white-space: nowrap;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition-smooth);
+            pointer-events: none;
+        }
+        
+        .top-social a:hover .tooltip {
+            opacity: 1;
+            visibility: visible;
+            bottom: -35px;
+        }
+        
+        /* ===========================================
+           NAVIGATION BAR (FLOATING & STICKY)
+        =========================================== */
+        .floating-nav {
+            position: fixed;
+            bottom: 40px;
             left: 50%;
             transform: translateX(-50%);
             z-index: 1000;
             background: rgba(20, 20, 30, 0.85);
-            backdrop-filter: blur(25px) saturate(200%);
-            -webkit-backdrop-filter: blur(25px) saturate(200%);
+            backdrop-filter: blur(25px);
             border: 1px solid rgba(255, 255, 255, 0.2);
-            padding: 15px 30px;
+            padding: 18px 35px;
             border-radius: 60px;
             display: flex;
-            gap: 25px;
+            gap: 30px;
             box-shadow: 
                 0 25px 60px rgba(0, 0, 0, 0.7),
                 0 0 25px rgba(106, 17, 203, 0.4),
                 inset 0 1px 0 rgba(255, 255, 255, 0.1);
-            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            animation: slideDownNav 0.8s ease-out 0.5s both;
+            transition: var(--transition-smooth);
         }
-
-        @keyframes slideDownNav {
-            from {
-                opacity: 0;
-                transform: translateX(-50%) translateY(-100px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(-50%) translateY(0);
-            }
-        }
-
-        nav.scrolled {
-            top: 20px;
-            background: rgba(10, 10, 20, 0.95);
-            padding: 12px 25px;
-            box-shadow: 
-                0 15px 40px rgba(0, 0, 0, 0.8),
-                0 0 20px rgba(106, 17, 203, 0.5);
-        }
-
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            font-size: 20px;
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            position: relative;
-            width: 44px;
-            height: 44px;
+        
+        .floating-nav a {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            border-radius: 50%;
+            color: #fff;
+            text-decoration: none;
+            font-size: 22px;
+            transition: var(--transition-smooth);
+            position: relative;
             background: rgba(255, 255, 255, 0.08);
-            z-index: 1;
-            overflow: hidden;
         }
-
-        nav a::before {
+        
+        .floating-nav a::before {
             content: '';
             position: absolute;
             top: 0;
@@ -299,2600 +435,1292 @@
             z-index: -1;
             border-radius: 50%;
         }
-
-        nav a:hover::before {
+        
+        .floating-nav a:hover::before {
             opacity: 1;
         }
-
-        nav a:hover {
+        
+        .floating-nav a:hover {
             color: #fff;
-            transform: translateY(-5px) scale(1.15);
+            transform: translateY(-8px) scale(1.15);
             box-shadow: 
                 0 10px 25px rgba(106, 17, 203, 0.5),
                 0 0 15px rgba(255, 255, 255, 0.3);
         }
-
-        nav a.active {
+        
+        .floating-nav a.active {
             background: var(--gradient-primary);
             color: #fff;
-            transform: translateY(-3px);
+            transform: translateY(-5px);
             box-shadow: 
                 0 8px 20px rgba(106, 17, 203, 0.6),
                 0 0 15px rgba(255, 255, 255, 0.2);
         }
-
-        nav a::after {
+        
+        .floating-nav a::after {
             content: attr(data-tooltip);
             position: absolute;
-            bottom: -45px;
+            bottom: 65px;
             left: 50%;
             transform: translateX(-50%) scale(0);
             background: rgba(255, 255, 255, 0.95);
             color: #000;
-            padding: 6px 12px;
-            border-radius: 8px;
-            font-size: 12px;
+            padding: 8px 16px;
+            border-radius: 10px;
+            font-size: 13px;
             font-weight: 700;
             opacity: 0;
-            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            transition: var(--transition-smooth);
             pointer-events: none;
             white-space: nowrap;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
             z-index: 100;
         }
-
-        nav a:hover::after {
+        
+        .floating-nav a:hover::after {
             transform: translateX(-50%) scale(1);
             opacity: 1;
         }
-
-        /* =========================
-           TOP SOCIAL MEDIA BAR
-        ========================= */
-        .top-social-bar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 999;
-            background: rgba(10, 10, 20, 0.9);
-            backdrop-filter: blur(20px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-            padding: 12px 20px;
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            animation: slideInTop 0.8s ease-out 0.3s both;
-        }
-
-        @keyframes slideInTop {
-            from {
-                opacity: 0;
-                transform: translateY(-100%);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .top-social-bar a {
-            color: #fff;
-            text-decoration: none;
-            font-size: 18px;
-            width: 36px;
-            height: 36px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.1);
-            transition: all 0.3s ease;
-            position: relative;
-        }
-
-        .top-social-bar a:hover {
-            background: var(--gradient-primary);
-            transform: translateY(-3px) scale(1.1);
-            box-shadow: 0 5px 15px rgba(106, 17, 203, 0.4);
-        }
-
-        .top-social-bar a::after {
-            content: attr(title);
-            position: absolute;
-            bottom: -35px;
-            left: 50%;
-            transform: translateX(-50%) scale(0);
-            background: rgba(255, 255, 255, 0.95);
-            color: #000;
-            padding: 4px 8px;
-            border-radius: 6px;
-            font-size: 11px;
-            font-weight: 600;
-            opacity: 0;
-            transition: all 0.3s ease;
-            pointer-events: none;
-            white-space: nowrap;
-        }
-
-        .top-social-bar a:hover::after {
-            transform: translateX(-50%) scale(1);
-            opacity: 1;
-        }
-
-        /* =========================
-           ADDITIONAL CONTROLS PANEL
-        ========================= */
-        .controls-panel {
-            position: fixed;
-            top: 100px;
-            right: 30px;
-            z-index: 2000;
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-            animation: slideDownBtn 0.8s ease-out 0.7s both;
-        }
-
-        @keyframes slideDownBtn {
-            from {
-                opacity: 0;
-                transform: translateY(-50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .theme-btn, .lang-btn, .print-btn {
-            background: var(--gradient-secondary);
-            border: none;
-            color: white;
-            padding: 12px 24px;
-            border-radius: 30px;
-            font-weight: 600;
-            cursor: pointer;
-            box-shadow: 
-                0 0 25px rgba(255, 0, 122, 0.5),
-                0 5px 15px rgba(0, 0, 0, 0.3);
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            backdrop-filter: blur(10px);
-            overflow: hidden;
-            font-size: 14px;
-        }
-
-        .lang-btn {
-            background: var(--gradient-legal);
-            box-shadow: 
-                0 0 25px rgba(26, 42, 108, 0.5),
-                0 5px 15px rgba(0, 0, 0, 0.3);
-        }
-
-        .print-btn {
-            background: linear-gradient(135deg, #00c6ff, #0072ff);
-            box-shadow: 
-                0 0 25px rgba(0, 198, 255, 0.5),
-                0 5px 15px rgba(0, 0, 0, 0.3);
-        }
-
-        .theme-btn::before, .lang-btn::before, .print-btn::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-            transition: 0.6s;
-        }
-
-        .theme-btn:hover::before, .lang-btn:hover::before, .print-btn:hover::before {
-            left: 100%;
-        }
-
-        .theme-btn:hover {
-            transform: scale(1.1) rotate(3deg);
-            box-shadow: 
-                0 0 35px rgba(255, 0, 122, 0.7),
-                0 8px 20px rgba(0, 0, 0, 0.4);
-        }
-
-        .lang-btn:hover {
-            transform: scale(1.1) rotate(-3deg);
-            box-shadow: 
-                0 0 35px rgba(26, 42, 108, 0.7),
-                0 8px 20px rgba(0, 0, 0, 0.4);
-        }
-
-        .print-btn:hover {
-            transform: scale(1.1);
-            box-shadow: 
-                0 0 35px rgba(0, 198, 255, 0.7),
-                0 8px 20px rgba(0, 0, 0, 0.4);
-        }
-
-        /* =========================
-           HERO SECTION (ENHANCED WITH CIRCULAR PORTRAIT)
-        ========================= */
+        
+        /* ===========================================
+           HERO SECTION WITH CIRCULAR PORTRAIT
+        =========================================== */
         .hero {
             min-height: 100vh;
             display: flex;
             align-items: center;
-            justify-content: center;
-            padding: 180px 20px 100px;
-            perspective: 2000px;
-            overflow: hidden;
-            position: relative;
-            animation: heroEntrance 1.2s ease-out;
-        }
-
-        @keyframes heroEntrance {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .hero-3d-bg {
-            position: absolute;
-            inset: 0;
-            z-index: 0;
-            perspective: 2500px;
-            overflow: hidden;
-            border-radius: 40px;
-            margin: 20px;
-            filter: drop-shadow(0 0 40px rgba(0, 0, 0, 0.5));
-        }
-
-        .hero-3d-layer {
-            position: absolute;
-            inset: 0;
-            background: 
-                linear-gradient(
-                    rgba(0, 0, 0, 0.4),
-                    rgba(0, 0, 0, 0.6)
-                ),
-                url('hero-bg.jpg.jpeg') center/cover no-repeat;
-            transform: translateZ(-300px) scale(1.4);
-            filter: 
-                blur(2px)
-                brightness(1.15)
-                contrast(1.2)
-                saturate(1.3);
-            transition: transform 0.3s ease-out;
-            border-radius: 40px;
-            animation: bgFloat 20s infinite alternate ease-in-out;
-        }
-
-        @keyframes bgFloat {
-            0%, 100% { 
-                transform: translateZ(-300px) scale(1.4) rotate(0.5deg); 
-            }
-            50% { 
-                transform: translateZ(-300px) scale(1.42) rotate(-0.5deg); 
-            }
-        }
-
-        .hero-content {
-            display: grid;
-            grid-template-columns: 1.5fr 1fr;
-            gap: 80px;
-            max-width: 1400px;
-            align-items: center;
-            position: relative;
-            z-index: 2;
-            transform-style: preserve-3d;
-        }
-
-        .hero-text {
-            transform-style: preserve-3d;
-            z-index: 2;
-            animation: fadeInUp 1s ease-out 0.3s both;
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(50px) translateZ(-100px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0) translateZ(0);
-            }
-        }
-
-        .hero-badge {
-            display: inline-block;
-            padding: 10px 25px;
-            background: var(--gradient-primary);
-            border-radius: 30px;
-            font-weight: 700;
-            font-size: 14px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 25px;
-            box-shadow: 
-                0 0 25px rgba(106, 17, 203, 0.4),
-                inset 0 1px 0 rgba(255, 255, 255, 0.2);
-            transform: translateZ(30px);
-            animation: badgeGlow 3s ease-in-out infinite, badgeFloat 6s ease-in-out infinite;
+            padding-top: 80px;
             position: relative;
             overflow: hidden;
         }
-
-        @keyframes badgeGlow {
-            0%, 100% { 
-                box-shadow: 
-                    0 0 25px rgba(106, 17, 203, 0.4),
-                    inset 0 1px 0 rgba(255, 255, 255, 0.2); 
-            }
-            50% { 
-                box-shadow: 
-                    0 0 35px rgba(106, 17, 203, 0.6),
-                    inset 0 1px 0 rgba(255, 255, 255, 0.4); 
-            }
-        }
-
-        @keyframes badgeFloat {
-            0%, 100% { transform: translateZ(30px) translateY(0); }
-            50% { transform: translateZ(30px) translateY(-8px); }
-        }
-
-        .hero h1 {
-            font-size: clamp(3.5rem, 7vw, 6rem);
-            line-height: 1.08;
-            background: linear-gradient(135deg, #fff 0%, #a5f3fc 30%, #6a11cb 70%, #ff007a 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 25px;
-            filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.3));
-            transform: translateZ(40px);
-            animation: titleShine 8s infinite linear;
-            background-size: 200% auto;
-        }
-
-        @keyframes titleShine {
-            0% { background-position: 0% center; }
-            100% { background-position: 200% center; }
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            line-height: 1.8;
-            color: var(--text-muted);
-            margin-bottom: 35px;
-            border-left: 4px solid #2575fc;
-            padding-left: 20px;
-            transform: translateZ(20px);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero p::before {
-            content: '';
+        
+        .hero-bg {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(37, 117, 252, 0.1), transparent);
-            animation: textShine 3s infinite;
+            background: url('hero-bg.jpg.jpeg') center/cover no-repeat;
+            z-index: -1;
+            filter: brightness(0.3) contrast(1.2);
         }
-
-        @keyframes textShine {
-            0% { transform: translateX(-100%); }
-            100% { transform: translateX(100%); }
-        }
-
-        .hero-buttons {
-            margin-top: 40px;
-            transform: translateZ(30px);
-            display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-
-        .hero-btn {
-            padding: 16px 35px;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: 700;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            transform-style: preserve-3d;
-            position: relative;
-            overflow: hidden;
-            min-width: 180px;
-            text-align: center;
-            animation: btnEntrance 0.8s ease-out 0.8s both;
-        }
-
-        @keyframes btnEntrance {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .hero-btn:nth-child(2) {
-            animation-delay: 1s;
-        }
-
-        .btn-primary {
-            background: #fff;
-            color: #000;
-            box-shadow: 
-                0 0 25px rgba(255, 255, 255, 0.4),
-                0 5px 15px rgba(0, 0, 0, 0.2);
-        }
-
-        .btn-primary:hover {
-            background: linear-gradient(135deg, #fff, #f0f0f0);
-            transform: translateY(-8px) scale(1.05);
-            box-shadow: 
-                0 0 35px rgba(255, 255, 255, 0.6),
-                0 8px 20px rgba(0, 0, 0, 0.3);
-        }
-
-        .btn-secondary {
-            background: transparent;
-            border: 2px solid rgba(255, 255, 255, 0.8);
-            color: #fff;
-            box-shadow: 
-                0 0 15px rgba(255, 255, 255, 0.2),
-                inset 0 0 15px rgba(255, 255, 255, 0.1);
-        }
-
-        .btn-secondary:hover {
-            background: rgba(255, 255, 255, 0.15);
-            border-color: #fff;
-            transform: translateY(-8px) scale(1.05);
-            box-shadow: 
-                0 0 25px rgba(255, 255, 255, 0.3),
-                inset 0 0 20px rgba(255, 255, 255, 0.2);
-        }
-
-        .btn-legal {
-            background: var(--gradient-legal);
-            color: #fff;
-            box-shadow: 
-                0 0 20px rgba(26, 42, 108, 0.5),
-                0 5px 15px rgba(0, 0, 0, 0.2);
-        }
-
-        .btn-legal:hover {
-            background: linear-gradient(135deg, #2a4b8c, #1a2a6c);
-            transform: translateY(-8px) scale(1.05);
-            box-shadow: 
-                0 0 30px rgba(26, 42, 108, 0.7),
-                0 8px 20px rgba(0, 0, 0, 0.3);
-        }
-
-        .hero-btn::before {
-            content: '';
+        
+        .hero-bg-overlay {
             position: absolute;
             top: 0;
-            left: -100%;
+            left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
-            transition: 0.6s;
+            background: linear-gradient(135deg, rgba(8, 2, 20, 0.9), rgba(0, 0, 10, 0.8));
+            z-index: -1;
         }
-
-        .hero-btn:hover::before {
-            left: 100%;
-        }
-
-        /* =========================
-           CIRCULAR PORTRAIT CONTAINER (UPPER RIGHT CORNER)
-        ========================= */
-        .hero-portrait-container {
+        
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 60px;
+            align-items: center;
             position: relative;
-            width: 100%;
-            height: 500px;
+            z-index: 2;
+        }
+        
+        .hero-text {
+            position: relative;
+        }
+        
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--gradient-primary);
+            color: white;
+            padding: 10px 25px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-bottom: 2rem;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { box-shadow: 0 0 20px rgba(138, 43, 226, 0.5); }
+            50% { box-shadow: 0 0 30px rgba(138, 43, 226, 0.8); }
+        }
+        
+        .hero-title {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+        }
+        
+        .hero-description {
+            font-size: 1.3rem;
+            max-width: 600px;
+            margin-bottom: 2.5rem;
+            color: var(--text-secondary);
+        }
+        
+        .hero-stats {
+            display: flex;
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .stat-item {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 1;
+        }
+        
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        /* Circular Portrait in Upper Right */
+        .hero-portrait {
             display: flex;
             justify-content: flex-end;
             align-items: flex-start;
-            transform-style: preserve-3d;
-            perspective: 1500px;
-        }
-
-        .circular-portrait {
             position: relative;
-            width: 350px;
-            height: 350px;
+        }
+        
+        .portrait-circle {
+            width: 400px;
+            height: 400px;
             border-radius: 50%;
             overflow: hidden;
-            box-shadow: 
-                0 30px 60px rgba(0, 0, 0, 0.7),
-                0 0 40px rgba(106, 17, 203, 0.6),
-                inset 0 0 40px rgba(255, 255, 255, 0.1);
-            border: 6px solid transparent;
-            background: linear-gradient(45deg, #6a11cb, #2575fc, #ff007a, #ff8c00) border-box;
+            border: 5px solid transparent;
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color), var(--accent-color)) border-box;
             -webkit-mask: 
                 linear-gradient(#fff 0 0) padding-box, 
                 linear-gradient(#fff 0 0);
             -webkit-mask-composite: xor;
             mask-composite: exclude;
-            transform: translateZ(80px);
-            animation: portraitFloat 8s ease-in-out infinite;
-            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            box-shadow: 
+                0 30px 60px rgba(0, 0, 0, 0.5),
+                0 0 40px rgba(138, 43, 226, 0.4);
+            animation: floatPortrait 8s ease-in-out infinite;
         }
-
-        @keyframes portraitFloat {
-            0%, 100% { 
-                transform: translateZ(80px) rotate(0deg) scale(1); 
-            }
-            25% { 
-                transform: translateZ(100px) rotate(5deg) scale(1.05); 
-            }
-            50% { 
-                transform: translateZ(80px) rotate(0deg) scale(1); 
-            }
-            75% { 
-                transform: translateZ(100px) rotate(-5deg) scale(1.05); 
-            }
+        
+        @keyframes floatPortrait {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            25% { transform: translateY(-20px) rotate(2deg); }
+            50% { transform: translateY(0) rotate(0deg); }
+            75% { transform: translateY(20px) rotate(-2deg); }
         }
-
-        .circular-portrait img {
+        
+        .portrait-circle img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            border-radius: 50%;
-            transition: all 0.5s ease;
         }
-
-        .circular-portrait:hover {
-            transform: translateZ(120px) scale(1.1);
-            box-shadow: 
-                0 40px 80px rgba(0, 0, 0, 0.8),
-                0 0 60px rgba(106, 17, 203, 0.8),
-                inset 0 0 60px rgba(255, 255, 255, 0.2);
-        }
-
-        .circular-portrait:hover img {
-            transform: scale(1.1);
-        }
-
-        .portrait-ring {
-            position: absolute;
-            top: -15px;
-            left: -15px;
-            right: -15px;
-            bottom: -15px;
-            border-radius: 50%;
-            border: 3px solid transparent;
-            background: linear-gradient(45deg, #6a11cb, #2575fc, #ff007a, #ff8c00, #00c6ff) border-box;
-            -webkit-mask: 
-                linear-gradient(#fff 0 0) padding-box, 
-                linear-gradient(#fff 0 0);
-            -webkit-mask-composite: xor;
-            mask-composite: exclude;
-            animation: ringRotate 20s linear infinite;
-            z-index: -1;
-        }
-
-        @keyframes ringRotate {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-
+        
         .portrait-badge {
             position: absolute;
-            bottom: 30px;
-            right: -20px;
-            background: var(--gradient-secondary);
+            bottom: 50px;
+            right: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(10px);
+            padding: 15px 25px;
+            border-radius: 30px;
+            border: 2px solid var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 600;
+            animation: badgeFloat 6s ease-in-out infinite;
+        }
+        
+        @keyframes badgeFloat {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+        
+        /* ===========================================
+           SOCIAL MEDIA SECTION (BELOW HERO)
+        =========================================== */
+        .social-section {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 50px 0;
+            margin-top: -50px;
+            position: relative;
+            z-index: 3;
+        }
+        
+        .social-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 15px;
+        }
+        
+        .social-item {
+            grid-column: span 2;
+            height: 80px;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
             color: white;
-            padding: 10px 20px;
-            border-radius: 25px;
-            font-weight: 700;
-            font-size: 14px;
-            box-shadow: 
-                0 15px 30px rgba(255, 0, 122, 0.5),
-                inset 0 1px 0 rgba(255, 255, 255, 0.3);
-            z-index: 10;
-            animation: badgePulse 3s ease-in-out infinite;
-        }
-
-        @keyframes badgePulse {
-            0%, 100% { 
-                box-shadow: 
-                    0 15px 30px rgba(255, 0, 122, 0.5),
-                    inset 0 1px 0 rgba(255, 255, 255, 0.3); 
-            }
-            50% { 
-                box-shadow: 
-                    0 20px 40px rgba(255, 0, 122, 0.7),
-                    inset 0 1px 0 rgba(255, 255, 255, 0.5); 
-            }
-        }
-
-        /* =========================
-           SECTIONS & GLASS CARDS
-        ========================= */
-        section {
-            max-width: 1300px;
-            margin: 0 auto;
-            padding: 150px 20px;
-            position: relative;
-            transform-style: preserve-3d;
-            opacity: 0;
-            transform: translateY(80px);
-            transition: opacity 1s ease, transform 1s ease;
-        }
-
-        section.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .section-title {
-            font-size: 3.8rem;
-            text-align: center;
-            margin-bottom: 80px;
-            position: relative;
-            z-index: 1;
-            transform: translateZ(40px);
-            animation: titleEntrance 1s ease-out both;
-        }
-
-        @keyframes titleEntrance {
-            from {
-                opacity: 0;
-                transform: translateZ(40px) translateY(50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateZ(40px) translateY(0);
-            }
-        }
-
-        .section-title::after {
-            content: '';
-            display: block;
-            width: 120px;
-            height: 5px;
-            background: linear-gradient(90deg, #6a11cb, #2575fc, #ff007a, #ff8c00);
-            margin: 20px auto 0;
-            border-radius: 3px;
-            animation: linePulse 4s ease-in-out infinite;
-        }
-
-        @keyframes linePulse {
-            0%, 100% { 
-                width: 120px;
-                opacity: 1;
-            }
-            50% { 
-                width: 160px;
-                opacity: 0.8;
-            }
-        }
-
-        .glass-card {
-            background: var(--glass-bg);
-            backdrop-filter: blur(25px) saturate(200%);
-            -webkit-backdrop-filter: blur(25px) saturate(200%);
-            border: 1px solid var(--glass-border);
-            border-radius: var(--card-radius);
-            padding: 50px;
-            box-shadow: 
-                var(--glass-shadow),
-                inset 0 1px 0 rgba(255, 255, 255, 0.1);
-            transition: all 0.7s var(--transition);
+            transition: var(--transition-smooth);
             position: relative;
             overflow: hidden;
-            transform-style: preserve-3d;
-            transform: translateZ(0);
-            animation: cardEntrance 1s ease-out both;
         }
-
-        @keyframes cardEntrance {
-            from {
-                opacity: 0;
-                transform: translateZ(0) translateY(60px) rotateX(10deg);
-            }
-            to {
-                opacity: 1;
-                transform: translateZ(0) translateY(0) rotateX(0);
-            }
+        
+        .social-item:nth-child(1) { background: linear-gradient(135deg, #D44638, #B23121); }
+        .social-item:nth-child(2) { background: linear-gradient(135deg, #25D366, #128C7E); }
+        .social-item:nth-child(3) { background: linear-gradient(135deg, #0077B5, #004182); }
+        .social-item:nth-child(4) { background: linear-gradient(135deg, #833AB4, #FD1D1D, #F77737); }
+        .social-item:nth-child(5) { background: linear-gradient(135deg, #1877F2, #0F4AA1); }
+        .social-item:nth-child(6) { background: linear-gradient(135deg, #000000, #444444); }
+        .social-item:nth-child(7) { background: linear-gradient(135deg, #00A3E0, #005F86); }
+        .social-item:nth-child(8) { background: linear-gradient(135deg, #43E660, #1FA337); }
+        .social-item:nth-child(9) { background: linear-gradient(135deg, #010101, #FF0050, #00F2EA); }
+        .social-item:nth-child(10) { background: linear-gradient(135deg, #FFFC00, #FFD000); color: #000; }
+        .social-item:nth-child(11) { background: linear-gradient(135deg, #000000, #444444); }
+        .social-item:nth-child(12) { background: linear-gradient(135deg, #F47300, #FF9E2C); }
+        
+        .social-item:hover {
+            transform: translateY(-10px) scale(1.05);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+            z-index: 10;
         }
-
-        .glass-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
+        
+        .social-item i {
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+        
+        .social-item span {
+            font-size: 12px;
+            font-weight: 600;
+        }
+        
+        /* ===========================================
+           ABOUT SECTION WITH DETAILED BIO
+        =========================================== */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem;
+            align-items: center;
+        }
+        
+        .about-image {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+        
+        .about-img {
             width: 100%;
-            height: 100%;
-            background: linear-gradient(
-                90deg,
-                transparent,
-                rgba(255, 255, 255, 0.15),
-                transparent
-            );
-            transition: 0.8s;
-            z-index: 1;
+            height: auto;
+            display: block;
+            transition: transform 0.8s ease;
         }
-
-        .glass-card:hover::before {
-            left: 100%;
+        
+        .about-image:hover .about-img {
+            transform: scale(1.05);
         }
-
-        .glass-card:hover {
-            transform: translateY(-15px) rotateX(5deg) rotateY(5deg) translateZ(30px);
-            border-color: rgba(255, 255, 255, 0.4);
-            box-shadow: 
-                0 40px 80px rgba(106, 17, 203, 0.5),
-                inset 0 0 40px rgba(255, 255, 255, 0.2);
+        
+        .about-text h3 {
+            margin-bottom: 1.5rem;
         }
-
-        /* =========================
-           TIMELINE (3D ENHANCED)
-        ========================= */
+        
+        .about-list {
+            list-style: none;
+            margin-top: 2rem;
+        }
+        
+        .about-list li {
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+        
+        .about-list i {
+            color: var(--primary-color);
+            margin-top: 5px;
+        }
+        
+        /* ===========================================
+           TIMELINE SECTION
+        =========================================== */
         .timeline {
             position: relative;
             max-width: 900px;
             margin: 0 auto;
-            transform-style: preserve-3d;
         }
-
+        
         .timeline::before {
             content: '';
             position: absolute;
             left: 50%;
-            width: 4px;
-            height: 100%;
-            background: linear-gradient(
-                to bottom,
-                transparent,
-                #6a11cb,
-                #2575fc,
-                #ff007a,
-                #ff8c00,
-                transparent
-            );
             transform: translateX(-50%);
-            box-shadow: 0 0 30px rgba(106, 17, 203, 0.7);
-            animation: timelinePulse 3s infinite;
+            width: 2px;
+            height: 100%;
+            background: var(--gradient-primary);
         }
-
-        @keyframes timelinePulse {
-            0%, 100% { box-shadow: 0 0 30px rgba(106, 17, 203, 0.7); }
-            50% { box-shadow: 0 0 50px rgba(106, 17, 203, 0.9); }
-        }
-
+        
         .timeline-item {
-            margin-bottom: 60px;
+            margin-bottom: 4rem;
+            position: relative;
             width: 100%;
             display: flex;
-            justify-content: center;
-            opacity: 0;
-            transform: translateY(60px) rotateX(20deg);
-            transition: all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            transform-style: preserve-3d;
-        }
-
-        .timeline-item.visible {
-            opacity: 1;
-            transform: translateY(0) rotateX(0);
-        }
-
-        .timeline-content {
-            width: 48%;
-            background: rgba(255, 255, 255, 0.09);
-            backdrop-filter: blur(20px);
-            padding: 30px;
-            border-radius: 20px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            position: relative;
-            transform-style: preserve-3d;
-            transition: all 0.4s ease;
-            overflow: hidden;
-        }
-
-        .timeline-content::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 4px;
-            background: var(--gradient-accent);
-            transform: scaleX(0);
-            transform-origin: left;
-            transition: transform 0.5s ease;
-        }
-
-        .timeline-content:hover::before {
-            transform: scaleX(1);
-        }
-
-        .timeline-content:hover {
-            transform: translateZ(20px);
-            border-color: rgba(0, 198, 255, 0.5);
-            box-shadow: 
-                0 20px 40px rgba(0, 198, 255, 0.3),
-                inset 0 0 20px rgba(255, 255, 255, 0.1);
-        }
-
-        .timeline-item:nth-child(odd) {
             justify-content: flex-start;
         }
-
+        
         .timeline-item:nth-child(even) {
             justify-content: flex-end;
         }
-
-        .timeline-content h4 {
-            color: #00c6ff;
-            margin-bottom: 15px;
-            font-size: 1.5rem;
-            text-shadow: 0 0 15px rgba(0, 198, 255, 0.5);
+        
+        .timeline-content {
+            width: 45%;
+            background: var(--card-bg);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--border-color);
+            border-radius: 15px;
+            padding: 2rem;
+            position: relative;
+            transition: var(--transition-smooth);
         }
-
+        
+        .timeline-content:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary-color);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+        
         .timeline-dot {
             position: absolute;
-            width: 24px;
-            height: 24px;
-            background: #fff;
-            border-radius: 50%;
             left: 50%;
-            top: 25px;
-            transform: translateX(-50%) translateZ(10px);
-            box-shadow: 
-                0 0 30px #00c6ff,
-                0 0 20px #00c6ff,
-                inset 0 0 10px rgba(255, 255, 255, 0.7);
-            z-index: 5;
-            animation: pulse 2.5s ease-in-out infinite;
-        }
-
-        @keyframes pulse {
-            0%, 100% { 
-                box-shadow: 
-                    0 0 30px #00c6ff,
-                    0 0 20px #00c6ff,
-                    inset 0 0 10px rgba(255, 255, 255, 0.7); 
-            }
-            50% { 
-                box-shadow: 
-                    0 0 40px #00c6ff,
-                    0 0 30px #00c6ff,
-                    inset 0 0 15px rgba(255, 255, 255, 0.9); 
-            }
-        }
-
-        /* =========================
-           GRID LAYOUTS
-        ========================= */
-        .grid-3 {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 40px;
-            transform-style: preserve-3d;
-        }
-
-        .grid-4 {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-            transform-style: preserve-3d;
-        }
-
-        .skill-tag {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            margin-bottom: 20px;
-            padding: 18px;
-            background: rgba(255, 255, 255, 0.07);
-            border-radius: 18px;
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .skill-tag:hover {
-            background: rgba(255, 255, 255, 0.12);
-            transform: translateX(12px) translateZ(10px);
-            box-shadow: 
-                0 12px 25px rgba(0, 0, 0, 0.25),
-                0 0 15px rgba(106, 17, 203, 0.25);
-        }
-
-        .skill-tag i {
-            font-size: 28px;
-            background: var(--gradient-accent);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            filter: drop-shadow(0 0 8px rgba(0, 198, 255, 0.5));
-        }
-
-        /* =========================
-           3D GALLERY
-        ========================= */
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 25px;
-            padding: 20px;
-            transform-style: preserve-3d;
-        }
-
-        .gallery-item {
-            height: 320px;
-            border-radius: 20px;
-            overflow: hidden;
-            position: relative;
-            cursor: pointer;
-            box-shadow: 
-                0 20px 40px rgba(0, 0, 0, 0.6),
-                inset 0 0 20px rgba(255, 255, 255, 0.08);
-            transition: all 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            transform-style: preserve-3d;
-            transform: rotateX(5deg) rotateY(5deg);
-            opacity: 0;
-            animation: galleryEntrance 0.8s ease-out forwards;
-        }
-
-        .gallery-item:nth-child(even) {
-            transform: rotateX(-5deg) rotateY(-5deg);
-            animation-delay: 0.2s;
-        }
-
-        .gallery-item:nth-child(3), .gallery-item:nth-child(6) {
-            animation-delay: 0.4s;
-        }
-
-        @keyframes galleryEntrance {
-            to {
-                opacity: 1;
-                transform: rotateX(0) rotateY(0);
-            }
-        }
-
-        .gallery-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: all 0.7s ease;
-            filter: brightness(0.9);
-        }
-
-        .gallery-item:hover {
-            transform: scale(1.1) rotateX(0) rotateY(0) translateZ(50px);
-            box-shadow: 
-                0 30px 60px rgba(0, 198, 255, 0.6),
-                0 0 40px rgba(106, 17, 203, 0.6);
-            z-index: 10;
-        }
-
-        .gallery-item:hover img {
-            transform: scale(1.15);
-            filter: brightness(1.1);
-        }
-
-        .gallery-overlay {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            background: linear-gradient(
-                transparent,
-                rgba(0, 0, 0, 0.9)
-            );
-            padding: 25px;
-            opacity: 0;
-            transform: translateY(25px);
-            transition: all 0.4s ease;
+            top: 20px;
+            transform: translateX(-50%);
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: var(--gradient-primary);
             z-index: 2;
+            box-shadow: 0 0 20px var(--primary-color);
         }
-
-        .gallery-item:hover .gallery-overlay {
-            opacity: 1;
-            transform: translateY(0);
+        
+        /* ===========================================
+           EXPERTISE SECTION
+        =========================================== */
+        .expertise-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2rem;
         }
-
-        /* =========================
-           THEMATIC AREAS
-        ========================= */
-        .thematic-grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-            justify-content: center;
-            margin-top: 30px;
-        }
-
-        .theme-tag {
-            padding: 12px 25px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 25px;
-            border: 2px solid;
-            font-weight: 600;
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        
+        .expertise-card {
+            background: var(--card-bg);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--border-color);
+            border-radius: var(--card-radius);
+            padding: 2.5rem;
+            transition: var(--transition-smooth);
+            height: 100%;
             position: relative;
             overflow: hidden;
-            backdrop-filter: blur(10px);
-            animation: tagFloat 6s ease-in-out infinite;
         }
-
-        .theme-tag:nth-child(odd) {
-            animation-delay: 1s;
+        
+        .expertise-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary-color);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
         }
-
-        @keyframes tagFloat {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-8px); }
-        }
-
-        .theme-tag::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(
-                90deg,
-                transparent,
-                rgba(255, 255, 255, 0.3),
-                transparent
-            );
-            transition: 0.6s;
-        }
-
-        .theme-tag:hover::before {
-            left: 100%;
-        }
-
-        .theme-tag:hover {
-            transform: translateY(-6px) scale(1.08);
-            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.35);
-            border-width: 3px;
-        }
-
-        /* =========================
-           CONTACT SECTION
-        ========================= */
-        .contact-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 35px;
-            margin-top: 60px;
-        }
-
-        .contact-card {
-            background: rgba(255, 255, 255, 0.08);
-            backdrop-filter: blur(20px);
-            border-radius: 22px;
-            padding: 35px;
-            text-align: center;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            transition: all 0.5s ease;
-            transform-style: preserve-3d;
-        }
-
-        .contact-card:hover {
-            transform: translateY(-12px) translateZ(15px);
-            border-color: rgba(0, 198, 255, 0.5);
-            box-shadow: 0 25px 45px rgba(0, 198, 255, 0.25);
-        }
-
-        .contact-card i {
-            font-size: 45px;
-            margin-bottom: 20px;
-            background: var(--gradient-accent);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .contact-card h3 {
-            margin-bottom: 15px;
-            font-size: 1.6rem;
-        }
-
-        .contact-card p {
-            color: rgba(255, 255, 255, 0.8);
-            line-height: 1.6;
-        }
-
-        .contact-card a {
-            color: #00c6ff;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            display: inline-block;
-            margin-top: 10px;
-        }
-
-        .contact-card a:hover {
-            text-decoration: underline;
-            text-shadow: 0 0 10px rgba(0, 198, 255, 0.5);
-        }
-
-        /* =========================
-           BOTTOM SOCIAL MEDIA SECTION
-        ========================= */
-        .social-section {
-            margin-top: 80px;
-        }
-
-        .social-3d-container {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 25px;
-            margin-top: 40px;
-            perspective: 800px;
-            transform-style: preserve-3d;
-        }
-
-        .social-btn {
+        
+        .expertise-icon {
             width: 70px;
             height: 70px;
-            background: rgba(255, 255, 255, 0.1);
             border-radius: 20px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 30px;
-            color: #fff;
-            text-decoration: none;
-            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            border: 2px solid rgba(255, 255, 255, 0.25);
-            box-shadow: 
-                0 15px 35px rgba(0, 0, 0, 0.4),
-                inset 0 0 20px rgba(255, 255, 255, 0.1);
-            position: relative;
-            overflow: hidden;
-            transform-style: preserve-3d;
-            animation: socialBtnEntrance 0.8s ease-out both;
-        }
-
-        .social-btn:nth-child(2) { animation-delay: 0.1s; }
-        .social-btn:nth-child(3) { animation-delay: 0.2s; }
-        .social-btn:nth-child(4) { animation-delay: 0.3s; }
-        .social-btn:nth-child(5) { animation-delay: 0.4s; }
-        .social-btn:nth-child(6) { animation-delay: 0.5s; }
-        .social-btn:nth-child(7) { animation-delay: 0.6s; }
-        .social-btn:nth-child(8) { animation-delay: 0.7s; }
-        .social-btn:nth-child(9) { animation-delay: 0.8s; }
-        .social-btn:nth-child(10) { animation-delay: 0.9s; }
-        .social-btn:nth-child(11) { animation-delay: 1s; }
-        .social-btn:nth-child(12) { animation-delay: 1.1s; }
-
-        @keyframes socialBtnEntrance {
-            from {
-                opacity: 0;
-                transform: translateY(40px) rotateX(90deg);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0) rotateX(0);
-            }
-        }
-
-        .social-btn::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, var(--c1), var(--c2));
-            opacity: 0;
-            transition: all 0.5s ease;
-            z-index: 1;
-        }
-
-        .social-btn:hover {
-            transform: rotateX(20deg) rotateY(20deg) translateY(-15px) scale(1.15);
-            box-shadow: 
-                0 25px 50px rgba(0, 0, 0, 0.6),
-                0 0 30px var(--c1),
-                inset 0 0 30px rgba(255, 255, 255, 0.2);
-            border-color: transparent;
-        }
-
-        .social-btn:hover::before {
-            opacity: 1;
-        }
-
-        .social-btn i {
-            transition: all 0.5s ease;
-            z-index: 2;
-            position: relative;
-        }
-
-        .social-btn:hover i {
-            transform: scale(1.3) translateZ(30px);
-            filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.7));
-        }
-
-        /* =========================
-           MISSION STATEMENT
-        ========================= */
-        .mission-card {
-            background: linear-gradient(
-                135deg,
-                rgba(106, 17, 203, 0.5),
-                rgba(37, 117, 252, 0.5),
-                rgba(255, 0, 122, 0.5),
-                rgba(255, 140, 0, 0.5)
-            );
-            backdrop-filter: blur(25px);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            border-radius: var(--card-radius);
-            padding: 70px;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-            transform-style: preserve-3d;
-            animation: missionGlow 5s ease-in-out infinite, missionFloat 8s ease-in-out infinite;
-        }
-
-        @keyframes missionGlow {
-            0%, 100% { 
-                box-shadow: 
-                    0 25px 70px rgba(106, 17, 203, 0.5),
-                    0 0 40px rgba(106, 17, 203, 0.4); 
-            }
-            50% { 
-                box-shadow: 
-                    0 35px 90px rgba(106, 17, 203, 0.7),
-                    0 0 60px rgba(106, 17, 203, 0.6); 
-            }
-        }
-
-        @keyframes missionFloat {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-15px); }
-        }
-
-        .mission-card i {
-            font-size: 60px;
-            color: #fff;
-            margin-bottom: 35px;
-            text-shadow: 0 0 35px rgba(255, 255, 255, 0.6);
-            animation: missionIcon 3s ease-in-out infinite;
-        }
-
-        @keyframes missionIcon {
-            0%, 100% { transform: scale(1) rotate(0deg); }
-            50% { transform: scale(1.1) rotate(5deg); }
-        }
-
-        .mission-card h2 {
-            font-size: 2.8rem;
-            margin-bottom: 30px;
-            background: linear-gradient(45deg, #fff, #a5f3fc, #ffcce6);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            text-shadow: 0 0 25px rgba(255, 255, 255, 0.3);
-        }
-
-        .mission-card p {
-            font-size: 1.6rem;
-            font-family: 'Playfair Display', serif;
-            font-style: italic;
-            line-height: 1.8;
-            max-width: 850px;
-            margin: 0 auto;
-            color: rgba(255, 255, 255, 0.95);
-            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-        }
-
-        /* =========================
-           LEGAL SERVICES SECTION
-        ========================= */
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 35px;
-            margin-top: 60px;
-        }
-
-        .service-card {
-            background: rgba(255, 255, 255, 0.07);
-            backdrop-filter: blur(20px);
-            border-radius: 22px;
-            padding: 35px;
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            transform-style: preserve-3d;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .service-card:hover {
-            transform: translateY(-15px) translateZ(25px);
-            border-color: rgba(0, 198, 255, 0.5);
-            box-shadow: 
-                0 30px 50px rgba(0, 198, 255, 0.35),
-                inset 0 0 25px rgba(255, 255, 255, 0.1);
-        }
-
-        .service-card i {
-            font-size: 45px;
-            margin-bottom: 20px;
-            background: var(--gradient-primary);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .service-card h3 {
-            font-size: 1.7rem;
-            margin-bottom: 15px;
-            color: #fff;
-        }
-
-        .service-card p {
-            color: rgba(255, 255, 255, 0.8);
-            line-height: 1.6;
-        }
-
-        .service-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(
-                90deg,
-                transparent,
-                rgba(255, 255, 255, 0.1),
-                transparent
-            );
-            transition: 0.8s;
-        }
-
-        .service-card:hover::before {
-            left: 100%;
-        }
-
-        /* =========================
-           ACHIEVEMENTS SECTION
-        ========================= */
-        .achievements-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 25px;
-            margin-top: 60px;
-        }
-
-        .achievement-card {
-            background: rgba(255, 255, 255, 0.07);
-            backdrop-filter: blur(20px);
-            border-radius: 20px;
-            padding: 25px;
-            text-align: center;
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            transition: all 0.5s ease;
-            transform-style: preserve-3d;
-        }
-
-        .achievement-card:hover {
-            transform: translateY(-12px) translateZ(15px);
-            border-color: rgba(255, 215, 0, 0.5);
-            box-shadow: 0 25px 45px rgba(255, 215, 0, 0.25);
-        }
-
-        .achievement-card i {
-            font-size: 36px;
-            margin-bottom: 15px;
-            color: #FFD700;
-        }
-
-        .achievement-card h4 {
-            font-size: 1.3rem;
-            margin-bottom: 10px;
-            color: #fff;
-        }
-
-        .achievement-card p {
-            color: rgba(255, 255, 255, 0.8);
-            font-size: 0.9rem;
-        }
-
-        /* =========================
-           CONTACT FORM
-        ========================= */
-        .contact-form-container {
-            margin-top: 60px;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .contact-form {
-            background: rgba(255, 255, 255, 0.07);
-            backdrop-filter: blur(25px);
-            border-radius: 25px;
-            padding: 50px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
-        }
-
-        .form-group {
-            margin-bottom: 25px;
-        }
-
-        .form-label {
-            display: block;
-            margin-bottom: 10px;
-            color: #fff;
-            font-weight: 600;
-            font-size: 1.1rem;
-        }
-
-        .form-input, .form-textarea {
-            width: 100%;
-            padding: 18px;
-            background: rgba(255, 255, 255, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            border-radius: 12px;
-            color: #fff;
-            font-size: 1rem;
-            transition: all 0.3s ease;
-        }
-
-        .form-input:focus, .form-textarea:focus {
-            outline: none;
-            border-color: #00c6ff;
-            box-shadow: 0 0 20px rgba(0, 198, 255, 0.3);
-            background: rgba(255, 255, 255, 0.15);
-        }
-
-        .form-textarea {
-            min-height: 150px;
-            resize: vertical;
-        }
-
-        .form-submit {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
             background: var(--gradient-primary);
             color: white;
-            border: none;
-            padding: 18px 40px;
-            border-radius: 12px;
-            font-size: 1.1rem;
-            font-weight: 700;
-            cursor: pointer;
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            width: 100%;
-            position: relative;
-            overflow: hidden;
         }
-
-        .form-submit:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(106, 17, 203, 0.5);
-        }
-
-        .form-submit::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-            transition: 0.6s;
-        }
-
-        .form-submit:hover::before {
-            left: 100%;
-        }
-
-        /* =========================
-           FOOTER
-        ========================= */
-        footer {
-            text-align: center;
-            padding: 60px 20px;
-            border-top: 1px solid rgba(255, 255, 255, 0.2);
-            color: #aaa;
-            font-size: 15px;
-            background: rgba(0, 0, 0, 0.4);
-            backdrop-filter: blur(20px);
-            position: relative;
-            z-index: 1;
-            overflow: hidden;
-        }
-
-        footer::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 1px;
-            background: linear-gradient(90deg, transparent, #6a11cb, #2575fc, #ff007a, #ff8c00, transparent);
-        }
-
-        footer::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.05), transparent);
-            animation: footerShine 8s infinite;
-        }
-
-        @keyframes footerShine {
-            0% { left: -100%; }
-            100% { left: 100%; }
-        }
-
-        .footer-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 50px;
-            text-align: left;
-            margin-bottom: 50px;
-        }
-
-        .footer-section h3 {
-            font-size: 1.4rem;
-            margin-bottom: 25px;
-            color: #fff;
-            position: relative;
-            display: inline-block;
-        }
-
-        .footer-section h3::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 0;
-            width: 50px;
-            height: 3px;
-            background: var(--gradient-primary);
-            border-radius: 2px;
-        }
-
-        .footer-section p {
-            line-height: 1.8;
-            margin-bottom: 20px;
-            color: rgba(255, 255, 255, 0.7);
-        }
-
-        .footer-links {
+        
+        .expertise-list {
             list-style: none;
+            margin-top: 1.5rem;
         }
-
-        .footer-links li {
-            margin-bottom: 12px;
-        }
-
-        .footer-links a {
-            color: rgba(255, 255, 255, 0.7);
-            text-decoration: none;
-            transition: all 0.3s ease;
+        
+        .expertise-list li {
+            margin-bottom: 0.8rem;
             display: flex;
             align-items: center;
             gap: 10px;
         }
-
-        .footer-links a:hover {
-            color: #fff;
-            transform: translateX(10px);
+        
+        .expertise-list i {
+            color: var(--primary-color);
         }
-
-        .footer-links i {
-            color: #00c6ff;
-            font-size: 14px;
+        
+        /* ===========================================
+           GALLERY SECTION
+        =========================================== */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
         }
-
-        .copyright {
-            margin-top: 40px;
-            padding-top: 30px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            color: rgba(255, 255, 255, 0.5);
-            font-size: 14px;
+        
+        .gallery-item {
+            border-radius: 20px;
+            overflow: hidden;
+            position: relative;
+            height: 300px;
+            transition: var(--transition-smooth);
         }
-
-        /* =========================
-           RESPONSIVE DESIGN
-        ========================= */
-        @media (max-width: 1400px) {
-            .hero-content {
-                gap: 60px;
-                max-width: 1200px;
-            }
-
-            .circular-portrait {
-                width: 320px;
-                height: 320px;
-            }
+        
+        .gallery-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.8s ease;
         }
-
-        @media (max-width: 1200px) {
-            .hero-content {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-
-            .hero-portrait-container {
-                order: -1;
-                justify-content: center;
-                height: 400px;
-                margin-bottom: 40px;
-            }
-
-            .circular-portrait {
-                width: 280px;
-                height: 280px;
-            }
-
-            .portrait-badge {
-                right: 50%;
-                transform: translateX(50%);
-                bottom: -20px;
-            }
-
-            .hero-text {
-                max-width: 800px;
-                margin: 0 auto;
-            }
-
-            .controls-panel {
-                right: 20px;
-                top: 80px;
-            }
-        }
-
-        @media (max-width: 992px) {
-            .hero-portrait-container {
-                height: 350px;
-            }
-
-            .circular-portrait {
-                width: 250px;
-                height: 250px;
-            }
-
-            .hero h1 {
-                font-size: 3.2rem;
-            }
-
-            .section-title {
-                font-size: 3rem;
-            }
-
-            .glass-card {
-                padding: 40px;
-            }
-
-            .grid-3, .services-grid, .contact-grid {
-                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            }
-
-            nav {
-                top: 20px;
-                padding: 12px 25px;
-                gap: 20px;
-            }
-
-            nav a {
-                width: 40px;
-                height: 40px;
-                font-size: 18px;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .top-social-bar {
-                padding: 10px 15px;
-                gap: 15px;
-                overflow-x: auto;
-                justify-content: flex-start;
-            }
-
-            .top-social-bar a {
-                width: 32px;
-                height: 32px;
-                font-size: 16px;
-                flex-shrink: 0;
-            }
-
-            .controls-panel {
-                top: 70px;
-                right: 15px;
-                flex-direction: row;
-                gap: 10px;
-            }
-
-            .theme-btn, .lang-btn, .print-btn {
-                padding: 10px 20px;
-                font-size: 12px;
-            }
-
-            nav {
-                top: 15px;
-                padding: 10px 20px;
-                gap: 15px;
-                width: 90%;
-                max-width: 400px;
-            }
-
-            nav a {
-                width: 36px;
-                height: 36px;
-                font-size: 16px;
-            }
-
-            /* Hero Section */
-            .hero {
-                padding: 150px 20px 80px;
-            }
-
-            .hero-badge {
-                padding: 8px 20px;
-                font-size: 12px;
-            }
-
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-
-            .hero-portrait-container {
-                height: 300px;
-            }
-
-            .circular-portrait {
-                width: 220px;
-                height: 220px;
-            }
-
-            /* Sections */
-            section {
-                padding: 100px 20px;
-            }
-
-            .section-title {
-                font-size: 2.5rem;
-                margin-bottom: 60px;
-            }
-
-            .glass-card {
-                padding: 30px;
-            }
-
-            /* Timeline */
-            .timeline::before {
-                left: 0;
-            }
-
-            .timeline-item {
-                justify-content: flex-start !important;
-                padding-left: 40px;
-            }
-
-            .timeline-content {
-                width: 100%;
-            }
-
-            .timeline-dot {
-                left: 0;
-                transform: translateX(-50%);
-            }
-
-            /* Gallery */
-            .gallery-grid {
-                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-                gap: 20px;
-            }
-
-            .gallery-item {
-                height: 280px;
-            }
-
-            /* Connect Section */
-            .social-3d-container {
-                gap: 20px;
-            }
-
-            .social-btn {
-                width: 60px;
-                height: 60px;
-                font-size: 26px;
-            }
-
-            /* Mission Card */
-            .mission-card {
-                padding: 40px 30px;
-            }
-
-            .mission-card h2 {
-                font-size: 2.2rem;
-            }
-
-            .mission-card p {
-                font-size: 1.3rem;
-            }
-
-            /* Contact Form */
-            .contact-form {
-                padding: 30px;
-            }
-
-            /* Footer */
-            .footer-content {
-                grid-template-columns: 1fr;
-                text-align: center;
-                gap: 40px;
-            }
-
-            .footer-section h3::after {
-                left: 50%;
-                transform: translateX(-50%);
-            }
-
-            .footer-links a:hover {
-                transform: none;
-            }
-        }
-
-        @media (max-width: 576px) {
-            .hero-buttons {
-                flex-direction: column;
-                gap: 15px;
-            }
-
-            .hero-btn {
-                width: 100%;
-                min-width: auto;
-            }
-
-            .grid-3, .services-grid, .contact-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .gallery-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .gallery-item {
-                height: 250px;
-            }
-
-            nav {
-                gap: 12px;
-                padding: 8px 15px;
-                width: 95%;
-            }
-
-            nav a {
-                width: 34px;
-                height: 34px;
-                font-size: 15px;
-            }
-
-            .section-title {
-                font-size: 2.2rem;
-            }
-
-            .hero h1 {
-                font-size: 2.2rem;
-            }
-
-            .hero-portrait-container {
-                height: 250px;
-            }
-
-            .circular-portrait {
-                width: 200px;
-                height: 200px;
-            }
-
-            .social-btn {
-                width: 55px;
-                height: 55px;
-                font-size: 22px;
-            }
-
-            .theme-btn, .lang-btn, .print-btn {
-                padding: 8px 16px;
-                font-size: 11px;
-            }
-
-            .top-social-bar {
-                justify-content: center;
-            }
-        }
-
-        @media (max-width: 400px) {
-            .hero-portrait-container {
-                height: 220px;
-            }
-
-            .circular-portrait {
-                width: 180px;
-                height: 180px;
-            }
-
-            nav {
-                gap: 10px;
-                padding: 8px 12px;
-            }
-
-            nav a {
-                width: 32px;
-                height: 32px;
-                font-size: 14px;
-            }
-
-            .section-title {
-                font-size: 2rem;
-            }
-
-            .hero h1 {
-                font-size: 2rem;
-            }
-
-            .social-btn {
-                width: 50px;
-                height: 50px;
-                font-size: 20px;
-            }
-        }
-
-        /* =========================
-           ANIMATION UTILITIES
-        ========================= */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(60px) translateZ(-60px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0) translateZ(0);
-            }
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
-        }
-
-        .animate-on-scroll {
-            opacity: 0;
-            transform: translateY(60px) rotateX(15deg);
-            transition: all 0.9s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        }
-
-        .animate-on-scroll.visible {
-            opacity: 1;
-            transform: translateY(0) rotateX(0);
-        }
-
-        /* =========================
-           LOADING ANIMATION
-        ========================= */
-        .loader {
-            position: fixed;
+        
+        .gallery-overlay {
+            position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: #050510;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
             display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 9999;
-            transition: opacity 0.8s ease, visibility 0.8s ease;
-        }
-
-        .loader.hidden {
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 2rem;
             opacity: 0;
-            visibility: hidden;
+            transition: var(--transition-smooth);
         }
-
-        .loader-content {
-            text-align: center;
+        
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
         }
-
-        .loader-spinner {
-            width: 70px;
-            height: 70px;
-            border: 4px solid rgba(255, 255, 255, 0.1);
-            border-top: 4px solid #6a11cb;
-            border-right: 4px solid #2575fc;
-            border-bottom: 4px solid #ff007a;
-            border-radius: 50%;
-            animation: spin 1.5s linear infinite;
-            margin: 0 auto 25px;
+        
+        .gallery-item:hover .gallery-img {
+            transform: scale(1.1);
         }
-
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+        
+        /* ===========================================
+           CONTACT FORM SECTION
+        =========================================== */
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem;
         }
-
-        .loader-text {
-            color: #fff;
-            font-size: 16px;
+        
+        .contact-form {
+            background: var(--card-bg);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--border-color);
+            border-radius: var(--card-radius);
+            padding: 3rem;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 15px 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            color: var(--text-primary);
+            font-size: 1rem;
+            transition: var(--transition-smooth);
+        }
+        
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 2px rgba(138, 43, 226, 0.2);
+        }
+        
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        .form-submit {
+            width: 100%;
+            padding: 16px;
+            background: var(--gradient-primary);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.1rem;
             font-weight: 600;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            background: linear-gradient(90deg, #6a11cb, #2575fc, #ff007a);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            animation: loaderText 2s ease-in-out infinite;
+            cursor: pointer;
+            transition: var(--transition-smooth);
         }
-
-        @keyframes loaderText {
-            0%, 100% { opacity: 0.5; }
-            50% { opacity: 1; }
+        
+        .form-submit:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(138, 43, 226, 0.3);
         }
-
-        /* =========================
-           PRINT STYLES
-        ========================= */
-        @media print {
-            .loader, .controls-panel, nav, .theme-btn, .lang-btn, .print-btn, .top-social-bar {
-                display: none !important;
+        
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+        
+        .contact-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 15px;
+            background: var(--gradient-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+        }
+        
+        .contact-details h4 {
+            margin-bottom: 5px;
+        }
+        
+        /* ===========================================
+           FOOTER WITH SOCIAL MEDIA
+        =========================================== */
+        footer {
+            background: var(--darker-bg);
+            padding: 5rem 0 2rem;
+            border-top: 1px solid var(--border-color);
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+            gap: 4rem;
+            margin-bottom: 4rem;
+        }
+        
+        .footer-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+        
+        .footer-about {
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+        }
+        
+        .footer-social {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .footer-social a {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.05);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-muted);
+            transition: var(--transition-smooth);
+            text-decoration: none;
+        }
+        
+        .footer-social a:hover {
+            background: var(--primary-color);
+            color: white;
+            transform: translateY(-3px);
+        }
+        
+        .footer-links {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+        }
+        
+        .footer-links h4 {
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+        }
+        
+        .footer-links ul {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+        
+        .footer-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: var(--transition-smooth);
+        }
+        
+        .footer-links a:hover {
+            color: var(--primary-color);
+        }
+        
+        .footer-bottom {
+            padding-top: 2rem;
+            border-top: 1px solid var(--border-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        
+        .copyright {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+        
+        /* ===========================================
+           RESPONSIVE DESIGN
+        =========================================== */
+        @media (max-width: 1200px) {
+            .hero-content {
+                gap: 40px;
             }
             
-            body {
-                background: white !important;
-                color: black !important;
+            .portrait-circle {
+                width: 350px;
+                height: 350px;
             }
             
-            .glass-card, .mission-card, .service-card {
-                background: white !important;
-                color: black !important;
-                box-shadow: none !important;
-                border: 1px solid #ddd !important;
+            .social-grid {
+                grid-template-columns: repeat(6, 1fr);
             }
             
-            .gradient-text, h1, h2, h3 {
-                color: black !important;
-                background: none !important;
-                -webkit-text-fill-color: black !important;
+            .social-item {
+                grid-column: span 1;
+            }
+        }
+        
+        @media (max-width: 992px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
             }
             
-            .hero-socials, .social-3d-container {
-                display: none !important;
+            .hero-portrait {
+                justify-content: center;
+                order: -1;
             }
             
-            a {
-                color: black !important;
-                text-decoration: underline;
+            .portrait-circle {
+                width: 300px;
+                height: 300px;
+            }
+            
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+            
+            .social-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .floating-nav {
+                padding: 12px 20px;
+                gap: 20px;
+                bottom: 20px;
+            }
+            
+            .floating-nav a {
+                width: 40px;
+                height: 40px;
+                font-size: 18px;
+            }
+            
+            .top-header .container {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .top-social {
+                width: 100%;
+                justify-content: center;
             }
             
             .hero {
-                padding: 50px 20px !important;
+                padding-top: 150px;
             }
             
-            section {
-                padding: 50px 20px !important;
+            .hero-stats {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+            
+            .portrait-circle {
+                width: 250px;
+                height: 250px;
+            }
+            
+            .social-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            
+            .expertise-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .timeline::before {
+                left: 0;
+            }
+            
+            .timeline-item {
+                justify-content: flex-start !important;
+                padding-left: 40px;
+            }
+            
+            .timeline-content {
+                width: 100%;
+            }
+            
+            .timeline-dot {
+                left: 0;
+                transform: translateX(-50%);
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .social-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .portrait-circle {
+                width: 200px;
+                height: 200px;
+            }
+            
+            .floating-nav {
+                width: 95%;
+                gap: 15px;
+                padding: 10px 15px;
+            }
+            
+            .floating-nav a {
+                width: 35px;
+                height: 35px;
+                font-size: 16px;
+            }
+            
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .hero-description {
+                font-size: 1.1rem;
             }
         }
     </style>
 </head>
-
 <body>
-    <!-- LOADING SCREEN -->
-    <div class="loader" id="loader">
-        <div class="loader-content">
-            <div class="loader-spinner"></div>
-            <div class="loader-text">Loading Portfolio</div>
-        </div>
-    </div>
-
     <!-- DYNAMIC BACKGROUND -->
-    <div class="fluid-bg">
-        <div class="orb orb-1"></div>
-        <div class="orb orb-2"></div>
-        <div class="orb orb-3"></div>
-        <div class="orb orb-4"></div>
+    <div class="dynamic-bg">
+        <div class="bg-orb orb-1"></div>
+        <div class="bg-orb orb-2"></div>
+        <div class="bg-orb orb-3"></div>
     </div>
     <div class="particles-container" id="particles"></div>
 
-    <!-- TOP SOCIAL MEDIA BAR -->
-    <div class="top-social-bar">
-        <a href="mailto:advmumtaz222@gmail.com" title="Email">
-            <i class="fas fa-envelope"></i>
-        </a>
-        <a href="https://wa.me/923332568792" title="WhatsApp">
-            <i class="fab fa-whatsapp"></i>
-        </a>
-        <a href="https://www.linkedin.com/in/adv-mumtaz-alam-bazai-163a9a324" title="LinkedIn">
-            <i class="fab fa-linkedin-in"></i>
-        </a>
-        <a href="https://www.instagram.com/mumtaz_alam" title="Instagram">
-            <i class="fab fa-instagram"></i>
-        </a>
-        <a href="https://www.facebook.com/mumtaz.alam.18488" title="Facebook">
-            <i class="fab fa-facebook-f"></i>
-        </a>
-        <a href="https://x.com/mumtazalam333" title="Twitter/X">
-            <i class="fab fa-x-twitter"></i>
-        </a>
-        <a href="https://my.weforum.org/network/people/001TG000009vSDhYAM/adv-mumtaz-alam" title="World Economic Forum">
-            <i class="fas fa-globe"></i>
-        </a>
-        <a href="https://linktr.ee/mumtazalam" title="Linktree">
-            <i class="fas fa-link"></i>
-        </a>
-        <a href="https://www.tiktok.com/@mumtaz_alam" title="TikTok">
-            <i class="fab fa-tiktok"></i>
-        </a>
-        <a href="https://www.snapchat.com/add/mumtazalam222" title="Snapchat">
-            <i class="fab fa-snapchat-ghost"></i>
-        </a>
-    </div>
+    <!-- TOP HEADER WITH SOCIAL MEDIA -->
+    <header class="top-header">
+        <div class="container">
+            <div class="logo">Mumtaz <span>Alam</span> Bazai</div>
+            <div class="top-social">
+                <a href="mailto:advmumtaz222@gmail.com" target="_blank" title="Email">
+                    <i class="fas fa-envelope"></i>
+                    <span class="tooltip">Email</span>
+                </a>
+                <a href="https://wa.me/923332568792" target="_blank" title="WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                    <span class="tooltip">WhatsApp</span>
+                </a>
+                <a href="https://www.linkedin.com/in/adv-mumtaz-alam-bazai-163a9a324" target="_blank" title="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                    <span class="tooltip">LinkedIn</span>
+                </a>
+                <a href="https://www.instagram.com/mumtaz_alam" target="_blank" title="Instagram">
+                    <i class="fab fa-instagram"></i>
+                    <span class="tooltip">Instagram</span>
+                </a>
+                <a href="https://www.facebook.com/mumtaz.alam.18488" target="_blank" title="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                    <span class="tooltip">Facebook</span>
+                </a>
+                <a href="https://x.com/mumtazalam333" target="_blank" title="Twitter/X">
+                    <i class="fab fa-x-twitter"></i>
+                    <span class="tooltip">Twitter/X</span>
+                </a>
+            </div>
+        </div>
+    </header>
 
-    <!-- CONTROLS PANEL -->
-    <div class="controls-panel">
-        <button class="theme-btn" onclick="randomizeTheme()">
-            <i class="fas fa-magic"></i> Theme
-        </button>
-        <button class="lang-btn" onclick="toggleLanguage()">
-            <i class="fas fa-language"></i> Urdu
-        </button>
-        <button class="print-btn" onclick="window.print()">
-            <i class="fas fa-print"></i> Print
-        </button>
-    </div>
-
-    <!-- NAVIGATION -->
-    <nav id="mainNav">
-        <a href="#hero" data-tooltip="Home"><i class="fas fa-home"></i></a>
+    <!-- FLOATING NAVIGATION BAR -->
+    <nav class="floating-nav" id="floatingNav">
+        <a href="#hero" data-tooltip="Home" class="active"><i class="fas fa-home"></i></a>
         <a href="#about" data-tooltip="About"><i class="fas fa-user"></i></a>
-        <a href="#career" data-tooltip="Legal Career"><i class="fas fa-gavel"></i></a>
-        <a href="#services" data-tooltip="Services"><i class="fas fa-balance-scale"></i></a>
-        <a href="#leadership" data-tooltip="Leadership"><i class="fas fa-globe"></i></a>
-        <a href="#achievements" data-tooltip="Achievements"><i class="fas fa-trophy"></i></a>
+        <a href="#education" data-tooltip="Education"><i class="fas fa-graduation-cap"></i></a>
+        <a href="#expertise" data-tooltip="Expertise"><i class="fas fa-gavel"></i></a>
         <a href="#gallery" data-tooltip="Gallery"><i class="fas fa-images"></i></a>
-        <a href="#contact" data-tooltip="Contact"><i class="fas fa-paper-plane"></i></a>
+        <a href="#contact" data-tooltip="Contact"><i class="fas fa-envelope"></i></a>
     </nav>
 
     <!-- HERO SECTION -->
     <section id="hero" class="hero">
-        <div class="hero-3d-bg">
-            <div class="hero-3d-layer" id="heroBgLayer"></div>
-        </div>
-
-        <div class="hero-content">
-            <div class="hero-text">
-                <span class="hero-badge">Advocate & Changemaker</span>
-                <h1>Mumtaz Alam <br> Bazai</h1>
-                <p>Advocate High Court · Human Rights Lawyer · Global Shaper (WEF).<br>
-                Empowering the youth of Balochistan through law, leadership, and unwavering justice.</p>
-
-                <div class="hero-buttons">
-                    <a href="#contact" class="hero-btn btn-primary">
-                        <i class="fas fa-envelope"></i> Get in Touch
-                    </a>
-                    <a href="https://linktr.ee/mumtazalam" target="_blank" class="hero-btn btn-secondary">
-                        <i class="fas fa-external-link-alt"></i> Portfolio
-                    </a>
-                    <a href="#services" class="hero-btn btn-legal">
-                        <i class="fas fa-scale-balanced"></i> Legal Services
-                    </a>
+        <div class="hero-bg"></div>
+        <div class="hero-bg-overlay"></div>
+        
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <span class="hero-badge">
+                        <i class="fas fa-award"></i>
+                        Advocate High Court & Global Shaper
+                    </span>
+                    
+                    <h1 class="hero-title">
+                        Mumtaz Alam <span class="gradient-text">Bazai</span>
+                    </h1>
+                    
+                    <p class="hero-description">
+                        Human Rights Lawyer · Global Shaper (World Economic Forum) · Youth Advocate<br>
+                        Empowering the youth of Balochistan through law, leadership, and unwavering justice.
+                    </p>
+                    
+                    <div class="btn-group">
+                        <a href="#contact" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i> Contact Me
+                        </a>
+                        <a href="https://linktr.ee/mumtazalam" target="_blank" class="btn btn-secondary">
+                            <i class="fas fa-external-link-alt"></i> View Portfolio
+                        </a>
+                    </div>
+                    
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">100+</div>
+                            <div class="stat-label">Cases Handled</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">5+</div>
+                            <div class="stat-label">Years Experience</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">12+</div>
+                            <div class="stat-label">Languages</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="hero-portrait">
+                    <div class="portrait-circle">
+                        <img src="portrait.jpg.jpeg" alt="Mumtaz Alam Bazai">
+                    </div>
+                    <div class="portrait-badge">
+                        <i class="fas fa-star"></i>
+                        <span>Advocate High Court</span>
+                    </div>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <div class="hero-portrait-container">
-                <div class="circular-portrait">
-                    <img src="portrait.jpg.jpeg" alt="Mumtaz Alam Bazai">
-                    <div class="portrait-ring"></div>
-                </div>
-                <div class="portrait-badge">Advocate High Court</div>
+    <!-- SOCIAL MEDIA SECTION -->
+    <section class="social-section">
+        <div class="container">
+            <div class="social-grid">
+                <a href="mailto:advmumtaz222@gmail.com" class="social-item" target="_blank">
+                    <i class="fas fa-envelope"></i>
+                    <span>Email</span>
+                </a>
+                <a href="https://wa.me/923332568792" class="social-item" target="_blank">
+                    <i class="fab fa-whatsapp"></i>
+                    <span>WhatsApp</span>
+                </a>
+                <a href="https://www.linkedin.com/in/adv-mumtaz-alam-bazai-163a9a324" class="social-item" target="_blank">
+                    <i class="fab fa-linkedin-in"></i>
+                    <span>LinkedIn</span>
+                </a>
+                <a href="https://www.instagram.com/mumtaz_alam" class="social-item" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                    <span>Instagram</span>
+                </a>
+                <a href="https://www.facebook.com/mumtaz.alam.18488" class="social-item" target="_blank">
+                    <i class="fab fa-facebook-f"></i>
+                    <span>Facebook</span>
+                </a>
+                <a href="https://x.com/mumtazalam333" class="social-item" target="_blank">
+                    <i class="fab fa-x-twitter"></i>
+                    <span>Twitter/X</span>
+                </a>
+                <a href="https://my.weforum.org/network/people/001TG000009vSDhYAM/adv-mumtaz-alam" class="social-item" target="_blank">
+                    <i class="fas fa-globe"></i>
+                    <span>WEF</span>
+                </a>
+                <a href="https://linktr.ee/mumtazalam" class="social-item" target="_blank">
+                    <i class="fas fa-link"></i>
+                    <span>Linktree</span>
+                </a>
+                <a href="https://www.tiktok.com/@mumtaz_alam" class="social-item" target="_blank">
+                    <i class="fab fa-tiktok"></i>
+                    <span>TikTok</span>
+                </a>
+                <a href="https://www.snapchat.com/add/mumtazalam222" class="social-item" target="_blank">
+                    <i class="fab fa-snapchat-ghost"></i>
+                    <span>Snapchat</span>
+                </a>
+                <a href="https://www.threads.com/@mumtaz_alam" class="social-item" target="_blank">
+                    <i class="fas fa-comment-dots"></i>
+                    <span>Threads</span>
+                </a>
+                <a href="https://ok.ru/profile/910193583170" class="social-item" target="_blank">
+                    <i class="fab fa-odnoklassniki"></i>
+                    <span>OK.ru</span>
+                </a>
             </div>
         </div>
     </section>
 
     <!-- ABOUT SECTION -->
-    <section id="about" class="section">
-        <h2 class="section-title">The Journey</h2>
-        <div class="glass-card">
-            <div style="text-align: center; margin-bottom: 50px; max-width: 900px; margin: 0 auto 50px;">
-                <p style="font-size: 1.2rem; line-height: 1.9; color: rgba(255, 255, 255, 0.9);">
-                    Born on <strong style="color: #00c6ff;">11 August 2000</strong> in Kili Zdoon, District Pishin, Balochistan. Mumtaz is the eldest of nine siblings, son of Dr. Ameer Muhammad (Neurosurgeon). From village schooling to scholarship-based excellence at Pak-Turk Maarif, his journey is defined by discipline and brilliance. Fluent in Pashto, Urdu, English, and Turkish, he represents the new generation of Pakistani leaders combining traditional values with global perspectives.
-                </p>
+    <section id="about">
+        <div class="container">
+            <div class="section-header">
+                <h2>About <span class="gradient-text">Me</span></h2>
             </div>
+            
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="life1.jpg.jpeg" alt="Mumtaz Alam Bazai" class="about-img">
+                </div>
+                
+                <div class="about-text">
+                    <h3>Legal Visionary & Human Rights Advocate</h3>
+                    <p>Born on <strong>11 August 2000</strong> in Kili Zdoon, District Pishin, Balochistan. As the eldest of nine siblings and son of Dr. Ameer Muhammad (Neurosurgeon), my journey from village schooling to becoming an Advocate High Court is defined by discipline, brilliance, and unwavering commitment to justice.</p>
+                    
+                    <p>From scholarship-based excellence at Pak-Turk Maarif to mastering the intricacies of law at University Law College, I have consistently demonstrated leadership and academic prowess. My multilingual fluency in Pashto, Urdu, English, and Turkish has enabled me to connect with diverse communities and advocate for their rights.</p>
+                    
+                    <ul class="about-list">
+                        <li><i class="fas fa-check-circle"></i> Advocate High Court with Bar Council License (Reg No. 14/2025)</li>
+                        <li><i class="fas fa-check-circle"></i> Global Shaper at World Economic Forum, Curator of Quetta Hub</li>
+                        <li><i class="fas fa-check-circle"></i> LLB (Hons) & MA Political Science Graduate with honors</li>
+                        <li><i class="fas fa-check-circle"></i> Author of "Human Rights and Responsibilities" (2021)</li>
+                        <li><i class="fas fa-check-circle"></i> Fluent in Pashto, Urdu, English, and Turkish</li>
+                        <li><i class="fas fa-check-circle"></i> Active practitioner in Civil, Criminal, and Human Rights litigation</li>
+                    </ul>
+                    
+                    <a href="#contact" class="btn btn-primary mt-3">
+                        <i class="fas fa-download"></i> Download CV
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- EDUCATION SECTION -->
+    <section id="education" style="background: rgba(0, 0, 0, 0.3);">
+        <div class="container">
+            <div class="section-header">
+                <h2>Educational <span class="gradient-text">Journey</span></h2>
+            </div>
+            
             <div class="timeline">
-                <div class="timeline-item animate-on-scroll">
+                <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
-                        <h4>2019 - Intermediate Education</h4>
-                        <p>Pak-Turk Maarif International Schools & Colleges. Demonstrated exceptional leadership skills and multilingual fluency (Pashto, Urdu, English, Turkish). Received merit-based scholarship for outstanding academic performance.</p>
+                        <h4>2006 - 2018: School Education</h4>
+                        <p>Pak-Turk Maarif International Schools & Colleges. Awarded scholarships for academic excellence throughout my schooling. Demonstrated leadership skills and multilingual fluency (Pashto, Urdu, English, Turkish).</p>
                     </div>
                 </div>
-                <div class="timeline-item animate-on-scroll">
+                
+                <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
-                        <h4>2022 - BA (Arts) Degree</h4>
-                        <p>University of Balochistan. Built strong foundation in social sciences, political thought, and humanities. Actively participated in student leadership and community service initiatives.</p>
+                        <h4>2019: Intermediate (FSc. Pre-Engineering)</h4>
+                        <p>Completed with distinction from Pak-Turk Maarif International College. Developed strong analytical and problem-solving skills that would later serve my legal career.</p>
                     </div>
                 </div>
-                <div class="timeline-item animate-on-scroll">
+                
+                <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
-                        <h4>2024 - LLB (Hons) & MA Political Science</h4>
-                        <p>University Law College & University of Balochistan. Graduated with honors, mastering the intricacies of law and governance. Published research on electoral systems and human rights.</p>
+                        <h4>2022: BA (Arts)</h4>
+                        <p>University of Balochistan. Building the foundation for social sciences and political thought. Actively participated in debate competitions and student politics.</p>
                     </div>
                 </div>
-                <div class="timeline-item animate-on-scroll">
+                
+                <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
-                        <h4>2025 - Legal License & Practice</h4>
-                        <p>Received Bar Council License (Reg No. 14/2025). Formally joined Iqra Law Associates under Advocate Abdul Zahir Kakar. Began active practice in Civil, Criminal, and Human Rights litigation.</p>
+                        <h4>2024: LLB (Hons) & MA Political Science</h4>
+                        <p>University Law College & University of Balochistan. Graduated with honors, mastering the intricacies of law and governance. Published research on "The Role of ECP in Free and Fair Elections" (2024).</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h4>2025: Legal License & Professional Practice</h4>
+                        <p>Received Bar Council License (Reg No. 14/2025). Formally joined Iqra Law Associates under Advocate Abdul Zahir Kakar. Started practicing as an Advocate High Court.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CAREER SECTION -->
-    <section id="career" class="section">
-        <h2 class="section-title">Legal & Social Impact</h2>
-        <div class="grid-3">
-            <div class="glass-card animate-on-scroll">
-                <i class="fas fa-gavel" style="font-size: 45px; margin-bottom: 25px; color: #ff007a;"></i>
-                <h3>Legal Career</h3>
-                <p style="margin-top: 20px; opacity: 0.9; font-size: 1.1rem;">
-                    Active practitioner in Civil, Criminal, and Human Rights litigation. Known for pro bono work for marginalized communities in Balochistan. Trained at Iqra Law Associates, Quetta. Specializes in constitutional law, civil rights, and criminal defense.
-                </p>
-                <div class="skill-tag">
-                    <i class="fas fa-balance-scale"></i>
-                    <span>Civil & Criminal Law</span>
+    <!-- EXPERTISE SECTION -->
+    <section id="expertise">
+        <div class="container">
+            <div class="section-header">
+                <h2>Areas of <span class="gradient-text">Expertise</span></h2>
+            </div>
+            
+            <div class="expertise-grid">
+                <div class="expertise-card">
+                    <div class="expertise-icon">
+                        <i class="fas fa-gavel"></i>
+                    </div>
+                    <h3>Legal Practice</h3>
+                    <p>Active practitioner in Civil, Criminal, and Human Rights litigation with extensive experience in High Court proceedings. Known for pro bono work for marginalized communities in Balochistan.</p>
+                    <ul class="expertise-list">
+                        <li><i class="fas fa-check"></i> Civil & Criminal Law</li>
+                        <li><i class="fas fa-check"></i> Human Rights Litigation</li>
+                        <li><i class="fas fa-check"></i> Constitutional Law</li>
+                        <li><i class="fas fa-check"></i> Legal Consultancy</li>
+                    </ul>
                 </div>
-                <div class="skill-tag">
-                    <i class="fas fa-hands-helping"></i>
-                    <span>Pro Bono Services</span>
+                
+                <div class="expertise-card">
+                    <div class="expertise-icon">
+                        <i class="fas fa-globe-asia"></i>
+                    </div>
+                    <h3>Global Shapers (WEF)</h3>
+                    <p>Curator of Quetta Hub. Represented at Global Shapers Annual Summit 2025 (Geneva). Authored the Governance Charter and spearheaded the first Youth Policy Project for Balochistan.</p>
+                    <ul class="expertise-list">
+                        <li><i class="fas fa-check"></i> Youth Policy Development</li>
+                        <li><i class="fas fa-check"></i> Community Leadership</li>
+                        <li><i class="fas fa-check"></i> International Representation</li>
+                        <li><i class="fas fa-check"></i> Governance Initiatives</li>
+                    </ul>
                 </div>
-                <div class="skill-tag">
-                    <i class="fas fa-book"></i>
-                    <span>Constitutional Law</span>
+                
+                <div class="expertise-card">
+                    <div class="expertise-icon">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <h3>Publications & Research</h3>
+                    <p>Author of "Human Rights and Responsibilities" (2021) and research on "The Role of ECP in Free and Fair Elections" (2024). Regular contributor to legal and policy journals.</p>
+                    <ul class="expertise-list">
+                        <li><i class="fas fa-check"></i> Academic Writing</li>
+                        <li><i class="fas fa-check"></i> Policy Research</li>
+                        <li><i class="fas fa-check"></i> Legal Commentary</li>
+                        <li><i class="fas fa-check"></i> Editorial Contributions</li>
+                    </ul>
                 </div>
-            </div>
-
-            <div class="glass-card animate-on-scroll">
-                <i class="fas fa-globe-asia" style="font-size: 45px; margin-bottom: 25px; color: #00c6ff;"></i>
-                <h3>Global Shaper (WEF)</h3>
-                <p style="margin-top: 20px; opacity: 0.9; font-size: 1.1rem;">
-                    Curator of Quetta Hub, World Economic Forum. Represented Pakistan at <strong>Global Shapers Annual Summit 2025 (Geneva)</strong>. Authored the Governance Charter and spearheaded the first Youth Policy Project for Balochistan.
-                </p>
-                <div class="skill-tag">
-                    <i class="fas fa-chart-line"></i>
-                    <span>Youth Policy Development</span>
-                </div>
-                <div class="skill-tag">
-                    <i class="fas fa-users"></i>
-                    <span>Community Leadership</span>
-                </div>
-                <div class="skill-tag">
-                    <i class="fas fa-handshake"></i>
-                    <span>International Diplomacy</span>
-                </div>
-            </div>
-
-            <div class="glass-card animate-on-scroll">
-                <i class="fas fa-book-open" style="font-size: 45px; margin-bottom: 25px; color: #6a11cb;"></i>
-                <h3>Publications & Research</h3>
-                <p style="margin-top: 20px; opacity: 0.9; font-size: 1.1rem;">
-                    Author of <em>"Human Rights and Responsibilities"</em> (2021) and research on <em>"The Role of ECP in Free and Fair Elections"</em> (2024). Regular contributor to legal journals and policy briefs on governance and youth empowerment.
-                </p>
-                <div class="skill-tag">
-                    <i class="fas fa-pen-fancy"></i>
-                    <span>Academic Writing</span>
-                </div>
-                <div class="skill-tag">
-                    <i class="fas fa-search"></i>
-                    <span>Policy Research</span>
-                </div>
-                <div class="skill-tag">
-                    <i class="fas fa-newspaper"></i>
-                    <span>Legal Journalism</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- LEGAL SERVICES SECTION -->
-    <section id="services" class="section">
-        <h2 class="section-title">Legal Services</h2>
-        <div class="services-grid">
-            <div class="service-card animate-on-scroll">
-                <i class="fas fa-balance-scale"></i>
-                <h3>Civil Litigation</h3>
-                <p>Property disputes, contract enforcement, family law, inheritance cases, and civil rights litigation with focus on justice and equitable solutions.</p>
-            </div>
-            <div class="service-card animate-on-scroll">
-                <i class="fas fa-gavel"></i>
-                <h3>Criminal Defense</h3>
-                <p>Comprehensive criminal defense representation, ensuring fair trial rights, due process, and constitutional protections for all clients.</p>
-            </div>
-            <div class="service-card animate-on-scroll">
-                <i class="fas fa-handshake"></i>
-                <h3>Human Rights Advocacy</h3>
-                <p>Protection of fundamental rights, constitutional petitions, advocacy for marginalized communities, and human rights litigation.</p>
-            </div>
-            <div class="service-card animate-on-scroll">
-                <i class="fas fa-file-contract"></i>
-                <h3>Legal Consultation</h3>
-                <p>Expert legal advice on business contracts, property documentation, regulatory compliance, and legal strategy development.</p>
-            </div>
-            <div class="service-card animate-on-scroll">
-                <i class="fas fa-users"></i>
-                <h3>Pro Bono Services</h3>
-                <p>Free legal aid for deserving clients, with special focus on women, children, minorities, and marginalized communities in Balochistan.</p>
-            </div>
-            <div class="service-card animate-on-scroll">
-                <i class="fas fa-graduation-cap"></i>
-                <h3>Legal Education</h3>
-                <p>Workshops, seminars, and training programs on legal rights, constitutional awareness, civic education, and professional development.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- LEADERSHIP SECTION -->
-    <section id="leadership" class="section">
-        <h2 class="section-title">Thematic Areas</h2>
-        <div class="glass-card">
-            <div class="thematic-grid">
-                <span class="theme-tag" style="border-color: #00c6ff; color: #00c6ff;">Human Rights & Equality</span>
-                <span class="theme-tag" style="border-color: #ff007a; color: #ff007a;">Governance & Rule of Law</span>
-                <span class="theme-tag" style="border-color: #6a11cb; color: #6a11cb;">Youth Policy Development</span>
-                <span class="theme-tag" style="border-color: #ffe600; color: #ffe600;">Climate & Energy Justice</span>
-                <span class="theme-tag" style="border-color: #00ff88; color: #00ff88;">Indigenous Rights Protection</span>
-                <span class="theme-tag" style="border-color: #ff00ff; color: #ff00ff;">Legal Education Reform</span>
-                <span class="theme-tag" style="border-color: #00ffff; color: #00ffff;">Digital Rights & Privacy</span>
-                <span class="theme-tag" style="border-color: #ff8800; color: #ff8800;">Social Justice Advocacy</span>
-                <span class="theme-tag" style="border-color: #9d00ff; color: #9d00ff;">Gender Equality Initiatives</span>
-                <span class="theme-tag" style="border-color: #00ffd5; color: #00ffd5;">Sustainable Development Goals</span>
-                <span class="theme-tag" style="border-color: #ff4d4d; color: #ff4d4d;">Conflict Resolution & Peacebuilding</span>
-                <span class="theme-tag" style="border-color: #aaff00; color: #aaff00;">Economic Empowerment Programs</span>
-                <span class="theme-tag" style="border-color: #ff66b2; color: #ff66b2;">Educational Access & Equity</span>
-                <span class="theme-tag" style="border-color: #66ffcc; color: #66ffcc;">Healthcare Rights Advocacy</span>
-                <span class="theme-tag" style="border-color: #cc66ff; color: #cc66ff;">Judicial System Reform</span>
-                <span class="theme-tag" style="border-color: #ffcc66; color: #ffcc66;">Transparency & Accountability</span>
-            </div>
-        </div>
-    </section>
-
-    <!-- ACHIEVEMENTS SECTION -->
-    <section id="achievements" class="section">
-        <h2 class="section-title">Key Achievements</h2>
-        <div class="achievements-grid">
-            <div class="achievement-card animate-on-scroll">
-                <i class="fas fa-award"></i>
-                <h4>Global Shaper</h4>
-                <p>Selected as Curator for Quetta Hub, World Economic Forum (2024-Present)</p>
-            </div>
-            <div class="achievement-card animate-on-scroll">
-                <i class="fas fa-graduation-cap"></i>
-                <h4>LLB (Hons) Graduate</h4>
-                <p>Graduated with honors from University Law College, University of Balochistan</p>
-            </div>
-            <div class="achievement-card animate-on-scroll">
-                <i class="fas fa-book"></i>
-                <h4>Published Author</h4>
-                <p>Authored "Human Rights and Responsibilities" book (2021)</p>
-            </div>
-            <div class="achievement-card animate-on-scroll">
-                <i class="fas fa-microphone"></i>
-                <h4>International Speaker</h4>
-                <p>Regular speaker at national and international forums on youth empowerment</p>
-            </div>
-            <div class="achievement-card animate-on-scroll">
-                <i class="fas fa-hands-helping"></i>
-                <h4>Community Leader</h4>
-                <p>Led multiple community development initiatives in Balochistan</p>
-            </div>
-            <div class="achievement-card animate-on-scroll">
-                <i class="fas fa-scale-balanced"></i>
-                <h4>Bar Council License</h4>
-                <p>Licensed Advocate High Court (Reg No. 14/2025)</p>
-            </div>
-            <div class="achievement-card animate-on-scroll">
-                <i class="fas fa-globe"></i>
-                <h4>Geneva Summit</h4>
-                <p>Represented Pakistan at Global Shapers Summit 2025, Geneva</p>
-            </div>
-            <div class="achievement-card animate-on-scroll">
-                <i class="fas fa-users"></i>
-                <h4>Youth Mentor</h4>
-                <p>Mentored 50+ young professionals in legal and leadership fields</p>
             </div>
         </div>
     </section>
 
     <!-- GALLERY SECTION -->
-    <section id="gallery" class="section">
-        <h2 class="section-title">Visual Journey</h2>
-        <div class="gallery-grid">
-            <div class="gallery-item">
-                <img src="life1.jpg.jpeg" alt="Leadership at Youth Forum" loading="lazy">
-                <div class="gallery-overlay">
-                    <h4>Leadership & Advocacy</h4>
-                    <p>Speaking at youth forums and legal conferences about justice and empowerment</p>
-                </div>
+    <section id="gallery" style="background: rgba(0, 0, 0, 0.3);">
+        <div class="container">
+            <div class="section-header">
+                <h2>Gallery & <span class="gradient-text">Portfolio</span></h2>
             </div>
-            <div class="gallery-item">
-                <img src="life2.jpg.jpeg" alt="Courtroom Advocacy" loading="lazy">
-                <div class="gallery-overlay">
-                    <h4>Courtroom Excellence</h4>
-                    <p>Practicing law with dedication, precision, and commitment to justice</p>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="life1.jpg.jpeg" alt="Leadership" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <h4>Leadership & Advocacy</h4>
+                        <p>Speaking at youth forums and legal conferences</p>
+                    </div>
                 </div>
-            </div>
-            <div class="gallery-item">
-                <img src="life3.jpg.jpeg" alt="Global Shapers Network" loading="lazy">
-                <div class="gallery-overlay">
-                    <h4>Global Shapers Network</h4>
-                    <p>Representing Quetta Hub at international forums and policy discussions</p>
+                
+                <div class="gallery-item">
+                    <img src="life2.jpg.jpeg" alt="Courtroom" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <h4>Courtroom Excellence</h4>
+                        <p>Practicing law with dedication and precision</p>
+                    </div>
                 </div>
-            </div>
-            <div class="gallery-item">
-                <img src="life4.jpg.jpeg" alt="Legal Practice" loading="lazy">
-                <div class="gallery-overlay">
-                    <h4>Legal Practice</h4>
-                    <p>Daily commitment to justice, rule of law, and client representation</p>
+                
+                <div class="gallery-item">
+                    <img src="life3.jpg.jpeg" alt="Global Shapers" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <h4>Global Shapers Network</h4>
+                        <p>Representing Quetta Hub at international forums</p>
+                    </div>
                 </div>
-            </div>
-            <div class="gallery-item">
-                <img src="life5.jpg.jpeg" alt="Community Engagement" loading="lazy">
-                <div class="gallery-overlay">
-                    <h4>Community Engagement</h4>
-                    <p>Working directly with local communities to understand their legal needs</p>
+                
+                <div class="gallery-item">
+                    <img src="life4.jpg.jpeg" alt="Legal Practice" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <h4>Legal Practice</h4>
+                        <p>Daily commitment to justice and rule of law</p>
+                    </div>
                 </div>
-            </div>
-            <div class="gallery-item">
-                <img src="life6.jpg.jpeg" alt="International Travel" loading="lazy">
-                <div class="gallery-overlay">
-                    <h4>International Exposure</h4>
-                    <p>Learning from global best practices and international legal systems</p>
+                
+                <div class="gallery-item">
+                    <img src="life5.jpg.jpeg" alt="Community" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <h4>Community Engagement</h4>
+                        <p>Working directly with local communities</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="life6.jpg.jpeg" alt="International" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <h4>International Exposure</h4>
+                        <p>Learning from global best practices</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- MISSION SECTION -->
-    <section id="mission" class="section">
-        <div class="mission-card animate-on-scroll">
-            <i class="fas fa-bullseye"></i>
-            <h2>Mission Statement</h2>
-            <p>
-                "To advance justice, safeguard human dignity, strengthen democratic institutions, and empower youth to lead Pakistan toward a just, inclusive, and sustainable future."
-            </p>
-        </div>
-    </section>
-
-    <!-- CONTACT SECTION -->
-    <section id="contact" class="section">
-        <h2 class="section-title">Connect With Me</h2>
-        <div class="connect-box">
-            <p style="font-size: 1.3rem; color: #ccc; margin-bottom: 50px; max-width: 800px; margin-left: auto; margin-right: auto;">
-                Reach out for legal consultation, collaboration opportunities, speaking engagements, or to discuss youth empowerment initiatives in Balochistan. I'm available for both local and international collaborations.
-            </p>
-
-            <div class="contact-grid">
-                <div class="contact-card animate-on-scroll">
-                    <i class="fas fa-envelope"></i>
-                    <h3>Email</h3>
-                    <p><a href="mailto:advmumtaz222@gmail.com">advmumtaz222@gmail.com</a></p>
-                    <p>For professional inquiries and legal consultations</p>
-                </div>
-                <div class="contact-card animate-on-scroll">
-                    <i class="fas fa-phone"></i>
-                    <h3>Phone</h3>
-                    <p><a href="tel:+923332568792">+92 333 2568792</a></p>
-                    <p>Available during business hours (10 AM - 6 PM PST)</p>
-                </div>
-                <div class="contact-card animate-on-scroll">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <h3>Office Location</h3>
-                    <p>Quetta, Balochistan, Pakistan</p>
-                    <p>Available for cases across Pakistan and international consultations</p>
-                </div>
+    <!-- CONTACT FORM SECTION -->
+    <section id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Contact <span class="gradient-text">Me</span></h2>
+                <p style="text-align: center; max-width: 700px; margin: 0 auto 3rem; color: var(--text-secondary);">
+                    Reach out for legal consultation, collaboration opportunities, or to discuss youth empowerment initiatives in Balochistan.
+                </p>
             </div>
-
-            <!-- CONTACT FORM -->
-            <div class="contact-form-container animate-on-scroll">
+            
+            <div class="contact-container">
                 <div class="contact-form">
-                    <h3 style="text-align: center; margin-bottom: 30px; font-size: 2rem; color: #fff;">Send Message</h3>
-                    <form id="messageForm">
+                    <form id="contactForm" action="https://formspree.io/f/xvojwpzp" method="POST">
                         <div class="form-group">
                             <label class="form-label" for="name">Full Name</label>
-                            <input type="text" id="name" class="form-input" placeholder="Enter your full name" required>
+                            <input type="text" class="form-control" id="name" name="name" required>
                         </div>
+                        
                         <div class="form-group">
                             <label class="form-label" for="email">Email Address</label>
-                            <input type="email" id="email" class="form-input" placeholder="Enter your email address" required>
+                            <input type="email" class="form-control" id="email" name="email" required>
                         </div>
-                        <div class="form-group">
-                            <label class="form-label" for="phone">Phone Number</label>
-                            <input type="tel" id="phone" class="form-input" placeholder="Enter your phone number (optional)">
-                        </div>
+                        
                         <div class="form-group">
                             <label class="form-label" for="subject">Subject</label>
-                            <input type="text" id="subject" class="form-input" placeholder="What is this regarding?" required>
+                            <input type="text" class="form-control" id="subject" name="subject" required>
                         </div>
+                        
                         <div class="form-group">
-                            <label class="form-label" for="message">Your Message</label>
-                            <textarea id="message" class="form-textarea" placeholder="Please provide details about your inquiry..." required></textarea>
+                            <label class="form-label" for="message">Message</label>
+                            <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
                         </div>
+                        
                         <button type="submit" class="form-submit">
                             <i class="fas fa-paper-plane"></i> Send Message
                         </button>
                     </form>
                 </div>
-            </div>
-
-            <!-- BOTTOM SOCIAL MEDIA SECTION -->
-            <div class="social-section">
-                <h3 style="text-align: center; margin-bottom: 40px; font-size: 2rem; color: #fff;">Connect on Social Media</h3>
-                <div class="social-3d-container">
-                    <a href="mailto:advmumtaz222@gmail.com" class="social-btn" style="--c1: #D44638; --c2: #B23121;" title="Email">
-                        <i class="fas fa-envelope"></i>
-                    </a>
-                    <a href="https://wa.me/923332568792" class="social-btn" style="--c1: #25D366; --c2: #128C7E;" title="WhatsApp">
-                        <i class="fab fa-whatsapp"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/adv-mumtaz-alam-bazai-163a9a324" class="social-btn" style="--c1: #0077b5; --c2: #004182;" title="LinkedIn">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                    <a href="https://www.instagram.com/mumtaz_alam" class="social-btn" style="--c1: #833AB4; --c2: #FD1D1D;" title="Instagram">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="https://www.facebook.com/mumtaz.alam.18488" class="social-btn" style="--c1: #1877F2; --c2: #1052a8;" title="Facebook">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-                    <a href="https://x.com/mumtazalam333" class="social-btn" style="--c1: #000; --c2: #333;" title="Twitter/X">
-                        <i class="fab fa-x-twitter"></i>
-                    </a>
-                    <a href="https://my.weforum.org/network/people/001TG000009vSDhYAM/adv-mumtaz-alam" class="social-btn" style="--c1: #00A3E0; --c2: #005F86;" title="World Economic Forum">
-                        <i class="fas fa-globe"></i>
-                    </a>
-                    <a href="https://linktr.ee/mumtazalam" class="social-btn" style="--c1: #43E660; --c2: #1fa337;" title="Linktree">
-                        <i class="fas fa-link"></i>
-                    </a>
-                    <a href="https://www.tiktok.com/@mumtaz_alam" class="social-btn" style="--c1: #000000; --c2: #ff0050;" title="TikTok">
-                        <i class="fab fa-tiktok"></i>
-                    </a>
-                    <a href="https://www.snapchat.com/add/mumtazalam222" class="social-btn" style="--c1: #FFFC00; --c2: #FFCA00;" title="Snapchat">
-                        <i class="fab fa-snapchat-ghost"></i>
-                    </a>
-                    <a href="https://www.threads.com/@mumtaz_alam" class="social-btn" style="--c1: #00fffc; --c2: #ff00fc;" title="Threads">
-                        <i class="fas fa-comment-dots"></i>
-                    </a>
-                    <a href="https://ok.ru/profile/910193583170" class="social-btn" style="--c1: #F47300; --c2: #FF9E2C;" title="Odnoklassniki">
-                        <i class="fab fa-odnoklassniki"></i>
-                    </a>
+                
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Location</h4>
+                            <p>Quetta, Balochistan, Pakistan</p>
+                            <p>Iqra Law Associates, High Court Road</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <p>advmumtaz222@gmail.com</p>
+                            <p>mumtaz.bazai@globalshapers.org</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Phone & WhatsApp</h4>
+                            <p>+92 333 2568792</p>
+                            <p>Available for consultation</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Availability</h4>
+                            <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
+                            <p>Saturday: 10:00 AM - 2:00 PM</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -2900,521 +1728,263 @@
 
     <!-- FOOTER -->
     <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>Mumtaz Alam Bazai</h3>
-                <p>Advocate High Court, Global Shaper at World Economic Forum, and Human Rights Lawyer dedicated to justice, youth empowerment, and legal reform in Balochistan and beyond.</p>
-                <p style="margin-top: 15px;"><strong>Vision:</strong> A Pakistan where justice is accessible to all, youth are empowered leaders, and human dignity is universally protected.</p>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <div class="footer-logo">Mumtaz Alam Bazai</div>
+                    <p class="footer-about">Advocate High Court, Human Rights Lawyer, and Global Shaper dedicated to justice, youth empowerment, and social change in Balochistan and beyond.</p>
+                    <div class="footer-social">
+                        <a href="https://www.linkedin.com/in/adv-mumtaz-alam-bazai-163a9a324" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.instagram.com/mumtaz_alam" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/mumtaz.alam.18488" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://x.com/mumtazalam333" target="_blank"><i class="fab fa-x-twitter"></i></a>
+                        <a href="https://wa.me/923332568792" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                        <a href="mailto:advmumtaz222@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <div>
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="#hero">Home</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#education">Education</a></li>
+                            <li><a href="#expertise">Expertise</a></li>
+                            <li><a href="#gallery">Gallery</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h4>Legal Services</h4>
+                        <ul>
+                            <li><a href="#">Civil Litigation</a></li>
+                            <li><a href="#">Criminal Defense</a></li>
+                            <li><a href="#">Human Rights Cases</a></li>
+                            <li><a href="#">Legal Consultation</a></li>
+                            <li><a href="#">Pro Bono Services</a></li>
+                            <li><a href="#">Policy Advocacy</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="footer-newsletter">
+                    <h4>Mission Statement</h4>
+                    <p>"To advance justice, safeguard human dignity, strengthen democratic institutions, and empower youth to lead Pakistan toward a just, inclusive, and sustainable future."</p>
+                </div>
             </div>
-            <div class="footer-section">
-                <h3>Quick Links</h3>
-                <ul class="footer-links">
-                    <li><a href="#hero"><i class="fas fa-chevron-right"></i> Home</a></li>
-                    <li><a href="#about"><i class="fas fa-chevron-right"></i> About Me</a></li>
-                    <li><a href="#career"><i class="fas fa-chevron-right"></i> Legal Career</a></li>
-                    <li><a href="#services"><i class="fas fa-chevron-right"></i> Legal Services</a></li>
-                    <li><a href="#achievements"><i class="fas fa-chevron-right"></i> Achievements</a></li>
-                    <li><a href="#contact"><i class="fas fa-chevron-right"></i> Contact</a></li>
-                </ul>
+            
+            <div class="footer-bottom">
+                <p class="copyright">© 2025 Mumtaz Alam Bazai. Advocate & Human Rights Lawyer. All Rights Reserved.</p>
+                <p class="copyright">Designed with passion for justice and commitment to change.</p>
             </div>
-            <div class="footer-section">
-                <h3>Contact Info</h3>
-                <ul class="footer-links">
-                    <li><a href="mailto:advmumtaz222@gmail.com"><i class="fas fa-envelope"></i> advmumtaz222@gmail.com</a></li>
-                    <li><a href="tel:+923332568792"><i class="fas fa-phone"></i> +92 333 2568792</a></li>
-                    <li><a href="https://wa.me/923332568792"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
-                    <li><a href="#"><i class="fas fa-map-marker-alt"></i> Quetta, Balochistan, Pakistan</a></li>
-                    <li><a href="https://linktr.ee/mumtazalam"><i class="fas fa-external-link-alt"></i> All Links (Linktree)</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="copyright">
-            © 2025 Mumtaz Alam Bazai. Advocate High Court & Human Rights Lawyer. All Rights Reserved.<br>
-            <p style="margin-top: 15px; font-size: 13px; color: #888;">
-                Justice • Integrity • Empowerment • Leadership • Service<br>
-                Designed with passion for justice and commitment to positive change.
-            </p>
         </div>
     </footer>
 
+    <!-- JavaScript -->
     <script>
-        // =========================
-        // LOADING SCREEN
-        // =========================
-        window.addEventListener('load', function() {
-            const loader = document.getElementById('loader');
-            setTimeout(() => {
-                loader.classList.add('hidden');
-                document.body.style.opacity = '1';
-                
-                // Initialize all animations after load
-                setTimeout(initAnimations, 300);
-            }, 1500);
-        });
-
-        // =========================
+        // ===========================================
         // PARTICLE SYSTEM
-        // =========================
+        // ===========================================
         const particleContainer = document.getElementById('particles');
+        
         function createParticle() {
             const particle = document.createElement('div');
-            particle.classList.add('particle');
+            particle.style.position = 'absolute';
+            particle.style.borderRadius = '50%';
+            particle.style.background = 'radial-gradient(circle, rgba(255, 255, 255, 0.2), transparent)';
+            particle.style.animation = 'floatParticle 20s infinite linear';
             
-            const size = Math.random() * 8 + 2 + 'px';
-            const left = Math.random() * 100 + '%';
-            const duration = Math.random() * 15 + 20 + 's';
-            const delay = Math.random() * 10 + 's';
+            const size = Math.random() * 6 + 2;
+            const posX = Math.random() * 100;
+            const duration = Math.random() * 20 + 15;
+            const delay = Math.random() * 5;
             
-            particle.style.width = size;
-            particle.style.height = size;
-            particle.style.left = left;
-            particle.style.animationDuration = duration;
-            particle.style.animationDelay = delay;
-            particle.style.opacity = Math.random() * 0.6 + 0.1;
+            particle.style.width = `${size}px`;
+            particle.style.height = `${size}px`;
+            particle.style.left = `${posX}%`;
+            particle.style.animationDuration = `${duration}s`;
+            particle.style.animationDelay = `${delay}s`;
+            particle.style.opacity = Math.random() * 0.5 + 0.1;
             
             particleContainer.appendChild(particle);
             
+            // Remove particle after animation completes
             setTimeout(() => {
-                particle.remove();
-            }, parseFloat(duration) * 1000);
+                if (particle.parentNode === particleContainer) {
+                    particleContainer.removeChild(particle);
+                }
+            }, duration * 1000);
         }
-
+        
         // Initial particles
         for (let i = 0; i < 50; i++) {
-            setTimeout(() => createParticle(), Math.random() * 3000);
+            createParticle();
         }
-
+        
         // Continuous generation
-        setInterval(createParticle, 500);
-
-        // =========================
-        // NAVIGATION SCROLL EFFECT
-        // =========================
-        const nav = document.getElementById('mainNav');
-        let lastScrollTop = 0;
-
-        window.addEventListener('scroll', function() {
-            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-            
-            // Add/remove scrolled class based on scroll position
-            if (scrollTop > 50) {
-                nav.classList.add('scrolled');
-            } else {
-                nav.classList.remove('scrolled');
-            }
-            
-            // Update active navigation link
-            updateActiveNav();
-            
-            lastScrollTop = scrollTop;
-        });
-
-        // =========================
-        // 3D PARALLAX EFFECTS (ENHANCED)
-        // =========================
-        const heroSection = document.getElementById('hero');
-        const heroBgLayer = document.getElementById('heroBgLayer');
-        const circularPortrait = document.querySelector('.circular-portrait');
-        const portraitRing = document.querySelector('.portrait-ring');
-
-        // Enhanced 3D mouse movement effect
-        heroSection.addEventListener('mousemove', (e) => {
-            const { clientX, clientY } = e;
-            const { innerWidth, innerHeight } = window;
-
-            // Calculate mouse position percentages
-            const xPercent = (clientX / innerWidth - 0.5) * 2;
-            const yPercent = (clientY / innerHeight - 0.5) * 2;
-
-            // 3D transform for circular portrait
-            if (circularPortrait) {
-                circularPortrait.style.transform = `
-                    translateZ(${80 + xPercent * 20}px)
-                    rotateY(${xPercent * 8}deg)
-                    rotateX(${-yPercent * 8}deg)
-                    scale(${1 + Math.abs(xPercent) * 0.05})
-                `;
-            }
-
-            // Parallax effect for background layer
-            heroBgLayer.style.transform = `
-                translateZ(-300px)
-                rotateY(${xPercent * 5}deg)
-                rotateX(${-yPercent * 5}deg)
-                scale(${1.4 - Math.abs(xPercent) * 0.04})
-            `;
-
-            // Rotate portrait ring
-            if (portraitRing) {
-                portraitRing.style.transform = `rotate(${xPercent * 10}deg)`;
-            }
-
-            // Title and text effects
-            const heroTitle = document.querySelector('.hero h1');
-            heroTitle.style.transform = `
-                translateZ(40px)
-                translateX(${xPercent * 8}px)
-                translateY(${yPercent * 8}px)
-            `;
-        });
-
-        // Reset on mouse leave
-        heroSection.addEventListener('mouseleave', () => {
-            if (circularPortrait) {
-                circularPortrait.style.transform = 'translateZ(80px) rotateY(0deg) rotateX(0deg) scale(1)';
-            }
-            
-            heroBgLayer.style.transform = 'translateZ(-300px) rotateY(0deg) rotateX(0deg) scale(1.4)';
-            
-            if (portraitRing) {
-                portraitRing.style.transform = 'rotate(0deg)';
-            }
-            
-            document.querySelector('.hero h1').style.transform = 'translateZ(40px)';
-        });
-
-        // =========================
-        // SCROLL REVEAL ANIMATIONS
-        // =========================
-        function initAnimations() {
-            const observerOptions = {
-                threshold: 0.1,
-                rootMargin: '0px 0px -50px 0px'
-            };
-
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                        
-                        // Section entrance
-                        if (entry.target.classList.contains('section')) {
-                            entry.target.classList.add('visible');
-                        }
-                        
-                        // Staggered animations
-                        if (entry.target.classList.contains('animate-on-scroll')) {
-                            const delay = entry.target.dataset.delay || '0';
-                            entry.target.style.transitionDelay = `${delay}s`;
-                        }
-                    }
-                });
-            }, observerOptions);
-
-            // Observe all animated elements
-            document.querySelectorAll('.animate-on-scroll').forEach((el, index) => {
-                el.dataset.delay = (index * 0.1).toFixed(1);
-                observer.observe(el);
-            });
-
-            // Observe sections
-            document.querySelectorAll('section').forEach((section) => {
-                observer.observe(section);
-            });
-
-            // Gallery items stagger effect
-            document.querySelectorAll('.gallery-item').forEach((item, index) => {
-                item.style.animationDelay = (index * 0.15) + 's';
-            });
-        }
-
-        // =========================
-        // DYNAMIC THEME GENERATOR
-        // =========================
-        function randomizeTheme() {
-            const hue1 = Math.floor(Math.random() * 360);
-            const hue2 = (hue1 + 120) % 360;
-            const hue3 = (hue1 + 240) % 360;
-            const hue4 = (hue1 + 60) % 360;
-
-            const root = document.documentElement;
-
-            // Update CSS variables
-            root.style.setProperty('--primary-hue', hue1);
-            root.style.setProperty('--secondary-hue', hue2);
-            root.style.setProperty('--accent-hue', hue3);
-
-            // Update gradients
-            root.style.setProperty('--gradient-primary', `linear-gradient(135deg, hsl(${hue1}, 100%, 50%) 0%, hsl(${hue2}, 100%, 50%) 100%)`);
-            root.style.setProperty('--gradient-secondary', `linear-gradient(135deg, hsl(${hue3}, 100%, 50%) 0%, hsl(${hue4}, 100%, 50%) 100%)`);
-            root.style.setProperty('--gradient-accent', `linear-gradient(135deg, hsl(${hue2}, 100%, 50%) 0%, hsl(${hue1}, 100%, 50%) 100%)`);
-
-            // Update orb colors
-            const orbs = document.querySelectorAll('.orb');
-            if (orbs[0]) orbs[0].style.background = `hsl(${hue1}, 100%, 50%)`;
-            if (orbs[1]) orbs[1].style.background = `hsl(${hue2}, 100%, 50%)`;
-            if (orbs[2]) orbs[2].style.background = `hsl(${hue3}, 100%, 50%)`;
-            if (orbs[3]) orbs[3].style.background = `hsl(${hue4}, 100%, 50%)`;
-
-            // Update hero gradient
-            const heroBadge = document.querySelector('.hero-badge');
-            const heroTitle = document.querySelector('.hero h1');
-
-            if (heroBadge) heroBadge.style.background = `linear-gradient(90deg, hsl(${hue1}, 100%, 50%), hsl(${hue2}, 100%, 50%))`;
-            if (heroTitle) heroTitle.style.background = `linear-gradient(135deg, #fff 0%, hsl(${hue2}, 100%, 70%) 30%, hsl(${hue1}, 100%, 60%) 70%, hsl(${hue3}, 100%, 50%) 100%)`;
-
-            // Update section title lines
-            const titleLines = document.querySelectorAll('.section-title::after');
-            
-            // Update timeline dots
-            const timelineDots = document.querySelectorAll('.timeline-dot');
-            timelineDots.forEach(dot => {
-                dot.style.boxShadow = `
-                    0 0 30px hsl(${hue2}, 100%, 60%),
-                    0 0 20px hsl(${hue2}, 100%, 60%),
-                    inset 0 0 10px rgba(255, 255, 255, 0.7)
-                `;
-            });
-
-            // Add animation feedback
-            const themeBtn = document.querySelector('.theme-btn');
-            themeBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Transforming...';
-            themeBtn.style.background = `linear-gradient(135deg, hsl(${hue1}, 100%, 50%), hsl(${hue2}, 100%, 50%))`;
-
-            setTimeout(() => {
-                themeBtn.innerHTML = '<i class="fas fa-magic"></i> Theme';
-                themeBtn.style.background = `linear-gradient(135deg, hsl(${hue3}, 100%, 50%), hsl(${hue1}, 100%, 50%))`;
-                
-                // Trigger confetti effect
-                createConfetti();
-            }, 1200);
-        }
-
-        // =========================
-        // CONFETTI EFFECT
-        // =========================
-        function createConfetti() {
-            const colors = ['#6a11cb', '#2575fc', '#ff007a', '#ff8c00', '#00c6ff'];
-            const confettiContainer = document.createElement('div');
-            confettiContainer.style.position = 'fixed';
-            confettiContainer.style.top = '0';
-            confettiContainer.style.left = '0';
-            confettiContainer.style.width = '100%';
-            confettiContainer.style.height = '100%';
-            confettiContainer.style.pointerEvents = 'none';
-            confettiContainer.style.zIndex = '9999';
-            document.body.appendChild(confettiContainer);
-
-            for (let i = 0; i < 120; i++) {
-                const confetti = document.createElement('div');
-                confetti.style.position = 'absolute';
-                confetti.style.width = Math.random() * 10 + 5 + 'px';
-                confetti.style.height = Math.random() * 10 + 5 + 'px';
-                confetti.style.background = colors[Math.floor(Math.random() * colors.length)];
-                confetti.style.borderRadius = Math.random() > 0.5 ? '50%' : '0';
-                confetti.style.left = Math.random() * 100 + '%';
-                confetti.style.top = '-20px';
-                confetti.style.opacity = Math.random() * 0.7 + 0.3;
-                confetti.style.transform = `rotate(${Math.random() * 360}deg)`;
-                confettiContainer.appendChild(confetti);
-
-                // Animation
-                const animation = confetti.animate([
-                    { transform: `translate(0, 0) rotate(0deg)`, opacity: 1 },
-                    { transform: `translate(${Math.random() * 100 - 50}px, ${window.innerHeight}px) rotate(${Math.random() * 720}deg)`, opacity: 0 }
-                ], {
-                    duration: Math.random() * 3000 + 2000,
-                    easing: 'cubic-bezier(0.215, 0.61, 0.355, 1)'
-                });
-
-                animation.onfinish = () => confetti.remove();
-            }
-
-            // Remove container after animation
-            setTimeout(() => {
-                confettiContainer.remove();
-            }, 5000);
-        }
-
-        // =========================
-        // SMOOTH SCROLL FOR NAVIGATION
-        // =========================
-        document.querySelectorAll('nav a, .footer-links a').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                if (this.getAttribute('href').startsWith('#')) {
-                    e.preventDefault();
-
-                    const targetId = this.getAttribute('href');
-                    const targetElement = document.querySelector(targetId);
-
-                    if (targetElement) {
-                        window.scrollTo({
-                            top: targetElement.offsetTop - 100,
-                            behavior: 'smooth'
-                        });
-                    }
+        setInterval(createParticle, 1000);
+        
+        // Add CSS animation for particles
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes floatParticle {
+                0% {
+                    transform: translateY(100vh) translateX(0) rotate(0deg);
+                    opacity: 0;
                 }
-            });
-        });
-
-        // =========================
-        // NAVIGATION ACTIVE STATE
-        // =========================
+                10% {
+                    opacity: 0.5;
+                }
+                90% {
+                    opacity: 0.5;
+                }
+                100% {
+                    transform: translateY(-100px) translateX(100px) rotate(360deg);
+                    opacity: 0;
+                }
+            }
+        `;
+        document.head.appendChild(style);
+        
+        // ===========================================
+        // NAVIGATION SCROLL EFFECT
+        // ===========================================
+        const floatingNav = document.getElementById('floatingNav');
+        const navLinks = document.querySelectorAll('.floating-nav a');
         const sections = document.querySelectorAll('section');
-        const navLinks = document.querySelectorAll('nav a');
-
-        function updateActiveNav() {
+        
+        window.addEventListener('scroll', () => {
+            // Update active nav link
             let current = '';
-
+            const scrollPos = window.scrollY + 150;
+            
             sections.forEach(section => {
                 const sectionTop = section.offsetTop;
                 const sectionHeight = section.clientHeight;
-
-                if (window.scrollY >= (sectionTop - 200)) {
+                
+                if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
                     current = section.getAttribute('id');
                 }
             });
-
+            
             navLinks.forEach(link => {
                 link.classList.remove('active');
                 if (link.getAttribute('href') === `#${current}`) {
                     link.classList.add('active');
                 }
             });
-        }
-
-        // =========================
-        // CONTACT FORM HANDLING
-        // =========================
-        const messageForm = document.getElementById('messageForm');
-        if (messageForm) {
-            messageForm.addEventListener('submit', function(e) {
+        });
+        
+        // ===========================================
+        // SMOOTH SCROLLING
+        // ===========================================
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
                 e.preventDefault();
                 
-                // Get form values
-                const name = document.getElementById('name').value;
-                const email = document.getElementById('email').value;
-                const subject = document.getElementById('subject').value;
-                const message = document.getElementById('message').value;
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
                 
-                // In a real application, you would send this data to a server
-                // For now, we'll simulate a successful submission
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // ===========================================
+        // CONTACT FORM SUBMISSION
+        // ===========================================
+        const contactForm = document.getElementById('contactForm');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
                 
-                // Create a mailto link as fallback
-                const mailtoLink = `mailto:advmumtaz222@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage: ${message}`)}`;
-                
-                // Show success message
-                const submitBtn = messageForm.querySelector('.form-submit');
+                // Get form data
+                const formData = new FormData(this);
+                const submitBtn = this.querySelector('button[type="submit"]');
                 const originalText = submitBtn.innerHTML;
                 
-                submitBtn.innerHTML = '<i class="fas fa-check"></i> Message Sent!';
-                submitBtn.style.background = 'linear-gradient(135deg, #00ff88, #00cc66)';
+                // Show loading state
+                submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+                submitBtn.disabled = true;
                 
-                // Open mail client as fallback
-                window.open(mailtoLink, '_blank');
-                
-                // Reset form
+                // Simulate form submission
                 setTimeout(() => {
-                    messageForm.reset();
-                    submitBtn.innerHTML = originalText;
-                    submitBtn.style.background = 'var(--gradient-primary)';
+                    // Reset form
+                    this.reset();
                     
-                    // Show confirmation alert
-                    alert('Thank you for your message! I have opened your email client to send the message. If it didn\'t open, please email advmumtaz222@gmail.com directly.');
-                }, 2000);
+                    // Show success message
+                    submitBtn.innerHTML = '<i class="fas fa-check"></i> Message Sent!';
+                    submitBtn.style.background = 'var(--gradient-accent)';
+                    
+                    // Revert button after 3 seconds
+                    setTimeout(() => {
+                        submitBtn.innerHTML = originalText;
+                        submitBtn.disabled = false;
+                        submitBtn.style.background = 'var(--gradient-primary)';
+                    }, 3000);
+                }, 1500);
             });
         }
-
-        // =========================
-        // IMAGE LOADING AND ERROR HANDLING
-        // =========================
+        
+        // ===========================================
+        // IMAGE LAZY LOADING
+        // ===========================================
         const images = document.querySelectorAll('img');
+        const imageObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const img = entry.target;
+                    img.style.opacity = '1';
+                    img.style.transform = 'scale(1)';
+                    imageObserver.unobserve(img);
+                }
+            });
+        });
+        
         images.forEach(img => {
-            // Set loading attribute for lazy loading
-            if (!img.hasAttribute('loading')) {
-                img.setAttribute('loading', 'lazy');
-            }
-            
-            // Handle image load
-            img.addEventListener('load', function() {
-                this.style.opacity = '1';
-                this.style.transform = 'scale(1)';
-            });
-            
-            // Handle image error (fallback)
-            img.addEventListener('error', function() {
-                console.log(`Image failed to load: ${this.src}`);
-                // You could set a fallback image here if needed
-                // this.src = 'fallback-image.jpg';
-            });
-            
-            // Initial state
             img.style.opacity = '0';
             img.style.transform = 'scale(0.95)';
             img.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+            imageObserver.observe(img);
         });
-
-        // =========================
-        // LANGUAGE TOGGLE (SIMULATED)
-        // =========================
-        function toggleLanguage() {
-            const langBtn = document.querySelector('.lang-btn');
-            const isEnglish = langBtn.innerHTML.includes('Urdu');
+        
+        // ===========================================
+        // PORTRAIT HOVER EFFECT
+        // ===========================================
+        const portraitCircle = document.querySelector('.portrait-circle');
+        if (portraitCircle) {
+            portraitCircle.addEventListener('mouseenter', () => {
+                portraitCircle.style.transform = 'scale(1.05) rotate(5deg)';
+                portraitCircle.style.boxShadow = '0 40px 80px rgba(138, 43, 226, 0.6), 0 0 60px rgba(138, 43, 226, 0.5)';
+            });
             
-            if (isEnglish) {
-                // Switch to Urdu (simulated)
-                langBtn.innerHTML = '<i class="fas fa-language"></i> English';
-                
-                // Show language change notification
-                const notification = document.createElement('div');
-                notification.style.position = 'fixed';
-                notification.style.top = '100px';
-                notification.style.left = '50%';
-                notification.style.transform = 'translateX(-50%)';
-                notification.style.background = 'rgba(0, 198, 255, 0.9)';
-                notification.style.color = 'white';
-                notification.style.padding = '15px 30px';
-                notification.style.borderRadius = '10px';
-                notification.style.zIndex = '10000';
-                notification.style.boxShadow = '0 10px 30px rgba(0, 198, 255, 0.5)';
-                notification.innerHTML = 'Language switched to Urdu (اردو)';
-                document.body.appendChild(notification);
-                
-                setTimeout(() => {
-                    notification.remove();
-                }, 3000);
-            } else {
-                // Switch back to English
-                langBtn.innerHTML = '<i class="fas fa-language"></i> Urdu';
-                
-                const notification = document.createElement('div');
-                notification.style.position = 'fixed';
-                notification.style.top = '100px';
-                notification.style.left = '50%';
-                notification.style.transform = 'translateX(-50%)';
-                notification.style.background = 'rgba(106, 17, 203, 0.9)';
-                notification.style.color = 'white';
-                notification.style.padding = '15px 30px';
-                notification.style.borderRadius = '10px';
-                notification.style.zIndex = '10000';
-                notification.style.boxShadow = '0 10px 30px rgba(106, 17, 203, 0.5)';
-                notification.innerHTML = 'Language switched to English';
-                document.body.appendChild(notification);
-                
-                setTimeout(() => {
-                    notification.remove();
-                }, 3000);
-            }
+            portraitCircle.addEventListener('mouseleave', () => {
+                portraitCircle.style.transform = '';
+                portraitCircle.style.boxShadow = '0 30px 60px rgba(0, 0, 0, 0.5), 0 0 40px rgba(138, 43, 226, 0.4)';
+            });
         }
-
-        // =========================
-        // MOBILE TOUCH EFFECTS
-        // =========================
+        
+        // ===========================================
+        // MOBILE MENU TOGGLE
+        // ===========================================
         function handleMobileView() {
             if (window.innerWidth <= 768) {
-                // Add touch effects for mobile
-                document.querySelectorAll('.glass-card, .gallery-item, .service-card, .contact-card').forEach(element => {
-                    element.addEventListener('touchstart', function() {
-                        this.style.transform = 'scale(0.98)';
-                    });
-                    
-                    element.addEventListener('touchend', function() {
-                        this.style.transform = 'scale(1)';
-                    });
-                });
+                // Adjust floating nav for mobile
+                floatingNav.style.padding = '12px 20px';
+                floatingNav.style.gap = '15px';
                 
-                // Optimize animations for mobile
-                document.documentElement.style.setProperty('--transition', 'cubic-bezier(0.4, 0, 0.2, 1)');
+                // Adjust social grid for mobile
+                const socialGrid = document.querySelector('.social-grid');
+                if (socialGrid) {
+                    socialGrid.style.gridTemplateColumns = 'repeat(3, 1fr)';
+                }
             }
         }
         
@@ -3423,82 +1993,25 @@
         
         // On resize
         window.addEventListener('resize', handleMobileView);
-
-        // =========================
-        // PERFORMANCE OPTIMIZATION
-        // =========================
-        let ticking = false;
-        window.addEventListener('scroll', () => {
-            if (!ticking) {
-                window.requestAnimationFrame(() => {
-                    updateActiveNav();
-                    ticking = false;
-                });
-                ticking = true;
-            }
-        });
-
-        // =========================
-        // INITIAL LOAD ANIMATIONS
-        // =========================
-        window.addEventListener('load', () => {
-            // Animate hero elements sequentially
-            const heroElements = document.querySelectorAll('.hero-text > *');
-            heroElements.forEach((el, index) => {
-                el.style.animationDelay = `${index * 0.2}s`;
-                el.classList.add('animate-on-scroll');
-            });
-            
-            // Trigger initial active nav update
-            updateActiveNav();
-        });
-
-        // =========================
-        // CURSOR EFFECT (OPTIONAL)
-        // =========================
-        const cursor = document.createElement('div');
-        cursor.style.position = 'fixed';
-        cursor.style.width = '20px';
-        cursor.style.height = '20px';
-        cursor.style.background = 'radial-gradient(circle, rgba(106,17,203,0.8) 0%, rgba(37,117,252,0.4) 70%, transparent 100%)';
-        cursor.style.borderRadius = '50%';
-        cursor.style.pointerEvents = 'none';
-        cursor.style.zIndex = '9999';
-        cursor.style.transform = 'translate(-50%, -50%)';
-        cursor.style.transition = 'transform 0.1s ease';
-        document.body.appendChild(cursor);
-
-        document.addEventListener('mousemove', (e) => {
-            cursor.style.left = e.clientX + 'px';
-            cursor.style.top = e.clientY + 'px';
-        });
-
-        // Hide cursor on mobile
-        if (window.innerWidth <= 768) {
-            cursor.style.display = 'none';
-        }
         
-        // Show cursor on desktop
-        window.addEventListener('resize', () => {
-            cursor.style.display = window.innerWidth <= 768 ? 'none' : 'block';
-        });
-
-        // =========================
-        // AUTO THEME ROTATION (OPTIONAL - DISABLED BY DEFAULT)
-        // =========================
-        /*
-        let themeInterval;
-        function startAutoTheme() {
-            themeInterval = setInterval(randomizeTheme, 15000);
-        }
-
-        function stopAutoTheme() {
-            clearInterval(themeInterval);
-        }
+        // ===========================================
+        // THEME TOGGLE (Optional - for future enhancement)
+        // ===========================================
+        const themeToggle = document.createElement('button');
+        themeToggle.className = 'btn btn-primary';
+        themeToggle.innerHTML = '<i class="fas fa-palette"></i>';
+        themeToggle.style.position = 'fixed';
+        themeToggle.style.bottom = '100px';
+        themeToggle.style.right = '30px';
+        themeToggle.style.zIndex = '999';
+        themeToggle.title = 'Change Theme';
         
-        // Uncomment to enable auto theme rotation
-        // startAutoTheme();
-        */
+        themeToggle.addEventListener('click', () => {
+            // This is where you can add theme switching functionality
+            alert('Theme switching feature coming soon!');
+        });
+        
+        document.body.appendChild(themeToggle);
     </script>
 </body>
 </html>
