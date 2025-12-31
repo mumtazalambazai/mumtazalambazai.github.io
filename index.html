@@ -1268,16 +1268,7 @@
             
             .hero-description {
                 font-size: 1.1rem;
-            }  
-        }
-                /* ===========================================
-           PORTRAIT FIX
-        =========================================== */
-        .portrait-circle {
-            background: url('portrait.jpg.jpeg') center/cover !important;
-        }
-        .portrait-circle img {
-            display: none;
+            }
         }
     </style>
 </head>
@@ -1380,7 +1371,11 @@
                     </div>
                 </div>
                 
-                
+                <div class="hero-portrait">
+                    <div class="portrait-circle">
+                        <!-- PORTRAIT PHOTO - Make sure the file is named "portrait.jpg.jpeg" and in the same folder -->
+                        <img src="portrait.jpg.jpeg" alt="Mumtaz Alam Bazai" onerror="this.src='https://via.placeholder.com/400x400/8A2BE2/FFFFFF?text=Mumtaz+Alam+Bazai'">
+                    </div>
                     <div class="portrait-badge">
                         <i class="fas fa-star"></i>
                         <span>Advocate High Court</span>
