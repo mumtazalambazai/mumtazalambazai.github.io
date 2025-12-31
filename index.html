@@ -483,9 +483,9 @@
         }
         
         /* ===========================================
-           HERO SECTION WITH CIRCULAR PORTRAIT
+            SECTION WITH CIRCULAR PORTRAIT
         =========================================== */
-        .hero {
+        . {
             min-height: 100vh;
             display: flex;
             align-items: center;
@@ -494,18 +494,18 @@
             overflow: hidden;
         }
         
-        .hero-bg {
+        .-bg {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: url('hero-bg.jpg.jpeg') center/cover no-repeat;
+            background: url('-bg.jpg.jpeg') center/cover no-repeat;
             z-index: -1;
             filter: brightness(0.3) contrast(1.2);
         }
         
-        .hero-bg-overlay {
+        .-bg-overlay {
             position: absolute;
             top: 0;
             left: 0;
@@ -515,7 +515,7 @@
             z-index: -1;
         }
         
-        .hero-content {
+        .-content {
             display: grid;
             grid-template-columns: 1.5fr 1fr;
             gap: 60px;
@@ -524,11 +524,11 @@
             z-index: 2;
         }
         
-        .hero-text {
+        .-text {
             position: relative;
         }
         
-        .hero-badge {
+        .-badge {
             display: inline-flex;
             align-items: center;
             gap: 10px;
@@ -547,20 +547,20 @@
             50% { box-shadow: 0 0 30px rgba(138, 43, 226, 0.8); }
         }
         
-        .hero-title {
+        .-title {
             font-size: clamp(2.5rem, 6vw, 4.5rem);
             margin-bottom: 1.5rem;
             line-height: 1.1;
         }
         
-        .hero-description {
+        .-description {
             font-size: 1.3rem;
             max-width: 600px;
             margin-bottom: 2.5rem;
             color: var(--text-secondary);
         }
         
-        .hero-stats {
+        .-stats {
             display: flex;
             gap: 2rem;
             margin-top: 3rem;
@@ -589,68 +589,48 @@
         }
         
         /* Circular Portrait in Upper Right */
-        .hero-portrait {
+        .-portrait {
             display: flex;
             justify-content: flex-end;
             align-items: flex-start;
             position: relative;
         }
         
-        .portrait-circle {
-            width: 400px;
-            height: 400px;
-            border-radius: 50%;
-            overflow: hidden;
-            border: 5px solid transparent;
-            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color), var(--accent-color)) border-box;
-            -webkit-mask: 
-                linear-gradient(#fff 0 0) padding-box, 
-                linear-gradient(#fff 0 0);
-            -webkit-mask-composite: xor;
-            mask-composite: exclude;
-            position: relative;
-            box-shadow: 
-                0 30px 60px rgba(0, 0, 0, 0.5),
-                0 0 40px rgba(138, 43, 226, 0.4);
-            animation: floatPortrait 8s ease-in-out infinite;
-        }
-        
-        @keyframes floatPortrait {
-            0%, 100% { transform: translateY(0) rotate(0deg); }
-            25% { transform: translateY(-20px) rotate(2deg); }
-            50% { transform: translateY(0) rotate(0deg); }
-            75% { transform: translateY(20px) rotate(-2deg); }
-        }
-        
-        .portrait-circle img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        
-        .portrait-badge {
-            position: absolute;
-            bottom: 50px;
-            right: 20px;
-            background: rgba(0, 0, 0, 0.7);
-            backdrop-filter: blur(10px);
-            padding: 15px 25px;
-            border-radius: 30px;
-            border: 2px solid var(--primary-color);
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-weight: 600;
-            animation: badgeFloat 6s ease-in-out infinite;
-        }
-        
-        @keyframes badgeFloat {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-15px); }
-        }
-        
+       .portrait-circle {
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid transparent;
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color), var(--accent-color)) border-box;
+    position: relative;
+    box-shadow: 
+        0 30px 60px rgba(0, 0, 0, 0.5),
+        0 0 40px rgba(138, 43, 226, 0.4);
+    animation: floatPortrait 8s ease-in-out infinite;
+}
+
+.portrait-circle::before {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    background: #000;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.portrait-circle img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 2;
+}
         /* ===========================================
-           SOCIAL MEDIA SECTION (BELOW HERO)
+           SOCIAL MEDIA SECTION (BELOW )
         =========================================== */
         .social-section {
             background: rgba(0, 0, 0, 0.3);
@@ -1120,7 +1100,7 @@
            RESPONSIVE DESIGN
         =========================================== */
         @media (max-width: 1200px) {
-            .hero-content {
+            .-content {
                 gap: 40px;
             }
             
@@ -1139,12 +1119,12 @@
         }
         
         @media (max-width: 992px) {
-            .hero-content {
+            .-content {
                 grid-template-columns: 1fr;
                 text-align: center;
             }
             
-            .hero-portrait {
+            .-portrait {
                 justify-content: center;
                 order: -1;
             }
@@ -1195,11 +1175,11 @@
                 justify-content: center;
             }
             
-            .hero {
+            . {
                 padding-top: 150px;
             }
             
-            .hero-stats {
+            .-stats {
                 flex-direction: column;
                 gap: 1.5rem;
             }
@@ -1262,11 +1242,11 @@
                 font-size: 16px;
             }
             
-            .hero-title {
+            .-title {
                 font-size: 2.5rem;
             }
             
-            .hero-description {
+            .-description {
                 font-size: 1.1rem;
             }
         }
@@ -1316,7 +1296,7 @@
 
     <!-- FLOATING NAVIGATION BAR -->
     <nav class="floating-nav" id="floatingNav">
-        <a href="#hero" data-tooltip="Home" class="active"><i class="fas fa-home"></i></a>
+        <a href="#" data-tooltip="Home" class="active"><i class="fas fa-home"></i></a>
         <a href="#about" data-tooltip="About"><i class="fas fa-user"></i></a>
         <a href="#education" data-tooltip="Education"><i class="fas fa-graduation-cap"></i></a>
         <a href="#expertise" data-tooltip="Expertise"><i class="fas fa-gavel"></i></a>
@@ -1324,24 +1304,24 @@
         <a href="#contact" data-tooltip="Contact"><i class="fas fa-envelope"></i></a>
     </nav>
 
-    <!-- HERO SECTION -->
-    <section id="hero" class="hero">
-        <div class="hero-bg"></div>
-        <div class="hero-bg-overlay"></div>
+    <!--  SECTION -->
+    <section id="" class="">
+        <div class="-bg"></div>
+        <div class="-bg-overlay"></div>
         
         <div class="container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <span class="hero-badge">
+            <div class="-content">
+                <div class="-text">
+                    <span class="-badge">
                         <i class="fas fa-award"></i>
                         Advocate High Court & Global Shaper
                     </span>
                     
-                    <h1 class="hero-title">
+                    <h1 class="-title">
                         Mumtaz Alam <span class="gradient-text">Bazai</span>
                     </h1>
                     
-                    <p class="hero-description">
+                    <p class="-description">
                         Human Rights Lawyer · Global Shaper (World Economic Forum) · Youth Advocate<br>
                         Empowering the youth of Balochistan through law, leadership, and unwavering justice.
                     </p>
@@ -1355,7 +1335,7 @@
                         </a>
                     </div>
                     
-                    <div class="hero-stats">
+                    <div class="-stats">
                         <div class="stat-item">
                             <div class="stat-number">100+</div>
                             <div class="stat-label">Cases Handled</div>
@@ -1371,7 +1351,7 @@
                     </div>
                 </div>
                 
-                <div class="hero-portrait">
+                <div class="-portrait">
                     <div class="portrait-circle">
                         <img src="portrait.jpg.jpeg" alt="Mumtaz Alam Bazai">
                     </div>
@@ -1747,7 +1727,7 @@
                     <div>
                         <h4>Quick Links</h4>
                         <ul>
-                            <li><a href="#hero">Home</a></li>
+                            <li><a href="#">Home</a></li>
                             <li><a href="#about">About</a></li>
                             <li><a href="#education">Education</a></li>
                             <li><a href="#expertise">Expertise</a></li>
@@ -2013,7 +1993,7 @@
         <!-- Test if images load -->
 <div style="display:none;">
     <img src="portrait.jpg.jpeg" onload="console.log('Portrait loaded')" onerror="console.log('Portrait failed to load')">
-    <img src="hero-bg.jpg.jpeg" onload="console.log('Background loaded')" onerror="console.log('Background failed to load')">
+    <img src="-bg.jpg.jpeg" onload="console.log('Background loaded')" onerror="console.log('Background failed to load')">
 </div>
         document.body.appendChild(themeToggle);
     </script>
