@@ -1,33 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mumtaz Alam Bazai | Advocate High Court | Global Shaper | Human Rights Lawyer</title>
-    <meta name="description" content="Mumtaz Alam Bazai - Advocate High Court, Global Shaper (World Economic Forum), Human Rights Lawyer, Youth Leader, Legal Visionary from Balochistan.">
-    <meta name="keywords" content="Mumtaz Alam Bazai, Advocate High Court, Global Shaper, Human Rights Lawyer, Balochistan, Legal Advocate, Youth Leader, WEF, Lawyer, Human Rights, Pakistan">
+    <title>Adv. Mumtaz Alam Bazai | Advocate High Court | Global Shaper | Human Rights Lawyer</title>
+    <meta name="description" content="Advocate Mumtaz Alam Bazai - Advocate High Court, Global Shaper at World Economic Forum, Human Rights Lawyer, Legal Consultant in Balochistan.">
+    <meta name="keywords" content="Advocate, Lawyer, High Court, Global Shaper, Human Rights, Balochistan, Legal Consultant, Quetta">
     <meta name="author" content="Mumtaz Alam Bazai">
     
-    <!-- Open Graph / Social Media Meta Tags -->
-    <meta property="og:title" content="Mumtaz Alam Bazai | Advocate & Global Shaper">
-    <meta property="og:description" content="Legal visionary, human rights advocate, and Global Shaper from Balochistan.">
+    <!-- Open Graph Meta Tags for Social Sharing -->
+    <meta property="og:title" content="Adv. Mumtaz Alam Bazai - The Legal Visionary">
+    <meta property="og:description" content="Advocate High Court, Global Shaper at World Economic Forum, and Human Rights Activist from Balochistan.">
     <meta property="og:image" content="portrait.jpg.jpeg">
     <meta property="og:url" content="https://mumtazalambazai.com">
     <meta property="og:type" content="website">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Mumtaz Alam Bazai | Legal Visionary">
-    <meta name="twitter:description" content="Advocate High Court, Global Shaper, and Human Rights Lawyer.">
-    <meta name="twitter:image" content="portrait.jpg.jpeg">
-    
-    <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     
     <!-- Fonts & Icons -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400&family=Inter:wght@300;400;500;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="portrait.jpg.jpeg">
     
     <style>
         /* =========================
@@ -36,7 +31,6 @@
         :root {
             --primary-hue: 260;
             --secondary-hue: 190;
-            --accent-hue: 330;
             --glass-bg: rgba(255, 255, 255, 0.05);
             --glass-border: rgba(255, 255, 255, 0.2);
             --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
@@ -45,9 +39,9 @@
             --neon-glow: 0 0 20px rgba(138, 43, 226, 0.6);
             --card-radius: 24px;
             --transition: cubic-bezier(0.23, 1, 0.32, 1);
-            --gradient-primary: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
-            --gradient-secondary: linear-gradient(135deg, #ff007a 0%, #ff8c00 100%);
-            --gradient-accent: linear-gradient(135deg, #00c6ff 0%, #0072ff 100%);
+            --gradient-1: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            --gradient-2: linear-gradient(135deg, #ff007a 0%, #ff5500 100%);
+            --gradient-3: linear-gradient(135deg, #00c6ff 0%, #0072ff 100%);
         }
 
         * {
@@ -68,12 +62,7 @@
             overflow-x: hidden;
             perspective: 1000px;
             min-height: 100vh;
-            opacity: 0;
-            animation: fadeInBody 1.5s ease forwards;
-        }
-
-        @keyframes fadeInBody {
-            to { opacity: 1; }
+            line-height: 1.6;
         }
 
         /* =========================
@@ -85,12 +74,8 @@
             left: 0;
             width: 100%;
             height: 100%;
-            z-index: -3;
-            background: 
-                radial-gradient(circle at 20% 20%, rgba(26, 26, 46, 0.8) 0%, transparent 50%),
-                radial-gradient(circle at 80% 80%, rgba(0, 198, 255, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 40% 60%, rgba(255, 0, 122, 0.1) 0%, transparent 50%),
-                #050510;
+            z-index: -2;
+            background: radial-gradient(circle at 50% 50%, #1a1a2e, #000);
             overflow: hidden;
         }
 
@@ -99,82 +84,77 @@
             border-radius: 50%;
             filter: blur(80px);
             opacity: 0.6;
-            animation: floatOrb 25s infinite alternate ease-in-out;
-            z-index: -2;
+            animation: floatOrb 20s infinite alternate;
         }
 
         .orb-1 {
-            width: 70vw;
-            height: 70vw;
-            background: #6a11cb;
-            top: -20%;
-            left: -20%;
-            animation-duration: 30s;
-            animation-delay: 0s;
+            width: 60vw;
+            height: 60vw;
+            background: #4e00c2;
+            top: -10%;
+            left: -10%;
+            animation-duration: 25s;
         }
 
         .orb-2 {
-            width: 60vw;
-            height: 60vw;
+            width: 50vw;
+            height: 50vw;
             background: #00c6ff;
-            bottom: -20%;
+            bottom: -10%;
             right: -10%;
-            animation-duration: 35s;
-            animation-delay: 5s;
+            animation-duration: 30s;
             animation-direction: reverse;
         }
 
         .orb-3 {
-            width: 40vw;
-            height: 40vw;
+            width: 30vw;
+            height: 30vw;
             background: #ff007a;
-            top: 50%;
-            left: 30%;
-            animation-duration: 25s;
-            animation-delay: 10s;
+            top: 40%;
+            left: 40%;
+            animation-duration: 20s;
         }
 
         @keyframes floatOrb {
-            0% { transform: translate(0, 0) scale(1) rotate(0deg); }
-            25% { transform: translate(30px, -50px) scale(1.05) rotate(90deg); }
-            50% { transform: translate(-20px, 40px) scale(1.1) rotate(180deg); }
-            75% { transform: translate(50px, 30px) scale(1.05) rotate(270deg); }
-            100% { transform: translate(0, 0) scale(1) rotate(360deg); }
+            0% {
+                transform: translate(0, 0) scale(1);
+            }
+            100% {
+                transform: translate(50px, -50px) scale(1.1);
+            }
         }
 
         /* =========================
-           FLOATING PARTICLES
+           FLOATING BUBBLES
         ========================= */
-        .particles-container {
+        .bubbles-container {
             position: fixed;
             width: 100%;
             height: 100%;
             z-index: -1;
             pointer-events: none;
-            overflow: hidden;
         }
 
-        .particle {
+        .bubble {
             position: absolute;
+            bottom: -100px;
+            background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.01));
+            border: 1px solid rgba(255, 255, 255, 0.3);
             border-radius: 50%;
-            background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.1));
-            animation: floatParticle 20s infinite linear;
-            box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+            box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.1);
+            animation: rise 15s infinite linear;
         }
 
-        @keyframes floatParticle {
+        @keyframes rise {
             0% {
-                transform: translateY(100vh) translateX(0) rotate(0deg);
+                transform: translateY(0) rotate(0deg);
                 opacity: 0;
             }
             10% {
-                opacity: 0.8;
-            }
-            90% {
-                opacity: 0.8;
+                opacity: 1;
             }
             100% {
-                transform: translateY(-100px) translateX(100px) rotate(360deg);
+                transform: translateY(-120vh) rotate(360deg);
                 opacity: 0;
             }
         }
@@ -183,175 +163,104 @@
            CUSTOM SCROLLBAR
         ========================= */
         ::-webkit-scrollbar {
-            width: 12px;
+            width: 10px;
         }
 
         ::-webkit-scrollbar-track {
             background: rgba(0, 0, 0, 0.3);
-            backdrop-filter: blur(10px);
         }
 
         ::-webkit-scrollbar-thumb {
-            background: var(--gradient-primary);
-            border-radius: 6px;
-            border: 2px solid rgba(255, 255, 255, 0.1);
-            transition: all 0.3s ease;
+            background: linear-gradient(45deg, #6a11cb, #2575fc);
+            border-radius: 5px;
         }
 
         ::-webkit-scrollbar-thumb:hover {
-            background: var(--gradient-secondary);
-            transform: scale(1.1);
+            background: linear-gradient(45deg, #2575fc, #6a11cb);
         }
 
         /* =========================
-           TYPOGRAPHY
+           TOP HEADER WITH CIRCULAR PORTRAIT
         ========================= */
-        h1, h2, h3, h4 {
-            font-family: 'Playfair Display', serif;
-            font-weight: 700;
-            background-clip: text;
-            -webkit-background-clip: text;
-        }
-
-        .gradient-text {
-            background: var(--gradient-primary);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            text-fill-color: transparent;
-        }
-
-        /* =========================
-           FIXED HEADER WITH NAVIGATION
-        ========================= */
-        .main-header {
+        .top-header {
             position: fixed;
             top: 0;
             left: 0;
-            width: 100%;
+            right: 0;
             z-index: 1000;
-            background: rgba(5, 5, 16, 0.9);
+            padding: 15px 30px;
+            background: rgba(10, 10, 20, 0.85);
             backdrop-filter: blur(20px) saturate(180%);
             -webkit-backdrop-filter: blur(20px) saturate(180%);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-            padding: 20px 50px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.15);
             display: flex;
             justify-content: space-between;
             align-items: center;
-            transition: all 0.4s ease;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
         }
 
-        .header.scrolled {
-            padding: 15px 50px;
-            background: rgba(5, 5, 16, 0.95);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-        }
-
-        .logo-container {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-
-        .logo-circle {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background: var(--gradient-primary);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 700;
-            font-size: 20px;
-            color: white;
-            box-shadow: 0 0 20px rgba(106, 17, 203, 0.5);
-        }
-
-        .logo-text {
-            font-family: 'Playfair Display', serif;
-            font-size: 24px;
-            font-weight: 700;
-            background: var(--gradient-primary);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        /* =========================
-           TOP SOCIAL MEDIA BAR
-        ========================= */
-        .top-social-bar {
+        .header-socials {
             display: flex;
             gap: 15px;
-            align-items: center;
         }
 
-        .top-social-link {
+        .header-socials a {
+            color: #fff;
+            font-size: 18px;
             width: 40px;
             height: 40px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            background: rgba(255, 255, 255, 0.1);
-            color: white;
+            background: rgba(255, 255, 255, 0.05);
+            transition: all 0.3s ease;
             text-decoration: none;
-            font-size: 18px;
+        }
+
+        .header-socials a:hover {
+            background: rgba(0, 198, 255, 0.2);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 198, 255, 0.3);
+        }
+
+        .header-portrait {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 3px solid #00c6ff;
+            box-shadow: 0 0 20px rgba(0, 198, 255, 0.5);
             transition: all 0.3s ease;
-            position: relative;
         }
 
-        .top-social-link:hover {
-            transform: translateY(-3px) scale(1.1);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        .header-portrait:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 30px rgba(0, 198, 255, 0.8);
         }
 
-        .top-social-link::after {
-            content: attr(data-tooltip);
-            position: absolute;
-            bottom: -35px;
-            left: 50%;
-            transform: translateX(-50%) scale(0);
-            background: rgba(255, 255, 255, 0.95);
-            color: #000;
-            padding: 5px 10px;
-            border-radius: 6px;
-            font-size: 12px;
-            font-weight: 600;
-            opacity: 0;
-            transition: all 0.3s ease;
-            pointer-events: none;
-            white-space: nowrap;
+        .header-portrait img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
-
-        .top-social-link:hover::after {
-            transform: translateX(-50%) scale(1);
-            opacity: 1;
-        }
-
-        /* Social Colors */
-        .top-social-link.mail { background: linear-gradient(135deg, #D44638, #B23121); }
-        .top-social-link.whatsapp { background: linear-gradient(135deg, #25D366, #128C7E); }
-        .top-social-link.linkedin { background: linear-gradient(135deg, #0077B5, #004182); }
-        .top-social-link.instagram { background: linear-gradient(135deg, #833AB4, #FD1D1D); }
 
         /* =========================
-           MAIN NAVIGATION (FIXED SIDEBAR)
+           FIXED NAVIGATION BAR
         ========================= */
         .main-nav {
             position: fixed;
-            left: 30px;
-            top: 50%;
-            transform: translateY(-50%);
+            top: 90px;
+            left: 50%;
+            transform: translateX(-50%);
             z-index: 999;
-            background: rgba(20, 20, 30, 0.8);
+            background: rgba(20, 20, 30, 0.9);
             backdrop-filter: blur(20px) saturate(180%);
             -webkit-backdrop-filter: blur(20px) saturate(180%);
             border: 1px solid rgba(255, 255, 255, 0.15);
-            padding: 25px 15px;
-            border-radius: 25px;
+            padding: 15px 30px;
+            border-radius: 50px;
             display: flex;
-            flex-direction: column;
             gap: 25px;
             box-shadow: 
                 0 20px 50px rgba(0, 0, 0, 0.5),
@@ -359,14 +268,22 @@
             transition: all 0.4s ease;
         }
 
+        .main-nav:hover {
+            background: rgba(20, 20, 30, 0.95);
+            transform: translateX(-50%) translateY(-5px);
+            box-shadow: 
+                0 25px 60px rgba(0, 0, 0, 0.6),
+                0 0 25px rgba(106, 17, 203, 0.4);
+        }
+
         .main-nav a {
             color: #fff;
             text-decoration: none;
-            font-size: 22px;
+            font-size: 20px;
             transition: all 0.3s ease;
             position: relative;
-            width: 50px;
-            height: 50px;
+            width: 40px;
+            height: 40px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -374,30 +291,25 @@
             background: rgba(255, 255, 255, 0.05);
         }
 
-        .main-nav a:hover {
+        .main-nav a:hover,
+        .main-nav a.active {
             color: #00c6ff;
             transform: translateY(-5px) scale(1.1);
             background: rgba(0, 198, 255, 0.1);
             box-shadow: 0 5px 15px rgba(0, 198, 255, 0.3);
         }
 
-        .main-nav a.active {
-            background: var(--gradient-primary);
-            color: #fff;
-            box-shadow: 0 0 20px rgba(106, 17, 203, 0.5);
-        }
-
         .main-nav a::after {
             content: attr(data-tooltip);
             position: absolute;
-            left: 60px;
-            top: 50%;
-            transform: translateY(-50%) translateX(-10px);
-            background: rgba(255, 255, 255, 0.95);
+            bottom: 50px;
+            left: 50%;
+            transform: translateX(-50%) scale(0);
+            background: #fff;
             color: #000;
-            padding: 8px 15px;
+            padding: 6px 12px;
             border-radius: 8px;
-            font-size: 14px;
+            font-size: 12px;
             font-weight: 600;
             opacity: 0;
             transition: all 0.3s ease;
@@ -407,403 +319,343 @@
         }
 
         .main-nav a:hover::after {
-            transform: translateY(-50%) translateX(0);
+            transform: translateX(-50%) scale(1);
             opacity: 1;
         }
 
         /* =========================
-           MOBILE NAVIGATION TOGGLE
+           THEME BUTTON
         ========================= */
-        .mobile-nav-toggle {
-            display: none;
+        .theme-btn {
             position: fixed;
-            bottom: 30px;
+            top: 30px;
             right: 30px;
-            z-index: 1001;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            background: var(--gradient-primary);
+            background: linear-gradient(135deg, #ff007a, #6a11cb);
             border: none;
             color: white;
-            font-size: 24px;
+            padding: 12px 25px;
+            border-radius: 30px;
+            font-weight: 600;
             cursor: pointer;
-            box-shadow: 0 0 25px rgba(106, 17, 203, 0.5);
+            z-index: 2000;
+            box-shadow: 
+                0 0 25px rgba(255, 0, 122, 0.5),
+                0 5px 15px rgba(0, 0, 0, 0.3);
             transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            backdrop-filter: blur(10px);
         }
 
-        .mobile-nav-toggle:hover {
-            transform: scale(1.1);
-            box-shadow: 0 0 35px rgba(106, 17, 203, 0.7);
+        .theme-btn:hover {
+            transform: scale(1.1) rotate(3deg);
+            box-shadow: 
+                0 0 35px rgba(255, 0, 122, 0.7),
+                0 8px 20px rgba(0, 0, 0, 0.4);
         }
 
         /* =========================
-           HERO SECTION (WITH CIRCLE PORTRAIT)
+           HERO SECTION (REDESIGNED)
         ========================= */
         .hero {
             min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 150px 20px 100px;
-            perspective: 2000px;
+            padding: 180px 20px 120px;
+            perspective: 1500px;
             overflow: hidden;
             position: relative;
         }
 
+        .hero-3d-bg {
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+            perspective: 2000px;
+            overflow: hidden;
+        }
+
+        .hero-3d-layer {
+            position: absolute;
+            inset: 0;
+            background: 
+                linear-gradient(
+                    rgba(0, 0, 0, 0.3),
+                    rgba(0, 0, 0, 0.5)
+                ),
+                url('hero-bg.jpg.jpeg') center/cover no-repeat;
+            transform: translateZ(-200px) scale(1.3);
+            filter: 
+                blur(1.5px)
+                brightness(1.1)
+                contrast(1.1)
+                saturate(1.3);
+            transition: transform 0.2s ease-out;
+            border-radius: 40px;
+        }
+
         .hero-content {
-            max-width: 1400px;
-            width: 100%;
             display: grid;
             grid-template-columns: 1.2fr 0.8fr;
-            gap: 80px;
+            gap: 60px;
+            max-width: 1400px;
             align-items: center;
             position: relative;
             z-index: 2;
+            transform-style: preserve-3d;
         }
 
         .hero-text {
             transform-style: preserve-3d;
             z-index: 2;
-            animation: fadeInUp 1s ease-out 0.3s both;
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(50px) translateZ(-100px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0) translateZ(0);
-            }
         }
 
         .hero-badge {
             display: inline-block;
-            padding: 12px 28px;
-            background: var(--gradient-primary);
-            border-radius: 35px;
-            font-weight: 800;
-            font-size: 15px;
+            padding: 10px 25px;
+            background: linear-gradient(90deg, #ff007a, #6a11cb);
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 14px;
             text-transform: uppercase;
-            letter-spacing: 2.5px;
-            margin-bottom: 30px;
+            letter-spacing: 2px;
+            margin-bottom: 25px;
             box-shadow: 
-                0 0 30px rgba(106, 17, 203, 0.5),
-                inset 0 1px 0 rgba(255, 255, 255, 0.3);
-            transform: translateZ(40px);
-            animation: badgeGlow 3s ease-in-out infinite, badgeFloat 6s ease-in-out infinite;
-            position: relative;
-            overflow: hidden;
+                0 0 25px rgba(255, 0, 122, 0.4),
+                inset 0 1px 0 rgba(255, 255, 255, 0.2);
+            transform: translateZ(30px);
+            animation: badgeGlow 3s ease-in-out infinite;
         }
 
         @keyframes badgeGlow {
-            0%, 100% { 
-                box-shadow: 
-                    0 0 30px rgba(106, 17, 203, 0.5),
-                    inset 0 1px 0 rgba(255, 255, 255, 0.3); 
-            }
-            50% { 
-                box-shadow: 
-                    0 0 45px rgba(106, 17, 203, 0.7),
-                    inset 0 1px 0 rgba(255, 255, 255, 0.5); 
-            }
-        }
-
-        @keyframes badgeFloat {
-            0%, 100% { transform: translateZ(40px) translateY(0); }
-            50% { transform: translateZ(40px) translateY(-10px); }
+            0%, 100% { box-shadow: 0 0 25px rgba(255, 0, 122, 0.4); }
+            50% { box-shadow: 0 0 35px rgba(255, 0, 122, 0.6); }
         }
 
         .hero h1 {
-            font-size: clamp(3.5rem, 7vw, 6rem);
-            line-height: 1.08;
-            background: linear-gradient(135deg, #fff 0%, #a5f3fc 30%, #6a11cb 70%, #ff007a 100%);
+            font-size: clamp(3rem, 6vw, 5rem);
+            line-height: 1.1;
+            background: linear-gradient(135deg, #fff 0%, #a5f3fc 50%, #6a11cb 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            margin-bottom: 30px;
-            filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.4));
-            transform: translateZ(50px);
-            animation: titleShine 8s infinite linear;
-            background-size: 200% auto;
+            margin-bottom: 25px;
+            filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.3));
+            transform: translateZ(40px);
         }
 
-        @keyframes titleShine {
-            0% { background-position: 0% center; }
-            100% { background-position: 200% center; }
+        .hero-subtitle {
+            font-size: 1.5rem;
+            color: #00c6ff;
+            margin-bottom: 15px;
+            font-weight: 600;
+            transform: translateZ(20px);
         }
 
         .hero p {
-            font-size: 1.3rem;
-            line-height: 1.9;
+            font-size: 1.2rem;
+            line-height: 1.8;
             color: var(--text-muted);
-            margin-bottom: 40px;
-            border-left: 5px solid #2575fc;
-            padding-left: 25px;
-            transform: translateZ(30px);
-            position: relative;
-            overflow: hidden;
+            margin-bottom: 35px;
+            border-left: 4px solid #2575fc;
+            padding-left: 20px;
+            transform: translateZ(20px);
         }
 
         .hero-buttons {
-            margin-top: 50px;
-            transform: translateZ(40px);
+            margin-top: 40px;
+            transform: translateZ(30px);
             display: flex;
             gap: 20px;
             flex-wrap: wrap;
         }
 
         .hero-btn {
-            padding: 18px 40px;
-            border-radius: 35px;
+            padding: 16px 35px;
+            border-radius: 30px;
             text-decoration: none;
-            font-weight: 800;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 12px;
-            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            font-weight: 700;
+            display: inline-block;
+            transition: all 0.3s ease;
             transform-style: preserve-3d;
             position: relative;
             overflow: hidden;
-            min-width: 200px;
             text-align: center;
-            animation: btnEntrance 0.8s ease-out 0.8s both;
-        }
-
-        @keyframes btnEntrance {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .hero-btn:nth-child(2) {
-            animation-delay: 1s;
+            min-width: 180px;
         }
 
         .btn-primary {
             background: #fff;
             color: #000;
             box-shadow: 
-                0 0 30px rgba(255, 255, 255, 0.5),
-                0 8px 25px rgba(0, 0, 0, 0.3);
-        }
-
-        .btn-primary:hover {
-            background: linear-gradient(135deg, #fff, #f0f0f0);
-            transform: translateY(-8px) scale(1.05);
-            box-shadow: 
-                0 0 45px rgba(255, 255, 255, 0.7),
-                0 12px 35px rgba(0, 0, 0, 0.4);
+                0 0 25px rgba(255, 255, 255, 0.4),
+                0 5px 15px rgba(0, 0, 0, 0.2);
         }
 
         .btn-secondary {
             background: transparent;
-            border: 2px solid rgba(255, 255, 255, 0.8);
+            border: 2px solid #fff;
             color: #fff;
             box-shadow: 
-                0 0 20px rgba(255, 255, 255, 0.2),
-                inset 0 0 20px rgba(255, 255, 255, 0.1);
+                0 0 15px rgba(255, 255, 255, 0.2),
+                inset 0 0 15px rgba(255, 255, 255, 0.1);
+        }
+
+        .hero-btn:hover {
+            transform: translateY(-5px) scale(1.05);
+        }
+
+        .btn-primary:hover {
+            box-shadow: 
+                0 0 35px rgba(255, 255, 255, 0.6),
+                0 8px 20px rgba(0, 0, 0, 0.3);
         }
 
         .btn-secondary:hover {
-            background: rgba(255, 255, 255, 0.15);
-            border-color: #fff;
-            transform: translateY(-8px) scale(1.05);
+            background: rgba(255, 255, 255, 0.1);
             box-shadow: 
-                0 0 35px rgba(255, 255, 255, 0.4),
-                inset 0 0 30px rgba(255, 255, 255, 0.2);
-        }
-
-        .hero-btn::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
-            transition: 0.6s;
-        }
-
-        .hero-btn:hover::before {
-            left: 100%;
+                0 0 25px rgba(255, 255, 255, 0.3),
+                inset 0 0 20px rgba(255, 255, 255, 0.2);
         }
 
         /* =========================
-           CIRCLE PORTRAIT IN UPPER RIGHT
+           HERO IMAGE SECTION
         ========================= */
-        .hero-portrait-container {
+        .hero-image-container {
             position: relative;
+            width: 100%;
+            height: 500px;
+            transform-style: preserve-3d;
+            perspective: 1500px;
             display: flex;
-            justify-content: flex-end;
-            align-items: flex-start;
-            height: 100%;
+            justify-content: center;
+            align-items: center;
         }
 
-        .circle-portrait {
-            width: 380px;
-            height: 380px;
-            border-radius: 50%;
-            overflow: hidden;
-            border: 5px solid transparent;
-            background: linear-gradient(45deg, #6a11cb, #2575fc, #ff007a, #ff8c00) border-box;
-            -webkit-mask: 
-                linear-gradient(#fff 0 0) padding-box, 
-                linear-gradient(#fff 0 0);
-            -webkit-mask-composite: xor;
-            mask-composite: exclude;
+        .hero-main-image {
+            width: 320px;
+            height: 400px;
+            border-radius: 20px;
+            background: url('portrait.jpg.jpeg') center/cover no-repeat;
             box-shadow: 
-                0 30px 60px rgba(0, 0, 0, 0.6),
-                0 0 50px rgba(106, 17, 203, 0.5),
-                inset 0 0 50px rgba(255, 255, 255, 0.1);
-            animation: portraitFloat 8s ease-in-out infinite;
+                0 25px 50px rgba(0, 0, 0, 0.8),
+                inset 0 0 30px rgba(0, 0, 0, 0.4),
+                0 0 40px rgba(106, 17, 203, 0.5);
+            border: 3px solid rgba(255, 255, 255, 0.15);
+            transition: transform 0.3s ease;
+            animation: floatPortrait 8s ease-in-out infinite;
             position: relative;
-            z-index: 10;
+            z-index: 5;
         }
 
-        @keyframes portraitFloat {
+        @keyframes floatPortrait {
             0%, 100% { 
-                transform: translateY(0) rotate(0deg); 
+                transform: translateY(0) rotateY(0deg) rotateX(0deg); 
             }
             25% { 
-                transform: translateY(-20px) rotate(5deg); 
+                transform: translateY(-20px) rotateY(3deg) rotateX(2deg); 
             }
             50% { 
-                transform: translateY(0) rotate(0deg); 
+                transform: translateY(0) rotateY(0deg) rotateX(0deg); 
             }
             75% { 
-                transform: translateY(20px) rotate(-5deg); 
+                transform: translateY(20px) rotateY(-3deg) rotateX(-2deg); 
             }
         }
 
-        .circle-portrait img {
+        .hero-floating-elements {
+            position: absolute;
             width: 100%;
             height: 100%;
-            object-fit: cover;
-            transition: transform 0.8s ease;
+            top: 0;
+            left: 0;
+            pointer-events: none;
         }
 
-        .circle-portrait:hover img {
-            transform: scale(1.1);
-        }
-
-        .portrait-badges {
+        .floating-badge {
             position: absolute;
-            top: 50px;
-            right: 450px;
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-            z-index: 9;
-        }
-
-        .portrait-badge {
             background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(20px) saturate(180%);
+            -webkit-backdrop-filter: blur(20px) saturate(180%);
             padding: 15px 25px;
-            border-radius: 50px;
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 
+                0 15px 35px rgba(0, 0, 0, 0.3),
+                0 0 20px rgba(106, 17, 203, 0.2);
             display: flex;
             align-items: center;
-            gap: 12px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-            transition: all 0.4s ease;
-            animation: badgeFloat 6s ease-in-out infinite;
-            animation-delay: calc(var(--delay) * 1s);
+            gap: 10px;
+            font-weight: 600;
+            transform: translateZ(80px);
+            animation: floatBadge 6s ease-in-out infinite;
+            z-index: 6;
         }
 
-        .portrait-badge:nth-child(2) {
-            --delay: 2;
-            margin-left: 30px;
+        .badge-1 {
+            top: 10%;
+            left: -30px;
+            animation-delay: 0s;
         }
 
-        .portrait-badge:nth-child(3) {
-            --delay: 4;
+        .badge-2 {
+            bottom: 20%;
+            right: -30px;
+            animation-delay: 2s;
         }
 
-        .portrait-badge:hover {
-            transform: translateX(-10px) scale(1.05);
-            background: rgba(255, 255, 255, 0.15);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+        .badge-3 {
+            top: 40%;
+            left: -40px;
+            animation-delay: 4s;
         }
 
-        .badge-icon {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background: var(--gradient-primary);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 18px;
+        @keyframes floatBadge {
+            0%, 100% { 
+                transform: translateZ(80px) translateY(0) rotate(0deg); 
+            }
+            50% { 
+                transform: translateZ(80px) translateY(-25px) rotate(2deg); 
+            }
         }
 
         /* =========================
-           HERO SOCIAL ICONS BELOW TEXT
+           HERO SOCIAL ICONS (UPDATED)
         ========================= */
         .hero-socials {
             display: grid;
             grid-template-columns: repeat(6, 1fr);
-            gap: 25px;
+            gap: 20px;
             justify-items: center;
             align-items: center;
-            margin: 60px auto 0;
-            max-width: 600px;
+            margin: 40px auto 0;
+            max-width: 540px;
             position: relative;
             z-index: 10;
-            transform: translateZ(60px);
-            animation: socialsEntrance 1s ease-out 1.2s both;
-        }
-
-        @keyframes socialsEntrance {
-            from {
-                opacity: 0;
-                transform: translateZ(60px) translateY(50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateZ(60px) translateY(0);
-            }
+            transform: translateZ(50px);
         }
 
         .hero-socials .hs {
-            width: 70px;
-            height: 70px;
-            border-radius: 22px;
+            width: 60px;
+            height: 60px;
+            border-radius: 18px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 28px;
+            font-size: 24px;
             color: #fff;
             text-decoration: none;
-            backdrop-filter: blur(15px);
+            backdrop-filter: blur(10px);
             box-shadow: 
-                0 20px 35px rgba(0, 0, 0, 0.5),
-                inset 0 0 25px rgba(255, 255, 255, 0.2),
-                0 0 25px currentColor;
+                0 15px 30px rgba(0, 0, 0, 0.4),
+                inset 0 0 20px rgba(255, 255, 255, 0.2),
+                0 0 20px currentColor;
             transform-style: preserve-3d;
-            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
             position: relative;
             overflow: hidden;
-            animation: iconFloat 6s ease-in-out infinite;
-        }
-
-        .hero-socials .hs:nth-child(odd) {
-            animation-delay: 0.5s;
-        }
-
-        @keyframes iconFloat {
-            0%, 100% { transform: translateY(0) rotateX(0) rotateY(0); }
-            50% { transform: translateY(-15px) rotateX(10deg) rotateY(10deg); }
         }
 
         .hero-socials .hs::before {
@@ -816,10 +668,10 @@
             background: linear-gradient(
                 90deg,
                 transparent,
-                rgba(255, 255, 255, 0.5),
+                rgba(255, 255, 255, 0.4),
                 transparent
             );
-            transition: 0.8s;
+            transition: 0.6s;
         }
 
         .hero-socials .hs:hover::before {
@@ -827,162 +679,121 @@
         }
 
         .hero-socials .hs:hover {
-            transform: translateY(-20px) rotateX(20deg) rotateY(-20deg) scale(1.25);
+            transform: translateY(-15px) rotateX(20deg) rotateY(-20deg) scale(1.2);
             box-shadow: 
-                0 40px 60px rgba(0, 0, 0, 0.7),
-                0 0 40px currentColor,
-                inset 0 0 40px rgba(255, 255, 255, 0.3);
-            z-index: 100;
+                0 30px 50px rgba(0, 0, 0, 0.6),
+                0 0 30px currentColor,
+                inset 0 0 30px rgba(255, 255, 255, 0.3);
         }
 
-        /* Social Icons Enhanced Colors */
+        /* Social Icons Colors */
         .hs.mail { 
-            background: linear-gradient(135deg, #D44638, #B23121, #FF6B6B); 
-            box-shadow: 0 20px 35px rgba(212, 70, 56, 0.4);
+            background: linear-gradient(135deg, #D44638, #B23121); 
+            box-shadow: 0 15px 30px rgba(212, 70, 56, 0.3);
         }
         .hs.whatsapp { 
-            background: linear-gradient(135deg, #25D366, #128C7E, #1BD741); 
-            box-shadow: 0 20px 35px rgba(37, 211, 102, 0.4);
+            background: linear-gradient(135deg, #25D366, #128C7E); 
+            box-shadow: 0 15px 30px rgba(37, 211, 102, 0.3);
         }
         .hs.linkedin { 
-            background: linear-gradient(135deg, #0077B5, #004182, #00A0DC); 
-            box-shadow: 0 20px 35px rgba(0, 119, 181, 0.4);
+            background: linear-gradient(135deg, #0077B5, #004182); 
+            box-shadow: 0 15px 30px rgba(0, 119, 181, 0.3);
         }
         .hs.instagram { 
-            background: linear-gradient(135deg, #833AB4, #FD1D1D, #F77737, #FCAF45); 
-            box-shadow: 0 20px 35px rgba(131, 58, 180, 0.4);
+            background: linear-gradient(135deg, #833AB4, #FD1D1D, #F77737); 
+            box-shadow: 0 15px 30px rgba(131, 58, 180, 0.3);
         }
         .hs.facebook { 
-            background: linear-gradient(135deg, #1877F2, #0F4AA1, #3B5998); 
-            box-shadow: 0 20px 35px rgba(24, 119, 242, 0.4);
+            background: linear-gradient(135deg, #1877F2, #0F4AA1); 
+            box-shadow: 0 15px 30px rgba(24, 119, 242, 0.3);
         }
         .hs.twitter { 
-            background: linear-gradient(135deg, #000000, #444444, #1DA1F2); 
-            box-shadow: 0 20px 35px rgba(0, 0, 0, 0.4);
+            background: linear-gradient(135deg, #000000, #444444); 
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
         }
         .hs.wef { 
-            background: linear-gradient(135deg, #00A3E0, #005F86, #0082C9); 
-            box-shadow: 0 20px 35px rgba(0, 163, 224, 0.4);
+            background: linear-gradient(135deg, #00A3E0, #005F86); 
+            box-shadow: 0 15px 30px rgba(0, 163, 224, 0.3);
         }
         .hs.linktree { 
-            background: linear-gradient(135deg, #43E660, #1FA337, #36D57D); 
-            box-shadow: 0 20px 35px rgba(67, 230, 96, 0.4);
+            background: linear-gradient(135deg, #43E660, #1FA337); 
+            box-shadow: 0 15px 30px rgba(67, 230, 96, 0.3);
         }
         .hs.tiktok { 
-            background: linear-gradient(135deg, #010101, #FF0050, #00F2EA, #FF0050); 
-            box-shadow: 0 20px 35px rgba(255, 0, 80, 0.4);
+            background: linear-gradient(135deg, #010101, #FF0050, #00F2EA); 
+            box-shadow: 0 15px 30px rgba(255, 0, 80, 0.3);
         }
         .hs.snapchat { 
-            background: linear-gradient(135deg, #FFFC00, #FFD000, #FFF700); 
+            background: linear-gradient(135deg, #FFFC00, #FFD000); 
             color: #000;
-            box-shadow: 0 20px 35px rgba(255, 252, 0, 0.4);
+            box-shadow: 0 15px 30px rgba(255, 252, 0, 0.3);
         }
         .hs.threads { 
-            background: linear-gradient(135deg, #000000, #444444, #888888); 
-            box-shadow: 0 20px 35px rgba(0, 0, 0, 0.4);
+            background: linear-gradient(135deg, #000000, #444444); 
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
         }
         .hs.ok { 
-            background: linear-gradient(135deg, #F47300, #FF9E2C, #FFB347); 
-            box-shadow: 0 20px 35px rgba(244, 115, 0, 0.4);
-        }
-        .hs.youtube { 
-            background: linear-gradient(135deg, #FF0000, #CC0000, #FF3333); 
-            box-shadow: 0 20px 35px rgba(255, 0, 0, 0.4);
-        }
-        .hs.researchgate { 
-            background: linear-gradient(135deg, #00CCBB, #009688, #00E6D6); 
-            box-shadow: 0 20px 35px rgba(0, 204, 187, 0.4);
+            background: linear-gradient(135deg, #F47300, #FF9E2C); 
+            box-shadow: 0 15px 30px rgba(244, 115, 0, 0.3);
         }
 
         /* =========================
            SECTIONS & GLASS CARDS
         ========================= */
         section {
-            max-width: 1300px;
+            max-width: 1200px;
             margin: 0 auto;
-            padding: 150px 20px;
+            padding: 120px 20px;
             position: relative;
             transform-style: preserve-3d;
-            opacity: 0;
-            transform: translateY(80px);
-            transition: opacity 1s ease, transform 1s ease;
-        }
-
-        section.visible {
-            opacity: 1;
-            transform: translateY(0);
         }
 
         .section-title {
-            font-size: 4rem;
+            font-size: 3.5rem;
             text-align: center;
-            margin-bottom: 100px;
+            margin-bottom: 80px;
             position: relative;
             z-index: 1;
-            transform: translateZ(40px);
-            animation: titleEntrance 1s ease-out both;
-        }
-
-        @keyframes titleEntrance {
-            from {
-                opacity: 0;
-                transform: translateZ(40px) translateY(50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateZ(40px) translateY(0);
-            }
+            transform: translateZ(30px);
         }
 
         .section-title::after {
             content: '';
             display: block;
-            width: 150px;
-            height: 6px;
-            background: linear-gradient(90deg, #6a11cb, #2575fc, #ff007a, #ff8c00);
-            margin: 25px auto 0;
-            border-radius: 3px;
-            animation: linePulse 4s ease-in-out infinite;
+            width: 120px;
+            height: 4px;
+            background: linear-gradient(90deg, #6a11cb, #2575fc, #ff007a);
+            margin: 20px auto 0;
+            border-radius: 2px;
+            animation: linePulse 3s ease-in-out infinite;
         }
 
         @keyframes linePulse {
-            0%, 100% { 
-                width: 150px;
-                opacity: 1;
-            }
-            50% { 
-                width: 200px;
-                opacity: 0.8;
-            }
+            0%, 100% { width: 120px; }
+            50% { width: 150px; }
         }
 
         .glass-card {
             background: var(--glass-bg);
-            backdrop-filter: blur(25px) saturate(200%);
-            -webkit-backdrop-filter: blur(25px) saturate(200%);
+            backdrop-filter: blur(20px) saturate(180%);
+            -webkit-backdrop-filter: blur(20px) saturate(180%);
             border: 1px solid var(--glass-border);
             border-radius: var(--card-radius);
-            padding: 60px;
-            box-shadow: 
-                var(--glass-shadow),
-                inset 0 1px 0 rgba(255, 255, 255, 0.1);
-            transition: all 0.7s var(--transition);
+            padding: 50px;
+            box-shadow: var(--glass-shadow);
+            transition: all 0.6s var(--transition);
             position: relative;
             overflow: hidden;
             transform-style: preserve-3d;
             transform: translateZ(0);
-            animation: cardEntrance 1s ease-out both;
         }
 
-        @keyframes cardEntrance {
-            from {
-                opacity: 0;
-                transform: translateZ(0) translateY(60px) rotateX(10deg);
-            }
-            to {
-                opacity: 1;
-                transform: translateZ(0) translateY(0) rotateX(0);
-            }
+        .glass-card:hover {
+            transform: translateY(-15px) rotateX(3deg) rotateY(3deg) translateZ(30px);
+            border-color: rgba(255, 255, 255, 0.4);
+            box-shadow: 
+                0 40px 80px rgba(106, 17, 203, 0.4),
+                inset 0 0 30px rgba(255, 255, 255, 0.15);
         }
 
         .glass-card::before {
@@ -995,7 +806,7 @@
             background: linear-gradient(
                 90deg,
                 transparent,
-                rgba(255, 255, 255, 0.15),
+                rgba(255, 255, 255, 0.1),
                 transparent
             );
             transition: 0.8s;
@@ -1006,66 +817,40 @@
             left: 100%;
         }
 
-        .glass-card:hover {
-            transform: translateY(-20px) rotateX(5deg) rotateY(5deg) translateZ(40px);
-            border-color: rgba(255, 255, 255, 0.4);
-            box-shadow: 
-                0 50px 100px rgba(106, 17, 203, 0.5),
-                inset 0 0 40px rgba(255, 255, 255, 0.2);
-        }
-
         /* =========================
-           DETAILED ABOUT SECTION
+           BIOGRAPHY SECTION
         ========================= */
-        .about-grid {
+        .bio-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 40px;
         }
 
-        .about-image-container {
-            position: relative;
-            border-radius: 30px;
-            overflow: hidden;
-            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
-        }
-
-        .about-image {
-            width: 100%;
-            height: 500px;
-            object-fit: cover;
-            transition: transform 1s ease;
-        }
-
-        .about-image-container:hover .about-image {
-            transform: scale(1.05);
-        }
-
-        .about-details {
+        .bio-item {
             padding: 30px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            border-left: 4px solid #00c6ff;
+            transition: all 0.3s ease;
         }
 
-        .detail-item {
-            margin-bottom: 25px;
-            padding-bottom: 25px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        .bio-item:hover {
+            background: rgba(255, 255, 255, 0.08);
+            transform: translateY(-10px);
+            border-left-color: #ff007a;
         }
 
-        .detail-item:last-child {
-            border-bottom: none;
-        }
-
-        .detail-label {
-            font-weight: 600;
+        .bio-icon {
+            font-size: 40px;
+            margin-bottom: 20px;
             color: #00c6ff;
-            margin-bottom: 8px;
-            font-size: 18px;
         }
 
-        .detail-value {
-            color: var(--text-muted);
-            line-height: 1.6;
+        .bio-item h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #fff;
         }
 
         /* =========================
@@ -1074,7 +859,7 @@
         .timeline {
             position: relative;
             max-width: 900px;
-            margin: 0 auto;
+            margin: 60px auto 0;
             transform-style: preserve-3d;
         }
 
@@ -1082,7 +867,7 @@
             content: '';
             position: absolute;
             left: 50%;
-            width: 4px;
+            width: 3px;
             height: 100%;
             background: linear-gradient(
                 to bottom,
@@ -1090,17 +875,10 @@
                 #6a11cb,
                 #2575fc,
                 #ff007a,
-                #ff8c00,
                 transparent
             );
             transform: translateX(-50%);
-            box-shadow: 0 0 40px rgba(106, 17, 203, 0.7);
-            animation: timelinePulse 3s infinite;
-        }
-
-        @keyframes timelinePulse {
-            0%, 100% { box-shadow: 0 0 40px rgba(106, 17, 203, 0.7); }
-            50% { box-shadow: 0 0 60px rgba(106, 17, 203, 0.9); }
+            box-shadow: 0 0 30px rgba(106, 17, 203, 0.5);
         }
 
         .timeline-item {
@@ -1109,8 +887,8 @@
             display: flex;
             justify-content: center;
             opacity: 0;
-            transform: translateY(80px) rotateX(30deg);
-            transition: all 0.9s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            transform: translateY(50px) rotateX(20deg);
+            transition: all 0.8s ease-out;
             transform-style: preserve-3d;
         }
 
@@ -1120,41 +898,21 @@
         }
 
         .timeline-content {
-            width: 48%;
-            background: rgba(255, 255, 255, 0.09);
-            backdrop-filter: blur(20px);
-            padding: 35px;
-            border-radius: 25px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            width: 45%;
+            background: rgba(255, 255, 255, 0.07);
+            backdrop-filter: blur(15px);
+            padding: 30px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.15);
             position: relative;
             transform-style: preserve-3d;
-            transition: all 0.5s ease;
-            overflow: hidden;
-        }
-
-        .timeline-content::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 5px;
-            background: var(--gradient-accent);
-            transform: scaleX(0);
-            transform-origin: left;
-            transition: transform 0.5s ease;
-        }
-
-        .timeline-content:hover::before {
-            transform: scaleX(1);
+            transition: all 0.4s ease;
         }
 
         .timeline-content:hover {
-            transform: translateZ(30px);
-            border-color: rgba(0, 198, 255, 0.5);
-            box-shadow: 
-                0 30px 60px rgba(0, 198, 255, 0.3),
-                inset 0 0 30px rgba(255, 255, 255, 0.1);
+            transform: translateZ(20px);
+            border-color: rgba(0, 198, 255, 0.4);
+            box-shadow: 0 20px 40px rgba(0, 198, 255, 0.2);
         }
 
         .timeline-item:nth-child(odd) {
@@ -1167,81 +925,112 @@
 
         .timeline-content h4 {
             color: #00c6ff;
-            margin-bottom: 20px;
-            font-size: 1.6rem;
-            text-shadow: 0 0 20px rgba(0, 198, 255, 0.5);
+            margin-bottom: 10px;
+            font-size: 1.4rem;
+        }
+
+        .timeline-year {
+            color: #ff007a;
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-bottom: 10px;
         }
 
         .timeline-dot {
             position: absolute;
-            width: 30px;
-            height: 30px;
+            width: 24px;
+            height: 24px;
             background: #fff;
             border-radius: 50%;
             left: 50%;
-            top: 30px;
-            transform: translateX(-50%) translateZ(15px);
+            top: 25px;
+            transform: translateX(-50%) translateZ(10px);
             box-shadow: 
-                0 0 40px #00c6ff,
                 0 0 25px #00c6ff,
-                inset 0 0 15px rgba(255, 255, 255, 0.7);
+                0 0 15px #00c6ff,
+                inset 0 0 10px rgba(255, 255, 255, 0.5);
             z-index: 5;
-            animation: pulse 2.5s ease-in-out infinite;
+            animation: pulse 2s ease-in-out infinite;
         }
 
         @keyframes pulse {
             0%, 100% { 
-                box-shadow: 
-                    0 0 40px #00c6ff,
-                    0 0 25px #00c6ff,
-                    inset 0 0 15px rgba(255, 255, 255, 0.7); 
+                box-shadow: 0 0 25px #00c6ff, 0 0 15px #00c6ff; 
             }
             50% { 
-                box-shadow: 
-                    0 0 60px #00c6ff,
-                    0 0 40px #00c6ff,
-                    inset 0 0 20px rgba(255, 255, 255, 0.9); 
+                box-shadow: 0 0 35px #00c6ff, 0 0 25px #00c6ff; 
             }
         }
 
         /* =========================
-           EXPERTISE GRID
+           GRID LAYOUTS
+        ========================= */
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
+            transform-style: preserve-3d;
+        }
+
+        .skill-tag {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 20px;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .skill-tag:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateX(10px) translateZ(10px);
+        }
+
+        .skill-tag i {
+            font-size: 28px;
+            background: linear-gradient(45deg, #00c6ff, #6a11cb);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* =========================
+           EXPERTISE SECTION
         ========================= */
         .expertise-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 50px;
-            transform-style: preserve-3d;
+            gap: 30px;
+            margin-top: 40px;
         }
 
         .expertise-card {
-            text-align: center;
-            padding: 40px;
+            padding: 30px;
             background: rgba(255, 255, 255, 0.05);
-            border-radius: 25px;
+            border-radius: 20px;
             border: 1px solid rgba(255, 255, 255, 0.1);
-            transition: all 0.5s ease;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
         }
 
         .expertise-card:hover {
-            transform: translateY(-15px) translateZ(20px);
-            background: rgba(255, 255, 255, 0.08);
-            border-color: rgba(0, 198, 255, 0.5);
-            box-shadow: 0 30px 60px rgba(0, 198, 255, 0.2);
+            transform: translateY(-10px);
+            border-color: #00c6ff;
+            box-shadow: 0 20px 40px rgba(0, 198, 255, 0.2);
         }
 
         .expertise-icon {
-            width: 80px;
-            height: 80px;
-            margin: 0 auto 25px;
-            background: var(--gradient-primary);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 32px;
-            color: white;
-            box-shadow: 0 0 30px rgba(106, 17, 203, 0.5);
+            font-size: 40px;
+            margin-bottom: 20px;
+            color: #00c6ff;
+        }
+
+        .expertise-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #fff;
         }
 
         /* =========================
@@ -1249,63 +1038,47 @@
         ========================= */
         .gallery-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
             padding: 20px;
             transform-style: preserve-3d;
         }
 
         .gallery-item {
-            height: 350px;
-            border-radius: 25px;
+            height: 320px;
+            border-radius: 20px;
             overflow: hidden;
             position: relative;
             cursor: pointer;
             box-shadow: 
-                0 20px 40px rgba(0, 0, 0, 0.6),
-                inset 0 0 25px rgba(255, 255, 255, 0.08);
-            transition: all 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+                0 15px 35px rgba(0, 0, 0, 0.5),
+                inset 0 0 20px rgba(255, 255, 255, 0.05);
+            transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
             transform-style: preserve-3d;
-            transform: rotateX(8deg) rotateY(8deg);
-            opacity: 0;
-            animation: galleryEntrance 0.8s ease-out forwards;
+            transform: rotateX(5deg) rotateY(5deg);
         }
 
         .gallery-item:nth-child(even) {
-            transform: rotateX(-8deg) rotateY(-8deg);
-            animation-delay: 0.2s;
-        }
-
-        .gallery-item:nth-child(3), .gallery-item:nth-child(6) {
-            animation-delay: 0.4s;
-        }
-
-        @keyframes galleryEntrance {
-            to {
-                opacity: 1;
-                transform: rotateX(0) rotateY(0);
-            }
+            transform: rotateX(-5deg) rotateY(-5deg);
         }
 
         .gallery-item img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: all 0.7s ease;
-            filter: brightness(0.9);
+            transition: all 0.6s ease;
         }
 
         .gallery-item:hover {
-            transform: scale(1.12) rotateX(0) rotateY(0) translateZ(60px);
+            transform: scale(1.08) rotateX(0) rotateY(0) translateZ(50px);
             box-shadow: 
-                0 40px 80px rgba(0, 198, 255, 0.7),
-                0 0 60px rgba(106, 17, 203, 0.7);
-            z-index: 100;
+                0 30px 60px rgba(0, 198, 255, 0.5),
+                0 0 40px rgba(106, 17, 203, 0.5);
+            z-index: 10;
         }
 
         .gallery-item:hover img {
-            transform: scale(1.2);
-            filter: brightness(1.1);
+            transform: scale(1.15);
         }
 
         .gallery-overlay {
@@ -1315,13 +1088,12 @@
             width: 100%;
             background: linear-gradient(
                 transparent,
-                rgba(0, 0, 0, 0.9)
+                rgba(0, 0, 0, 0.8)
             );
-            padding: 30px;
+            padding: 25px;
             opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.5s ease;
-            z-index: 2;
+            transform: translateY(20px);
+            transition: all 0.4s ease;
         }
 
         .gallery-item:hover .gallery-overlay {
@@ -1330,136 +1102,354 @@
         }
 
         /* =========================
-           PUBLICATIONS SECTION
+           THEMATIC AREAS
         ========================= */
-        .publications-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 40px;
+        .thematic-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 30px;
         }
 
-        .publication-card {
-            background: rgba(255, 255, 255, 0.05);
+        .theme-tag {
+            padding: 12px 25px;
+            background: rgba(255, 255, 255, 0.08);
             border-radius: 25px;
-            padding: 35px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            transition: all 0.5s ease;
+            border: 2px solid transparent;
+            font-weight: 600;
+            transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
         }
 
-        .publication-card:hover {
-            transform: translateY(-10px) translateZ(20px);
-            border-color: rgba(255, 0, 122, 0.5);
-            box-shadow: 0 30px 60px rgba(255, 0, 122, 0.2);
+        .theme-tag::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                90deg,
+                transparent,
+                rgba(255, 255, 255, 0.2),
+                transparent
+            );
+            transition: 0.5s;
         }
 
-        .pub-year {
-            display: inline-block;
-            padding: 8px 20px;
-            background: var(--gradient-secondary);
-            color: white;
-            border-radius: 20px;
-            font-weight: 700;
-            margin-bottom: 20px;
-            font-size: 14px;
+        .theme-tag:hover::before {
+            left: 100%;
+        }
+
+        .theme-tag:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
         }
 
         /* =========================
-           CONTACT FORM (OFFICIAL)
+           CONTACT FORM
         ========================= */
-        .contact-form-container {
-            max-width: 800px;
-            margin: 0 auto;
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            margin-top: 40px;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
         }
 
         .form-group {
-            margin-bottom: 30px;
+            position: relative;
         }
 
-        .form-label {
-            display: block;
-            margin-bottom: 10px;
-            color: var(--text-main);
-            font-weight: 600;
-            font-size: 16px;
-        }
-
-        .form-control {
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
             width: 100%;
-            padding: 18px 25px;
+            padding: 15px 20px;
             background: rgba(255, 255, 255, 0.05);
             border: 1px solid rgba(255, 255, 255, 0.2);
-            border-radius: 15px;
-            color: var(--text-main);
+            border-radius: 12px;
+            color: #fff;
             font-size: 16px;
-            font-family: 'Inter', sans-serif;
             transition: all 0.3s ease;
+            font-family: 'Inter', sans-serif;
         }
 
-        .form-control:focus {
-            outline: none;
-            border-color: #00c6ff;
-            background: rgba(255, 255, 255, 0.08);
-            box-shadow: 0 0 20px rgba(0, 198, 255, 0.3);
+        .form-group select {
+            appearance: none;
+            cursor: pointer;
         }
 
-        textarea.form-control {
+        .form-group textarea {
             min-height: 150px;
             resize: vertical;
         }
 
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #00c6ff;
+            box-shadow: 0 0 20px rgba(0, 198, 255, 0.3);
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .form-group label {
+            position: absolute;
+            top: -10px;
+            left: 15px;
+            background: #050510;
+            padding: 0 10px;
+            font-size: 14px;
+            color: #00c6ff;
+            pointer-events: none;
+        }
+
         .submit-btn {
-            padding: 18px 40px;
-            background: var(--gradient-primary);
-            color: white;
+            padding: 16px 40px;
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
             border: none;
-            border-radius: 35px;
+            border-radius: 30px;
+            color: white;
             font-weight: 700;
             font-size: 16px;
             cursor: pointer;
             transition: all 0.3s ease;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            margin: 0 auto;
+            box-shadow: 0 10px 30px rgba(106, 17, 203, 0.4);
+            align-self: flex-start;
         }
 
         .submit-btn:hover {
-            transform: translateY(-5px) scale(1.05);
-            box-shadow: 0 20px 40px rgba(106, 17, 203, 0.4);
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(106, 17, 203, 0.6);
+            background: linear-gradient(135deg, #2575fc, #6a11cb);
         }
 
         /* =========================
-           BOTTOM SOCIAL MEDIA BAR
+           CONNECT SECTION
         ========================= */
-        .bottom-social-bar {
-            display: flex;
-            justify-content: center;
-            gap: 25px;
-            margin-top: 60px;
-            padding-top: 60px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        .connect-box {
+            text-align: center;
+            transform-style: preserve-3d;
         }
 
-        .bottom-social-link {
-            width: 55px;
-            height: 55px;
-            border-radius: 50%;
+        .social-3d-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 35px;
+            margin-top: 50px;
+            perspective: 800px;
+            transform-style: preserve-3d;
+        }
+
+        .social-btn {
+            width: 80px;
+            height: 80px;
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 22px;
             display: flex;
             align-items: center;
             justify-content: center;
-            background: rgba(255, 255, 255, 0.1);
-            color: white;
+            font-size: 32px;
+            color: #fff;
             text-decoration: none;
-            font-size: 22px;
-            transition: all 0.3s ease;
+            transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 
+                0 15px 35px rgba(0, 0, 0, 0.4),
+                inset 0 0 20px rgba(255, 255, 255, 0.1);
+            position: relative;
+            overflow: hidden;
+            transform-style: preserve-3d;
+        }
+
+        .social-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, var(--c1), var(--c2));
+            opacity: 0;
+            transition: all 0.5s ease;
+            z-index: 1;
+        }
+
+        .social-btn:hover {
+            transform: rotateX(20deg) rotateY(20deg) translateY(-15px) scale(1.15);
+            box-shadow: 
+                0 25px 50px rgba(0, 0, 0, 0.6),
+                0 0 30px var(--c1),
+                inset 0 0 30px rgba(255, 255, 255, 0.2);
+            border-color: transparent;
+        }
+
+        .social-btn:hover::before {
+            opacity: 1;
+        }
+
+        .social-btn i {
+            transition: all 0.5s ease;
+            z-index: 2;
             position: relative;
         }
 
-        .bottom-social-link:hover {
-            transform: translateY(-5px) scale(1.1);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        .social-btn:hover i {
+            transform: scale(1.3) translateZ(30px);
+        }
+
+        /* =========================
+           MISSION STATEMENT
+        ========================= */
+        .mission-card {
+            background: linear-gradient(
+                135deg,
+                rgba(106, 17, 203, 0.4),
+                rgba(37, 117, 252, 0.4),
+                rgba(255, 0, 122, 0.4)
+            );
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: var(--card-radius);
+            padding: 60px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            transform-style: preserve-3d;
+            animation: missionGlow 4s ease-in-out infinite;
+        }
+
+        @keyframes missionGlow {
+            0%, 100% { 
+                box-shadow: 0 20px 60px rgba(106, 17, 203, 0.4); 
+            }
+            50% { 
+                box-shadow: 0 30px 80px rgba(106, 17, 203, 0.6); 
+            }
+        }
+
+        .mission-card i {
+            font-size: 60px;
+            color: #fff;
+            margin-bottom: 30px;
+            text-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
+        }
+
+        .mission-card h2 {
+            font-size: 2.5rem;
+            margin-bottom: 25px;
+            background: linear-gradient(45deg, #fff, #a5f3fc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .mission-card p {
+            font-size: 1.5rem;
+            font-family: 'Playfair Display', serif;
+            line-height: 1.8;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* =========================
+           TESTIMONIALS
+        ========================= */
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .testimonial-card {
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-10px);
+            border-color: #ff007a;
+            box-shadow: 0 20px 40px rgba(255, 0, 122, 0.2);
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: #00c6ff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+        .author-info h4 {
+            color: #00c6ff;
+            margin-bottom: 5px;
+        }
+
+        /* =========================
+           ACHIEVEMENTS
+        ========================= */
+        .achievements-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .achievement-card {
+            text-align: center;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .achievement-card:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.08);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .achievement-icon {
+            font-size: 50px;
+            margin-bottom: 20px;
+            color: #00c6ff;
+        }
+
+        .achievement-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            background: linear-gradient(45deg, #00c6ff, #ff007a);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
         /* =========================
@@ -1467,15 +1457,15 @@
         ========================= */
         footer {
             text-align: center;
-            padding: 50px 20px;
-            border-top: 1px solid rgba(255, 255, 255, 0.2);
-            color: #aaa;
-            font-size: 15px;
-            background: rgba(0, 0, 0, 0.4);
-            backdrop-filter: blur(20px);
+            padding: 50px 20px 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+            color: #888;
+            font-size: 14px;
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
             position: relative;
             z-index: 1;
-            overflow: hidden;
+            margin-top: 100px;
         }
 
         footer::before {
@@ -1485,13 +1475,403 @@
             left: 0;
             right: 0;
             height: 1px;
-            background: linear-gradient(90deg, transparent, #6a11cb, #2575fc, #ff007a, #ff8c00, transparent);
+            background: linear-gradient(90deg, transparent, #6a11cb, #2575fc, #ff007a, transparent);
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section h3 {
+            color: #00c6ff;
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: #00c6ff;
+        }
+
+        .copyright {
+            margin-top: 30px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         /* =========================
-           LOADING ANIMATION
+           MOBILE RESPONSIVE DESIGN
         ========================= */
-        .loader {
+        @media (max-width: 1200px) {
+            .hero-content {
+                gap: 40px;
+                max-width: 1100px;
+            }
+            
+            .hero-main-image {
+                width: 280px;
+                height: 360px;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 50px;
+            }
+            
+            .hero-image-container {
+                height: 400px;
+                order: -1;
+            }
+            
+            .hero-socials {
+                grid-template-columns: repeat(4, 1fr);
+                max-width: 400px;
+            }
+            
+            .grid-3 {
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+                gap: 30px;
+            }
+            
+            .contact-container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .timeline::before {
+                left: 30px;
+            }
+            
+            .timeline-item {
+                justify-content: flex-start !important;
+                padding-left: 60px;
+            }
+            
+            .timeline-content {
+                width: 100%;
+            }
+            
+            .timeline-dot {
+                left: 30px;
+                transform: translateX(-50%);
+            }
+            
+            .main-nav {
+                top: 80px;
+                padding: 12px 20px;
+                gap: 20px;
+                width: 90%;
+                max-width: 500px;
+            }
+            
+            .header-portrait {
+                width: 50px;
+                height: 50px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            /* Header & Navigation */
+            .top-header {
+                padding: 12px 20px;
+            }
+            
+            .header-socials {
+                gap: 10px;
+            }
+            
+            .header-socials a {
+                width: 35px;
+                height: 35px;
+                font-size: 16px;
+            }
+            
+            .main-nav {
+                top: 70px;
+                padding: 10px 15px;
+                gap: 15px;
+                width: 95%;
+            }
+            
+            .main-nav a {
+                width: 35px;
+                height: 35px;
+                font-size: 18px;
+            }
+            
+            /* Hero Section */
+            .hero {
+                padding: 150px 20px 80px;
+            }
+            
+            .hero-badge {
+                padding: 8px 20px;
+                font-size: 12px;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .hero-main-image {
+                width: 220px;
+                height: 300px;
+            }
+            
+            .floating-badge {
+                padding: 12px 20px;
+                font-size: 14px;
+                backdrop-filter: blur(15px);
+            }
+            
+            .badge-1, .badge-2, .badge-3 {
+                position: relative;
+                top: auto;
+                left: auto;
+                right: auto;
+                bottom: auto;
+                margin: 10px;
+            }
+            
+            /* Hero Social Icons */
+            .hero-socials {
+                grid-template-columns: repeat(3, 1fr);
+                max-width: 300px;
+                gap: 15px;
+            }
+            
+            .hero-socials .hs {
+                width: 50px;
+                height: 50px;
+                font-size: 20px;
+            }
+            
+            /* Sections */
+            section {
+                padding: 80px 20px;
+            }
+            
+            .section-title {
+                font-size: 2.5rem;
+                margin-bottom: 60px;
+            }
+            
+            .glass-card {
+                padding: 30px;
+            }
+            
+            /* Gallery */
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+                gap: 20px;
+            }
+            
+            .gallery-item {
+                height: 280px;
+            }
+            
+            /* Connect Section */
+            .social-3d-container {
+                gap: 25px;
+            }
+            
+            .social-btn {
+                width: 65px;
+                height: 65px;
+                font-size: 26px;
+            }
+            
+            /* Mission Card */
+            .mission-card {
+                padding: 40px 30px;
+            }
+            
+            .mission-card h2 {
+                font-size: 2rem;
+            }
+            
+            .mission-card p {
+                font-size: 1.2rem;
+            }
+            
+            /* Theme Button */
+            .theme-btn {
+                top: 20px;
+                right: 20px;
+                padding: 10px 20px;
+                font-size: 14px;
+            }
+            
+            /* Contact Form */
+            .contact-form {
+                gap: 20px;
+            }
+            
+            .form-group input,
+            .form-group textarea,
+            .form-group select {
+                padding: 12px 15px;
+            }
+            
+            .submit-btn {
+                padding: 14px 30px;
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero-socials {
+                grid-template-columns: repeat(2, 1fr);
+                max-width: 200px;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .hero-btn {
+                margin-right: 0;
+                width: 100%;
+                text-align: center;
+                min-width: auto;
+            }
+            
+            .grid-3 {
+                grid-template-columns: 1fr;
+            }
+            
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .main-nav {
+                gap: 10px;
+                padding: 8px 12px;
+            }
+            
+            .main-nav a {
+                width: 32px;
+                height: 32px;
+                font-size: 16px;
+            }
+            
+            .header-socials {
+                display: none;
+            }
+            
+            .top-header {
+                justify-content: flex-end;
+            }
+            
+            .expertise-grid,
+            .testimonial-grid,
+            .achievements-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .thematic-grid {
+                justify-content: flex-start;
+            }
+            
+            .theme-tag {
+                padding: 10px 15px;
+                font-size: 14px;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 30px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .hero-main-image {
+                width: 180px;
+                height: 240px;
+            }
+        }
+
+        /* =========================
+           ANIMATION UTILITIES
+        ========================= */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px) translateZ(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) translateZ(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(50px) rotateX(10deg);
+            transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        .animate-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0) rotateX(0);
+        }
+
+        /* =========================
+           LOADING ANIMATIONS
+        ========================= */
+        .loading {
             position: fixed;
             top: 0;
             left: 0;
@@ -1502,28 +1882,21 @@
             justify-content: center;
             align-items: center;
             z-index: 9999;
-            transition: opacity 0.8s ease, visibility 0.8s ease;
+            transition: opacity 0.5s ease;
         }
 
-        .loader.hidden {
+        .loading.hidden {
             opacity: 0;
-            visibility: hidden;
+            pointer-events: none;
         }
 
-        .loader-content {
-            text-align: center;
-        }
-
-        .loader-spinner {
-            width: 80px;
-            height: 80px;
-            border: 5px solid rgba(255, 255, 255, 0.1);
-            border-top: 5px solid #6a11cb;
-            border-right: 5px solid #2575fc;
-            border-bottom: 5px solid #ff007a;
+        .spinner {
+            width: 60px;
+            height: 60px;
+            border: 4px solid rgba(255, 255, 255, 0.1);
+            border-top: 4px solid #00c6ff;
             border-radius: 50%;
-            animation: spin 1.5s linear infinite;
-            margin: 0 auto 30px;
+            animation: spin 1s linear infinite;
         }
 
         @keyframes spin {
@@ -1532,310 +1905,74 @@
         }
 
         /* =========================
-           RESPONSIVE DESIGN
+           BACK TO TOP BUTTON
         ========================= */
-        @media (max-width: 1400px) {
-            .hero-content {
-                gap: 60px;
-                max-width: 1200px;
-            }
-            
-            .circle-portrait {
-                width: 340px;
-                height: 340px;
-            }
-            
-            .portrait-badges {
-                right: 400px;
-            }
-        }
-
-        @media (max-width: 1200px) {
-            .hero-content {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-            
-            .hero-portrait-container {
-                justify-content: center;
-                margin-top: 50px;
-            }
-            
-            .portrait-badges {
-                position: relative;
-                top: 0;
-                right: 0;
-                flex-direction: row;
-                justify-content: center;
-                margin-top: 30px;
-                gap: 15px;
-            }
-            
-            .portrait-badge {
-                animation: none;
-            }
-            
-            .main-nav {
-                left: 20px;
-                padding: 20px 12px;
-                gap: 20px;
-            }
-            
-            .main-nav a {
-                width: 45px;
-                height: 45px;
-                font-size: 20px;
-            }
-        }
-
-        @media (max-width: 992px) {
-            .about-grid {
-                grid-template-columns: 1fr;
-                gap: 40px;
-            }
-            
-            .circle-portrait {
-                width: 300px;
-                height: 300px;
-            }
-            
-            .hero-socials {
-                grid-template-columns: repeat(4, 1fr);
-                max-width: 450px;
-                gap: 20px;
-            }
-            
-            .hero-socials .hs {
-                width: 65px;
-                height: 65px;
-                font-size: 26px;
-            }
-            
-            .section-title {
-                font-size: 3.2rem;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .main-header {
-                padding: 15px 20px;
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: 20px;
-            }
-            
-            .top-social-bar {
-                order: 3;
-                width: 100%;
-                justify-content: center;
-                margin-top: 15px;
-            }
-            
-            .main-nav {
-                display: none;
-            }
-            
-            .mobile-nav-toggle {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
-            
-            .hero {
-                padding: 130px 20px 80px;
-            }
-            
-            .hero h1 {
-                font-size: 2.8rem;
-            }
-            
-            .circle-portrait {
-                width: 250px;
-                height: 250px;
-            }
-            
-            .portrait-badges {
-                flex-wrap: wrap;
-            }
-            
-            .portrait-badge {
-                flex: 1;
-                min-width: 200px;
-                justify-content: center;
-                text-align: left;
-            }
-            
-            .hero-socials {
-                grid-template-columns: repeat(3, 1fr);
-                max-width: 350px;
-                gap: 18px;
-            }
-            
-            .hero-socials .hs {
-                width: 60px;
-                height: 60px;
-                font-size: 24px;
-            }
-            
-            section {
-                padding: 100px 20px;
-            }
-            
-            .section-title {
-                font-size: 2.8rem;
-                margin-bottom: 80px;
-            }
-            
-            .glass-card {
-                padding: 40px;
-            }
-            
-            .timeline::before {
-                left: 0;
-            }
-            
-            .timeline-item {
-                justify-content: flex-start !important;
-                padding-left: 50px;
-            }
-            
-            .timeline-content {
-                width: 100%;
-            }
-            
-            .timeline-dot {
-                left: 0;
-                transform: translateX(-50%);
-            }
-            
-            .expertise-grid {
-                grid-template-columns: 1fr;
-                gap: 30px;
-            }
-            
-            .gallery-grid {
-                grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
-                gap: 25px;
-            }
-            
-            .gallery-item {
-                height: 300px;
-            }
-        }
-
-        @media (max-width: 576px) {
-            .hero-buttons {
-                flex-direction: column;
-                gap: 20px;
-            }
-            
-            .hero-btn {
-                width: 100%;
-                min-width: auto;
-            }
-            
-            .circle-portrait {
-                width: 200px;
-                height: 200px;
-            }
-            
-            .hero-socials {
-                grid-template-columns: repeat(2, 1fr);
-                max-width: 250px;
-            }
-            
-            .section-title {
-                font-size: 2.4rem;
-            }
-            
-            .glass-card {
-                padding: 30px;
-            }
-            
-            .gallery-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .gallery-item {
-                height: 280px;
-            }
-            
-            .portrait-badge {
-                min-width: 100%;
-                margin-left: 0 !important;
-            }
-        }
-
-        /* =========================
-           MOBILE NAVIGATION MENU
-        ========================= */
-        .mobile-nav-menu {
+        .back-to-top {
             position: fixed;
-            bottom: 100px;
+            bottom: 30px;
             right: 30px;
-            background: rgba(20, 20, 30, 0.95);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            border-radius: 25px;
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-            z-index: 1000;
-            opacity: 0;
-            transform: translateY(20px) scale(0.9);
-            transition: all 0.3s ease;
-            visibility: hidden;
-        }
-
-        .mobile-nav-menu.active {
-            opacity: 1;
-            transform: translateY(0) scale(1);
-            visibility: visible;
-        }
-
-        .mobile-nav-menu a {
             width: 50px;
             height: 50px;
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
             border-radius: 50%;
-            background: rgba(255, 255, 255, 0.1);
             display: flex;
             align-items: center;
             justify-content: center;
             color: white;
             text-decoration: none;
-            font-size: 22px;
+            opacity: 0;
+            transform: translateY(20px);
             transition: all 0.3s ease;
+            z-index: 999;
+            box-shadow: 0 5px 20px rgba(106, 17, 203, 0.4);
         }
 
-        .mobile-nav-menu a:hover {
-            background: var(--gradient-primary);
-            transform: scale(1.1);
+        .back-to-top.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .back-to-top:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(106, 17, 203, 0.6);
         }
 
         /* =========================
-           ANIMATION UTILITIES
+           PRINT STYLES
         ========================= */
-        .animate-on-scroll {
-            opacity: 0;
-            transform: translateY(60px) rotateX(15deg);
-            transition: all 0.9s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        }
-
-        .animate-on-scroll.visible {
-            opacity: 1;
-            transform: translateY(0) rotateX(0);
+        @media print {
+            .top-header,
+            .main-nav,
+            .theme-btn,
+            .back-to-top,
+            .hero-socials,
+            .social-3d-container {
+                display: none !important;
+            }
+            
+            body {
+                background: white !important;
+                color: black !important;
+            }
+            
+            .glass-card {
+                background: white !important;
+                border: 1px solid #ddd !important;
+                box-shadow: none !important;
+            }
+            
+            .hero h1 {
+                background: black !important;
+                -webkit-text-fill-color: black !important;
+            }
         }
     </style>
 </head>
 
 <body>
     <!-- LOADING SCREEN -->
-    <div class="loader" id="loader">
-        <div class="loader-content">
-            <div class="loader-spinner"></div>
-            <div class="loader-text">Loading Portfolio</div>
-        </div>
+    <div class="loading" id="loading">
+        <div class="spinner"></div>
     </div>
 
     <!-- DYNAMIC BACKGROUND -->
@@ -1844,452 +1981,596 @@
         <div class="orb orb-2"></div>
         <div class="orb orb-3"></div>
     </div>
-    <div class="particles-container" id="particles"></div>
+    <div class="bubbles-container" id="bubbles"></div>
 
-    <!-- FIXED HEADER WITH TOP SOCIAL MEDIA -->
-    <header class="main-header" id="mainHeader">
-        <div class="logo-container">
-            <div class="logo-circle">MAB</div>
-            <div class="logo-text">Mumtaz Alam Bazai</div>
-        </div>
-        
-        <div class="top-social-bar">
-            <a href="mailto:advmumtaz222@gmail.com" class="top-social-link mail" data-tooltip="Email">
+    <!-- TOP HEADER WITH SOCIAL LINKS AND PORTRAIT -->
+    <header class="top-header">
+        <div class="header-socials">
+            <a href="mailto:advmumtaz222@gmail.com" target="_blank" title="Email">
                 <i class="fas fa-envelope"></i>
             </a>
-            <a href="https://wa.me/923332568792" target="_blank" class="top-social-link whatsapp" data-tooltip="WhatsApp">
+            <a href="https://wa.me/923332568792" target="_blank" title="WhatsApp">
                 <i class="fab fa-whatsapp"></i>
             </a>
-            <a href="https://www.linkedin.com/in/adv-mumtaz-alam-bazai-163a9a324" target="_blank" class="top-social-link linkedin" data-tooltip="LinkedIn">
+            <a href="https://www.linkedin.com/in/adv-mumtaz-alam-bazai-163a9a324" target="_blank" title="LinkedIn">
                 <i class="fab fa-linkedin-in"></i>
             </a>
-            <a href="https://www.instagram.com/mumtaz_alam" target="_blank" class="top-social-link instagram" data-tooltip="Instagram">
+            <a href="https://www.instagram.com/mumtaz_alam" target="_blank" title="Instagram">
                 <i class="fab fa-instagram"></i>
             </a>
+            <a href="https://www.facebook.com/mumtaz.alam.18488" target="_blank" title="Facebook">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://x.com/mumtazalam333" target="_blank" title="Twitter/X">
+                <i class="fab fa-x-twitter"></i>
+            </a>
+        </div>
+        
+        <div class="header-portrait">
+            <img src="portrait.jpg.jpeg" alt="Mumtaz Alam Bazai">
         </div>
     </header>
 
-    <!-- FIXED NAVIGATION SIDEBAR -->
-    <nav class="main-nav" id="mainNav">
+    <!-- FIXED NAVIGATION BAR -->
+    <nav class="main-nav">
         <a href="#hero" data-tooltip="Home" class="active"><i class="fas fa-home"></i></a>
-        <a href="#about" data-tooltip="About"><i class="fas fa-user"></i></a>
-        <a href="#education" data-tooltip="Education"><i class="fas fa-graduation-cap"></i></a>
-        <a href="#expertise" data-tooltip="Expertise"><i class="fas fa-gavel"></i></a>
+        <a href="#about" data-tooltip="Biography"><i class="fas fa-user"></i></a>
+        <a href="#career" data-tooltip="Legal Career"><i class="fas fa-gavel"></i></a>
+        <a href="#expertise" data-tooltip="Expertise"><i class="fas fa-star"></i></a>
+        <a href="#leadership" data-tooltip="Leadership"><i class="fas fa-globe"></i></a>
         <a href="#gallery" data-tooltip="Gallery"><i class="fas fa-images"></i></a>
-        <a href="#publications" data-tooltip="Publications"><i class="fas fa-book"></i></a>
-        <a href="#contact" data-tooltip="Contact"><i class="fas fa-envelope"></i></a>
+        <a href="#achievements" data-tooltip="Achievements"><i class="fas fa-trophy"></i></a>
+        <a href="#contact" data-tooltip="Contact"><i class="fas fa-paper-plane"></i></a>
     </nav>
 
-    <!-- MOBILE NAVIGATION TOGGLE -->
-    <button class="mobile-nav-toggle" id="mobileNavToggle">
-        <i class="fas fa-bars"></i>
+    <!-- THEME BUTTON -->
+    <button class="theme-btn" onclick="randomizeTheme()">
+        <i class="fas fa-magic"></i> Magic Theme
     </button>
 
-    <!-- MOBILE NAVIGATION MENU -->
-    <div class="mobile-nav-menu" id="mobileNavMenu">
-        <a href="#hero"><i class="fas fa-home"></i></a>
-        <a href="#about"><i class="fas fa-user"></i></a>
-        <a href="#education"><i class="fas fa-graduation-cap"></i></a>
-        <a href="#expertise"><i class="fas fa-gavel"></i></a>
-        <a href="#gallery"><i class="fas fa-images"></i></a>
-        <a href="#publications"><i class="fas fa-book"></i></a>
-        <a href="#contact"><i class="fas fa-envelope"></i></a>
-    </div>
+    <!-- BACK TO TOP BUTTON -->
+    <a href="#hero" class="back-to-top" id="backToTop">
+        <i class="fas fa-chevron-up"></i>
+    </a>
 
     <!-- HERO SECTION -->
     <section id="hero" class="hero">
+        <div class="hero-3d-bg">
+            <div class="hero-3d-layer" id="heroBgLayer"></div>
+        </div>
+
         <div class="hero-content">
             <div class="hero-text">
-                <span class="hero-badge">Advocate & Changemaker</span>
-                <h1>Mumtaz Alam <br> Bazai</h1>
-                <p>Advocate High Court · Human Rights Lawyer · Global Shaper (WEF).<br>
-                Empowering the youth of Balochistan through law, leadership, and unwavering justice.</p>
-
-                <div class="hero-buttons">
-                    <a href="#contact" class="hero-btn btn-primary">
-                        <i class="fas fa-envelope"></i> Get in Touch
-                    </a>
-                    <a href="https://linktr.ee/mumtazalam" target="_blank" class="hero-btn btn-secondary">
-                        <i class="fas fa-external-link-alt"></i> View All Links
-                    </a>
-                </div>
+                <span class="hero-badge">Advocate & Human Rights Lawyer</span>
+                <h1>Mumtaz Alam Bazai</h1>
+                <div class="hero-subtitle">Advocate High Court | Global Shaper at World Economic Forum</div>
+                <p>A dedicated legal professional and youth activist from Balochistan, committed to advancing justice, human rights, and democratic governance through legal practice, policy advocacy, and youth empowerment.</p>
                 
-                <!-- HERO SOCIAL LINKS -->
-                <div class="hero-socials">
-                    <a href="mailto:advmumtaz222@gmail.com" target="_blank" class="hs mail" title="Email">
-                        <i class="fas fa-envelope"></i>
-                    </a>
-                    <a href="https://wa.me/923332568792" target="_blank" class="hs whatsapp" title="WhatsApp">
-                        <i class="fab fa-whatsapp"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/adv-mumtaz-alam-bazai-163a9a324" target="_blank" class="hs linkedin" title="LinkedIn">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                    <a href="https://www.instagram.com/mumtaz_alam" target="_blank" class="hs instagram" title="Instagram">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="https://www.facebook.com/mumtaz.alam.18488" target="_blank" class="hs facebook" title="Facebook">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-                    <a href="https://x.com/mumtazalam333" target="_blank" class="hs twitter" title="Twitter/X">
-                        <i class="fab fa-x-twitter"></i>
-                    </a>
-                    <a href="https://my.weforum.org/network/people/001TG000009vSDhYAM/adv-mumtaz-alam" target="_blank" class="hs wef" title="World Economic Forum">
-                        <i class="fas fa-globe"></i>
-                    </a>
-                    <a href="https://linktr.ee/mumtazalam" target="_blank" class="hs linktree" title="Linktree">
-                        <i class="fas fa-link"></i>
-                    </a>
-                    <a href="https://www.tiktok.com/@mumtaz_alam" target="_blank" class="hs tiktok" title="TikTok">
-                        <i class="fab fa-tiktok"></i>
-                    </a>
-                    <a href="https://www.snapchat.com/add/mumtazalam222" target="_blank" class="hs snapchat" title="Snapchat">
-                        <i class="fab fa-snapchat-ghost"></i>
-                    </a>
-                    <a href="https://www.threads.com/@mumtaz_alam" target="_blank" class="hs threads" title="Threads">
-                        <i class="fas fa-comment-dots"></i>
-                    </a>
-                    <a href="https://ok.ru/profile/910193583170" target="_blank" class="hs ok" title="Odnoklassniki">
-                        <i class="fab fa-odnoklassniki"></i>
-                    </a>
+                <div class="hero-buttons">
+                    <a href="#contact" class="hero-btn btn-primary">Consultation Request</a>
+                    <a href="https://linktr.ee/mumtazalam" target="_blank" class="hero-btn btn-secondary">View Portfolio</a>
+                    <a href="#gallery" class="hero-btn btn-secondary">View Gallery</a>
                 </div>
             </div>
 
-            <!-- CIRCLE PORTRAIT IN UPPER RIGHT -->
-            <div class="hero-portrait-container">
-                <div class="portrait-badges">
-                    <div class="portrait-badge">
-                        <div class="badge-icon">
-                            <i class="fas fa-graduation-cap"></i>
-                        </div>
-                        <span>LLB (Hons) Graduate</span>
+            <div class="hero-image-container">
+                <div class="hero-main-image" id="heroImage"></div>
+                
+                <div class="hero-floating-elements">
+                    <div class="floating-badge badge-1">
+                        <i class="fas fa-award"></i>
+                        <span>Global Shaper</span>
                     </div>
-                    <div class="portrait-badge">
-                        <div class="badge-icon">
-                            <i class="fas fa-users"></i>
-                        </div>
-                        <span>Global Shaper (WEF)</span>
-                    </div>
-                    <div class="portrait-badge">
-                        <div class="badge-icon">
-                            <i class="fas fa-scale-balanced"></i>
-                        </div>
+                    <div class="floating-badge badge-2">
+                        <i class="fas fa-scale-balanced"></i>
                         <span>Advocate High Court</span>
                     </div>
-                </div>
-                
-                <div class="circle-portrait">
-                    <img src="portrait.jpg.jpeg" alt="Mumtaz Alam Bazai">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- DETAILED ABOUT SECTION -->
-    <section id="about" class="section">
-        <h2 class="section-title">About Me</h2>
-        <div class="glass-card">
-            <div class="about-grid">
-                <div class="about-image-container">
-                    <img src="life1.jpg.jpeg" alt="Mumtaz Alam Bazai" class="about-image">
-                </div>
-                
-                <div class="about-details">
-                    <div class="detail-item">
-                        <div class="detail-label">Full Name</div>
-                        <div class="detail-value">Mumtaz Alam Bazai</div>
-                    </div>
-                    
-                    <div class="detail-item">
-                        <div class="detail-label">Date of Birth</div>
-                        <div class="detail-value">11 August 2000</div>
-                    </div>
-                    
-                    <div class="detail-item">
-                        <div class="detail-label">Place of Birth</div>
-                        <div class="detail-value">Kili Zdoon, District Pishin, Balochistan, Pakistan</div>
-                    </div>
-                    
-                    <div class="detail-item">
-                        <div class="detail-label">Father's Name</div>
-                        <div class="detail-value">Dr. Ameer Muhammad (Neurosurgeon)</div>
-                    </div>
-                    
-                    <div class="detail-item">
-                        <div class="detail-label">Siblings</div>
-                        <div class="detail-value">Eldest of Nine Siblings</div>
-                    </div>
-                    
-                    <div class="detail-item">
-                        <div class="detail-label">Languages</div>
-                        <div class="detail-value">Pashto (Native), Urdu (Fluent), English (Fluent), Turkish (Conversational)</div>
-                    </div>
-                    
-                    <div class="detail-item">
-                        <div class="detail-label">Bar Council License</div>
-                        <div class="detail-value">Reg No. 14/2025</div>
-                    </div>
-                    
-                    <div class="detail-item">
-                        <div class="detail-label">Current Position</div>
-                        <div class="detail-value">Advocate at Iqra Law Associates, Quetta (Under Advocate Abdul Zahir Kakar)</div>
+                    <div class="floating-badge badge-3">
+                        <i class="fas fa-book"></i>
+                        <span>Legal Scholar</span>
                     </div>
                 </div>
             </div>
         </div>
+
+        <!-- HERO SOCIAL LINKS -->
+        <div class="hero-socials">
+            <a href="mailto:advmumtaz222@gmail.com" target="_blank" class="hs mail" title="Email">
+                <i class="fas fa-envelope"></i>
+            </a>
+            <a href="https://wa.me/923332568792" target="_blank" class="hs whatsapp" title="WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/adv-mumtaz-alam-bazai-163a9a324" target="_blank" class="hs linkedin" title="LinkedIn">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://www.instagram.com/mumtaz_alam" target="_blank" class="hs instagram" title="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.facebook.com/mumtaz.alam.18488" target="_blank" class="hs facebook" title="Facebook">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://x.com/mumtazalam333" target="_blank" class="hs twitter" title="Twitter/X">
+                <i class="fab fa-x-twitter"></i>
+            </a>
+            <a href="https://my.weforum.org/network/people/001TG000009vSDhYAM/adv-mumtaz-alam" target="_blank" class="hs wef" title="World Economic Forum">
+                <i class="fas fa-globe"></i>
+            </a>
+            <a href="https://linktr.ee/mumtazalam" target="_blank" class="hs linktree" title="Linktree">
+                <i class="fas fa-link"></i>
+            </a>
+            <a href="https://www.tiktok.com/@mumtaz_alam" target="_blank" class="hs tiktok" title="TikTok">
+                <i class="fab fa-tiktok"></i>
+            </a>
+            <a href="https://www.snapchat.com/add/mumtazalam222" target="_blank" class="hs snapchat" title="Snapchat">
+                <i class="fab fa-snapchat-ghost"></i>
+            </a>
+            <a href="https://www.threads.com/@mumtaz_alam" target="_blank" class="hs threads" title="Threads">
+                <i class="fas fa-comment-dots"></i>
+            </a>
+            <a href="https://ok.ru/profile/910193583170" target="_blank" class="hs ok" title="Odnoklassniki">
+                <i class="fab fa-odnoklassniki"></i>
+            </a>
+        </div>
     </section>
 
-    <!-- EDUCATION SECTION -->
-    <section id="education" class="section">
-        <h2 class="section-title">Education & Timeline</h2>
+    <!-- BIOGRAPHY SECTION -->
+    <section id="about">
+        <h2 class="section-title">Biography</h2>
         <div class="glass-card">
+            <div class="bio-intro">
+                <h3 style="text-align: center; margin-bottom: 30px; color: #00c6ff; font-size: 2rem;">The Journey of Excellence</h3>
+                <p style="text-align: center; font-size: 1.1rem; line-height: 1.8; max-width: 800px; margin: 0 auto 40px;">
+                    Born on <strong>11 August 2000</strong> in Kili Zdoon, District Pishin, Balochistan. Mumtaz Alam Bazai is the eldest of nine siblings, son of renowned Neurosurgeon Dr. Ameer Muhammad. His journey from village schooling to becoming a distinguished legal professional embodies resilience, dedication, and unwavering commitment to justice.
+                </p>
+            </div>
+
+            <div class="bio-grid">
+                <div class="bio-item animate-on-scroll">
+                    <div class="bio-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Academic Excellence</h3>
+                    <p>Completed early education with distinction at Pak-Turk Maarif International Schools & Colleges, demonstrating exceptional leadership skills and multilingual fluency in Pashto, Urdu, English, and Turkish.</p>
+                </div>
+                
+                <div class="bio-item animate-on-scroll">
+                    <div class="bio-icon">
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <h3>Higher Education</h3>
+                    <p>Earned BA (Arts) from University of Balochistan (2022), followed by LLB (Hons) from University Law College and MA Political Science from University of Balochistan (2024), graduating with honors.</p>
+                </div>
+                
+                <div class="bio-item animate-on-scroll">
+                    <div class="bio-icon">
+                        <i class="fas fa-scale-balanced"></i>
+                    </div>
+                    <h3>Legal Career</h3>
+                    <p>Received Bar Council License (Reg No. 14/2025) and joined Iqra Law Associates under esteemed Advocate Abdul Zahir Kakar, establishing a reputation for excellence in legal practice.</p>
+                </div>
+            </div>
+
             <div class="timeline">
                 <div class="timeline-item animate-on-scroll">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
-                        <h4>2019 - Intermediate Education</h4>
-                        <p>Pak-Turk Maarif International Schools & Colleges. Demonstrated exceptional leadership and multilingual fluency (Pashto, Urdu, English, Turkish). Completed with outstanding academic performance on scholarship.</p>
+                        <div class="timeline-year">2019</div>
+                        <h4>Intermediate Education</h4>
+                        <p>Completed Intermediate education from Pak-Turk Maarif International Schools & Colleges with outstanding academic performance and leadership roles.</p>
                     </div>
                 </div>
                 
                 <div class="timeline-item animate-on-scroll">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
-                        <h4>2022 - BA in Arts</h4>
-                        <p>University of Balochistan. Built a strong foundation in social sciences, political thought, and humanities. Developed critical thinking and analytical skills essential for legal practice.</p>
+                        <div class="timeline-year">2022</div>
+                        <h4>Bachelor of Arts</h4>
+                        <p>Graduated with BA (Arts) from University of Balochistan, building a strong foundation in social sciences and political thought.</p>
                     </div>
                 </div>
                 
                 <div class="timeline-item animate-on-scroll">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
-                        <h4>2024 - LLB (Hons) & MA Political Science</h4>
-                        <p>Graduated with honors from University Law College and University of Balochistan. Mastered the intricacies of law, constitutional studies, governance, and political theory. Received distinction in legal research and advocacy.</p>
+                        <div class="timeline-year">2024</div>
+                        <h4>Dual Degrees</h4>
+                        <p>Achieved LLB (Hons) from University Law College and MA Political Science from University of Balochistan, mastering both legal and governance disciplines.</p>
                     </div>
                 </div>
                 
                 <div class="timeline-item animate-on-scroll">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
-                        <h4>2025 - Legal License & Professional Practice</h4>
-                        <p>Received Bar Council License (Reg No. 14/2025). Formally joined Iqra Law Associates under the mentorship of Advocate Abdul Zahir Kakar. Began active practice in Civil, Criminal, and Human Rights litigation.</p>
+                        <div class="timeline-year">2025</div>
+                        <h4>Legal License & Practice</h4>
+                        <p>Received Bar Council License and formally joined Iqra Law Associates, embarking on professional legal practice under mentorship of Advocate Abdul Zahir Kakar.</p>
                     </div>
                 </div>
-                
-                <div class="timeline-item animate-on-scroll">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h4>2025 - Global Shaper Appointment</h4>
-                        <p>Appointed as Curator of Quetta Hub at World Economic Forum's Global Shapers Community. Represented at Global Shapers Annual Summit 2025 in Geneva. Authored Governance Charter and spearheaded Youth Policy Project.</p>
-                    </div>
-                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CAREER SECTION -->
+    <section id="career">
+        <h2 class="section-title">Legal & Social Impact</h2>
+        <div class="grid-3">
+            <div class="glass-card animate-on-scroll">
+                <i class="fas fa-gavel" style="font-size: 40px; color: #ff007a; margin-bottom: 20px;"></i>
+                <h3>Legal Practice</h3>
+                <p style="margin-top: 15px; opacity: 0.9;">
+                    Active practitioner in Civil, Criminal, Constitutional, and Human Rights litigation. Specializes in pro bono work for marginalized communities in Balochistan. Trained at Iqra Law Associates, Quetta, under the guidance of Advocate Abdul Zahir Kakar.
+                </p>
+                <ul style="margin-top: 15px; padding-left: 20px; opacity: 0.9;">
+                    <li>Civil Litigation</li>
+                    <li>Criminal Defense</li>
+                    <li>Human Rights Cases</li>
+                    <li>Constitutional Matters</li>
+                </ul>
+            </div>
+
+            <div class="glass-card animate-on-scroll">
+                <i class="fas fa-globe-asia" style="font-size: 40px; color: #00c6ff; margin-bottom: 20px;"></i>
+                <h3>Global Shaper (WEF)</h3>
+                <p style="margin-top: 15px; opacity: 0.9;">
+                    Curator of Quetta Hub at World Economic Forum. Represented at <strong>Global Shapers Annual Summit 2025 (Geneva)</strong>. Authored the Governance Charter and spearheaded the first Youth Policy Project for Balochistan.
+                </p>
+                <ul style="margin-top: 15px; padding-left: 20px; opacity: 0.9;">
+                    <li>Youth Empowerment</li>
+                    <li>Policy Development</li>
+                    <li>Global Networking</li>
+                    <li>Community Leadership</li>
+                </ul>
+            </div>
+
+            <div class="glass-card animate-on-scroll">
+                <i class="fas fa-book-open" style="font-size: 40px; color: #6a11cb; margin-bottom: 20px;"></i>
+                <h3>Publications & Research</h3>
+                <p style="margin-top: 15px; opacity: 0.9;">
+                    Author of influential publications including <em>"Human Rights and Responsibilities"</em> (2021) and groundbreaking research on <em>"The Role of ECP in Free and Fair Elections"</em> (2024). Regular contributor to legal and policy journals.
+                </p>
+                <ul style="margin-top: 15px; padding-left: 20px; opacity: 0.9;">
+                    <li>Legal Scholarship</li>
+                    <li>Policy Research</li>
+                    <li>Academic Writing</li>
+                    <li>Public Speaking</li>
+                </ul>
             </div>
         </div>
     </section>
 
     <!-- EXPERTISE SECTION -->
-    <section id="expertise" class="section">
+    <section id="expertise">
         <h2 class="section-title">Areas of Expertise</h2>
-        <div class="expertise-grid">
-            <div class="expertise-card animate-on-scroll">
-                <div class="expertise-icon">
-                    <i class="fas fa-gavel"></i>
+        <div class="glass-card">
+            <div class="expertise-grid">
+                <div class="expertise-card animate-on-scroll">
+                    <div class="expertise-icon">
+                        <i class="fas fa-balance-scale"></i>
+                    </div>
+                    <h3>Civil Litigation</h3>
+                    <p>Expertise in property disputes, contract law, family law, and civil rights cases with a track record of successful resolutions.</p>
                 </div>
-                <h3>Legal Practice</h3>
-                <p>Active practitioner in Civil, Criminal, Constitutional, and Human Rights litigation. Specialized in pro bono work for marginalized communities. Expertise in legal consultation, case strategy, and courtroom advocacy.</p>
-                <div style="margin-top: 20px;">
-                    <span style="display: inline-block; padding: 8px 15px; background: rgba(106, 17, 203, 0.2); border-radius: 20px; margin: 5px; font-size: 14px;">Civil Law</span>
-                    <span style="display: inline-block; padding: 8px 15px; background: rgba(37, 117, 252, 0.2); border-radius: 20px; margin: 5px; font-size: 14px;">Criminal Law</span>
-                    <span style="display: inline-block; padding: 8px 15px; background: rgba(255, 0, 122, 0.2); border-radius: 20px; margin: 5px; font-size: 14px;">Human Rights</span>
+                
+                <div class="expertise-card animate-on-scroll">
+                    <div class="expertise-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Criminal Defense</h3>
+                    <p>Strong defense strategies for criminal cases, ensuring fair trial rights and justice for all clients.</p>
+                </div>
+                
+                <div class="expertise-card animate-on-scroll">
+                    <div class="expertise-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Human Rights Law</h3>
+                    <p>Championing human rights through legal advocacy, particularly for marginalized communities in Balochistan.</p>
+                </div>
+                
+                <div class="expertise-card animate-on-scroll">
+                    <div class="expertise-icon">
+                        <i class="fas fa-landmark"></i>
+                    </div>
+                    <h3>Constitutional Law</h3>
+                    <p>Specialized knowledge in constitutional matters, fundamental rights, and governance structures.</p>
+                </div>
+                
+                <div class="expertise-card animate-on-scroll">
+                    <div class="expertise-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Legal Consultation</h3>
+                    <p>Providing expert legal advice to individuals, organizations, and government bodies on complex legal matters.</p>
+                </div>
+                
+                <div class="expertise-card animate-on-scroll">
+                    <div class="expertise-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Policy Advocacy</h3>
+                    <p>Developing and advocating for progressive policies in governance, youth development, and human rights.</p>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- LEADERSHIP SECTION -->
+    <section id="leadership">
+        <h2 class="section-title">Thematic Focus Areas</h2>
+        <div class="glass-card">
+            <p style="text-align: center; margin-bottom: 30px; font-size: 1.1rem;">
+                As a legal professional and global leader, Mumtaz focuses on multiple intersecting areas that drive meaningful change in society.
+            </p>
             
-            <div class="expertise-card animate-on-scroll">
-                <div class="expertise-icon">
-                    <i class="fas fa-globe"></i>
-                </div>
-                <h3>Global Leadership</h3>
-                <p>Curator of Quetta Hub at World Economic Forum's Global Shapers Community. International representation at global forums. Expertise in youth policy development, community leadership, and cross-cultural communication.</p>
-                <div style="margin-top: 20px;">
-                    <span style="display: inline-block; padding: 8px 15px; background: rgba(0, 198, 255, 0.2); border-radius: 20px; margin: 5px; font-size: 14px;">Youth Policy</span>
-                    <span style="display: inline-block; padding: 8px 15px; background: rgba(255, 140, 0, 0.2); border-radius: 20px; margin: 5px; font-size: 14px;">Public Speaking</span>
-                    <span style="display: inline-block; padding: 8px 15px; background: rgba(106, 17, 203, 0.2); border-radius: 20px; margin: 5px; font-size: 14px;">Strategic Planning</span>
-                </div>
+            <div class="thematic-grid">
+                <span class="theme-tag" style="border-color: #00c6ff; color: #00c6ff;">Human Rights & Equality</span>
+                <span class="theme-tag" style="border-color: #ff007a; color: #ff007a;">Governance & Rule of Law</span>
+                <span class="theme-tag" style="border-color: #6a11cb; color: #6a11cb;">Youth Policy & Development</span>
+                <span class="theme-tag" style="border-color: #ffe600; color: #ffe600;">Climate Justice & Energy</span>
+                <span class="theme-tag" style="border-color: #00ff88; color: #00ff88;">Indigenous & Tribal Rights</span>
+                <span class="theme-tag" style="border-color: #ff00ff; color: #ff00ff;">Legal Education & Reform</span>
+                <span class="theme-tag" style="border-color: #00ffff; color: #00ffff;">Digital Rights & Privacy</span>
+                <span class="theme-tag" style="border-color: #ff8800; color: #ff8800;">Social Justice & Inclusion</span>
+                <span class="theme-tag" style="border-color: #ff4444; color: #ff4444;">Gender Equality</span>
+                <span class="theme-tag" style="border-color: #aa00ff; color: #aa00ff;">Access to Justice</span>
+                <span class="theme-tag" style="border-color: #00ffaa; color: #00ffaa;">Sustainable Development</span>
+                <span class="theme-tag" style="border-color: #ffaa00; color: #ffaa00;">Conflict Resolution</span>
             </div>
             
-            <div class="expertise-card animate-on-scroll">
-                <div class="expertise-icon">
-                    <i class="fas fa-book-open"></i>
-                </div>
-                <h3>Research & Publications</h3>
-                <p>Author of "Human Rights and Responsibilities" (2021). Extensive research on "The Role of ECP in Free and Fair Elections" (2024). Regular contributor to legal journals, policy papers, and academic publications.</p>
-                <div style="margin-top: 20px;">
-                    <span style="display: inline-block; padding: 8px 15px; background: rgba(37, 117, 252, 0.2); border-radius: 20px; margin: 5px; font-size: 14px;">Academic Writing</span>
-                    <span style="display: inline-block; padding: 8px 15px; background: rgba(255, 0, 122, 0.2); border-radius: 20px; margin: 5px; font-size: 14px;">Policy Research</span>
-                    <span style="display: inline-block; padding: 8px 15px; background: rgba(0, 198, 255, 0.2); border-radius: 20px; margin: 5px; font-size: 14px;">Legal Analysis</span>
-                </div>
+            <div style="margin-top: 50px;">
+                <h3 style="text-align: center; margin-bottom: 30px; color: #00c6ff;">Leadership Philosophy</h3>
+                <p style="text-align: center; font-size: 1.1rem; line-height: 1.8; max-width: 800px; margin: 0 auto;">
+                    "True leadership is about serving others, empowering voices that go unheard, and creating pathways for justice and opportunity. 
+                    As a lawyer and global shaper, I believe in the transformative power of law to create a more equitable society where every individual, 
+                    regardless of background, can access justice and realize their full potential."
+                </p>
             </div>
         </div>
     </section>
 
     <!-- GALLERY SECTION -->
-    <section id="gallery" class="section">
+    <section id="gallery">
         <h2 class="section-title">Visual Journey</h2>
-        <div class="gallery-grid">
-            <div class="gallery-item animate-on-scroll">
-                <img src="life1.jpg.jpeg" alt="Leadership & Advocacy" loading="lazy">
-                <div class="gallery-overlay">
-                    <h4>Leadership & Advocacy</h4>
-                    <p>Speaking at youth forums and legal conferences</p>
-                </div>
-            </div>
-            <div class="gallery-item animate-on-scroll">
-                <img src="life2.jpg.jpeg" alt="Courtroom Excellence" loading="lazy">
-                <div class="gallery-overlay">
-                    <h4>Courtroom Excellence</h4>
-                    <p>Practicing law with dedication and precision</p>
-                </div>
-            </div>
-            <div class="gallery-item animate-on-scroll">
-                <img src="life3.jpg.jpeg" alt="Global Shapers Network" loading="lazy">
-                <div class="gallery-overlay">
-                    <h4>Global Shapers Network</h4>
-                    <p>Representing Quetta Hub at international forums</p>
-                </div>
-            </div>
-            <div class="gallery-item animate-on-scroll">
-                <img src="life4.jpg.jpeg" alt="Legal Practice" loading="lazy">
-                <div class="gallery-overlay">
-                    <h4>Legal Practice</h4>
-                    <p>Daily commitment to justice and rule of law</p>
-                </div>
-            </div>
-            <div class="gallery-item animate-on-scroll">
-                <img src="life5.jpg.jpeg" alt="Community Engagement" loading="lazy">
-                <div class="gallery-overlay">
-                    <h4>Community Engagement</h4>
-                    <p>Working directly with local communities</p>
-                </div>
-            </div>
-            <div class="gallery-item animate-on-scroll">
-                <img src="life6.jpg.jpeg" alt="International Exposure" loading="lazy">
-                <div class="gallery-overlay">
-                    <h4>International Exposure</h4>
-                    <p>Learning from global best practices</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- PUBLICATIONS SECTION -->
-    <section id="publications" class="section">
-        <h2 class="section-title">Publications & Research</h2>
-        <div class="publications-container">
-            <div class="publication-card animate-on-scroll">
-                <div class="pub-year">2021</div>
-                <h3 style="color: #00c6ff; margin-bottom: 15px;">Human Rights and Responsibilities: A Legal Perspective</h3>
-                <p style="color: var(--text-muted); line-height: 1.7; margin-bottom: 20px;">
-                    A comprehensive analysis of human rights within the Pakistani legal framework, exploring the balance between rights and responsibilities in a democratic society.
-                </p>
-                <div style="display: flex; gap: 15px;">
-                    <a href="#" style="padding: 10px 20px; background: rgba(106, 17, 203, 0.2); border-radius: 20px; color: white; text-decoration: none; font-size: 14px;">Download PDF</a>
-                    <a href="#" style="padding: 10px 20px; background: rgba(37, 117, 252, 0.2); border-radius: 20px; color: white; text-decoration: none; font-size: 14px;">Read Online</a>
-                </div>
-            </div>
-            
-            <div class="publication-card animate-on-scroll">
-                <div class="pub-year">2024</div>
-                <h3 style="color: #00c6ff; margin-bottom: 15px;">The Role of ECP in Ensuring Free and Fair Elections</h3>
-                <p style="color: var(--text-muted); line-height: 1.7; margin-bottom: 20px;">
-                    An in-depth analysis of Election Commission of Pakistan's constitutional mandate, challenges in implementation, and recommendations for strengthening electoral processes.
-                </p>
-                <div style="display: flex; gap: 15px;">
-                    <a href="#" style="padding: 10px 20px; background: rgba(255, 0, 122, 0.2); border-radius: 20px; color: white; text-decoration: none; font-size: 14px;">Download PDF</a>
-                    <a href="#" style="padding: 10px 20px; background: rgba(0, 198, 255, 0.2); border-radius: 20px; color: white; text-decoration: none; font-size: 14px;">Research Paper</a>
-                </div>
-            </div>
-            
-            <div class="publication-card animate-on-scroll">
-                <div class="pub-year">2025</div>
-                <h3 style="color: #00c6ff; margin-bottom: 15px;">Youth Policy Framework for Balochistan</h3>
-                <p style="color: var(--text-muted); line-height: 1.7; margin-bottom: 20px;">
-                    Developed as part of the Global Shapers initiative, this policy brief outlines a comprehensive framework for youth empowerment in Balochistan, addressing education, employment, and civic engagement.
-                </p>
-                <div style="display: flex; gap: 15px;">
-                    <a href="#" style="padding: 10px 20px; background: rgba(255, 140, 0, 0.2); border-radius: 20px; color: white; text-decoration: none; font-size: 14px;">Policy Brief</a>
-                    <a href="#" style="padding: 10px 20px; background: rgba(106, 17, 203, 0.2); border-radius: 20px; color: white; text-decoration: none; font-size: 14px;">Executive Summary</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CONTACT SECTION WITH OFFICIAL FORM -->
-    <section id="contact" class="section">
-        <h2 class="section-title">Get in Touch</h2>
         <div class="glass-card">
-            <div style="max-width: 800px; margin: 0 auto;">
-                <p style="text-align: center; font-size: 1.2rem; color: var(--text-muted); margin-bottom: 50px;">
-                    For legal consultation, collaboration opportunities, speaking engagements, or to discuss youth empowerment initiatives in Balochistan.
-                </p>
+            <p style="text-align: center; margin-bottom: 40px; font-size: 1.1rem;">
+                A visual narrative of the journey - from courtrooms to global forums, community engagements to leadership moments.
+            </p>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item animate-on-scroll">
+                    <img src="life1.jpg.jpeg" alt="Leadership at Global Forum" loading="lazy">
+                    <div class="gallery-overlay"><h4>Global Leadership</h4></div>
+                </div>
+                <div class="gallery-item animate-on-scroll">
+                    <img src="life2.jpg.jpeg" alt="Legal Advocacy" loading="lazy">
+                    <div class="gallery-overlay"><h4>Legal Advocacy</h4></div>
+                </div>
+                <div class="gallery-item animate-on-scroll">
+                    <img src="life3.jpg.jpeg" alt="Global Shapers Community" loading="lazy">
+                    <div class="gallery-overlay"><h4>Global Shapers</h4></div>
+                </div>
+                <div class="gallery-item animate-on-scroll">
+                    <img src="life4.jpg.jpeg" alt="Court Proceedings" loading="lazy">
+                    <div class="gallery-overlay"><h4>Court Life</h4></div>
+                </div>
+                <div class="gallery-item animate-on-scroll">
+                    <img src="life5.jpg.jpeg" alt="Community Engagement" loading="lazy">
+                    <div class="gallery-overlay"><h4>Community Work</h4></div>
+                </div>
+                <div class="gallery-item animate-on-scroll">
+                    <img src="life6.jpg.jpeg" alt="International Travel" loading="lazy">
+                    <div class="gallery-overlay"><h4>Global Exposure</h4></div>
+                </div>
+                <div class="gallery-item animate-on-scroll">
+                    <img src="portrait.jpg.jpeg" alt="Professional Portrait" loading="lazy">
+                    <div class="gallery-overlay"><h4>Professional Profile</h4></div>
+                </div>
+                <div class="gallery-item animate-on-scroll">
+                    <img src="hero-bg.jpg.jpeg" alt="Background Setting" loading="lazy">
+                    <div class="gallery-overlay"><h4>Background Setting</h4></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ACHIEVEMENTS SECTION -->
+    <section id="achievements">
+        <h2 class="section-title">Achievements & Recognition</h2>
+        <div class="glass-card">
+            <div class="achievements-grid">
+                <div class="achievement-card animate-on-scroll">
+                    <div class="achievement-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <div class="achievement-number">Global</div>
+                    <h3>World Economic Forum</h3>
+                    <p>Selected as Global Shaper and Curator of Quetta Hub</p>
+                </div>
                 
-                <div class="contact-form-container">
-                    <form id="officialContactForm">
+                <div class="achievement-card animate-on-scroll">
+                    <div class="achievement-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="achievement-number">Dual</div>
+                    <h3>Advanced Degrees</h3>
+                    <p>LLB (Hons) and MA Political Science with honors</p>
+                </div>
+                
+                <div class="achievement-card animate-on-scroll">
+                    <div class="achievement-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <div class="achievement-number">2+</div>
+                    <h3>Publications</h3>
+                    <p>Authored influential legal and policy research papers</p>
+                </div>
+                
+                <div class="achievement-card animate-on-scroll">
+                    <div class="achievement-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="achievement-number">100+</div>
+                    <h3>Cases Handled</h3>
+                    <p>Successfully represented clients in diverse legal matters</p>
+                </div>
+            </div>
+            
+            <div class="testimonial-grid" style="margin-top: 60px;">
+                <div class="testimonial-card animate-on-scroll">
+                    <div class="testimonial-text">
+                        "Mumtaz Alam Bazai represents the new generation of legal minds in Pakistan - combining deep legal knowledge with a commitment to social justice and youth empowerment."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">AK</div>
+                        <div class="author-info">
+                            <h4>Advocate Abdul Zahir Kakar</h4>
+                            <p>Senior Lawyer, Mentor</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card animate-on-scroll">
+                    <div class="testimonial-text">
+                        "As a Global Shaper, Mumtaz has demonstrated exceptional leadership in driving youth policy initiatives and governance reforms in Balochistan."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">GS</div>
+                        <div class="author-info">
+                            <h4>Global Shapers Community</h4>
+                            <p>World Economic Forum</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MISSION SECTION -->
+    <section id="mission">
+        <div class="mission-card animate-on-scroll">
+            <i class="fas fa-bullseye"></i>
+            <h2>Mission Statement</h2>
+            <p>
+                "To advance justice, safeguard human dignity, strengthen democratic institutions, and empower youth to lead Pakistan toward a just, inclusive, and sustainable future through legal excellence, policy advocacy, and community leadership."
+            </p>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" style="padding-bottom: 150px;">
+        <h2 class="section-title">Get In Touch</h2>
+        <div class="glass-card">
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3 style="color: #00c6ff; margin-bottom: 30px; font-size: 1.8rem;">Contact Information</h3>
+                    
+                    <div style="margin-bottom: 30px;">
+                        <h4 style="color: #fff; margin-bottom: 15px;">Professional Address</h4>
+                        <p><i class="fas fa-map-marker-alt" style="color: #ff007a; margin-right: 10px;"></i> Iqra Law Associates, Quetta, Balochistan, Pakistan</p>
+                    </div>
+                    
+                    <div style="margin-bottom: 30px;">
+                        <h4 style="color: #fff; margin-bottom: 15px;">Contact Details</h4>
+                        <p><i class="fas fa-phone" style="color: #00c6ff; margin-right: 10px;"></i> +92 333 2568792</p>
+                        <p><i class="fas fa-envelope" style="color: #00c6ff; margin-right: 10px;"></i> advmumtaz222@gmail.com</p>
+                    </div>
+                    
+                    <div style="margin-bottom: 30px;">
+                        <h4 style="color: #fff; margin-bottom: 15px;">Availability</h4>
+                        <p><i class="fas fa-clock" style="color: #6a11cb; margin-right: 10px;"></i> Monday - Friday: 9:00 AM - 6:00 PM</p>
+                        <p><i class="fas fa-clock" style="color: #6a11cb; margin-right: 10px;"></i> Saturday: 10:00 AM - 2:00 PM</p>
+                        <p><i class="fas fa-calendar" style="color: #6a11cb; margin-right: 10px;"></i> By Appointment Only</p>
+                    </div>
+                    
+                    <div>
+                        <h4 style="color: #fff; margin-bottom: 15px;">Languages</h4>
+                        <p><i class="fas fa-language" style="color: #ff007a; margin-right: 10px;"></i> Pashto, Urdu, English, Turkish</p>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <h3 style="color: #00c6ff; margin-bottom: 30px; font-size: 1.8rem;">Send Message</h3>
+                    
+                    <form id="messageForm">
                         <div class="form-group">
-                            <label for="name" class="form-label">Full Name</label>
-                            <input type="text" id="name" class="form-control" placeholder="Enter your full name" required>
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" required>
                         </div>
                         
                         <div class="form-group">
-                            <label for="email" class="form-label">Email Address</label>
-                            <input type="email" id="email" class="form-control" placeholder="Enter your email address" required>
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required>
                         </div>
                         
                         <div class="form-group">
-                            <label for="phone" class="form-label">Phone Number</label>
-                            <input type="tel" id="phone" class="form-control" placeholder="Enter your phone number">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone">
                         </div>
                         
                         <div class="form-group">
-                            <label for="subject" class="form-label">Subject</label>
-                            <input type="text" id="subject" class="form-control" placeholder="What is this regarding?" required>
+                            <label for="subject">Subject</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Select Subject</option>
+                                <option value="legal">Legal Consultation</option>
+                                <option value="rights">Human Rights Case</option>
+                                <option value="speaking">Speaking Engagement</option>
+                                <option value="collaboration">Collaboration Request</option>
+                                <option value="other">Other Inquiry</option>
+                            </select>
                         </div>
                         
                         <div class="form-group">
-                            <label for="message" class="form-label">Your Message</label>
-                            <textarea id="message" class="form-control" placeholder="Please provide details of your inquiry..." required rows="6"></textarea>
+                            <label for="message">Your Message</label>
+                            <textarea id="message" name="message" required></textarea>
                         </div>
                         
                         <button type="submit" class="submit-btn">
-                            <i class="fas fa-paper-plane"></i> Send Official Message
+                            <i class="fas fa-paper-plane" style="margin-right: 10px;"></i> Send Message
                         </button>
                     </form>
                 </div>
+            </div>
+            
+            <div class="connect-box" style="margin-top: 80px;">
+                <h3 style="color: #00c6ff; margin-bottom: 30px; font-size: 1.8rem;">Connect on Social Media</h3>
                 
-                <!-- BOTTOM SOCIAL MEDIA BAR -->
-                <div class="bottom-social-bar">
-                    <a href="mailto:advmumtaz222@gmail.com" class="bottom-social-link" title="Email">
+                <div class="social-3d-container">
+                    <a href="mailto:advmumtaz222@gmail.com" class="social-btn" style="--c1: #D44638; --c2: #B23121;" title="Email">
                         <i class="fas fa-envelope"></i>
                     </a>
-                    <a href="https://wa.me/923332568792" target="_blank" class="bottom-social-link" title="WhatsApp">
+                    <a href="https://wa.me/923332568792" class="social-btn" style="--c1: #25D366; --c2: #128C7E;" title="WhatsApp">
                         <i class="fab fa-whatsapp"></i>
                     </a>
-                    <a href="https://www.linkedin.com/in/adv-mumtaz-alam-bazai-163a9a324" target="_blank" class="bottom-social-link" title="LinkedIn">
+                    <a href="https://www.linkedin.com/in/adv-mumtaz-alam-bazai-163a9a324" class="social-btn" style="--c1: #0077b5; --c2: #004182;" title="LinkedIn">
                         <i class="fab fa-linkedin-in"></i>
                     </a>
-                    <a href="https://www.instagram.com/mumtaz_alam" target="_blank" class="bottom-social-link" title="Instagram">
+                    <a href="https://www.instagram.com/mumtaz_alam" class="social-btn" style="--c1: #833AB4; --c2: #FD1D1D;" title="Instagram">
                         <i class="fab fa-instagram"></i>
                     </a>
-                    <a href="https://www.facebook.com/mumtaz.alam.18488" target="_blank" class="bottom-social-link" title="Facebook">
+                    <a href="https://www.facebook.com/mumtaz.alam.18488" class="social-btn" style="--c1: #1877F2; --c2: #1052a8;" title="Facebook">
                         <i class="fab fa-facebook-f"></i>
                     </a>
-                    <a href="https://x.com/mumtazalam333" target="_blank" class="bottom-social-link" title="Twitter/X">
+                    <a href="https://x.com/mumtazalam333" class="social-btn" style="--c1: #000; --c2: #333;" title="Twitter/X">
                         <i class="fab fa-x-twitter"></i>
                     </a>
-                    <a href="https://my.weforum.org/network/people/001TG000009vSDhYAM/adv-mumtaz-alam" target="_blank" class="bottom-social-link" title="World Economic Forum">
+                    <a href="https://my.weforum.org/network/people/001TG000009vSDhYAM/adv-mumtaz-alam" class="social-btn" style="--c1: #00A3E0; --c2: #005F86;" title="World Economic Forum">
                         <i class="fas fa-globe"></i>
                     </a>
-                    <a href="https://linktr.ee/mumtazalam" target="_blank" class="bottom-social-link" title="Linktree">
+                    <a href="https://linktr.ee/mumtazalam" class="social-btn" style="--c1: #43E660; --c2: #1fa337;" title="Linktree">
                         <i class="fas fa-link"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/@mumtaz_alam" class="social-btn" style="--c1: #000000; --c2: #ff0050;" title="TikTok">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+                    <a href="https://www.snapchat.com/add/mumtazalam222" class="social-btn" style="--c1: #FFFC00; --c2: #FFCA00;" title="Snapchat">
+                        <i class="fab fa-snapchat-ghost"></i>
+                    </a>
+                    <a href="https://www.threads.com/@mumtaz_alam" class="social-btn" style="--c1: #00fffc; --c2: #ff00fc;" title="Threads">
+                        <i class="fas fa-comment-dots"></i>
+                    </a>
+                    <a href="https://ok.ru/profile/910193583170" class="social-btn" style="--c1: #F47300; --c2: #FF9E2C;" title="Odnoklassniki">
+                        <i class="fab fa-odnoklassniki"></i>
                     </a>
                 </div>
             </div>
@@ -2298,392 +2579,768 @@
 
     <!-- FOOTER -->
     <footer>
-        <div style="max-width: 800px; margin: 0 auto;">
-            <p style="font-size: 16px; margin-bottom: 20px;">
-                <strong>Mumtaz Alam Bazai</strong><br>
-                Advocate High Court | Global Shaper (World Economic Forum) | Human Rights Lawyer
-            </p>
-            <p style="color: #888; margin-bottom: 30px;">
-                Iqra Law Associates, Quetta, Balochistan, Pakistan<br>
-                Bar Council License No. 14/2025
-            </p>
-            <p style="color: #666; font-size: 14px;">
-                © 2025 Mumtaz Alam Bazai. All Rights Reserved.<br>
-                Designed with passion for justice and commitment to change.
-            </p>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Adv. Mumtaz Alam Bazai</h3>
+                <p>Advocate High Court, Global Shaper at World Economic Forum, Human Rights Lawyer, and Legal Consultant based in Quetta, Balochistan.</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#about">Biography</a></li>
+                    <li><a href="#career">Legal Career</a></li>
+                    <li><a href="#expertise">Expertise</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Legal Services</h3>
+                <ul class="footer-links">
+                    <li><a href="#contact">Legal Consultation</a></li>
+                    <li><a href="#contact">Case Representation</a></li>
+                    <li><a href="#contact">Human Rights Advocacy</a></li>
+                    <li><a href="#contact">Policy Advisory</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <p><i class="fas fa-map-marker-alt" style="margin-right: 10px;"></i> Quetta, Balochistan</p>
+                <p><i class="fas fa-phone" style="margin-right: 10px;"></i> +92 333 2568792</p>
+                <p><i class="fas fa-envelope" style="margin-right: 10px;"></i> advmumtaz222@gmail.com</p>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            <p>© 2025 Mumtaz Alam Bazai. Advocate & Human Rights Lawyer. All Rights Reserved.</p>
+            <p style="margin-top: 10px; font-size: 12px;">Designed with passion for justice and excellence in legal practice.</p>
         </div>
     </footer>
 
     <script>
         // =========================
-        // LOADING SCREEN
+        // COMPREHENSIVE JAVASCRIPT
         // =========================
+
+        // 1. PAGE LOADING ANIMATION
         window.addEventListener('load', function() {
-            const loader = document.getElementById('loader');
+            const loading = document.getElementById('loading');
+            
+            // Add a small delay to show loading animation
             setTimeout(() => {
-                loader.classList.add('hidden');
-                document.body.style.opacity = '1';
+                loading.classList.add('hidden');
                 
-                // Initialize all animations after load
-                setTimeout(initAnimations, 300);
-            }, 1500);
-        });
-
-        // =========================
-        // PARTICLE SYSTEM
-        // =========================
-        const particleContainer = document.getElementById('particles');
-        function createParticle() {
-            const particle = document.createElement('div');
-            particle.classList.add('particle');
-            
-            const size = Math.random() * 8 + 2 + 'px';
-            const left = Math.random() * 100 + '%';
-            const duration = Math.random() * 15 + 20 + 's';
-            const delay = Math.random() * 10 + 's';
-            
-            particle.style.width = size;
-            particle.style.height = size;
-            particle.style.left = left;
-            particle.style.animationDuration = duration;
-            particle.style.animationDelay = delay;
-            particle.style.opacity = Math.random() * 0.6 + 0.1;
-            
-            particleContainer.appendChild(particle);
-            
-            setTimeout(() => {
-                particle.remove();
-            }, parseFloat(duration) * 1000);
-        }
-
-        // Initial particles
-        for (let i = 0; i < 50; i++) {
-            setTimeout(() => createParticle(), Math.random() * 3000);
-        }
-
-        // Continuous generation
-        setInterval(createParticle, 500);
-
-        // =========================
-        // HEADER SCROLL EFFECT
-        // =========================
-        const mainHeader = document.getElementById('mainHeader');
-        window.addEventListener('scroll', function() {
-            if (window.scrollY > 100) {
-                mainHeader.classList.add('scrolled');
-            } else {
-                mainHeader.classList.remove('scrolled');
-            }
-        });
-
-        // =========================
-        // NAVIGATION SCROLL EFFECTS
-        // =========================
-        const mainNav = document.getElementById('mainNav');
-        const navLinks = mainNav.querySelectorAll('a');
-        
-        function updateActiveNav() {
-            const sections = document.querySelectorAll('section');
-            let current = '';
-            
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                const sectionHeight = section.clientHeight;
-                
-                if (window.scrollY >= (sectionTop - 300)) {
-                    current = section.getAttribute('id');
-                }
-            });
-            
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href') === `#${current}`) {
-                    link.classList.add('active');
-                }
-            });
-        }
-        
-        window.addEventListener('scroll', updateActiveNav);
-
-        // =========================
-        // SMOOTH SCROLL FOR NAVIGATION
-        // =========================
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                
-                const targetId = this.getAttribute('href');
-                if (targetId === '#') return;
-                
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 100,
-                        behavior: 'smooth'
+                // Remove from DOM after animation completes
+                setTimeout(() => {
+                    loading.style.display = 'none';
+                    
+                    // Trigger initial animations
+                    document.body.style.opacity = '1';
+                    document.body.style.transform = 'translateY(0)';
+                    
+                    // Animate hero elements sequentially
+                    const heroElements = document.querySelectorAll('.hero-text > *');
+                    heroElements.forEach((el, index) => {
+                        el.style.animationDelay = `${index * 0.2}s`;
+                        el.classList.add('animate-on-scroll');
+                        el.classList.add('visible');
                     });
-                }
-            });
+                    
+                    // Initialize floating bubbles
+                    initBubbles();
+                }, 500);
+            }, 1500);
+            
+            // Initial body styles
+            document.body.style.opacity = '0';
+            document.body.style.transform = 'translateY(20px)';
+            document.body.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
         });
 
-        // =========================
-        // MOBILE NAVIGATION TOGGLE
-        // =========================
-        const mobileNavToggle = document.getElementById('mobileNavToggle');
-        const mobileNavMenu = document.getElementById('mobileNavMenu');
-        
-        mobileNavToggle.addEventListener('click', function() {
-            mobileNavMenu.classList.toggle('active');
-            this.innerHTML = mobileNavMenu.classList.contains('active') ? 
-                '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
-        });
-
-        // Close mobile menu when clicking outside
-        document.addEventListener('click', function(event) {
-            if (!mobileNavToggle.contains(event.target) && !mobileNavMenu.contains(event.target)) {
-                mobileNavMenu.classList.remove('active');
-                mobileNavToggle.innerHTML = '<i class="fas fa-bars"></i>';
+        // 2. FLOATING BUBBLES GENERATOR
+        function initBubbles() {
+            const bubbleContainer = document.getElementById('bubbles');
+            
+            function createBubble() {
+                const bubble = document.createElement('div');
+                bubble.classList.add('bubble');
+                
+                const size = Math.random() * 80 + 20 + 'px';
+                const left = Math.random() * 100 + '%';
+                const duration = Math.random() * 10 + 15 + 's';
+                const delay = Math.random() * 5 + 's';
+                
+                bubble.style.width = size;
+                bubble.style.height = size;
+                bubble.style.left = left;
+                bubble.style.animationDuration = duration;
+                bubble.style.animationDelay = delay;
+                bubble.style.opacity = Math.random() * 0.5 + 0.1;
+                bubble.style.backgroundColor = `rgba(${Math.random() * 100}, ${Math.random() * 200}, 255, 0.1)`;
+                
+                bubbleContainer.appendChild(bubble);
+                
+                setTimeout(() => {
+                    bubble.remove();
+                }, (parseFloat(duration) + parseFloat(delay)) * 1000);
             }
-        });
+            
+            // Initial bubbles
+            for (let i = 0; i < 30; i++) {
+                setTimeout(() => createBubble(), Math.random() * 2000);
+            }
+            
+            // Continuous generation
+            setInterval(createBubble, 800);
+        }
 
-        // =========================
-        // SCROLL REVEAL ANIMATIONS
-        // =========================
-        function initAnimations() {
+        // 3. 3D PARALLAX EFFECTS
+        function initParallax() {
+            const heroSection = document.getElementById('hero');
+            const heroImage = document.getElementById('heroImage');
+            const heroBgLayer = document.getElementById('heroBgLayer');
+            
+            if (!heroSection || !heroImage || !heroBgLayer) return;
+            
+            heroSection.addEventListener('mousemove', (e) => {
+                const { clientX, clientY } = e;
+                const { innerWidth, innerHeight } = window;
+                
+                // Calculate mouse position percentages
+                const xPercent = (clientX / innerWidth - 0.5) * 2;
+                const yPercent = (clientY / innerHeight - 0.5) * 2;
+                
+                // 3D transform for hero image
+                heroImage.style.transform = `
+                    rotateY(${xPercent * 10}deg)
+                    rotateX(${-yPercent * 10}deg)
+                    translateY(${yPercent * 20}px)
+                `;
+                
+                // Parallax effect for background layer
+                heroBgLayer.style.transform = `
+                    translateZ(-200px)
+                    rotateY(${xPercent * 5}deg)
+                    rotateX(${-yPercent * 5}deg)
+                    scale(${1.3 - Math.abs(xPercent) * 0.05})
+                `;
+                
+                // Floating badges effect
+                const floatingBadges = document.querySelectorAll('.floating-badge');
+                floatingBadges.forEach((badge, index) => {
+                    const delay = index * 0.1;
+                    badge.style.transform = `
+                        translateZ(80px)
+                        translateX(${xPercent * 30}px)
+                        translateY(${yPercent * 30}px)
+                        rotate(${xPercent * 5}deg)
+                    `;
+                });
+                
+                // Social icons effect
+                const socialIcons = document.querySelectorAll('.hs');
+                socialIcons.forEach((icon, index) => {
+                    const delay = index * 0.02;
+                    icon.style.transform = `
+                        translateX(${xPercent * 10}px)
+                        translateY(${yPercent * 10}px)
+                    `;
+                });
+            });
+            
+            // Reset on mouse leave
+            heroSection.addEventListener('mouseleave', () => {
+                heroImage.style.transform = 'rotateY(0deg) rotateX(0deg) translateY(0)';
+                heroBgLayer.style.transform = 'translateZ(-200px) rotateY(0deg) rotateX(0deg) scale(1.3)';
+                
+                document.querySelectorAll('.floating-badge').forEach(badge => {
+                    badge.style.transform = 'translateZ(80px)';
+                });
+                
+                document.querySelectorAll('.hs').forEach(icon => {
+                    icon.style.transform = 'translate(0, 0)';
+                });
+            });
+        }
+
+        // 4. SCROLL REVEAL ANIMATIONS
+        function initScrollAnimations() {
             const observerOptions = {
                 threshold: 0.1,
                 rootMargin: '0px 0px -50px 0px'
             };
-
+            
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         entry.target.classList.add('visible');
                         
-                        // Section entrance
-                        if (entry.target.classList.contains('section')) {
-                            entry.target.classList.add('visible');
-                        }
-                        
-                        // Staggered animations
-                        if (entry.target.classList.contains('animate-on-scroll')) {
-                            const delay = entry.target.dataset.delay || '0';
-                            entry.target.style.transitionDelay = `${delay}s`;
+                        // Add staggered animation for gallery items
+                        if (entry.target.classList.contains('gallery-item')) {
+                            entry.target.style.animationDelay = `${entry.target.dataset.delay || '0'}s`;
                         }
                     }
                 });
             }, observerOptions);
-
+            
             // Observe all animated elements
             document.querySelectorAll('.animate-on-scroll').forEach((el, index) => {
                 el.dataset.delay = (index * 0.1).toFixed(1);
                 observer.observe(el);
             });
-
-            // Observe sections
-            document.querySelectorAll('section').forEach((section) => {
-                observer.observe(section);
-            });
-
-            // Gallery items stagger effect
-            document.querySelectorAll('.gallery-item').forEach((item, index) => {
-                item.style.animationDelay = (index * 0.15) + 's';
+            
+            // Observe timeline items specifically
+            document.querySelectorAll('.timeline-item').forEach((item, index) => {
+                item.dataset.delay = (index * 0.2).toFixed(1);
+                observer.observe(item);
             });
         }
 
-        // =========================
-        // OFFICIAL CONTACT FORM
-        // =========================
-        const contactForm = document.getElementById('officialContactForm');
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Get form values
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const phone = document.getElementById('phone').value;
-            const subject = document.getElementById('subject').value;
-            const message = document.getElementById('message').value;
-            
-            // Here you would typically send the form data to a server
-            // For now, we'll show a success message
-            const submitBtn = contactForm.querySelector('.submit-btn');
-            const originalText = submitBtn.innerHTML;
-            
-            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
-            submitBtn.disabled = true;
-            
-            setTimeout(() => {
-                alert(`Thank you, ${name}! Your message has been sent successfully. I will get back to you soon.`);
-                contactForm.reset();
-                submitBtn.innerHTML = originalText;
-                submitBtn.disabled = false;
-            }, 2000);
-        });
-
-        // =========================
-        // 3D PARALLAX EFFECT ON HERO
-        // =========================
-        const heroSection = document.getElementById('hero');
-        const circlePortrait = document.querySelector('.circle-portrait');
-        const portraitBadges = document.querySelectorAll('.portrait-badge');
-        
-        heroSection.addEventListener('mousemove', (e) => {
-            const { clientX, clientY } = e;
-            const { innerWidth, innerHeight } = window;
-
-            // Calculate mouse position percentages
-            const xPercent = (clientX / innerWidth - 0.5) * 2;
-            const yPercent = (clientY / innerHeight - 0.5) * 2;
-
-            // 3D transform for circle portrait
-            circlePortrait.style.transform = `
-                rotateY(${xPercent * 10}deg)
-                rotateX(${-yPercent * 10}deg)
-                translateY(${yPercent * 20}px)
-            `;
-
-            // Parallax effect for badges
-            portraitBadges.forEach((badge, index) => {
-                const delay = index * 0.1;
-                badge.style.transform = `
-                    translateX(${xPercent * 20}px)
-                    translateY(${yPercent * 20}px)
-                `;
-            });
-
-            // Social icons effect
-            const socialIcons = document.querySelectorAll('.hs');
-            socialIcons.forEach((icon, index) => {
-                const delay = index * 0.02;
-                icon.style.transform = `
-                    translateX(${xPercent * 10}px)
-                    translateY(${yPercent * 10}px)
-                    rotateY(${xPercent * 5}deg)
-                `;
-            });
-        });
-
-        // Reset on mouse leave
-        heroSection.addEventListener('mouseleave', () => {
-            circlePortrait.style.transform = 'rotateY(0deg) rotateX(0deg) translateY(0)';
-            
-            portraitBadges.forEach(badge => {
-                badge.style.transform = 'translate(0, 0)';
-            });
-            
-            document.querySelectorAll('.hs').forEach(icon => {
-                icon.style.transform = 'translate(0, 0) rotateY(0deg)';
-            });
-        });
-
-        // =========================
-        // IMAGE LOADING EFFECT
-        // =========================
-        const images = document.querySelectorAll('img');
-        images.forEach(img => {
-            img.addEventListener('load', function() {
-                this.style.opacity = '1';
-                this.style.transform = 'scale(1)';
-            });
-
-            // Initial state
-            img.style.opacity = '0';
-            img.style.transform = 'scale(0.9)';
-            img.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
-        });
-
-        // =========================
-        // THEME RANDOMIZER (KEEPING COLORS)
-        // =========================
+        // 5. DYNAMIC THEME GENERATOR
         function randomizeTheme() {
-            const themes = [
-                { primary: '#6a11cb', secondary: '#2575fc', accent: '#ff007a' },
-                { primary: '#ff007a', secondary: '#ff8c00', accent: '#6a11cb' },
-                { primary: '#00c6ff', secondary: '#0072ff', accent: '#ff007a' },
-                { primary: '#2575fc', secondary: '#6a11cb', accent: '#ff8c00' }
-            ];
+            const hue1 = Math.floor(Math.random() * 360);
+            const hue2 = (hue1 + 120) % 360;
+            const hue3 = (hue1 + 240) % 360;
             
-            const randomTheme = themes[Math.floor(Math.random() * themes.length)];
             const root = document.documentElement;
             
             // Update CSS variables
-            root.style.setProperty('--gradient-primary', `linear-gradient(135deg, ${randomTheme.primary} 0%, ${randomTheme.secondary} 100%)`);
-            root.style.setProperty('--gradient-secondary', `linear-gradient(135deg, ${randomTheme.accent} 0%, #ff8c00 100%)`);
+            root.style.setProperty('--primary-hue', hue1);
+            root.style.setProperty('--secondary-hue', hue2);
             
             // Update orb colors
             const orbs = document.querySelectorAll('.orb');
-            orbs[0].style.background = randomTheme.primary;
-            orbs[1].style.background = randomTheme.secondary;
-            orbs[2].style.background = randomTheme.accent;
+            if (orbs[0]) orbs[0].style.background = `hsl(${hue1}, 70%, 50%)`;
+            if (orbs[1]) orbs[1].style.background = `hsl(${hue2}, 70%, 50%)`;
+            if (orbs[2]) orbs[2].style.background = `hsl(${hue3}, 70%, 50%)`;
             
-            // Show notification
-            const notification = document.createElement('div');
-            notification.style.position = 'fixed';
-            notification.style.top = '100px';
-            notification.style.right = '30px';
-            notification.style.background = 'rgba(255, 255, 255, 0.1)';
-            notification.style.backdropFilter = 'blur(20px)';
-            notification.style.color = 'white';
-            notification.style.padding = '15px 25px';
-            notification.style.borderRadius = '15px';
-            notification.style.zIndex = '9999';
-            notification.innerHTML = '<i class="fas fa-palette"></i> Theme Updated';
-            document.body.appendChild(notification);
+            // Update hero badge gradient
+            const heroBadge = document.querySelector('.hero-badge');
+            if (heroBadge) {
+                heroBadge.style.background = `linear-gradient(90deg, hsl(${hue1}, 100%, 50%), hsl(${hue2}, 100%, 50%))`;
+            }
             
-            setTimeout(() => {
-                notification.remove();
-            }, 2000);
+            // Update hero title gradient
+            const heroTitle = document.querySelector('.hero h1');
+            if (heroTitle) {
+                heroTitle.style.background = `linear-gradient(135deg, #fff 0%, hsl(${hue2}, 100%, 70%) 50%, hsl(${hue1}, 100%, 60%) 100%)`;
+            }
+            
+            // Update section title lines
+            const titleLines = document.querySelectorAll('.section-title::after');
+            
+            // Update timeline dots
+            const timelineDots = document.querySelectorAll('.timeline-dot');
+            timelineDots.forEach(dot => {
+                dot.style.boxShadow = `
+                    0 0 25px hsl(${hue2}, 100%, 60%),
+                    0 0 15px hsl(${hue2}, 100%, 60%),
+                    inset 0 0 10px rgba(255, 255, 255, 0.5)
+                `;
+            });
+            
+            // Add animation feedback
+            const themeBtn = document.querySelector('.theme-btn');
+            if (themeBtn) {
+                themeBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Transforming...';
+                
+                setTimeout(() => {
+                    themeBtn.innerHTML = '<i class="fas fa-magic"></i> Magic Theme';
+                    themeBtn.style.background = `linear-gradient(135deg, hsl(${hue1}, 100%, 50%), hsl(${hue2}, 100%, 50%))`;
+                }, 1000);
+            }
         }
 
-        // =========================
-        // PERFORMANCE OPTIMIZATION
-        // =========================
-        let ticking = false;
-        window.addEventListener('scroll', () => {
-            if (!ticking) {
-                window.requestAnimationFrame(() => {
-                    updateActiveNav();
-                    ticking = false;
+        // 6. SMOOTH SCROLL FOR NAVIGATION
+        function initSmoothScroll() {
+            document.querySelectorAll('.main-nav a, .footer-links a, .back-to-top').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    const href = this.getAttribute('href');
+                    
+                    // Skip if it's an external link or not an anchor
+                    if (!href || href.startsWith('http') || !href.startsWith('#')) return;
+                    
+                    e.preventDefault();
+                    
+                    const targetId = href;
+                    const targetElement = document.querySelector(targetId);
+                    
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 100,
+                            behavior: 'smooth'
+                        });
+                    }
                 });
-                ticking = true;
+            });
+        }
+
+        // 7. NAVIGATION ACTIVE STATE
+        function initActiveNav() {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('.main-nav a');
+            
+            function updateActiveNav() {
+                let current = '';
+                
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+                    
+                    if (scrollY >= (sectionTop - 150)) {
+                        current = section.getAttribute('id');
+                    }
+                });
+                
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    const href = link.getAttribute('href');
+                    
+                    if (href === `#${current}`) {
+                        link.classList.add('active');
+                        link.style.background = 'rgba(0, 198, 255, 0.2)';
+                        link.style.boxShadow = '0 5px 15px rgba(0, 198, 255, 0.3)';
+                    } else {
+                        link.style.background = '';
+                        link.style.boxShadow = '';
+                    }
+                });
+            }
+            
+            window.addEventListener('scroll', updateActiveNav);
+            updateActiveNav(); // Initial call
+        }
+
+        // 8. BACK TO TOP BUTTON
+        function initBackToTop() {
+            const backToTopBtn = document.getElementById('backToTop');
+            
+            if (!backToTopBtn) return;
+            
+            function toggleBackToTop() {
+                if (window.scrollY > 500) {
+                    backToTopBtn.classList.add('visible');
+                } else {
+                    backToTopBtn.classList.remove('visible');
+                }
+            }
+            
+            window.addEventListener('scroll', toggleBackToTop);
+            toggleBackToTop(); // Initial check
+        }
+
+        // 9. CONTACT FORM HANDLING
+        function initContactForm() {
+            const contactForm = document.getElementById('messageForm');
+            
+            if (!contactForm) return;
+            
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Get form data
+                const formData = new FormData(this);
+                const formObject = Object.fromEntries(formData.entries());
+                
+                // Basic validation
+                if (!formObject.name || !formObject.email || !formObject.message) {
+                    alert('Please fill in all required fields.');
+                    return;
+                }
+                
+                // In a real application, you would send this data to a server
+                // For now, we'll simulate a successful submission
+                
+                // Show success message
+                const submitBtn = contactForm.querySelector('.submit-btn');
+                const originalText = submitBtn.innerHTML;
+                
+                submitBtn.innerHTML = '<i class="fas fa-check"></i> Message Sent!';
+                submitBtn.style.background = 'linear-gradient(135deg, #00c6ff, #0072ff)';
+                
+                // Reset form
+                contactForm.reset();
+                
+                // Reset button after 3 seconds
+                setTimeout(() => {
+                    submitBtn.innerHTML = originalText;
+                    submitBtn.style.background = 'linear-gradient(135deg, #6a11cb, #2575fc)';
+                }, 3000);
+                
+                // Log the form data (for demonstration)
+                console.log('Form submitted:', formObject);
+            });
+        }
+
+        // 10. IMAGE LAZY LOADING AND EFFECTS
+        function initImageEffects() {
+            const images = document.querySelectorAll('img');
+            
+            images.forEach(img => {
+                // Add loading effect
+                img.addEventListener('load', function() {
+                    this.style.opacity = '1';
+                    this.style.transform = 'scale(1)';
+                });
+                
+                // Initial state for fade-in effect
+                img.style.opacity = '0';
+                img.style.transform = 'scale(0.95)';
+                img.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                
+                // Load image if not already loaded
+                if (img.complete) {
+                    img.dispatchEvent(new Event('load'));
+                }
+            });
+        }
+
+        // 11. MOBILE MENU ENHANCEMENT
+        function initMobileOptimizations() {
+            function handleMobileView() {
+                const isMobile = window.innerWidth <= 768;
+                
+                if (isMobile) {
+                    // Add touch effects for mobile
+                    document.querySelectorAll('.glass-card, .gallery-item, .expertise-card').forEach(element => {
+                        element.addEventListener('touchstart', function() {
+                            this.style.transform = 'scale(0.98)';
+                        });
+                        
+                        element.addEventListener('touchend', function() {
+                            this.style.transform = 'scale(1)';
+                        });
+                    });
+                    
+                    // Optimize animations for mobile
+                    document.documentElement.style.setProperty('--transition', 'cubic-bezier(0.4, 0, 0.2, 1)');
+                } else {
+                    // Reset for desktop
+                    document.documentElement.style.setProperty('--transition', 'cubic-bezier(0.23, 1, 0.32, 1)');
+                }
+            }
+            
+            // Initial check
+            handleMobileView();
+            
+            // On resize
+            let resizeTimeout;
+            window.addEventListener('resize', () => {
+                clearTimeout(resizeTimeout);
+                resizeTimeout = setTimeout(handleMobileView, 250);
+            });
+        }
+
+        // 12. PERFORMANCE OPTIMIZATION
+        function initPerformanceOptimizations() {
+            let ticking = false;
+            
+            window.addEventListener('scroll', () => {
+                if (!ticking) {
+                    window.requestAnimationFrame(() => {
+                        // Update scroll-based functions
+                        updateBackToTop();
+                        updateActiveNav();
+                        ticking = false;
+                    });
+                    ticking = true;
+                }
+            });
+            
+            // Debounced scroll functions
+            function updateBackToTop() {
+                const backToTopBtn = document.getElementById('backToTop');
+                if (backToTopBtn && window.scrollY > 500) {
+                    backToTopBtn.classList.add('visible');
+                } else if (backToTopBtn) {
+                    backToTopBtn.classList.remove('visible');
+                }
+            }
+        }
+
+        // 13. KEYBOARD NAVIGATION
+        function initKeyboardNavigation() {
+            document.addEventListener('keydown', (e) => {
+                // Escape key closes any modals (future feature)
+                if (e.key === 'Escape') {
+                    // Close any open modals or menus
+                }
+                
+                // Tab key navigation enhancement
+                if (e.key === 'Tab') {
+                    // Add focus styles for keyboard users
+                    document.body.classList.add('keyboard-navigation');
+                }
+            });
+            
+            // Remove keyboard navigation class on mouse click
+            document.addEventListener('mousedown', () => {
+                document.body.classList.remove('keyboard-navigation');
+            });
+        }
+
+        // 14. INITIALIZE ALL FUNCTIONS
+        function initializeAll() {
+            initParallax();
+            initScrollAnimations();
+            initSmoothScroll();
+            initActiveNav();
+            initBackToTop();
+            initContactForm();
+            initImageEffects();
+            initMobileOptimizations();
+            initPerformanceOptimizations();
+            initKeyboardNavigation();
+            
+            // Add CSS for keyboard navigation
+            const style = document.createElement('style');
+            style.textContent = `
+                .keyboard-navigation *:focus {
+                    outline: 2px solid #00c6ff !important;
+                    outline-offset: 2px !important;
+                }
+            `;
+            document.head.appendChild(style);
+            
+            // Initialize tooltips for navigation
+            document.querySelectorAll('.main-nav a').forEach(link => {
+                link.addEventListener('focus', () => {
+                    link.classList.add('focused');
+                });
+                
+                link.addEventListener('blur', () => {
+                    link.classList.remove('focused');
+                });
+            });
+        }
+
+        // 15. ERROR HANDLING AND FALLBACKS
+        window.addEventListener('error', function(e) {
+            console.error('Error occurred:', e.error);
+            
+            // Fallback for missing images
+            if (e.target.tagName === 'IMG') {
+                e.target.style.display = 'none';
+                console.warn('Image failed to load:', e.target.src);
             }
         });
 
-        // =========================
-        // INITIAL LOAD ANIMATIONS
-        // =========================
-        window.addEventListener('load', () => {
-            // Animate hero elements sequentially
-            const heroElements = document.querySelectorAll('.hero-text > *');
-            heroElements.forEach((el, index) => {
-                el.style.animationDelay = `${index * 0.2}s`;
-                el.classList.add('animate-on-scroll');
+        // Initialize everything when DOM is ready
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initializeAll);
+        } else {
+            initializeAll();
+        }
+
+        // 16. ADDITIONAL ENHANCEMENTS
+        // Print functionality
+        document.addEventListener('keydown', (e) => {
+            if (e.ctrlKey && e.key === 'p') {
+                e.preventDefault();
+                alert('Professional profile of Adv. Mumtaz Alam Bazai. For official documents, please contact via email.');
+            }
+        });
+
+        // Copy email to clipboard
+        document.querySelectorAll('a[href^="mailto:"]').forEach(emailLink => {
+            emailLink.addEventListener('click', function(e) {
+                // Allow default mail client to open
+                console.log('Opening email client for:', this.href);
             });
         });
 
-        // =========================
-        // PRINT FUNCTIONALITY
-        // =========================
-        const printBtn = document.createElement('button');
-        printBtn.innerHTML = '<i class="fas fa-print"></i>';
-        printBtn.style.position = 'fixed';
-        printBtn.style.bottom = '30px';
-        printBtn.style.left = '30px';
-        printBtn.style.zIndex = '1000';
-        printBtn.style.width = '50px';
-        printBtn.style.height = '50px';
-        printBtn.style.borderRadius = '50%';
-        printBtn.style.background = 'var(--gradient-primary)';
-        printBtn.style.color = 'white';
-        printBtn.style.border = 'none';
-        printBtn.style.cursor = 'pointer';
-        printBtn.style.boxShadow = '0 0 20px rgba(106, 17, 203, 0.5)';
-        printBtn.title = 'Print Page';
-        printBtn.addEventListener('click', () => window.print());
-        document.body.appendChild(printBtn);
+        // Social media share functionality
+        function shareProfile(platform) {
+            const url = window.location.href;
+            const title = 'Adv. Mumtaz Alam Bazai - Advocate High Court & Global Shaper';
+            const text = 'Check out the professional profile of Adv. Mumtaz Alam Bazai, Advocate High Court and Global Shaper at World Economic Forum.';
+            
+            let shareUrl = '';
+            
+            switch(platform) {
+                case 'twitter':
+                    shareUrl = `https://twitter.com/intent/tweet?url=${encodeURIComponent(url)}&text=${encodeURIComponent(text)}`;
+                    break;
+                case 'linkedin':
+                    shareUrl = `https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(url)}&title=${encodeURIComponent(title)}`;
+                    break;
+                case 'facebook':
+                    shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`;
+                    break;
+                case 'whatsapp':
+                    shareUrl = `https://wa.me/?text=${encodeURIComponent(text + ' ' + url)}`;
+                    break;
+            }
+            
+            if (shareUrl) {
+                window.open(shareUrl, '_blank', 'width=600,height=400');
+            }
+        }
 
-        console.log('%c MUMTAZ ALAM BAZAI PORTFOLIO %c v2.0.0 ', 'background: #6a11cb; color: #fff; padding: 5px 0;', 'background: #2575fc; color: #fff; padding: 5px 0;');
-        console.log('%c Website loaded successfully! ', 'background: #00c6ff; color: #000; padding: 5px;');
+        // Add share buttons dynamically (optional enhancement)
+        setTimeout(() => {
+            const shareContainer = document.createElement('div');
+            shareContainer.className = 'share-container';
+            shareContainer.innerHTML = `
+                <button onclick="shareProfile('twitter')" title="Share on Twitter">
+                    <i class="fab fa-twitter"></i>
+                </button>
+                <button onclick="shareProfile('linkedin')" title="Share on LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </button>
+                <button onclick="shareProfile('facebook')" title="Share on Facebook">
+                    <i class="fab fa-facebook"></i>
+                </button>
+                <button onclick="shareProfile('whatsapp')" title="Share on WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </button>
+            `;
+            
+            // Add some basic styles
+            const shareStyles = document.createElement('style');
+            shareStyles.textContent = `
+                .share-container {
+                    position: fixed;
+                    bottom: 100px;
+                    right: 30px;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                    z-index: 998;
+                }
+                
+                .share-container button {
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                    background: rgba(255, 255, 255, 0.1);
+                    border: 1px solid rgba(255, 255, 255, 0.2);
+                    color: white;
+                    font-size: 20px;
+                    cursor: pointer;
+                    transition: all 0.3s ease;
+                    backdrop-filter: blur(10px);
+                }
+                
+                .share-container button:hover {
+                    transform: scale(1.1);
+                    background: rgba(0, 198, 255, 0.2);
+                }
+                
+                @media (max-width: 768px) {
+                    .share-container {
+                        bottom: 80px;
+                        right: 20px;
+                    }
+                    
+                    .share-container button {
+                        width: 45px;
+                        height: 45px;
+                        font-size: 18px;
+                    }
+                }
+            `;
+            
+            document.head.appendChild(shareStyles);
+            document.body.appendChild(shareContainer);
+        }, 3000);
+
+        // 17. ANALYTICS AND VISITOR TRACKING (Basic)
+        window.addEventListener('load', () => {
+            // Track page views (in a real implementation, this would connect to Google Analytics)
+            console.log('Page loaded:', {
+                url: window.location.href,
+                timestamp: new Date().toISOString(),
+                userAgent: navigator.userAgent
+            });
+            
+            // Track time spent on page
+            let pageLoadTime = Date.now();
+            
+            window.addEventListener('beforeunload', () => {
+                const timeSpent = Date.now() - pageLoadTime;
+                console.log('Time spent on page:', Math.round(timeSpent / 1000), 'seconds');
+            });
+        });
+
+        // 18. ACCESSIBILITY ENHANCEMENTS
+        document.addEventListener('DOMContentLoaded', () => {
+            // Add ARIA labels to social icons
+            document.querySelectorAll('.social-btn, .hs').forEach(icon => {
+                const title = icon.getAttribute('title');
+                if (title) {
+                    icon.setAttribute('aria-label', title);
+                }
+            });
+            
+            // Ensure all images have alt text
+            document.querySelectorAll('img').forEach(img => {
+                if (!img.hasAttribute('alt')) {
+                    img.setAttribute('alt', 'Image related to Adv. Mumtaz Alam Bazai');
+                }
+            });
+            
+            // Add skip to content link for screen readers
+            const skipLink = document.createElement('a');
+            skipLink.href = '#main-content';
+            skipLink.className = 'skip-to-content';
+            skipLink.textContent = 'Skip to main content';
+            skipLink.style.cssText = `
+                position: absolute;
+                top: -40px;
+                left: 0;
+                background: #000;
+                color: white;
+                padding: 8px;
+                z-index: 9999;
+            `;
+            
+            document.body.insertBefore(skipLink, document.body.firstChild);
+            
+            // Add id to main content
+            const mainContent = document.querySelector('.hero');
+            if (mainContent) {
+                mainContent.id = 'main-content';
+            }
+        });
+
+        // 19. OFFLINE DETECTION
+        window.addEventListener('offline', () => {
+            // Show offline message
+            const offlineMessage = document.createElement('div');
+            offlineMessage.id = 'offline-message';
+            offlineMessage.textContent = 'You are currently offline. Some features may be limited.';
+            offlineMessage.style.cssText = `
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                background: #ff5500;
+                color: white;
+                text-align: center;
+                padding: 10px;
+                z-index: 9999;
+                font-weight: bold;
+            `;
+            
+            document.body.appendChild(offlineMessage);
+        });
+        
+        window.addEventListener('online', () => {
+            // Remove offline message
+            const offlineMessage = document.getElementById('offline-message');
+            if (offlineMessage) {
+                offlineMessage.remove();
+            }
+        });
+
+        // 20. FINAL INITIALIZATION
+        // Export functions to global scope for HTML onclick handlers
+        window.randomizeTheme = randomizeTheme;
+        window.shareProfile = shareProfile;
     </script>
 </body>
 </html>
