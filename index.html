@@ -29,7 +29,10 @@
             --gradient-primary: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
             --gradient-secondary: linear-gradient(135deg, #ff007a 0%, #ff8c00 100%);
             --gradient-accent: linear-gradient(135deg, #00c6ff 0%, #0072ff 100%);
-            --matrix-color: rgba(0, 198, 255, 0.6);
+            --gradient-rainbow: linear-gradient(90deg, #ff007a, #ff8c00, #ffff00, #00ff00, #00ffff, #0072ff, #6a11cb);
+            --gradient-gold: linear-gradient(135deg, #FFD700 0%, #FFA500 50%, #FF8C00 100%);
+            --gradient-silver: linear-gradient(135deg, #C0C0C0 0%, #E8E8E8 50%, #A0A0A0 100%);
+            --gradient-emerald: linear-gradient(135deg, #00ff88 0%, #00cc66 50%, #00994c 100%);
         }
 
         * {
@@ -59,51 +62,7 @@
         }
 
         /* =========================
-           MATRIX RAIN BACKGROUND
-        ========================= */
-        .matrix-container {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -5;
-            opacity: 0.15;
-            pointer-events: none;
-            overflow: hidden;
-        }
-
-        .matrix-column {
-            position: absolute;
-            top: -100px;
-            font-family: 'Courier New', monospace;
-            font-size: 16px;
-            color: var(--matrix-color);
-            text-shadow: 0 0 5px var(--matrix-color);
-            animation: matrixRain linear infinite;
-            animation-duration: calc(15s + var(--speed) * 1s);
-            animation-delay: calc(var(--delay) * 1s);
-        }
-
-        @keyframes matrixRain {
-            0% {
-                transform: translateY(-100px);
-                opacity: 0;
-            }
-            5% {
-                opacity: 1;
-            }
-            95% {
-                opacity: 1;
-            }
-            100% {
-                transform: translateY(100vh);
-                opacity: 0;
-            }
-        }
-
-        /* =========================
-           DYNAMIC ANIMATED BACKGROUND
+           HYPER-DYNAMIC ANIMATED BACKGROUND
         ========================= */
         .fluid-bg {
             position: fixed;
@@ -111,11 +70,13 @@
             left: 0;
             width: 100%;
             height: 100%;
-            z-index: -4;
+            z-index: -3;
             background: 
                 radial-gradient(circle at 20% 20%, rgba(26, 26, 46, 0.8) 0%, transparent 50%),
                 radial-gradient(circle at 80% 80%, rgba(0, 198, 255, 0.1) 0%, transparent 50%),
                 radial-gradient(circle at 40% 60%, rgba(255, 0, 122, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 60% 30%, rgba(255, 140, 0, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 30% 70%, rgba(106, 17, 203, 0.1) 0%, transparent 50%),
                 #050510;
             overflow: hidden;
         }
@@ -126,7 +87,7 @@
             filter: blur(80px);
             opacity: 0.6;
             animation: floatOrb 25s infinite alternate ease-in-out;
-            z-index: -3;
+            z-index: -2;
         }
 
         .orb-1 {
@@ -170,6 +131,26 @@
             animation-delay: 15s;
         }
 
+        .orb-5 {
+            width: 35vw;
+            height: 35vw;
+            background: #00ff88;
+            top: 10%;
+            right: 5%;
+            animation-duration: 28s;
+            animation-delay: 8s;
+        }
+
+        .orb-6 {
+            width: 45vw;
+            height: 45vw;
+            background: #ff00ff;
+            bottom: 10%;
+            left: 40%;
+            animation-duration: 32s;
+            animation-delay: 12s;
+        }
+
         @keyframes floatOrb {
             0% { transform: translate(0, 0) scale(1) rotate(0deg); }
             25% { transform: translate(30px, -50px) scale(1.05) rotate(90deg); }
@@ -179,51 +160,13 @@
         }
 
         /* =========================
-           NEON LASER GRID
-        ========================= */
-        .laser-grid {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -3;
-            pointer-events: none;
-            opacity: 0.15;
-        }
-
-        .laser-line {
-            position: absolute;
-            background: linear-gradient(90deg, transparent, var(--matrix-color), transparent);
-            animation: laserScan 4s linear infinite;
-        }
-
-        .laser-line.horizontal {
-            width: 100%;
-            height: 1px;
-            left: 0;
-        }
-
-        .laser-line.vertical {
-            height: 100%;
-            width: 1px;
-            top: 0;
-        }
-
-        @keyframes laserScan {
-            0% { opacity: 0.3; }
-            50% { opacity: 1; }
-            100% { opacity: 0.3; }
-        }
-
-        /* =========================
-           FLOATING PARTICLES
+           ADVANCED FLOATING PARTICLES
         ========================= */
         .particles-container {
             position: fixed;
             width: 100%;
             height: 100%;
-            z-index: -2;
+            z-index: -1;
             pointer-events: none;
             overflow: hidden;
         }
@@ -234,6 +177,17 @@
             background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.1));
             animation: floatParticle 20s infinite linear;
             box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+        }
+
+        .particle.star {
+            background: radial-gradient(circle at 30% 30%, #FFD700, #FFA500);
+            box-shadow: 0 0 15px #FFD700;
+        }
+
+        .particle.diamond {
+            background: radial-gradient(circle at 30% 30%, #00ffff, #0072ff);
+            box-shadow: 0 0 15px #00ffff;
+            clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
         }
 
         @keyframes floatParticle {
@@ -254,31 +208,40 @@
         }
 
         /* =========================
-           CUSTOM SCROLLBAR
+           ADVANCED CUSTOM SCROLLBAR
         ========================= */
         ::-webkit-scrollbar {
-            width: 12px;
+            width: 16px;
         }
 
         ::-webkit-scrollbar-track {
             background: rgba(0, 0, 0, 0.3);
             backdrop-filter: blur(10px);
+            border-radius: 10px;
         }
 
         ::-webkit-scrollbar-thumb {
-            background: var(--gradient-primary);
-            border-radius: 6px;
-            border: 2px solid rgba(255, 255, 255, 0.1);
-            transition: all 0.3s ease;
+            background: var(--gradient-rainbow);
+            border-radius: 8px;
+            border: 3px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            animation: scrollThumbGlow 3s ease-in-out infinite;
+        }
+
+        @keyframes scrollThumbGlow {
+            0%, 100% { box-shadow: 0 0 10px rgba(255, 0, 122, 0.5); }
+            25% { box-shadow: 0 0 10px rgba(255, 140, 0, 0.5); }
+            50% { box-shadow: 0 0 10px rgba(0, 198, 255, 0.5); }
+            75% { box-shadow: 0 0 10px rgba(106, 17, 203, 0.5); }
         }
 
         ::-webkit-scrollbar-thumb:hover {
-            background: var(--gradient-secondary);
-            transform: scale(1.1);
+            transform: scale(1.15);
+            box-shadow: 0 0 25px rgba(255, 255, 255, 0.7);
         }
 
         /* =========================
-           TYPOGRAPHY
+           TYPOGRAPHY ENHANCEMENTS
         ========================= */
         h1, h2, h3, h4 {
             font-family: 'Playfair Display', serif;
@@ -293,10 +256,28 @@
             background-clip: text;
             -webkit-text-fill-color: transparent;
             text-fill-color: transparent;
+            position: relative;
+        }
+
+        .gradient-text::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: var(--gradient-primary);
+            border-radius: 2px;
+            animation: textUnderline 3s ease-in-out infinite;
+        }
+
+        @keyframes textUnderline {
+            0%, 100% { transform: scaleX(0.8); opacity: 0.7; }
+            50% { transform: scaleX(1); opacity: 1; }
         }
 
         /* =========================
-           DYNAMIC NAVIGATION (GLASS DOCK)
+           FLOATING NAVIGATION DOCK (ULTRA ENHANCED)
         ========================= */
         nav {
             position: fixed;
@@ -318,6 +299,9 @@
                 inset 0 1px 0 rgba(255, 255, 255, 0.1);
             transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             animation: slideUpNav 0.8s ease-out 0.5s both;
+            border-top: 2px solid transparent;
+            border-bottom: 2px solid transparent;
+            background-clip: padding-box;
         }
 
         @keyframes slideUpNav {
@@ -329,6 +313,30 @@
                 opacity: 1;
                 transform: translateX(-50%) translateY(0);
             }
+        }
+
+        nav::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: var(--gradient-rainbow);
+            border-radius: 62px;
+            z-index: -1;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        nav:hover::before {
+            opacity: 1;
+            animation: navBorderGlow 3s linear infinite;
+        }
+
+        @keyframes navBorderGlow {
+            0% { filter: hue-rotate(0deg); }
+            100% { filter: hue-rotate(360deg); }
         }
 
         nav.scrolled {
@@ -371,7 +379,30 @@
             border-radius: 50%;
         }
 
+        nav a::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: conic-gradient(from 0deg, #6a11cb, #2575fc, #ff007a, #ff8c00, #6a11cb);
+            border-radius: 50%;
+            z-index: -2;
+            opacity: 0;
+            animation: rotateConic 3s linear infinite;
+        }
+
+        @keyframes rotateConic {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
         nav a:hover::before {
+            opacity: 1;
+        }
+
+        nav a:hover::after {
             opacity: 1;
         }
 
@@ -392,38 +423,40 @@
                 0 0 15px rgba(255, 255, 255, 0.2);
         }
 
-        nav a::after {
-            content: attr(data-tooltip);
+        nav a .nav-text {
             position: absolute;
-            bottom: 65px;
+            bottom: -35px;
             left: 50%;
-            transform: translateX(-50%) scale(0);
-            background: rgba(255, 255, 255, 0.95);
-            color: #000;
-            padding: 8px 16px;
-            border-radius: 10px;
-            font-size: 13px;
+            transform: translateX(-50%);
+            font-size: 12px;
             font-weight: 700;
             opacity: 0;
-            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            pointer-events: none;
+            transition: opacity 0.3s ease;
             white-space: nowrap;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-            z-index: 100;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 4px 10px;
+            border-radius: 6px;
+            pointer-events: none;
         }
 
-        nav a:hover::after {
-            transform: translateX(-50%) scale(1);
+        nav a:hover .nav-text {
             opacity: 1;
         }
 
         /* =========================
-           THEME BUTTON
+           THEME CONTROLLER (ULTRA ENHANCED)
         ========================= */
-        .theme-btn {
+        .theme-controller {
             position: fixed;
             top: 35px;
             right: 35px;
+            z-index: 2000;
+            display: flex;
+            gap: 15px;
+            animation: slideDownBtn 0.8s ease-out 0.7s both;
+        }
+
+        .theme-btn {
             background: var(--gradient-secondary);
             border: none;
             color: white;
@@ -431,7 +464,6 @@
             border-radius: 35px;
             font-weight: 700;
             cursor: pointer;
-            z-index: 2000;
             box-shadow: 
                 0 0 30px rgba(255, 0, 122, 0.6),
                 0 8px 20px rgba(0, 0, 0, 0.4);
@@ -441,7 +473,22 @@
             gap: 10px;
             backdrop-filter: blur(10px);
             overflow: hidden;
-            animation: slideDownBtn 0.8s ease-out 0.7s both;
+            position: relative;
+        }
+
+        .theme-btn.magic {
+            background: var(--gradient-rainbow);
+            animation: rainbowGlow 2s linear infinite;
+        }
+
+        @keyframes rainbowGlow {
+            0% { filter: hue-rotate(0deg); }
+            100% { filter: hue-rotate(360deg); }
+        }
+
+        .theme-btn.gold {
+            background: var(--gradient-gold);
+            color: #000;
         }
 
         @keyframes slideDownBtn {
@@ -478,7 +525,7 @@
         }
 
         /* =========================
-           HERO SECTION (ULTRA ENHANCED)
+           HERO SECTION (ULTRA ENHANCED 3D)
         ========================= */
         .hero {
             min-height: 100vh;
@@ -588,6 +635,31 @@
             animation: badgeGlow 3s ease-in-out infinite, badgeFloat 6s ease-in-out infinite;
             position: relative;
             overflow: hidden;
+            border: 2px solid transparent;
+        }
+
+        .hero-badge::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: var(--gradient-rainbow);
+            border-radius: 35px;
+            z-index: -1;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            animation: rainbowBorder 3s linear infinite;
+        }
+
+        .hero-badge:hover::before {
+            opacity: 1;
+        }
+
+        @keyframes rainbowBorder {
+            0% { filter: hue-rotate(0deg); }
+            100% { filter: hue-rotate(360deg); }
         }
 
         @keyframes badgeGlow {
@@ -620,11 +692,30 @@
             transform: translateZ(50px);
             animation: titleShine 8s infinite linear;
             background-size: 200% auto;
+            position: relative;
         }
 
         @keyframes titleShine {
             0% { background-position: 0% center; }
             100% { background-position: 200% center; }
+        }
+
+        .hero h1::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--gradient-rainbow);
+            border-radius: 2px;
+            transform: scaleX(0.3);
+            animation: titleLine 4s ease-in-out infinite;
+        }
+
+        @keyframes titleLine {
+            0%, 100% { transform: scaleX(0.3); opacity: 0.5; }
+            50% { transform: scaleX(1); opacity: 1; }
         }
 
         .hero p {
@@ -637,6 +728,10 @@
             transform: translateZ(30px);
             position: relative;
             overflow: hidden;
+            background: rgba(0, 0, 0, 0.2);
+            padding: 25px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
         }
 
         .hero p::before {
@@ -679,6 +774,7 @@
             min-width: 200px;
             text-align: center;
             animation: btnEntrance 0.8s ease-out 0.8s both;
+            border: 2px solid transparent;
         }
 
         @keyframes btnEntrance {
@@ -702,6 +798,24 @@
             box-shadow: 
                 0 0 30px rgba(255, 255, 255, 0.5),
                 0 8px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: var(--gradient-rainbow);
+            border-radius: 37px;
+            z-index: -1;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .btn-primary:hover::before {
+            opacity: 1;
         }
 
         .btn-primary:hover {
@@ -746,7 +860,7 @@
         }
 
         /* =========================
-           PORTRAIT 3D CONTAINER (ENHANCED)
+           PORTRAIT 3D CONTAINER (ULTRA ENHANCED)
         ========================= */
         .hero-img-container {
             position: relative;
@@ -787,8 +901,8 @@
         }
 
         @keyframes bgPulse {
-            0%, 100% { opacity: 0.3; }
-            50% { opacity: 0.5; }
+            0% { filter: blur(15px) brightness(0.3); }
+            100% { filter: blur(20px) brightness(0.4); }
         }
 
         .hero-img-main {
@@ -801,7 +915,7 @@
             background: url('portrait.jpg.jpeg') center/cover no-repeat;
             border-radius: 25px;
             border: 3px solid rgba(255, 255, 255, 0.2);
-            transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             z-index: 50;
             animation: floatPortrait 9s ease-in-out infinite;
             overflow: visible;
@@ -853,8 +967,8 @@
         }
 
         @keyframes portraitShine {
-            0%, 100% { opacity: 0.5; }
-            50% { opacity: 1; }
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 0.7; }
         }
 
         .hero-img-frame {
@@ -876,8 +990,8 @@
         }
 
         @keyframes frameRotate {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+            0% { filter: hue-rotate(0deg); }
+            100% { filter: hue-rotate(360deg); }
         }
 
         .float-card {
@@ -900,6 +1014,8 @@
             z-index: 6;
             overflow: hidden;
             min-width: 220px;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
 
         .float-card::before {
@@ -917,11 +1033,19 @@
             left: 100%;
         }
 
+        .float-card:hover {
+            transform: translateZ(120px) scale(1.1);
+            box-shadow: 
+                0 30px 60px rgba(0, 0, 0, 0.6),
+                0 0 40px rgba(106, 17, 203, 0.5);
+        }
+
         .fc-1 {
             top: 5%;
             right: 8%;
             animation-delay: 0s;
             background: rgba(106, 17, 203, 0.15);
+            border-color: #6a11cb;
         }
 
         .fc-2 {
@@ -929,6 +1053,7 @@
             right: -5%;
             animation-delay: 2s;
             background: rgba(37, 117, 252, 0.15);
+            border-color: #2575fc;
         }
 
         .fc-3 {
@@ -936,6 +1061,7 @@
             right: 12%;
             animation-delay: 4s;
             background: rgba(255, 0, 122, 0.15);
+            border-color: #ff007a;
         }
 
         @keyframes floatCard {
@@ -951,10 +1077,16 @@
             font-size: 24px;
             color: #00c6ff;
             filter: drop-shadow(0 0 10px rgba(0, 198, 255, 0.5));
+            animation: iconPulse 2s ease-in-out infinite;
+        }
+
+        @keyframes iconPulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
         }
 
         /* =========================
-           HERO SOCIAL ICONS (3D MATRIX)
+           HERO SOCIAL ICONS (MATRIX GRID)
         ========================= */
         .hero-socials {
             display: grid;
@@ -1119,6 +1251,10 @@
             z-index: 1;
             transform: translateZ(40px);
             animation: titleEntrance 1s ease-out both;
+            background: linear-gradient(135deg, #fff 0%, #a5f3fc 30%, #6a11cb 70%, #ff007a 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
         @keyframes titleEntrance {
@@ -1147,10 +1283,12 @@
             0%, 100% { 
                 width: 150px;
                 opacity: 1;
+                transform: scaleX(1);
             }
             50% { 
                 width: 200px;
                 opacity: 0.8;
+                transform: scaleX(1.2);
             }
         }
 
@@ -1369,6 +1507,7 @@
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             position: relative;
             overflow: hidden;
+            cursor: pointer;
         }
 
         .skill-tag:hover {
@@ -1388,7 +1527,7 @@
         }
 
         /* =========================
-           3D GALLERY
+           ULTRA 3D GALLERY
         ========================= */
         .gallery-grid {
             display: grid;
@@ -1396,6 +1535,7 @@
             gap: 30px;
             padding: 20px;
             transform-style: preserve-3d;
+            perspective: 1000px;
         }
 
         .gallery-item {
@@ -1473,7 +1613,7 @@
         }
 
         /* =========================
-           THEMATIC AREAS
+           THEMATIC AREAS (ENHANCED)
         ========================= */
         .thematic-grid {
             display: flex;
@@ -1494,6 +1634,7 @@
             overflow: hidden;
             backdrop-filter: blur(10px);
             animation: tagFloat 6s ease-in-out infinite;
+            cursor: pointer;
         }
 
         .theme-tag:nth-child(odd) {
@@ -1529,6 +1670,7 @@
             transform: translateY(-8px) scale(1.1);
             box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
             border-width: 3px;
+            z-index: 10;
         }
 
         /* =========================
@@ -1632,7 +1774,7 @@
         }
 
         /* =========================
-           MISSION STATEMENT
+           MISSION STATEMENT (ULTRA ENHANCED)
         ========================= */
         .mission-card {
             background: linear-gradient(
@@ -1651,6 +1793,21 @@
             overflow: hidden;
             transform-style: preserve-3d;
             animation: missionGlow 5s ease-in-out infinite, missionFloat 8s ease-in-out infinite;
+            z-index: 1;
+        }
+
+        .mission-card::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: var(--gradient-rainbow);
+            border-radius: calc(var(--card-radius) + 4px);
+            z-index: -1;
+            opacity: 0.5;
+            animation: rainbowBorder 4s linear infinite;
         }
 
         @keyframes missionGlow {
@@ -1705,7 +1862,7 @@
         }
 
         /* =========================
-           FOOTER
+           FOOTER (ENHANCED)
         ========================= */
         footer {
             text-align: center;
@@ -1728,6 +1885,12 @@
             right: 0;
             height: 1px;
             background: linear-gradient(90deg, transparent, #6a11cb, #2575fc, #ff007a, #ff8c00, transparent);
+            animation: footerLine 3s ease-in-out infinite;
+        }
+
+        @keyframes footerLine {
+            0%, 100% { opacity: 0.5; }
+            50% { opacity: 1; }
         }
 
         footer::after {
@@ -1747,6 +1910,44 @@
         }
 
         /* =========================
+           FLOATING CRYSTALS
+        ========================= */
+        .floating-crystals {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .crystal {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(45deg, rgba(106, 17, 203, 0.3), rgba(37, 117, 252, 0.3));
+            clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+            animation: floatCrystal 20s infinite linear;
+            filter: blur(2px);
+        }
+
+        @keyframes floatCrystal {
+            0% {
+                transform: translateY(100vh) translateX(0) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 0.5;
+            }
+            90% {
+                opacity: 0.5;
+            }
+            100% {
+                transform: translateY(-100px) translateX(100px) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        /* =========================
            RESPONSIVE DESIGN
         ========================= */
         @media (max-width: 1400px) {
@@ -1762,18 +1963,13 @@
         }
 
         @media (max-width: 1200px) {
-            .hero-content {
-                grid-template-columns: 1fr;
-                text-align: center;
-                gap: 60px;
+            .hero-img-main {
+                width: 200px;
+                height: 270px;
+                top: 12%;
+                right: 2%;
             }
-
-            .hero-img-container {
-                height: 600px;
-                order: -1;
-                margin-top: 0;
-            }
-
+            
             .hero-img-main {
                 width: 230px;
                 height: 320px;
@@ -1792,8 +1988,18 @@
         }
 
         @media (max-width: 992px) {
+            .hero-img-main {
+                width: 180px;
+                height: 240px;
+                top: 10%;
+                right: 50%;
+                transform: translate(50%, -50%) translateZ(150px);
+            }
+
             .hero-img-container {
                 height: 550px;
+                order: -1;
+                margin-top: 0;
             }
 
             .hero-img-main {
@@ -1838,14 +2044,22 @@
             .section-title {
                 font-size: 3.2rem;
             }
+            
+            .theme-controller {
+                flex-direction: column;
+                align-items: flex-end;
+            }
         }
 
         @media (max-width: 768px) {
-            nav {
-                gap: 25px;
-                padding: 15px 25px;
+            .hero-img-main {
+                width: 160px;
+                height: 220px;
+                top: 10%;
+                right: 50%;
+                transform: translate(50%, -50%) translateZ(150px);
             }
-
+            
             nav a {
                 width: 42px;
                 height: 42px;
@@ -1961,16 +2175,26 @@
                 font-size: 1.5rem;
             }
 
-            /* Theme Button */
-            .theme-btn {
+            /* Theme Controller */
+            .theme-controller {
                 top: 25px;
                 right: 25px;
+            }
+            
+            .theme-btn {
                 padding: 12px 24px;
                 font-size: 15px;
             }
         }
 
         @media (max-width: 576px) {
+            .hero-img-main {
+                width: 140px;
+                height: 190px;
+                top: 12%;
+                right: 50%;
+            }
+
             .hero-buttons {
                 flex-direction: column;
                 gap: 20px;
@@ -2036,6 +2260,13 @@
         }
 
         @media (max-width: 400px) {
+            .hero-img-main {
+                width: 120px;
+                height: 170px;
+                top: 15%;
+                right: 50%;
+            }
+
             .hero-socials .hs {
                 width: 55px;
                 height: 55px;
@@ -2060,6 +2291,10 @@
 
             .hero h1 {
                 font-size: 2rem;
+            }
+            
+            .theme-controller {
+                right: 15px;
             }
         }
 
@@ -2098,7 +2333,7 @@
         }
 
         /* =========================
-           LOADING ANIMATION
+           ULTRA LOADING ANIMATION
         ========================= */
         .loader {
             position: fixed;
@@ -2121,23 +2356,72 @@
 
         .loader-content {
             text-align: center;
+            transform-style: preserve-3d;
         }
 
         .loader-spinner {
-            width: 80px;
-            height: 80px;
+            width: 100px;
+            height: 100px;
             border: 5px solid rgba(255, 255, 255, 0.1);
             border-top: 5px solid #6a11cb;
             border-right: 5px solid #2575fc;
             border-bottom: 5px solid #ff007a;
+            border-left: 5px solid #ff8c00;
             border-radius: 50%;
-            animation: spin 1.5s linear infinite;
+            animation: spin 1.5s linear infinite, colorRotate 3s linear infinite;
             margin: 0 auto 30px;
+            position: relative;
+        }
+
+        .loader-spinner::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            right: -10px;
+            bottom: -10px;
+            border: 5px solid transparent;
+            border-top: 5px solid #00c6ff;
+            border-radius: 50%;
+            animation: spin 2s linear infinite reverse;
         }
 
         @keyframes spin {
             0% { transform: rotate(0deg); }
             100% { transform: rotate(360deg); }
+        }
+
+        @keyframes colorRotate {
+            0% { 
+                border-top-color: #6a11cb;
+                border-right-color: #2575fc;
+                border-bottom-color: #ff007a;
+                border-left-color: #ff8c00;
+            }
+            25% { 
+                border-top-color: #ff8c00;
+                border-right-color: #6a11cb;
+                border-bottom-color: #2575fc;
+                border-left-color: #ff007a;
+            }
+            50% { 
+                border-top-color: #ff007a;
+                border-right-color: #ff8c00;
+                border-bottom-color: #6a11cb;
+                border-left-color: #2575fc;
+            }
+            75% { 
+                border-top-color: #2575fc;
+                border-right-color: #ff007a;
+                border-bottom-color: #ff8c00;
+                border-left-color: #6a11cb;
+            }
+            100% { 
+                border-top-color: #6a11cb;
+                border-right-color: #2575fc;
+                border-bottom-color: #ff007a;
+                border-left-color: #ff8c00;
+            }
         }
 
         .loader-text {
@@ -2146,11 +2430,12 @@
             font-weight: 600;
             letter-spacing: 2px;
             text-transform: uppercase;
-            background: linear-gradient(90deg, #6a11cb, #2575fc, #ff007a);
+            background: linear-gradient(90deg, #6a11cb, #2575fc, #ff007a, #ff8c00, #6a11cb);
             -webkit-background-clip: text;
             background-clip: text;
             -webkit-text-fill-color: transparent;
-            animation: loaderText 2s ease-in-out infinite;
+            animation: loaderText 2s ease-in-out infinite, textShimmer 3s ease-in-out infinite;
+            background-size: 200% auto;
         }
 
         @keyframes loaderText {
@@ -2158,58 +2443,95 @@
             50% { opacity: 1; }
         }
 
-        /* =========================
-           FLOATING CURSOR
-        ========================= */
-        .cursor {
-            position: fixed;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background: radial-gradient(circle, rgba(106, 17, 203, 0.3) 0%, transparent 70%);
-            pointer-events: none;
-            z-index: 9999;
-            transform: translate(-50%, -50%);
-            transition: width 0.3s, height 0.3s;
-            mix-blend-mode: screen;
+        @keyframes textShimmer {
+            0% { background-position: 0% center; }
+            100% { background-position: 200% center; }
         }
 
+        /* =========================
+           CURSOR EFFECTS
+        ========================= */
         .cursor-dot {
-            position: fixed;
             width: 8px;
             height: 8px;
-            background: #00c6ff;
+            background: #fff;
             border-radius: 50%;
+            position: fixed;
             pointer-events: none;
-            z-index: 10000;
-            transform: translate(-50%, -50%);
+            z-index: 9998;
+            mix-blend-mode: difference;
             transition: transform 0.1s;
-            box-shadow: 0 0 20px #00c6ff;
+        }
+
+        .cursor-ring {
+            width: 40px;
+            height: 40px;
+            border: 2px solid rgba(106, 17, 203, 0.8);
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            z-index: 9997;
+            mix-blend-mode: difference;
+            transition: all 0.2s ease-out;
         }
 
         /* =========================
-           SPARKLE EFFECT
+           SCROLL PROGRESS INDICATOR
         ========================= */
-        .sparkle {
-            position: absolute;
-            width: 4px;
+        .scroll-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
             height: 4px;
-            background: #fff;
-            border-radius: 50%;
-            pointer-events: none;
-            animation: sparkleFloat 2s linear forwards;
-            box-shadow: 0 0 10px #fff, 0 0 20px #fff;
+            background: transparent;
+            z-index: 9999;
         }
 
-        @keyframes sparkleFloat {
-            0% {
-                opacity: 1;
-                transform: translateY(0) rotate(0deg);
-            }
-            100% {
-                opacity: 0;
-                transform: translateY(-100px) rotate(360deg);
-            }
+        .scroll-progress-bar {
+            height: 100%;
+            background: var(--gradient-rainbow);
+            width: 0%;
+            transition: width 0.3s ease;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+        }
+
+        /* =========================
+           BACK TO TOP BUTTON
+        ========================= */
+        .back-to-top {
+            position: fixed;
+            bottom: 100px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background: var(--gradient-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            text-decoration: none;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            z-index: 999;
+            box-shadow: 0 10px 30px rgba(106, 17, 203, 0.5);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .back-to-top:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(106, 17, 203, 0.7);
+            background: var(--gradient-secondary);
         }
     </style>
 </head>
@@ -2223,8 +2545,19 @@
         </div>
     </div>
 
-    <!-- MATRIX RAIN BACKGROUND -->
-    <div class="matrix-container" id="matrix"></div>
+    <!-- CURSOR EFFECTS -->
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+
+    <!-- SCROLL PROGRESS -->
+    <div class="scroll-progress">
+        <div class="scroll-progress-bar" id="scrollProgress"></div>
+    </div>
+
+    <!-- BACK TO TOP -->
+    <a href="#hero" class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </a>
 
     <!-- DYNAMIC BACKGROUND -->
     <div class="fluid-bg">
@@ -2232,28 +2565,51 @@
         <div class="orb orb-2"></div>
         <div class="orb orb-3"></div>
         <div class="orb orb-4"></div>
+        <div class="orb orb-5"></div>
+        <div class="orb orb-6"></div>
     </div>
+    <div class="particles-container" id="particles"></div>
+    <div class="floating-crystals" id="crystals"></div>
 
-    <!-- NEON LASER GRID -->
-    <div class="laser-grid" id="laserGrid"></div>
-
-    <!-- FLOATING CURSOR -->
-    <div class="cursor" id="cursor"></div>
-    <div class="cursor-dot" id="cursorDot"></div>
-
-    <!-- THEME BUTTON -->
-    <button class="theme-btn" onclick="randomizeTheme()">
-        <i class="fas fa-magic"></i> Magic Theme
-    </button>
+    <!-- THEME CONTROLLER -->
+    <div class="theme-controller">
+        <button class="theme-btn magic" onclick="randomizeTheme()">
+            <i class="fas fa-magic"></i> Magic Theme
+        </button>
+        <button class="theme-btn gold" onclick="goldTheme()">
+            <i class="fas fa-crown"></i> Gold Theme
+        </button>
+        <button class="theme-btn" onclick="resetTheme()">
+            <i class="fas fa-redo"></i> Reset
+        </button>
+    </div>
 
     <!-- NAVIGATION -->
     <nav id="mainNav">
-        <a href="#hero" data-tooltip="Home"><i class="fas fa-home"></i></a>
-        <a href="#about" data-tooltip="About"><i class="fas fa-user"></i></a>
-        <a href="#career" data-tooltip="Legal"><i class="fas fa-gavel"></i></a>
-        <a href="#leadership" data-tooltip="Leadership"><i class="fas fa-globe"></i></a>
-        <a href="#gallery" data-tooltip="Gallery"><i class="fas fa-images"></i></a>
-        <a href="#contact" data-tooltip="Connect"><i class="fas fa-paper-plane"></i></a>
+        <a href="#hero" data-tooltip="Home">
+            <i class="fas fa-home"></i>
+            <span class="nav-text">Home</span>
+        </a>
+        <a href="#about" data-tooltip="About">
+            <i class="fas fa-user"></i>
+            <span class="nav-text">About</span>
+        </a>
+        <a href="#career" data-tooltip="Legal">
+            <i class="fas fa-gavel"></i>
+            <span class="nav-text">Legal</span>
+        </a>
+        <a href="#leadership" data-tooltip="Leadership">
+            <i class="fas fa-globe"></i>
+            <span class="nav-text">Leadership</span>
+        </a>
+        <a href="#gallery" data-tooltip="Gallery">
+            <i class="fas fa-images"></i>
+            <span class="nav-text">Gallery</span>
+        </a>
+        <a href="#contact" data-tooltip="Connect">
+            <i class="fas fa-paper-plane"></i>
+            <span class="nav-text">Connect</span>
+        </a>
     </nav>
 
     <!-- HERO SECTION -->
@@ -2587,89 +2943,25 @@
                 
                 // Initialize all animations after load
                 setTimeout(initAnimations, 300);
-            }, 1500);
+            }, 2000);
         });
 
         // =========================
-        // MATRIX RAIN BACKGROUND
+        // PARTICLE SYSTEM (ENHANCED)
         // =========================
-        const matrixContainer = document.getElementById('matrix');
-        const characters = '01';
-        
-        function createMatrixRain() {
-            for (let i = 0; i < 50; i++) {
-                const column = document.createElement('div');
-                column.classList.add('matrix-column');
-                
-                const left = Math.random() * 100;
-                const speed = Math.random() * 5;
-                const delay = Math.random() * 10;
-                
-                column.style.left = `${left}%`;
-                column.style.setProperty('--speed', speed);
-                column.style.setProperty('--delay', delay);
-                
-                // Create characters in column
-                for (let j = 0; j < 30; j++) {
-                    const char = document.createElement('span');
-                    char.textContent = characters.charAt(Math.floor(Math.random() * characters.length));
-                    char.style.opacity = Math.random() * 0.5 + 0.5;
-                    char.style.animationDelay = `${Math.random() * 2}s`;
-                    column.appendChild(char);
-                }
-                
-                matrixContainer.appendChild(column);
-                
-                // Remove column after animation
-                setTimeout(() => {
-                    column.remove();
-                }, (speed + 15) * 1000);
-            }
-        }
-
-        // Continuous matrix rain
-        setInterval(createMatrixRain, 500);
-        createMatrixRain();
-
-        // =========================
-        // NEON LASER GRID
-        // =========================
-        const laserGrid = document.getElementById('laserGrid');
-        
-        function createLaserGrid() {
-            // Horizontal lines
-            for (let i = 0; i < 10; i++) {
-                const line = document.createElement('div');
-                line.classList.add('laser-line', 'horizontal');
-                line.style.top = `${(i + 1) * 10}%`;
-                line.style.animationDelay = `${i * 0.3}s`;
-                laserGrid.appendChild(line);
-            }
-            
-            // Vertical lines
-            for (let i = 0; i < 15; i++) {
-                const line = document.createElement('div');
-                line.classList.add('laser-line', 'vertical');
-                line.style.left = `${(i + 1) * 6.66}%`;
-                line.style.animationDelay = `${i * 0.2}s`;
-                laserGrid.appendChild(line);
-            }
-        }
-        
-        createLaserGrid();
-
-        // =========================
-        // PARTICLE SYSTEM
-        // =========================
-        const particleContainer = document.createElement('div');
-        particleContainer.classList.add('particles-container');
-        document.body.appendChild(particleContainer);
-
+        const particleContainer = document.getElementById('particles');
         function createParticle() {
             const particle = document.createElement('div');
             particle.classList.add('particle');
             
-            const size = Math.random() * 8 + 2 + 'px';
+            // Randomly assign star or diamond class
+            if (Math.random() > 0.7) {
+                particle.classList.add('star');
+            } else if (Math.random() > 0.5) {
+                particle.classList.add('diamond');
+            }
+            
+            const size = Math.random() * 10 + 2 + 'px';
             const left = Math.random() * 100 + '%';
             const duration = Math.random() * 15 + 20 + 's';
             const delay = Math.random() * 10 + 's';
@@ -2688,81 +2980,111 @@
             }, parseFloat(duration) * 1000);
         }
 
-        // Initial particles
-        for (let i = 0; i < 50; i++) {
+        // =========================
+        // CRYSTAL SYSTEM
+        // =========================
+        const crystalContainer = document.getElementById('crystals');
+        function createCrystal() {
+            const crystal = document.createElement('div');
+            crystal.classList.add('crystal');
+            
+            const size = Math.random() * 30 + 20 + 'px';
+            const left = Math.random() * 100 + '%';
+            const duration = Math.random() * 20 + 30 + 's';
+            const delay = Math.random() * 15 + 's';
+            
+            crystal.style.width = size;
+            crystal.style.height = size;
+            crystal.style.left = left;
+            crystal.style.animationDuration = duration;
+            crystal.style.animationDelay = delay;
+            crystal.style.opacity = Math.random() * 0.4 + 0.1;
+            crystal.style.filter = `hue-rotate(${Math.random() * 360}deg) blur(${Math.random() * 3}px)`;
+            
+            crystalContainer.appendChild(crystal);
+            
+            setTimeout(() => {
+                crystal.remove();
+            }, parseFloat(duration) * 1000);
+        }
+
+        // Initial particles and crystals
+        for (let i = 0; i < 80; i++) {
             setTimeout(() => createParticle(), Math.random() * 3000);
+            if (i % 3 === 0) {
+                setTimeout(() => createCrystal(), Math.random() * 3000);
+            }
         }
 
         // Continuous generation
         setInterval(createParticle, 500);
+        setInterval(createCrystal, 1500);
 
         // =========================
         // CURSOR EFFECTS
         // =========================
-        const cursor = document.getElementById('cursor');
         const cursorDot = document.getElementById('cursorDot');
-        
+        const cursorRing = document.getElementById('cursorRing');
+        let mouseX = 0, mouseY = 0;
+        let ringX = 0, ringY = 0;
+
         document.addEventListener('mousemove', (e) => {
-            cursor.style.left = e.clientX + 'px';
-            cursor.style.top = e.clientY + 'px';
-            cursorDot.style.left = e.clientX + 'px';
-            cursorDot.style.top = e.clientY + 'px';
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+            cursorDot.style.left = mouseX + 'px';
+            cursorDot.style.top = mouseY + 'px';
         });
 
-        // Interactive elements cursor effect
-        const interactiveElements = document.querySelectorAll('a, button, .glass-card, .gallery-item, .hero-btn, .theme-tag, .social-btn, .hs');
+        function animateCursor() {
+            ringX += (mouseX - ringX) * 0.1;
+            ringY += (mouseY - ringY) * 0.1;
+            
+            cursorRing.style.left = ringX + 'px';
+            cursorRing.style.top = ringY + 'px';
+            
+            requestAnimationFrame(animateCursor);
+        }
+        animateCursor();
+
+        // Cursor effects on interactive elements
+        const interactiveElements = document.querySelectorAll('a, button, .glass-card, .gallery-item, .theme-tag, .skill-tag, .float-card');
         
         interactiveElements.forEach(el => {
             el.addEventListener('mouseenter', () => {
-                cursor.style.width = '60px';
-                cursor.style.height = '60px';
-                cursor.style.background = 'radial-gradient(circle, rgba(106, 17, 203, 0.5) 0%, transparent 70%)';
-                cursorDot.style.transform = 'translate(-50%, -50%) scale(1.5)';
-                cursorDot.style.boxShadow = '0 0 30px #00c6ff';
+                cursorRing.style.transform = 'scale(1.5)';
+                cursorRing.style.borderColor = '#ff007a';
+                cursorRing.style.borderWidth = '3px';
             });
             
             el.addEventListener('mouseleave', () => {
-                cursor.style.width = '40px';
-                cursor.style.height = '40px';
-                cursor.style.background = 'radial-gradient(circle, rgba(106, 17, 203, 0.3) 0%, transparent 70%)';
-                cursorDot.style.transform = 'translate(-50%, -50%) scale(1)';
-                cursorDot.style.boxShadow = '0 0 20px #00c6ff';
+                cursorRing.style.transform = 'scale(1)';
+                cursorRing.style.borderColor = 'rgba(106, 17, 203, 0.8)';
+                cursorRing.style.borderWidth = '2px';
             });
         });
 
         // =========================
-        // SPARKLE EFFECT
+        // SCROLL PROGRESS
         // =========================
-        document.addEventListener('click', (e) => {
-            for (let i = 0; i < 10; i++) {
-                createSparkle(e.clientX, e.clientY);
-            }
+        const scrollProgress = document.getElementById('scrollProgress');
+        window.addEventListener('scroll', () => {
+            const scrollTop = document.documentElement.scrollTop;
+            const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrollPercent = (scrollTop / scrollHeight) * 100;
+            scrollProgress.style.width = scrollPercent + '%';
         });
 
-        function createSparkle(x, y) {
-            const sparkle = document.createElement('div');
-            sparkle.classList.add('sparkle');
-            
-            sparkle.style.left = x + 'px';
-            sparkle.style.top = y + 'px';
-            sparkle.style.animationDuration = Math.random() * 1 + 1 + 's';
-            
-            document.body.appendChild(sparkle);
-            
-            setTimeout(() => {
-                sparkle.remove();
-            }, 2000);
-        }
-
-        // Auto sparkles
-        setInterval(() => {
-            if (Math.random() > 0.7) {
-                createSparkle(
-                    Math.random() * window.innerWidth,
-                    Math.random() * window.innerHeight
-                );
+        // =========================
+        // BACK TO TOP BUTTON
+        // =========================
+        const backToTop = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 500) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
             }
-        }, 300);
+        });
 
         // =========================
         // NAVIGATION SCROLL EFFECT
@@ -2787,7 +3109,7 @@
         });
 
         // =========================
-        // 3D PARALLAX EFFECTS (ENHANCED)
+        // 3D PARALLAX EFFECTS (ULTRA ENHANCED)
         // =========================
         const heroSection = document.getElementById('hero');
         const heroImage = document.getElementById('heroImage');
@@ -2817,6 +3139,12 @@
                 rotateY(${xPercent * 8}deg)
                 rotateX(${-yPercent * 8}deg)
                 scale(${1.4 - Math.abs(xPercent) * 0.08})
+            `;
+
+            // Container rotation
+            heroImgContainer.style.transform = `
+                rotateY(${xPercent * 5}deg)
+                rotateX(${-yPercent * 5}deg)
             `;
 
             // Float cards effect
@@ -2855,6 +3183,7 @@
         heroSection.addEventListener('mouseleave', () => {
             heroImage.style.transform = 'translateZ(150px) rotateY(0deg) rotateX(0deg)';
             heroBgLayer.style.transform = 'translateZ(-300px) rotateY(0deg) rotateX(0deg) scale(1.4)';
+            heroImgContainer.style.transform = 'rotateY(0deg) rotateX(0deg)';
 
             document.querySelectorAll('.float-card').forEach(card => {
                 card.style.transform = 'translateZ(100px)';
@@ -2868,7 +3197,7 @@
         });
 
         // =========================
-        // SCROLL REVEAL ANIMATIONS
+        // SCROLL REVEAL ANIMATIONS (ENHANCED)
         // =========================
         function initAnimations() {
             const observerOptions = {
@@ -2913,13 +3242,14 @@
         }
 
         // =========================
-        // DYNAMIC THEME GENERATOR
+        // DYNAMIC THEME GENERATOR (ULTRA ENHANCED)
         // =========================
         function randomizeTheme() {
             const hue1 = Math.floor(Math.random() * 360);
             const hue2 = (hue1 + 120) % 360;
             const hue3 = (hue1 + 240) % 360;
             const hue4 = (hue1 + 60) % 360;
+            const hue5 = (hue1 + 180) % 360;
 
             const root = document.documentElement;
 
@@ -2927,19 +3257,27 @@
             root.style.setProperty('--primary-hue', hue1);
             root.style.setProperty('--secondary-hue', hue2);
             root.style.setProperty('--accent-hue', hue3);
-            root.style.setProperty('--matrix-color', `hsla(${hue2}, 100%, 60%, 0.6)`);
 
-            // Update gradients
+            // Create dynamic gradients
             root.style.setProperty('--gradient-primary', `linear-gradient(135deg, hsl(${hue1}, 100%, 50%) 0%, hsl(${hue2}, 100%, 50%) 100%)`);
             root.style.setProperty('--gradient-secondary', `linear-gradient(135deg, hsl(${hue3}, 100%, 50%) 0%, hsl(${hue4}, 100%, 50%) 100%)`);
             root.style.setProperty('--gradient-accent', `linear-gradient(135deg, hsl(${hue2}, 100%, 50%) 0%, hsl(${hue1}, 100%, 50%) 100%)`);
+            root.style.setProperty('--gradient-rainbow', `linear-gradient(90deg, hsl(${hue1}, 100%, 50%), hsl(${hue2}, 100%, 50%), hsl(${hue3}, 100%, 50%), hsl(${hue4}, 100%, 50%), hsl(${hue5}, 100%, 50%), hsl(${hue1}, 100%, 50%))`);
 
             // Update orb colors
             const orbs = document.querySelectorAll('.orb');
-            orbs[0].style.background = `hsl(${hue1}, 100%, 50%)`;
-            orbs[1].style.background = `hsl(${hue2}, 100%, 50%)`;
-            orbs[2].style.background = `hsl(${hue3}, 100%, 50%)`;
-            orbs[3].style.background = `hsl(${hue4}, 100%, 50%)`;
+            const orbColors = [
+                `hsl(${hue1}, 100%, 50%)`,
+                `hsl(${hue2}, 100%, 50%)`,
+                `hsl(${hue3}, 100%, 50%)`,
+                `hsl(${hue4}, 100%, 50%)`,
+                `hsl(${hue5}, 100%, 50%)`,
+                `hsl(${hue1}, 100%, 50%)`
+            ];
+            
+            orbs.forEach((orb, index) => {
+                orb.style.background = orbColors[index];
+            });
 
             // Update hero gradient
             const heroBadge = document.querySelector('.hero-badge');
@@ -2948,17 +3286,10 @@
             heroBadge.style.background = `linear-gradient(90deg, hsl(${hue1}, 100%, 50%), hsl(${hue2}, 100%, 50%))`;
             heroTitle.style.background = `linear-gradient(135deg, #fff 0%, hsl(${hue2}, 100%, 70%) 30%, hsl(${hue1}, 100%, 60%) 70%, hsl(${hue3}, 100%, 50%) 100%)`;
 
-            // Update matrix rain color
-            const matrixColumns = document.querySelectorAll('.matrix-column');
-            matrixColumns.forEach(col => {
-                col.style.color = `hsl(${hue2}, 100%, 60%)`;
-                col.style.textShadow = `0 0 5px hsl(${hue2}, 100%, 60%)`;
-            });
-
-            // Update laser grid color
-            const laserLines = document.querySelectorAll('.laser-line');
-            laserLines.forEach(line => {
-                line.style.background = `linear-gradient(90deg, transparent, hsl(${hue2}, 100%, 60%), transparent)`;
+            // Update section titles
+            const sectionTitles = document.querySelectorAll('.section-title');
+            sectionTitles.forEach(title => {
+                title.style.background = `linear-gradient(135deg, hsl(${hue1}, 100%, 70%) 0%, hsl(${hue2}, 100%, 70%) 50%, hsl(${hue3}, 100%, 70%) 100%)`;
             });
 
             // Update timeline dots
@@ -2972,7 +3303,7 @@
             });
 
             // Add animation feedback
-            const themeBtn = document.querySelector('.theme-btn');
+            const themeBtn = document.querySelector('.theme-btn.magic');
             themeBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Transforming...';
             themeBtn.style.background = `linear-gradient(135deg, hsl(${hue1}, 100%, 50%), hsl(${hue2}, 100%, 50%))`;
 
@@ -2986,10 +3317,131 @@
         }
 
         // =========================
-        // CONFETTI EFFECT
+        // GOLD THEME
+        // =========================
+        function goldTheme() {
+            const root = document.documentElement;
+
+            // Update CSS variables for gold theme
+            root.style.setProperty('--gradient-primary', 'linear-gradient(135deg, #FFD700 0%, #FFA500 100%)');
+            root.style.setProperty('--gradient-secondary', 'linear-gradient(135deg, #C0C0C0 0%, #E8E8E8 100%)');
+            root.style.setProperty('--gradient-accent', 'linear-gradient(135deg, #D4AF37 0%, #FFD700 100%)');
+            root.style.setProperty('--gradient-rainbow', 'linear-gradient(90deg, #FFD700, #FFA500, #FF8C00, #FFD700)');
+
+            // Update orb colors
+            const orbs = document.querySelectorAll('.orb');
+            orbs[0].style.background = '#FFD700';
+            orbs[1].style.background = '#FFA500';
+            orbs[2].style.background = '#C0C0C0';
+            orbs[3].style.background = '#D4AF37';
+            orbs[4].style.background = '#FF8C00';
+            orbs[5].style.background = '#FFD700';
+
+            // Update hero elements
+            const heroBadge = document.querySelector('.hero-badge');
+            const heroTitle = document.querySelector('.hero h1');
+            const sectionTitles = document.querySelectorAll('.section-title');
+
+            heroBadge.style.background = 'var(--gradient-primary)';
+            heroTitle.style.background = 'linear-gradient(135deg, #fff 0%, #FFD700 30%, #FFA500 70%, #FF8C00 100%)';
+            
+            sectionTitles.forEach(title => {
+                title.style.background = 'linear-gradient(135deg, #FFD700, #FFA500, #FF8C00)';
+            });
+
+            // Add gold particles
+            createGoldConfetti();
+        }
+
+        // =========================
+        // RESET THEME
+        // =========================
+        function resetTheme() {
+            const root = document.documentElement;
+            
+            // Reset to original values
+            root.style.setProperty('--primary-hue', '260');
+            root.style.setProperty('--secondary-hue', '190');
+            root.style.setProperty('--accent-hue', '330');
+            
+            root.style.setProperty('--gradient-primary', 'linear-gradient(135deg, #6a11cb 0%, #2575fc 100%)');
+            root.style.setProperty('--gradient-secondary', 'linear-gradient(135deg, #ff007a 0%, #ff8c00 100%)');
+            root.style.setProperty('--gradient-accent', 'linear-gradient(135deg, #00c6ff 0%, #0072ff 100%)');
+            root.style.setProperty('--gradient-rainbow', 'linear-gradient(90deg, #ff007a, #ff8c00, #ffff00, #00ff00, #00ffff, #0072ff, #6a11cb)');
+            
+            // Reset orbs
+            const orbs = document.querySelectorAll('.orb');
+            orbs[0].style.background = '#6a11cb';
+            orbs[1].style.background = '#00c6ff';
+            orbs[2].style.background = '#ff007a';
+            orbs[3].style.background = '#ff8c00';
+            orbs[4].style.background = '#00ff88';
+            orbs[5].style.background = '#ff00ff';
+            
+            // Reset hero elements
+            const heroBadge = document.querySelector('.hero-badge');
+            const heroTitle = document.querySelector('.hero h1');
+            const sectionTitles = document.querySelectorAll('.section-title');
+            
+            heroBadge.style.background = 'var(--gradient-primary)';
+            heroTitle.style.background = 'linear-gradient(135deg, #fff 0%, #a5f3fc 30%, #6a11cb 70%, #ff007a 100%)';
+            
+            sectionTitles.forEach(title => {
+                title.style.background = 'linear-gradient(135deg, #fff 0%, #a5f3fc 30%, #6a11cb 70%, #ff007a 100%)';
+            });
+        }
+
+        // =========================
+        // CONFETTI EFFECT (ENHANCED)
         // =========================
         function createConfetti() {
-            const colors = ['#6a11cb', '#2575fc', '#ff007a', '#ff8c00', '#00c6ff'];
+            const colors = ['#6a11cb', '#2575fc', '#ff007a', '#ff8c00', '#00c6ff', '#00ff88', '#ff00ff'];
+            const confettiContainer = document.createElement('div');
+            confettiContainer.style.position = 'fixed';
+            confettiContainer.style.top = '0';
+            confettiContainer.style.left = '0';
+            confettiContainer.style.width = '100%';
+            confettiContainer.style.height = '100%';
+            confettiContainer.style.pointerEvents = 'none';
+            confettiContainer.style.zIndex = '9999';
+            document.body.appendChild(confettiContainer);
+
+            for (let i = 0; i < 200; i++) {
+                const confetti = document.createElement('div');
+                confetti.style.position = 'absolute';
+                confetti.style.width = Math.random() * 12 + 3 + 'px';
+                confetti.style.height = Math.random() * 12 + 3 + 'px';
+                confetti.style.background = colors[Math.floor(Math.random() * colors.length)];
+                confetti.style.borderRadius = Math.random() > 0.5 ? '50%' : '0';
+                confetti.style.left = Math.random() * 100 + '%';
+                confetti.style.top = '-20px';
+                confetti.style.opacity = Math.random() * 0.7 + 0.3;
+                confetti.style.transform = `rotate(${Math.random() * 360}deg)`;
+                confettiContainer.appendChild(confetti);
+
+                // Animation
+                const animation = confetti.animate([
+                    { transform: `translate(0, 0) rotate(0deg)`, opacity: 1 },
+                    { transform: `translate(${Math.random() * 200 - 100}px, ${window.innerHeight}px) rotate(${Math.random() * 720}deg)`, opacity: 0 }
+                ], {
+                    duration: Math.random() * 3000 + 2000,
+                    easing: 'cubic-bezier(0.215, 0.61, 0.355, 1)'
+                });
+
+                animation.onfinish = () => confetti.remove();
+            }
+
+            // Remove container after animation
+            setTimeout(() => {
+                confettiContainer.remove();
+            }, 5000);
+        }
+
+        // =========================
+        // GOLD CONFETTI EFFECT
+        // =========================
+        function createGoldConfetti() {
+            const colors = ['#FFD700', '#FFA500', '#FF8C00', '#D4AF37', '#C0C0C0'];
             const confettiContainer = document.createElement('div');
             confettiContainer.style.position = 'fixed';
             confettiContainer.style.top = '0';
@@ -3003,20 +3455,30 @@
             for (let i = 0; i < 150; i++) {
                 const confetti = document.createElement('div');
                 confetti.style.position = 'absolute';
-                confetti.style.width = Math.random() * 10 + 5 + 'px';
-                confetti.style.height = Math.random() * 10 + 5 + 'px';
+                confetti.style.width = Math.random() * 15 + 5 + 'px';
+                confetti.style.height = Math.random() * 15 + 5 + 'px';
                 confetti.style.background = colors[Math.floor(Math.random() * colors.length)];
-                confetti.style.borderRadius = Math.random() > 0.5 ? '50%' : '0';
+                
+                // Random shapes
+                if (Math.random() > 0.7) {
+                    confetti.style.clipPath = 'polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)'; // Diamond
+                } else if (Math.random() > 0.5) {
+                    confetti.style.borderRadius = '50%'; // Circle
+                } else {
+                    confetti.style.borderRadius = '0'; // Square
+                }
+                
                 confetti.style.left = Math.random() * 100 + '%';
                 confetti.style.top = '-20px';
                 confetti.style.opacity = Math.random() * 0.7 + 0.3;
                 confetti.style.transform = `rotate(${Math.random() * 360}deg)`;
+                confetti.style.boxShadow = '0 0 10px currentColor';
                 confettiContainer.appendChild(confetti);
 
                 // Animation
                 const animation = confetti.animate([
                     { transform: `translate(0, 0) rotate(0deg)`, opacity: 1 },
-                    { transform: `translate(${Math.random() * 100 - 50}px, ${window.innerHeight}px) rotate(${Math.random() * 720}deg)`, opacity: 0 }
+                    { transform: `translate(${Math.random() * 200 - 100}px, ${window.innerHeight}px) rotate(${Math.random() * 720}deg)`, opacity: 0 }
                 ], {
                     duration: Math.random() * 3000 + 2000,
                     easing: 'cubic-bezier(0.215, 0.61, 0.355, 1)'
@@ -3034,18 +3496,20 @@
         // =========================
         // SMOOTH SCROLL FOR NAVIGATION
         // =========================
-        document.querySelectorAll('nav a').forEach(anchor => {
+        document.querySelectorAll('nav a, .back-to-top').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
-                e.preventDefault();
+                if (this.getAttribute('href').startsWith('#')) {
+                    e.preventDefault();
 
-                const targetId = this.getAttribute('href');
-                const targetElement = document.querySelector(targetId);
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
 
-                if (targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 100,
-                        behavior: 'smooth'
-                    });
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 100,
+                            behavior: 'smooth'
+                        });
+                    }
                 }
             });
         });
@@ -3098,7 +3562,7 @@
         function handleMobileView() {
             if (window.innerWidth <= 768) {
                 // Add touch effects for mobile
-                document.querySelectorAll('.glass-card, .gallery-item').forEach(element => {
+                document.querySelectorAll('.glass-card, .gallery-item, .theme-tag, .skill-tag').forEach(element => {
                     element.addEventListener('touchstart', function() {
                         this.style.transform = 'scale(0.98)';
                     });
@@ -3143,6 +3607,12 @@
                 el.style.animationDelay = `${index * 0.2}s`;
                 el.classList.add('animate-on-scroll');
             });
+            
+            // Initialize cursor position
+            cursorRing.style.left = window.innerWidth / 2 + 'px';
+            cursorRing.style.top = window.innerHeight / 2 + 'px';
+            cursorDot.style.left = window.innerWidth / 2 + 'px';
+            cursorDot.style.top = window.innerHeight / 2 + 'px';
         });
 
         // =========================
@@ -3150,7 +3620,7 @@
         // =========================
         let themeInterval;
         function startAutoTheme() {
-            themeInterval = setInterval(randomizeTheme, 10000);
+            themeInterval = setInterval(randomizeTheme, 15000);
         }
 
         function stopAutoTheme() {
@@ -3159,74 +3629,37 @@
 
         // Uncomment to enable auto theme rotation
         // startAutoTheme();
-
-        // =========================
-        // KEYBOARD SHORTCUTS
-        // =========================
-        document.addEventListener('keydown', (e) => {
-            // Space bar to change theme
-            if (e.code === 'Space') {
-                e.preventDefault();
-                randomizeTheme();
-            }
-            
-            // Escape to stop auto theme
-            if (e.code === 'Escape') {
-                stopAutoTheme();
-            }
-        });
-
-        // =========================
-        // SCROLL PROGRESS INDICATOR
-        // =========================
-        const scrollProgress = document.createElement('div');
-        scrollProgress.style.position = 'fixed';
-        scrollProgress.style.top = '0';
-        scrollProgress.style.left = '0';
-        scrollProgress.style.height = '3px';
-        scrollProgress.style.background = 'var(--gradient-primary)';
-        scrollProgress.style.zIndex = '9998';
-        scrollProgress.style.transition = 'width 0.3s ease';
-        document.body.appendChild(scrollProgress);
-
-        window.addEventListener('scroll', () => {
-            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-            const scrolled = (winScroll / height) * 100;
-            scrollProgress.style.width = scrolled + '%';
-        });
-
-        // =========================
-        // AUDIO FEEDBACK (OPTIONAL)
-        // =========================
-        const audioContext = new (window.AudioContext || window.webkitAudioContext)();
         
-        function playClickSound(frequency = 440, duration = 0.1) {
-            try {
-                const oscillator = audioContext.createOscillator();
-                const gainNode = audioContext.createGain();
-                
-                oscillator.connect(gainNode);
-                gainNode.connect(audioContext.destination);
-                
-                oscillator.frequency.value = frequency;
-                oscillator.type = 'sine';
-                
-                gainNode.gain.setValueAtTime(0.3, audioContext.currentTime);
-                gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + duration);
-                
-                oscillator.start(audioContext.currentTime);
-                oscillator.stop(audioContext.currentTime + duration);
-            } catch (e) {
-                // Audio context not supported
-            }
-        }
-
-        // Add click sounds to interactive elements
-        document.querySelectorAll('a, button').forEach(el => {
-            el.addEventListener('click', () => {
-                playClickSound(523.25 + Math.random() * 100, 0.05);
+        // =========================
+        // CLICK EFFECTS
+        // =========================
+        document.addEventListener('click', (e) => {
+            // Create ripple effect
+            const ripple = document.createElement('div');
+            ripple.style.position = 'fixed';
+            ripple.style.width = '20px';
+            ripple.style.height = '20px';
+            ripple.style.borderRadius = '50%';
+            ripple.style.background = 'rgba(255, 255, 255, 0.5)';
+            ripple.style.left = e.clientX - 10 + 'px';
+            ripple.style.top = e.clientY - 10 + 'px';
+            ripple.style.pointerEvents = 'none';
+            ripple.style.zIndex = '9999';
+            document.body.appendChild(ripple);
+            
+            // Animate ripple
+            ripple.animate([
+                { transform: 'scale(0)', opacity: 1 },
+                { transform: 'scale(10)', opacity: 0 }
+            ], {
+                duration: 600,
+                easing: 'ease-out'
             });
+            
+            // Remove ripple after animation
+            setTimeout(() => {
+                ripple.remove();
+            }, 600);
         });
     </script>
 </body>
