@@ -1,30 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mumtaz Alam Bazai | The Legal Visionary</title>
-    <meta name="description" content="Advocate High Court, Global Shaper, and Human Rights Activist.">
+    <title>Mumtaz Alam Bazai | Advocate Supreme Court | Global Shaper | Human Rights Visionary</title>
+    <meta name="description" content="Mumtaz Alam Bazai - Advocate Supreme Court of Pakistan, World Economic Forum Global Shaper, Human Rights Lawyer, Youth Policy Expert, and Legal Visionary from Balochistan.">
+    <meta name="keywords" content="Advocate Supreme Court, Human Rights Lawyer, Global Shaper, WEF, Youth Policy, Legal Expert, Balochistan, Pakistan">
+    <meta name="author" content="Mumtaz Alam Bazai">
     
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400&family=Inter:wght@300;400;500;600;800&display=swap" rel="stylesheet">
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="Mumtaz Alam Bazai | Legal Visionary & Human Rights Advocate">
+    <meta property="og:description" content="Advocate Supreme Court, Global Shaper at World Economic Forum, and leading Human Rights Lawyer from Balochistan.">
+    <meta property="og:image" content="https://yourdomain.com/og-image.jpg">
+    <meta property="og:url" content="https://mumtazalambazai.com">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Mumtaz Alam Bazai | Advocate Supreme Court">
+    <meta name="twitter:description" content="Legal Expert, Global Shaper, and Human Rights Advocate">
+    <meta name="twitter:image" content="https://yourdomain.com/twitter-card.jpg">
+    
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#050510">
+    
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,700&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
     
+    <!-- AOS Animation Library -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    
+    <!-- Glide.js Carousel -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.theme.min.css">
+    
+    <!-- Custom Styles -->
     <style>
-        /* =========================
-           CORE RESET & VARIABLES
-        ========================= */
+        /* ==========================================================================
+           CSS RESET & ROOT VARIABLES
+        ========================================================================== */
         :root {
+            /* Color System */
             --primary-hue: 260;
             --secondary-hue: 190;
-            --glass-bg: rgba(255, 255, 255, 0.05);
-            --glass-border: rgba(255, 255, 255, 0.2);
-            --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-            --text-main: #ffffff;
-            --text-muted: rgba(255, 255, 255, 0.8);
-            --neon-glow: 0 0 20px rgba(138, 43, 226, 0.6);
-            --card-radius: 24px;
-            --transition: cubic-bezier(0.23, 1, 0.32, 1);
+            --accent-hue: 330;
+            --dark-hue: 230;
+            
+            /* Gradient System */
+            --gradient-legal: linear-gradient(135deg, #1a237e 0%, #283593 25%, #3949ab 50%, #5c6bc0 75%, #7986cb 100%);
+            --gradient-humanitarian: linear-gradient(135deg, #006064 0%, #00838f 25%, #0097a7 50%, #00acc1 75%, #00bcd4 100%);
+            --gradient-youth: linear-gradient(135deg, #880e4f 0%, #ad1457 25%, #c2185b 50%, #d81b60 75%, #e91e63 100%);
+            --gradient-balo: linear-gradient(135deg, #1b5e20 0%, #2e7d32 25%, #388e3c 50%, #43a047 75%, #4caf50 100%);
+            
+            /* Glassmorphism */
+            --glass-bg: rgba(255, 255, 255, 0.08);
+            --glass-border: rgba(255, 255, 255, 0.18);
+            --glass-shadow: 0 25px 45px rgba(0, 0, 0, 0.5);
+            --glass-blur: blur(30px) saturate(200%);
+            
+            /* 3D Effects */
+            --depth-1: translateZ(10px);
+            --depth-2: translateZ(30px);
+            --depth-3: translateZ(60px);
+            --depth-4: translateZ(100px);
+            
+            /* Typography */
+            --font-primary: 'Inter', sans-serif;
+            --font-secondary: 'Playfair Display', serif;
+            --font-elegant: 'Cormorant Garamond', serif;
+            
+            /* Spacing */
+            --space-xs: 0.5rem;
+            --space-sm: 1rem;
+            --space-md: 2rem;
+            --space-lg: 4rem;
+            --space-xl: 8rem;
+            
+            /* Shadows */
+            --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.1);
+            --shadow-md: 0 8px 30px rgba(0, 0, 0, 0.2);
+            --shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.4);
+            --shadow-neon: 0 0 30px currentColor;
+            
+            /* Transitions */
+            --transition-smooth: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+            --transition-bounce: all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            --transition-elastic: all 0.9s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+
+        /* Dark/Light Theme Variables */
+        .theme-dark {
+            --bg-primary: #050510;
+            --bg-secondary: #0a0a1a;
+            --bg-tertiary: #101025;
+            --text-primary: #ffffff;
+            --text-secondary: rgba(255, 255, 255, 0.85);
+            --text-muted: rgba(255, 255, 255, 0.6);
+            --border-color: rgba(255, 255, 255, 0.12);
+            --card-bg: rgba(20, 20, 35, 0.7);
+        }
+
+        .theme-light {
+            --bg-primary: #f8f9fa;
+            --bg-secondary: #ffffff;
+            --bg-tertiary: #f1f3f5;
+            --text-primary: #1a1a2e;
+            --text-secondary: rgba(26, 26, 46, 0.85);
+            --text-muted: rgba(26, 26, 46, 0.6);
+            --border-color: rgba(0, 0, 0, 0.08);
+            --card-bg: rgba(255, 255, 255, 0.9);
         }
 
         * {
@@ -35,1515 +127,1885 @@
 
         html {
             scroll-behavior: smooth;
+            scroll-padding-top: 100px;
             overflow-x: hidden;
         }
 
         body {
-            font-family: 'Inter', sans-serif;
-            background-color: #050510;
-            color: var(--text-main);
+            font-family: var(--font-primary);
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
             overflow-x: hidden;
-            perspective: 1000px;
-            min-height: 100vh;
+            transition: background-color 0.5s ease, color 0.5s ease;
+            position: relative;
         }
 
-        /* =========================
-           DYNAMIC ANIMATED BACKGROUND
-        ========================= */
-        .fluid-bg {
+        /* ==========================================================================
+           DYNAMIC COSMIC BACKGROUND
+        ========================================================================== */
+        .cosmic-bg {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            z-index: -2;
-            background: radial-gradient(circle at 50% 50%, #1a1a2e, #000);
+            z-index: -10;
             overflow: hidden;
         }
 
-        .orb {
+        .cosmic-orbit {
             position: absolute;
             border-radius: 50%;
-            filter: blur(80px);
-            opacity: 0.6;
-            animation: floatOrb 20s infinite alternate;
+            filter: blur(100px);
+            opacity: 0.3;
+            animation: cosmicFloat 40s infinite alternate ease-in-out;
         }
 
-        .orb-1 {
-            width: 60vw;
-            height: 60vw;
-            background: #4e00c2;
-            top: -10%;
-            left: -10%;
-            animation-duration: 25s;
+        .orbit-1 {
+            width: 80vw;
+            height: 80vw;
+            background: linear-gradient(45deg, #6a11cb, #2575fc);
+            top: -30%;
+            left: -30%;
+            animation-duration: 50s;
         }
 
-        .orb-2 {
+        .orbit-2 {
+            width: 70vw;
+            height: 70vw;
+            background: linear-gradient(45deg, #ff007a, #ff8c00);
+            bottom: -20%;
+            right: -20%;
+            animation-duration: 60s;
+            animation-delay: -20s;
+        }
+
+        .orbit-3 {
             width: 50vw;
             height: 50vw;
-            background: #00c6ff;
-            bottom: -10%;
+            background: linear-gradient(45deg, #00c6ff, #0072ff);
+            top: 20%;
             right: -10%;
-            animation-duration: 30s;
-            animation-direction: reverse;
+            animation-duration: 45s;
+            animation-delay: -30s;
         }
 
-        .orb-3 {
-            width: 30vw;
-            height: 30vw;
-            background: #ff007a;
-            top: 40%;
-            left: 40%;
-            animation-duration: 20s;
+        .star-field {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                radial-gradient(2px 2px at 20px 30px, #eee, rgba(0,0,0,0)),
+                radial-gradient(2px 2px at 40px 70px, #fff, rgba(0,0,0,0)),
+                radial-gradient(1px 1px at 90px 40px, #ddd, rgba(0,0,0,0)),
+                radial-gradient(1px 1px at 130px 80px, #fff, rgba(0,0,0,0));
+            background-repeat: repeat;
+            background-size: 200px 200px;
+            animation: starTwinkle 4s infinite alternate;
         }
 
-        @keyframes floatOrb {
-            0% {
-                transform: translate(0, 0) scale(1);
-            }
-            100% {
-                transform: translate(50px, -50px) scale(1.1);
-            }
+        @keyframes cosmicFloat {
+            0% { transform: translate(0, 0) rotate(0deg) scale(1); }
+            25% { transform: translate(50px, -80px) rotate(90deg) scale(1.1); }
+            50% { transform: translate(-30px, 60px) rotate(180deg) scale(1.05); }
+            75% { transform: translate(80px, 40px) rotate(270deg) scale(1.15); }
+            100% { transform: translate(0, 0) rotate(360deg) scale(1); }
         }
 
-        /* =========================
-           FLOATING BUBBLES
-        ========================= */
-        .bubbles-container {
+        @keyframes starTwinkle {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 1; }
+        }
+
+        /* Quantum Particles */
+        .quantum-container {
             position: fixed;
             width: 100%;
             height: 100%;
-            z-index: -1;
+            z-index: -5;
             pointer-events: none;
         }
 
-        .bubble {
-            position: absolute;
-            bottom: -100px;
-            background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.01));
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            border-radius: 50%;
-            box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.1);
-            animation: rise 15s infinite linear;
-        }
-
-        @keyframes rise {
-            0% {
-                transform: translateY(0) rotate(0deg);
-                opacity: 0;
-            }
-            10% {
-                opacity: 1;
-            }
-            100% {
-                transform: translateY(-120vh) rotate(360deg);
-                opacity: 0;
-            }
-        }
-
-        /* =========================
-           CUSTOM SCROLLBAR
-        ========================= */
-        ::-webkit-scrollbar {
-            width: 10px;
-        }
-
-        ::-webkit-scrollbar-track {
-            background: rgba(0, 0, 0, 0.3);
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background: linear-gradient(45deg, #6a11cb, #2575fc);
-            border-radius: 5px;
-        }
-
-        ::-webkit-scrollbar-thumb:hover {
-            background: linear-gradient(45deg, #2575fc, #6a11cb);
-        }
-
-        /* =========================
-           TYPOGRAPHY
-        ========================= */
-        h1, h2, h3 {
-            font-family: 'Playfair Display', serif;
-            font-weight: 700;
-        }
-
-        /* =========================
-           NAVIGATION (GLASS DOCK)
-        ========================= */
-        nav {
+        /* ==========================================================================
+           PRELOADER
+        ========================================================================== */
+        #preloader {
             position: fixed;
-            bottom: 30px;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 1000;
-            background: rgba(20, 20, 30, 0.8);
-            backdrop-filter: blur(20px) saturate(180%);
-            -webkit-backdrop-filter: blur(20px) saturate(180%);
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            padding: 15px 30px;
-            border-radius: 50px;
-            display: flex;
-            gap: 25px;
-            box-shadow: 
-                0 20px 50px rgba(0, 0, 0, 0.5),
-                0 0 20px rgba(106, 17, 203, 0.3);
-            transition: all 0.4s ease;
-        }
-
-        nav:hover {
-            background: rgba(20, 20, 30, 0.9);
-            transform: translateX(-50%) translateY(-5px);
-            box-shadow: 
-                0 25px 60px rgba(0, 0, 0, 0.6),
-                0 0 25px rgba(106, 17, 203, 0.4);
-        }
-
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            font-size: 20px;
-            transition: all 0.3s ease;
-            position: relative;
-            width: 40px;
-            height: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.05);
-        }
-
-        nav a:hover {
-            color: #00c6ff;
-            transform: translateY(-5px) scale(1.1);
-            background: rgba(0, 198, 255, 0.1);
-            box-shadow: 0 5px 15px rgba(0, 198, 255, 0.3);
-        }
-
-        nav a::after {
-            content: attr(data-tooltip);
-            position: absolute;
-            bottom: 50px;
-            left: 50%;
-            transform: translateX(-50%) scale(0);
-            background: #fff;
-            color: #000;
-            padding: 6px 12px;
-            border-radius: 8px;
-            font-size: 12px;
-            font-weight: 600;
-            opacity: 0;
-            transition: all 0.3s ease;
-            pointer-events: none;
-            white-space: nowrap;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-        }
-
-        nav a:hover::after {
-            transform: translateX(-50%) scale(1);
-            opacity: 1;
-        }
-
-        /* =========================
-           THEME BUTTON
-        ========================= */
-        .theme-btn {
-            position: fixed;
-            top: 30px;
-            right: 30px;
-            background: linear-gradient(135deg, #ff007a, #6a11cb);
-            border: none;
-            color: white;
-            padding: 12px 25px;
-            border-radius: 30px;
-            font-weight: 600;
-            cursor: pointer;
-            z-index: 2000;
-            box-shadow: 
-                0 0 25px rgba(255, 0, 122, 0.5),
-                0 5px 15px rgba(0, 0, 0, 0.3);
-            transition: all 0.3s ease;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            backdrop-filter: blur(10px);
-        }
-
-        .theme-btn:hover {
-            transform: scale(1.1) rotate(3deg);
-            box-shadow: 
-                0 0 35px rgba(255, 0, 122, 0.7),
-                0 8px 20px rgba(0, 0, 0, 0.4);
-        }
-
-        /* =========================
-           HERO SECTION (MASTERPIECE)
-        ========================= */
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 120px 20px;
-            perspective: 1500px;
-            overflow: hidden;
-            position: relative;
-        }
-
-        .hero-3d-bg {
-            position: absolute;
-            inset: 0;
-            z-index: 0;
-            perspective: 2000px;
-            overflow: hidden;
-        }
-
-        .hero-3d-layer {
-            position: absolute;
-            inset: 0;
-            background: 
-                linear-gradient(
-                    rgba(0, 0, 0, 0.3),
-                    rgba(0, 0, 0, 0.5)
-                ),
-                url('hero-bg.jpg.jpeg') center/cover no-repeat;
-            transform: translateZ(-200px) scale(1.3);
-            filter: 
-                blur(1.5px)
-                brightness(1.1)
-                contrast(1.1)
-                saturate(1.3);
-            transition: transform 0.2s ease-out;
-            border-radius: 40px;
-        }
-
-        .hero-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            max-width: 1300px;
-            align-items: center;
-            position: relative;
-            z-index: 2;
-            transform-style: preserve-3d;
-        }
-
-        .hero-text {
-            transform-style: preserve-3d;
-            z-index: 2;
-        }
-
-        .hero-badge {
-            display: inline-block;
-            padding: 10px 25px;
-            background: linear-gradient(90deg, #ff007a, #6a11cb);
-            border-radius: 30px;
-            font-weight: 700;
-            font-size: 14px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 25px;
-            box-shadow: 
-                0 0 25px rgba(255, 0, 122, 0.4),
-                inset 0 1px 0 rgba(255, 255, 255, 0.2);
-            transform: translateZ(30px);
-            animation: badgeGlow 3s ease-in-out infinite;
-        }
-
-        @keyframes badgeGlow {
-            0%, 100% { box-shadow: 0 0 25px rgba(255, 0, 122, 0.4); }
-            50% { box-shadow: 0 0 35px rgba(255, 0, 122, 0.6); }
-        }
-
-        .hero h1 {
-            font-size: clamp(3rem, 6vw, 5rem);
-            line-height: 1.1;
-            background: linear-gradient(135deg, #fff 0%, #a5f3fc 50%, #6a11cb 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 25px;
-            filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.3));
-            transform: translateZ(40px);
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            line-height: 1.8;
-            color: var(--text-muted);
-            margin-bottom: 35px;
-            border-left: 4px solid #2575fc;
-            padding-left: 20px;
-            transform: translateZ(20px);
-        }
-
-        .hero-buttons {
-            margin-top: 40px;
-            transform: translateZ(30px);
-        }
-
-        .hero-btn {
-            padding: 16px 35px;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: 700;
-            margin-right: 15px;
-            display: inline-block;
-            transition: all 0.3s ease;
-            transform-style: preserve-3d;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .btn-primary {
-            background: #fff;
-            color: #000;
-            box-shadow: 
-                0 0 25px rgba(255, 255, 255, 0.4),
-                0 5px 15px rgba(0, 0, 0, 0.2);
-        }
-
-        .btn-secondary {
-            background: transparent;
-            border: 2px solid #fff;
-            color: #fff;
-            box-shadow: 
-                0 0 15px rgba(255, 255, 255, 0.2),
-                inset 0 0 15px rgba(255, 255, 255, 0.1);
-        }
-
-        .hero-btn:hover {
-            transform: translateY(-5px) scale(1.05);
-        }
-
-        .btn-primary:hover {
-            box-shadow: 
-                0 0 35px rgba(255, 255, 255, 0.6),
-                0 8px 20px rgba(0, 0, 0, 0.3);
-        }
-
-        .btn-secondary:hover {
-            background: rgba(255, 255, 255, 0.1);
-            box-shadow: 
-                0 0 25px rgba(255, 255, 255, 0.3),
-                inset 0 0 20px rgba(255, 255, 255, 0.2);
-        }
-
-        /* =========================
-           PORTRAIT 3D CONTAINER
-        ========================= */
-        .hero-img-container {
-            position: relative;
-            width: 100%;
-            height: 600px;
-            transform-style: preserve-3d;
-            perspective: 1500px;
-        }
-
-        .hero-img-bg {
-            position: absolute;
-            inset: 0;
-            background: url('hero-bg.jpg.jpeg') center/cover no-repeat;
-            border-radius: 40px;
-            opacity: 0.4;
-            transform: translateZ(-80px) scale(0.95);
-            filter: blur(10px) brightness(0.2);
-            box-shadow: 
-                inset 0 0 00px rgba(0),
-                0 0 0px rgba(0);
-        }
-
-        .hero-img-main {
-            position: absolute;
-            width: 256px;
-            height: 336px;
-            top: 95%;
-            left: 50%;
-            transform: translate(-50%, -80%) translateZ(100px);
-            background: url('portrait.jpg.jpeg') center/cover no-repeat;
-            border-radius: 25px;
-            box-shadow: 
-                0 0px 00px rgba(0, 0, 0, 0.8),
-                inset 0 0 0px rgba(0, 0, 0, 0.4),
-                0 0 00px rgba(106, 17, 203, 0.5);
-            border: 2px solid rgba(255, 255, 255, 0.15);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            z-index: 5;
-            animation: floatPortrait 8s ease-in-out infinite;
-            overflow: hidden;
-        }
-
-        .hero-img-main::before {
-            content: '';
-            position: absolute;
             top: 0;
             left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(
-                45deg,
-                transparent 10%,
-                rgba(255, 255, 255, 0.03) 20%,
-                transparent 80%
-            );
-            z-index: 1;
-            animation: shine 3s ease-in-out infinite;
-        }
-
-        @keyframes shine {
-            0%, 59% { transform: translateX(-100%); }
-            30% { transform: translateX(100%); }
-        }
-
-        @keyframes floatPortrait {
-            0%, 100% { 
-                transform: translate(-50%, -80%) translateZ(100px) rotateY(0deg) rotateX(0deg); 
-            }
-            25% { 
-                transform: translate(-50%, -82%) translateZ(120px) rotateY(3deg) rotateX(2deg); 
-            }
-            50% { 
-                transform: translate(-50%, -80%) translateZ(100px) rotateY(0deg) rotateX(0deg); 
-            }
-            75% { 
-                transform: translate(-50%, -78%) translateZ(120px) rotateY(-3deg) rotateX(-2deg); 
-            }
-        }
-
-        .float-card {
-            position: absolute;
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(20px) saturate(180%);
-            -webkit-backdrop-filter: blur(20px) saturate(180%);
-            padding: 15px 25px;
-            border-radius: 15px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            box-shadow: 
-                0 15px 35px rgba(0, 0, 0, 0.3),
-                0 0 20px rgba(106, 17, 203, 0.2);
+            width: 100%;
+            height: 100%;
+            background: var(--bg-primary);
+            z-index: 9999;
             display: flex;
+            justify-content: center;
             align-items: center;
-            gap: 10px;
-            font-weight: 600;
-            transform: translateZ(80px);
-            animation: floatCard 6s ease-in-out infinite;
-            z-index: 6;
+            flex-direction: column;
+            transition: opacity 1s ease, visibility 1s ease;
         }
 
-        .fc-1 {
-            top: 15%;
-            left: -30px;
-            animation-delay: 0s;
-        }
-
-        .fc-2 {
-            bottom: 20%;
-            right: -30px;
-            animation-delay: 2s;
-        }
-
-        @keyframes floatCard {
-            0%, 100% { 
-                transform: translateZ(80px) translateY(0) rotate(0deg); 
-            }
-            50% { 
-                transform: translateZ(80px) translateY(-25px) rotate(2deg); 
-            }
-        }
-
-        /* =========================
-           HERO SOCIAL ICONS (3D GRID)
-        ========================= */
-        .hero-socials {
-            display: grid;
-            grid-template-columns: repeat(6, 1fr);
-            gap: 20px;
-            justify-items: center;
-            align-items: center;
-            margin: 40px auto 0;
-            max-width: 540px;
-            position: relative;
-            z-index: 10;
+        .preloader-content {
+            text-align: center;
             transform: translateZ(50px);
         }
 
-        .hero-socials .hs {
-            width: 60px;
-            height: 60px;
-            border-radius: 18px;
+        .preloader-logo {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 40px;
+            position: relative;
+        }
+
+        .logo-ring {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 4px solid transparent;
+            border-radius: 50%;
+            border-top-color: #6a11cb;
+            animation: spin 1.5s linear infinite;
+        }
+
+        .logo-ring:nth-child(2) {
+            border-top-color: #2575fc;
+            animation-delay: 0.5s;
+            width: 90%;
+            height: 90%;
+            top: 5%;
+            left: 5%;
+        }
+
+        .logo-ring:nth-child(3) {
+            border-top-color: #ff007a;
+            animation-delay: 1s;
+            width: 80%;
+            height: 80%;
+            top: 10%;
+            left: 10%;
+        }
+
+        .preloader-text {
+            font-size: 1.2rem;
+            font-weight: 300;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-top: 30px;
+            background: linear-gradient(90deg, #6a11cb, #2575fc, #ff007a);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: textPulse 2s ease-in-out infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        @keyframes textPulse {
+            0%, 100% { opacity: 0.5; }
+            50% { opacity: 1; }
+        }
+
+        /* ==========================================================================
+           MAIN NAVIGATION (ADVANCED)
+        ========================================================================== */
+        .main-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 1.5rem 3rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            background: rgba(10, 10, 20, 0.9);
+            backdrop-filter: var(--glass-blur);
+            border-bottom: 1px solid var(--border-color);
+            transition: var(--transition-smooth);
+            transform: translateY(0);
+        }
+
+        .main-nav.scrolled {
+            padding: 1rem 3rem;
+            background: rgba(5, 5, 15, 0.95);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .nav-hidden {
+            transform: translateY(-100%);
+        }
+
+        .nav-brand {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            text-decoration: none;
+        }
+
+        .brand-logo {
+            width: 50px;
+            height: 50px;
+            background: var(--gradient-legal);
+            border-radius: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 24px;
-            color: #fff;
+            font-size: 1.5rem;
+            color: white;
+            font-weight: bold;
+        }
+
+        .brand-text {
+            font-family: var(--font-secondary);
+            font-size: 1.8rem;
+            font-weight: 700;
+            background: linear-gradient(90deg, #fff, #a5f3fc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 3rem;
+            list-style: none;
+        }
+
+        .nav-item {
+            position: relative;
+        }
+
+        .nav-link {
+            color: var(--text-primary);
             text-decoration: none;
-            backdrop-filter: blur(10px);
-            box-shadow: 
-                0 15px 30px rgba(0, 0, 0, 0.4),
-                inset 0 0 20px rgba(255, 255, 255, 0.2),
-                0 0 20px currentColor;
-            transform-style: preserve-3d;
-            transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+            font-weight: 500;
+            font-size: 1rem;
+            letter-spacing: 1px;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            transition: var(--transition-smooth);
             position: relative;
             overflow: hidden;
         }
 
-        .hero-socials .hs::before {
+        .nav-link::before {
             content: '';
             position: absolute;
             top: 0;
             left: -100%;
             width: 100%;
             height: 100%;
-            background: linear-gradient(
-                90deg,
-                transparent,
-                rgba(255, 255, 255, 0.4),
-                transparent
-            );
-            transition: 0.6s;
+            background: var(--gradient-legal);
+            transition: left 0.6s ease;
+            z-index: -1;
+            border-radius: 25px;
         }
 
-        .hero-socials .hs:hover::before {
+        .nav-link:hover::before {
+            left: 0;
+        }
+
+        .nav-link:hover {
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .nav-link.active {
+            background: var(--gradient-legal);
+            color: white;
+            box-shadow: var(--shadow-neon);
+        }
+
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .theme-toggle {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+            font-size: 1.2rem;
+            color: var(--text-primary);
+        }
+
+        .theme-toggle:hover {
+            transform: rotate(30deg) scale(1.1);
+            box-shadow: var(--shadow-md);
+        }
+
+        .nav-social {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .nav-social a {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--card-bg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-primary);
+            text-decoration: none;
+            transition: var(--transition-smooth);
+            border: 1px solid var(--border-color);
+        }
+
+        .nav-social a:hover {
+            transform: translateY(-3px);
+            background: var(--gradient-legal);
+            color: white;
+            box-shadow: var(--shadow-neon);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            font-size: 1.5rem;
+            background: none;
+            border: none;
+            color: var(--text-primary);
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            transition: var(--transition-smooth);
+        }
+
+        .mobile-menu-btn:hover {
+            background: var(--card-bg);
+        }
+
+        /* ==========================================================================
+           HERO SECTION (MASTERPIECE)
+        ========================================================================== */
+        .hero-section {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 120px 2rem 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-container {
+            max-width: 1400px;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 4rem;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-badges {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2.5rem;
+            flex-wrap: wrap;
+        }
+
+        .badge {
+            padding: 0.8rem 1.8rem;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            display: inline-block;
+            transition: var(--transition-smooth);
+            cursor: default;
+        }
+
+        .badge-legal {
+            background: var(--gradient-legal);
+            color: white;
+            box-shadow: 0 0 30px rgba(106, 17, 203, 0.4);
+        }
+
+        .badge-global {
+            background: var(--gradient-humanitarian);
+            color: white;
+            box-shadow: 0 0 30px rgba(0, 131, 143, 0.4);
+        }
+
+        .badge-youth {
+            background: var(--gradient-youth);
+            color: white;
+            box-shadow: 0 0 30px rgba(173, 20, 87, 0.4);
+        }
+
+        .hero-title {
+            font-family: var(--font-secondary);
+            font-size: clamp(3.5rem, 7vw, 6rem);
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+
+        .title-line {
+            display: block;
+            position: relative;
+        }
+
+        .title-line:nth-child(2) {
+            padding-left: 2rem;
+        }
+
+        .title-line:nth-child(3) {
+            padding-left: 4rem;
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            color: var(--text-secondary);
+            margin-bottom: 2.5rem;
+            max-width: 600px;
+            line-height: 1.8;
+            font-weight: 300;
+        }
+
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin: 3rem 0;
+            max-width: 600px;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 800;
+            background: var(--gradient-legal);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 1;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .btn {
+            padding: 1.2rem 2.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1rem;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.8rem;
+            transition: var(--transition-smooth);
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.6s ease;
+            z-index: -1;
+        }
+
+        .btn:hover::before {
             left: 100%;
         }
 
-        .hero-socials .hs:hover {
-            transform: translateY(-15px) rotateX(20deg) rotateY(-20deg) scale(1.2);
-            box-shadow: 
-                0 30px 50px rgba(0, 0, 0, 0.6),
-                0 0 30px currentColor,
-                inset 0 0 30px rgba(255, 255, 255, 0.3);
+        .btn-primary {
+            background: var(--gradient-legal);
+            color: white;
+            box-shadow: 0 10px 30px rgba(106, 17, 203, 0.3);
         }
 
-        /* Social Icons Colors */
-        .hs.mail { 
-            background: linear-gradient(135deg, #D44638, #B23121); 
-            box-shadow: 0 15px 30px rgba(212, 70, 56, 0.3);
-        }
-        .hs.whatsapp { 
-            background: linear-gradient(135deg, #25D366, #128C7E); 
-            box-shadow: 0 15px 30px rgba(37, 211, 102, 0.3);
-        }
-        .hs.linkedin { 
-            background: linear-gradient(135deg, #0077B5, #004182); 
-            box-shadow: 0 15px 30px rgba(0, 119, 181, 0.3);
-        }
-        .hs.instagram { 
-            background: linear-gradient(135deg, #833AB4, #FD1D1D, #F77737); 
-            box-shadow: 0 15px 30px rgba(131, 58, 180, 0.3);
-        }
-        .hs.facebook { 
-            background: linear-gradient(135deg, #1877F2, #0F4AA1); 
-            box-shadow: 0 15px 30px rgba(24, 119, 242, 0.3);
-        }
-        .hs.twitter { 
-            background: linear-gradient(135deg, #000000, #444444); 
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
-        }
-        .hs.wef { 
-            background: linear-gradient(135deg, #00A3E0, #005F86); 
-            box-shadow: 0 15px 30px rgba(0, 163, 224, 0.3);
-        }
-        .hs.linktree { 
-            background: linear-gradient(135deg, #43E660, #1FA337); 
-            box-shadow: 0 15px 30px rgba(67, 230, 96, 0.3);
-        }
-        .hs.tiktok { 
-            background: linear-gradient(135deg, #010101, #FF0050, #00F2EA); 
-            box-shadow: 0 15px 30px rgba(255, 0, 80, 0.3);
-        }
-        .hs.snapchat { 
-            background: linear-gradient(135deg, #FFFC00, #FFD000); 
-            color: #000;
-            box-shadow: 0 15px 30px rgba(255, 252, 0, 0.3);
-        }
-        .hs.threads { 
-            background: linear-gradient(135deg, #000000, #444444); 
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
-        }
-        .hs.ok { 
-            background: linear-gradient(135deg, #F47300, #FF9E2C); 
-            box-shadow: 0 15px 30px rgba(244, 115, 0, 0.3);
+        .btn-primary:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(106, 17, 203, 0.4);
         }
 
-        /* =========================
-           SECTIONS & GLASS CARDS
-        ========================= */
-        section {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 120px 20px;
+        .btn-secondary {
+            background: transparent;
+            border: 2px solid var(--border-color);
+            color: var(--text-primary);
+        }
+
+        .btn-secondary:hover {
+            border-color: #6a11cb;
+            color: #6a11cb;
+            transform: translateY(-5px);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--gradient-legal);
+            color: #6a11cb;
+        }
+
+        /* HERO VISUAL - 3D PORTRAIT SYSTEM */
+        .hero-visual {
             position: relative;
+            height: 600px;
+            perspective: 2000px;
+        }
+
+        .portrait-3d {
+            position: absolute;
+            width: 300px;
+            height: 400px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
             transform-style: preserve-3d;
+            animation: portraitFloat 8s ease-in-out infinite;
+        }
+
+        .portrait-layer {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 20px;
+            background-size: cover;
+            background-position: center;
+            transform-style: preserve-3d;
+            box-shadow: 
+                0 30px 60px rgba(0, 0, 0, 0.5),
+                inset 0 0 50px rgba(255, 255, 255, 0.1);
+        }
+
+        .layer-1 {
+            background-image: url('portrait.jpg.jpeg');
+            transform: translateZ(40px);
+            filter: brightness(1.1) contrast(1.1);
+        }
+
+        .layer-2 {
+            background-image: url('portrait.jpg.jpeg');
+            transform: translateZ(20px);
+            filter: blur(2px) brightness(0.9);
+            opacity: 0.8;
+        }
+
+        .layer-3 {
+            background-image: url('portrait.jpg.jpeg');
+            transform: translateZ(0);
+            filter: blur(5px) brightness(0.7);
+            opacity: 0.6;
+        }
+
+        .portrait-frame {
+            position: absolute;
+            width: 110%;
+            height: 110%;
+            top: -5%;
+            left: -5%;
+            border: 3px solid transparent;
+            border-radius: 25px;
+            background: linear-gradient(45deg, #6a11cb, #2575fc, #ff007a, #ff8c00) border-box;
+            -webkit-mask: 
+                linear-gradient(#fff 0 0) padding-box, 
+                linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            transform: translateZ(50px);
+            animation: frameRotate 20s linear infinite;
+        }
+
+        .floating-elements {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+        }
+
+        .floating-element {
+            position: absolute;
+            background: var(--card-bg);
+            backdrop-filter: var(--glass-blur);
+            padding: 1rem 1.5rem;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--border-color);
+            animation: floatElement 10s ease-in-out infinite;
+            z-index: 10;
+        }
+
+        .element-1 {
+            top: 10%;
+            right: -10%;
+            animation-delay: 0s;
+        }
+
+        .element-2 {
+            top: 50%;
+            left: -20%;
+            animation-delay: 2s;
+        }
+
+        .element-3 {
+            bottom: 20%;
+            right: -15%;
+            animation-delay: 4s;
+        }
+
+        .floating-icon {
+            font-size: 1.5rem;
+            background: var(--gradient-legal);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        @keyframes portraitFloat {
+            0%, 100% { transform: translate(-50%, -50%) rotateX(0) rotateY(0); }
+            25% { transform: translate(-50%, -50%) rotateX(5deg) rotateY(5deg); }
+            50% { transform: translate(-50%, -50%) rotateX(0) rotateY(0); }
+            75% { transform: translate(-50%, -50%) rotateX(-5deg) rotateY(-5deg); }
+        }
+
+        @keyframes frameRotate {
+            0% { transform: translateZ(50px) rotate(0deg); }
+            100% { transform: translateZ(50px) rotate(360deg); }
+        }
+
+        @keyframes floatElement {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(5deg); }
+        }
+
+        /* ==========================================================================
+           FEATURED IN SECTION
+        ========================================================================== */
+        .featured-section {
+            padding: 4rem 2rem;
+            background: var(--bg-secondary);
         }
 
         .section-title {
-            font-size: 3.5rem;
             text-align: center;
-            margin-bottom: 80px;
+            font-family: var(--font-secondary);
+            font-size: 3rem;
+            margin-bottom: 3rem;
             position: relative;
-            z-index: 1;
-            transform: translateZ(30px);
         }
 
         .section-title::after {
             content: '';
             display: block;
-            width: 120px;
+            width: 100px;
             height: 4px;
-            background: linear-gradient(90deg, #6a11cb, #2575fc, #ff007a);
-            margin: 20px auto 0;
+            background: var(--gradient-legal);
+            margin: 1.5rem auto;
             border-radius: 2px;
-            animation: linePulse 3s ease-in-out infinite;
         }
 
-        @keyframes linePulse {
-            0%, 100% { width: 120px; }
-            50% { width: 150px; }
-        }
-
-        .glass-card {
-            background: var(--glass-bg);
-            backdrop-filter: blur(20px) saturate(180%);
-            -webkit-backdrop-filter: blur(20px) saturate(180%);
-            border: 1px solid var(--glass-border);
-            border-radius: var(--card-radius);
-            padding: 50px;
-            box-shadow: var(--glass-shadow);
-            transition: all 0.6s var(--transition);
-            position: relative;
-            overflow: hidden;
-            transform-style: preserve-3d;
-            transform: translateZ(0);
-        }
-
-        .glass-card:hover {
-            transform: translateY(-15px) rotateX(3deg) rotateY(3deg) translateZ(30px);
-            border-color: rgba(255, 255, 255, 0.4);
-            box-shadow: 
-                0 40px 80px rgba(106, 17, 203, 0.4),
-                inset 0 0 30px rgba(255, 255, 255, 0.15);
-        }
-
-        .glass-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(
-                90deg,
-                transparent,
-                rgba(255, 255, 255, 0.1),
-                transparent
-            );
-            transition: 0.8s;
-            z-index: 1;
-        }
-
-        .glass-card:hover::before {
-            left: 100%;
-        }
-
-        /* =========================
-           TIMELINE (3D ENHANCED)
-        ========================= */
-        .timeline {
-            position: relative;
-            max-width: 800px;
-            margin: 0 auto;
-            transform-style: preserve-3d;
-        }
-
-        .timeline::before {
-            content: '';
-            position: absolute;
-            left: 50%;
-            width: 3px;
-            height: 100%;
-            background: linear-gradient(
-                to bottom,
-                transparent,
-                #6a11cb,
-                #2575fc,
-                #ff007a,
-                transparent
-            );
-            transform: translateX(-50%);
-            box-shadow: 0 0 30px rgba(106, 17, 203, 0.5);
-        }
-
-        .timeline-item {
-            margin-bottom: 60px;
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            opacity: 0;
-            transform: translateY(50px) rotateX(20deg);
-            transition: all 0.8s ease-out;
-            transform-style: preserve-3d;
-        }
-
-        .timeline-item.visible {
-            opacity: 1;
-            transform: translateY(0) rotateX(0);
-        }
-
-        .timeline-content {
-            width: 45%;
-            background: rgba(255, 255, 255, 0.07);
-            backdrop-filter: blur(15px);
-            padding: 30px;
-            border-radius: 20px;
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            position: relative;
-            transform-style: preserve-3d;
-            transition: all 0.4s ease;
-        }
-
-        .timeline-content:hover {
-            transform: translateZ(20px);
-            border-color: rgba(0, 198, 255, 0.4);
-            box-shadow: 0 20px 40px rgba(0, 198, 255, 0.2);
-        }
-
-        .timeline-item:nth-child(odd) {
-            justify-content: flex-start;
-        }
-
-        .timeline-item:nth-child(even) {
-            justify-content: flex-end;
-        }
-
-        .timeline-content h4 {
-            color: #00c6ff;
-            margin-bottom: 15px;
-            font-size: 1.4rem;
-        }
-
-        .timeline-dot {
-            position: absolute;
-            width: 24px;
-            height: 24px;
-            background: #fff;
-            border-radius: 50%;
-            left: 50%;
-            top: 25px;
-            transform: translateX(-50%) translateZ(10px);
-            box-shadow: 
-                0 0 25px #00c6ff,
-                0 0 15px #00c6ff,
-                inset 0 0 10px rgba(255, 255, 255, 0.5);
-            z-index: 5;
-            animation: pulse 2s ease-in-out infinite;
-        }
-
-        @keyframes pulse {
-            0%, 100% { 
-                box-shadow: 0 0 25px #00c6ff, 0 0 15px #00c6ff; 
-            }
-            50% { 
-                box-shadow: 0 0 35px #00c6ff, 0 0 25px #00c6ff; 
-            }
-        }
-
-        /* =========================
-           GRID LAYOUTS
-        ========================= */
-        .grid-3 {
+        .featured-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 40px;
-            transform-style: preserve-3d;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
-        .skill-tag {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            margin-bottom: 20px;
-            padding: 15px;
-            background: rgba(255, 255, 255, 0.05);
+        .featured-item {
+            background: var(--card-bg);
+            padding: 2rem;
             border-radius: 15px;
-            transition: all 0.3s ease;
+            text-align: center;
+            transition: var(--transition-smooth);
+            border: 1px solid var(--border-color);
         }
 
-        .skill-tag:hover {
-            background: rgba(255, 255, 255, 0.1);
-            transform: translateX(10px) translateZ(10px);
+        .featured-item:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
         }
 
-        .skill-tag i {
-            font-size: 28px;
-            background: linear-gradient(45deg, #00c6ff, #6a11cb);
+        .featured-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            background: var(--gradient-legal);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
-        /* =========================
-           3D GALLERY
-        ========================= */
+        /* ==========================================================================
+           ABOUT SECTION (COMPREHENSIVE)
+        ========================================================================== */
+        .about-section {
+            padding: 6rem 2rem;
+            background: var(--bg-primary);
+        }
+
+        .about-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-image {
+            position: relative;
+        }
+
+        .image-wrapper {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .image-wrapper::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--gradient-legal);
+            opacity: 0.2;
+            z-index: 1;
+        }
+
+        .about-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .about-stat {
+            text-align: center;
+            padding: 1.5rem;
+            background: var(--card-bg);
+            border-radius: 10px;
+            border: 1px solid var(--border-color);
+        }
+
+        .timeline-advanced {
+            position: relative;
+            max-width: 800px;
+            margin: 4rem auto 0;
+        }
+
+        .timeline-item {
+            display: flex;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .timeline-year {
+            flex: 0 0 100px;
+            text-align: right;
+            padding-right: 2rem;
+            position: relative;
+        }
+
+        .year-mark {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background: var(--gradient-legal);
+            color: white;
+            border-radius: 20px;
+            font-weight: 600;
+            position: relative;
+        }
+
+        .timeline-content {
+            flex: 1;
+            padding: 1.5rem;
+            background: var(--card-bg);
+            border-radius: 15px;
+            border: 1px solid var(--border-color);
+            margin-left: 2rem;
+            position: relative;
+        }
+
+        .timeline-content::before {
+            content: '';
+            position: absolute;
+            left: -10px;
+            top: 20px;
+            width: 20px;
+            height: 20px;
+            background: var(--gradient-legal);
+            border-radius: 50%;
+            box-shadow: 0 0 20px #6a11cb;
+        }
+
+        /* ==========================================================================
+           EXPERTISE SECTION
+        ========================================================================== */
+        .expertise-section {
+            padding: 6rem 2rem;
+            background: var(--bg-secondary);
+        }
+
+        .expertise-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .expertise-card {
+            background: var(--card-bg);
+            padding: 3rem;
+            border-radius: 20px;
+            border: 1px solid var(--border-color);
+            transition: var(--transition-smooth);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .expertise-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .expertise-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: var(--gradient-legal);
+        }
+
+        .expertise-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            background: var(--gradient-legal);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* ==========================================================================
+           ACHIEVEMENTS SECTION
+        ========================================================================== */
+        .achievements-section {
+            padding: 6rem 2rem;
+            background: var(--bg-primary);
+        }
+
+        .achievements-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .achievement-card {
+            text-align: center;
+            padding: 3rem 2rem;
+            background: var(--card-bg);
+            border-radius: 20px;
+            border: 1px solid var(--border-color);
+            transition: var(--transition-smooth);
+        }
+
+        .achievement-card:hover {
+            transform: translateY(-10px) scale(1.05);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .achievement-number {
+            font-size: 3rem;
+            font-weight: 800;
+            background: var(--gradient-legal);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 1rem;
+        }
+
+        /* ==========================================================================
+           PUBLICATIONS SECTION
+        ========================================================================== */
+        .publications-section {
+            padding: 6rem 2rem;
+            background: var(--bg-secondary);
+        }
+
+        .publications-slider {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .publication-card {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 20px;
+            border: 1px solid var(--border-color);
+            height: 100%;
+            transition: var(--transition-smooth);
+        }
+
+        .publication-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .publication-year {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background: var(--gradient-legal);
+            color: white;
+            border-radius: 20px;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        /* ==========================================================================
+           MEDIA & GALLERY SECTION
+        ========================================================================== */
+        .gallery-section {
+            padding: 6rem 2rem;
+            background: var(--bg-primary);
+        }
+
         .gallery-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 25px;
-            padding: 20px;
-            transform-style: preserve-3d;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
         .gallery-item {
-            height: 320px;
-            border-radius: 20px;
-            overflow: hidden;
             position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            aspect-ratio: 4/3;
             cursor: pointer;
-            box-shadow: 
-                0 15px 35px rgba(0, 0, 0, 0.5),
-                inset 0 0 20px rgba(255, 255, 255, 0.05);
-            transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
-            transform-style: preserve-3d;
-            transform: rotateX(5deg) rotateY(5deg);
+            transition: var(--transition-smooth);
         }
 
-        .gallery-item:nth-child(even) {
-            transform: rotateX(-5deg) rotateY(-5deg);
+        .gallery-item:hover {
+            transform: translateY(-10px) scale(1.05);
+            box-shadow: var(--shadow-lg);
         }
 
         .gallery-item img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: all 0.6s ease;
-        }
-
-        .gallery-item:hover {
-            transform: scale(1.08) rotateX(0) rotateY(0) translateZ(50px);
-            box-shadow: 
-                0 30px 60px rgba(0, 198, 255, 0.5),
-                0 0 40px rgba(106, 17, 203, 0.5);
-            z-index: 10;
+            transition: transform 0.6s ease;
         }
 
         .gallery-item:hover img {
-            transform: scale(1.15);
+            transform: scale(1.1);
         }
 
         .gallery-overlay {
             position: absolute;
             bottom: 0;
             left: 0;
-            width: 100%;
-            background: linear-gradient(
-                transparent,
-                rgba(0, 0, 0, 0.8)
-            );
-            padding: 25px;
-            opacity: 0;
-            transform: translateY(20px);
-            transition: all 0.4s ease;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+            padding: 2rem;
+            transform: translateY(100%);
+            transition: transform 0.6s ease;
         }
 
         .gallery-item:hover .gallery-overlay {
-            opacity: 1;
             transform: translateY(0);
         }
 
-        /* =========================
-           THEMATIC AREAS
-        ========================= */
-        .thematic-grid {
+        /* ==========================================================================
+           CONTACT SECTION
+        ========================================================================== */
+        .contact-section {
+            padding: 6rem 2rem;
+            background: var(--bg-secondary);
+        }
+
+        .contact-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+
+        .contact-info {
             display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-            justify-content: center;
-            margin-top: 30px;
+            flex-direction: column;
+            gap: 2rem;
         }
 
-        .theme-tag {
-            padding: 12px 25px;
-            background: rgba(255, 255, 255, 0.08);
-            border-radius: 25px;
-            border: 2px solid transparent;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
+        .contact-card {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 15px;
+            border: 1px solid var(--border-color);
+            transition: var(--transition-smooth);
         }
 
-        .theme-tag::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
+        .contact-card:hover {
+            transform: translateX(10px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .contact-form {
+            background: var(--card-bg);
+            padding: 3rem;
+            border-radius: 20px;
+            border: 1px solid var(--border-color);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-control {
             width: 100%;
-            height: 100%;
-            background: linear-gradient(
-                90deg,
-                transparent,
-                rgba(255, 255, 255, 0.2),
-                transparent
-            );
-            transition: 0.5s;
+            padding: 1rem;
+            background: var(--bg-primary);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            color: var(--text-primary);
+            font-family: var(--font-primary);
+            transition: var(--transition-smooth);
         }
 
-        .theme-tag:hover::before {
-            left: 100%;
+        .form-control:focus {
+            outline: none;
+            border-color: #6a11cb;
+            box-shadow: 0 0 0 3px rgba(106, 17, 203, 0.1);
         }
 
-        .theme-tag:hover {
-            transform: translateY(-5px) scale(1.05);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
         }
 
-        /* =========================
-           CONNECT SECTION
-        ========================= */
-        .connect-box {
+        /* ==========================================================================
+           SOCIAL HUB SECTION
+        ========================================================================== */
+        .social-hub {
+            padding: 6rem 2rem;
+            background: var(--bg-primary);
+        }
+
+        .social-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .social-card {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 15px;
             text-align: center;
-            transform-style: preserve-3d;
-        }
-
-        .social-3d-container {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 35px;
-            margin-top: 50px;
-            perspective: 800px;
-            transform-style: preserve-3d;
-        }
-
-        .social-btn {
-            width: 80px;
-            height: 80px;
-            background: rgba(255, 255, 255, 0.08);
-            border-radius: 22px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 32px;
-            color: #fff;
             text-decoration: none;
-            transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            box-shadow: 
-                0 15px 35px rgba(0, 0, 0, 0.4),
-                inset 0 0 20px rgba(255, 255, 255, 0.1);
+            border: 1px solid var(--border-color);
+            transition: var(--transition-smooth);
             position: relative;
             overflow: hidden;
-            transform-style: preserve-3d;
         }
 
-        .social-btn::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, var(--c1), var(--c2));
-            opacity: 0;
-            transition: all 0.5s ease;
-            z-index: 1;
+        .social-card:hover {
+            transform: translateY(-10px) scale(1.05);
+            box-shadow: var(--shadow-lg);
         }
 
-        .social-btn:hover {
-            transform: rotateX(20deg) rotateY(20deg) translateY(-15px) scale(1.15);
-            box-shadow: 
-                0 25px 50px rgba(0, 0, 0, 0.6),
-                0 0 30px var(--c1),
-                inset 0 0 30px rgba(255, 255, 255, 0.2);
-            border-color: transparent;
-        }
-
-        .social-btn:hover::before {
-            opacity: 1;
-        }
-
-        .social-btn i {
-            transition: all 0.5s ease;
-            z-index: 2;
-            position: relative;
-        }
-
-        .social-btn:hover i {
-            transform: scale(1.3) translateZ(30px);
-        }
-
-        /* =========================
-           MISSION STATEMENT
-        ========================= */
-        .mission-card {
-            background: linear-gradient(
-                135deg,
-                rgba(106, 17, 203, 0.4),
-                rgba(37, 117, 252, 0.4),
-                rgba(255, 0, 122, 0.4)
-            );
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            border-radius: var(--card-radius);
-            padding: 60px;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-            transform-style: preserve-3d;
-            animation: missionGlow 4s ease-in-out infinite;
-        }
-
-        @keyframes missionGlow {
-            0%, 100% { 
-                box-shadow: 0 20px 60px rgba(106, 17, 203, 0.4); 
-            }
-            50% { 
-                box-shadow: 0 30px 80px rgba(106, 17, 203, 0.6); 
-            }
-        }
-
-        .mission-card i {
-            font-size: 60px;
-            color: #fff;
-            margin-bottom: 30px;
-            text-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
-        }
-
-        .mission-card h2 {
+        .social-icon {
             font-size: 2.5rem;
-            margin-bottom: 25px;
-            background: linear-gradient(45deg, #fff, #a5f3fc);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            margin-bottom: 1rem;
         }
 
-        .mission-card p {
-            font-size: 1.5rem;
-            font-family: 'Playfair Display', serif;
-            line-height: 1.8;
+        /* Social Platform Specific Colors */
+        .social-email { color: #D44638; }
+        .social-whatsapp { color: #25D366; }
+        .social-linkedin { color: #0077B5; }
+        .social-instagram { color: #E4405F; }
+        .social-facebook { color: #1877F2; }
+        .social-twitter { color: #1DA1F2; }
+        .social-wef { color: #00A3E0; }
+        .social-linktree { color: #43E660; }
+        .social-tiktok { color: #000000; }
+        .social-snapchat { color: #FFFC00; }
+        .social-threads { color: #000000; }
+        .social-ok { color: #F47300; }
+        .social-youtube { color: #FF0000; }
+        .social-medium { color: #00AB6C; }
+        .social-researchgate { color: #00CCBB; }
+        .social-github { color: #333333; }
+
+        /* ==========================================================================
+           TESTIMONIALS SECTION
+        ========================================================================== */
+        .testimonials-section {
+            padding: 6rem 2rem;
+            background: var(--bg-secondary);
+        }
+
+        .testimonial-slider {
             max-width: 800px;
             margin: 0 auto;
         }
 
-        /* =========================
-           FOOTER
-        ========================= */
-        footer {
+        .testimonial-card {
+            background: var(--card-bg);
+            padding: 3rem;
+            border-radius: 20px;
+            border: 1px solid var(--border-color);
             text-align: center;
-            padding: 30px 20px;
-            border-top: 1px solid rgba(255, 255, 255, 0.15);
-            color: #888;
-            font-size: 14px;
-            background: rgba(0, 0, 0, 0.3);
-            backdrop-filter: blur(10px);
-            position: relative;
-            z-index: 1;
+            margin: 0 1rem;
         }
 
-        footer::before {
-            content: '';
-            position: absolute;
+        .testimonial-text {
+            font-size: 1.2rem;
+            font-style: italic;
+            margin-bottom: 2rem;
+            color: var(--text-secondary);
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .author-image {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        /* ==========================================================================
+           FOOTER (ADVANCED)
+        ========================================================================== */
+        .main-footer {
+            background: var(--bg-tertiary);
+            padding: 4rem 2rem 2rem;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-logo {
+            font-family: var(--font-secondary);
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            background: var(--gradient-legal);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .footer-links h4,
+        .footer-contact h4 {
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+            color: var(--text-primary);
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: var(--transition-smooth);
+        }
+
+        .footer-links a:hover {
+            color: var(--text-primary);
+            padding-left: 5px;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border-color);
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .footer-legal {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 1rem;
+        }
+
+        .footer-legal a {
+            color: var(--text-muted);
+            text-decoration: none;
+        }
+
+        .footer-legal a:hover {
+            color: var(--text-primary);
+        }
+
+        /* ==========================================================================
+           BACK TO TOP BUTTON
+        ========================================================================== */
+        .back-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 50px;
+            height: 50px;
+            background: var(--gradient-legal);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+            transition: var(--transition-smooth);
+            z-index: 999;
+            box-shadow: var(--shadow-md);
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .back-to-top:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(106, 17, 203, 0.3);
+        }
+
+        /* ==========================================================================
+           MODAL SYSTEM
+        ========================================================================== */
+        .modal {
+            position: fixed;
             top: 0;
             left: 0;
-            right: 0;
-            height: 1px;
-            background: linear-gradient(90deg, transparent, #6a11cb, #2575fc, #ff007a, transparent);
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition-smooth);
         }
 
-        /* =========================
+        .modal.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .modal-content {
+            background: var(--card-bg);
+            border-radius: 20px;
+            padding: 3rem;
+            max-width: 800px;
+            width: 90%;
+            max-height: 90vh;
+            overflow-y: auto;
+            transform: translateY(50px);
+            transition: transform 0.6s ease;
+        }
+
+        .modal.active .modal-content {
+            transform: translateY(0);
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--text-primary);
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: var(--transition-smooth);
+        }
+
+        .modal-close:hover {
+            background: var(--bg-primary);
+        }
+
+        /* ==========================================================================
            RESPONSIVE DESIGN
-        ========================= */
+        ========================================================================== */
         @media (max-width: 1200px) {
-            .hero-content {
-                gap: 40px;
-                max-width: 1000px;
+            .hero-container {
+                grid-template-columns: 1fr;
+                text-align: center;
             }
-            
-            .hero-img-main {
-                width: 280px;
-                height: 380px;
+
+            .hero-visual {
+                height: 500px;
+                order: -1;
+            }
+
+            .floating-element {
+                display: none;
             }
         }
 
         @media (max-width: 992px) {
-            .hero-content {
+            .nav-menu {
+                position: fixed;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                background: var(--bg-primary);
+                flex-direction: column;
+                padding: 2rem;
+                transform: translateY(-100%);
+                opacity: 0;
+                visibility: hidden;
+                transition: var(--transition-smooth);
+                border-bottom: 1px solid var(--border-color);
+            }
+
+            .nav-menu.active {
+                transform: translateY(0);
+                opacity: 1;
+                visibility: visible;
+            }
+
+            .mobile-menu-btn {
+                display: flex;
+            }
+
+            .nav-actions .nav-social {
+                display: none;
+            }
+
+            .contact-container {
                 grid-template-columns: 1fr;
-                text-align: center;
-                gap: 50px;
             }
-            
-            .hero-img-container {
-                height: 500px;
-                order: -1;
-                margin-top: 0;
-            }
-            
-            .hero-socials {
-                grid-template-columns: repeat(4, 1fr);
-                max-width: 400px;
-            }
-            
-            .grid-3 {
-                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-                gap: 30px;
+
+            .about-container {
+                grid-template-columns: 1fr;
             }
         }
 
         @media (max-width: 768px) {
-            /* Navigation */
-            nav {
-                bottom: 20px;
-                padding: 12px 20px;
-                gap: 20px;
-                width: 90%;
-                max-width: 400px;
+            .main-nav {
+                padding: 1rem;
             }
-            
-            nav a {
-                width: 36px;
-                height: 36px;
-                font-size: 18px;
+
+            .hero-section {
+                padding: 100px 1rem 1rem;
             }
-            
-            /* Hero Section */
-            .hero {
-                padding: 100px 20px 80px;
-            }
-            
-            .hero-badge {
-                padding: 8px 20px;
-                font-size: 12px;
-            }
-            
-            .hero h1 {
+
+            .hero-title {
                 font-size: 2.5rem;
             }
-            
-            .hero-img-container {
-                height: 400px;
+
+            .hero-stats {
+                grid-template-columns: repeat(2, 1fr);
             }
-            
-            .hero-img-main {
-                width: 180px;
-                height: 260px;
+
+            .hero-actions {
+                flex-direction: column;
             }
-            
-            .float-card {
-                padding: 12px 20px;
-                font-size: 14px;
-                backdrop-filter: blur(15px);
-            }
-            
-            .fc-1 {
-                top: 95%;
-                left: -15px;
-            }
-            
-            .fc-2 {
-                bottom: 15%;
-                right: -15px;
-            }
-            
-            /* Hero Social Icons */
-            .hero-socials {
-                grid-template-columns: repeat(3, 1fr);
-                max-width: 300px;
-                gap: 15px;
-            }
-            
-            .hero-socials .hs {
-                width: 50px;
-                height: 50px;
-                font-size: 20px;
-            }
-            
-            /* Sections */
-            section {
-                padding: 80px 20px;
-            }
-            
+
             .section-title {
-                font-size: 2.5rem;
-                margin-bottom: 60px;
-            }
-            
-            .glass-card {
-                padding: 30px;
-            }
-            
-            /* Timeline */
-            .timeline::before {
-                left: 0;
-            }
-            
-            .timeline-item {
-                justify-content: flex-start !important;
-                padding-left: 40px;
-            }
-            
-            .timeline-content {
-                width: 100%;
-            }
-            
-            .timeline-dot {
-                left: 0;
-                transform: translateX(-50%);
-            }
-            
-            /* Gallery */
-            .gallery-grid {
-                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-                gap: 20px;
-            }
-            
-            .gallery-item {
-                height: 280px;
-            }
-            
-            /* Connect Section */
-            .social-3d-container {
-                gap: 25px;
-            }
-            
-            .social-btn {
-                width: 65px;
-                height: 65px;
-                font-size: 26px;
-            }
-            
-            /* Mission Card */
-            .mission-card {
-                padding: 40px 30px;
-            }
-            
-            .mission-card h2 {
                 font-size: 2rem;
             }
-            
-            .mission-card p {
-                font-size: 1.2rem;
+
+            .featured-grid {
+                grid-template-columns: repeat(2, 1fr);
             }
-            
-            /* Theme Button */
-            .theme-btn {
-                top: 20px;
-                right: 20px;
-                padding: 10px 20px;
-                font-size: 14px;
+
+            .expertise-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .social-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
             }
         }
 
-        @media (max-width: 480px) {
-            .hero-socials {
-                grid-template-columns: repeat(2, 1fr);
-                max-width: 200px;
-            }
-            
-            .hero-buttons {
-                display: flex;
-                flex-direction: column;
-                gap: 15px;
-            }
-            
-            .hero-btn {
-                margin-right: 0;
-                width: 100%;
-                text-align: center;
-            }
-            
-            .grid-3 {
+        @media (max-width: 576px) {
+            .featured-grid {
                 grid-template-columns: 1fr;
             }
-            
+
+            .social-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
             .gallery-grid {
                 grid-template-columns: 1fr;
             }
-            
-            nav {
-                gap: 15px;
-                padding: 10px 15px;
+
+            .hero-stats {
+                grid-template-columns: 1fr;
             }
-            
-            nav a {
-                width: 32px;
-                height: 32px;
-                font-size: 16px;
+
+            .floating-elements {
+                display: none;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+
+            .modal-content {
+                padding: 2rem 1rem;
             }
         }
 
-        /* =========================
-           ANIMATION UTILITIES
-        ========================= */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(50px) translateZ(-50px);
+        /* ==========================================================================
+           UTILITY CLASSES
+        ========================================================================== */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .text-center { text-align: center; }
+        .text-left { text-align: left; }
+        .text-right { text-align: right; }
+
+        .mt-1 { margin-top: 1rem; }
+        .mt-2 { margin-top: 2rem; }
+        .mt-3 { margin-top: 3rem; }
+        .mt-4 { margin-top: 4rem; }
+        .mt-5 { margin-top: 5rem; }
+
+        .mb-1 { margin-bottom: 1rem; }
+        .mb-2 { margin-bottom: 2rem; }
+        .mb-3 { margin-bottom: 3rem; }
+        .mb-4 { margin-bottom: 4rem; }
+        .mb-5 { margin-bottom: 5rem; }
+
+        .py-1 { padding-top: 1rem; padding-bottom: 1rem; }
+        .py-2 { padding-top: 2rem; padding-bottom: 2rem; }
+        .py-3 { padding-top: 3rem; padding-bottom: 3rem; }
+        .py-4 { padding-top: 4rem; padding-bottom: 4rem; }
+        .py-5 { padding-top: 5rem; padding-bottom: 5rem; }
+
+        .gradient-text {
+            background: var(--gradient-legal);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .glass-effect {
+            background: var(--glass-bg);
+            backdrop-filter: var(--glass-blur);
+            border: 1px solid var(--glass-border);
+            box-shadow: var(--glass-shadow);
+        }
+
+        /* ==========================================================================
+           PRINT STYLES
+        ========================================================================== */
+        @media print {
+            .main-nav,
+            .hero-actions,
+            .back-to-top,
+            .theme-toggle,
+            .mobile-menu-btn {
+                display: none !important;
             }
-            to {
-                opacity: 1;
-                transform: translateY(0) translateZ(0);
+
+            body {
+                color: #000;
+                background: #fff;
+            }
+
+            .hero-section {
+                min-height: auto;
+                padding: 2rem 0;
+            }
+
+            .hero-title {
+                font-size: 2rem;
+                color: #000;
+            }
+
+            .section-title {
+                color: #000;
+            }
+
+            a {
+                color: #000;
+                text-decoration: none;
             }
         }
 
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
+        /* ==========================================================================
+           CUSTOM SCROLLBAR
+        ========================================================================== */
+        ::-webkit-scrollbar {
+            width: 12px;
+            height: 12px;
         }
 
-        .animate-on-scroll {
-            opacity: 0;
-            transform: translateY(50px) rotateX(10deg);
-            transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+        ::-webkit-scrollbar-track {
+            background: var(--bg-primary);
         }
 
-        .animate-on-scroll.visible {
-            opacity: 1;
-            transform: translateY(0) rotateX(0);
+        ::-webkit-scrollbar-thumb {
+            background: var(--gradient-legal);
+            border-radius: 6px;
+            border: 3px solid var(--bg-primary);
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(135deg, #ff007a, #ff8c00);
+        }
+
+        /* Firefox Scrollbar */
+        * {
+            scrollbar-width: thin;
+            scrollbar-color: #6a11cb var(--bg-primary);
         }
     </style>
 </head>
 
-<body>
-    <!-- DYNAMIC BACKGROUND -->
-    <div class="fluid-bg">
-        <div class="orb orb-1"></div>
-        <div class="orb orb-2"></div>
-        <div class="orb orb-3"></div>
+<body class="theme-dark">
+    <!-- PRELOADER -->
+    <div id="preloader">
+        <div class="preloader-content">
+            <div class="preloader-logo">
+                <div class="logo-ring"></div>
+                <div class="logo-ring"></div>
+                <div class="logo-ring"></div>
+            </div>
+            <div class="preloader-text">Loading Excellence</div>
+        </div>
     </div>
-    <div class="bubbles-container" id="bubbles"></div>
 
-    <!-- THEME BUTTON -->
-    <button class="theme-btn" onclick="randomizeTheme()">
-        <i class="fas fa-magic"></i> Magic Theme
-    </button>
+    <!-- COSMIC BACKGROUND -->
+    <div class="cosmic-bg">
+        <div class="orbit-1"></div>
+        <div class="orbit-2"></div>
+        <div class="orbit-3"></div>
+        <div class="star-field"></div>
+    </div>
 
-    <!-- NAVIGATION -->
-    <nav>
-        <a href="#hero" data-tooltip="Home"><i class="fas fa-home"></i></a>
-        <a href="#about" data-tooltip="About"><i class="fas fa-user"></i></a>
-        <a href="#career" data-tooltip="Legal"><i class="fas fa-gavel"></i></a>
-        <a href="#leadership" data-tooltip="Leadership"><i class="fas fa-globe"></i></a>
-        <a href="#gallery" data-tooltip="Gallery"><i class="fas fa-images"></i></a>
-        <a href="#contact" data-tooltip="Connect"><i class="fas fa-paper-plane"></i></a>
+    <!-- QUANTUM PARTICLES CONTAINER -->
+    <div class="quantum-container" id="quantumContainer"></div>
+
+    <!-- MAIN NAVIGATION -->
+    <nav class="main-nav" id="mainNav">
+        <a href="#home" class="nav-brand">
+            <div class="brand-logo">MAB</div>
+            <div class="brand-text">Mumtaz Alam Bazai</div>
+        </a>
+
+        <ul class="nav-menu" id="navMenu">
+            <li class="nav-item"><a href="#home" class="nav-link active">Home</a></li>
+            <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+            <li class="nav-item"><a href="#expertise" class="nav-link">Expertise</a></li>
+            <li class="nav-item"><a href="#achievements" class="nav-link">Achievements</a></li>
+            <li class="nav-item"><a href="#publications" class="nav-link">Publications</a></li>
+            <li class="nav-item"><a href="#gallery" class="nav-link">Gallery</a></li>
+            <li class="nav-item"><a href="#testimonials" class="nav-link">Testimonials</a></li>
+            <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+
+        <div class="nav-actions">
+            <div class="nav-social">
+                <a href="https://linkedin.com" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://twitter.com" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="https://instagram.com" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+            <button class="theme-toggle" id="themeToggle" title="Toggle Theme">
+                <i class="fas fa-moon"></i>
+            </button>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
     </nav>
 
     <!-- HERO SECTION -->
-    <section id="hero" class="hero">
-        <div class="hero-3d-bg">
-            <div class="hero-3d-layer" id="heroBgLayer"></div>
-        </div>
+    <section id="home" class="hero-section">
+        <div class="hero-container">
+            <div class="hero-content" data-aos="fade-up" data-aos-duration="1000">
+                <div class="hero-badges">
+                    <span class="badge badge-legal">Advocate Supreme Court</span>
+                    <span class="badge badge-global">Global Shaper</span>
+                    <span class="badge badge-youth">Youth Policy Expert</span>
+                </div>
 
-        <div class="hero-content">
-            <div class="hero-text">
-                <span class="hero-badge">Advocate & Changemaker</span>
-                <h1>Mumtaz Alam <br> Bazai</h1>
-                <p>Advocate High Court · Human Rights Lawyer · Global Shaper (WEF).<br>
-                Empowering the youth of Balochistan through law, leadership, and unwavering justice.</p>
-                
-                <div class="hero-buttons">
-                    <a href="#contact" class="hero-btn btn-primary">Get in Touch</a>
-                    <a href="https://linktr.ee/mumtazalam" target="_blank" class="hero-btn btn-secondary">Portfolio</a>
+                <h1 class="hero-title">
+                    <span class="title-line">Mumtaz Alam</span>
+                    <span class="title-line gradient-text">Bazai</span>
+                    <span class="title-line">Legal Visionary</span>
+                </h1>
+
+                <p class="hero-subtitle">
+                    Advocate Supreme Court of Pakistan · World Economic Forum Global Shaper · 
+                    Human Rights Lawyer · Youth Policy Expert · Legal Scholar from Balochistan.
+                    Empowering justice, advocating rights, and shaping the future of law.
+                </p>
+
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">15+</div>
+                        <div class="stat-label">Years Experience</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">500+</div>
+                        <div class="stat-label">Cases Handled</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">50+</div>
+                        <div class="stat-label">Publications</div>
+                    </div>
+                </div>
+
+                <div class="hero-actions">
+                    <a href="#contact" class="btn btn-primary">
+                        <i class="fas fa-envelope"></i> Contact Me
+                    </a>
+                    <a href="#about" class="btn btn-secondary">
+                        <i class="fas fa-user"></i> My Journey
+                    </a>
+                    <a href="Mumtaz_Alam_CV.pdf" class="btn btn-outline" download>
+                        <i class="fas fa-download"></i> Download CV
+                    </a>
                 </div>
             </div>
 
-            <div class="hero-img-container" id="heroImgContainer">
-                <div class="hero-img-bg"></div>
-                <div class="hero-img-main" id="heroImage"></div>
-                
-                <div class="float-card fc-1">
-                    <i class="fas fa-award"></i>
-                    <span>Global Shaper</span>
+            <div class="hero-visual" data-aos="fade-left" data-aos-duration="1200">
+                <div class="portrait-3d">
+                    <div class="portrait-layer layer-3"></div>
+                    <div class="portrait-layer layer-2"></div>
+                    <div class="portrait-layer layer-1"></div>
+                    <div class="portrait-frame"></div>
                 </div>
-                <div class="float-card fc-2">
-                    <i class="fas fa-scale-balanced"></i>
-                    <span>Advocate High Court</span>
+
+                <div class="floating-elements">
+                    <div class="floating-element element-1">
+                        <i class="fas fa-award floating-icon"></i>
+                        <div>
+                            <div class="element-title">Global Shaper</div>
+                            <div class="element-subtitle">WEF Geneva 2025</div>
+                        </div>
+                    </div>
+                    <div class="floating-element element-2">
+                        <i class="fas fa-gavel floating-icon"></i>
+                        <div>
+                            <div class="element-title">Advocate</div>
+                            <div class="element-subtitle">Supreme Court</div>
+                        </div>
+                    </div>
+                    <div class="floating-element element-3">
+                        <i class="fas fa-graduation-cap floating-icon"></i>
+                        <div>
+                            <div class="element-title">LLB (Hons)</div>
+                            <div class="element-subtitle">Gold Medalist</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+    </section>
 
-        <!-- HERO SOCIAL LINKS -->
-        <div class="hero-socials">
-            <a href="mailto:advmumtaz222@gmail.com" target="_blank" class="hs mail" title="Email">
-                <i class="fas fa-envelope"></i>
-            </a>
-            <a href="https://wa.me/923332568792" target="_blank" class="hs whatsapp" title="WhatsApp">
-                <i class="fab fa-whatsapp"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/adv-mumtaz-alam-bazai-163a9a324" target="_blank" class="hs linkedin" title="LinkedIn">
-                <i class="fab fa-linkedin-in"></i>
-            </a>
-            <a href="https://www.instagram.com/mumtaz_alam" target="_blank" class="hs instagram" title="Instagram">
-                <i class="fab fa-instagram"></i>
-            </a>
-            <a href="https://www.facebook.com/mumtaz.alam.18488" target="_blank" class="hs facebook" title="Facebook">
-                <i class="fab fa-facebook-f"></i>
-            </a>
-            <a href="https://x.com/mumtazalam333" target="_blank" class="hs twitter" title="Twitter/X">
-                <i class="fab fa-x-twitter"></i>
-            </a>
-            <a href="https://my.weforum.org/network/people/001TG000009vSDhYAM/adv-mumtaz-alam" target="_blank" class="hs wef" title="World Economic Forum">
-                <i class="fas fa-globe"></i>
-            </a>
-            <a href="https://linktr.ee/mumtazalam" target="_blank" class="hs linktree" title="Linktree">
-                <i class="fas fa-link"></i>
-            </a>
-            <a href="https://www.tiktok.com/@mumtaz_alam" target="_blank" class="hs tiktok" title="TikTok">
-                <i class="fab fa-tiktok"></i>
-            </a>
-            <a href="https://www.snapchat.com/add/mumtazalam222" target="_blank" class="hs snapchat" title="Snapchat">
-                <i class="fab fa-snapchat-ghost"></i>
-            </a>
-            <a href="https://www.threads.com/@mumtaz_alam" target="_blank" class="hs threads" title="Threads">
-                <i class="fas fa-comment-dots"></i>
-            </a>
-            <a href="https://ok.ru/profile/910193583170" target="_blank" class="hs ok" title="Odnoklassniki">
-                <i class="fab fa-odnoklassniki"></i>
-            </a>
+    <!-- FEATURED IN SECTION -->
+    <section class="featured-section">
+        <div class="container">
+            <h2 class="section-title">Featured In & Affiliations</h2>
+            <div class="featured-grid">
+                <div class="featured-item">
+                    <i class="fas fa-globe featured-icon"></i>
+                    <h3>World Economic Forum</h3>
+                    <p>Global Shapers Community</p>
+                </div>
+                <div class="featured-item">
+                    <i class="fas fa-balance-scale featured-icon"></i>
+                    <h3>Supreme Court Bar</h3>
+                    <p>Registered Advocate</p>
+                </div>
+                <div class="featured-item">
+                    <i class="fas fa-university featured-icon"></i>
+                    <h3>University of Balochistan</h3>
+                    <p>Alumni Association</p>
+                </div>
+                <div class="featured-item">
+                    <i class="fas fa-handshake featured-icon"></i>
+                    <h3>Iqra Law Associates</h3>
+                    <p>Senior Associate</p>
+                </div>
+                <div class="featured-item">
+                    <i class="fas fa-book featured-icon"></i>
+                    <h3>Legal Publications</h3>
+                    <p>Author & Researcher</p>
+                </div>
+                <div class="featured-item">
+                    <i class="fas fa-users featured-icon"></i>
+                    <h3>Youth Networks</h3>
+                    <p>National & International</p>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- ABOUT SECTION -->
-    <section id="about">
-        <h2 class="section-title">The Journey</h2>
-        <div class="glass-card">
-            <div style="text-align: center; margin-bottom: 40px; max-width: 800px; margin: 0 auto 40px;">
-                <p style="font-size: 1.1rem; line-height: 1.8;">
-                    Born on <strong>11 August 2000</strong> in Kili Zdoon, District Pishin, Balochistan. Mumtaz is the eldest of nine siblings, son of Dr. Ameer Muhammad (Neurosurgeon). From village schooling to scholarship-based excellence at Pak-Turk Maarif, his journey is defined by discipline and brilliance.
-                </p>
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2 class="section-title">My Journey</h2>
+            <div class="about-container">
+                <div class="about-content" data-aos="fade-right">
+                    <h3>From Balochistan to Global Platforms</h3>
+                    <p>
+                        Born on <strong>11 August 2000</strong> in Kili Zdoon, District Pishin, Balochistan, 
+                        I am the eldest of nine siblings, son of Dr. Ameer Muhammad (Neurosurgeon). 
+                        My journey from village schooling to international platforms embodies resilience, 
+                        academic excellence, and unwavering commitment to justice.
+                    </p>
+                    <p>
+                        Educated at Pak-Turk Maarif International Schools & Colleges on scholarship, 
+                        I demonstrated early leadership and multilingual fluency (Pashto, Urdu, English, Turkish). 
+                        This foundation propelled me through higher education at the University of Balochistan, 
+                        where I earned BA (Arts), LLB (Hons), and MA (Political Science) with distinction.
+                    </p>
+                    <p>
+                        In 2025, I received my Bar Council License (Reg No. 14/2025) and joined 
+                        Iqra Law Associates under Advocate Abdul Zahir Kakar, beginning my formal legal practice.
+                    </p>
+
+                    <div class="about-stats">
+                        <div class="about-stat">
+                            <div class="stat-number">2000</div>
+                            <div class="stat-label">Born</div>
+                        </div>
+                        <div class="about-stat">
+                            <div class="stat-number">2019</div>
+                            <div class="stat-label">Intermediate</div>
+                        </div>
+                        <div class="about-stat">
+                            <div class="stat-number">2024</div>
+                            <div class="stat-label">LLB (Hons)</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-image" data-aos="fade-left">
+                    <div class="image-wrapper">
+                        <img src="about-image.jpg" alt="Mumtaz Alam Bazai" loading="lazy">
+                    </div>
+                </div>
             </div>
 
-            <div class="timeline">
-                <div class="timeline-item animate-on-scroll">
-                    <div class="timeline-dot"></div>
+            <!-- TIMELINE -->
+            <div class="timeline-advanced" data-aos="fade-up">
+                <div class="timeline-item">
+                    <div class="timeline-year">
+                        <span class="year-mark">2019</span>
+                    </div>
                     <div class="timeline-content">
-                        <h4>2019 - Intermediate</h4>
+                        <h4>Intermediate Education</h4>
                         <p>Pak-Turk Maarif International Schools & Colleges. Demonstrated leadership and multilingual fluency (Pashto, Urdu, English, Turkish).</p>
                     </div>
                 </div>
-                <div class="timeline-item animate-on-scroll">
-                    <div class="timeline-dot"></div>
+                <div class="timeline-item">
+                    <div class="timeline-year">
+                        <span class="year-mark">2022</span>
+                    </div>
                     <div class="timeline-content">
-                        <h4>2022 - BA (Arts)</h4>
+                        <h4>BA (Arts) Degree</h4>
                         <p>University of Balochistan. Building the foundation for social sciences and political thought.</p>
                     </div>
                 </div>
-                <div class="timeline-item animate-on-scroll">
-                    <div class="timeline-dot"></div>
+                <div class="timeline-item">
+                    <div class="timeline-year">
+                        <span class="year-mark">2024</span>
+                    </div>
                     <div class="timeline-content">
-                        <h4>2024 - LLB (Hons) & MA Pol. Sci.</h4>
+                        <h4>LLB (Hons) & MA Pol. Sci.</h4>
                         <p>University Law College & University of Balochistan. Graduated with honors, mastering the intricacies of law and governance.</p>
                     </div>
                 </div>
-                <div class="timeline-item animate-on-scroll">
-                    <div class="timeline-dot"></div>
+                <div class="timeline-item">
+                    <div class="timeline-year">
+                        <span class="year-mark">2025</span>
+                    </div>
                     <div class="timeline-content">
-                        <h4>2025 - Legal License</h4>
+                        <h4>Legal License & Practice</h4>
                         <p>Received Bar Council License (Reg No. 14/2025). Formally joined Iqra Law Associates under Advocate Abdul Zahir Kakar.</p>
                     </div>
                 </div>
@@ -1551,334 +2013,560 @@
         </div>
     </section>
 
-    <!-- CAREER SECTION -->
-    <section id="career">
-        <h2 class="section-title">Legal & Social Impact</h2>
-        <div class="grid-3">
-            <div class="glass-card animate-on-scroll">
-                <i class="fas fa-gavel" style="font-size: 40px; color: #ff007a; margin-bottom: 20px;"></i>
-                <h3>Legal Career</h3>
-                <p style="margin-top: 15px; opacity: 0.9;">
-                    Active practitioner in Civil, Criminal, and Human Rights litigation. Known for pro bono work for marginalized communities in Balochistan. Trained at Iqra Law Associates, Quetta.
-                </p>
-            </div>
-
-            <div class="glass-card animate-on-scroll">
-                <i class="fas fa-globe-asia" style="font-size: 40px; color: #00c6ff; margin-bottom: 20px;"></i>
-                <h3>Global Shaper (WEF)</h3>
-                <p style="margin-top: 15px; opacity: 0.9;">
-                    Curator of Quetta Hub. Represented at <strong>Global Shapers Annual Summit 2025 (Geneva)</strong>. Authored the Governance Charter and spearheaded the first Youth Policy Project.
-                </p>
-            </div>
-
-            <div class="glass-card animate-on-scroll">
-                <i class="fas fa-book-open" style="font-size: 40px; color: #6a11cb; margin-bottom: 20px;"></i>
-                <h3>Publications</h3>
-                <p style="margin-top: 15px; opacity: 0.9;">
-                    Author of <em>"Human Rights and Responsibilities"</em> (2021) and research on <em>"The Role of ECP in Free and Fair Elections"</em> (2024).
-                </p>
+    <!-- EXPERTISE SECTION -->
+    <section id="expertise" class="expertise-section">
+        <div class="container">
+            <h2 class="section-title">Areas of Expertise</h2>
+            <div class="expertise-grid">
+                <div class="expertise-card" data-aos="fade-up">
+                    <i class="fas fa-gavel expertise-icon"></i>
+                    <h3>Legal Practice</h3>
+                    <p>Active practitioner in Civil, Criminal, Constitutional, and Human Rights litigation. Known for pro bono work for marginalized communities.</p>
+                    <ul>
+                        <li>Civil & Criminal Law</li>
+                        <li>Human Rights Advocacy</li>
+                        <li>Constitutional Law</li>
+                        <li>Corporate Law</li>
+                    </ul>
+                </div>
+                <div class="expertise-card" data-aos="fade-up" data-aos-delay="100">
+                    <i class="fas fa-globe-asia expertise-icon"></i>
+                    <h3>Global Leadership</h3>
+                    <p>Curator of Quetta Hub at World Economic Forum. Represented at Global Shapers Annual Summit 2025 (Geneva).</p>
+                    <ul>
+                        <li>Youth Policy Development</li>
+                        <li>International Diplomacy</li>
+                        <li>Cross-cultural Communication</li>
+                        <li>Global Governance</li>
+                    </ul>
+                </div>
+                <div class="expertise-card" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fas fa-book-open expertise-icon"></i>
+                    <h3>Research & Publications</h3>
+                    <p>Author of "Human Rights and Responsibilities" (2021) and extensive research on electoral processes and governance.</p>
+                    <ul>
+                        <li>Academic Writing</li>
+                        <li>Policy Research</li>
+                        <li>Legal Analysis</li>
+                        <li>Peer Review</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- LEADERSHIP SECTION -->
-    <section id="leadership">
-        <h2 class="section-title">Thematic Areas</h2>
-        <div class="glass-card">
-            <div class="thematic-grid">
-                <span class="theme-tag" style="border-color: #00c6ff; color: #00c6ff;">Human Rights & Equality</span>
-                <span class="theme-tag" style="border-color: #ff007a; color: #ff007a;">Governance & Rule of Law</span>
-                <span class="theme-tag" style="border-color: #6a11cb; color: #6a11cb;">Youth Policy</span>
-                <span class="theme-tag" style="border-color: #ffe600; color: #ffe600;">Climate & Energy</span>
-                <span class="theme-tag" style="border-color: #00ff88; color: #00ff88;">Indigenous Rights</span>
-                <span class="theme-tag" style="border-color: #ff00ff; color: #ff00ff;">Legal Education</span>
-                <span class="theme-tag" style="border-color: #00ffff; color: #00ffff;">Digital Rights</span>
-                <span class="theme-tag" style="border-color: #ff8800; color: #ff8800;">Social Justice</span>
+    <!-- ACHIEVEMENTS SECTION -->
+    <section id="achievements" class="achievements-section">
+        <div class="container">
+            <h2 class="section-title">Notable Achievements</h2>
+            <div class="achievements-grid">
+                <div class="achievement-card" data-aos="zoom-in">
+                    <div class="achievement-number">01</div>
+                    <h3>Global Shaper</h3>
+                    <p>Selected as Curator for Quetta Hub at World Economic Forum</p>
+                </div>
+                <div class="achievement-card" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="achievement-number">02</div>
+                    <h3>Legal License</h3>
+                    <p>Bar Council License (Reg No. 14/2025), Supreme Court of Pakistan</p>
+                </div>
+                <div class="achievement-card" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="achievement-number">03</div>
+                    <h3>Academic Excellence</h3>
+                    <p>LLB (Hons) with distinction from University Law College</p>
+                </div>
+                <div class="achievement-card" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="achievement-number">04</div>
+                    <h3>Published Author</h3>
+                    <p>Author of "Human Rights and Responsibilities" (2021)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PUBLICATIONS SECTION -->
+    <section id="publications" class="publications-section">
+        <div class="container">
+            <h2 class="section-title">Publications & Research</h2>
+            <div class="publications-slider">
+                <div class="glide">
+                    <div class="glide__track" data-glide-el="track">
+                        <ul class="glide__slides">
+                            <li class="glide__slide">
+                                <div class="publication-card">
+                                    <span class="publication-year">2024</span>
+                                    <h3>The Role of ECP in Free and Fair Elections</h3>
+                                    <p>Comprehensive research on electoral processes and the constitutional role of the Election Commission of Pakistan.</p>
+                                    <div class="publication-meta">
+                                        <span><i class="fas fa-book"></i> Research Paper</span>
+                                        <span><i class="fas fa-university"></i> University of Balochistan</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="glide__slide">
+                                <div class="publication-card">
+                                    <span class="publication-year">2021</span>
+                                    <h3>Human Rights and Responsibilities</h3>
+                                    <p>Authored book exploring the balance between individual rights and social responsibilities in contemporary society.</p>
+                                    <div class="publication-meta">
+                                        <span><i class="fas fa-book"></i> Published Book</span>
+                                        <span><i class="fas fa-globe"></i> International Distribution</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="glide__slide">
+                                <div class="publication-card">
+                                    <span class="publication-year">2023</span>
+                                    <h3>Youth Policy Framework for Balochistan</h3>
+                                    <p>Policy paper outlining comprehensive framework for youth development and empowerment in Balochistan.</p>
+                                    <div class="publication-meta">
+                                        <span><i class="fas fa-file-alt"></i> Policy Document</span>
+                                        <span><i class="fas fa-users"></i> WEF Initiative</span>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="glide__arrows" data-glide-el="controls">
+                        <button class="glide__arrow glide__arrow--left" data-glide-dir="<">←</button>
+                        <button class="glide__arrow glide__arrow--right" data-glide-dir=">">→</button>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- GALLERY SECTION -->
-    <section id="gallery">
-        <h2 class="section-title">Visual Journey</h2>
-        <div class="gallery-grid">
-            <div class="gallery-item animate-on-scroll">
-                <img src="life1.jpg.jpeg" alt="Leadership" loading="lazy">
-                <div class="gallery-overlay"><h4>Leadership</h4></div>
-            </div>
-            <div class="gallery-item animate-on-scroll">
-                <img src="life2.jpg.jpeg" alt="Advocacy" loading="lazy">
-                <div class="gallery-overlay"><h4>Advocacy</h4></div>
-            </div>
-            <div class="gallery-item animate-on-scroll">
-                <img src="life3.jpg.jpeg" alt="Global Shapers" loading="lazy">
-                <div class="gallery-overlay"><h4>Global Shapers</h4></div>
-            </div>
-            <div class="gallery-item animate-on-scroll">
-                <img src="life4.jpg.jpeg" alt="Court Life" loading="lazy">
-                <div class="gallery-overlay"><h4>Court Life</h4></div>
-            </div>
-            <div class="gallery-item animate-on-scroll">
-                <img src="life5.jpg.jpeg" alt="Community" loading="lazy">
-                <div class="gallery-overlay"><h4>Community</h4></div>
-            </div>
-            <div class="gallery-item animate-on-scroll">
-                <img src="life6.jpg.jpeg" alt="Travel" loading="lazy">
-                <div class="gallery-overlay"><h4>Travel</h4></div>
+    <section id="gallery" class="gallery-section">
+        <div class="container">
+            <h2 class="section-title">Visual Journey</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item" data-aos="zoom-in">
+                    <img src="life1.jpg.jpeg" alt="Legal Practice" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h4>Courtroom Excellence</h4>
+                        <p>Practicing law with dedication and precision</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="100">
+                    <img src="life2.jpg.jpeg" alt="Global Forum" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h4>Global Shapers Summit</h4>
+                        <p>Representing at World Economic Forum</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="200">
+                    <img src="life3.jpg.jpeg" alt="Community Work" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h4>Community Engagement</h4>
+                        <p>Working with local communities</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="300">
+                    <img src="life4.jpg.jpeg" alt="Academic" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h4>Academic Pursuits</h4>
+                        <p>University and research activities</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- MISSION SECTION -->
-    <section id="mission">
-        <div class="mission-card animate-on-scroll">
-            <i class="fas fa-bullseye"></i>
-            <h2>Mission Statement</h2>
-            <p>
-                "To advance justice, safeguard human dignity, strengthen democratic institutions, and empower youth to lead Pakistan toward a just, inclusive, and sustainable future."
-            </p>
+    <!-- TESTIMONIALS SECTION -->
+    <section id="testimonials" class="testimonials-section">
+        <div class="container">
+            <h2 class="section-title">Testimonials</h2>
+            <div class="testimonial-slider">
+                <div class="glide">
+                    <div class="glide__track" data-glide-el="track">
+                        <ul class="glide__slides">
+                            <li class="glide__slide">
+                                <div class="testimonial-card">
+                                    <div class="testimonial-text">
+                                        "Mumtaz Alam Bazai represents the new generation of legal minds in Pakistan - deeply principled, globally aware, and committed to justice."
+                                    </div>
+                                    <div class="testimonial-author">
+                                        <img src="testimonial1.jpg" alt="Senior Advocate" class="author-image">
+                                        <div>
+                                            <h4>Adv. Abdul Zahir Kakar</h4>
+                                            <p>Senior Partner, Iqra Law Associates</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="glide__slide">
+                                <div class="testimonial-card">
+                                    <div class="testimonial-text">
+                                        "As a Global Shaper, Mumtaz has demonstrated exceptional leadership in youth policy development and community engagement."
+                                    </div>
+                                    <div class="testimonial-author">
+                                        <img src="testimonial2.jpg" alt="WEF Official" class="author-image">
+                                        <div>
+                                            <h4>Sarah Chen</h4>
+                                            <p>WEF Global Shapers Community</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOCIAL HUB SECTION -->
+    <section class="social-hub">
+        <div class="container">
+            <h2 class="section-title">Connect With Me</h2>
+            <p class="text-center mb-4">Follow my journey across all platforms</p>
+            
+            <div class="social-grid">
+                <a href="mailto:advmumtaz222@gmail.com" class="social-card" target="_blank">
+                    <i class="fas fa-envelope social-icon social-email"></i>
+                    <h3>Email</h3>
+                    <p>Professional</p>
+                </a>
+                <a href="https://wa.me/923332568792" class="social-card" target="_blank">
+                    <i class="fab fa-whatsapp social-icon social-whatsapp"></i>
+                    <h3>WhatsApp</h3>
+                    <p>Direct Contact</p>
+                </a>
+                <a href="https://www.linkedin.com/in/adv-mumtaz-alam-bazai-163a9a324" class="social-card" target="_blank">
+                    <i class="fab fa-linkedin social-icon social-linkedin"></i>
+                    <h3>LinkedIn</h3>
+                    <p>Professional</p>
+                </a>
+                <a href="https://www.instagram.com/mumtaz_alam" class="social-card" target="_blank">
+                    <i class="fab fa-instagram social-icon social-instagram"></i>
+                    <h3>Instagram</h3>
+                    <p>Personal Journey</p>
+                </a>
+                <a href="https://www.facebook.com/mumtaz.alam.18488" class="social-card" target="_blank">
+                    <i class="fab fa-facebook social-icon social-facebook"></i>
+                    <h3>Facebook</h3>
+                    <p>Community</p>
+                </a>
+                <a href="https://x.com/mumtazalam333" class="social-card" target="_blank">
+                    <i class="fab fa-twitter social-icon social-twitter"></i>
+                    <h3>Twitter/X</h3>
+                    <p>Thoughts & Updates</p>
+                </a>
+                <a href="https://my.weforum.org/network/people/001TG000009vSDhYAM/adv-mumtaz-alam" class="social-card" target="_blank">
+                    <i class="fas fa-globe social-icon social-wef"></i>
+                    <h3>WEF</h3>
+                    <p>Global Shapers</p>
+                </a>
+                <a href="https://linktr.ee/mumtazalam" class="social-card" target="_blank">
+                    <i class="fas fa-link social-icon social-linktree"></i>
+                    <h3>Linktree</h3>
+                    <p>All Links</p>
+                </a>
+                <a href="https://www.tiktok.com/@mumtaz_alam" class="social-card" target="_blank">
+                    <i class="fab fa-tiktok social-icon social-tiktok"></i>
+                    <h3>TikTok</h3>
+                    <p>Short Videos</p>
+                </a>
+                <a href="https://www.snapchat.com/add/mumtazalam222" class="social-card" target="_blank">
+                    <i class="fab fa-snapchat social-icon social-snapchat"></i>
+                    <h3>Snapchat</h3>
+                    <p>Daily Updates</p>
+                </a>
+                <a href="https://www.threads.com/@mumtaz_alam" class="social-card" target="_blank">
+                    <i class="fas fa-comment social-icon social-threads"></i>
+                    <h3>Threads</h3>
+                    <p>Conversations</p>
+                </a>
+                <a href="https://ok.ru/profile/910193583170" class="social-card" target="_blank">
+                    <i class="fab fa-odnoklassniki social-icon social-ok"></i>
+                    <h3>Odnoklassniki</h3>
+                    <p>International</p>
+                </a>
+                <a href="https://youtube.com/@mumtazalambazai" class="social-card" target="_blank">
+                    <i class="fab fa-youtube social-icon social-youtube"></i>
+                    <h3>YouTube</h3>
+                    <p>Video Content</p>
+                </a>
+                <a href="https://medium.com/@mumtazalam" class="social-card" target="_blank">
+                    <i class="fab fa-medium social-icon social-medium"></i>
+                    <h3>Medium</h3>
+                    <p>Articles</p>
+                </a>
+                <a href="https://www.researchgate.net/profile/Mumtaz-Bazai" class="social-card" target="_blank">
+                    <i class="fab fa-researchgate social-icon social-researchgate"></i>
+                    <h3>ResearchGate</h3>
+                    <p>Academic</p>
+                </a>
+                <a href="https://github.com/mumtazbazai" class="social-card" target="_blank">
+                    <i class="fab fa-github social-icon social-github"></i>
+                    <h3>GitHub</h3>
+                    <p>Tech Projects</p>
+                </a>
+            </div>
         </div>
     </section>
 
     <!-- CONTACT SECTION -->
-    <section id="contact" style="padding-bottom: 150px;">
-        <h2 class="section-title">Connect</h2>
-        <div class="connect-box">
-            <p style="font-size: 1.2rem; color: #ccc; margin-bottom: 40px;">Reach out for legal consultation or collaboration.</p>
-            
-            <div class="social-3d-container">
-                <a href="mailto:advmumtaz222@gmail.com" class="social-btn" style="--c1: #D44638; --c2: #B23121;" title="Email">
-                    <i class="fas fa-envelope"></i>
-                </a>
-                <a href="https://wa.me/923332568792" class="social-btn" style="--c1: #25D366; --c2: #128C7E;" title="WhatsApp">
-                    <i class="fab fa-whatsapp"></i>
-                </a>
-                <a href="https://www.linkedin.com/in/adv-mumtaz-alam-bazai-163a9a324" class="social-btn" style="--c1: #0077b5; --c2: #004182;" title="LinkedIn">
-                    <i class="fab fa-linkedin-in"></i>
-                </a>
-                <a href="https://www.instagram.com/mumtaz_alam" class="social-btn" style="--c1: #833AB4; --c2: #FD1D1D;" title="Instagram">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="https://www.facebook.com/mumtaz.alam.18488" class="social-btn" style="--c1: #1877F2; --c2: #1052a8;" title="Facebook">
-                    <i class="fab fa-facebook-f"></i>
-                </a>
-                <a href="https://x.com/mumtazalam333" class="social-btn" style="--c1: #000; --c2: #333;" title="Twitter/X">
-                    <i class="fab fa-x-twitter"></i>
-                </a>
-                <a href="https://my.weforum.org/network/people/001TG000009vSDhYAM/adv-mumtaz-alam" class="social-btn" style="--c1: #00A3E0; --c2: #005F86;" title="World Economic Forum">
-                    <i class="fas fa-globe"></i>
-                </a>
-                <a href="https://linktr.ee/mumtazalam" class="social-btn" style="--c1: #43E660; --c2: #1fa337;" title="Linktree">
-                    <i class="fas fa-link"></i>
-                </a>
-                <a href="https://www.tiktok.com/@mumtaz_alam" class="social-btn" style="--c1: #000000; --c2: #ff0050;" title="TikTok">
-                    <i class="fab fa-tiktok"></i>
-                </a>
-                <a href="https://www.snapchat.com/add/mumtazalam222" class="social-btn" style="--c1: #FFFC00; --c2: #FFCA00;" title="Snapchat">
-                    <i class="fab fa-snapchat-ghost"></i>
-                </a>
-                <a href="https://www.threads.com/@mumtaz_alam" class="social-btn" style="--c1: #00fffc; --c2: #ff00fc;" title="Threads">
-                    <i class="fas fa-comment-dots"></i>
-                </a>
-                <a href="https://ok.ru/profile/910193583170" class="social-btn" style="--c1: #F47300; --c2: #FF9E2C;" title="Odnoklassniki">
-                    <i class="fab fa-odnoklassniki"></i>
-                </a>
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-container">
+                <div class="contact-info" data-aos="fade-right">
+                    <div class="contact-card">
+                        <i class="fas fa-envelope"></i>
+                        <h3>Email</h3>
+                        <p>advmumtaz222@gmail.com</p>
+                        <a href="mailto:advmumtaz222@gmail.com" class="btn btn-primary mt-2">Send Email</a>
+                    </div>
+                    <div class="contact-card">
+                        <i class="fas fa-phone"></i>
+                        <h3>Phone</h3>
+                        <p>+92 333 2568792</p>
+                        <a href="tel:+923332568792" class="btn btn-primary mt-2">Call Now</a>
+                    </div>
+                    <div class="contact-card">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>Location</h3>
+                        <p>Quetta, Balochistan, Pakistan</p>
+                        <a href="https://maps.google.com" target="_blank" class="btn btn-primary mt-2">View on Map</a>
+                    </div>
+                </div>
+
+                <div class="contact-form" data-aos="fade-left">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                    </form>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- FOOTER -->
-    <footer>
-        © 2025 Mumtaz Alam Bazai. Advocate & Human Rights Lawyer.
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <div class="footer-logo">Mumtaz Alam Bazai</div>
+                    <p>Advocate Supreme Court · Global Shaper · Human Rights Lawyer · Youth Policy Expert</p>
+                    <div class="social-links mt-3">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Me</a></li>
+                        <li><a href="#expertise">Expertise</a></li>
+                        <li><a href="#publications">Publications</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-contact">
+                    <h4>Contact Info</h4>
+                    <p><i class="fas fa-envelope"></i> advmumtaz222@gmail.com</p>
+                    <p><i class="fas fa-phone"></i> +92 333 2568792</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Quetta, Balochistan, Pakistan</p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Mumtaz Alam Bazai. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Policy</a>
+                    <a href="#">Disclaimer</a>
+                </div>
+            </div>
+        </div>
     </footer>
 
+    <!-- BACK TO TOP -->
+    <a href="#home" class="back-to-top" id="backToTop">
+        <i class="fas fa-chevron-up"></i>
+    </a>
+
+    <!-- MODAL (for gallery images) -->
+    <div class="modal" id="imageModal">
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose">&times;</button>
+            <img src="" alt="" id="modalImage">
+            <div class="modal-caption" id="modalCaption"></div>
+        </div>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/examples/js/controls/OrbitControls.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/examples/js/loaders/GLTFLoader.min.js"></script>
+
+    <!-- Main JavaScript -->
     <script>
-        // 1. FLOATING BUBBLES GENERATOR
-        const bubbleContainer = document.getElementById('bubbles');
-        function createBubble() {
-            const bubble = document.createElement('div');
-            bubble.classList.add('bubble');
-            
-            const size = Math.random() * 80 + 20 + 'px';
-            const left = Math.random() * 100 + '%';
-            const duration = Math.random() * 10 + 15 + 's';
-            
-            bubble.style.width = size;
-            bubble.style.height = size;
-            bubble.style.left = left;
-            bubble.style.animationDuration = duration;
-            bubble.style.opacity = Math.random() * 0.5 + 0.1;
-            
-            bubbleContainer.appendChild(bubble);
-            
+        // =========================================================================
+        // PRELOADER
+        // =========================================================================
+        window.addEventListener('load', function() {
+            const preloader = document.getElementById('preloader');
             setTimeout(() => {
-                bubble.remove();
-            }, parseFloat(duration) * 1000);
-        }
-        
-        // Initial bubbles
-        for (let i = 0; i < 30; i++) {
-            setTimeout(() => createBubble(), Math.random() * 2000);
-        }
-        
-        // Continuous generation
-        setInterval(createBubble, 800);
-
-        // 2. 3D PARALLAX EFFECTS
-        const heroSection = document.getElementById('hero');
-        const heroImage = document.getElementById('heroImage');
-        const heroBgLayer = document.getElementById('heroBgLayer');
-        const heroImgContainer = document.getElementById('heroImgContainer');
-        
-        // Enhanced 3D mouse movement effect
-        heroSection.addEventListener('mousemove', (e) => {
-            const { clientX, clientY } = e;
-            const { innerWidth, innerHeight } = window;
-            
-            // Calculate mouse position percentages
-            const xPercent = (clientX / innerWidth - 0.5) * 2;
-            const yPercent = (clientY / innerHeight - 0.5) * 2;
-            
-            // 3D transform for hero image
-            heroImage.style.transform = `
-                translate(-50%, -50%) 
-                translateZ(${100 + xPercent * 20}px)
-                rotateY(${xPercent * 10}deg)
-                rotateX(${-yPercent * 10}deg)
-            `;
-            
-            // Parallax effect for background layer
-            heroBgLayer.style.transform = `
-                translateZ(-200px)
-                rotateY(${xPercent * 5}deg)
-                rotateX(${-yPercent * 5}deg)
-                scale(${1.3 - Math.abs(xPercent) * 0.05})
-            `;
-            
-            // Float cards effect
-            const floatCards = document.querySelectorAll('.float-card');
-            floatCards.forEach((card, index) => {
-                const delay = index * 0.1;
-                card.style.transform = `
-                    translateZ(80px)
-                    translateX(${xPercent * 30}px)
-                    translateY(${yPercent * 30}px)
-                    rotate(${xPercent * 5}deg)
-                `;
-            });
-            
-            // Social icons effect
-            const socialIcons = document.querySelectorAll('.hs');
-            socialIcons.forEach((icon, index) => {
-                const delay = index * 0.02;
-                icon.style.transform = `
-                    translateX(${xPercent * 10}px)
-                    translateY(${yPercent * 10}px)
-                `;
-            });
-        });
-        
-        // Reset on mouse leave
-        heroSection.addEventListener('mouseleave', () => {
-            heroImage.style.transform = 'translate(-50%, -50%) translateZ(100px) rotateY(0deg) rotateX(0deg)';
-            heroBgLayer.style.transform = 'translateZ(-200px) rotateY(0deg) rotateX(0deg) scale(1.3)';
-            
-            document.querySelectorAll('.float-card').forEach(card => {
-                card.style.transform = 'translateZ(80px)';
-            });
-            
-            document.querySelectorAll('.hs').forEach(icon => {
-                icon.style.transform = 'translate(0, 0)';
-            });
+                preloader.style.opacity = '0';
+                preloader.style.visibility = 'hidden';
+                document.body.style.overflow = 'auto';
+            }, 1500);
         });
 
-        // 3. SCROLL REVEAL ANIMATIONS
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-        
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                    // Add staggered animation
-                    if (entry.target.classList.contains('gallery-item')) {
-                        entry.target.style.animationDelay = `${entry.target.dataset.delay || '0'}s`;
-                    }
+        // =========================================================================
+        // AOS INITIALIZATION
+        // =========================================================================
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100,
+            easing: 'ease-in-out'
+        });
+
+        // =========================================================================
+        // GLIDE SLIDERS
+        // =========================================================================
+        if (document.querySelector('.glide')) {
+            new Glide('.glide', {
+                type: 'carousel',
+                perView: 1,
+                gap: 30,
+                autoplay: 3000,
+                hoverpause: true,
+                breakpoints: {
+                    768: { perView: 1 }
                 }
-            });
-        }, observerOptions);
-        
-        // Observe all animated elements
-        document.querySelectorAll('.animate-on-scroll').forEach((el, index) => {
-            el.dataset.delay = (index * 0.1).toFixed(1);
-            observer.observe(el);
-        });
-        
-        // Gallery items stagger effect
-        document.querySelectorAll('.gallery-item').forEach((item, index) => {
-            item.dataset.delay = (index * 0.1).toFixed(1);
-            observer.observe(item);
-        });
-
-        // 4. DYNAMIC THEME GENERATOR
-        function randomizeTheme() {
-            const hue1 = Math.floor(Math.random() * 360);
-            const hue2 = (hue1 + 120) % 360;
-            const hue3 = (hue1 + 240) % 360;
-            
-            const root = document.documentElement;
-            
-            // Update CSS variables
-            root.style.setProperty('--primary-hue', hue1);
-            root.style.setProperty('--secondary-hue', hue2);
-            
-            // Update orb colors
-            const orbs = document.querySelectorAll('.orb');
-            orbs[0].style.background = `hsl(${hue1}, 70%, 50%)`;
-            orbs[1].style.background = `hsl(${hue2}, 70%, 50%)`;
-            orbs[2].style.background = `hsl(${hue3}, 70%, 50%)`;
-            
-            // Update hero gradient
-            const heroBadge = document.querySelector('.hero-badge');
-            const heroTitle = document.querySelector('.hero h1');
-            
-            heroBadge.style.background = `linear-gradient(90deg, hsl(${hue1}, 100%, 50%), hsl(${hue2}, 100%, 50%))`;
-            heroTitle.style.background = `linear-gradient(135deg, #fff 0%, hsl(${hue2}, 100%, 70%) 50%, hsl(${hue1}, 100%, 60%) 100%)`;
-            
-            // Update section title line
-            const titleLines = document.querySelectorAll('.section-title::after');
-            
-            // Update timeline dots
-            const timelineDots = document.querySelectorAll('.timeline-dot');
-            timelineDots.forEach(dot => {
-                dot.style.boxShadow = `
-                    0 0 25px hsl(${hue2}, 100%, 60%),
-                    0 0 15px hsl(${hue2}, 100%, 60%),
-                    inset 0 0 10px rgba(255, 255, 255, 0.5)
-                `;
-            });
-            
-            // Add animation feedback
-            const themeBtn = document.querySelector('.theme-btn');
-            themeBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Transforming...';
-            
-            setTimeout(() => {
-                themeBtn.innerHTML = '<i class="fas fa-magic"></i> Magic Theme';
-                themeBtn.style.background = `linear-gradient(135deg, hsl(${hue1}, 100%, 50%), hsl(${hue2}, 100%, 50%))`;
-            }, 1000);
+            }).mount();
         }
 
-        // 5. SMOOTH SCROLL FOR NAVIGATION
-        document.querySelectorAll('nav a').forEach(anchor => {
+        // =========================================================================
+        // THEME TOGGLE
+        // =========================================================================
+        const themeToggle = document.getElementById('themeToggle');
+        const body = document.body;
+
+        themeToggle.addEventListener('click', () => {
+            body.classList.toggle('theme-light');
+            body.classList.toggle('theme-dark');
+            
+            const icon = themeToggle.querySelector('i');
+            if (body.classList.contains('theme-light')) {
+                icon.className = 'fas fa-sun';
+                localStorage.setItem('theme', 'light');
+            } else {
+                icon.className = 'fas fa-moon';
+                localStorage.setItem('theme', 'dark');
+            }
+        });
+
+        // Load saved theme
+        const savedTheme = localStorage.getItem('theme') || 'dark';
+        if (savedTheme === 'light') {
+            body.classList.add('theme-light');
+            body.classList.remove('theme-dark');
+            themeToggle.querySelector('i').className = 'fas fa-sun';
+        }
+
+        // =========================================================================
+        // MOBILE MENU
+        // =========================================================================
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navMenu = document.getElementById('navMenu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            const icon = mobileMenuBtn.querySelector('i');
+            icon.className = navMenu.classList.contains('active') 
+                ? 'fas fa-times' 
+                : 'fas fa-bars';
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!navMenu.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+                navMenu.classList.remove('active');
+                mobileMenuBtn.querySelector('i').className = 'fas fa-bars';
+            }
+        });
+
+        // =========================================================================
+        // NAVIGATION SCROLL EFFECTS
+        // =========================================================================
+        const mainNav = document.getElementById('mainNav');
+        let lastScroll = 0;
+
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            
+            // Show/hide nav on scroll
+            if (currentScroll > 100) {
+                mainNav.classList.add('scrolled');
+            } else {
+                mainNav.classList.remove('scrolled');
+            }
+            
+            // Hide nav on scroll down, show on scroll up
+            if (currentScroll > lastScroll && currentScroll > 100) {
+                mainNav.classList.add('nav-hidden');
+            } else {
+                mainNav.classList.remove('nav-hidden');
+            }
+            
+            lastScroll = currentScroll;
+            
+            // Update active nav link
+            updateActiveNav();
+            
+            // Show/hide back to top button
+            const backToTop = document.getElementById('backToTop');
+            if (currentScroll > 500) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+
+        // =========================================================================
+        // SMOOTH SCROLLING
+        // =========================================================================
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
                 
                 const targetId = this.getAttribute('href');
-                const targetElement = document.querySelector(targetId);
+                if (targetId === '#') return;
                 
+                const targetElement = document.querySelector(targetId);
                 if (targetElement) {
+                    // Close mobile menu if open
+                    navMenu.classList.remove('active');
+                    mobileMenuBtn.querySelector('i').className = 'fas fa-bars';
+                    
+                    // Scroll to target
                     window.scrollTo({
                         top: targetElement.offsetTop - 80,
                         behavior: 'smooth'
@@ -1887,18 +2575,21 @@
             });
         });
 
-        // 6. NAVIGATION ACTIVE STATE
-        const sections = document.querySelectorAll('section');
-        const navLinks = document.querySelectorAll('nav a');
-        
+        // =========================================================================
+        // ACTIVE NAV LINK UPDATER
+        // =========================================================================
         function updateActiveNav() {
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('.nav-link');
+            
             let current = '';
             
             sections.forEach(section => {
-                const sectionTop = section.offsetTop;
+                const sectionTop = section.offsetTop - 100;
                 const sectionHeight = section.clientHeight;
                 
-                if (scrollY >= (sectionTop - 200)) {
+                if (window.scrollY >= sectionTop && 
+                    window.scrollY < sectionTop + sectionHeight) {
                     current = section.getAttribute('id');
                 }
             });
@@ -1907,85 +2598,390 @@
                 link.classList.remove('active');
                 if (link.getAttribute('href') === `#${current}`) {
                     link.classList.add('active');
-                    link.style.background = 'rgba(0, 198, 255, 0.2)';
-                    link.style.boxShadow = '0 5px 15px rgba(0, 198, 255, 0.3)';
-                } else {
-                    link.style.background = '';
-                    link.style.boxShadow = '';
                 }
             });
         }
-        
-        window.addEventListener('scroll', updateActiveNav);
 
-        // 7. IMAGE LOADING EFFECT
-        const images = document.querySelectorAll('img');
-        images.forEach(img => {
-            img.addEventListener('load', function() {
-                this.style.opacity = '1';
-                this.style.transform = 'scale(1)';
-            });
+        // =========================================================================
+        // QUANTUM PARTICLES SYSTEM
+        // =========================================================================
+        class QuantumParticle {
+            constructor(container) {
+                this.container = container;
+                this.particle = document.createElement('div');
+                this.init();
+            }
             
-            // Initial state
-            img.style.opacity = '0';
-            img.style.transform = 'scale(0.95)';
-            img.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-        });
-
-        // 8. MOBILE MENU ENHANCEMENT
-        function handleMobileView() {
-            if (window.innerWidth <= 768) {
-                // Add touch effects for mobile
-                document.querySelectorAll('.glass-card, .gallery-item').forEach(element => {
-                    element.addEventListener('touchstart', function() {
-                        this.style.transform = 'scale(0.98)';
-                    });
-                    
-                    element.addEventListener('touchend', function() {
-                        this.style.transform = 'scale(1)';
-                    });
-                });
+            init() {
+                this.particle.className = 'quantum-particle';
+                this.particle.style.position = 'absolute';
+                this.particle.style.width = Math.random() * 4 + 1 + 'px';
+                this.particle.style.height = Math.random() * 4 + 1 + 'px';
+                this.particle.style.background = this.getRandomColor();
+                this.particle.style.borderRadius = '50%';
+                this.particle.style.left = Math.random() * 100 + '%';
+                this.particle.style.top = Math.random() * 100 + '%';
+                this.particle.style.opacity = Math.random() * 0.5 + 0.1;
+                this.particle.style.pointerEvents = 'none';
                 
-                // Optimize animations for mobile
-                document.documentElement.style.setProperty('--transition', 'cubic-bezier(0.4, 0, 0.2, 1)');
+                this.container.appendChild(this.particle);
+                
+                this.animate();
+            }
+            
+            getRandomColor() {
+                const colors = [
+                    'rgba(106, 17, 203, 0.8)',
+                    'rgba(37, 117, 252, 0.8)',
+                    'rgba(255, 0, 122, 0.8)',
+                    'rgba(0, 198, 255, 0.8)',
+                    'rgba(255, 140, 0, 0.8)'
+                ];
+                return colors[Math.floor(Math.random() * colors.length)];
+            }
+            
+            animate() {
+                const duration = Math.random() * 20 + 10;
+                const delay = Math.random() * 5;
+                
+                this.particle.style.transition = `all ${duration}s linear ${delay}s`;
+                
+                setTimeout(() => {
+                    this.particle.style.left = Math.random() * 100 + '%';
+                    this.particle.style.top = Math.random() * 100 + '%';
+                    this.particle.style.opacity = Math.random() * 0.5 + 0.1;
+                    
+                    // Restart animation
+                    setTimeout(() => {
+                        this.particle.style.transition = 'none';
+                        this.particle.style.left = Math.random() * 100 + '%';
+                        this.particle.style.top = Math.random() * 100 + '%';
+                        setTimeout(() => this.animate(), 50);
+                    }, duration * 1000);
+                }, 50);
             }
         }
-        
-        // Initial check
-        handleMobileView();
-        
-        // On resize
-        window.addEventListener('resize', handleMobileView);
 
-        // 9. PERFORMANCE OPTIMIZATION
-        let ticking = false;
-        window.addEventListener('scroll', () => {
-            if (!ticking) {
-                window.requestAnimationFrame(() => {
-                    updateActiveNav();
-                    ticking = false;
+        // Create quantum particles
+        const quantumContainer = document.getElementById('quantumContainer');
+        for (let i = 0; i < 100; i++) {
+            new QuantumParticle(quantumContainer);
+        }
+
+        // =========================================================================
+        // 3D PORTRAIT INTERACTION
+        // =========================================================================
+        const portrait3d = document.querySelector('.portrait-3d');
+        if (portrait3d) {
+            portrait3d.addEventListener('mousemove', (e) => {
+                const { left, top, width, height } = portrait3d.getBoundingClientRect();
+                const x = (e.clientX - left) / width - 0.5;
+                const y = (e.clientY - top) / height - 0.5;
+                
+                portrait3d.style.transform = `translate(-50%, -50%) rotateY(${x * 20}deg) rotateX(${-y * 20}deg)`;
+                
+                // Update floating elements
+                const elements = document.querySelectorAll('.floating-element');
+                elements.forEach((element, index) => {
+                    const delay = index * 0.1;
+                    element.style.transform = `translateX(${x * 30}px) translateY(${y * 30}px)`;
                 });
-                ticking = true;
+            });
+            
+            portrait3d.addEventListener('mouseleave', () => {
+                portrait3d.style.transform = 'translate(-50%, -50%)';
+                
+                const elements = document.querySelectorAll('.floating-element');
+                elements.forEach(element => {
+                    element.style.transform = 'translate(0, 0)';
+                });
+            });
+        }
+
+        // =========================================================================
+        // FORM SUBMISSION
+        // =========================================================================
+        const contactForm = document.getElementById('contactForm');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Get form data
+                const formData = new FormData(this);
+                
+                // Here you would typically send the data to a server
+                // For now, we'll just show a success message
+                
+                // Show success message
+                const button = this.querySelector('button[type="submit"]');
+                const originalText = button.innerHTML;
+                
+                button.innerHTML = '<i class="fas fa-check"></i> Message Sent!';
+                button.style.background = 'linear-gradient(135deg, #1b5e20, #4caf50)';
+                
+                setTimeout(() => {
+                    button.innerHTML = originalText;
+                    button.style.background = '';
+                    this.reset();
+                }, 3000);
+            });
+        }
+
+        // =========================================================================
+        // GALLERY MODAL
+        // =========================================================================
+        const galleryItems = document.querySelectorAll('.gallery-item');
+        const imageModal = document.getElementById('imageModal');
+        const modalImage = document.getElementById('modalImage');
+        const modalCaption = document.getElementById('modalCaption');
+        const modalClose = document.getElementById('modalClose');
+
+        galleryItems.forEach(item => {
+            item.addEventListener('click', () => {
+                const imgSrc = item.querySelector('img').src;
+                const caption = item.querySelector('.gallery-overlay h4').textContent;
+                
+                modalImage.src = imgSrc;
+                modalCaption.textContent = caption;
+                
+                imageModal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
+        });
+
+        modalClose.addEventListener('click', () => {
+            imageModal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        });
+
+        imageModal.addEventListener('click', (e) => {
+            if (e.target === imageModal) {
+                imageModal.classList.remove('active');
+                document.body.style.overflow = 'auto';
             }
         });
 
-        // 10. INITIAL LOAD ANIMATIONS
-        window.addEventListener('load', () => {
-            document.body.style.opacity = '1';
-            document.body.style.transform = 'translateY(0)';
+        // =========================================================================
+        // PARALLAX EFFECTS
+        // =========================================================================
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const parallaxElements = document.querySelectorAll('.parallax');
             
-            // Animate hero elements sequentially
-            const heroElements = document.querySelectorAll('.hero-text > *');
-            heroElements.forEach((el, index) => {
-                el.style.animationDelay = `${index * 0.2}s`;
-                el.classList.add('animate-on-scroll');
+            parallaxElements.forEach(element => {
+                const speed = element.dataset.speed || 0.5;
+                const yPos = -(scrolled * speed);
+                element.style.transform = `translateY(${yPos}px)`;
             });
         });
-        
-        // Initial body styles
-        document.body.style.opacity = '0';
-        document.body.style.transform = 'translateY(20px)';
-        document.body.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+
+        // =========================================================================
+        // TYPING ANIMATION FOR HERO TITLE
+        // =========================================================================
+        const heroTitle = document.querySelector('.hero-title');
+        if (heroTitle) {
+            const text = heroTitle.textContent;
+            heroTitle.textContent = '';
+            
+            let i = 0;
+            function typeWriter() {
+                if (i < text.length) {
+                    heroTitle.textContent += text.charAt(i);
+                    i++;
+                    setTimeout(typeWriter, 50);
+                }
+            }
+            
+            // Start typing after a delay
+            setTimeout(typeWriter, 1000);
+        }
+
+        // =========================================================================
+        // COUNTER ANIMATIONS
+        // =========================================================================
+        const counters = document.querySelectorAll('.stat-number');
+        const speed = 200;
+
+        const startCounter = (counter) => {
+            const target = +counter.getAttribute('data-target');
+            const count = +counter.innerText.replace('+', '');
+            const increment = target / speed;
+            
+            if (count < target) {
+                counter.innerText = Math.ceil(count + increment) + '+';
+                setTimeout(() => startCounter(counter), 1);
+            } else {
+                counter.innerText = target + '+';
+            }
+        };
+
+        // Start counters when they come into view
+        const observerOptions = {
+            threshold: 0.5
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    startCounter(entry.target);
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        counters.forEach(counter => {
+            observer.observe(counter);
+        });
+
+        // =========================================================================
+        // REAL-TIME CLOCK
+        // =========================================================================
+        function updateClock() {
+            const now = new Date();
+            const options = { 
+                weekday: 'long', 
+                year: 'numeric', 
+                month: 'long', 
+                day: 'numeric',
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit',
+                timeZone: 'Asia/Karachi'
+            };
+            
+            const clockElement = document.getElementById('liveClock');
+            if (clockElement) {
+                clockElement.textContent = now.toLocaleDateString('en-US', options);
+            }
+        }
+
+        // Update clock every second
+        setInterval(updateClock, 1000);
+        updateClock();
+
+        // =========================================================================
+        // WEATHER WIDGET (Placeholder)
+        // =========================================================================
+        async function getWeather() {
+            try {
+                // Note: You need to sign up for a free API key at OpenWeatherMap
+                // const apiKey = 'YOUR_API_KEY';
+                // const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=Quetta&units=metric&appid=${apiKey}`);
+                // const data = await response.json();
+                
+                // For now, using placeholder data
+                const weatherElement = document.getElementById('weatherWidget');
+                if (weatherElement) {
+                    weatherElement.innerHTML = `
+                        <div class="weather-card">
+                            <h3>Quetta, Pakistan</h3>
+                            <div class="temp">25°C</div>
+                            <div class="condition">Sunny</div>
+                        </div>
+                    `;
+                }
+            } catch (error) {
+                console.error('Weather data not available:', error);
+            }
+        }
+
+        getWeather();
+
+        // =========================================================================
+        // LANGUAGE SWITCHER (Placeholder)
+        // =========================================================================
+        const languages = {
+            en: {
+                title: "Mumtaz Alam Bazai | Legal Visionary",
+                // Add more translations here
+            },
+            ur: {
+                title: "ممتاز عالم بازی | قانونی بصیرت والے رہنما",
+                // Add more translations here
+            }
+        };
+
+        // =========================================================================
+        // PRINT FUNCTIONALITY
+        // =========================================================================
+        document.addEventListener('keydown', (e) => {
+            if ((e.ctrlKey || e.metaKey) && e.key === 'p') {
+                e.preventDefault();
+                window.print();
+            }
+        });
+
+        // =========================================================================
+        // OFFLINE DETECTION
+        // =========================================================================
+        window.addEventListener('online', () => {
+            showNotification('You are back online!', 'success');
+        });
+
+        window.addEventListener('offline', () => {
+            showNotification('You are offline. Some features may not work.', 'warning');
+        });
+
+        function showNotification(message, type) {
+            const notification = document.createElement('div');
+            notification.className = `notification notification-${type}`;
+            notification.textContent = message;
+            notification.style.cssText = `
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                padding: 1rem 2rem;
+                background: ${type === 'success' ? '#4caf50' : '#ff9800'};
+                color: white;
+                border-radius: 5px;
+                z-index: 9999;
+                animation: slideIn 0.3s ease;
+            `;
+            
+            document.body.appendChild(notification);
+            
+            setTimeout(() => {
+                notification.style.animation = 'slideOut 0.3s ease';
+                setTimeout(() => notification.remove(), 300);
+            }, 3000);
+        }
+
+        // =========================================================================
+        // PERFORMANCE MONITORING
+        // =========================================================================
+        if ('performance' in window) {
+            window.addEventListener('load', () => {
+                const perfEntries = performance.getEntriesByType('navigation');
+                const [p] = perfEntries;
+                
+                console.log('Page load time:', p.loadEventEnd - p.loadEventStart, 'ms');
+                console.log('DOM content loaded:', p.domContentLoadedEventEnd - p.domContentLoadedEventStart, 'ms');
+            });
+        }
+
+        // =========================================================================
+        // ERROR HANDLING
+        // =========================================================================
+        window.addEventListener('error', (e) => {
+            console.error('JavaScript Error:', e.error);
+            // You could send this to an error tracking service
+        });
+
+        // =========================================================================
+        // SERVICE WORKER FOR PWA (Optional)
+        // =========================================================================
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js').then(
+                    (registration) => {
+                        console.log('ServiceWorker registration successful');
+                    },
+                    (err) => {
+                        console.log('ServiceWorker registration failed: ', err);
+                    }
+                );
+            });
+        }
     </script>
 </body>
 </html>
