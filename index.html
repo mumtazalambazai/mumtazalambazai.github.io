@@ -4,1221 +4,1690 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mumtaz Alam Bazai | Advocate High Court | Global Shaper | Human Rights Lawyer</title>
-    <meta name="description" content="Advocate Mumtaz Alam Bazai - Human Rights Lawyer, Global Shaper, Legal Visionary from Balochistan. Championing justice, youth empowerment, and social change.">
-    <meta name="keywords" content="Advocate High Court, Human Rights Lawyer, Global Shaper, Balochistan, Legal, Youth Empowerment, Social Justice, Quetta, Pakistan">
+    <meta name="description" content="Mumtaz Alam Bazai - Advocate High Court, Global Shaper (World Economic Forum), Human Rights Lawyer, Youth Leader, Legal Visionary from Balochistan.">
+    <meta name="keywords" content="Mumtaz Alam Bazai, Advocate High Court, Global Shaper, Human Rights Lawyer, Balochistan, Legal Advocate, Youth Leader, WEF, Lawyer, Human Rights, Pakistan">
     <meta name="author" content="Mumtaz Alam Bazai">
     
     <!-- Open Graph / Social Media Meta Tags -->
-    <meta property="og:title" content="Mumtaz Alam Bazai | Legal Visionary & Human Rights Advocate">
-    <meta property="og:description" content="Advocate High Court · Human Rights Lawyer · Global Shaper (WEF). Empowering youth through law, leadership, and justice.">
+    <meta property="og:title" content="Mumtaz Alam Bazai | Advocate & Global Shaper">
+    <meta property="og:description" content="Legal visionary, human rights advocate, and Global Shaper from Balochistan.">
+    <meta property="og:image" content="portrait.jpg.jpeg">
+    <meta property="og:url" content="https://mumtazalambazai.com">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="https://mumtazalambazai.com/og-image.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Mumtaz Alam Bazai | Legal Visionary">
+    <meta name="twitter:description" content="Advocate High Court, Global Shaper, and Human Rights Lawyer.">
+    <meta name="twitter:image" content="portrait.jpg.jpeg">
+    
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     
     <!-- Fonts & Icons -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400;1,700&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400&family=Inter:wght@300;400;500;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     
     <style>
-        /* ===========================================
-           CORE CSS VARIABLES & RESET
-        =========================================== */
+        /* =========================
+           CORE RESET & VARIABLES
+        ========================= */
         :root {
-            --primary-color: #8A2BE2;
-            --secondary-color: #00C6FF;
-            --accent-color: #FF007A;
-            --success-color: #00FF88;
-            --warning-color: #FF8C00;
-            --dark-bg: #050510;
-            --darker-bg: #03030A;
-            --light-bg: #0F0F1A;
-            --card-bg: rgba(15, 15, 26, 0.7);
-            --text-primary: #FFFFFF;
-            --text-secondary: rgba(255, 255, 255, 0.85);
-            --text-muted: rgba(255, 255, 255, 0.6);
-            --border-color: rgba(255, 255, 255, 0.1);
+            --primary-hue: 260;
+            --secondary-hue: 190;
+            --accent-hue: 330;
             --glass-bg: rgba(255, 255, 255, 0.05);
-            --glass-border: rgba(255, 255, 255, 0.15);
-            --glass-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+            --glass-border: rgba(255, 255, 255, 0.2);
+            --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+            --text-main: #ffffff;
+            --text-muted: rgba(255, 255, 255, 0.8);
+            --neon-glow: 0 0 20px rgba(138, 43, 226, 0.6);
             --card-radius: 24px;
-            --transition-smooth: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
-            --gradient-primary: linear-gradient(135deg, #8A2BE2 0%, #00C6FF 100%);
-            --gradient-secondary: linear-gradient(135deg, #FF007A 0%, #FF8C00 100%);
-            --gradient-accent: linear-gradient(135deg, #00C6FF 0%, #00FF88 100%);
-            --gradient-dark: linear-gradient(135deg, rgba(10, 10, 20, 0.9) 0%, rgba(5, 5, 15, 0.9) 100%);
+            --transition: cubic-bezier(0.23, 1, 0.32, 1);
+            --gradient-primary: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            --gradient-secondary: linear-gradient(135deg, #ff007a 0%, #ff8c00 100%);
+            --gradient-accent: linear-gradient(135deg, #00c6ff 0%, #0072ff 100%);
         }
-        
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         html {
             scroll-behavior: smooth;
             overflow-x: hidden;
         }
-        
+
         body {
             font-family: 'Inter', sans-serif;
-            background-color: var(--dark-bg);
-            color: var(--text-primary);
+            background-color: #050510;
+            color: var(--text-main);
             overflow-x: hidden;
-            line-height: 1.7;
-            font-weight: 400;
+            perspective: 1000px;
+            min-height: 100vh;
+            opacity: 0;
+            animation: fadeInBody 1.5s ease forwards;
         }
-        
-        /* Selection Color */
-        ::selection {
-            background-color: var(--primary-color);
-            color: white;
+
+        @keyframes fadeInBody {
+            to { opacity: 1; }
         }
-        
-        /* Custom Scrollbar */
-        ::-webkit-scrollbar {
-            width: 12px;
-        }
-        
-        ::-webkit-scrollbar-track {
-            background: rgba(0, 0, 0, 0.2);
-        }
-        
-        ::-webkit-scrollbar-thumb {
-            background: var(--gradient-primary);
-            border-radius: 6px;
-            border: 2px solid rgba(255, 255, 255, 0.1);
-        }
-        
-        ::-webkit-scrollbar-thumb:hover {
-            background: var(--gradient-secondary);
-        }
-        
-        /* Typography */
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'Playfair Display', serif;
-            font-weight: 700;
-            line-height: 1.2;
-            margin-bottom: 1rem;
-        }
-        
-        h1 {
-            font-size: clamp(3rem, 7vw, 5.5rem);
-            font-weight: 800;
-        }
-        
-        h2 {
-            font-size: clamp(2.5rem, 5vw, 4rem);
-            margin-bottom: 3rem;
-        }
-        
-        p {
-            font-size: 1.1rem;
-            margin-bottom: 1.5rem;
-            color: var(--text-secondary);
-        }
-        
-        .gradient-text {
-            background: var(--gradient-primary);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            color: transparent;
-        }
-        
-        /* Container */
-        .container {
-            width: 100%;
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        /* Buttons */
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            padding: 16px 32px;
-            border-radius: 50px;
-            font-weight: 600;
-            font-size: 1rem;
-            text-decoration: none;
-            transition: var(--transition-smooth);
-            border: none;
-            cursor: pointer;
-            position: relative;
-            overflow: hidden;
-            z-index: 1;
-        }
-        
-        .btn::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-            transition: 0.5s;
-            z-index: -1;
-        }
-        
-        .btn:hover::before {
-            left: 100%;
-        }
-        
-        .btn-primary {
-            background: var(--gradient-primary);
-            color: white;
-            box-shadow: 0 10px 30px rgba(138, 43, 226, 0.3);
-        }
-        
-        .btn-primary:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(138, 43, 226, 0.5);
-        }
-        
-        .btn-secondary {
-            background: transparent;
-            color: var(--text-primary);
-            border: 2px solid var(--border-color);
-            backdrop-filter: blur(10px);
-        }
-        
-        .btn-secondary:hover {
-            border-color: var(--primary-color);
-            transform: translateY(-5px);
-        }
-        
-        /* Cards */
-        .card {
-            background: var(--card-bg);
-            backdrop-filter: blur(20px);
-            border-radius: var(--card-radius);
-            border: 1px solid var(--border-color);
-            padding: 2.5rem;
-            transition: var(--transition-smooth);
-            height: 100%;
-        }
-        
-        .card:hover {
-            transform: translateY(-10px);
-            border-color: var(--primary-color);
-            box-shadow: var(--glass-shadow), 0 0 30px rgba(138, 43, 226, 0.2);
-        }
-        
-        /* Section Styling */
-        section {
-            padding: 120px 5%;
-            position: relative;
-        }
-        
-        .section-header {
-            text-align: center;
-            margin-bottom: 5rem;
-        }
-        
-        .section-header h2 {
-            position: relative;
-            display: inline-block;
-        }
-        
-        .section-header h2::after {
-            content: '';
-            position: absolute;
-            bottom: -15px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 4px;
-            background: var(--gradient-primary);
-            border-radius: 2px;
-        }
-        
-        /* ===========================================
-           DYNAMIC BACKGROUND
-        =========================================== */
-        .dynamic-bg {
+
+        /* =========================
+           DYNAMIC ANIMATED BACKGROUND
+        ========================= */
+        .fluid-bg {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
             z-index: -3;
+            background: 
+                radial-gradient(circle at 20% 20%, rgba(26, 26, 46, 0.8) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(0, 198, 255, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 40% 60%, rgba(255, 0, 122, 0.1) 0%, transparent 50%),
+                #050510;
             overflow: hidden;
         }
-        
-        .bg-orb {
+
+        .orb {
             position: absolute;
             border-radius: 50%;
             filter: blur(80px);
-            opacity: 0.15;
-            animation: floatOrb 30s infinite alternate ease-in-out;
+            opacity: 0.6;
+            animation: floatOrb 25s infinite alternate ease-in-out;
+            z-index: -2;
         }
-        
+
         .orb-1 {
             width: 70vw;
             height: 70vw;
-            background: var(--primary-color);
+            background: #6a11cb;
             top: -20%;
             left: -20%;
-            animation-duration: 40s;
+            animation-duration: 30s;
+            animation-delay: 0s;
         }
-        
+
         .orb-2 {
             width: 60vw;
             height: 60vw;
-            background: var(--secondary-color);
+            background: #00c6ff;
             bottom: -20%;
             right: -10%;
             animation-duration: 35s;
             animation-delay: 5s;
+            animation-direction: reverse;
         }
-        
+
         .orb-3 {
-            width: 50vw;
-            height: 50vw;
-            background: var(--accent-color);
-            top: 40%;
+            width: 40vw;
+            height: 40vw;
+            background: #ff007a;
+            top: 50%;
             left: 30%;
-            animation-duration: 45s;
+            animation-duration: 25s;
             animation-delay: 10s;
         }
-        
+
         @keyframes floatOrb {
-            0% { transform: translate(0, 0) scale(1); }
-            25% { transform: translate(30px, -50px) scale(1.05); }
-            50% { transform: translate(-20px, 40px) scale(1.1); }
-            75% { transform: translate(50px, 30px) scale(1.05); }
-            100% { transform: translate(0, 0) scale(1); }
+            0% { transform: translate(0, 0) scale(1) rotate(0deg); }
+            25% { transform: translate(30px, -50px) scale(1.05) rotate(90deg); }
+            50% { transform: translate(-20px, 40px) scale(1.1) rotate(180deg); }
+            75% { transform: translate(50px, 30px) scale(1.05) rotate(270deg); }
+            100% { transform: translate(0, 0) scale(1) rotate(360deg); }
         }
-        
-        /* Particles */
+
+        /* =========================
+           FLOATING PARTICLES
+        ========================= */
         .particles-container {
             position: fixed;
             width: 100%;
             height: 100%;
-            z-index: -2;
+            z-index: -1;
             pointer-events: none;
+            overflow: hidden;
         }
-        
-        /* ===========================================
-           TOP HEADER WITH SOCIAL MEDIA
-        =========================================== */
-        .top-header {
+
+        .particle {
+            position: absolute;
+            border-radius: 50%;
+            background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.1));
+            animation: floatParticle 20s infinite linear;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+        }
+
+        @keyframes floatParticle {
+            0% {
+                transform: translateY(100vh) translateX(0) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 0.8;
+            }
+            90% {
+                opacity: 0.8;
+            }
+            100% {
+                transform: translateY(-100px) translateX(100px) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        /* =========================
+           CUSTOM SCROLLBAR
+        ========================= */
+        ::-webkit-scrollbar {
+            width: 12px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--gradient-primary);
+            border-radius: 6px;
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--gradient-secondary);
+            transform: scale(1.1);
+        }
+
+        /* =========================
+           TYPOGRAPHY
+        ========================= */
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            background-clip: text;
+            -webkit-background-clip: text;
+        }
+
+        .gradient-text {
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-fill-color: transparent;
+        }
+
+        /* =========================
+           FIXED HEADER WITH NAVIGATION
+        ========================= */
+        .main-header {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             z-index: 1000;
             background: rgba(5, 5, 16, 0.9);
-            backdrop-filter: blur(20px);
-            padding: 15px 0;
+            backdrop-filter: blur(20px) saturate(180%);
+            -webkit-backdrop-filter: blur(20px) saturate(180%);
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        
-        .top-header .container {
+            padding: 20px 50px;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            transition: all 0.4s ease;
         }
-        
-        .logo {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.8rem;
-            font-weight: 700;
-            text-decoration: none;
-            color: var(--text-primary);
+
+        .header.scrolled {
+            padding: 15px 50px;
+            background: rgba(5, 5, 16, 0.95);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
         }
-        
-        .logo span {
-            color: var(--primary-color);
-        }
-        
-        .top-social {
+
+        .logo-container {
             display: flex;
+            align-items: center;
             gap: 15px;
-            align-items: center;
         }
-        
-        .top-social a {
-            width: 40px;
-            height: 40px;
+
+        .logo-circle {
+            width: 50px;
+            height: 50px;
             border-radius: 50%;
+            background: var(--gradient-primary);
             display: flex;
             align-items: center;
             justify-content: center;
-            color: var(--text-primary);
-            background: rgba(255, 255, 255, 0.05);
-            text-decoration: none;
-            transition: var(--transition-smooth);
-            position: relative;
-        }
-        
-        .top-social a:hover {
-            background: var(--primary-color);
-            transform: translateY(-3px);
-        }
-        
-        .top-social a .tooltip {
-            position: absolute;
-            bottom: -40px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: rgba(0, 0, 0, 0.8);
-            color: white;
-            padding: 5px 10px;
-            border-radius: 5px;
-            font-size: 12px;
-            white-space: nowrap;
-            opacity: 0;
-            visibility: hidden;
-            transition: var(--transition-smooth);
-            pointer-events: none;
-        }
-        
-        .top-social a:hover .tooltip {
-            opacity: 1;
-            visibility: visible;
-            bottom: -35px;
-        }
-        
-        /* ===========================================
-           NAVIGATION BAR (FLOATING & STICKY)
-        =========================================== */
-        .floating-nav {
-            position: fixed;
-            bottom: 40px;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 1000;
-            background: rgba(20, 20, 30, 0.85);
-            backdrop-filter: blur(25px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            padding: 18px 35px;
-            border-radius: 60px;
-            display: flex;
-            gap: 30px;
-            box-shadow: 
-                0 25px 60px rgba(0, 0, 0, 0.7),
-                0 0 25px rgba(106, 17, 203, 0.4),
-                inset 0 1px 0 rgba(255, 255, 255, 0.1);
-            transition: var(--transition-smooth);
-        }
-        
-        .floating-nav a {
-            width: 48px;
-            height: 48px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #fff;
-            text-decoration: none;
-            font-size: 22px;
-            transition: var(--transition-smooth);
-            position: relative;
-            background: rgba(255, 255, 255, 0.08);
-        }
-        
-        .floating-nav a::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: var(--gradient-primary);
-            opacity: 0;
-            transition: opacity 0.4s ease;
-            z-index: -1;
-            border-radius: 50%;
-        }
-        
-        .floating-nav a:hover::before {
-            opacity: 1;
-        }
-        
-        .floating-nav a:hover {
-            color: #fff;
-            transform: translateY(-8px) scale(1.15);
-            box-shadow: 
-                0 10px 25px rgba(106, 17, 203, 0.5),
-                0 0 15px rgba(255, 255, 255, 0.3);
-        }
-        
-        .floating-nav a.active {
-            background: var(--gradient-primary);
-            color: #fff;
-            transform: translateY(-5px);
-            box-shadow: 
-                0 8px 20px rgba(106, 17, 203, 0.6),
-                0 0 15px rgba(255, 255, 255, 0.2);
-        }
-        
-        .floating-nav a::after {
-            content: attr(data-tooltip);
-            position: absolute;
-            bottom: 65px;
-            left: 50%;
-            transform: translateX(-50%) scale(0);
-            background: rgba(255, 255, 255, 0.95);
-            color: #000;
-            padding: 8px 16px;
-            border-radius: 10px;
-            font-size: 13px;
             font-weight: 700;
-            opacity: 0;
-            transition: var(--transition-smooth);
-            pointer-events: none;
-            white-space: nowrap;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-            z-index: 100;
-        }
-        
-        .floating-nav a:hover::after {
-            transform: translateX(-50%) scale(1);
-            opacity: 1;
-        }
-        
-        /* ===========================================
-           HERO SECTION WITH CIRCULAR PORTRAIT
-        =========================================== */
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            padding-top: 80px;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .hero-bg {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url('hero-bg.jpg.jpeg') center/cover no-repeat;
-            z-index: -1;
-            filter: brightness(0.3) contrast(1.2);
-        }
-        
-        .hero-bg-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, rgba(8, 2, 20, 0.9), rgba(0, 0, 10, 0.8));
-            z-index: -1;
-        }
-        
-        .hero-content {
-            display: grid;
-            grid-template-columns: 1.5fr 1fr;
-            gap: 60px;
-            align-items: center;
-            position: relative;
-            z-index: 2;
-        }
-        
-        .hero-text {
-            position: relative;
-        }
-        
-        .hero-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            background: var(--gradient-primary);
+            font-size: 20px;
             color: white;
-            padding: 10px 25px;
-            border-radius: 50px;
-            font-weight: 600;
-            font-size: 0.9rem;
-            margin-bottom: 2rem;
-            animation: pulse 2s infinite;
+            box-shadow: 0 0 20px rgba(106, 17, 203, 0.5);
         }
-        
-        @keyframes pulse {
-            0%, 100% { box-shadow: 0 0 20px rgba(138, 43, 226, 0.5); }
-            50% { box-shadow: 0 0 30px rgba(138, 43, 226, 0.8); }
-        }
-        
-        .hero-title {
-            font-size: clamp(2.5rem, 6vw, 4.5rem);
-            margin-bottom: 1.5rem;
-            line-height: 1.1;
-        }
-        
-        .hero-description {
-            font-size: 1.3rem;
-            max-width: 600px;
-            margin-bottom: 2.5rem;
-            color: var(--text-secondary);
-        }
-        
-        .hero-stats {
-            display: flex;
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-        
-        .stat-item {
-            display: flex;
-            flex-direction: column;
-        }
-        
-        .stat-number {
-            font-size: 2.5rem;
+
+        .logo-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
             font-weight: 700;
             background: var(--gradient-primary);
             -webkit-background-clip: text;
             background-clip: text;
             -webkit-text-fill-color: transparent;
-            line-height: 1;
         }
-        
-        .stat-label {
-            font-size: 0.9rem;
-            color: var(--text-muted);
+
+        /* =========================
+           TOP SOCIAL MEDIA BAR
+        ========================= */
+        .top-social-bar {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .top-social-link {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .top-social-link:hover {
+            transform: translateY(-3px) scale(1.1);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .top-social-link::after {
+            content: attr(data-tooltip);
+            position: absolute;
+            bottom: -35px;
+            left: 50%;
+            transform: translateX(-50%) scale(0);
+            background: rgba(255, 255, 255, 0.95);
+            color: #000;
+            padding: 5px 10px;
+            border-radius: 6px;
+            font-size: 12px;
+            font-weight: 600;
+            opacity: 0;
+            transition: all 0.3s ease;
+            pointer-events: none;
+            white-space: nowrap;
+        }
+
+        .top-social-link:hover::after {
+            transform: translateX(-50%) scale(1);
+            opacity: 1;
+        }
+
+        /* Social Colors */
+        .top-social-link.mail { background: linear-gradient(135deg, #D44638, #B23121); }
+        .top-social-link.whatsapp { background: linear-gradient(135deg, #25D366, #128C7E); }
+        .top-social-link.linkedin { background: linear-gradient(135deg, #0077B5, #004182); }
+        .top-social-link.instagram { background: linear-gradient(135deg, #833AB4, #FD1D1D); }
+
+        /* =========================
+           MAIN NAVIGATION (FIXED SIDEBAR)
+        ========================= */
+        .main-nav {
+            position: fixed;
+            left: 30px;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 999;
+            background: rgba(20, 20, 30, 0.8);
+            backdrop-filter: blur(20px) saturate(180%);
+            -webkit-backdrop-filter: blur(20px) saturate(180%);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            padding: 25px 15px;
+            border-radius: 25px;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            box-shadow: 
+                0 20px 50px rgba(0, 0, 0, 0.5),
+                0 0 20px rgba(106, 17, 203, 0.3);
+            transition: all 0.4s ease;
+        }
+
+        .main-nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 22px;
+            transition: all 0.3s ease;
+            position: relative;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .main-nav a:hover {
+            color: #00c6ff;
+            transform: translateY(-5px) scale(1.1);
+            background: rgba(0, 198, 255, 0.1);
+            box-shadow: 0 5px 15px rgba(0, 198, 255, 0.3);
+        }
+
+        .main-nav a.active {
+            background: var(--gradient-primary);
+            color: #fff;
+            box-shadow: 0 0 20px rgba(106, 17, 203, 0.5);
+        }
+
+        .main-nav a::after {
+            content: attr(data-tooltip);
+            position: absolute;
+            left: 60px;
+            top: 50%;
+            transform: translateY(-50%) translateX(-10px);
+            background: rgba(255, 255, 255, 0.95);
+            color: #000;
+            padding: 8px 15px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            opacity: 0;
+            transition: all 0.3s ease;
+            pointer-events: none;
+            white-space: nowrap;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .main-nav a:hover::after {
+            transform: translateY(-50%) translateX(0);
+            opacity: 1;
+        }
+
+        /* =========================
+           MOBILE NAVIGATION TOGGLE
+        ========================= */
+        .mobile-nav-toggle {
+            display: none;
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 1001;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: var(--gradient-primary);
+            border: none;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+            box-shadow: 0 0 25px rgba(106, 17, 203, 0.5);
+            transition: all 0.3s ease;
+        }
+
+        .mobile-nav-toggle:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 35px rgba(106, 17, 203, 0.7);
+        }
+
+        /* =========================
+           HERO SECTION (WITH CIRCLE PORTRAIT)
+        ========================= */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 150px 20px 100px;
+            perspective: 2000px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .hero-content {
+            max-width: 1400px;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 80px;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-text {
+            transform-style: preserve-3d;
+            z-index: 2;
+            animation: fadeInUp 1s ease-out 0.3s both;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px) translateZ(-100px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) translateZ(0);
+            }
+        }
+
+        .hero-badge {
+            display: inline-block;
+            padding: 12px 28px;
+            background: var(--gradient-primary);
+            border-radius: 35px;
+            font-weight: 800;
+            font-size: 15px;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 2.5px;
+            margin-bottom: 30px;
+            box-shadow: 
+                0 0 30px rgba(106, 17, 203, 0.5),
+                inset 0 1px 0 rgba(255, 255, 255, 0.3);
+            transform: translateZ(40px);
+            animation: badgeGlow 3s ease-in-out infinite, badgeFloat 6s ease-in-out infinite;
+            position: relative;
+            overflow: hidden;
         }
-        
-        /* Circular Portrait in Upper Right */
-        .hero-portrait {
+
+        @keyframes badgeGlow {
+            0%, 100% { 
+                box-shadow: 
+                    0 0 30px rgba(106, 17, 203, 0.5),
+                    inset 0 1px 0 rgba(255, 255, 255, 0.3); 
+            }
+            50% { 
+                box-shadow: 
+                    0 0 45px rgba(106, 17, 203, 0.7),
+                    inset 0 1px 0 rgba(255, 255, 255, 0.5); 
+            }
+        }
+
+        @keyframes badgeFloat {
+            0%, 100% { transform: translateZ(40px) translateY(0); }
+            50% { transform: translateZ(40px) translateY(-10px); }
+        }
+
+        .hero h1 {
+            font-size: clamp(3.5rem, 7vw, 6rem);
+            line-height: 1.08;
+            background: linear-gradient(135deg, #fff 0%, #a5f3fc 30%, #6a11cb 70%, #ff007a 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 30px;
+            filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.4));
+            transform: translateZ(50px);
+            animation: titleShine 8s infinite linear;
+            background-size: 200% auto;
+        }
+
+        @keyframes titleShine {
+            0% { background-position: 0% center; }
+            100% { background-position: 200% center; }
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            line-height: 1.9;
+            color: var(--text-muted);
+            margin-bottom: 40px;
+            border-left: 5px solid #2575fc;
+            padding-left: 25px;
+            transform: translateZ(30px);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-buttons {
+            margin-top: 50px;
+            transform: translateZ(40px);
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .hero-btn {
+            padding: 18px 40px;
+            border-radius: 35px;
+            text-decoration: none;
+            font-weight: 800;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            transform-style: preserve-3d;
+            position: relative;
+            overflow: hidden;
+            min-width: 200px;
+            text-align: center;
+            animation: btnEntrance 0.8s ease-out 0.8s both;
+        }
+
+        @keyframes btnEntrance {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-btn:nth-child(2) {
+            animation-delay: 1s;
+        }
+
+        .btn-primary {
+            background: #fff;
+            color: #000;
+            box-shadow: 
+                0 0 30px rgba(255, 255, 255, 0.5),
+                0 8px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        .btn-primary:hover {
+            background: linear-gradient(135deg, #fff, #f0f0f0);
+            transform: translateY(-8px) scale(1.05);
+            box-shadow: 
+                0 0 45px rgba(255, 255, 255, 0.7),
+                0 12px 35px rgba(0, 0, 0, 0.4);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            border: 2px solid rgba(255, 255, 255, 0.8);
+            color: #fff;
+            box-shadow: 
+                0 0 20px rgba(255, 255, 255, 0.2),
+                inset 0 0 20px rgba(255, 255, 255, 0.1);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.15);
+            border-color: #fff;
+            transform: translateY(-8px) scale(1.05);
+            box-shadow: 
+                0 0 35px rgba(255, 255, 255, 0.4),
+                inset 0 0 30px rgba(255, 255, 255, 0.2);
+        }
+
+        .hero-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+            transition: 0.6s;
+        }
+
+        .hero-btn:hover::before {
+            left: 100%;
+        }
+
+        /* =========================
+           CIRCLE PORTRAIT IN UPPER RIGHT
+        ========================= */
+        .hero-portrait-container {
+            position: relative;
             display: flex;
             justify-content: flex-end;
             align-items: flex-start;
-            position: relative;
+            height: 100%;
         }
-        
-        .portrait-circle {
-            width: 400px;
-            height: 400px;
+
+        .circle-portrait {
+            width: 380px;
+            height: 380px;
             border-radius: 50%;
             overflow: hidden;
             border: 5px solid transparent;
-            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color), var(--accent-color)) border-box;
+            background: linear-gradient(45deg, #6a11cb, #2575fc, #ff007a, #ff8c00) border-box;
             -webkit-mask: 
                 linear-gradient(#fff 0 0) padding-box, 
                 linear-gradient(#fff 0 0);
             -webkit-mask-composite: xor;
             mask-composite: exclude;
-            position: relative;
             box-shadow: 
-                0 30px 60px rgba(0, 0, 0, 0.5),
-                0 0 40px rgba(138, 43, 226, 0.4);
-            animation: floatPortrait 8s ease-in-out infinite;
+                0 30px 60px rgba(0, 0, 0, 0.6),
+                0 0 50px rgba(106, 17, 203, 0.5),
+                inset 0 0 50px rgba(255, 255, 255, 0.1);
+            animation: portraitFloat 8s ease-in-out infinite;
+            position: relative;
+            z-index: 10;
         }
-        
-        @keyframes floatPortrait {
-            0%, 100% { transform: translateY(0) rotate(0deg); }
-            25% { transform: translateY(-20px) rotate(2deg); }
-            50% { transform: translateY(0) rotate(0deg); }
-            75% { transform: translateY(20px) rotate(-2deg); }
+
+        @keyframes portraitFloat {
+            0%, 100% { 
+                transform: translateY(0) rotate(0deg); 
+            }
+            25% { 
+                transform: translateY(-20px) rotate(5deg); 
+            }
+            50% { 
+                transform: translateY(0) rotate(0deg); 
+            }
+            75% { 
+                transform: translateY(20px) rotate(-5deg); 
+            }
         }
-        
-        .portrait-circle img {
+
+        .circle-portrait img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-        }
-        
-        .portrait-badge {
-            position: absolute;
-            bottom: 50px;
-            right: 20px;
-            background: rgba(0, 0, 0, 0.7);
-            backdrop-filter: blur(10px);
-            padding: 15px 25px;
-            border-radius: 30px;
-            border: 2px solid var(--primary-color);
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-weight: 600;
-            animation: badgeFloat 6s ease-in-out infinite;
-        }
-        
-        @keyframes badgeFloat {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-15px); }
-        }
-        
-        /* ===========================================
-           SOCIAL MEDIA SECTION (BELOW HERO)
-        =========================================== */
-        .social-section {
-            background: rgba(0, 0, 0, 0.3);
-            padding: 50px 0;
-            margin-top: -50px;
-            position: relative;
-            z-index: 3;
-        }
-        
-        .social-grid {
-            display: grid;
-            grid-template-columns: repeat(12, 1fr);
-            gap: 15px;
-        }
-        
-        .social-item {
-            grid-column: span 2;
-            height: 80px;
-            border-radius: 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
-            color: white;
-            transition: var(--transition-smooth);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .social-item:nth-child(1) { background: linear-gradient(135deg, #D44638, #B23121); }
-        .social-item:nth-child(2) { background: linear-gradient(135deg, #25D366, #128C7E); }
-        .social-item:nth-child(3) { background: linear-gradient(135deg, #0077B5, #004182); }
-        .social-item:nth-child(4) { background: linear-gradient(135deg, #833AB4, #FD1D1D, #F77737); }
-        .social-item:nth-child(5) { background: linear-gradient(135deg, #1877F2, #0F4AA1); }
-        .social-item:nth-child(6) { background: linear-gradient(135deg, #000000, #444444); }
-        .social-item:nth-child(7) { background: linear-gradient(135deg, #00A3E0, #005F86); }
-        .social-item:nth-child(8) { background: linear-gradient(135deg, #43E660, #1FA337); }
-        .social-item:nth-child(9) { background: linear-gradient(135deg, #010101, #FF0050, #00F2EA); }
-        .social-item:nth-child(10) { background: linear-gradient(135deg, #FFFC00, #FFD000); color: #000; }
-        .social-item:nth-child(11) { background: linear-gradient(135deg, #000000, #444444); }
-        .social-item:nth-child(12) { background: linear-gradient(135deg, #F47300, #FF9E2C); }
-        
-        .social-item:hover {
-            transform: translateY(-10px) scale(1.05);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
-            z-index: 10;
-        }
-        
-        .social-item i {
-            font-size: 24px;
-            margin-bottom: 5px;
-        }
-        
-        .social-item span {
-            font-size: 12px;
-            font-weight: 600;
-        }
-        
-        /* ===========================================
-           ABOUT SECTION WITH DETAILED BIO
-        =========================================== */
-        .about-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 5rem;
-            align-items: center;
-        }
-        
-        .about-image {
-            position: relative;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-        }
-        
-        .about-img {
-            width: 100%;
-            height: auto;
-            display: block;
             transition: transform 0.8s ease;
         }
-        
-        .about-image:hover .about-img {
+
+        .circle-portrait:hover img {
+            transform: scale(1.1);
+        }
+
+        .portrait-badges {
+            position: absolute;
+            top: 50px;
+            right: 450px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            z-index: 9;
+        }
+
+        .portrait-badge {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 15px 25px;
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            transition: all 0.4s ease;
+            animation: badgeFloat 6s ease-in-out infinite;
+            animation-delay: calc(var(--delay) * 1s);
+        }
+
+        .portrait-badge:nth-child(2) {
+            --delay: 2;
+            margin-left: 30px;
+        }
+
+        .portrait-badge:nth-child(3) {
+            --delay: 4;
+        }
+
+        .portrait-badge:hover {
+            transform: translateX(-10px) scale(1.05);
+            background: rgba(255, 255, 255, 0.15);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        .badge-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--gradient-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 18px;
+        }
+
+        /* =========================
+           HERO SOCIAL ICONS BELOW TEXT
+        ========================= */
+        .hero-socials {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 25px;
+            justify-items: center;
+            align-items: center;
+            margin: 60px auto 0;
+            max-width: 600px;
+            position: relative;
+            z-index: 10;
+            transform: translateZ(60px);
+            animation: socialsEntrance 1s ease-out 1.2s both;
+        }
+
+        @keyframes socialsEntrance {
+            from {
+                opacity: 0;
+                transform: translateZ(60px) translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateZ(60px) translateY(0);
+            }
+        }
+
+        .hero-socials .hs {
+            width: 70px;
+            height: 70px;
+            border-radius: 22px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            color: #fff;
+            text-decoration: none;
+            backdrop-filter: blur(15px);
+            box-shadow: 
+                0 20px 35px rgba(0, 0, 0, 0.5),
+                inset 0 0 25px rgba(255, 255, 255, 0.2),
+                0 0 25px currentColor;
+            transform-style: preserve-3d;
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+            animation: iconFloat 6s ease-in-out infinite;
+        }
+
+        .hero-socials .hs:nth-child(odd) {
+            animation-delay: 0.5s;
+        }
+
+        @keyframes iconFloat {
+            0%, 100% { transform: translateY(0) rotateX(0) rotateY(0); }
+            50% { transform: translateY(-15px) rotateX(10deg) rotateY(10deg); }
+        }
+
+        .hero-socials .hs::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                90deg,
+                transparent,
+                rgba(255, 255, 255, 0.5),
+                transparent
+            );
+            transition: 0.8s;
+        }
+
+        .hero-socials .hs:hover::before {
+            left: 100%;
+        }
+
+        .hero-socials .hs:hover {
+            transform: translateY(-20px) rotateX(20deg) rotateY(-20deg) scale(1.25);
+            box-shadow: 
+                0 40px 60px rgba(0, 0, 0, 0.7),
+                0 0 40px currentColor,
+                inset 0 0 40px rgba(255, 255, 255, 0.3);
+            z-index: 100;
+        }
+
+        /* Social Icons Enhanced Colors */
+        .hs.mail { 
+            background: linear-gradient(135deg, #D44638, #B23121, #FF6B6B); 
+            box-shadow: 0 20px 35px rgba(212, 70, 56, 0.4);
+        }
+        .hs.whatsapp { 
+            background: linear-gradient(135deg, #25D366, #128C7E, #1BD741); 
+            box-shadow: 0 20px 35px rgba(37, 211, 102, 0.4);
+        }
+        .hs.linkedin { 
+            background: linear-gradient(135deg, #0077B5, #004182, #00A0DC); 
+            box-shadow: 0 20px 35px rgba(0, 119, 181, 0.4);
+        }
+        .hs.instagram { 
+            background: linear-gradient(135deg, #833AB4, #FD1D1D, #F77737, #FCAF45); 
+            box-shadow: 0 20px 35px rgba(131, 58, 180, 0.4);
+        }
+        .hs.facebook { 
+            background: linear-gradient(135deg, #1877F2, #0F4AA1, #3B5998); 
+            box-shadow: 0 20px 35px rgba(24, 119, 242, 0.4);
+        }
+        .hs.twitter { 
+            background: linear-gradient(135deg, #000000, #444444, #1DA1F2); 
+            box-shadow: 0 20px 35px rgba(0, 0, 0, 0.4);
+        }
+        .hs.wef { 
+            background: linear-gradient(135deg, #00A3E0, #005F86, #0082C9); 
+            box-shadow: 0 20px 35px rgba(0, 163, 224, 0.4);
+        }
+        .hs.linktree { 
+            background: linear-gradient(135deg, #43E660, #1FA337, #36D57D); 
+            box-shadow: 0 20px 35px rgba(67, 230, 96, 0.4);
+        }
+        .hs.tiktok { 
+            background: linear-gradient(135deg, #010101, #FF0050, #00F2EA, #FF0050); 
+            box-shadow: 0 20px 35px rgba(255, 0, 80, 0.4);
+        }
+        .hs.snapchat { 
+            background: linear-gradient(135deg, #FFFC00, #FFD000, #FFF700); 
+            color: #000;
+            box-shadow: 0 20px 35px rgba(255, 252, 0, 0.4);
+        }
+        .hs.threads { 
+            background: linear-gradient(135deg, #000000, #444444, #888888); 
+            box-shadow: 0 20px 35px rgba(0, 0, 0, 0.4);
+        }
+        .hs.ok { 
+            background: linear-gradient(135deg, #F47300, #FF9E2C, #FFB347); 
+            box-shadow: 0 20px 35px rgba(244, 115, 0, 0.4);
+        }
+        .hs.youtube { 
+            background: linear-gradient(135deg, #FF0000, #CC0000, #FF3333); 
+            box-shadow: 0 20px 35px rgba(255, 0, 0, 0.4);
+        }
+        .hs.researchgate { 
+            background: linear-gradient(135deg, #00CCBB, #009688, #00E6D6); 
+            box-shadow: 0 20px 35px rgba(0, 204, 187, 0.4);
+        }
+
+        /* =========================
+           SECTIONS & GLASS CARDS
+        ========================= */
+        section {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 150px 20px;
+            position: relative;
+            transform-style: preserve-3d;
+            opacity: 0;
+            transform: translateY(80px);
+            transition: opacity 1s ease, transform 1s ease;
+        }
+
+        section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .section-title {
+            font-size: 4rem;
+            text-align: center;
+            margin-bottom: 100px;
+            position: relative;
+            z-index: 1;
+            transform: translateZ(40px);
+            animation: titleEntrance 1s ease-out both;
+        }
+
+        @keyframes titleEntrance {
+            from {
+                opacity: 0;
+                transform: translateZ(40px) translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateZ(40px) translateY(0);
+            }
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 150px;
+            height: 6px;
+            background: linear-gradient(90deg, #6a11cb, #2575fc, #ff007a, #ff8c00);
+            margin: 25px auto 0;
+            border-radius: 3px;
+            animation: linePulse 4s ease-in-out infinite;
+        }
+
+        @keyframes linePulse {
+            0%, 100% { 
+                width: 150px;
+                opacity: 1;
+            }
+            50% { 
+                width: 200px;
+                opacity: 0.8;
+            }
+        }
+
+        .glass-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(25px) saturate(200%);
+            -webkit-backdrop-filter: blur(25px) saturate(200%);
+            border: 1px solid var(--glass-border);
+            border-radius: var(--card-radius);
+            padding: 60px;
+            box-shadow: 
+                var(--glass-shadow),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1);
+            transition: all 0.7s var(--transition);
+            position: relative;
+            overflow: hidden;
+            transform-style: preserve-3d;
+            transform: translateZ(0);
+            animation: cardEntrance 1s ease-out both;
+        }
+
+        @keyframes cardEntrance {
+            from {
+                opacity: 0;
+                transform: translateZ(0) translateY(60px) rotateX(10deg);
+            }
+            to {
+                opacity: 1;
+                transform: translateZ(0) translateY(0) rotateX(0);
+            }
+        }
+
+        .glass-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                90deg,
+                transparent,
+                rgba(255, 255, 255, 0.15),
+                transparent
+            );
+            transition: 0.8s;
+            z-index: 1;
+        }
+
+        .glass-card:hover::before {
+            left: 100%;
+        }
+
+        .glass-card:hover {
+            transform: translateY(-20px) rotateX(5deg) rotateY(5deg) translateZ(40px);
+            border-color: rgba(255, 255, 255, 0.4);
+            box-shadow: 
+                0 50px 100px rgba(106, 17, 203, 0.5),
+                inset 0 0 40px rgba(255, 255, 255, 0.2);
+        }
+
+        /* =========================
+           DETAILED ABOUT SECTION
+        ========================= */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-image-container {
+            position: relative;
+            border-radius: 30px;
+            overflow: hidden;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+        }
+
+        .about-image {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            transition: transform 1s ease;
+        }
+
+        .about-image-container:hover .about-image {
             transform: scale(1.05);
         }
-        
-        .about-text h3 {
-            margin-bottom: 1.5rem;
+
+        .about-details {
+            padding: 30px;
         }
-        
-        .about-list {
-            list-style: none;
-            margin-top: 2rem;
+
+        .detail-item {
+            margin-bottom: 25px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
-        
-        .about-list li {
-            margin-bottom: 1rem;
-            display: flex;
-            align-items: flex-start;
-            gap: 10px;
+
+        .detail-item:last-child {
+            border-bottom: none;
         }
-        
-        .about-list i {
-            color: var(--primary-color);
-            margin-top: 5px;
+
+        .detail-label {
+            font-weight: 600;
+            color: #00c6ff;
+            margin-bottom: 8px;
+            font-size: 18px;
         }
-        
-        /* ===========================================
-           TIMELINE SECTION
-        =========================================== */
+
+        .detail-value {
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+
+        /* =========================
+           TIMELINE (ENHANCED)
+        ========================= */
         .timeline {
             position: relative;
             max-width: 900px;
             margin: 0 auto;
+            transform-style: preserve-3d;
         }
-        
+
         .timeline::before {
             content: '';
             position: absolute;
             left: 50%;
-            transform: translateX(-50%);
-            width: 2px;
+            width: 4px;
             height: 100%;
-            background: var(--gradient-primary);
+            background: linear-gradient(
+                to bottom,
+                transparent,
+                #6a11cb,
+                #2575fc,
+                #ff007a,
+                #ff8c00,
+                transparent
+            );
+            transform: translateX(-50%);
+            box-shadow: 0 0 40px rgba(106, 17, 203, 0.7);
+            animation: timelinePulse 3s infinite;
         }
-        
+
+        @keyframes timelinePulse {
+            0%, 100% { box-shadow: 0 0 40px rgba(106, 17, 203, 0.7); }
+            50% { box-shadow: 0 0 60px rgba(106, 17, 203, 0.9); }
+        }
+
         .timeline-item {
-            margin-bottom: 4rem;
-            position: relative;
+            margin-bottom: 80px;
             width: 100%;
             display: flex;
-            justify-content: flex-start;
-        }
-        
-        .timeline-item:nth-child(even) {
-            justify-content: flex-end;
-        }
-        
-        .timeline-content {
-            width: 45%;
-            background: var(--card-bg);
-            backdrop-filter: blur(20px);
-            border: 1px solid var(--border-color);
-            border-radius: 15px;
-            padding: 2rem;
-            position: relative;
-            transition: var(--transition-smooth);
-        }
-        
-        .timeline-content:hover {
-            transform: translateY(-5px);
-            border-color: var(--primary-color);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-        }
-        
-        .timeline-dot {
-            position: absolute;
-            left: 50%;
-            top: 20px;
-            transform: translateX(-50%);
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            background: var(--gradient-primary);
-            z-index: 2;
-            box-shadow: 0 0 20px var(--primary-color);
-        }
-        
-        /* ===========================================
-           EXPERTISE SECTION
-        =========================================== */
-        .expertise-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-            gap: 2rem;
-        }
-        
-        .expertise-card {
-            background: var(--card-bg);
-            backdrop-filter: blur(20px);
-            border: 1px solid var(--border-color);
-            border-radius: var(--card-radius);
-            padding: 2.5rem;
-            transition: var(--transition-smooth);
-            height: 100%;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .expertise-card:hover {
-            transform: translateY(-10px);
-            border-color: var(--primary-color);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-        }
-        
-        .expertise-icon {
-            width: 70px;
-            height: 70px;
-            border-radius: 20px;
-            display: flex;
-            align-items: center;
             justify-content: center;
-            font-size: 2rem;
-            margin-bottom: 1.5rem;
-            background: var(--gradient-primary);
-            color: white;
+            opacity: 0;
+            transform: translateY(80px) rotateX(30deg);
+            transition: all 0.9s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            transform-style: preserve-3d;
         }
-        
-        .expertise-list {
-            list-style: none;
-            margin-top: 1.5rem;
+
+        .timeline-item.visible {
+            opacity: 1;
+            transform: translateY(0) rotateX(0);
         }
-        
-        .expertise-list li {
-            margin-bottom: 0.8rem;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        
-        .expertise-list i {
-            color: var(--primary-color);
-        }
-        
-        /* ===========================================
-           GALLERY SECTION
-        =========================================== */
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-        
-        .gallery-item {
-            border-radius: 20px;
-            overflow: hidden;
+
+        .timeline-content {
+            width: 48%;
+            background: rgba(255, 255, 255, 0.09);
+            backdrop-filter: blur(20px);
+            padding: 35px;
+            border-radius: 25px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
             position: relative;
-            height: 300px;
-            transition: var(--transition-smooth);
+            transform-style: preserve-3d;
+            transition: all 0.5s ease;
+            overflow: hidden;
         }
-        
-        .gallery-img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.8s ease;
-        }
-        
-        .gallery-overlay {
+
+        .timeline-content::before {
+            content: '';
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
-            height: 100%;
-            background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-            padding: 2rem;
-            opacity: 0;
-            transition: var(--transition-smooth);
+            height: 5px;
+            background: var(--gradient-accent);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.5s ease;
         }
-        
+
+        .timeline-content:hover::before {
+            transform: scaleX(1);
+        }
+
+        .timeline-content:hover {
+            transform: translateZ(30px);
+            border-color: rgba(0, 198, 255, 0.5);
+            box-shadow: 
+                0 30px 60px rgba(0, 198, 255, 0.3),
+                inset 0 0 30px rgba(255, 255, 255, 0.1);
+        }
+
+        .timeline-item:nth-child(odd) {
+            justify-content: flex-start;
+        }
+
+        .timeline-item:nth-child(even) {
+            justify-content: flex-end;
+        }
+
+        .timeline-content h4 {
+            color: #00c6ff;
+            margin-bottom: 20px;
+            font-size: 1.6rem;
+            text-shadow: 0 0 20px rgba(0, 198, 255, 0.5);
+        }
+
+        .timeline-dot {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            background: #fff;
+            border-radius: 50%;
+            left: 50%;
+            top: 30px;
+            transform: translateX(-50%) translateZ(15px);
+            box-shadow: 
+                0 0 40px #00c6ff,
+                0 0 25px #00c6ff,
+                inset 0 0 15px rgba(255, 255, 255, 0.7);
+            z-index: 5;
+            animation: pulse 2.5s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { 
+                box-shadow: 
+                    0 0 40px #00c6ff,
+                    0 0 25px #00c6ff,
+                    inset 0 0 15px rgba(255, 255, 255, 0.7); 
+            }
+            50% { 
+                box-shadow: 
+                    0 0 60px #00c6ff,
+                    0 0 40px #00c6ff,
+                    inset 0 0 20px rgba(255, 255, 255, 0.9); 
+            }
+        }
+
+        /* =========================
+           EXPERTISE GRID
+        ========================= */
+        .expertise-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 50px;
+            transform-style: preserve-3d;
+        }
+
+        .expertise-card {
+            text-align: center;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 25px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.5s ease;
+        }
+
+        .expertise-card:hover {
+            transform: translateY(-15px) translateZ(20px);
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(0, 198, 255, 0.5);
+            box-shadow: 0 30px 60px rgba(0, 198, 255, 0.2);
+        }
+
+        .expertise-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 25px;
+            background: var(--gradient-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            color: white;
+            box-shadow: 0 0 30px rgba(106, 17, 203, 0.5);
+        }
+
+        /* =========================
+           3D GALLERY
+        ========================= */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 20px;
+            transform-style: preserve-3d;
+        }
+
+        .gallery-item {
+            height: 350px;
+            border-radius: 25px;
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+            box-shadow: 
+                0 20px 40px rgba(0, 0, 0, 0.6),
+                inset 0 0 25px rgba(255, 255, 255, 0.08);
+            transition: all 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            transform-style: preserve-3d;
+            transform: rotateX(8deg) rotateY(8deg);
+            opacity: 0;
+            animation: galleryEntrance 0.8s ease-out forwards;
+        }
+
+        .gallery-item:nth-child(even) {
+            transform: rotateX(-8deg) rotateY(-8deg);
+            animation-delay: 0.2s;
+        }
+
+        .gallery-item:nth-child(3), .gallery-item:nth-child(6) {
+            animation-delay: 0.4s;
+        }
+
+        @keyframes galleryEntrance {
+            to {
+                opacity: 1;
+                transform: rotateX(0) rotateY(0);
+            }
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: all 0.7s ease;
+            filter: brightness(0.9);
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.12) rotateX(0) rotateY(0) translateZ(60px);
+            box-shadow: 
+                0 40px 80px rgba(0, 198, 255, 0.7),
+                0 0 60px rgba(106, 17, 203, 0.7);
+            z-index: 100;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.2);
+            filter: brightness(1.1);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: linear-gradient(
+                transparent,
+                rgba(0, 0, 0, 0.9)
+            );
+            padding: 30px;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.5s ease;
+            z-index: 2;
+        }
+
         .gallery-item:hover .gallery-overlay {
             opacity: 1;
+            transform: translateY(0);
         }
-        
-        .gallery-item:hover .gallery-img {
-            transform: scale(1.1);
-        }
-        
-        /* ===========================================
-           CONTACT FORM SECTION
-        =========================================== */
-        .contact-container {
+
+        /* =========================
+           PUBLICATIONS SECTION
+        ========================= */
+        .publications-container {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 5rem;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
         }
-        
-        .contact-form {
-            background: var(--card-bg);
-            backdrop-filter: blur(20px);
-            border: 1px solid var(--border-color);
-            border-radius: var(--card-radius);
-            padding: 3rem;
+
+        .publication-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 25px;
+            padding: 35px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.5s ease;
+            position: relative;
+            overflow: hidden;
         }
-        
+
+        .publication-card:hover {
+            transform: translateY(-10px) translateZ(20px);
+            border-color: rgba(255, 0, 122, 0.5);
+            box-shadow: 0 30px 60px rgba(255, 0, 122, 0.2);
+        }
+
+        .pub-year {
+            display: inline-block;
+            padding: 8px 20px;
+            background: var(--gradient-secondary);
+            color: white;
+            border-radius: 20px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+
+        /* =========================
+           CONTACT FORM (OFFICIAL)
+        ========================= */
+        .contact-form-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
         .form-group {
-            margin-bottom: 1.5rem;
+            margin-bottom: 30px;
         }
-        
+
         .form-label {
             display: block;
-            margin-bottom: 0.5rem;
-            color: var(--text-secondary);
-            font-weight: 500;
+            margin-bottom: 10px;
+            color: var(--text-main);
+            font-weight: 600;
+            font-size: 16px;
         }
-        
+
         .form-control {
             width: 100%;
-            padding: 15px 20px;
+            padding: 18px 25px;
             background: rgba(255, 255, 255, 0.05);
-            border: 1px solid var(--border-color);
-            border-radius: 10px;
-            color: var(--text-primary);
-            font-size: 1rem;
-            transition: var(--transition-smooth);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            color: var(--text-main);
+            font-size: 16px;
+            font-family: 'Inter', sans-serif;
+            transition: all 0.3s ease;
         }
-        
+
         .form-control:focus {
             outline: none;
-            border-color: var(--primary-color);
-            box-shadow: 0 0 0 2px rgba(138, 43, 226, 0.2);
+            border-color: #00c6ff;
+            background: rgba(255, 255, 255, 0.08);
+            box-shadow: 0 0 20px rgba(0, 198, 255, 0.3);
         }
-        
+
         textarea.form-control {
             min-height: 150px;
             resize: vertical;
         }
-        
-        .form-submit {
-            width: 100%;
-            padding: 16px;
+
+        .submit-btn {
+            padding: 18px 40px;
             background: var(--gradient-primary);
             color: white;
             border: none;
-            border-radius: 10px;
-            font-size: 1.1rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: var(--transition-smooth);
-        }
-        
-        .form-submit:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(138, 43, 226, 0.3);
-        }
-        
-        .contact-info {
-            display: flex;
-            flex-direction: column;
-            gap: 2rem;
-        }
-        
-        .contact-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 15px;
-        }
-        
-        .contact-icon {
-            width: 60px;
-            height: 60px;
-            border-radius: 15px;
-            background: var(--gradient-primary);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 1.5rem;
-        }
-        
-        .contact-details h4 {
-            margin-bottom: 5px;
-        }
-        
-        /* ===========================================
-           FOOTER WITH SOCIAL MEDIA
-        =========================================== */
-        footer {
-            background: var(--darker-bg);
-            padding: 5rem 0 2rem;
-            border-top: 1px solid var(--border-color);
-        }
-        
-        .footer-content {
-            display: grid;
-            grid-template-columns: 1fr 2fr 1fr;
-            gap: 4rem;
-            margin-bottom: 4rem;
-        }
-        
-        .footer-logo {
-            font-family: 'Playfair Display', serif;
-            font-size: 2rem;
+            border-radius: 35px;
             font-weight: 700;
-            margin-bottom: 1rem;
-            color: var(--text-primary);
-        }
-        
-        .footer-about {
-            color: var(--text-muted);
-            margin-bottom: 1.5rem;
-        }
-        
-        .footer-social {
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
             display: flex;
-            gap: 15px;
+            align-items: center;
+            gap: 10px;
+            margin: 0 auto;
         }
-        
-        .footer-social a {
-            width: 40px;
-            height: 40px;
+
+        .submit-btn:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 20px 40px rgba(106, 17, 203, 0.4);
+        }
+
+        /* =========================
+           BOTTOM SOCIAL MEDIA BAR
+        ========================= */
+        .bottom-social-bar {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            margin-top: 60px;
+            padding-top: 60px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .bottom-social-link {
+            width: 55px;
+            height: 55px;
             border-radius: 50%;
-            background: rgba(255, 255, 255, 0.05);
             display: flex;
             align-items: center;
             justify-content: center;
-            color: var(--text-muted);
-            transition: var(--transition-smooth);
-            text-decoration: none;
-        }
-        
-        .footer-social a:hover {
-            background: var(--primary-color);
+            background: rgba(255, 255, 255, 0.1);
             color: white;
-            transform: translateY(-3px);
-        }
-        
-        .footer-links {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 1.5rem;
-        }
-        
-        .footer-links h4 {
-            margin-bottom: 1.5rem;
-            font-size: 1.2rem;
-        }
-        
-        .footer-links ul {
-            list-style: none;
-        }
-        
-        .footer-links li {
-            margin-bottom: 0.8rem;
-        }
-        
-        .footer-links a {
-            color: var(--text-muted);
             text-decoration: none;
-            transition: var(--transition-smooth);
+            font-size: 22px;
+            transition: all 0.3s ease;
+            position: relative;
         }
-        
-        .footer-links a:hover {
-            color: var(--primary-color);
+
+        .bottom-social-link:hover {
+            transform: translateY(-5px) scale(1.1);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
         }
-        
-        .footer-bottom {
-            padding-top: 2rem;
-            border-top: 1px solid var(--border-color);
+
+        /* =========================
+           FOOTER
+        ========================= */
+        footer {
+            text-align: center;
+            padding: 50px 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            color: #aaa;
+            font-size: 15px;
+            background: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(20px);
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+        }
+
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #6a11cb, #2575fc, #ff007a, #ff8c00, transparent);
+        }
+
+        /* =========================
+           LOADING ANIMATION
+        ========================= */
+        .loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #050510;
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
-            flex-wrap: wrap;
-            gap: 1rem;
+            z-index: 9999;
+            transition: opacity 0.8s ease, visibility 0.8s ease;
         }
-        
-        .copyright {
-            color: var(--text-muted);
-            font-size: 0.9rem;
+
+        .loader.hidden {
+            opacity: 0;
+            visibility: hidden;
         }
-        
-        /* ===========================================
+
+        .loader-content {
+            text-align: center;
+        }
+
+        .loader-spinner {
+            width: 80px;
+            height: 80px;
+            border: 5px solid rgba(255, 255, 255, 0.1);
+            border-top: 5px solid #6a11cb;
+            border-right: 5px solid #2575fc;
+            border-bottom: 5px solid #ff007a;
+            border-radius: 50%;
+            animation: spin 1.5s linear infinite;
+            margin: 0 auto 30px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* =========================
            RESPONSIVE DESIGN
-        =========================================== */
-        @media (max-width: 1200px) {
+        ========================= */
+        @media (max-width: 1400px) {
             .hero-content {
-                gap: 40px;
+                gap: 60px;
+                max-width: 1200px;
             }
             
-            .portrait-circle {
-                width: 350px;
-                height: 350px;
+            .circle-portrait {
+                width: 340px;
+                height: 340px;
             }
             
-            .social-grid {
-                grid-template-columns: repeat(6, 1fr);
-            }
-            
-            .social-item {
-                grid-column: span 1;
+            .portrait-badges {
+                right: 400px;
             }
         }
-        
-        @media (max-width: 992px) {
+
+        @media (max-width: 1200px) {
             .hero-content {
                 grid-template-columns: 1fr;
                 text-align: center;
             }
             
-            .hero-portrait {
+            .hero-portrait-container {
                 justify-content: center;
-                order: -1;
+                margin-top: 50px;
             }
             
-            .portrait-circle {
+            .portrait-badges {
+                position: relative;
+                top: 0;
+                right: 0;
+                flex-direction: row;
+                justify-content: center;
+                margin-top: 30px;
+                gap: 15px;
+            }
+            
+            .portrait-badge {
+                animation: none;
+            }
+            
+            .main-nav {
+                left: 20px;
+                padding: 20px 12px;
+                gap: 20px;
+            }
+            
+            .main-nav a {
+                width: 45px;
+                height: 45px;
+                font-size: 20px;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .circle-portrait {
                 width: 300px;
                 height: 300px;
             }
             
-            .about-content {
-                grid-template-columns: 1fr;
-            }
-            
-            .contact-container {
-                grid-template-columns: 1fr;
-            }
-            
-            .footer-content {
-                grid-template-columns: 1fr;
-                gap: 3rem;
-            }
-            
-            .social-grid {
+            .hero-socials {
                 grid-template-columns: repeat(4, 1fr);
+                max-width: 450px;
+                gap: 20px;
+            }
+            
+            .hero-socials .hs {
+                width: 65px;
+                height: 65px;
+                font-size: 26px;
+            }
+            
+            .section-title {
+                font-size: 3.2rem;
             }
         }
-        
+
         @media (max-width: 768px) {
-            .floating-nav {
-                padding: 12px 20px;
+            .main-header {
+                padding: 15px 20px;
+                flex-wrap: wrap;
+                justify-content: center;
                 gap: 20px;
-                bottom: 20px;
             }
             
-            .floating-nav a {
-                width: 40px;
-                height: 40px;
-                font-size: 18px;
-            }
-            
-            .top-header .container {
-                flex-direction: column;
-                gap: 15px;
-            }
-            
-            .top-social {
+            .top-social-bar {
+                order: 3;
                 width: 100%;
+                justify-content: center;
+                margin-top: 15px;
+            }
+            
+            .main-nav {
+                display: none;
+            }
+            
+            .mobile-nav-toggle {
+                display: flex;
+                align-items: center;
                 justify-content: center;
             }
             
             .hero {
-                padding-top: 150px;
+                padding: 130px 20px 80px;
             }
             
-            .hero-stats {
-                flex-direction: column;
-                gap: 1.5rem;
+            .hero h1 {
+                font-size: 2.8rem;
             }
             
-            .portrait-circle {
+            .circle-portrait {
                 width: 250px;
                 height: 250px;
             }
             
-            .social-grid {
+            .portrait-badges {
+                flex-wrap: wrap;
+            }
+            
+            .portrait-badge {
+                flex: 1;
+                min-width: 200px;
+                justify-content: center;
+                text-align: left;
+            }
+            
+            .hero-socials {
                 grid-template-columns: repeat(3, 1fr);
+                max-width: 350px;
+                gap: 18px;
             }
             
-            .expertise-grid {
-                grid-template-columns: 1fr;
+            .hero-socials .hs {
+                width: 60px;
+                height: 60px;
+                font-size: 24px;
             }
             
-            .gallery-grid {
-                grid-template-columns: 1fr;
+            section {
+                padding: 100px 20px;
+            }
+            
+            .section-title {
+                font-size: 2.8rem;
+                margin-bottom: 80px;
+            }
+            
+            .glass-card {
+                padding: 40px;
             }
             
             .timeline::before {
@@ -1227,7 +1696,7 @@
             
             .timeline-item {
                 justify-content: flex-start !important;
-                padding-left: 40px;
+                padding-left: 50px;
             }
             
             .timeline-content {
@@ -1238,288 +1707,380 @@
                 left: 0;
                 transform: translateX(-50%);
             }
-        }
-        
-        @media (max-width: 576px) {
-            .social-grid {
-                grid-template-columns: repeat(2, 1fr);
+            
+            .expertise-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
             }
             
-            .portrait-circle {
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+                gap: 25px;
+            }
+            
+            .gallery-item {
+                height: 300px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero-buttons {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .hero-btn {
+                width: 100%;
+                min-width: auto;
+            }
+            
+            .circle-portrait {
                 width: 200px;
                 height: 200px;
             }
             
-            .floating-nav {
-                width: 95%;
-                gap: 15px;
-                padding: 10px 15px;
+            .hero-socials {
+                grid-template-columns: repeat(2, 1fr);
+                max-width: 250px;
             }
             
-            .floating-nav a {
-                width: 35px;
-                height: 35px;
-                font-size: 16px;
+            .section-title {
+                font-size: 2.4rem;
             }
             
-            .hero-title {
-                font-size: 2.5rem;
+            .glass-card {
+                padding: 30px;
             }
             
-            .hero-description {
-                font-size: 1.1rem;
+            .gallery-grid {
+                grid-template-columns: 1fr;
             }
+            
+            .gallery-item {
+                height: 280px;
+            }
+            
+            .portrait-badge {
+                min-width: 100%;
+                margin-left: 0 !important;
+            }
+        }
+
+        /* =========================
+           MOBILE NAVIGATION MENU
+        ========================= */
+        .mobile-nav-menu {
+            position: fixed;
+            bottom: 100px;
+            right: 30px;
+            background: rgba(20, 20, 30, 0.95);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 25px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            z-index: 1000;
+            opacity: 0;
+            transform: translateY(20px) scale(0.9);
+            transition: all 0.3s ease;
+            visibility: hidden;
+        }
+
+        .mobile-nav-menu.active {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+            visibility: visible;
+        }
+
+        .mobile-nav-menu a {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            font-size: 22px;
+            transition: all 0.3s ease;
+        }
+
+        .mobile-nav-menu a:hover {
+            background: var(--gradient-primary);
+            transform: scale(1.1);
+        }
+
+        /* =========================
+           ANIMATION UTILITIES
+        ========================= */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(60px) rotateX(15deg);
+            transition: all 0.9s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .animate-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0) rotateX(0);
         }
     </style>
 </head>
+
 <body>
+    <!-- LOADING SCREEN -->
+    <div class="loader" id="loader">
+        <div class="loader-content">
+            <div class="loader-spinner"></div>
+            <div class="loader-text">Loading Portfolio</div>
+        </div>
+    </div>
+
     <!-- DYNAMIC BACKGROUND -->
-    <div class="dynamic-bg">
-        <div class="bg-orb orb-1"></div>
-        <div class="bg-orb orb-2"></div>
-        <div class="bg-orb orb-3"></div>
+    <div class="fluid-bg">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
     </div>
     <div class="particles-container" id="particles"></div>
 
-    <!-- TOP HEADER WITH SOCIAL MEDIA -->
-    <header class="top-header">
-        <div class="container">
-            <div class="logo">Mumtaz <span>Alam</span> Bazai</div>
-            <div class="top-social">
-                <a href="mailto:advmumtaz222@gmail.com" target="_blank" title="Email">
-                    <i class="fas fa-envelope"></i>
-                    <span class="tooltip">Email</span>
-                </a>
-                <a href="https://wa.me/923332568792" target="_blank" title="WhatsApp">
-                    <i class="fab fa-whatsapp"></i>
-                    <span class="tooltip">WhatsApp</span>
-                </a>
-                <a href="https://www.linkedin.com/in/adv-mumtaz-alam-bazai-163a9a324" target="_blank" title="LinkedIn">
-                    <i class="fab fa-linkedin-in"></i>
-                    <span class="tooltip">LinkedIn</span>
-                </a>
-                <a href="https://www.instagram.com/mumtaz_alam" target="_blank" title="Instagram">
-                    <i class="fab fa-instagram"></i>
-                    <span class="tooltip">Instagram</span>
-                </a>
-                <a href="https://www.facebook.com/mumtaz.alam.18488" target="_blank" title="Facebook">
-                    <i class="fab fa-facebook-f"></i>
-                    <span class="tooltip">Facebook</span>
-                </a>
-                <a href="https://x.com/mumtazalam333" target="_blank" title="Twitter/X">
-                    <i class="fab fa-x-twitter"></i>
-                    <span class="tooltip">Twitter/X</span>
-                </a>
-            </div>
+    <!-- FIXED HEADER WITH TOP SOCIAL MEDIA -->
+    <header class="main-header" id="mainHeader">
+        <div class="logo-container">
+            <div class="logo-circle">MAB</div>
+            <div class="logo-text">Mumtaz Alam Bazai</div>
+        </div>
+        
+        <div class="top-social-bar">
+            <a href="mailto:advmumtaz222@gmail.com" class="top-social-link mail" data-tooltip="Email">
+                <i class="fas fa-envelope"></i>
+            </a>
+            <a href="https://wa.me/923332568792" target="_blank" class="top-social-link whatsapp" data-tooltip="WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/adv-mumtaz-alam-bazai-163a9a324" target="_blank" class="top-social-link linkedin" data-tooltip="LinkedIn">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://www.instagram.com/mumtaz_alam" target="_blank" class="top-social-link instagram" data-tooltip="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
         </div>
     </header>
 
-    <!-- FLOATING NAVIGATION BAR -->
-    <nav class="floating-nav" id="floatingNav">
+    <!-- FIXED NAVIGATION SIDEBAR -->
+    <nav class="main-nav" id="mainNav">
         <a href="#hero" data-tooltip="Home" class="active"><i class="fas fa-home"></i></a>
         <a href="#about" data-tooltip="About"><i class="fas fa-user"></i></a>
         <a href="#education" data-tooltip="Education"><i class="fas fa-graduation-cap"></i></a>
         <a href="#expertise" data-tooltip="Expertise"><i class="fas fa-gavel"></i></a>
         <a href="#gallery" data-tooltip="Gallery"><i class="fas fa-images"></i></a>
+        <a href="#publications" data-tooltip="Publications"><i class="fas fa-book"></i></a>
         <a href="#contact" data-tooltip="Contact"><i class="fas fa-envelope"></i></a>
     </nav>
 
+    <!-- MOBILE NAVIGATION TOGGLE -->
+    <button class="mobile-nav-toggle" id="mobileNavToggle">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- MOBILE NAVIGATION MENU -->
+    <div class="mobile-nav-menu" id="mobileNavMenu">
+        <a href="#hero"><i class="fas fa-home"></i></a>
+        <a href="#about"><i class="fas fa-user"></i></a>
+        <a href="#education"><i class="fas fa-graduation-cap"></i></a>
+        <a href="#expertise"><i class="fas fa-gavel"></i></a>
+        <a href="#gallery"><i class="fas fa-images"></i></a>
+        <a href="#publications"><i class="fas fa-book"></i></a>
+        <a href="#contact"><i class="fas fa-envelope"></i></a>
+    </div>
+
     <!-- HERO SECTION -->
     <section id="hero" class="hero">
-        <div class="hero-bg"></div>
-        <div class="hero-bg-overlay"></div>
-        
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <span class="hero-badge">
-                        <i class="fas fa-award"></i>
-                        Advocate High Court & Global Shaper
-                    </span>
-                    
-                    <h1 class="hero-title">
-                        Mumtaz Alam <span class="gradient-text">Bazai</span>
-                    </h1>
-                    
-                    <p class="hero-description">
-                        Human Rights Lawyer · Global Shaper (World Economic Forum) · Youth Advocate<br>
-                        Empowering the youth of Balochistan through law, leadership, and unwavering justice.
-                    </p>
-                    
-                    <div class="btn-group">
-                        <a href="#contact" class="btn btn-primary">
-                            <i class="fas fa-paper-plane"></i> Contact Me
-                        </a>
-                        <a href="https://linktr.ee/mumtazalam" target="_blank" class="btn btn-secondary">
-                            <i class="fas fa-external-link-alt"></i> View Portfolio
-                        </a>
-                    </div>
-                    
-                    <div class="hero-stats">
-                        <div class="stat-item">
-                            <div class="stat-number">100+</div>
-                            <div class="stat-label">Cases Handled</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-number">5+</div>
-                            <div class="stat-label">Years Experience</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-number">12+</div>
-                            <div class="stat-label">Languages</div>
-                        </div>
-                    </div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <span class="hero-badge">Advocate & Changemaker</span>
+                <h1>Mumtaz Alam <br> Bazai</h1>
+                <p>Advocate High Court · Human Rights Lawyer · Global Shaper (WEF).<br>
+                Empowering the youth of Balochistan through law, leadership, and unwavering justice.</p>
+
+                <div class="hero-buttons">
+                    <a href="#contact" class="hero-btn btn-primary">
+                        <i class="fas fa-envelope"></i> Get in Touch
+                    </a>
+                    <a href="https://linktr.ee/mumtazalam" target="_blank" class="hero-btn btn-secondary">
+                        <i class="fas fa-external-link-alt"></i> View All Links
+                    </a>
                 </div>
                 
-                <div class="hero-portrait">
-                    <div class="portrait-circle">
-                        <img src="portrait.jpg.jpeg" alt="Mumtaz Alam Bazai">
+                <!-- HERO SOCIAL LINKS -->
+                <div class="hero-socials">
+                    <a href="mailto:advmumtaz222@gmail.com" target="_blank" class="hs mail" title="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="https://wa.me/923332568792" target="_blank" class="hs whatsapp" title="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/adv-mumtaz-alam-bazai-163a9a324" target="_blank" class="hs linkedin" title="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://www.instagram.com/mumtaz_alam" target="_blank" class="hs instagram" title="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.facebook.com/mumtaz.alam.18488" target="_blank" class="hs facebook" title="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://x.com/mumtazalam333" target="_blank" class="hs twitter" title="Twitter/X">
+                        <i class="fab fa-x-twitter"></i>
+                    </a>
+                    <a href="https://my.weforum.org/network/people/001TG000009vSDhYAM/adv-mumtaz-alam" target="_blank" class="hs wef" title="World Economic Forum">
+                        <i class="fas fa-globe"></i>
+                    </a>
+                    <a href="https://linktr.ee/mumtazalam" target="_blank" class="hs linktree" title="Linktree">
+                        <i class="fas fa-link"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/@mumtaz_alam" target="_blank" class="hs tiktok" title="TikTok">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+                    <a href="https://www.snapchat.com/add/mumtazalam222" target="_blank" class="hs snapchat" title="Snapchat">
+                        <i class="fab fa-snapchat-ghost"></i>
+                    </a>
+                    <a href="https://www.threads.com/@mumtaz_alam" target="_blank" class="hs threads" title="Threads">
+                        <i class="fas fa-comment-dots"></i>
+                    </a>
+                    <a href="https://ok.ru/profile/910193583170" target="_blank" class="hs ok" title="Odnoklassniki">
+                        <i class="fab fa-odnoklassniki"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- CIRCLE PORTRAIT IN UPPER RIGHT -->
+            <div class="hero-portrait-container">
+                <div class="portrait-badges">
+                    <div class="portrait-badge">
+                        <div class="badge-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <span>LLB (Hons) Graduate</span>
                     </div>
                     <div class="portrait-badge">
-                        <i class="fas fa-star"></i>
+                        <div class="badge-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <span>Global Shaper (WEF)</span>
+                    </div>
+                    <div class="portrait-badge">
+                        <div class="badge-icon">
+                            <i class="fas fa-scale-balanced"></i>
+                        </div>
                         <span>Advocate High Court</span>
                     </div>
                 </div>
+                
+                <div class="circle-portrait">
+                    <img src="portrait.jpg.jpeg" alt="Mumtaz Alam Bazai">
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- SOCIAL MEDIA SECTION -->
-    <section class="social-section">
-        <div class="container">
-            <div class="social-grid">
-                <a href="mailto:advmumtaz222@gmail.com" class="social-item" target="_blank">
-                    <i class="fas fa-envelope"></i>
-                    <span>Email</span>
-                </a>
-                <a href="https://wa.me/923332568792" class="social-item" target="_blank">
-                    <i class="fab fa-whatsapp"></i>
-                    <span>WhatsApp</span>
-                </a>
-                <a href="https://www.linkedin.com/in/adv-mumtaz-alam-bazai-163a9a324" class="social-item" target="_blank">
-                    <i class="fab fa-linkedin-in"></i>
-                    <span>LinkedIn</span>
-                </a>
-                <a href="https://www.instagram.com/mumtaz_alam" class="social-item" target="_blank">
-                    <i class="fab fa-instagram"></i>
-                    <span>Instagram</span>
-                </a>
-                <a href="https://www.facebook.com/mumtaz.alam.18488" class="social-item" target="_blank">
-                    <i class="fab fa-facebook-f"></i>
-                    <span>Facebook</span>
-                </a>
-                <a href="https://x.com/mumtazalam333" class="social-item" target="_blank">
-                    <i class="fab fa-x-twitter"></i>
-                    <span>Twitter/X</span>
-                </a>
-                <a href="https://my.weforum.org/network/people/001TG000009vSDhYAM/adv-mumtaz-alam" class="social-item" target="_blank">
-                    <i class="fas fa-globe"></i>
-                    <span>WEF</span>
-                </a>
-                <a href="https://linktr.ee/mumtazalam" class="social-item" target="_blank">
-                    <i class="fas fa-link"></i>
-                    <span>Linktree</span>
-                </a>
-                <a href="https://www.tiktok.com/@mumtaz_alam" class="social-item" target="_blank">
-                    <i class="fab fa-tiktok"></i>
-                    <span>TikTok</span>
-                </a>
-                <a href="https://www.snapchat.com/add/mumtazalam222" class="social-item" target="_blank">
-                    <i class="fab fa-snapchat-ghost"></i>
-                    <span>Snapchat</span>
-                </a>
-                <a href="https://www.threads.com/@mumtaz_alam" class="social-item" target="_blank">
-                    <i class="fas fa-comment-dots"></i>
-                    <span>Threads</span>
-                </a>
-                <a href="https://ok.ru/profile/910193583170" class="social-item" target="_blank">
-                    <i class="fab fa-odnoklassniki"></i>
-                    <span>OK.ru</span>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- ABOUT SECTION -->
-    <section id="about">
-        <div class="container">
-            <div class="section-header">
-                <h2>About <span class="gradient-text">Me</span></h2>
-            </div>
-            
-            <div class="about-content">
-                <div class="about-image">
-                    <img src="life1.jpg.jpeg" alt="Mumtaz Alam Bazai" class="about-img">
+    <!-- DETAILED ABOUT SECTION -->
+    <section id="about" class="section">
+        <h2 class="section-title">About Me</h2>
+        <div class="glass-card">
+            <div class="about-grid">
+                <div class="about-image-container">
+                    <img src="life1.jpg.jpeg" alt="Mumtaz Alam Bazai" class="about-image">
                 </div>
                 
-                <div class="about-text">
-                    <h3>Legal Visionary & Human Rights Advocate</h3>
-                    <p>Born on <strong>11 August 2000</strong> in Kili Zdoon, District Pishin, Balochistan. As the eldest of nine siblings and son of Dr. Ameer Muhammad (Neurosurgeon), my journey from village schooling to becoming an Advocate High Court is defined by discipline, brilliance, and unwavering commitment to justice.</p>
+                <div class="about-details">
+                    <div class="detail-item">
+                        <div class="detail-label">Full Name</div>
+                        <div class="detail-value">Mumtaz Alam Bazai</div>
+                    </div>
                     
-                    <p>From scholarship-based excellence at Pak-Turk Maarif to mastering the intricacies of law at University Law College, I have consistently demonstrated leadership and academic prowess. My multilingual fluency in Pashto, Urdu, English, and Turkish has enabled me to connect with diverse communities and advocate for their rights.</p>
+                    <div class="detail-item">
+                        <div class="detail-label">Date of Birth</div>
+                        <div class="detail-value">11 August 2000</div>
+                    </div>
                     
-                    <ul class="about-list">
-                        <li><i class="fas fa-check-circle"></i> Advocate High Court with Bar Council License (Reg No. 14/2025)</li>
-                        <li><i class="fas fa-check-circle"></i> Global Shaper at World Economic Forum, Curator of Quetta Hub</li>
-                        <li><i class="fas fa-check-circle"></i> LLB (Hons) & MA Political Science Graduate with honors</li>
-                        <li><i class="fas fa-check-circle"></i> Author of "Human Rights and Responsibilities" (2021)</li>
-                        <li><i class="fas fa-check-circle"></i> Fluent in Pashto, Urdu, English, and Turkish</li>
-                        <li><i class="fas fa-check-circle"></i> Active practitioner in Civil, Criminal, and Human Rights litigation</li>
-                    </ul>
+                    <div class="detail-item">
+                        <div class="detail-label">Place of Birth</div>
+                        <div class="detail-value">Kili Zdoon, District Pishin, Balochistan, Pakistan</div>
+                    </div>
                     
-                    <a href="#contact" class="btn btn-primary mt-3">
-                        <i class="fas fa-download"></i> Download CV
-                    </a>
+                    <div class="detail-item">
+                        <div class="detail-label">Father's Name</div>
+                        <div class="detail-value">Dr. Ameer Muhammad (Neurosurgeon)</div>
+                    </div>
+                    
+                    <div class="detail-item">
+                        <div class="detail-label">Siblings</div>
+                        <div class="detail-value">Eldest of Nine Siblings</div>
+                    </div>
+                    
+                    <div class="detail-item">
+                        <div class="detail-label">Languages</div>
+                        <div class="detail-value">Pashto (Native), Urdu (Fluent), English (Fluent), Turkish (Conversational)</div>
+                    </div>
+                    
+                    <div class="detail-item">
+                        <div class="detail-label">Bar Council License</div>
+                        <div class="detail-value">Reg No. 14/2025</div>
+                    </div>
+                    
+                    <div class="detail-item">
+                        <div class="detail-label">Current Position</div>
+                        <div class="detail-value">Advocate at Iqra Law Associates, Quetta (Under Advocate Abdul Zahir Kakar)</div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- EDUCATION SECTION -->
-    <section id="education" style="background: rgba(0, 0, 0, 0.3);">
-        <div class="container">
-            <div class="section-header">
-                <h2>Educational <span class="gradient-text">Journey</span></h2>
-            </div>
-            
+    <section id="education" class="section">
+        <h2 class="section-title">Education & Timeline</h2>
+        <div class="glass-card">
             <div class="timeline">
-                <div class="timeline-item">
+                <div class="timeline-item animate-on-scroll">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
-                        <h4>2006 - 2018: School Education</h4>
-                        <p>Pak-Turk Maarif International Schools & Colleges. Awarded scholarships for academic excellence throughout my schooling. Demonstrated leadership skills and multilingual fluency (Pashto, Urdu, English, Turkish).</p>
+                        <h4>2019 - Intermediate Education</h4>
+                        <p>Pak-Turk Maarif International Schools & Colleges. Demonstrated exceptional leadership and multilingual fluency (Pashto, Urdu, English, Turkish). Completed with outstanding academic performance on scholarship.</p>
                     </div>
                 </div>
                 
-                <div class="timeline-item">
+                <div class="timeline-item animate-on-scroll">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
-                        <h4>2019: Intermediate (FSc. Pre-Engineering)</h4>
-                        <p>Completed with distinction from Pak-Turk Maarif International College. Developed strong analytical and problem-solving skills that would later serve my legal career.</p>
+                        <h4>2022 - BA in Arts</h4>
+                        <p>University of Balochistan. Built a strong foundation in social sciences, political thought, and humanities. Developed critical thinking and analytical skills essential for legal practice.</p>
                     </div>
                 </div>
                 
-                <div class="timeline-item">
+                <div class="timeline-item animate-on-scroll">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
-                        <h4>2022: BA (Arts)</h4>
-                        <p>University of Balochistan. Building the foundation for social sciences and political thought. Actively participated in debate competitions and student politics.</p>
+                        <h4>2024 - LLB (Hons) & MA Political Science</h4>
+                        <p>Graduated with honors from University Law College and University of Balochistan. Mastered the intricacies of law, constitutional studies, governance, and political theory. Received distinction in legal research and advocacy.</p>
                     </div>
                 </div>
                 
-                <div class="timeline-item">
+                <div class="timeline-item animate-on-scroll">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
-                        <h4>2024: LLB (Hons) & MA Political Science</h4>
-                        <p>University Law College & University of Balochistan. Graduated with honors, mastering the intricacies of law and governance. Published research on "The Role of ECP in Free and Fair Elections" (2024).</p>
+                        <h4>2025 - Legal License & Professional Practice</h4>
+                        <p>Received Bar Council License (Reg No. 14/2025). Formally joined Iqra Law Associates under the mentorship of Advocate Abdul Zahir Kakar. Began active practice in Civil, Criminal, and Human Rights litigation.</p>
                     </div>
                 </div>
                 
-                <div class="timeline-item">
+                <div class="timeline-item animate-on-scroll">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
-                        <h4>2025: Legal License & Professional Practice</h4>
-                        <p>Received Bar Council License (Reg No. 14/2025). Formally joined Iqra Law Associates under Advocate Abdul Zahir Kakar. Started practicing as an Advocate High Court.</p>
+                        <h4>2025 - Global Shaper Appointment</h4>
+                        <p>Appointed as Curator of Quetta Hub at World Economic Forum's Global Shapers Community. Represented at Global Shapers Annual Summit 2025 in Geneva. Authored Governance Charter and spearheaded Youth Policy Project.</p>
                     </div>
                 </div>
             </div>
@@ -1527,200 +2088,209 @@
     </section>
 
     <!-- EXPERTISE SECTION -->
-    <section id="expertise">
-        <div class="container">
-            <div class="section-header">
-                <h2>Areas of <span class="gradient-text">Expertise</span></h2>
+    <section id="expertise" class="section">
+        <h2 class="section-title">Areas of Expertise</h2>
+        <div class="expertise-grid">
+            <div class="expertise-card animate-on-scroll">
+                <div class="expertise-icon">
+                    <i class="fas fa-gavel"></i>
+                </div>
+                <h3>Legal Practice</h3>
+                <p>Active practitioner in Civil, Criminal, Constitutional, and Human Rights litigation. Specialized in pro bono work for marginalized communities. Expertise in legal consultation, case strategy, and courtroom advocacy.</p>
+                <div style="margin-top: 20px;">
+                    <span style="display: inline-block; padding: 8px 15px; background: rgba(106, 17, 203, 0.2); border-radius: 20px; margin: 5px; font-size: 14px;">Civil Law</span>
+                    <span style="display: inline-block; padding: 8px 15px; background: rgba(37, 117, 252, 0.2); border-radius: 20px; margin: 5px; font-size: 14px;">Criminal Law</span>
+                    <span style="display: inline-block; padding: 8px 15px; background: rgba(255, 0, 122, 0.2); border-radius: 20px; margin: 5px; font-size: 14px;">Human Rights</span>
+                </div>
             </div>
             
-            <div class="expertise-grid">
-                <div class="expertise-card">
-                    <div class="expertise-icon">
-                        <i class="fas fa-gavel"></i>
-                    </div>
-                    <h3>Legal Practice</h3>
-                    <p>Active practitioner in Civil, Criminal, and Human Rights litigation with extensive experience in High Court proceedings. Known for pro bono work for marginalized communities in Balochistan.</p>
-                    <ul class="expertise-list">
-                        <li><i class="fas fa-check"></i> Civil & Criminal Law</li>
-                        <li><i class="fas fa-check"></i> Human Rights Litigation</li>
-                        <li><i class="fas fa-check"></i> Constitutional Law</li>
-                        <li><i class="fas fa-check"></i> Legal Consultancy</li>
-                    </ul>
+            <div class="expertise-card animate-on-scroll">
+                <div class="expertise-icon">
+                    <i class="fas fa-globe"></i>
                 </div>
-                
-                <div class="expertise-card">
-                    <div class="expertise-icon">
-                        <i class="fas fa-globe-asia"></i>
-                    </div>
-                    <h3>Global Shapers (WEF)</h3>
-                    <p>Curator of Quetta Hub. Represented at Global Shapers Annual Summit 2025 (Geneva). Authored the Governance Charter and spearheaded the first Youth Policy Project for Balochistan.</p>
-                    <ul class="expertise-list">
-                        <li><i class="fas fa-check"></i> Youth Policy Development</li>
-                        <li><i class="fas fa-check"></i> Community Leadership</li>
-                        <li><i class="fas fa-check"></i> International Representation</li>
-                        <li><i class="fas fa-check"></i> Governance Initiatives</li>
-                    </ul>
+                <h3>Global Leadership</h3>
+                <p>Curator of Quetta Hub at World Economic Forum's Global Shapers Community. International representation at global forums. Expertise in youth policy development, community leadership, and cross-cultural communication.</p>
+                <div style="margin-top: 20px;">
+                    <span style="display: inline-block; padding: 8px 15px; background: rgba(0, 198, 255, 0.2); border-radius: 20px; margin: 5px; font-size: 14px;">Youth Policy</span>
+                    <span style="display: inline-block; padding: 8px 15px; background: rgba(255, 140, 0, 0.2); border-radius: 20px; margin: 5px; font-size: 14px;">Public Speaking</span>
+                    <span style="display: inline-block; padding: 8px 15px; background: rgba(106, 17, 203, 0.2); border-radius: 20px; margin: 5px; font-size: 14px;">Strategic Planning</span>
                 </div>
-                
-                <div class="expertise-card">
-                    <div class="expertise-icon">
-                        <i class="fas fa-book-open"></i>
-                    </div>
-                    <h3>Publications & Research</h3>
-                    <p>Author of "Human Rights and Responsibilities" (2021) and research on "The Role of ECP in Free and Fair Elections" (2024). Regular contributor to legal and policy journals.</p>
-                    <ul class="expertise-list">
-                        <li><i class="fas fa-check"></i> Academic Writing</li>
-                        <li><i class="fas fa-check"></i> Policy Research</li>
-                        <li><i class="fas fa-check"></i> Legal Commentary</li>
-                        <li><i class="fas fa-check"></i> Editorial Contributions</li>
-                    </ul>
+            </div>
+            
+            <div class="expertise-card animate-on-scroll">
+                <div class="expertise-icon">
+                    <i class="fas fa-book-open"></i>
+                </div>
+                <h3>Research & Publications</h3>
+                <p>Author of "Human Rights and Responsibilities" (2021). Extensive research on "The Role of ECP in Free and Fair Elections" (2024). Regular contributor to legal journals, policy papers, and academic publications.</p>
+                <div style="margin-top: 20px;">
+                    <span style="display: inline-block; padding: 8px 15px; background: rgba(37, 117, 252, 0.2); border-radius: 20px; margin: 5px; font-size: 14px;">Academic Writing</span>
+                    <span style="display: inline-block; padding: 8px 15px; background: rgba(255, 0, 122, 0.2); border-radius: 20px; margin: 5px; font-size: 14px;">Policy Research</span>
+                    <span style="display: inline-block; padding: 8px 15px; background: rgba(0, 198, 255, 0.2); border-radius: 20px; margin: 5px; font-size: 14px;">Legal Analysis</span>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- GALLERY SECTION -->
-    <section id="gallery" style="background: rgba(0, 0, 0, 0.3);">
-        <div class="container">
-            <div class="section-header">
-                <h2>Gallery & <span class="gradient-text">Portfolio</span></h2>
+    <section id="gallery" class="section">
+        <h2 class="section-title">Visual Journey</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item animate-on-scroll">
+                <img src="life1.jpg.jpeg" alt="Leadership & Advocacy" loading="lazy">
+                <div class="gallery-overlay">
+                    <h4>Leadership & Advocacy</h4>
+                    <p>Speaking at youth forums and legal conferences</p>
+                </div>
             </div>
-            
-            <div class="gallery-grid">
-                <div class="gallery-item">
-                    <img src="life1.jpg.jpeg" alt="Leadership" class="gallery-img">
-                    <div class="gallery-overlay">
-                        <h4>Leadership & Advocacy</h4>
-                        <p>Speaking at youth forums and legal conferences</p>
-                    </div>
+            <div class="gallery-item animate-on-scroll">
+                <img src="life2.jpg.jpeg" alt="Courtroom Excellence" loading="lazy">
+                <div class="gallery-overlay">
+                    <h4>Courtroom Excellence</h4>
+                    <p>Practicing law with dedication and precision</p>
                 </div>
-                
-                <div class="gallery-item">
-                    <img src="life2.jpg.jpeg" alt="Courtroom" class="gallery-img">
-                    <div class="gallery-overlay">
-                        <h4>Courtroom Excellence</h4>
-                        <p>Practicing law with dedication and precision</p>
-                    </div>
+            </div>
+            <div class="gallery-item animate-on-scroll">
+                <img src="life3.jpg.jpeg" alt="Global Shapers Network" loading="lazy">
+                <div class="gallery-overlay">
+                    <h4>Global Shapers Network</h4>
+                    <p>Representing Quetta Hub at international forums</p>
                 </div>
-                
-                <div class="gallery-item">
-                    <img src="life3.jpg.jpeg" alt="Global Shapers" class="gallery-img">
-                    <div class="gallery-overlay">
-                        <h4>Global Shapers Network</h4>
-                        <p>Representing Quetta Hub at international forums</p>
-                    </div>
+            </div>
+            <div class="gallery-item animate-on-scroll">
+                <img src="life4.jpg.jpeg" alt="Legal Practice" loading="lazy">
+                <div class="gallery-overlay">
+                    <h4>Legal Practice</h4>
+                    <p>Daily commitment to justice and rule of law</p>
                 </div>
-                
-                <div class="gallery-item">
-                    <img src="life4.jpg.jpeg" alt="Legal Practice" class="gallery-img">
-                    <div class="gallery-overlay">
-                        <h4>Legal Practice</h4>
-                        <p>Daily commitment to justice and rule of law</p>
-                    </div>
+            </div>
+            <div class="gallery-item animate-on-scroll">
+                <img src="life5.jpg.jpeg" alt="Community Engagement" loading="lazy">
+                <div class="gallery-overlay">
+                    <h4>Community Engagement</h4>
+                    <p>Working directly with local communities</p>
                 </div>
-                
-                <div class="gallery-item">
-                    <img src="life5.jpg.jpeg" alt="Community" class="gallery-img">
-                    <div class="gallery-overlay">
-                        <h4>Community Engagement</h4>
-                        <p>Working directly with local communities</p>
-                    </div>
-                </div>
-                
-                <div class="gallery-item">
-                    <img src="life6.jpg.jpeg" alt="International" class="gallery-img">
-                    <div class="gallery-overlay">
-                        <h4>International Exposure</h4>
-                        <p>Learning from global best practices</p>
-                    </div>
+            </div>
+            <div class="gallery-item animate-on-scroll">
+                <img src="life6.jpg.jpeg" alt="International Exposure" loading="lazy">
+                <div class="gallery-overlay">
+                    <h4>International Exposure</h4>
+                    <p>Learning from global best practices</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CONTACT FORM SECTION -->
-    <section id="contact">
-        <div class="container">
-            <div class="section-header">
-                <h2>Contact <span class="gradient-text">Me</span></h2>
-                <p style="text-align: center; max-width: 700px; margin: 0 auto 3rem; color: var(--text-secondary);">
-                    Reach out for legal consultation, collaboration opportunities, or to discuss youth empowerment initiatives in Balochistan.
+    <!-- PUBLICATIONS SECTION -->
+    <section id="publications" class="section">
+        <h2 class="section-title">Publications & Research</h2>
+        <div class="publications-container">
+            <div class="publication-card animate-on-scroll">
+                <div class="pub-year">2021</div>
+                <h3 style="color: #00c6ff; margin-bottom: 15px;">Human Rights and Responsibilities: A Legal Perspective</h3>
+                <p style="color: var(--text-muted); line-height: 1.7; margin-bottom: 20px;">
+                    A comprehensive analysis of human rights within the Pakistani legal framework, exploring the balance between rights and responsibilities in a democratic society.
                 </p>
+                <div style="display: flex; gap: 15px;">
+                    <a href="#" style="padding: 10px 20px; background: rgba(106, 17, 203, 0.2); border-radius: 20px; color: white; text-decoration: none; font-size: 14px;">Download PDF</a>
+                    <a href="#" style="padding: 10px 20px; background: rgba(37, 117, 252, 0.2); border-radius: 20px; color: white; text-decoration: none; font-size: 14px;">Read Online</a>
+                </div>
             </div>
             
-            <div class="contact-container">
-                <div class="contact-form">
-                    <form id="contactForm" action="https://formspree.io/f/xvojwpzp" method="POST">
+            <div class="publication-card animate-on-scroll">
+                <div class="pub-year">2024</div>
+                <h3 style="color: #00c6ff; margin-bottom: 15px;">The Role of ECP in Ensuring Free and Fair Elections</h3>
+                <p style="color: var(--text-muted); line-height: 1.7; margin-bottom: 20px;">
+                    An in-depth analysis of Election Commission of Pakistan's constitutional mandate, challenges in implementation, and recommendations for strengthening electoral processes.
+                </p>
+                <div style="display: flex; gap: 15px;">
+                    <a href="#" style="padding: 10px 20px; background: rgba(255, 0, 122, 0.2); border-radius: 20px; color: white; text-decoration: none; font-size: 14px;">Download PDF</a>
+                    <a href="#" style="padding: 10px 20px; background: rgba(0, 198, 255, 0.2); border-radius: 20px; color: white; text-decoration: none; font-size: 14px;">Research Paper</a>
+                </div>
+            </div>
+            
+            <div class="publication-card animate-on-scroll">
+                <div class="pub-year">2025</div>
+                <h3 style="color: #00c6ff; margin-bottom: 15px;">Youth Policy Framework for Balochistan</h3>
+                <p style="color: var(--text-muted); line-height: 1.7; margin-bottom: 20px;">
+                    Developed as part of the Global Shapers initiative, this policy brief outlines a comprehensive framework for youth empowerment in Balochistan, addressing education, employment, and civic engagement.
+                </p>
+                <div style="display: flex; gap: 15px;">
+                    <a href="#" style="padding: 10px 20px; background: rgba(255, 140, 0, 0.2); border-radius: 20px; color: white; text-decoration: none; font-size: 14px;">Policy Brief</a>
+                    <a href="#" style="padding: 10px 20px; background: rgba(106, 17, 203, 0.2); border-radius: 20px; color: white; text-decoration: none; font-size: 14px;">Executive Summary</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION WITH OFFICIAL FORM -->
+    <section id="contact" class="section">
+        <h2 class="section-title">Get in Touch</h2>
+        <div class="glass-card">
+            <div style="max-width: 800px; margin: 0 auto;">
+                <p style="text-align: center; font-size: 1.2rem; color: var(--text-muted); margin-bottom: 50px;">
+                    For legal consultation, collaboration opportunities, speaking engagements, or to discuss youth empowerment initiatives in Balochistan.
+                </p>
+                
+                <div class="contact-form-container">
+                    <form id="officialContactForm">
                         <div class="form-group">
-                            <label class="form-label" for="name">Full Name</label>
-                            <input type="text" class="form-control" id="name" name="name" required>
+                            <label for="name" class="form-label">Full Name</label>
+                            <input type="text" id="name" class="form-control" placeholder="Enter your full name" required>
                         </div>
                         
                         <div class="form-group">
-                            <label class="form-label" for="email">Email Address</label>
-                            <input type="email" class="form-control" id="email" name="email" required>
+                            <label for="email" class="form-label">Email Address</label>
+                            <input type="email" id="email" class="form-control" placeholder="Enter your email address" required>
                         </div>
                         
                         <div class="form-group">
-                            <label class="form-label" for="subject">Subject</label>
-                            <input type="text" class="form-control" id="subject" name="subject" required>
+                            <label for="phone" class="form-label">Phone Number</label>
+                            <input type="tel" id="phone" class="form-control" placeholder="Enter your phone number">
                         </div>
                         
                         <div class="form-group">
-                            <label class="form-label" for="message">Message</label>
-                            <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                            <label for="subject" class="form-label">Subject</label>
+                            <input type="text" id="subject" class="form-control" placeholder="What is this regarding?" required>
                         </div>
                         
-                        <button type="submit" class="form-submit">
-                            <i class="fas fa-paper-plane"></i> Send Message
+                        <div class="form-group">
+                            <label for="message" class="form-label">Your Message</label>
+                            <textarea id="message" class="form-control" placeholder="Please provide details of your inquiry..." required rows="6"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn">
+                            <i class="fas fa-paper-plane"></i> Send Official Message
                         </button>
                     </form>
                 </div>
                 
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h4>Location</h4>
-                            <p>Quetta, Balochistan, Pakistan</p>
-                            <p>Iqra Law Associates, High Court Road</p>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h4>Email</h4>
-                            <p>advmumtaz222@gmail.com</p>
-                            <p>mumtaz.bazai@globalshapers.org</p>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-phone-alt"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h4>Phone & WhatsApp</h4>
-                            <p>+92 333 2568792</p>
-                            <p>Available for consultation</p>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-clock"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h4>Availability</h4>
-                            <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
-                            <p>Saturday: 10:00 AM - 2:00 PM</p>
-                        </div>
-                    </div>
+                <!-- BOTTOM SOCIAL MEDIA BAR -->
+                <div class="bottom-social-bar">
+                    <a href="mailto:advmumtaz222@gmail.com" class="bottom-social-link" title="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="https://wa.me/923332568792" target="_blank" class="bottom-social-link" title="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/adv-mumtaz-alam-bazai-163a9a324" target="_blank" class="bottom-social-link" title="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://www.instagram.com/mumtaz_alam" target="_blank" class="bottom-social-link" title="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.facebook.com/mumtaz.alam.18488" target="_blank" class="bottom-social-link" title="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://x.com/mumtazalam333" target="_blank" class="bottom-social-link" title="Twitter/X">
+                        <i class="fab fa-x-twitter"></i>
+                    </a>
+                    <a href="https://my.weforum.org/network/people/001TG000009vSDhYAM/adv-mumtaz-alam" target="_blank" class="bottom-social-link" title="World Economic Forum">
+                        <i class="fas fa-globe"></i>
+                    </a>
+                    <a href="https://linktr.ee/mumtazalam" target="_blank" class="bottom-social-link" title="Linktree">
+                        <i class="fas fa-link"></i>
+                    </a>
                 </div>
             </div>
         </div>
@@ -1728,143 +2298,99 @@
 
     <!-- FOOTER -->
     <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-about">
-                    <div class="footer-logo">Mumtaz Alam Bazai</div>
-                    <p class="footer-about">Advocate High Court, Human Rights Lawyer, and Global Shaper dedicated to justice, youth empowerment, and social change in Balochistan and beyond.</p>
-                    <div class="footer-social">
-                        <a href="https://www.linkedin.com/in/adv-mumtaz-alam-bazai-163a9a324" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="https://www.instagram.com/mumtaz_alam" target="_blank"><i class="fab fa-instagram"></i></a>
-                        <a href="https://www.facebook.com/mumtaz.alam.18488" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://x.com/mumtazalam333" target="_blank"><i class="fab fa-x-twitter"></i></a>
-                        <a href="https://wa.me/923332568792" target="_blank"><i class="fab fa-whatsapp"></i></a>
-                        <a href="mailto:advmumtaz222@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
-                    </div>
-                </div>
-                
-                <div class="footer-links">
-                    <div>
-                        <h4>Quick Links</h4>
-                        <ul>
-                            <li><a href="#hero">Home</a></li>
-                            <li><a href="#about">About</a></li>
-                            <li><a href="#education">Education</a></li>
-                            <li><a href="#expertise">Expertise</a></li>
-                            <li><a href="#gallery">Gallery</a></li>
-                            <li><a href="#contact">Contact</a></li>
-                        </ul>
-                    </div>
-                    
-                    <div>
-                        <h4>Legal Services</h4>
-                        <ul>
-                            <li><a href="#">Civil Litigation</a></li>
-                            <li><a href="#">Criminal Defense</a></li>
-                            <li><a href="#">Human Rights Cases</a></li>
-                            <li><a href="#">Legal Consultation</a></li>
-                            <li><a href="#">Pro Bono Services</a></li>
-                            <li><a href="#">Policy Advocacy</a></li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="footer-newsletter">
-                    <h4>Mission Statement</h4>
-                    <p>"To advance justice, safeguard human dignity, strengthen democratic institutions, and empower youth to lead Pakistan toward a just, inclusive, and sustainable future."</p>
-                </div>
-            </div>
-            
-            <div class="footer-bottom">
-                <p class="copyright">© 2025 Mumtaz Alam Bazai. Advocate & Human Rights Lawyer. All Rights Reserved.</p>
-                <p class="copyright">Designed with passion for justice and commitment to change.</p>
-            </div>
+        <div style="max-width: 800px; margin: 0 auto;">
+            <p style="font-size: 16px; margin-bottom: 20px;">
+                <strong>Mumtaz Alam Bazai</strong><br>
+                Advocate High Court | Global Shaper (World Economic Forum) | Human Rights Lawyer
+            </p>
+            <p style="color: #888; margin-bottom: 30px;">
+                Iqra Law Associates, Quetta, Balochistan, Pakistan<br>
+                Bar Council License No. 14/2025
+            </p>
+            <p style="color: #666; font-size: 14px;">
+                © 2025 Mumtaz Alam Bazai. All Rights Reserved.<br>
+                Designed with passion for justice and commitment to change.
+            </p>
         </div>
     </footer>
 
-    <!-- JavaScript -->
     <script>
-        // ===========================================
+        // =========================
+        // LOADING SCREEN
+        // =========================
+        window.addEventListener('load', function() {
+            const loader = document.getElementById('loader');
+            setTimeout(() => {
+                loader.classList.add('hidden');
+                document.body.style.opacity = '1';
+                
+                // Initialize all animations after load
+                setTimeout(initAnimations, 300);
+            }, 1500);
+        });
+
+        // =========================
         // PARTICLE SYSTEM
-        // ===========================================
+        // =========================
         const particleContainer = document.getElementById('particles');
-        
         function createParticle() {
             const particle = document.createElement('div');
-            particle.style.position = 'absolute';
-            particle.style.borderRadius = '50%';
-            particle.style.background = 'radial-gradient(circle, rgba(255, 255, 255, 0.2), transparent)';
-            particle.style.animation = 'floatParticle 20s infinite linear';
+            particle.classList.add('particle');
             
-            const size = Math.random() * 6 + 2;
-            const posX = Math.random() * 100;
-            const duration = Math.random() * 20 + 15;
-            const delay = Math.random() * 5;
+            const size = Math.random() * 8 + 2 + 'px';
+            const left = Math.random() * 100 + '%';
+            const duration = Math.random() * 15 + 20 + 's';
+            const delay = Math.random() * 10 + 's';
             
-            particle.style.width = `${size}px`;
-            particle.style.height = `${size}px`;
-            particle.style.left = `${posX}%`;
-            particle.style.animationDuration = `${duration}s`;
-            particle.style.animationDelay = `${delay}s`;
-            particle.style.opacity = Math.random() * 0.5 + 0.1;
+            particle.style.width = size;
+            particle.style.height = size;
+            particle.style.left = left;
+            particle.style.animationDuration = duration;
+            particle.style.animationDelay = delay;
+            particle.style.opacity = Math.random() * 0.6 + 0.1;
             
             particleContainer.appendChild(particle);
             
-            // Remove particle after animation completes
             setTimeout(() => {
-                if (particle.parentNode === particleContainer) {
-                    particleContainer.removeChild(particle);
-                }
-            }, duration * 1000);
+                particle.remove();
+            }, parseFloat(duration) * 1000);
         }
-        
+
         // Initial particles
         for (let i = 0; i < 50; i++) {
-            createParticle();
+            setTimeout(() => createParticle(), Math.random() * 3000);
         }
-        
+
         // Continuous generation
-        setInterval(createParticle, 1000);
-        
-        // Add CSS animation for particles
-        const style = document.createElement('style');
-        style.textContent = `
-            @keyframes floatParticle {
-                0% {
-                    transform: translateY(100vh) translateX(0) rotate(0deg);
-                    opacity: 0;
-                }
-                10% {
-                    opacity: 0.5;
-                }
-                90% {
-                    opacity: 0.5;
-                }
-                100% {
-                    transform: translateY(-100px) translateX(100px) rotate(360deg);
-                    opacity: 0;
-                }
+        setInterval(createParticle, 500);
+
+        // =========================
+        // HEADER SCROLL EFFECT
+        // =========================
+        const mainHeader = document.getElementById('mainHeader');
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 100) {
+                mainHeader.classList.add('scrolled');
+            } else {
+                mainHeader.classList.remove('scrolled');
             }
-        `;
-        document.head.appendChild(style);
+        });
+
+        // =========================
+        // NAVIGATION SCROLL EFFECTS
+        // =========================
+        const mainNav = document.getElementById('mainNav');
+        const navLinks = mainNav.querySelectorAll('a');
         
-        // ===========================================
-        // NAVIGATION SCROLL EFFECT
-        // ===========================================
-        const floatingNav = document.getElementById('floatingNav');
-        const navLinks = document.querySelectorAll('.floating-nav a');
-        const sections = document.querySelectorAll('section');
-        
-        window.addEventListener('scroll', () => {
-            // Update active nav link
+        function updateActiveNav() {
+            const sections = document.querySelectorAll('section');
             let current = '';
-            const scrollPos = window.scrollY + 150;
             
             sections.forEach(section => {
                 const sectionTop = section.offsetTop;
                 const sectionHeight = section.clientHeight;
                 
-                if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
+                if (window.scrollY >= (sectionTop - 300)) {
                     current = section.getAttribute('id');
                 }
             });
@@ -1875,11 +2401,13 @@
                     link.classList.add('active');
                 }
             });
-        });
+        }
         
-        // ===========================================
-        // SMOOTH SCROLLING
-        // ===========================================
+        window.addEventListener('scroll', updateActiveNav);
+
+        // =========================
+        // SMOOTH SCROLL FOR NAVIGATION
+        // =========================
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
@@ -1896,122 +2424,266 @@
                 }
             });
         });
+
+        // =========================
+        // MOBILE NAVIGATION TOGGLE
+        // =========================
+        const mobileNavToggle = document.getElementById('mobileNavToggle');
+        const mobileNavMenu = document.getElementById('mobileNavMenu');
         
-        // ===========================================
-        // CONTACT FORM SUBMISSION
-        // ===========================================
-        const contactForm = document.getElementById('contactForm');
-        if (contactForm) {
-            contactForm.addEventListener('submit', function(e) {
-                e.preventDefault();
-                
-                // Get form data
-                const formData = new FormData(this);
-                const submitBtn = this.querySelector('button[type="submit"]');
-                const originalText = submitBtn.innerHTML;
-                
-                // Show loading state
-                submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
-                submitBtn.disabled = true;
-                
-                // Simulate form submission
-                setTimeout(() => {
-                    // Reset form
-                    this.reset();
-                    
-                    // Show success message
-                    submitBtn.innerHTML = '<i class="fas fa-check"></i> Message Sent!';
-                    submitBtn.style.background = 'var(--gradient-accent)';
-                    
-                    // Revert button after 3 seconds
-                    setTimeout(() => {
-                        submitBtn.innerHTML = originalText;
-                        submitBtn.disabled = false;
-                        submitBtn.style.background = 'var(--gradient-primary)';
-                    }, 3000);
-                }, 1500);
+        mobileNavToggle.addEventListener('click', function() {
+            mobileNavMenu.classList.toggle('active');
+            this.innerHTML = mobileNavMenu.classList.contains('active') ? 
+                '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            if (!mobileNavToggle.contains(event.target) && !mobileNavMenu.contains(event.target)) {
+                mobileNavMenu.classList.remove('active');
+                mobileNavToggle.innerHTML = '<i class="fas fa-bars"></i>';
+            }
+        });
+
+        // =========================
+        // SCROLL REVEAL ANIMATIONS
+        // =========================
+        function initAnimations() {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        
+                        // Section entrance
+                        if (entry.target.classList.contains('section')) {
+                            entry.target.classList.add('visible');
+                        }
+                        
+                        // Staggered animations
+                        if (entry.target.classList.contains('animate-on-scroll')) {
+                            const delay = entry.target.dataset.delay || '0';
+                            entry.target.style.transitionDelay = `${delay}s`;
+                        }
+                    }
+                });
+            }, observerOptions);
+
+            // Observe all animated elements
+            document.querySelectorAll('.animate-on-scroll').forEach((el, index) => {
+                el.dataset.delay = (index * 0.1).toFixed(1);
+                observer.observe(el);
+            });
+
+            // Observe sections
+            document.querySelectorAll('section').forEach((section) => {
+                observer.observe(section);
+            });
+
+            // Gallery items stagger effect
+            document.querySelectorAll('.gallery-item').forEach((item, index) => {
+                item.style.animationDelay = (index * 0.15) + 's';
             });
         }
+
+        // =========================
+        // OFFICIAL CONTACT FORM
+        // =========================
+        const contactForm = document.getElementById('officialContactForm');
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+            
+            // Here you would typically send the form data to a server
+            // For now, we'll show a success message
+            const submitBtn = contactForm.querySelector('.submit-btn');
+            const originalText = submitBtn.innerHTML;
+            
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+            submitBtn.disabled = true;
+            
+            setTimeout(() => {
+                alert(`Thank you, ${name}! Your message has been sent successfully. I will get back to you soon.`);
+                contactForm.reset();
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+            }, 2000);
+        });
+
+        // =========================
+        // 3D PARALLAX EFFECT ON HERO
+        // =========================
+        const heroSection = document.getElementById('hero');
+        const circlePortrait = document.querySelector('.circle-portrait');
+        const portraitBadges = document.querySelectorAll('.portrait-badge');
         
-        // ===========================================
-        // IMAGE LAZY LOADING
-        // ===========================================
-        const images = document.querySelectorAll('img');
-        const imageObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const img = entry.target;
-                    img.style.opacity = '1';
-                    img.style.transform = 'scale(1)';
-                    imageObserver.unobserve(img);
-                }
+        heroSection.addEventListener('mousemove', (e) => {
+            const { clientX, clientY } = e;
+            const { innerWidth, innerHeight } = window;
+
+            // Calculate mouse position percentages
+            const xPercent = (clientX / innerWidth - 0.5) * 2;
+            const yPercent = (clientY / innerHeight - 0.5) * 2;
+
+            // 3D transform for circle portrait
+            circlePortrait.style.transform = `
+                rotateY(${xPercent * 10}deg)
+                rotateX(${-yPercent * 10}deg)
+                translateY(${yPercent * 20}px)
+            `;
+
+            // Parallax effect for badges
+            portraitBadges.forEach((badge, index) => {
+                const delay = index * 0.1;
+                badge.style.transform = `
+                    translateX(${xPercent * 20}px)
+                    translateY(${yPercent * 20}px)
+                `;
+            });
+
+            // Social icons effect
+            const socialIcons = document.querySelectorAll('.hs');
+            socialIcons.forEach((icon, index) => {
+                const delay = index * 0.02;
+                icon.style.transform = `
+                    translateX(${xPercent * 10}px)
+                    translateY(${yPercent * 10}px)
+                    rotateY(${xPercent * 5}deg)
+                `;
             });
         });
-        
-        images.forEach(img => {
-            img.style.opacity = '0';
-            img.style.transform = 'scale(0.95)';
-            img.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
-            imageObserver.observe(img);
-        });
-        
-        // ===========================================
-        // PORTRAIT HOVER EFFECT
-        // ===========================================
-        const portraitCircle = document.querySelector('.portrait-circle');
-        if (portraitCircle) {
-            portraitCircle.addEventListener('mouseenter', () => {
-                portraitCircle.style.transform = 'scale(1.05) rotate(5deg)';
-                portraitCircle.style.boxShadow = '0 40px 80px rgba(138, 43, 226, 0.6), 0 0 60px rgba(138, 43, 226, 0.5)';
+
+        // Reset on mouse leave
+        heroSection.addEventListener('mouseleave', () => {
+            circlePortrait.style.transform = 'rotateY(0deg) rotateX(0deg) translateY(0)';
+            
+            portraitBadges.forEach(badge => {
+                badge.style.transform = 'translate(0, 0)';
             });
             
-            portraitCircle.addEventListener('mouseleave', () => {
-                portraitCircle.style.transform = '';
-                portraitCircle.style.boxShadow = '0 30px 60px rgba(0, 0, 0, 0.5), 0 0 40px rgba(138, 43, 226, 0.4)';
+            document.querySelectorAll('.hs').forEach(icon => {
+                icon.style.transform = 'translate(0, 0) rotateY(0deg)';
             });
-        }
-        
-        // ===========================================
-        // MOBILE MENU TOGGLE
-        // ===========================================
-        function handleMobileView() {
-            if (window.innerWidth <= 768) {
-                // Adjust floating nav for mobile
-                floatingNav.style.padding = '12px 20px';
-                floatingNav.style.gap = '15px';
-                
-                // Adjust social grid for mobile
-                const socialGrid = document.querySelector('.social-grid');
-                if (socialGrid) {
-                    socialGrid.style.gridTemplateColumns = 'repeat(3, 1fr)';
-                }
-            }
-        }
-        
-        // Initial check
-        handleMobileView();
-        
-        // On resize
-        window.addEventListener('resize', handleMobileView);
-        
-        // ===========================================
-        // THEME TOGGLE (Optional - for future enhancement)
-        // ===========================================
-        const themeToggle = document.createElement('button');
-        themeToggle.className = 'btn btn-primary';
-        themeToggle.innerHTML = '<i class="fas fa-palette"></i>';
-        themeToggle.style.position = 'fixed';
-        themeToggle.style.bottom = '100px';
-        themeToggle.style.right = '30px';
-        themeToggle.style.zIndex = '999';
-        themeToggle.title = 'Change Theme';
-        
-        themeToggle.addEventListener('click', () => {
-            // This is where you can add theme switching functionality
-            alert('Theme switching feature coming soon!');
         });
-        
-        document.body.appendChild(themeToggle);
+
+        // =========================
+        // IMAGE LOADING EFFECT
+        // =========================
+        const images = document.querySelectorAll('img');
+        images.forEach(img => {
+            img.addEventListener('load', function() {
+                this.style.opacity = '1';
+                this.style.transform = 'scale(1)';
+            });
+
+            // Initial state
+            img.style.opacity = '0';
+            img.style.transform = 'scale(0.9)';
+            img.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+        });
+
+        // =========================
+        // THEME RANDOMIZER (KEEPING COLORS)
+        // =========================
+        function randomizeTheme() {
+            const themes = [
+                { primary: '#6a11cb', secondary: '#2575fc', accent: '#ff007a' },
+                { primary: '#ff007a', secondary: '#ff8c00', accent: '#6a11cb' },
+                { primary: '#00c6ff', secondary: '#0072ff', accent: '#ff007a' },
+                { primary: '#2575fc', secondary: '#6a11cb', accent: '#ff8c00' }
+            ];
+            
+            const randomTheme = themes[Math.floor(Math.random() * themes.length)];
+            const root = document.documentElement;
+            
+            // Update CSS variables
+            root.style.setProperty('--gradient-primary', `linear-gradient(135deg, ${randomTheme.primary} 0%, ${randomTheme.secondary} 100%)`);
+            root.style.setProperty('--gradient-secondary', `linear-gradient(135deg, ${randomTheme.accent} 0%, #ff8c00 100%)`);
+            
+            // Update orb colors
+            const orbs = document.querySelectorAll('.orb');
+            orbs[0].style.background = randomTheme.primary;
+            orbs[1].style.background = randomTheme.secondary;
+            orbs[2].style.background = randomTheme.accent;
+            
+            // Show notification
+            const notification = document.createElement('div');
+            notification.style.position = 'fixed';
+            notification.style.top = '100px';
+            notification.style.right = '30px';
+            notification.style.background = 'rgba(255, 255, 255, 0.1)';
+            notification.style.backdropFilter = 'blur(20px)';
+            notification.style.color = 'white';
+            notification.style.padding = '15px 25px';
+            notification.style.borderRadius = '15px';
+            notification.style.zIndex = '9999';
+            notification.innerHTML = '<i class="fas fa-palette"></i> Theme Updated';
+            document.body.appendChild(notification);
+            
+            setTimeout(() => {
+                notification.remove();
+            }, 2000);
+        }
+
+        // =========================
+        // PERFORMANCE OPTIMIZATION
+        // =========================
+        let ticking = false;
+        window.addEventListener('scroll', () => {
+            if (!ticking) {
+                window.requestAnimationFrame(() => {
+                    updateActiveNav();
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        });
+
+        // =========================
+        // INITIAL LOAD ANIMATIONS
+        // =========================
+        window.addEventListener('load', () => {
+            // Animate hero elements sequentially
+            const heroElements = document.querySelectorAll('.hero-text > *');
+            heroElements.forEach((el, index) => {
+                el.style.animationDelay = `${index * 0.2}s`;
+                el.classList.add('animate-on-scroll');
+            });
+        });
+
+        // =========================
+        // PRINT FUNCTIONALITY
+        // =========================
+        const printBtn = document.createElement('button');
+        printBtn.innerHTML = '<i class="fas fa-print"></i>';
+        printBtn.style.position = 'fixed';
+        printBtn.style.bottom = '30px';
+        printBtn.style.left = '30px';
+        printBtn.style.zIndex = '1000';
+        printBtn.style.width = '50px';
+        printBtn.style.height = '50px';
+        printBtn.style.borderRadius = '50%';
+        printBtn.style.background = 'var(--gradient-primary)';
+        printBtn.style.color = 'white';
+        printBtn.style.border = 'none';
+        printBtn.style.cursor = 'pointer';
+        printBtn.style.boxShadow = '0 0 20px rgba(106, 17, 203, 0.5)';
+        printBtn.title = 'Print Page';
+        printBtn.addEventListener('click', () => window.print());
+        document.body.appendChild(printBtn);
+
+        console.log('%c MUMTAZ ALAM BAZAI PORTFOLIO %c v2.0.0 ', 'background: #6a11cb; color: #fff; padding: 5px 0;', 'background: #2575fc; color: #fff; padding: 5px 0;');
+        console.log('%c Website loaded successfully! ', 'background: #00c6ff; color: #000; padding: 5px;');
     </script>
 </body>
 </html>
