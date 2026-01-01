@@ -1735,7 +1735,6 @@
                         <p>Daily commitment to justice and rule of law</p>
                     </div>
                 </div>
-                
                 <div class="gallery-item">
                     <img src="life5.jpg.jpeg" alt="Community" class="gallery-img">
                     <div class="gallery-overlay">
@@ -1743,6 +1742,7 @@
                         <p>Working directly with local communities</p>
                     </div>
                 </div>
+
                 
                 <div class="gallery-item">
                     <img src="life6.jpg.jpeg" alt="International" class="gallery-img">
@@ -2030,10 +2030,10 @@ if (contactForm) {
         submitBtn.disabled = true;
         
         try {
-            // Send via EmailJS
+            // Send via EmailJS - YOU MUST REPLACE THESE IDs!
             await emailjs.sendForm(
                 'service_qu9d2qd',    // Replace with your EmailJS service ID
-                'template-dkjk3gy',   // Replace with your EmailJS template ID
+                'template_dkjk3gy',   // Replace with your EmailJS template ID
                 this
             );
             
