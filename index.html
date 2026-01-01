@@ -1,300 +1,245 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mumtaz Alam Bazai | Advocate & Human Rights Lawyer</title>
+<title>Mumtaz Alam Bazai | The Legal Visionary</title> <style> /* --- 1. CORE VARIABLES & RESET --- */ :root { --glass-surface: rgba(255, 255, 255, 0.05); --glass-border: rgba(255, 255, 255, 0.2); --glass-highlight: rgba(255, 255, 255, 0.5); --text-main: #ffffff; --text-muted: rgba(255, 255, 255, 0.7); --primary-glow: #6a11cb; --secondary-glow: #2575fc; --accent-glow: #00c6ff; --font-heading: 'Playfair Display', serif; --font-body: 'Inter', sans-serif; --easing: cubic-bezier(0.23, 1, 0.32, 1); } { margin: 0; padding: 0; box-sizing: border-box; outline: none; } html { scroll-behavior: smooth; overflow-x: hidden; } body { background: #000; color: var(--text-main); font-family: var(--font-body); overflow-x: hidden; perspective: 2000px; /* Deep 3D Space */ } /* --- 2. DYNAMIC BACKGROUND ENGINE --- */ #universe-bg { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -2; background: linear-gradient(135deg, #0f0c29, #302b63, #24243e); transition: background 1s ease; } /* The "Impossible" Aurora Overlay */ #aurora { position: fixed; top: -50%; left: -50%; width: 200%; height: 200%; background: radial-gradient(circle at 50% 50%, rgba(106, 17, 203, 0.4), rgba(37, 117, 252, 0.2), transparent 60%); filter: blur(80px); z-index: -1; animation: rotateAurora 20s linear infinite; pointer-events: none; } @keyframes rotateAurora { 0% { transform: rotate(0deg) scale(1); } 50% { transform: rotate(180deg) scale(1.2); } 100% { transform: rotate(360deg) scale(1); } } /* --- 3. FLOATING BUBBLES --- */ .bubble-container { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 0; overflow: hidden; } .glass-bubble { position: absolute; border-radius: 50%; background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.1), rgba(255,255,255,0.01)); box-shadow: inset 0 0 20px rgba(255,255,255,0.1), 0 0 15px rgba(255,255,255,0.05); backdrop-filter: blur(3px); border: 1px solid rgba(255,255,255,0.15); animation: floatUp linear infinite; } @keyframes floatUp { 0% { transform: translateY(120vh) rotate(0deg); opacity: 0; } 20% { opacity: 1; } 80% { opacity: 1; } 100% { transform: translateY(-20vh) rotate(360deg); opacity: 0; } } /* --- 4. NAVIGATION (Glass Dock) --- */ .nav-dock { position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%) translateZ(50px); display: flex; gap: 15px; padding: 15px 30px; background: rgba(0, 0, 0, 0.4); backdrop-filter: blur(25px); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 50px; z-index: 1000; box-shadow: 0 20px 50px rgba(0,0,0,0.5); transition: all 0.4s var(--easing); } .nav-dock a { color: #fff; text-decoration: none; font-size: 20px; width: 45px; height: 45px; display: flex; align-items: center; justify-content: center; border-radius: 50%; transition: 0.3s; position: relative; } .nav-dock a:hover { background: var(--accent-glow); transform: translateY(-10px) scale(1.2); box-shadow: 0 0 20px var(--accent-glow); } .nav-dock a .tooltip { position: absolute; bottom: 60px; background: rgba(0,0,0,0.8); padding: 5px 10px; border-radius: 8px; font-size: 12px; opacity: 0; pointer-events: none; transition: 0.3s; white-space: nowrap; } .nav-dock a:hover .tooltip { opacity: 1; bottom: 70px; } /* --- 5. 3D CARD SYSTEM (Tilt.js Logic) --- */ .card-3d { background: var(--glass-surface); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid var(--glass-border); border-radius: 30px; padding: 40px; transform-style: preserve-3d; transform: perspective(1000px); transition: transform 0.1s ease-out; /* Smooth JS tilt */ box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5); position: relative; overflow: hidden; margin-bottom: 40px; } /* Internal light sheen */ .card-3d::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(125deg, rgba(255,255,255,0.15) 0%, transparent 40%); z-index: 1; pointer-events: none; } .card-content { transform: translateZ(30px); /* Pops text out */ position: relative; z-index: 2; } h2 { font-family: var(--font-heading); font-size: 3rem; margin-bottom: 30px; background: linear-gradient(to right, #fff, #a1c4fd); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-shadow: 0 10px 30px rgba(0, 198, 255, 0.3); } h3 { font-family: var(--font-heading); font-size: 1.5rem; color: var(--accent-glow); margin-bottom: 10px; } p, li { font-size: 1.1rem; line-height: 1.8; color: var(--text-muted); margin-bottom: 15px; } /* --- 6. SECTIONS SPECIFIC --- */ /* Hero */ .hero-section { min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 0 20px; position: relative; } .hero-content { display: flex; flex-direction: column; align-items: center; text-align: center; max-width: 1200px; } .hero-avatar-wrapper { width: 250px; height: 250px; margin-bottom: 30px; position: relative; transform-style: preserve-3d; animation: floatingAvatar 6s ease-in-out infinite; } .hero-avatar-wrapper img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; border: 4px solid rgba(255,255,255,0.8); box-shadow: 0 0 50px var(--primary-glow); } .hero-h1 { font-family: var(--font-heading); font-size: 5rem; font-weight: 700; line-height: 1; margin-bottom: 20px; background: linear-gradient(135deg, #ffffff 0%, #b3e5fc 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; filter: drop-shadow(0 0 15px rgba(255,255,255,0.3)); transform: translateZ(50px); } .hero-role { font-size: 1.5rem; color: var(--accent-glow); text-transform: uppercase; letter-spacing: 3px; margin-bottom: 40px; transform: translateZ(40px); } /* Socials in Hero */ .hero-socials { display: flex; gap: 15px; flex-wrap: wrap; justify-content: center; transform: translateZ(60px); } .social-orb { width: 50px; height: 50px; border-radius: 50%; background: rgba(255,255,255,0.05); display: flex; align-items: center; justify-content: center; border: 1px solid rgba(255,255,255,0.2); color: #fff; font-size: 1.2rem; text-decoration: none; transition: 0.4s var(--easing); backdrop-filter: blur(10px); } .social-orb:hover { background: #fff; color: #000; transform: rotateY(360deg) scale(1.1); box-shadow: 0 0 30px var(--accent-glow); } @keyframes floatingAvatar { 0%, 100% { transform: translateY(0) rotateX(0); } 50% { transform: translateY(-20px) rotateX(5deg); } } /* Content Container */ .container { max-width: 1200px; margin: 0 auto; padding: 100px 20px; } /* Timeline / Lists */ ul.tech-list { list-style: none; } ul.tech-list li { padding-left: 20px; border-left: 3px solid var(--accent-glow); margin-bottom: 15px; } /* Gallery Grid 3D */ .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; } .gallery-item { height: 300px; border-radius: 20px; overflow: hidden; position: relative; cursor: pointer; box-shadow: 0 10px 30px rgba(0,0,0,0.5); transition: 0.5s; } .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: 0.7s; } .gallery-item:hover { transform: scale(1.05) translateY(-10px); z-index: 10; } .gallery-item:hover img { transform: scale(1.1); } /* --- 7. HUD SETTINGS --- */ .hud-panel { position: fixed; top: 20px; right: 20px; z-index: 2000; display: flex; gap: 10px; } .hud-btn { background: rgba(0,0,0,0.6); color: var(--accent-glow); border: 1px solid var(--accent-glow); padding: 10px 20px; border-radius: 30px; cursor: pointer; font-family: var(--font-body); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; backdrop-filter: blur(10px); transition: 0.3s; } .hud-btn:hover { background: var(--accent-glow); color: #000; box-shadow: 0 0 20px var(--accent-glow); } /* Mobile Responsiveness */ @media (max-width: 768px) { .hero-h1 { font-size: 3rem; } .nav-dock { padding: 10px 20px; gap: 10px; bottom: 20px; width: 90%; } .nav-dock a { width: 35px; height: 35px; font-size: 16px; } } /* Footer */ footer { text-align: center; padding: 50px; margin-top: 100px; background: linear-gradient(to top, #000, transparent); color: rgba(255,255,255,0.5); } </style> 
+<div id="universe-bg"></div>
+<div id="aurora"></div>
+<div class="bubble-container" id="bubbles"></div>
 
-<!-- GOOGLE FONTS -->
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-<!-- FONT AWESOME -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-<!-- AOS ANIMATION -->
-<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
-
-<style>
-
-/* ================= ROOT ================= */
-:root{
---glass:rgba(255,255,255,0.18);
---blur:blur(25px);
---shadow:0 40px 100px rgba(0,0,0,.45);
---text:#fff;
-}
-
-*{margin:0;padding:0;box-sizing:border-box}
-
-body{
-font-family:'Inter',sans-serif;
-background:#04070f;
-color:#fff;
-overflow-x:hidden;
-}
-
-/* ================= FLOATING BUBBLES ================= */
-.bubbles{
-position:fixed;
-inset:0;
-z-index:-1;
-overflow:hidden;
-}
-
-.bubbles span{
-position:absolute;
-bottom:-200px;
-width:60px;
-height:60px;
-border-radius:50%;
-background:radial-gradient(circle,rgba(255,255,255,.6),rgba(255,255,255,.05));
-animation:float linear infinite;
-}
-
-@keyframes float{
-to{
-transform:translateY(-120vh) rotate(360deg);
-}
-}
-
-/* ================= HERO ================= */
-.hero{
-height:100vh;
-display:flex;
-align-items:center;
-justify-content:center;
-background:
-linear-gradient(135deg,rgba(0,0,0,.6),rgba(0,0,0,.9)),
-url('hero-bg.jpg.jpeg') center/cover fixed;
-}
-
-.hero-box{
-position:relative;
-max-width:1100px;
-padding:90px;
-border-radius:50px;
-background:var(--glass);
-backdrop-filter:var(--);
-box-shadow:var(--shadow);
-text-align:left;
-}
-
-.hero img{
-position:absolute;
-top:-90px;
-right:-90px;
-width:260px;
-height:260px;
-border-radius:50%;
-object-fit:cover;
-border:8px solid rgba(255,255,255,.8);
-transform:perspective(900px) rotateY(-18deg);
-box-shadow:0 40px 100px rgba(0,0,0,.8);
-}
-
-.hero h1{
-font-family:'Playfair Display',serif;
-font-size:64px;
-background:linear-gradient(100deg,#ffb200,#00f2fe,#9b5cff);
--webkit-background-clip:text;
--webkit-text-fill-color:transparent;
-}
-
-.hero p{
-margin-top:25px;
-font-size:20px;
-line-height:1.8;
-}
-
-/* ================= SOCIAL ICONS ================= */
-.social{
-margin-top:40px;
-display:flex;
-flex-wrap:wrap;
-gap:20px;
-}
-
-.social a{
-width:60px;
-height:60px;
-border-radius:50%;
-display:flex;
-align-items:center;
-justify-content:center;
-font-size:26px;
-color:#fff;
-background:linear-gradient(135deg,#ff512f,#00c6ff);
-transform-style:preserve-3d;
-transition:.6s;
-box-shadow:0 20px 60px rgba(0,198,255,.7);
-}
-
-.social a:hover{
-transform:translateY(-10px) rotateX(25deg) rotateY(25deg);
-}
-
-/* ================= SECTIONS ================= */
-section{
-padding:130px 25px;
-max-width:1300px;
-margin:auto;
-}
-
-.section-box{
-background:var(--glass);
-backdrop-filter:var(--blur);
-border-radius:45px;
-padding:70px;
-box-shadow:var(--shadow);
-}
-
-h2{
-font-family:'Playfair Display',serif;
-font-size:48px;
-margin-bottom:35px;
-background:linear-gradient(135deg,#ff00cc,#00fff0);
--webkit-background-clip:text;
--webkit-text-fill-color:transparent;
-}
-
-/* ================= STORY SECTIONS ================= */
-.story{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-gap:50px;
-}
-
-.story-card{
-padding:45px;
-border-radius:40px;
-background:linear-gradient(135deg,rgba(255,255,255,.3),rgba(255,255,255,.05));
-backdrop-filter:blur(18px);
-box-shadow:0 25px 70px rgba(0,0,0,.4);
-}
-
-/* ================= GALLERY ================= */
-.gallery{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:35px;
-}
-
-.gallery img{
-width:100%;
-height:380px;
-object-fit:cover;
-border-radius:40px;
-transform:perspective(800px) rotateX(8deg);
-transition:.7s;
-box-shadow:0 40px 90px rgba(0,0,0,.8);
-}
-
-.gallery img:hover{
-transform:scale(1.1) rotateZ(2deg);
-}
-
-/* ================= FOOTER ================= */
-footer{
-padding:60px;
-text-align:center;
-background:linear-gradient(135deg,#000,#020617);
-}
-
-@media(max-width:768px){
-.hero img{
-position:static;
-margin-bottom:40px;
-transform:none;
-}
-.hero-box{text-align:center;padding:60px}
-}
-
-</style>
-</head>
-
-<body>
-
-<!-- FLOATING BUBBLES -->
-<div class="bubbles">
-<script>
-for(let i=0;i<45;i++){
-document.write(`<span style="left:${Math.random()*100}%;
-width:${20+Math.random()*80}px;
-height:${20+Math.random()*80}px;
-animation-duration:${15+Math.random()*30}s;"></span>`);
-}
-</script>
+<div class="hud-panel">
+    <button class="hud-btn" onclick="toggleImpossibleMode()"> Impossible Mode</button>
+    <button class="hud-btn" onclick="randomizeTheme()"> Remix Colors</button>
 </div>
 
-<!-- HERO -->
-<section class="hero">
-<div class="hero-box" data-aos="zoom-in">
-<img src="portrait.jpg.jpeg">
-<h1>Mumtaz Alam Bazai</h1>
-<p>
-Advocate · Human Rights Lawyer · Youth Leader · Social Activist<br>
-Curator, Global Shapers Community – Quetta Hub (World Economic Forum)
-</p>
+<nav class="nav-dock">
+    <a href="#about"><i class="fas fa-user"></i><span class="tooltip">About</span></a>
+    <a href="#education"><i class="fas fa-graduation-cap"></i><span class="tooltip">Education</span></a>
+    <a href="#career"><i class="fas fa-gavel"></i><span class="tooltip">Legal Career</span></a>
+    <a href="#leadership"><i class="fas fa-globe"></i><span class="tooltip">Global Leadership</span></a>
+    <a href="#skills"><i class="fas fa-brain"></i><span class="tooltip">Skills</span></a>
+    <a href="#gallery"><i class="fas fa-images"></i><span class="tooltip">Gallery</span></a>
+    <a href="#contact"><i class="fas fa-envelope"></i><span class="tooltip">Contact</span></a>
+</nav>
 
-<div class="social">
-<a href="https://linktr.ee/mumtazalam"><i class="fas fa-link"></i></a>
-<a href="https://wa.me/923332568792"><i class="fab fa-whatsapp"></i></a>
-<a href="https://www.linkedin.com/in/adv-mumtaz-alam-bazai-163a9a324"><i class="fab fa-linkedin"></i></a>
-<a href="https://www.instagram.com/mumtaz_alam"><i class="fab fa-instagram"></i></a>
-<a href="https://www.facebook.com/mumtaz.alam.18488"><i class="fab fa-facebook"></i></a>
-<a href="mailto:advmumtaz222@gmail.com"><i class="fas fa-envelope"></i></a>
-<a href="https://www.tiktok.com/@mumtaz_alam"><i class="fab fa-tiktok"></i></a>
-<a href="https://x.com/mumtazalam333"><i class="fab fa-x-twitter"></i></a>
-</div>
-</div>
+<section class="hero-section">
+    <div class="hero-content">
+        <div class="hero-avatar-wrapper js-tilt" data-tilt>
+            <img src="portrait.jpg.jpeg" alt="Mumtaz Alam Bazai">
+        </div>
+        <h1 class="hero-h1">Mumtaz Alam Bazai</h1>
+        <p class="hero-role">Advocate | Human Rights Lawyer | WEF Global Shaper</p>
+        
+        <div class="hero-socials">
+            <a href="https://wa.me/923332568792" class="social-orb"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://www.linkedin.com/in/adv-mumtaz-alam-bazai-163a9a324" class="social-orb"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.instagram.com/mumtaz_alam" class="social-orb"><i class="fab fa-instagram"></i></a>
+            <a href="mailto:advmumtaz222@gmail.com" class="social-orb"><i class="fas fa-envelope"></i></a>
+            <a href="https://x.com/mumtazalam333" class="social-orb"><i class="fab fa-x-twitter"></i></a>
+            <a href="https://my.weforum.org/network/people/001TG000009vSDhYAM/adv-mumtaz-alam" class="social-orb"><i class="fas fa-globe"></i></a>
+            <a href="https://linktr.ee/mumtazalam" class="social-orb"><i class="fas fa-link"></i></a>
+        </div>
+    </div>
 </section>
 
-<!-- JOURNEY -->
-<section>
-<div class="section-box" data-aos="fade-up">
-<h2>Journey & Early Life</h2>
-<p>
-Born on 11 August 2000 in Kili Zdoon, District Pishin, Balochistan,
-Mumtaz Alam Bazai rose from rural roots to elite global leadership.
-Scholarship education, discipline, multilingual fluency and a deep
-sense of justice shaped his legal and civic identity.
-</p>
-</div>
-</section>
+<div class="container">
 
-<!-- IMPACT -->
-<section>
-<div class="section-box" data-aos="fade-right">
-<h2>Leadership & Social Impact</h2>
-<div class="story">
-<div class="story-card">Curator – Global Shapers Community Quetta Hub</div>
-<div class="story-card">Executive Member – Human Rights Council of Balochistan</div>
-<div class="story-card">Cabinet Member – General Assembly Balochistan</div>
-</div>
-</div>
-</section>
+    <section id="about" class="card-3d js-tilt" data-tilt data-tilt-glare data-tilt-max-glare="0.3">
+        <div class="card-content">
+            <h2>The Visionary</h2>
+            <p><strong>Mumtaz Alam Bazai</strong> is a beacon of justice in Balochistan. A High Court Advocate, Human Rights Defender, and Youth Leader committed to the Rule of Law.</p>
+            <div style="margin-top: 20px; padding: 20px; background: rgba(0,0,0,0.2); border-radius: 15px;">
+                <h3><i class="fas fa-seedling"></i> Early Life & Roots</h3>
+                <p>Born on <strong>11 August 2000</strong> in Kili Zdoon, Pishin. Son of Dr. Ameer Muhammad (Neurosurgeon). The eldest of nine, Mumtaz embodies the resilience of the Pashtun Kakar heritage. Fluent in Pashto, Urdu, English, and Turkish, his journey from village schooling to <strong>Pak-Turk Maarif International</strong> set the stage for global impact.</p>
+            </div>
+        </div>
+    </section>
 
-<!-- GALLERY -->
-<section>
-<div class="section-box" data-aos="zoom-in">
-<h2>Visual Journey</h2>
-<div class="gallery">
-<img src="life1.jpg.jpeg">
-<img src="life2.jpg.jpeg">
-<img src="life3.jpg.jpeg">
-<img src="life4.jpg.jpeg">
-<img src="life5.jpg.jpeg">
-<img src="life6.jpg.jpeg">
+    <section id="education" class="card-3d js-tilt" data-tilt>
+        <div class="card-content">
+            <h2>Academic Excellence</h2>
+            <ul class="tech-list">
+                <li><strong>LLB (Hons.)</strong> — University Law College Quetta (2024)</li>
+                <li><strong>MA Political Science</strong> — University of Balochistan (2024)</li>
+                <li><strong>BA (Arts)</strong> — University of Balochistan (2022)</li>
+                <li><strong>Intermediate</strong> — Pak-Turk Maarif International (2019)</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="career" class="card-3d js-tilt" data-tilt>
+        <div class="card-content">
+            <h2>Legal Dominion</h2>
+            <p>Formally entering the legal arena in 2025 (Bar Council Reg. No. 14/2025), Mumtaz trained under the legendary <strong>Advocate Abdul Zahir Kakar</strong> at Iqra Law Associates.</p>
+            <p>He actively undertakes <strong>Pro Bono Litigation</strong> for the marginalized, fighting in Civil, Criminal, and Constitutional courts to uphold human dignity.</p>
+        </div>
+    </section>
+
+    <section id="leadership" class="card-3d js-tilt" data-tilt>
+        <div class="card-content">
+            <h2>Global Leadership & Impact</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
+                <div>
+                    <h3><i class="fas fa-globe-europe"></i> World Economic Forum</h3>
+                    <p>Curator of the Global Shapers Quetta Hub. Represented Pakistan at the <strong>Annual Summit 2025 in Geneva</strong>.</p>
+                </div>
+                <div>
+                    <h3><i class="fas fa-file-signature"></i> Policy Maker</h3>
+                    <p>Initiated Balochistan’s first <strong>Youth Policy Project</strong> and authored the Hub's Governance Charter.</p>
+                </div>
+                <div>
+                    <h3><i class="fas fa-hand-holding-heart"></i> Activist</h3>
+                    <p>Executive Member of Human Rights Council of Balochistan. District Co-Head of Blood Heroes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="thematic" class="card-3d js-tilt" data-tilt>
+        <div class="card-content">
+            <h2>Thematic Universes</h2>
+            <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+                <span class="hud-btn" style="cursor: default;"> Human Rights</span>
+                <span class="hud-btn" style="cursor: default;"> Rule of Law</span>
+                <span class="hud-btn" style="cursor: default;"> Climate & Energy</span>
+                <span class="hud-btn" style="cursor: default;"> Youth Education</span>
+                <span class="hud-btn" style="cursor: default;"> Gender Rights</span>
+                <span class="hud-btn" style="cursor: default;"> Electoral Fairness</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="publications" class="card-3d js-tilt" data-tilt>
+        <div class="card-content">
+            <h2>Intellectual Contributions</h2>
+            <p><i class="fas fa-pen-nib"></i> <strong>"Human Rights and Responsibilities"</strong> (Daily Intekhab, 2021)</p>
+            <p><i class="fas fa-scroll"></i> <strong>"Role of Election Commission of Pakistan in Free & Fair Elections"</strong> (Research Paper, 2024)</p>
+        </div>
+    </section>
+
+    <section id="gallery">
+        <h2 style="text-align: center;">Visual Journey</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item"><img src="life1.jpg.jpeg" alt="Journey 1"></div>
+            <div class="gallery-item"><img src="life2.jpg.jpeg" alt="Journey 2"></div>
+            <div class="gallery-item"><img src="life3.jpg.jpeg" alt="Journey 3"></div>
+            <div class="gallery-item"><img src="life4.jpg.jpeg" alt="Journey 4"></div>
+            <div class="gallery-item"><img src="life5.jpg.jpeg" alt="Journey 5"></div>
+            <div class="gallery-item"><img src="life6.jpg.jpeg" alt="Journey 6"></div>
+        </div>
+    </section>
+
+    <section id="mission" class="card-3d js-tilt" data-tilt style="margin-top: 50px; text-align: center; border-color: var(--accent-glow);">
+        <div class="card-content">
+            <h2>The Mission</h2>
+            <p style="font-size: 1.3rem; color: #fff;">To advance justice, safeguard human dignity, strengthen democratic institutions, and empower youth to lead Pakistan toward a just, inclusive, and sustainable future.</p>
+        </div>
+    </section>
+
+    <section id="contact" style="text-align: center; margin-top: 80px;">
+        <h2>Connect with the Advocate</h2>
+        <div class="hero-socials" style="margin-top: 30px;">
+            <a href="mailto:advmumtaz222@gmail.com" class="social-orb"><i class="fas fa-envelope"></i></a>
+            <a href="https://wa.me/923332568792" class="social-orb"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://linktr.ee/mumtazalam" class="social-orb"><i class="fas fa-link"></i></a>
+            <a href="https://www.tiktok.com/@mumtaz_alam" class="social-orb"><i class="fab fa-tiktok"></i></a>
+            <a href="https://www.snapchat.com/add/mumtazalam222" class="social-orb"><i class="fab fa-snapchat"></i></a>
+        </div>
+    </section>
+
 </div>
-</div>
-</section>
 
 <footer>
-<p>© 2025 Mumtaz Alam Bazai | Advocate & Human Rights Lawyer</p>
+    <p>© 2025 Mumtaz Alam Bazai | Advocate High Court</p>
 </footer>
 
-<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-<script>AOS.init({duration:1400,once:true});</script>
+<script>
+    // 1. BUBBLE GENERATOR
+    const bubbleContainer = document.getElementById('bubbles');
+    
+    function createBubble() {
+        const bubble = document.createElement('div');
+        bubble.classList.add('glass-bubble');
+        
+        const size = Math.random() * 100 + 20 + 'px';
+        bubble.style.width = size;
+        bubble.style.height = size;
+        
+        bubble.style.left = Math.random() * 100 + '%';
+        
+        const duration = Math.random() * 10 + 5 + 's';
+        bubble.style.animationDuration = duration;
+        
+        bubbleContainer.appendChild(bubble);
+        
+        setTimeout(() => {
+            bubble.remove();
+        }, 15000);
+    }
 
-</body>
-</html>
+    setInterval(createBubble, 500);
+
+    // 2. 3D TILT EFFECT (Vanilla JS Implementation of Tilt)
+    const cards = document.querySelectorAll('.js-tilt');
+    
+    cards.forEach(card => {
+        card.addEventListener('mousemove', (e) => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+            
+            const rotateX = ((y - centerY) / centerY) * -10; // Max rotation deg
+            const rotateY = ((x - centerX) / centerX) * 10;
+            
+            card.style.transform = perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02);
+        });
+        
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) scale3d(1, 1, 1)';
+        });
+    });
+
+    // 3. SCROLL COLOR CHANGER
+    window.addEventListener('scroll', () => {
+        const scrollPercent = window.scrollY / (document.body.offsetHeight - window.innerHeight);
+        const bg = document.getElementById('universe-bg');
+        
+        // Calculate hues based on scroll
+        if(scrollPercent < 0.2) {
+            bg.style.background = 'linear-gradient(135deg, #0f0c29, #302b63, #24243e)';
+        } else if (scrollPercent < 0.5) {
+            bg.style.background = 'linear-gradient(135deg, #200122, #6f0000)'; // Red/Dark for Legal/Power
+        } else if (scrollPercent < 0.8) {
+            bg.style.background = 'linear-gradient(135deg, #004e92, #000428)'; // Blue for WEF
+        } else {
+            bg.style.background = 'linear-gradient(135deg, #134E5E, #71B280)'; // Green for Growth/Nature
+        }
+    });
+
+    // 4. IMPOSSIBLE MODE TOGGLE
+    let isImpossible = false;
+    function toggleImpossibleMode() {
+        isImpossible = !isImpossible;
+        const aurora = document.getElementById('aurora');
+        if(isImpossible) {
+            aurora.style.filter = 'blur(20px) contrast(200%)';
+            aurora.style.background = 'radial-gradient(circle at 50% 50%, red, orange, yellow, green, blue, indigo, violet)';
+            aurora.style.animationDuration = '2s';
+            document.body.style.transform = "scale(0.98)";
+            alert(" IMPOSSIBLE MODE ACTIVATED: MAXIMUM GPU USAGE");
+        } else {
+            aurora.style.filter = 'blur(80px)';
+            aurora.style.background = 'radial-gradient(circle at 50% 50%, rgba(106, 17, 203, 0.4), rgba(37, 117, 252, 0.2), transparent 60%)';
+            aurora.style.animationDuration = '20s';
+            document.body.style.transform = "scale(1)";
+        }
+    }
+
+    function randomizeTheme() {
+         const r = Math.floor(Math.random() * 255);
+         const g = Math.floor(Math.random() * 255);
+         const b = Math.floor(Math.random() * 255);
+         document.documentElement.style.setProperty('--accent-glow', rgb(${r},${g},${b}));
+         document.documentElement.style.setProperty('--primary-glow', rgb(${255-r},${255-g},${255-b}));
+    }
+</script>
+
