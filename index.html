@@ -1999,125 +1999,42 @@
                 }
             });
         });
-
-
-// ===========================================
-// CONTACT FORM SUBMISSION
-// ===========================================
-
- // ===========================================
-// NOTIFICATION SYSTEM
-// ===========================================
-function showNotification(message, type = 'success') {
-    // Remove existing notification
-    const existingNotification = document.querySelector('.custom-notification');
-    if (existingNotification) {
-        existingNotification.remove();
-    }
-    
-    // Create notification element
-    const notification = document.createElement('div');
-    notification.className = `custom-notification ${type}`;
-    notification.innerHTML = `
-        <i class="fas ${type === 'success' ? 'fa-check-circle' : 'fa-exclamation-circle'}"></i>
-        <span>${message}</span>
-    `;
-    
-    // Style the notification
-    notification.style.cssText = `
-        position: fixed;
-        top: 100px;
-        right: 20px;
-        background: ${type === 'success' ? 'var(--gradient-accent)' : 'var(--gradient-secondary)'};
-        color: white;
-        padding: 15px 25px;
-        border-radius: 10px;
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        z-index: 9999;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-        animation: slideIn 0.3s ease-out;
-        max-width: 400px;
-        font-weight: 500;
-    `;
-    
-    // Add animation CSS
-    const style = document.createElement('style');
-    style.textContent = `
-        @keyframes slideIn {
-            from { transform: translateX(100%); opacity: 0; }
-            to { transform: translateX(0); opacity: 1; }
-        }
-        @keyframes slideOut {
-            from { transform: translateX(0); opacity: 1; }
-            to { transform: translateX(100%); opacity: 0; }
-        }
-    `;
-    document.head.appendChild(style);
-    
-    document.body.appendChild(notification);
-    
-    // Auto remove after 5 seconds
-    setTimeout(() => {
-        notification.style.animation = 'slideOut 0.3s ease-out forwards';
-        setTimeout(() => notification.remove(), 300);
-    }, 5000);
-}       
         
-const contactForm = document.getElementById('contactForm');
-if (contactForm) {
-    contactForm.addEventListener('submit', async function(e) {
-        e.preventDefault();
-        
-        const formData = new FormData(this);
-        const submitBtn = this.querySelector('button[type="submit"]');
-        const originalText = submitBtn.innerHTML;
-        
-        // Show loading state
-        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
-        submitBtn.disabled = true;
-        
-        try {
-            // Send form data to Formspree
-            const response = await fetch(this.action, {
-                method: 'POST',
-                body: formData,
-                headers: {
-                    'Accept': 'application/json'
-                }
+        // ===========================================
+        // CONTACT FORM SUBMISSION
+        // ===========================================
+        const contactForm = document.getElementById('contactForm');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Get form data
+                const formData = new FormData(this);
+                const submitBtn = this.querySelector('button[type="submit"]');
+                const originalText = submitBtn.innerHTML;
+                
+                // Show loading state
+                submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+                submitBtn.disabled = true;
+                
+                // Simulate form submission
+                setTimeout(() => {
+                    // Reset form
+                    this.reset();
+                    
+                    // Show success message
+                    submitBtn.innerHTML = '<i class="fas fa-check"></i> Message Sent!';
+                    submitBtn.style.background = 'var(--gradient-accent)';
+                    
+                    // Revert button after 3 seconds
+                    setTimeout(() => {
+                        submitBtn.innerHTML = originalText;
+                        submitBtn.disabled = false;
+                        submitBtn.style.background = 'var(--gradient-primary)';
+                    }, 3000);
+                }, 1500);
             });
-            
-            if (response.ok) {
-                // Reset form
-                this.reset();
-                
-                // Show success message
-                submitBtn.innerHTML = '<i class="fas fa-check"></i> Message Sent!';
-                submitBtn.style.background = 'var(--gradient-accent)';
-                
-                // Show notification
-                showNotification('Message sent successfully! I\'ll get back to you soon.', 'success');
-            } else {
-                throw new Error('Form submission failed');
-            }
-        } catch (error) {
-            // Show error message
-            submitBtn.innerHTML = '<i class="fas fa-exclamation-triangle"></i> Failed to Send';
-            submitBtn.style.background = 'var(--gradient-secondary)';
-            
-            // Show error notification
-            showNotification('Failed to send message. Please try again or contact me directly.', 'error');
-        } finally {
-            // Revert button after 3 seconds
-            setTimeout(() => {
-                submitBtn.innerHTML = originalText;
-                submitBtn.disabled = false;
-                submitBtn.style.background = 'var(--gradient-primary)';
-            }, 3000);
         }
-    });
-}
         
         // ===========================================
         // IMAGE LAZY LOADING
