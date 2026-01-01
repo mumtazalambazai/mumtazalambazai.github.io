@@ -2000,7 +2000,12 @@
             });
         });
 
-       // ===========================================
+
+// ===========================================
+// CONTACT FORM SUBMISSION
+// ===========================================
+
+ // ===========================================
 // NOTIFICATION SYSTEM
 // ===========================================
 function showNotification(message, type = 'success') {
@@ -2058,10 +2063,8 @@ function showNotification(message, type = 'success') {
         notification.style.animation = 'slideOut 0.3s ease-out forwards';
         setTimeout(() => notification.remove(), 300);
     }, 5000);
-} 
-// ===========================================
-// CONTACT FORM SUBMISSION
-// ===========================================
+}       
+        
 const contactForm = document.getElementById('contactForm');
 if (contactForm) {
     contactForm.addEventListener('submit', async function(e) {
