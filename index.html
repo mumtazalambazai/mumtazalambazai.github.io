@@ -18,6 +18,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400;1,700&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+        <!-- EmailJS Script -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init("WYdiq2D2SgOGTAGrK");
+        })();
+    </script>
     
     <style>
         /* ===========================================
@@ -1374,6 +1381,13 @@
             }
         }
     </style>
+    <!-- EmailJS -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script type="text/javascript">
+    (function() {
+        emailjs.init("WYdiq2D2SgOGTAGrK"); // Replace with your EmailJS public key
+    })();
+</script>
 </head>
 <body>
     <!-- DYNAMIC BACKGROUND -->
@@ -1753,7 +1767,7 @@
             
             <div class="contact-container">
                 <div class="contact-form">
-                    <form id="contactForm" action="https://formspree.io/f/xvojwpzp" method="POST">
+                   <form id="contactForm">
                         <div class="form-group">
                             <label class="form-label" for="name">Full Name</label>
                             <input type="text" class="form-control" id="name" name="name" required>
@@ -2000,41 +2014,53 @@
             });
         });
         
-        // ===========================================
-        // CONTACT FORM SUBMISSION
-        // ===========================================
-        const contactForm = document.getElementById('contactForm');
-        if (contactForm) {
-            contactForm.addEventListener('submit', function(e) {
-                e.preventDefault();
-                
-                // Get form data
-                const formData = new FormData(this);
-                const submitBtn = this.querySelector('button[type="submit"]');
-                const originalText = submitBtn.innerHTML;
-                
-                // Show loading state
-                submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
-                submitBtn.disabled = true;
-                
-                // Simulate form submission
-                setTimeout(() => {
-                    // Reset form
-                    this.reset();
-                    
-                    // Show success message
-                    submitBtn.innerHTML = '<i class="fas fa-check"></i> Message Sent!';
-                    submitBtn.style.background = 'var(--gradient-accent)';
-                    
-                    // Revert button after 3 seconds
-                    setTimeout(() => {
-                        submitBtn.innerHTML = originalText;
-                        submitBtn.disabled = false;
-                        submitBtn.style.background = 'var(--gradient-primary)';
-                    }, 3000);
-                }, 1500);
-            });
+// ===========================================
+// CONTACT FORM SUBMISSION (EmailJS)
+// ===========================================
+const contactForm = document.getElementById('contactForm');
+if (contactForm) {
+    contactForm.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        
+        const submitBtn = this.querySelector('button[type="submit"]');
+        const originalText = submitBtn.innerHTML;
+        
+        // Show loading state
+        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+        submitBtn.disabled = true;
+        
+        try {
+            // Send via EmailJS
+            await emailjs.sendForm(
+                'service_qu9d2qd',    // Replace with your EmailJS service ID
+                'template-dkjk3gy',   // Replace with your EmailJS template ID
+                this
+            );
+            
+            // Reset form
+            this.reset();
+            
+            // Show success message
+            submitBtn.innerHTML = '<i class="fas fa-check"></i> Message Sent!';
+            submitBtn.style.background = 'var(--gradient-accent)';
+            
+            alert('Message sent successfully! I will contact you soon.');
+            
+        } catch (error) {
+            console.error('Error:', error);
+            submitBtn.innerHTML = '<i class="fas fa-exclamation-triangle"></i> Failed to Send';
+            submitBtn.style.background = 'var(--gradient-secondary)';
+            
+            alert('Failed to send message. Please try again or contact me directly.');
+        } finally {
+            setTimeout(() => {
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+                submitBtn.style.background = 'var(--gradient-primary)';
+            }, 3000);
         }
+    });
+}
         
         // ===========================================
         // IMAGE LAZY LOADING
