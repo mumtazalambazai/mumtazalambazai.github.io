@@ -309,6 +309,181 @@
             z-index: -2;
             pointer-events: none;
         }
+
+        /* ===========================================
+   THEMATIC FOCUS CARDS
+=========================================== */
+.thematic-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.theme-card {
+    background: var(--card-bg);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--card-radius);
+    padding: 2.5rem;
+    transition: var(--transition-smooth);
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.theme-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--theme-gradient);
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 0.4s ease;
+    border-radius: var(--card-radius);
+}
+
+.theme-card:hover::before {
+    opacity: 0.1;
+}
+
+.theme-card:hover {
+    transform: translateY(-10px);
+    border-color: transparent;
+    box-shadow: 
+        0 20px 40px rgba(0, 0, 0, 0.4),
+        0 0 30px rgba(255, 255, 255, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.theme-icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    background: var(--theme-gradient);
+    color: white;
+    transition: var(--transition-smooth);
+}
+
+.theme-card:hover .theme-icon {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.theme-card h4 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    background: var(--theme-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: var(--transition-smooth);
+}
+
+.theme-card p {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.theme-border {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: var(--card-radius);
+    border: 2px solid transparent;
+    background: var(--theme-gradient) border-box;
+    -webkit-mask: 
+        linear-gradient(#fff 0 0) padding-box, 
+        linear-gradient(#fff 0 0);
+    mask: 
+        linear-gradient(#fff 0 0) padding-box, 
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+}
+
+.theme-card:hover .theme-border {
+    opacity: 1;
+}
+
+/* Animation for staggered card appearance */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.theme-card {
+    animation: fadeInUp 0.6s ease forwards;
+    opacity: 0;
+}
+
+.theme-card:nth-child(1) { animation-delay: 0.1s; }
+.theme-card:nth-child(2) { animation-delay: 0.2s; }
+.theme-card:nth-child(3) { animation-delay: 0.3s; }
+.theme-card:nth-child(4) { animation-delay: 0.4s; }
+.theme-card:nth-child(5) { animation-delay: 0.5s; }
+.theme-card:nth-child(6) { animation-delay: 0.6s; }
+
+/* ===========================================
+   RESPONSIVE DESIGN FOR THEMATIC CARDS
+=========================================== */
+@media (max-width: 1200px) {
+    .thematic-cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .thematic-cards-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .theme-card {
+        padding: 2rem;
+    }
+    
+    .theme-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .thematic-cards-grid {
+        gap: 1.2rem;
+    }
+    
+    .theme-card {
+        padding: 1.8rem;
+    }
+    
+    .theme-card h4 {
+        font-size: 1.2rem;
+    }
+}
         
         /* ===========================================
            TOP HEADER WITH SOCIAL MEDIA
@@ -1054,6 +1229,7 @@
             background: rgba(255, 255, 255, 0.1);
         }
         
+        
         /* ===========================================
            GALLERY SECTION
         =========================================== */
@@ -1563,6 +1739,7 @@
         <a href="#education" data-tooltip="Education"><i class="fas fa-graduation-cap"></i></a>
         <a href="#achievements" data-tooltip="Achievements"><i class="fas fa-trophy"></i></a>
         <a href="#leadership" data-tooltip="Leadership"><i class="fas fa-flag"></i></a>
+        <a href="#thematic-focus" data-tooltip="Themes"><i class="fas fa-palette"></i></a>
         <a href="#expertise" data-tooltip="Expertise"><i class="fas fa-gavel"></i></a>
         <a href="#gallery" data-tooltip="Gallery"><i class="fas fa-images"></i></a>
         <a href="#contact" data-tooltip="Contact"><i class="fas fa-envelope"></i></a>
@@ -1872,6 +2049,80 @@
             </div>
         </div>
     </section>
+
+<!-- THEMATIC FOCUS SECTION -->
+<section id="thematic-focus" style="background: var(--darker-bg);">
+    <div class="container">
+        <div class="section-header">
+            <h2>Thematic <span class="gradient-text">Focus Areas</span></h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 3rem; color: var(--text-secondary);">
+                Specialized expertise across key domains driving social change, legal reform, and youth empowerment
+            </p>
+        </div>
+        
+        <div class="thematic-cards-grid">
+            <!-- Theme 1: Human Rights & Equality -->
+            <div class="theme-card" style="--theme-gradient: linear-gradient(135deg, #6a11cb, #2575fc);">
+                <div class="theme-icon">
+                    <i class="fas fa-scale-balanced"></i>
+                </div>
+                <h4>Human Rights & Equality</h4>
+                <p>Advancing fundamental rights and fighting discrimination through legal frameworks and advocacy.</p>
+                <div class="theme-border"></div>
+            </div>
+            
+            <!-- Theme 2: Governance & Rule of Law -->
+            <div class="theme-card" style="--theme-gradient: linear-gradient(135deg, #ff007a, #ff8a00);">
+                <div class="theme-icon">
+                    <i class="fas fa-landmark"></i>
+                </div>
+                <h4>Governance & Rule of Law</h4>
+                <p>Strengthening democratic institutions and promoting transparent, accountable governance.</p>
+                <div class="theme-border"></div>
+            </div>
+            
+            <!-- Theme 3: Youth Policy & Empowerment -->
+            <div class="theme-card" style="--theme-gradient: linear-gradient(135deg, #00c6ff, #0072ff);">
+                <div class="theme-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <h4>Youth Policy & Empowerment</h4>
+                <p>Creating frameworks for youth engagement, education, and leadership development.</p>
+                <div class="theme-border"></div>
+            </div>
+            
+            <!-- Theme 4: Climate & Energy Justice -->
+            <div class="theme-card" style="--theme-gradient: linear-gradient(135deg, #00ff88, #00cc66);">
+                <div class="theme-icon">
+                    <i class="fas fa-leaf"></i>
+                </div>
+                <h4>Climate & Energy Justice</h4>
+                <p>Advocating for sustainable development and equitable access to environmental resources.</p>
+                <div class="theme-border"></div>
+            </div>
+            
+            <!-- Theme 5: Legal Education -->
+            <div class="theme-card" style="--theme-gradient: linear-gradient(135deg, #ff00ff, #cc00cc);">
+                <div class="theme-icon">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <h4>Legal Education</h4>
+                <p>Promoting access to quality legal education and professional development opportunities.</p>
+                <div class="theme-border"></div>
+            </div>
+            
+            <!-- Theme 6: Digital Rights & Privacy -->
+            <div class="theme-card" style="--theme-gradient: linear-gradient(135deg, #ffff00, #ffaa00);">
+                <div class="theme-icon">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <h4>Digital Rights & Privacy</h4>
+                <p>Protecting digital freedoms and advocating for ethical technology governance.</p>
+                <div class="theme-border"></div>
+            </div>
+        </div>
+    </div>
+</section>
     
     <!-- EXPERTISE SECTION -->
     <section id="expertise">
