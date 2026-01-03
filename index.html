@@ -1680,6 +1680,234 @@
                 font-size: 0.75rem;
             }
         }
+
+/* ===========================================
+   SOCIAL SPHERE SECTION
+=========================================== */
+.connect-sphere {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 60vh;
+    position: relative;
+}
+
+.social-sphere-container {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: rotateSphere 60s linear infinite;
+}
+
+@keyframes rotateSphere {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.social-sphere {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5rem;
+    text-decoration: none;
+    background: linear-gradient(135deg, var(--c1), var(--c2));
+    transition: var(--transition-smooth);
+    transform-origin: center;
+    box-shadow: 
+        0 10px 30px rgba(0, 0, 0, 0.3),
+        0 0 20px rgba(255, 255, 255, 0.1);
+    z-index: 2;
+}
+
+.social-sphere:hover {
+    transform: scale(1.2) rotate(-10deg);
+    box-shadow: 
+        0 20px 40px rgba(0, 0, 0, 0.4),
+        0 0 30px rgba(255, 255, 255, 0.2),
+        0 0 50px var(--c1);
+    z-index: 10;
+}
+
+.social-sphere::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(135deg, var(--c1), var(--c2));
+    border-radius: 50%;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.social-sphere:hover::before {
+    opacity: 0.5;
+    animation: pulseSphere 1s ease-in-out infinite;
+}
+
+@keyframes pulseSphere {
+    0%, 100% { transform: scale(1); opacity: 0.5; }
+    50% { transform: scale(1.1); opacity: 0.3; }
+}
+
+.sphere-tooltip {
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+    padding: 8px 15px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    pointer-events: none;
+    z-index: 100;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.social-sphere:hover .sphere-tooltip {
+    opacity: 1;
+    visibility: visible;
+    top: -35px;
+}
+
+/* Position each sphere in a circle */
+.social-sphere:nth-child(1) { transform: rotate(0deg) translate(220px) rotate(0deg); }
+.social-sphere:nth-child(2) { transform: rotate(30deg) translate(220px) rotate(-30deg); }
+.social-sphere:nth-child(3) { transform: rotate(60deg) translate(220px) rotate(-60deg); }
+.social-sphere:nth-child(4) { transform: rotate(90deg) translate(220px) rotate(-90deg); }
+.social-sphere:nth-child(5) { transform: rotate(120deg) translate(220px) rotate(-120deg); }
+.social-sphere:nth-child(6) { transform: rotate(150deg) translate(220px) rotate(-150deg); }
+.social-sphere:nth-child(7) { transform: rotate(180deg) translate(220px) rotate(-180deg); }
+.social-sphere:nth-child(8) { transform: rotate(210deg) translate(220px) rotate(-210deg); }
+.social-sphere:nth-child(9) { transform: rotate(240deg) translate(220px) rotate(-240deg); }
+.social-sphere:nth-child(10) { transform: rotate(270deg) translate(220px) rotate(-270deg); }
+.social-sphere:nth-child(11) { transform: rotate(300deg) translate(220px) rotate(-300deg); }
+.social-sphere:nth-child(12) { transform: rotate(330deg) translate(220px) rotate(-330deg); }
+
+.social-sphere-container:hover {
+    animation-play-state: paused;
+}
+
+/* Center orb effect */
+.social-sphere-container::before {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: var(--gradient-primary);
+    filter: blur(20px);
+    opacity: 0.3;
+    z-index: 1;
+    animation: pulseCenter 4s ease-in-out infinite;
+}
+
+@keyframes pulseCenter {
+    0%, 100% { transform: scale(1); opacity: 0.3; }
+    50% { transform: scale(1.2); opacity: 0.5; }
+}
+
+/* Responsive design for social spheres */
+@media (max-width: 1200px) {
+    .social-sphere-container {
+        width: 400px;
+        height: 400px;
+    }
+    
+    .social-sphere {
+        width: 60px;
+        height: 60px;
+        font-size: 1.3rem;
+    }
+    
+    .social-sphere:nth-child(1) { transform: rotate(0deg) translate(180px) rotate(0deg); }
+    .social-sphere:nth-child(2) { transform: rotate(30deg) translate(180px) rotate(-30deg); }
+    .social-sphere:nth-child(3) { transform: rotate(60deg) translate(180px) rotate(-60deg); }
+    .social-sphere:nth-child(4) { transform: rotate(90deg) translate(180px) rotate(-90deg); }
+    .social-sphere:nth-child(5) { transform: rotate(120deg) translate(180px) rotate(-120deg); }
+    .social-sphere:nth-child(6) { transform: rotate(150deg) translate(180px) rotate(-150deg); }
+    .social-sphere:nth-child(7) { transform: rotate(180deg) translate(180px) rotate(-180deg); }
+    .social-sphere:nth-child(8) { transform: rotate(210deg) translate(180px) rotate(-210deg); }
+    .social-sphere:nth-child(9) { transform: rotate(240deg) translate(180px) rotate(-240deg); }
+    .social-sphere:nth-child(10) { transform: rotate(270deg) translate(180px) rotate(-270deg); }
+    .social-sphere:nth-child(11) { transform: rotate(300deg) translate(180px) rotate(-300deg); }
+    .social-sphere:nth-child(12) { transform: rotate(330deg) translate(180px) rotate(-330deg); }
+}
+
+@media (max-width: 768px) {
+    .social-sphere-container {
+        width: 300px;
+        height: 300px;
+    }
+    
+    .social-sphere {
+        width: 50px;
+        height: 50px;
+        font-size: 1.1rem;
+    }
+    
+    .social-sphere:nth-child(1) { transform: rotate(0deg) translate(140px) rotate(0deg); }
+    .social-sphere:nth-child(2) { transform: rotate(30deg) translate(140px) rotate(-30deg); }
+    .social-sphere:nth-child(3) { transform: rotate(60deg) translate(140px) rotate(-60deg); }
+    .social-sphere:nth-child(4) { transform: rotate(90deg) translate(140px) rotate(-90deg); }
+    .social-sphere:nth-child(5) { transform: rotate(120deg) translate(140px) rotate(-120deg); }
+    .social-sphere:nth-child(6) { transform: rotate(150deg) translate(140px) rotate(-150deg); }
+    .social-sphere:nth-child(7) { transform: rotate(180deg) translate(140px) rotate(-180deg); }
+    .social-sphere:nth-child(8) { transform: rotate(210deg) translate(140px) rotate(-210deg); }
+    .social-sphere:nth-child(9) { transform: rotate(240deg) translate(140px) rotate(-240deg); }
+    .social-sphere:nth-child(10) { transform: rotate(270deg) translate(140px) rotate(-270deg); }
+    .social-sphere:nth-child(11) { transform: rotate(300deg) translate(140px) rotate(-300deg); }
+    .social-sphere:nth-child(12) { transform: rotate(330deg) translate(140px) rotate(-330deg); }
+    
+    .social-sphere-container::before {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+@media (max-width: 576px) {
+    .social-sphere-container {
+        width: 250px;
+        height: 250px;
+    }
+    
+    .social-sphere {
+        width: 45px;
+        height: 45px;
+        font-size: 1rem;
+    }
+    
+    .social-sphere:nth-child(1) { transform: rotate(0deg) translate(110px) rotate(0deg); }
+    .social-sphere:nth-child(2) { transform: rotate(30deg) translate(110px) rotate(-30deg); }
+    .social-sphere:nth-child(3) { transform: rotate(60deg) translate(110px) rotate(-60deg); }
+    .social-sphere:nth-child(4) { transform: rotate(90deg) translate(110px) rotate(-90deg); }
+    .social-sphere:nth-child(5) { transform: rotate(120deg) translate(110px) rotate(-120deg); }
+    .social-sphere:nth-child(6) { transform: rotate(150deg) translate(110px) rotate(-150deg); }
+    .social-sphere:nth-child(7) { transform: rotate(180deg) translate(110px) rotate(-180deg); }
+    .social-sphere:nth-child(8) { transform: rotate(210deg) translate(110px) rotate(-210deg); }
+    .social-sphere:nth-child(9) { transform: rotate(240deg) translate(110px) rotate(-240deg); }
+    .social-sphere:nth-child(10) { transform: rotate(270deg) translate(110px) rotate(-270deg); }
+    .social-sphere:nth-child(11) { transform: rotate(300deg) translate(110px) rotate(-300deg); }
+    .social-sphere:nth-child(12) { transform: rotate(330deg) translate(110px) rotate(-330deg); }
+}
         
     </style>
     <!-- EmailJS -->
@@ -1742,6 +1970,7 @@
         <a href="#thematic-focus" data-tooltip="Themes"><i class="fas fa-palette"></i></a>
         <a href="#expertise" data-tooltip="Expertise"><i class="fas fa-gavel"></i></a>
         <a href="#gallery" data-tooltip="Gallery"><i class="fas fa-images"></i></a>
+        <a href="#connect" data-tooltip="Connect"><i class="fas fa-share-alt"></i></a>
         <a href="#contact" data-tooltip="Contact"><i class="fas fa-envelope"></i></a>
     </nav>
    
@@ -2235,6 +2464,72 @@
             </div>
         </div>
     </section>
+
+    <!-- SOCIAL SPHERE SECTION -->
+<section id="connect" style="background: var(--dark-bg);">
+    <div class="container">
+        <div class="section-header">
+            <h2>Connect <span class="gradient-text">With Me</span></h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 3rem; color: var(--text-secondary);">
+                Reach out for legal consultation, collaboration opportunities, or speaking engagements. 
+                Let's work together to create positive change.
+            </p>
+        </div>
+        
+        <div class="connect-sphere">
+            <div class="social-sphere-container">
+                <a href="mailto:advmumtaz222@gmail.com" class="social-sphere" style="--c1: #D44638; --c2: #B23121;" title="Email">
+                    <i class="fas fa-envelope"></i>
+                    <span class="sphere-tooltip">Email</span>
+                </a>
+                <a href="https://wa.me/923332568792" class="social-sphere" style="--c1: #25D366; --c2: #128C7E;" title="WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                    <span class="sphere-tooltip">WhatsApp</span>
+                </a>
+                <a href="https://www.linkedin.com/in/adv-mumtaz-alam-bazai-163a9a324" class="social-sphere" style="--c1: #0077b5; --c2: #004182;" title="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                    <span class="sphere-tooltip">LinkedIn</span>
+                </a>
+                <a href="https://www.instagram.com/mumtaz_alam" class="social-sphere" style="--c1: #833AB4; --c2: #FD1D1D;" title="Instagram">
+                    <i class="fab fa-instagram"></i>
+                    <span class="sphere-tooltip">Instagram</span>
+                </a>
+                <a href="https://www.facebook.com/mumtaz.alam.18488" class="social-sphere" style="--c1: #1877F2; --c2: #1052a8;" title="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                    <span class="sphere-tooltip">Facebook</span>
+                </a>
+                <a href="https://x.com/mumtazalam333" class="social-sphere" style="--c1: #000; --c2: #333;" title="Twitter/X">
+                    <i class="fab fa-x-twitter"></i>
+                    <span class="sphere-tooltip">Twitter/X</span>
+                </a>
+                <a href="https://my.weforum.org/network/people/001TG000009vSDhYAM/adv-mumtaz-alam" class="social-sphere" style="--c1: #00A3E0; --c2: #005F86;" title="World Economic Forum">
+                    <i class="fas fa-globe"></i>
+                    <span class="sphere-tooltip">WEF</span>
+                </a>
+                <a href="https://linktr.ee/mumtazalam" class="social-sphere" style="--c1: #43E660; --c2: #1fa337;" title="Linktree">
+                    <i class="fas fa-link"></i>
+                    <span class="sphere-tooltip">Linktree</span>
+                </a>
+                <a href="https://www.tiktok.com/@mumtaz_alam" class="social-sphere" style="--c1: #000000; --c2: #ff0050;" title="TikTok">
+                    <i class="fab fa-tiktok"></i>
+                    <span class="sphere-tooltip">TikTok</span>
+                </a>
+                <a href="https://www.snapchat.com/add/mumtazalam222" class="social-sphere" style="--c1: #FFFC00; --c2: #FFCA00;" title="Snapchat">
+                    <i class="fab fa-snapchat-ghost"></i>
+                    <span class="sphere-tooltip">Snapchat</span>
+                </a>
+                <a href="https://www.threads.com/@mumtaz_alam" class="social-sphere" style="--c1: #00fffc; --c2: #ff00fc;" title="Threads">
+                    <i class="fas fa-comment-dots"></i>
+                    <span class="sphere-tooltip">Threads</span>
+                </a>
+                <a href="https://ok.ru/profile/910193583170" class="social-sphere" style="--c1: #F47300; --c2: #FF9E2C;" title="Odnoklassniki">
+                    <i class="fab fa-odnoklassniki"></i>
+                    <span class="sphere-tooltip">OK.ru</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
 
     <!-- CONTACT FORM SECTION -->
     <section id="contact">
