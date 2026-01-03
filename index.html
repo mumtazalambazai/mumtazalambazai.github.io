@@ -1908,6 +1908,256 @@
     .social-sphere:nth-child(11) { transform: rotate(300deg) translate(110px) rotate(-300deg); }
     .social-sphere:nth-child(12) { transform: rotate(330deg) translate(110px) rotate(-330deg); }
 }
+
+        /* ===========================================
+   MISSION STATEMENT SECTION
+=========================================== */
+.mission-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh;
+    padding: 2rem 0;
+}
+
+.mission-card {
+    background: var(--card-bg);
+    backdrop-filter: blur(30px);
+    border: 1px solid rgba(138, 43, 226, 0.2);
+    border-radius: var(--card-radius);
+    padding: 4rem 3rem;
+    position: relative;
+    max-width: 900px;
+    width: 100%;
+    overflow: hidden;
+    box-shadow: 
+        var(--glass-shadow),
+        0 0 50px rgba(138, 43, 226, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    transition: var(--transition-smooth);
+}
+
+.mission-card:hover {
+    transform: translateY(-10px);
+    border-color: rgba(138, 43, 226, 0.4);
+    box-shadow: 
+        0 30px 60px rgba(0, 0, 0, 0.6),
+        0 0 80px rgba(138, 43, 226, 0.15),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.mission-icon {
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 60px;
+    background: var(--gradient-primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    color: white;
+    box-shadow: 0 10px 30px rgba(138, 43, 226, 0.4);
+    z-index: 2;
+}
+
+.mission-content {
+    position: relative;
+    z-index: 3;
+}
+
+.mission-quote {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    line-height: 1.8;
+    color: var(--text-secondary);
+    text-align: center;
+    font-style: italic;
+    margin-bottom: 3rem;
+    position: relative;
+    padding: 0 2rem;
+}
+
+.quote-mark {
+    font-family: Georgia, serif;
+    font-size: 4rem;
+    color: var(--primary-color);
+    position: absolute;
+    opacity: 0.3;
+    line-height: 0;
+}
+
+.quote-mark.left {
+    top: 0;
+    left: 0;
+}
+
+.quote-mark.right {
+    bottom: -20px;
+    right: 0;
+}
+
+.mission-author {
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 2rem;
+    margin-top: 2rem;
+}
+
+.author-signature {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.author-signature i {
+    color: var(--primary-color);
+    font-size: 1.1rem;
+}
+
+.author-title {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.mission-orbits {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.orbit {
+    position: absolute;
+    border-radius: 50%;
+    border: 1px solid;
+    opacity: 0.05;
+}
+
+.orbit-1 {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 80%;
+    border-color: var(--primary-color);
+    animation: rotateOrbit 40s linear infinite;
+}
+
+.orbit-2 {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    height: 90%;
+    border-color: var(--secondary-color);
+    animation: rotateOrbit 50s linear infinite reverse;
+}
+
+.orbit-3 {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    height: 70%;
+    border-color: var(--accent-color);
+    animation: rotateOrbit 60s linear infinite;
+}
+
+@keyframes rotateOrbit {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* Mission Statement Glow Effect */
+.mission-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, 
+        rgba(138, 43, 226, 0.1) 0%,
+        rgba(0, 198, 255, 0.05) 25%,
+        transparent 70%);
+    opacity: 0;
+    transition: opacity 0.6s ease;
+    pointer-events: none;
+}
+
+.mission-card:hover::before {
+    opacity: 1;
+}
+
+/* Responsive Design for Mission Statement */
+@media (max-width: 992px) {
+    .mission-card {
+        padding: 3rem 2rem;
+    }
+    
+    .mission-quote {
+        font-size: 1.3rem;
+        padding: 0 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .mission-card {
+        padding: 2.5rem 1.5rem;
+    }
+    
+    .mission-quote {
+        font-size: 1.2rem;
+        line-height: 1.7;
+        padding: 0 1rem;
+    }
+    
+    .quote-mark {
+        font-size: 3rem;
+    }
+    
+    .quote-mark.left {
+        top: -10px;
+    }
+    
+    .quote-mark.right {
+        bottom: -30px;
+    }
+}
+
+@media (max-width: 576px) {
+    .mission-card {
+        padding: 2rem 1rem;
+    }
+    
+    .mission-quote {
+        font-size: 1.1rem;
+        line-height: 1.6;
+    }
+    
+    .author-signature {
+        font-size: 1.1rem;
+    }
+    
+    .author-title {
+        font-size: 0.85rem;
+    }
+}
         
     </style>
     <!-- EmailJS -->
@@ -1970,6 +2220,7 @@
         <a href="#thematic-focus" data-tooltip="Themes"><i class="fas fa-palette"></i></a>
         <a href="#expertise" data-tooltip="Expertise"><i class="fas fa-gavel"></i></a>
         <a href="#gallery" data-tooltip="Gallery"><i class="fas fa-images"></i></a>
+        <a href="#mission" data-tooltip="Mission"><i class="fas fa-bullseye"></i></a>
         <a href="#connect" data-tooltip="Connect"><i class="fas fa-share-alt"></i></a>
         <a href="#contact" data-tooltip="Contact"><i class="fas fa-envelope"></i></a>
     </nav>
@@ -2464,6 +2715,45 @@
             </div>
         </div>
     </section>
+
+    <!-- MISSION STATEMENT SECTION -->
+<section id="mission" style="background: linear-gradient(135deg, rgba(10, 10, 20, 0.95) 0%, rgba(5, 5, 15, 0.95) 100%);">
+    <div class="container">
+        <div class="section-header">
+            <h2>Mission <span class="gradient-text">Statement</span></h2>
+        </div>
+        
+        <div class="mission-container">
+            <div class="mission-card">
+                <div class="mission-icon">
+                    <i class="fas fa-bullseye"></i>
+                </div>
+                
+                <div class="mission-content">
+                    <blockquote class="mission-quote">
+                        <span class="quote-mark left">"</span>
+                        To advance justice, safeguard human dignity, strengthen democratic institutions, and empower youth to lead Pakistan toward a just, inclusive, and sustainable future. Through unwavering commitment to human rights, legal excellence, and global collaboration, we envision a world where every voice is heard and every right is protected.
+                        <span class="quote-mark right">"</span>
+                    </blockquote>
+                    
+                    <div class="mission-author">
+                        <div class="author-signature">
+                            <i class="fas fa-pen-nib"></i>
+                            <span>Mumtaz Alam Bazai</span>
+                        </div>
+                        <p class="author-title">Advocate High Court & Global Shaper</p>
+                    </div>
+                </div>
+                
+                <div class="mission-orbits">
+                    <div class="orbit orbit-1"></div>
+                    <div class="orbit orbit-2"></div>
+                    <div class="orbit orbit-3"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
     <!-- SOCIAL SPHERE SECTION -->
 <section id="connect" style="background: var(--dark-bg);">
