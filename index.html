@@ -2342,6 +2342,392 @@
         padding: 1.5rem;
     }
 }
+        /* ===========================================
+   LEGAL PRACTICE AREAS SECTION
+=========================================== */
+.practice-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.1;
+    animation: floatPractice 25s infinite alternate ease-in-out;
+    z-index: 0;
+}
+
+.practice-orb.orb-1 {
+    width: 500px;
+    height: 500px;
+    background: var(--primary-color);
+    top: -150px;
+    right: -150px;
+    animation-duration: 30s;
+}
+
+.practice-orb.orb-2 {
+    width: 400px;
+    height: 400px;
+    background: var(--accent-color);
+    bottom: -100px;
+    left: -100px;
+    animation-duration: 35s;
+    animation-delay: 5s;
+}
+
+@keyframes floatPractice {
+    0% { transform: translate(0, 0) scale(1); }
+    25% { transform: translate(40px, -60px) scale(1.1); }
+    50% { transform: translate(-30px, 40px) scale(0.9); }
+    75% { transform: translate(60px, 30px) scale(1.05); }
+    100% { transform: translate(0, 0) scale(1); }
+}
+
+.practice-lines {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: 
+        linear-gradient(90deg, transparent 49%, rgba(138, 43, 226, 0.1) 50%, transparent 51%),
+        linear-gradient(0deg, transparent 49%, rgba(0, 198, 255, 0.1) 50%, transparent 51%);
+    background-size: 50px 50px;
+    opacity: 0.3;
+    animation: moveLines 20s linear infinite;
+    z-index: 0;
+}
+
+@keyframes moveLines {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(50px, 50px); }
+}
+
+/* Practice Grid */
+.practice-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    position: relative;
+    z-index: 2;
+}
+
+.practice-card {
+    background: rgba(15, 15, 26, 0.7);
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    padding: 2.5rem;
+    transition: var(--transition-smooth);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.practice-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--card-gradient);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: -1;
+    border-radius: 20px;
+}
+
+.practice-card:hover::before {
+    opacity: 0.1;
+}
+
+.practice-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(255, 255, 255, 0.05) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: -1;
+    border-radius: 20px;
+}
+
+.practice-card:hover::after {
+    opacity: 1;
+}
+
+.practice-card:hover {
+    transform: translateY(-15px) scale(1.02);
+    border-color: transparent;
+    box-shadow: 
+        0 25px 50px rgba(0, 0, 0, 0.4),
+        0 0 40px rgba(255, 255, 255, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.practice-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.2rem;
+    color: white;
+    margin-bottom: 1.5rem;
+    background: var(--card-gradient);
+    position: relative;
+    overflow: hidden;
+    transition: var(--transition-smooth);
+}
+
+.icon-glow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--card-gradient);
+    filter: blur(20px);
+    opacity: 0.7;
+    z-index: 1;
+    animation: iconPulse 3s ease-in-out infinite;
+}
+
+@keyframes iconPulse {
+    0%, 100% { 
+        opacity: 0.7;
+        transform: scale(1);
+    }
+    50% { 
+        opacity: 0.9;
+        transform: scale(1.1);
+    }
+}
+
+.practice-card:hover .practice-icon {
+    transform: scale(1.15) rotate(10deg);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+.practice-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    background: var(--card-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: var(--transition-smooth);
+}
+
+.practice-card:hover h3 {
+    transform: translateX(5px);
+}
+
+.practice-card p {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+}
+
+.practice-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: auto;
+}
+
+.tag {
+    padding: 6px 12px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--text-muted);
+    transition: var(--transition-smooth);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.practice-card:hover .tag {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--text-primary);
+    transform: translateY(-3px);
+}
+
+/* Practice Stats */
+.practice-stats {
+    display: flex;
+    justify-content: space-around;
+    background: rgba(15, 15, 26, 0.5);
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    padding: 2.5rem;
+    margin-top: 4rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+    z-index: 2;
+}
+
+.practice-stats::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: var(--gradient-primary);
+    border-radius: 22px;
+    z-index: -1;
+    opacity: 0.1;
+    animation: statBorderGlow 4s ease-in-out infinite alternate;
+}
+
+@keyframes statBorderGlow {
+    0% { opacity: 0.1; filter: brightness(1); }
+    100% { opacity: 0.2; filter: brightness(1.5); }
+}
+
+.stat-item {
+    text-align: center;
+    position: relative;
+}
+
+.stat-item::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -50%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 60px;
+    background: linear-gradient(to bottom, transparent, var(--primary-color), transparent);
+    opacity: 0.3;
+}
+
+.stat-item:last-child::after {
+    display: none;
+}
+
+.stat-number {
+    font-size: 3.5rem;
+    font-weight: 800;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+    font-family: 'Playfair Display', serif;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+/* Animation for cards */
+@keyframes fadeInUpCard {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.practice-card {
+    animation: fadeInUpCard 0.6s ease forwards;
+    opacity: 0;
+}
+
+.practice-card:nth-child(1) { animation-delay: 0.1s; }
+.practice-card:nth-child(2) { animation-delay: 0.2s; }
+.practice-card:nth-child(3) { animation-delay: 0.3s; }
+.practice-card:nth-child(4) { animation-delay: 0.4s; }
+.practice-card:nth-child(5) { animation-delay: 0.5s; }
+.practice-card:nth-child(6) { animation-delay: 0.6s; }
+.practice-card:nth-child(7) { animation-delay: 0.7s; }
+.practice-card:nth-child(8) { animation-delay: 0.8s; }
+
+/* Responsive Design for Practice Areas */
+@media (max-width: 1200px) {
+    .practice-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .stat-number {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .practice-stats {
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+    
+    .stat-item {
+        flex: 1 0 calc(50% - 2rem);
+    }
+    
+    .stat-item::after {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .practice-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .practice-card {
+        padding: 2rem;
+    }
+    
+    .practice-icon {
+        width: 70px;
+        height: 70px;
+        font-size: 2rem;
+    }
+    
+    .practice-stats {
+        padding: 2rem;
+    }
+    
+    .stat-number {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .practice-card {
+        padding: 1.8rem;
+    }
+    
+    .practice-card h3 {
+        font-size: 1.2rem;
+    }
+    
+    .stat-item {
+        flex: 1 0 100%;
+    }
+    
+    .practice-stats {
+        padding: 1.5rem;
+        gap: 1.5rem;
+    }
+}
         
     </style>
     <!-- EmailJS -->
@@ -2403,6 +2789,7 @@
         <a href="#leadership" data-tooltip="Leadership"><i class="fas fa-flag"></i></a>
         <a href="#thematic-focus" data-tooltip="Themes"><i class="fas fa-palette"></i></a>
         <a href="#expertise" data-tooltip="Expertise"><i class="fas fa-gavel"></i></a>
+        <a href="#practice" data-tooltip="Practice Areas"><i class="fas fa-balance-scale"></i></a>
         <a href="#gallery" data-tooltip="Gallery"><i class="fas fa-images"></i></a>
         <a href="#mission" data-tooltip="Mission"><i class="fas fa-bullseye"></i></a>
         <a href="#connect" data-tooltip="Connect"><i class="fas fa-share-alt"></i></a>
@@ -2840,6 +3227,166 @@
             </div>
         </div>
     </section>
+
+    <!-- LEGAL PRACTICE AREAS SECTION -->
+<section id="practice" style="background: linear-gradient(135deg, rgba(10, 5, 25, 0.95) 0%, rgba(5, 5, 20, 0.95) 100%); position: relative; overflow: hidden;">
+    <!-- Animated Background Elements -->
+    <div class="practice-orb orb-1"></div>
+    <div class="practice-orb orb-2"></div>
+    <div class="practice-lines"></div>
+    
+    <div class="container">
+        <div class="section-header">
+            <h2>Legal <span class="gradient-text">Practice Areas</span></h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 3rem; color: var(--text-secondary);">
+                Comprehensive legal expertise with a focus on justice, rights protection, and institutional reform. 
+                Specialized in constitutional, human rights, and criminal law with a proven track record.
+            </p>
+        </div>
+        
+        <div class="practice-grid">
+            <!-- Practice Area 1: Constitutional Law -->
+            <div class="practice-card">
+                <div class="practice-icon" style="--card-gradient: linear-gradient(135deg, #6a11cb, #2575fc);">
+                    <i class="fas fa-balance-scale"></i>
+                    <div class="icon-glow"></div>
+                </div>
+                <h3>Constitutional Law</h3>
+                <p>Specializing in fundamental rights enforcement, constitutional petitions, and challenging legislation before superior courts.</p>
+                <div class="practice-tags">
+                    <span class="tag">Fundamental Rights</span>
+                    <span class="tag">Judicial Review</span>
+                    <span class="tag">Constitutional Petitions</span>
+                </div>
+            </div>
+            
+            <!-- Practice Area 2: Human Rights -->
+            <div class="practice-card">
+                <div class="practice-icon" style="--card-gradient: linear-gradient(135deg, #ff007a, #ff8a00);">
+                    <i class="fas fa-user-shield"></i>
+                    <div class="icon-glow"></div>
+                </div>
+                <h3>Human Rights</h3>
+                <p>Advocacy for civil liberties, women's rights, minority protections, and challenging human rights violations through legal means.</p>
+                <div class="practice-tags">
+                    <span class="tag">Civil Liberties</span>
+                    <span class="tag">Minority Rights</span>
+                    <span class="tag">Women's Rights</span>
+                </div>
+            </div>
+            
+            <!-- Practice Area 3: Property Law -->
+            <div class="practice-card">
+                <div class="practice-icon" style="--card-gradient: linear-gradient(135deg, #00c6ff, #0072ff);">
+                    <i class="fas fa-home"></i>
+                    <div class="icon-glow"></div>
+                </div>
+                <h3>Property Law</h3>
+                <p>Expertise in land disputes, property rights, succession matters, and real estate transactions in Balochistan.</p>
+                <div class="practice-tags">
+                    <span class="tag">Land Disputes</span>
+                    <span class="tag">Succession</span>
+                    <span class="tag">Real Estate</span>
+                </div>
+            </div>
+            
+            <!-- Practice Area 4: Criminal Law -->
+            <div class="practice-card">
+                <div class="practice-icon" style="--card-gradient: linear-gradient(135deg, #ff416c, #ff4b2b);">
+                    <i class="fas fa-gavel"></i>
+                    <div class="icon-glow"></div>
+                </div>
+                <h3>Criminal Law</h3>
+                <p>Defense in criminal cases, appeals, bail applications, and ensuring fair trial rights for accused individuals.</p>
+                <div class="practice-tags">
+                    <span class="tag">Criminal Defense</span>
+                    <span class="tag">Bail Applications</span>
+                    <span class="tag">Appeals</span>
+                </div>
+            </div>
+            
+            <!-- Practice Area 5: Civil Litigation -->
+            <div class="practice-card">
+                <div class="practice-icon" style="--card-gradient: linear-gradient(135deg, #00ff88, #00cc66);">
+                    <i class="fas fa-handshake"></i>
+                    <div class="icon-glow"></div>
+                </div>
+                <h3>Civil Litigation</h3>
+                <p>Comprehensive civil litigation including contract disputes, tort claims, and commercial matters.</p>
+                <div class="practice-tags">
+                    <span class="tag">Contract Disputes</span>
+                    <span class="tag">Tort Claims</span>
+                    <span class="tag">Commercial Law</span>
+                </div>
+            </div>
+            
+            <!-- Practice Area 6: Family Law -->
+            <div class="practice-card">
+                <div class="practice-icon" style="--card-gradient: linear-gradient(135deg, #ff00ff, #cc00cc);">
+                    <i class="fas fa-female"></i>
+                    <div class="icon-glow"></div>
+                </div>
+                <h3>Family Law</h3>
+                <p>Handling marriage, divorce, custody, maintenance, and inheritance matters with sensitivity and expertise.</p>
+                <div class="practice-tags">
+                    <span class="tag">Divorce</span>
+                    <span class="tag">Custody</span>
+                    <span class="tag">Inheritance</span>
+                </div>
+            </div>
+            
+            <!-- Practice Area 7: Administrative Law -->
+            <div class="practice-card">
+                <div class="practice-icon" style="--card-gradient: linear-gradient(135deg, #ffff00, #ffaa00);">
+                    <i class="fas fa-university"></i>
+                    <div class="icon-glow"></div>
+                </div>
+                <h3>Administrative Law</h3>
+                <p>Challenging administrative actions, judicial review petitions, and ensuring government accountability.</p>
+                <div class="practice-tags">
+                    <span class="tag">Judicial Review</span>
+                    <span class="tag">Government Accountability</span>
+                    <span class="tag">Administrative Actions</span>
+                </div>
+            </div>
+            
+            <!-- Practice Area 8: International Law -->
+            <div class="practice-card">
+                <div class="practice-icon" style="--card-gradient: linear-gradient(135deg, #00ffff, #0099cc);">
+                    <i class="fas fa-globe"></i>
+                    <div class="icon-glow"></div>
+                </div>
+                <h3>International Law</h3>
+                <p>Advising on international human rights standards, treaties, and cross-border legal issues.</p>
+                <div class="practice-tags">
+                    <span class="tag">International Rights</span>
+                    <span class="tag">Treaties</span>
+                    <span class="tag">Cross-Border Issues</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Stats Bar -->
+        <div class="practice-stats">
+            <div class="stat-item">
+                <div class="stat-number" data-count="50">0</div>
+                <div class="stat-label">Cases Handled</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" data-count="8">0</div>
+                <div class="stat-label">Practice Areas</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" data-count="100">0</div>
+                <div class="stat-label">Client Satisfaction</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" data-count="2">0</div>
+                <div class="stat-label">Years Experience</div>
+            </div>
+        </div>
+    </div>
+</section>
 
     <!-- GALLERY SECTION -->
     <section id="gallery" style="background: rgba(0, 0, 0, 0.3);">
@@ -3456,6 +4003,52 @@ if (contactForm) {
         });
         
         document.body.appendChild(themeToggle);
+
+        // ===========================================
+// ANIMATED COUNTER FOR PRACTICE STATS
+// ===========================================
+function animateCounter(element) {
+    const target = parseInt(element.getAttribute('data-count'));
+    const duration = 2000; // 2 seconds
+    const increment = target / (duration / 16); // 60fps
+    let current = 0;
+    
+    const timer = setInterval(() => {
+        current += increment;
+        if (current >= target) {
+            element.textContent = target + "+";
+            clearInterval(timer);
+        } else {
+            element.textContent = Math.floor(current) + "+";
+        }
+    }, 16);
+}
+
+// Intersection Observer for counter animation
+const observerOptions = {
+    threshold: 0.5,
+    rootMargin: '0px 0px -100px 0px'
+};
+
+const counterObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const counters = document.querySelectorAll('.stat-number');
+            counters.forEach(counter => {
+                animateCounter(counter);
+            });
+            counterObserver.disconnect(); // Run only once
+        }
+    });
+}, observerOptions);
+
+// Start observing when page loads
+document.addEventListener('DOMContentLoaded', () => {
+    const practiceSection = document.getElementById('practice');
+    if (practiceSection) {
+        counterObserver.observe(practiceSection);
+    }
+});
     </script>
 </body>
 </html>
